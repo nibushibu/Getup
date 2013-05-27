@@ -1,4 +1,0 @@
-boilerplate
-===========
-
-my HTML boilerplate
