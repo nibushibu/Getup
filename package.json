@@ -1,0 +1,11 @@
+{
+  "name": "my-project",
+  "version": "0.0.0",
+  "repository": "",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-coffee": "*"
+  }
+}
