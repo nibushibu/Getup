@@ -14,6 +14,13 @@ module.exports = (grunt) ->
         ext: '.js'
         options:
           bare: true
+    uglify:
+      compress_target:
+        options:
+          mangle: false
+        files:{
+          'js/main.min.js': 'js/main.js'
+        }
     watch:
       compass:
         files: ['scss/*.scss']
@@ -21,10 +28,15 @@ module.exports = (grunt) ->
       coffee:
         files: ['coffee/*.coffee']
         tasks: 'coffee'
+      js:
+        files: ['js/*.js']
+        tasks: 'uglify'
+
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-contrib-uglify'
 
   grunt.registerTask 'default', [
     'watch'
