@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,minimum-scale=1.0" />
     <link rel="stylesheet" href="css/getup.css" />
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <style type="text/css">
       pre strong, dt strong{color: #0B8C8F;}
       pre{padding: 20px;background-color: #FCF8BC;overflow:auto;width:auto;}
@@ -466,9 +467,10 @@
     <p><code>.alt-img</code> というクラスを追加すると、 <code>height:0;overflow:hidden</code> で文字を外に隠します。<br />
     これに任意のクラスを追加して、 <code>padding-top</code> などで要素の高さを設定し、背景画像を設置することで画像置換が完了します。</p>
     <p class="alt-img alt-img-sample">Image Replacement</p>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.10.0.min.js"><\/script>')</script>
-    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
