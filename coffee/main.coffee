@@ -11,7 +11,7 @@ requirejs.config
     'jquery.belatedPNG':
       deps: ['jquery']
 
-requirejs ['modernizr', 'jquery', 'jquery.transit']
+requirejs ['modernizr', 'jquery', 'jquery.transit', 'jquery.belatedPNG']
 
 define ['jquery','jquery.transit'], ($) ->
   #jqueryとjquery.transitの読み込み完了後

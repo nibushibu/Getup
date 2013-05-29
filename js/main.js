@@ -16,7 +16,7 @@ requirejs.config({
   }
 });
 
-requirejs(['modernizr', 'jquery', 'jquery.transit']);
+requirejs(['modernizr', 'jquery', 'jquery.transit', 'jquery.belatedPNG']);
 
 define(['jquery', 'jquery.transit'], function($) {});
 
