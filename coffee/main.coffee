@@ -18,3 +18,4 @@ define ['jquery','jquery.transit'], ($) ->
 
 defign ['jquery','jquery.belatedPNG'], ($) ->
   #jqueryとjquery.belatedPNGの読み込み完了後
+  $('.fix').fixPng()

@@ -3,10 +3,14 @@ requirejs.config({
   'paths': {
     'modernizr': 'modernizr/modernizr',
     'jquery': 'jquery/jquery.min',
-    'jquery.transit': 'jquery.transit/jquery.transit'
+    'jquery.transit': 'jquery.transit/jquery.transit',
+    'jquery.belatedPNG': 'jquery.belatedPNG/js/jquery.belatedPNG.min.js'
   },
   'shim': {
     'jquery.transit': {
+      deps: ['jquery']
+    },
+    'jquery.belatedPNG': {
       deps: ['jquery']
     }
   }
@@ -14,7 +18,8 @@ requirejs.config({
 
 requirejs(['modernizr', 'jquery', 'jquery.transit']);
 
-define(['jquery', 'jquery.transit'], function($) {
-  /*jqueryとjquery.transitが読み込み完了したら…*/
+define(['jquery', 'jquery.transit'], function($) {});
 
+defign(['jquery', 'jquery.belatedPNG'], function($) {
+  return $('.fix').fixPng();
 });
