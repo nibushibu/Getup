@@ -2,9 +2,12 @@ module.exports = (grunt) ->
 
   grunt.initConfig
     compass:
-      dist:
+      dev:
         options:
           config: 'config.rb'
+      pro:
+        options:
+          environment: 'production'
     coffee:
       compile:
         expand: true
@@ -24,7 +27,7 @@ module.exports = (grunt) ->
     watch:
       compass:
         files: ['scss/*.scss']
-        tasks: 'compass'
+        tasks: 'compass:dev'
       coffee:
         files: ['coffee/*.coffee']
         tasks: 'coffee'
@@ -39,4 +42,4 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-uglify'
 
   grunt.registerTask 'default', ['watch'];
-  grunt.registerTask "min", ["uglify"]
+  grunt.registerTask "min", ['uglify', 'compass:pro']
