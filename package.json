@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "my-boilerplate",
   "version": "0.0.0",
   "devDependencies": {
     "grunt": "*",
@@ -7,30 +7,30 @@
     "grunt-contrib-compass": "*",
     "grunt-contrib-coffee": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-contrib-concat": "~0.3.0"
+    "js2coffee": "*"
   },
   "readmeFilename": "README.md",
   "gitHead": "92c744fec0a424c846df7cd23d5ae377bf70b40e",
   "description": "my HTML boilerplate",
   "main": "Gruntfile.coffee",
-  "dependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-compass": "~0.2.0",
-    "grunt-contrib-coffee": "~0.7.0",
-    "grunt-contrib-uglify": "~0.2.0",
-    "grunt-contrib-watch": "~0.4.3",
-    "js2coffee": "~0.2.0"
-  },
-  "scripts": {
-    "test": "grunt watch"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/nibushibu/boilerplate.git"
   },
-  "author": "Genki Katsutani",
-  "license": "MIT",
+  "author": "Interfeel",
+  "license": "BSD",
   "bugs": {
     "url": "https://github.com/nibushibu/boilerplate/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-compass": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.1",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "js2coffee": "~0.2.0"
   }
 }
