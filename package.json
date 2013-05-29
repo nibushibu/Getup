@@ -6,8 +6,7 @@
     "grunt-contrib-watch": "*",
     "grunt-contrib-compass": "*",
     "grunt-contrib-coffee": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-cssmin": "*"
+    "grunt-contrib-uglify": "*"
   },
   "readmeFilename": "README.md",
   "gitHead": "92c744fec0a424c846df7cd23d5ae377bf70b40e",
@@ -15,7 +14,6 @@
   "main": "Gruntfile.coffee",
   "dependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-cssmin": "~0.6.1",
     "grunt-contrib-compass": "~0.2.0",
     "grunt-contrib-coffee": "~0.7.0",
     "grunt-contrib-uglify": "~0.2.0",
