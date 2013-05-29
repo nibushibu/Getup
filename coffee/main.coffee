@@ -4,7 +4,7 @@ requirejs.config
     'modernizr': 'modernizr/modernizr'
     'jquery': 'jquery/jquery.min'
     'jquery.transit': 'jquery.transit/jquery.transit'
-    'jquery.belatedPNG': 'jquery.belatedPNG/js/jquery.belatedPNG.min.js'
+    'jquery.belatedPNG': 'jquery.belatedPNG/js/jquery.belatedPNG.min'
   'shim':
     'jquery.transit':
       deps: ['jquery']
