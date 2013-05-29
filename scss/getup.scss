@@ -27,7 +27,7 @@ https://github.com/nibushibu/getup-css/blob/master/LICENSE
   印刷設定
 */
 
-$jsdir: "/u/175530/getup-css/js";
+$box-sizing-path: "/js/vendor/box-sizing-polyfill/boxsizing.htc";
 
 @mixin linearize-unit() {
   clear: both;
@@ -407,7 +407,7 @@ table ol {
 .unit, .unit:after, .unit:before,
 .line, .line:after, .line:before {
   @include box-sizing(border-box);
-  *behavior: url($jsdir + "/boxsizing.htc");
+  *behavior: url($box-sizing-path);
 }
 
 .lt-ie8 .unit{
