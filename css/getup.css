@@ -1859,22 +1859,6 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     box-shadow: none;
   }
 
-  /* line 1073, ../scss/getup.scss */
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  /* line 1077, ../scss/getup.scss */
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  /* line 1081, ../scss/getup.scss */
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
   /* 画像がはみ出したり変形したりしないように。 */
   /* line 1086, ../scss/getup.scss */
   img {
