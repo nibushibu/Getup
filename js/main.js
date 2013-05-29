@@ -20,6 +20,6 @@ requirejs(['modernizr', 'jquery', 'jquery.transit']);
 
 define(['jquery', 'jquery.transit'], function($) {});
 
-defign(['jquery', 'jquery.belatedPNG'], function($) {
+define(['jquery', 'jquery.belatedPNG'], function($) {
   return $('.fix').fixPng();
 });

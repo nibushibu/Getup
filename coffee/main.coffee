@@ -16,6 +16,6 @@ requirejs ['modernizr', 'jquery', 'jquery.transit']
 define ['jquery','jquery.transit'], ($) ->
   #jqueryとjquery.transitの読み込み完了後
 
-defign ['jquery','jquery.belatedPNG'], ($) ->
+define ['jquery','jquery.belatedPNG'], ($) ->
   #jqueryとjquery.belatedPNGの読み込み完了後
   $('.fix').fixPng()
