@@ -19,7 +19,7 @@ module.exports = (grunt) ->
         options:
           mangle: false
         files:{
-          'js/main.min.js': 'js/main.js'
+          'js/main.js': 'js/main.js'
         }
     watch:
       compass:
@@ -28,9 +28,9 @@ module.exports = (grunt) ->
       coffee:
         files: ['coffee/*.coffee']
         tasks: 'coffee'
-      js:
-        files: ['js/*.js']
-        tasks: 'uglify'
+      # js:
+      #   files: ['js/*.js']
+      #   tasks: 'uglify'
 
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
@@ -38,6 +38,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
 
-  grunt.registerTask 'default', [
-    'watch'
-  ];
+  grunt.registerTask 'default', ['watch'];
+  grunt.registerTask "min", ["uglify"]
