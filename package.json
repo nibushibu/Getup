@@ -6,7 +6,8 @@
     "grunt-contrib-watch": "*",
     "grunt-contrib-compass": "*",
     "grunt-contrib-coffee": "*",
-    "grunt-contrib-uglify": "*"
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-concat": "~0.3.0"
   },
   "readmeFilename": "README.md",
   "gitHead": "92c744fec0a424c846df7cd23d5ae377bf70b40e",
