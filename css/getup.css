@@ -1021,7 +1021,7 @@ table ol {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url("//dl.dropboxusercontent.com/u/175530/js/vendor/box-sizing-polyfill/boxsizing.htc");
+  *behavior: url("/u/175530/js/vendor/boxsizing.htc");
 }
 
 /* line 413, ../scss/getup.scss */
