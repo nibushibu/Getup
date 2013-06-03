@@ -37,6 +37,16 @@ $box-sizing-path: "/u/175530/js/vendor/boxsizing.htc";
   width: 100%;
 }
 
+@mixin g-clearfix {
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+    clear: both;
+   }
+  @include has-layout;
+}
+
 @mixin g-flex {
   @include display-box;
   @include experimental-value(display, flex, -moz, -webkit, not -o, -ms, not -khtml, official);
@@ -46,7 +56,7 @@ $g-default-flex-direction: row;
 @mixin g-flex-direction($direction: $g-default-flex-direction) {
   @if $direction == row {
     @include box-orient(horizontal);
-  } @else if $direction == columun {
+  } @else if $direction == column {
     @include box-orient(vertical);
   } @else if $direction == row-reverse {
     @include box-orient(horizontal);
@@ -107,7 +117,7 @@ $g-default-align-content: flex-start;
 @mixin linearize-unit {
   @include g-flex();
   @include g-flex-direction(column);
-  @include g-flex-wrap(wrap);
+  @include g-flex-wrap(nowrap);
   @include g-justify-content(flex-start);
   @include g-align-items(stretch);
   @include g-align-content(flex-start);
@@ -115,7 +125,6 @@ $g-default-align-content: flex-start;
     @include box-flex(1);
     float: none;
     width: 100%;
-    @include clearfix();
   }
 }
 
@@ -1033,7 +1042,7 @@ table ol {
 /* CLEARFIX */
 .clearfix,
 .cf {
-  @include pie-clearfix();
+  @include g-clearfix();
 }
 
 /* テキスト方向

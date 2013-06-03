@@ -572,7 +572,7 @@ https://github.com/nibushibu/getup-css/blob/master/LICENSE
   印刷設定
 */
 /* テキスト関連初期設定 */
-/* line 124, ../scss/getup.scss */
+/* line 133, ../scss/getup.scss */
 html {
   font-size: 81.25%;
   font-family: "Lucida Grande", Arial, sans-serif;
@@ -580,13 +580,13 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-/* line 131, ../scss/getup.scss */
+/* line 140, ../scss/getup.scss */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
 }
 
-/* line 136, ../scss/getup.scss */
+/* line 145, ../scss/getup.scss */
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -594,7 +594,7 @@ html {
 
 /* タイポグラフィ */
 /* 見出し */
-/* line 156, ../scss/getup.scss */
+/* line 165, ../scss/getup.scss */
 h1,
 h2,
 h3,
@@ -611,7 +611,7 @@ blockquote,
   margin: 10px;
 }
 
-/* line 165, ../scss/getup.scss */
+/* line 174, ../scss/getup.scss */
 h1,
 h2,
 h3,
@@ -621,12 +621,12 @@ h6 {
   font-weight: bold;
 }
 
-/* line 169, ../scss/getup.scss */
+/* line 178, ../scss/getup.scss */
 pre {
   margin: 10px;
 }
 
-/* line 188, ../scss/getup.scss */
+/* line 197, ../scss/getup.scss */
 table h1,
 table h2,
 table h3,
@@ -646,57 +646,57 @@ ol dl {
   margin: 0;
 }
 
-/* line 192, ../scss/getup.scss */
+/* line 201, ../scss/getup.scss */
 h1 {
   font-size: 1.84615384615385em;
 }
 
-/* line 196, ../scss/getup.scss */
+/* line 205, ../scss/getup.scss */
 h2 {
   font-size: 1.53846153846154em;
 }
 
-/* line 200, ../scss/getup.scss */
+/* line 209, ../scss/getup.scss */
 h3 {
   font-size: 1.38461538461538em;
 }
 
-/* line 204, ../scss/getup.scss */
+/* line 213, ../scss/getup.scss */
 h4 {
   font-size: 1.23076923076923em;
 }
 
-/* line 208, ../scss/getup.scss */
+/* line 217, ../scss/getup.scss */
 h5 {
   font-size: 1.07692307692308em;
 }
 
-/* line 212, ../scss/getup.scss */
+/* line 221, ../scss/getup.scss */
 h6 {
   font-size: 1em;
 }
 
-/* line 216, ../scss/getup.scss */
+/* line 225, ../scss/getup.scss */
 a {
   text-decoration: none;
 }
 
-/* line 220, ../scss/getup.scss */
+/* line 229, ../scss/getup.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 224, ../scss/getup.scss */
+/* line 233, ../scss/getup.scss */
 ul {
   list-style-position: outside;
 }
 
-/* line 228, ../scss/getup.scss */
+/* line 237, ../scss/getup.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 236, ../scss/getup.scss */
+/* line 245, ../scss/getup.scss */
 ul,
 ol,
 .square,
@@ -705,50 +705,50 @@ ol,
   padding-left: 2em;
 }
 
-/* line 241, ../scss/getup.scss */
+/* line 250, ../scss/getup.scss */
 ul ul,
 ol ul {
   list-style-type: disc;
 }
 
-/* line 245, ../scss/getup.scss */
+/* line 254, ../scss/getup.scss */
 .square {
   list-style: square outside;
 }
 
-/* line 249, ../scss/getup.scss */
+/* line 258, ../scss/getup.scss */
 .circle {
   list-style: circle outside;
 }
 
-/* line 253, ../scss/getup.scss */
+/* line 262, ../scss/getup.scss */
 .disc {
   list-style: disc outside;
 }
 
-/* line 258, ../scss/getup.scss */
+/* line 267, ../scss/getup.scss */
 .not-list,
 .no-list {
   list-style: none;
   padding-left: 0;
 }
 
-/* line 263, ../scss/getup.scss */
+/* line 272, ../scss/getup.scss */
 dl {
   margin-bottom: .833em;
 }
 
-/* line 267, ../scss/getup.scss */
+/* line 276, ../scss/getup.scss */
 dt {
   font-weight: bold;
 }
 
-/* line 271, ../scss/getup.scss */
+/* line 280, ../scss/getup.scss */
 dd {
   margin-left: 1.667em;
 }
 
-/* line 278, ../scss/getup.scss */
+/* line 287, ../scss/getup.scss */
 q,
 i,
 em,
@@ -757,54 +757,54 @@ cite {
   font-weight: inherit;
 }
 
-/* line 284, ../scss/getup.scss */
+/* line 293, ../scss/getup.scss */
 b,
 strong {
   font-weight: bold;
   font-style: inherit;
 }
 
-/* line 289, ../scss/getup.scss */
+/* line 298, ../scss/getup.scss */
 mark {
   background: #ffc;
 }
 
-/* line 294, ../scss/getup.scss */
+/* line 303, ../scss/getup.scss */
 s,
 del {
   text-decoration: line-through;
 }
 
-/* line 298, ../scss/getup.scss */
+/* line 307, ../scss/getup.scss */
 small {
   font-size: 0.9em;
   line-height: 1;
 }
 
-/* line 304, ../scss/getup.scss */
+/* line 313, ../scss/getup.scss */
 pre,
 code {
   font-family: monospace;
   font-size: 1.2em;
 }
 
-/* line 309, ../scss/getup.scss */
+/* line 318, ../scss/getup.scss */
 pre {
   overflow: auto;
   line-height: 1;
 }
 
-/* line 314, ../scss/getup.scss */
+/* line 323, ../scss/getup.scss */
 code {
   line-height: 1;
 }
 
-/* line 318, ../scss/getup.scss */
+/* line 327, ../scss/getup.scss */
 .caps {
   text-transform: uppercase;
 }
 
-/* line 326, ../scss/getup.scss */
+/* line 335, ../scss/getup.scss */
 pre,
 code,
 kbd,
@@ -815,7 +815,7 @@ tt {
   line-height: 100%;
 }
 
-/* line 332, ../scss/getup.scss */
+/* line 341, ../scss/getup.scss */
 hr {
   display: block;
   height: 1px;
@@ -826,12 +826,12 @@ hr {
 }
 
 /* 画像 */
-/* line 342, ../scss/getup.scss */
+/* line 351, ../scss/getup.scss */
 img {
   vertical-align: middle;
 }
 
-/* line 348, ../scss/getup.scss */
+/* line 357, ../scss/getup.scss */
 img.left,
 img.alignleft,
 img.fl {
@@ -839,7 +839,7 @@ img.fl {
   margin: 0 10px 10px 0;
 }
 
-/* line 355, ../scss/getup.scss */
+/* line 364, ../scss/getup.scss */
 img.right,
 img.alignright,
 img.fr {
@@ -847,7 +847,7 @@ img.fr {
   margin: 0 0 10px 10px;
 }
 
-/* line 361, ../scss/getup.scss */
+/* line 370, ../scss/getup.scss */
 img.aligncenter,
 img.ac {
   display: block;
@@ -856,20 +856,20 @@ img.ac {
 }
 
 /* フォーム */
-/* line 368, ../scss/getup.scss */
+/* line 377, ../scss/getup.scss */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* line 375, ../scss/getup.scss */
+/* line 384, ../scss/getup.scss */
 label,
 button {
   cursor: pointer;
 }
 
-/* line 381, ../scss/getup.scss */
+/* line 390, ../scss/getup.scss */
 input[type="text"],
 select,
 textarea {
@@ -898,12 +898,12 @@ textarea {
   transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
-/* line 392, ../scss/getup.scss */
+/* line 401, ../scss/getup.scss */
 textarea {
   resize: vertical;
 }
 
-/* line 398, ../scss/getup.scss */
+/* line 407, ../scss/getup.scss */
 input:focus,
 select:focus,
 textarea:focus {
@@ -914,14 +914,14 @@ textarea:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 
-/* line 407, ../scss/getup.scss */
+/* line 416, ../scss/getup.scss */
 .lt-ie9 input:focus,
 .lt-ie9 select:focus,
 .lt-ie9 textarea:focus {
   outline: thin dotted;
 }
 
-/* line 412, ../scss/getup.scss */
+/* line 421, ../scss/getup.scss */
 select {
   width: 220px;
   background-color: #ffffff;
@@ -929,14 +929,14 @@ select {
 }
 
 /* テーブル */
-/* line 419, ../scss/getup.scss */
+/* line 428, ../scss/getup.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
   max-width: 100%;
 }
 
-/* line 426, ../scss/getup.scss */
+/* line 435, ../scss/getup.scss */
 th,
 td {
   vertical-align: middle;
@@ -944,53 +944,53 @@ td {
   border: 1px solid #ccc;
 }
 
-/* line 432, ../scss/getup.scss */
+/* line 441, ../scss/getup.scss */
 th {
   font-weight: bold;
   text-align: center;
 }
 
-/* line 437, ../scss/getup.scss */
+/* line 446, ../scss/getup.scss */
 tfoot {
   text-align: center;
 }
 
-/* line 441, ../scss/getup.scss */
+/* line 450, ../scss/getup.scss */
 tfoot td {
   border-top-width: 2px;
 }
 
-/* line 445, ../scss/getup.scss */
+/* line 454, ../scss/getup.scss */
 　
 table ul,
 table ol {
   margin-bottom: 0;
 }
 
-/* line 449, ../scss/getup.scss */
+/* line 458, ../scss/getup.scss */
 .data table {
   width: 100%;
 }
 
 /* グリッドレイアウト */
-/* line 454, ../scss/getup.scss */
+/* line 463, ../scss/getup.scss */
 .line {
   margin: 0;
   padding: 0;
 }
 
-/* line 459, ../scss/getup.scss */
+/* line 468, ../scss/getup.scss */
 .lt-ie8 .line {
   overflow: visible;
   zoom: 1;
 }
 
-/* line 464, ../scss/getup.scss */
+/* line 473, ../scss/getup.scss */
 .ie8 .line {
   overflow: hidden;
 }
 
-/* line 469, ../scss/getup.scss */
+/* line 478, ../scss/getup.scss */
 .line:after,
 .line::after {
   clear: both;
@@ -999,23 +999,23 @@ table ol {
   height: 0;
 }
 
-/* line 476, ../scss/getup.scss */
+/* line 485, ../scss/getup.scss */
 .has-gutter {
   margin-left: -20px;
 }
 
-/* line 480, ../scss/getup.scss */
+/* line 489, ../scss/getup.scss */
 .unit {
   float: left;
   list-style: none;
 }
 
-/* line 485, ../scss/getup.scss */
+/* line 494, ../scss/getup.scss */
 .has-gutter > .unit {
   padding-left: 20px;
 }
 
-/* line 490, ../scss/getup.scss */
+/* line 499, ../scss/getup.scss */
 .unit, .unit:after, .unit:before,
 .line, .line:after, .line:before {
   -webkit-box-sizing: border-box;
@@ -1024,527 +1024,527 @@ table ol {
   *behavior: url("/u/175530/js/vendor/boxsizing.htc");
 }
 
-/* line 495, ../scss/getup.scss */
+/* line 504, ../scss/getup.scss */
 .lt-ie8 .unit {
   zoom: 1;
 }
 
-/* line 499, ../scss/getup.scss */
+/* line 508, ../scss/getup.scss */
 .right-unit {
   float: right;
 }
 
-/* line 503, ../scss/getup.scss */
+/* line 512, ../scss/getup.scss */
 .size1of1 {
   width: 100%;
 }
 
-/* line 507, ../scss/getup.scss */
+/* line 516, ../scss/getup.scss */
 .size1of2 {
   width: 50%;
 }
 
-/* line 511, ../scss/getup.scss */
+/* line 520, ../scss/getup.scss */
 .size1of3 {
   width: 33.333333%;
 }
 
-/* line 515, ../scss/getup.scss */
+/* line 524, ../scss/getup.scss */
 .size2of3 {
   width: 66.666666%;
 }
 
-/* line 519, ../scss/getup.scss */
+/* line 528, ../scss/getup.scss */
 .size1of4 {
   width: 25%;
 }
 
-/* line 523, ../scss/getup.scss */
+/* line 532, ../scss/getup.scss */
 .size3of4 {
   width: 75%;
 }
 
-/* line 527, ../scss/getup.scss */
+/* line 536, ../scss/getup.scss */
 .size1of5 {
   width: 20%;
 }
 
-/* line 531, ../scss/getup.scss */
+/* line 540, ../scss/getup.scss */
 .size2of5 {
   width: 40%;
 }
 
-/* line 535, ../scss/getup.scss */
+/* line 544, ../scss/getup.scss */
 .size3of5 {
   width: 60%;
 }
 
-/* line 539, ../scss/getup.scss */
+/* line 548, ../scss/getup.scss */
 .size4of5 {
   width: 80%;
 }
 
-/* line 543, ../scss/getup.scss */
+/* line 552, ../scss/getup.scss */
 .size1of6 {
   width: 16.666666%;
 }
 
-/* line 547, ../scss/getup.scss */
+/* line 556, ../scss/getup.scss */
 .size5of6 {
   width: 83.333333%;
 }
 
-/* line 551, ../scss/getup.scss */
+/* line 560, ../scss/getup.scss */
 .size1of7 {
   width: 14.2857143%;
 }
 
-/* line 555, ../scss/getup.scss */
+/* line 564, ../scss/getup.scss */
 .size2of7 {
   width: 28.5714286%;
 }
 
-/* line 559, ../scss/getup.scss */
+/* line 568, ../scss/getup.scss */
 .size3of7 {
   width: 42.8571429%;
 }
 
-/* line 563, ../scss/getup.scss */
+/* line 572, ../scss/getup.scss */
 .size4of7 {
   width: 57.1428571%;
 }
 
-/* line 567, ../scss/getup.scss */
+/* line 576, ../scss/getup.scss */
 .size5of7 {
   width: 71.4285714%;
 }
 
-/* line 571, ../scss/getup.scss */
+/* line 580, ../scss/getup.scss */
 .size6of7 {
   width: 85.7142857%;
 }
 
-/* line 575, ../scss/getup.scss */
+/* line 584, ../scss/getup.scss */
 .size1of8 {
   width: 12.5%;
 }
 
-/* line 579, ../scss/getup.scss */
+/* line 588, ../scss/getup.scss */
 .size3of8 {
   width: 37.5%;
 }
 
-/* line 583, ../scss/getup.scss */
+/* line 592, ../scss/getup.scss */
 .size5of8 {
   width: 62.5%;
 }
 
-/* line 587, ../scss/getup.scss */
+/* line 596, ../scss/getup.scss */
 .size7of8 {
   width: 87.5%;
 }
 
-/* line 591, ../scss/getup.scss */
+/* line 600, ../scss/getup.scss */
 .size1of9 {
   width: 11.111111111%;
 }
 
-/* line 595, ../scss/getup.scss */
+/* line 604, ../scss/getup.scss */
 .size2of9 {
   width: 22.222222222%;
 }
 
-/* line 599, ../scss/getup.scss */
+/* line 608, ../scss/getup.scss */
 .size3of9 {
   width: 33.333333333%;
 }
 
-/* line 603, ../scss/getup.scss */
+/* line 612, ../scss/getup.scss */
 .size4of9 {
   width: 44.444444444%;
 }
 
-/* line 607, ../scss/getup.scss */
+/* line 616, ../scss/getup.scss */
 .size5of9 {
   width: 55.555555555%;
 }
 
-/* line 611, ../scss/getup.scss */
+/* line 620, ../scss/getup.scss */
 .size6of9 {
   width: 66.666666666%;
 }
 
-/* line 615, ../scss/getup.scss */
+/* line 624, ../scss/getup.scss */
 .size7of9 {
   width: 77.777777777%;
 }
 
-/* line 619, ../scss/getup.scss */
+/* line 628, ../scss/getup.scss */
 .size8of9 {
   width: 88.888888888%;
 }
 
-/* line 623, ../scss/getup.scss */
+/* line 632, ../scss/getup.scss */
 .size1of10 {
   width: 10%;
 }
 
-/* line 627, ../scss/getup.scss */
+/* line 636, ../scss/getup.scss */
 .size3of10 {
   width: 30%;
 }
 
-/* line 631, ../scss/getup.scss */
+/* line 640, ../scss/getup.scss */
 .size4of10 {
   width: 40%;
 }
 
-/* line 635, ../scss/getup.scss */
+/* line 644, ../scss/getup.scss */
 .size7of10 {
   width: 70%;
 }
 
-/* line 639, ../scss/getup.scss */
+/* line 648, ../scss/getup.scss */
 .size9of10 {
   width: 90%;
 }
 
-/* line 643, ../scss/getup.scss */
+/* line 652, ../scss/getup.scss */
 .before1of2 {
   margin-left: 50%;
 }
 
-/* line 647, ../scss/getup.scss */
+/* line 656, ../scss/getup.scss */
 .before1of3 {
   margin-left: 33.333333%;
 }
 
-/* line 651, ../scss/getup.scss */
+/* line 660, ../scss/getup.scss */
 .before2of3 {
   margin-left: 66.666666%;
 }
 
-/* line 655, ../scss/getup.scss */
+/* line 664, ../scss/getup.scss */
 .before1of4 {
   margin-left: 25%;
 }
 
-/* line 659, ../scss/getup.scss */
+/* line 668, ../scss/getup.scss */
 .before3of4 {
   margin-left: 75%;
 }
 
-/* line 663, ../scss/getup.scss */
+/* line 672, ../scss/getup.scss */
 .before1of5 {
   margin-left: 20%;
 }
 
-/* line 667, ../scss/getup.scss */
+/* line 676, ../scss/getup.scss */
 .before2of5 {
   margin-left: 40%;
 }
 
-/* line 671, ../scss/getup.scss */
+/* line 680, ../scss/getup.scss */
 .before3of5 {
   margin-left: 60%;
 }
 
-/* line 675, ../scss/getup.scss */
+/* line 684, ../scss/getup.scss */
 .before4of5 {
   margin-left: 80%;
 }
 
-/* line 679, ../scss/getup.scss */
+/* line 688, ../scss/getup.scss */
 .before1of6 {
   margin-left: 16.666666%;
 }
 
-/* line 683, ../scss/getup.scss */
+/* line 692, ../scss/getup.scss */
 .before5of6 {
   margin-left: 83.333333%;
 }
 
-/* line 687, ../scss/getup.scss */
+/* line 696, ../scss/getup.scss */
 .before1of7 {
   margin-left: 14.2857143%;
 }
 
-/* line 691, ../scss/getup.scss */
+/* line 700, ../scss/getup.scss */
 .before2of7 {
   margin-left: 28.5714286%;
 }
 
-/* line 695, ../scss/getup.scss */
+/* line 704, ../scss/getup.scss */
 .before3of7 {
   margin-left: 42.8571429%;
 }
 
-/* line 699, ../scss/getup.scss */
+/* line 708, ../scss/getup.scss */
 .before4of7 {
   margin-left: 57.1428571%;
 }
 
-/* line 703, ../scss/getup.scss */
+/* line 712, ../scss/getup.scss */
 .before5of7 {
   margin-left: 71.4285714%;
 }
 
-/* line 707, ../scss/getup.scss */
+/* line 716, ../scss/getup.scss */
 .before6of7 {
   margin-left: 85.7142857%;
 }
 
-/* line 711, ../scss/getup.scss */
+/* line 720, ../scss/getup.scss */
 .before1of8 {
   margin-left: 12.5%;
 }
 
-/* line 715, ../scss/getup.scss */
+/* line 724, ../scss/getup.scss */
 .before3of8 {
   margin-left: 37.5%;
 }
 
-/* line 719, ../scss/getup.scss */
+/* line 728, ../scss/getup.scss */
 .before5of8 {
   margin-left: 62.5%;
 }
 
-/* line 723, ../scss/getup.scss */
+/* line 732, ../scss/getup.scss */
 .before7of8 {
   margin-left: 87.5%;
 }
 
-/* line 727, ../scss/getup.scss */
+/* line 736, ../scss/getup.scss */
 .before1of9 {
   margin-left: 11.111111111%;
 }
 
-/* line 731, ../scss/getup.scss */
+/* line 740, ../scss/getup.scss */
 .before2of9 {
   margin-left: 22.222222222%;
 }
 
-/* line 735, ../scss/getup.scss */
+/* line 744, ../scss/getup.scss */
 .before3of9 {
   margin-left: 33.333333333%;
 }
 
-/* line 739, ../scss/getup.scss */
+/* line 748, ../scss/getup.scss */
 .before4of9 {
   margin-left: 44.444444444%;
 }
 
-/* line 743, ../scss/getup.scss */
+/* line 752, ../scss/getup.scss */
 .before5of9 {
   margin-left: 55.555555555%;
 }
 
-/* line 747, ../scss/getup.scss */
+/* line 756, ../scss/getup.scss */
 .before6of9 {
   margin-left: 66.666666666%;
 }
 
-/* line 751, ../scss/getup.scss */
+/* line 760, ../scss/getup.scss */
 .before7of9 {
   margin-left: 77.777777777%;
 }
 
-/* line 755, ../scss/getup.scss */
+/* line 764, ../scss/getup.scss */
 .before8of9 {
   margin-left: 88.888888888%;
 }
 
-/* line 759, ../scss/getup.scss */
+/* line 768, ../scss/getup.scss */
 .before1of10 {
   margin-left: 10%;
 }
 
-/* line 763, ../scss/getup.scss */
+/* line 772, ../scss/getup.scss */
 .before3of10 {
   margin-left: 30%;
 }
 
-/* line 767, ../scss/getup.scss */
+/* line 776, ../scss/getup.scss */
 .before4of10 {
   margin-left: 40%;
 }
 
-/* line 771, ../scss/getup.scss */
+/* line 780, ../scss/getup.scss */
 .before7of10 {
   margin-left: 70%;
 }
 
-/* line 775, ../scss/getup.scss */
+/* line 784, ../scss/getup.scss */
 .before9of10 {
   margin-left: 90%;
 }
 
-/* line 779, ../scss/getup.scss */
+/* line 788, ../scss/getup.scss */
 .after1of2 {
   margin-right: 50%;
 }
 
-/* line 783, ../scss/getup.scss */
+/* line 792, ../scss/getup.scss */
 .after1of3 {
   margin-right: 33.333333%;
 }
 
-/* line 787, ../scss/getup.scss */
+/* line 796, ../scss/getup.scss */
 .after2of3 {
   margin-right: 66.666666%;
 }
 
-/* line 791, ../scss/getup.scss */
+/* line 800, ../scss/getup.scss */
 .after1of4 {
   margin-right: 25%;
 }
 
-/* line 795, ../scss/getup.scss */
+/* line 804, ../scss/getup.scss */
 .after3of4 {
   margin-right: 75%;
 }
 
-/* line 799, ../scss/getup.scss */
+/* line 808, ../scss/getup.scss */
 .after1of5 {
   margin-right: 20%;
 }
 
-/* line 803, ../scss/getup.scss */
+/* line 812, ../scss/getup.scss */
 .after2of5 {
   margin-right: 40%;
 }
 
-/* line 807, ../scss/getup.scss */
+/* line 816, ../scss/getup.scss */
 .after3of5 {
   margin-right: 60%;
 }
 
-/* line 811, ../scss/getup.scss */
+/* line 820, ../scss/getup.scss */
 .after4of5 {
   margin-right: 80%;
 }
 
-/* line 815, ../scss/getup.scss */
+/* line 824, ../scss/getup.scss */
 .after1of6 {
   margin-right: 16.666666%;
 }
 
-/* line 819, ../scss/getup.scss */
+/* line 828, ../scss/getup.scss */
 .after5of6 {
   margin-right: 83.333333%;
 }
 
-/* line 823, ../scss/getup.scss */
+/* line 832, ../scss/getup.scss */
 .after1of7 {
   margin-right: 14.2857143%;
 }
 
-/* line 827, ../scss/getup.scss */
+/* line 836, ../scss/getup.scss */
 .after2of7 {
   margin-right: 28.5714286%;
 }
 
-/* line 831, ../scss/getup.scss */
+/* line 840, ../scss/getup.scss */
 .after3of7 {
   margin-right: 42.8571429%;
 }
 
-/* line 835, ../scss/getup.scss */
+/* line 844, ../scss/getup.scss */
 .after4of7 {
   margin-right: 57.1428571%;
 }
 
-/* line 839, ../scss/getup.scss */
+/* line 848, ../scss/getup.scss */
 .after5of7 {
   margin-right: 71.4285714%;
 }
 
-/* line 843, ../scss/getup.scss */
+/* line 852, ../scss/getup.scss */
 .after6of7 {
   margin-right: 85.7142857%;
 }
 
-/* line 847, ../scss/getup.scss */
+/* line 856, ../scss/getup.scss */
 .after1of8 {
   margin-right: 12.5%;
 }
 
-/* line 851, ../scss/getup.scss */
+/* line 860, ../scss/getup.scss */
 .after3of8 {
   margin-right: 37.5%;
 }
 
-/* line 855, ../scss/getup.scss */
+/* line 864, ../scss/getup.scss */
 .after5of8 {
   margin-right: 62.5%;
 }
 
-/* line 859, ../scss/getup.scss */
+/* line 868, ../scss/getup.scss */
 .after7of8 {
   margin-right: 87.5%;
 }
 
-/* line 863, ../scss/getup.scss */
+/* line 872, ../scss/getup.scss */
 .after1of9 {
   margin-right: 11.111111111%;
 }
 
-/* line 867, ../scss/getup.scss */
+/* line 876, ../scss/getup.scss */
 .after2of9 {
   margin-right: 22.222222222%;
 }
 
-/* line 871, ../scss/getup.scss */
+/* line 880, ../scss/getup.scss */
 .after3of9 {
   margin-right: 33.333333333%;
 }
 
-/* line 875, ../scss/getup.scss */
+/* line 884, ../scss/getup.scss */
 .after4of9 {
   margin-right: 44.444444444%;
 }
 
-/* line 879, ../scss/getup.scss */
+/* line 888, ../scss/getup.scss */
 .after5of9 {
   margin-right: 55.555555555%;
 }
 
-/* line 883, ../scss/getup.scss */
+/* line 892, ../scss/getup.scss */
 .after6of9 {
   margin-right: 66.666666666%;
 }
 
-/* line 887, ../scss/getup.scss */
+/* line 896, ../scss/getup.scss */
 .after7of9 {
   margin-right: 77.777777777%;
 }
 
-/* line 891, ../scss/getup.scss */
+/* line 900, ../scss/getup.scss */
 .after8of9 {
   margin-right: 88.888888888%;
 }
 
-/* line 895, ../scss/getup.scss */
+/* line 904, ../scss/getup.scss */
 .after1of10 {
   margin-right: 10%;
 }
 
-/* line 899, ../scss/getup.scss */
+/* line 908, ../scss/getup.scss */
 .after3of10 {
   margin-right: 30%;
 }
 
-/* line 903, ../scss/getup.scss */
+/* line 912, ../scss/getup.scss */
 .after4of10 {
   margin-right: 40%;
 }
 
-/* line 907, ../scss/getup.scss */
+/* line 916, ../scss/getup.scss */
 .after7of10 {
   margin-right: 70%;
 }
 
-/* line 911, ../scss/getup.scss */
+/* line 920, ../scss/getup.scss */
 .after9of10 {
   margin-right: 90%;
 }
@@ -1554,7 +1554,7 @@ table ol {
 画像置換 (Alternative Image)
 高さはPadding-topかpadding-bottomdで設定する。
 */
-/* line 921, ../scss/getup.scss */
+/* line 930, ../scss/getup.scss */
 .alt-img {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1567,7 +1567,7 @@ table ol {
 }
 
 /* Chrome Frame */
-/* line 928, ../scss/getup.scss */
+/* line 937, ../scss/getup.scss */
 .chromeframe {
   background-color: #fff3f3;
   border: 1px solid #f00;
@@ -1580,7 +1580,7 @@ table ol {
 }
 
 /* 汎用ボタン */
-/* line 936, ../scss/getup.scss */
+/* line 945, ../scss/getup.scss */
 .btn {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1615,7 +1615,7 @@ table ol {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 955, ../scss/getup.scss */
+/* line 964, ../scss/getup.scss */
 .lt-ie7 .btn {
   display: inline;
   background-color: #e6e6e6;
@@ -1623,7 +1623,7 @@ table ol {
   zoom: 1;
 }
 
-/* line 966, ../scss/getup.scss */
+/* line 975, ../scss/getup.scss */
 .btn:hover,
 .btn:active,
 .btn.active,
@@ -1633,7 +1633,7 @@ table ol {
   background-color: #e6e6e6;
 }
 
-/* line 975, ../scss/getup.scss */
+/* line 984, ../scss/getup.scss */
 .lt-ie7 .btn:hover,
 .lt-ie7 .btn:active,
 .lt-ie7 .btn.active,
@@ -1642,13 +1642,13 @@ table ol {
   *background-color: #d9d9d9;
 }
 
-/* line 981, ../scss/getup.scss */
+/* line 990, ../scss/getup.scss */
 .ie8 .btn:active,
 .ie8 .btn.active {
   background-color: #cccccc;
 }
 
-/* line 985, ../scss/getup.scss */
+/* line 994, ../scss/getup.scss */
 .btn:hover {
   color: #333333;
   text-decoration: none;
@@ -1659,14 +1659,14 @@ table ol {
   transition: background-position 0.1s linear, 1s;
 }
 
-/* line 992, ../scss/getup.scss */
+/* line 1001, ../scss/getup.scss */
 .btn:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-/* line 999, ../scss/getup.scss */
+/* line 1008, ../scss/getup.scss */
 .btn.active,
 .btn:active {
   background-image: none;
@@ -1676,7 +1676,7 @@ table ol {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 1006, ../scss/getup.scss */
+/* line 1015, ../scss/getup.scss */
 .btn.disabled,
 .btn[disabled] {
   cursor: default;
@@ -1688,17 +1688,17 @@ table ol {
   box-shadow: none;
 }
 
-/* line 1013, ../scss/getup.scss */
+/* line 1022, ../scss/getup.scss */
 .chromeframe strong {
   color: #f00;
 }
 
-/* line 1017, ../scss/getup.scss */
+/* line 1026, ../scss/getup.scss */
 .hide {
   display: none;
 }
 
-/* line 1021, ../scss/getup.scss */
+/* line 1030, ../scss/getup.scss */
 .show {
   display: block;
 }
@@ -1707,14 +1707,15 @@ table ol {
 /* ここにサイト独自のスタイルを設定 */
 /* 上書きクラス */
 /* CLEARFIX */
-/* line 1035, ../scss/getup.scss */
+/* line 1044, ../scss/getup.scss */
 .clearfix,
 .cf {
   *zoom: 1;
 }
-/* line 38, ../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.clearfix:after,
-.cf:after {
+/* line 42, ../scss/getup.scss */
+.clearfix:after, .clearfix:before,
+.cf:after,
+.cf:before {
   content: "";
   display: table;
   clear: both;
@@ -1724,19 +1725,19 @@ table ol {
 以下のWordpressのリッチテキストエディタが付加するクラス(※)も合わせて設定
 ※ .alignleft / .alignright / .aligncenter
 */
-/* line 1044, ../scss/getup.scss */
+/* line 1053, ../scss/getup.scss */
 .txtl,
 .alignleft {
   text-align: left;
 }
 
-/* line 1049, ../scss/getup.scss */
+/* line 1058, ../scss/getup.scss */
 .txtr,
 .alignright {
   text-align: right;
 }
 
-/* line 1054, ../scss/getup.scss */
+/* line 1063, ../scss/getup.scss */
 .txtc,
 .aligncenter {
   text-align: center;
@@ -1746,21 +1747,21 @@ table ol {
 Wordpressのリッチテキストエディタが付加するクラス(※)を網羅。
 ※ .left / .right / .clear
 */
-/* line 1062, ../scss/getup.scss */
+/* line 1071, ../scss/getup.scss */
 .left {
   display: inline;
   float: left;
   margin-top: 0;
 }
 
-/* line 1067, ../scss/getup.scss */
+/* line 1076, ../scss/getup.scss */
 .right {
   display: inline;
   float: right;
   margin-top: 0;
 }
 
-/* line 1072, ../scss/getup.scss */
+/* line 1081, ../scss/getup.scss */
 .clear {
   clear: both;
   float: none;
@@ -1769,7 +1770,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 
 /* タブレットサイズ */
 @media (max-width: 720px) {
-  /* line 1081, ../scss/getup.scss */
+  /* line 1090, ../scss/getup.scss */
   .breakpoint-1,
   .linearize-from-tablet {
     display: -webkit-box;
@@ -1780,18 +1781,22 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     display: -moz-flex;
     display: -ms-flex;
     display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-lines: multiple;
-    -moz-box-lines: multiple;
-    -ms-box-lines: multiple;
-    box-lines: multiple;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    -ms-box-lines: single;
+    box-lines: single;
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-pack: start;
     -moz-box-pack: start;
     -ms-box-pack: start;
@@ -1813,7 +1818,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     -ms-align-content: flex-start;
     align-content: flex-start;
   }
-  /* line 114, ../scss/getup.scss */
+  /* line 124, ../scss/getup.scss */
   .breakpoint-1 > .unit,
   .linearize-from-tablet > .unit {
     -webkit-box-flex: 1;
@@ -1822,38 +1827,36 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     box-flex: 1;
     float: none;
     width: 100%;
-    overflow: hidden;
-    *zoom: 1;
   }
 
-  /* line 1085, ../scss/getup.scss */
+  /* line 1094, ../scss/getup.scss */
   .show-breakpoint-1 {
     display: block;
   }
 
-  /* line 1089, ../scss/getup.scss */
+  /* line 1098, ../scss/getup.scss */
   .hide-breakpoint-1 {
     display: none;
   }
 
-  /* line 1093, ../scss/getup.scss */
+  /* line 1102, ../scss/getup.scss */
   .has-gutter.breakpoint-1 {
     margin-left: 0;
   }
-  /* line 1095, ../scss/getup.scss */
+  /* line 1104, ../scss/getup.scss */
   .has-gutter.breakpoint-1 .unit {
     padding-left: 0;
   }
 }
 /* モバイルサイズ */
 @media (max-width: 480px) {
-  /* line 1105, ../scss/getup.scss */
+  /* line 1114, ../scss/getup.scss */
   html {
     font-size: 0.875em;
     -webkit-text-size-adjust: none;
   }
 
-  /* line 1111, ../scss/getup.scss */
+  /* line 1120, ../scss/getup.scss */
   .breakpoint-2,
   .linearize-from-motile {
     display: -webkit-box;
@@ -1864,18 +1867,22 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     display: -moz-flex;
     display: -ms-flex;
     display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-lines: multiple;
-    -moz-box-lines: multiple;
-    -ms-box-lines: multiple;
-    box-lines: multiple;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    -ms-box-lines: single;
+    box-lines: single;
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-pack: start;
     -moz-box-pack: start;
     -ms-box-pack: start;
@@ -1897,7 +1904,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     -ms-align-content: flex-start;
     align-content: flex-start;
   }
-  /* line 114, ../scss/getup.scss */
+  /* line 124, ../scss/getup.scss */
   .breakpoint-2 > .unit,
   .linearize-from-motile > .unit {
     -webkit-box-flex: 1;
@@ -1906,38 +1913,36 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     box-flex: 1;
     float: none;
     width: 100%;
-    overflow: hidden;
-    *zoom: 1;
   }
 
-  /* line 1115, ../scss/getup.scss */
+  /* line 1124, ../scss/getup.scss */
   .show-breakpoint-2 {
     display: block;
   }
 
-  /* line 1119, ../scss/getup.scss */
+  /* line 1128, ../scss/getup.scss */
   .hide-breakpoint-2 {
     display: none;
   }
 
-  /* line 1123, ../scss/getup.scss */
+  /* line 1132, ../scss/getup.scss */
   .has-gutter.breakpoint-2 {
     margin-left: 0;
   }
-  /* line 1125, ../scss/getup.scss */
+  /* line 1134, ../scss/getup.scss */
   .has-gutter.breakpoint-2 .unit {
     padding-left: 0;
   }
 
   /* 画像 */
-  /* line 1131, ../scss/getup.scss */
+  /* line 1140, ../scss/getup.scss */
   img {
     max-width: 100%;
     height: auto;
   }
 
   /* テーブル */
-  /* line 1137, ../scss/getup.scss */
+  /* line 1146, ../scss/getup.scss */
   table {
     overflow: auto;
   }
@@ -1945,7 +1950,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 /* 印刷用 */
 @media print {
   /* テキストシャドウなど不要なエフェクトを無効化 */
-  /* line 1147, ../scss/getup.scss */
+  /* line 1156, ../scss/getup.scss */
   * {
     background: transparent;
     color: #000;
@@ -1954,14 +1959,14 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   }
 
   /* 画像がはみ出したり変形したりしないように。 */
-  /* line 1168, ../scss/getup.scss */
+  /* line 1177, ../scss/getup.scss */
   img {
     max-width: 100%;
     height: auto;
   }
 
   /* 画像置換をキャンセル */
-  /* line 1174, ../scss/getup.scss */
+  /* line 1183, ../scss/getup.scss */
   .alt-img {
     background-image: none;
     height: auto;
