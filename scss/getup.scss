@@ -29,7 +29,7 @@ https://github.com/nibushibu/getup-css/blob/master/LICENSE
 
 $box-sizing-path: "/u/175530/js/vendor/boxsizing.htc";
 
-@mixin linearize-unit-old() {
+@mixin linearize-unit-old {
   clear: both;
   display: block;
   padding-left: 0;
@@ -463,15 +463,12 @@ table ol {
 .line {
   margin: 0;
   padding: 0;
+  @include g-clearfix;
 }
 
 .lt-ie8 .line {
   overflow: visible;
   zoom: 1;
-}
-
-.ie8 .line {
-  overflow: hidden;
 }
 
 .line:after,
@@ -927,10 +924,13 @@ table ol {
 画像置換 (Alternative Image)
 高さはPadding-topかpadding-bottomdで設定する。
 */
-.alt-img {
+@mixin alt-img {
   @include inline-block();
   height: 0;
   overflow: hidden;
+}
+.alt-img {
+  @include alt-img;
 }
 
 /* Chrome Frame */

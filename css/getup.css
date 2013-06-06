@@ -6,7 +6,7 @@
 /**
  * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-/* line 22, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\0000322}}
 article,
 aside,
 details,
@@ -25,7 +25,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-/* line 32, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\0000332}}
 audio,
 canvas,
 video {
@@ -38,7 +38,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 43, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\0000343}}
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -48,7 +48,7 @@ audio:not([controls]) {
  * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
  * Known issue: no IE 6 support.
  */
-/* line 53, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\0000353}}
 [hidden] {
   display: none;
 }
@@ -62,7 +62,7 @@ audio:not([controls]) {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 68, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\0000368}}
 html {
   font-size: 100%;
   /* 1 */
@@ -76,7 +76,7 @@ html {
  * Address `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-/* line 83, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\0000383}}
 html,
 button,
 input,
@@ -88,7 +88,7 @@ textarea {
 /**
  * Address margins handled incorrectly in IE 6/7.
  */
-/* line 91, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\0000391}}
 body {
   margin: 0;
 }
@@ -99,7 +99,7 @@ body {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-/* line 103, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003103}}
 a:focus {
   outline: thin dotted;
 }
@@ -107,7 +107,7 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 112, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003112}}
 a:active,
 a:hover {
   outline: 0;
@@ -121,37 +121,37 @@ a:hover {
  * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
  * and Chrome.
  */
-/* line 126, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003126}}
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/* line 131, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003131}}
 h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
 }
 
-/* line 136, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003136}}
 h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-/* line 141, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003141}}
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
 
-/* line 146, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003146}}
 h5 {
   font-size: 0.83em;
   margin: 1.67em 0;
 }
 
-/* line 151, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003151}}
 h6 {
   font-size: 0.67em;
   margin: 2.33em 0;
@@ -160,7 +160,7 @@ h6 {
 /**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
-/* line 160, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003160}}
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -168,13 +168,13 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
  */
-/* line 169, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003169}}
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 173, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003173}}
 blockquote {
   margin: 1em 40px;
 }
@@ -182,7 +182,7 @@ blockquote {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-/* line 181, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003181}}
 dfn {
   font-style: italic;
 }
@@ -191,7 +191,7 @@ dfn {
  * Address differences between Firefox and other browsers.
  * Known issue: no IE 6/7 normalization.
  */
-/* line 190, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003190}}
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -201,7 +201,7 @@ hr {
 /**
  * Address styling not present in IE 6/7/8/9.
  */
-/* line 200, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003200}}
 mark {
   background: #ff0;
   color: #000;
@@ -210,7 +210,7 @@ mark {
 /**
  * Address margins set differently in IE 6/7.
  */
-/* line 210, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003210}}
 p,
 pre {
   margin: 1em 0;
@@ -219,7 +219,7 @@ pre {
 /**
  * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
  */
-/* line 221, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003221}}
 code,
 kbd,
 pre,
@@ -232,7 +232,7 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-/* line 231, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003231}}
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -242,7 +242,7 @@ pre {
 /**
  * Address CSS quotes not supported in IE 6/7.
  */
-/* line 241, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003241}}
 q {
   quotes: none;
 }
@@ -250,7 +250,7 @@ q {
 /**
  * Address `quotes` property not supported in Safari 4.
  */
-/* line 250, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003250}}
 q:before,
 q:after {
   content: '';
@@ -260,7 +260,7 @@ q:after {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 259, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003259}}
 small {
   font-size: 80%;
 }
@@ -268,7 +268,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 268, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003268}}
 sub,
 sup {
   font-size: 75%;
@@ -277,12 +277,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 275, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003275}}
 sup {
   top: -0.5em;
 }
 
-/* line 279, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003279}}
 sub {
   bottom: -0.25em;
 }
@@ -293,7 +293,7 @@ sub {
 /**
  * Address margins set differently in IE 6/7.
  */
-/* line 294, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003294}}
 dl,
 menu,
 ol,
@@ -301,7 +301,7 @@ ul {
   margin: 1em 0;
 }
 
-/* line 298, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003298}}
 dd {
   margin: 0 0 0 40px;
 }
@@ -309,7 +309,7 @@ dd {
 /**
  * Address paddings set differently in IE 6/7.
  */
-/* line 308, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003308}}
 menu,
 ol,
 ul {
@@ -319,7 +319,7 @@ ul {
 /**
  * Correct list images handled incorrectly in IE 7.
  */
-/* line 317, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003317}}
 nav ul,
 nav ol {
   list-style: none;
@@ -333,7 +333,7 @@ nav ol {
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
  * 2. Improve image quality when scaled in IE 7.
  */
-/* line 331, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003331}}
 img {
   border: 0;
   /* 1 */
@@ -344,7 +344,7 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 340, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003340}}
 svg:not(:root) {
   overflow: hidden;
 }
@@ -355,7 +355,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
-/* line 352, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003352}}
 figure {
   margin: 0;
 }
@@ -366,7 +366,7 @@ figure {
 /**
  * Correct margin displayed oddly in IE 6/7.
  */
-/* line 364, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003364}}
 form {
   margin: 0;
 }
@@ -374,7 +374,7 @@ form {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 372, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003372}}
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -386,7 +386,7 @@ fieldset {
  * 2. Correct text not wrapping in Firefox 3.
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
-/* line 384, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003384}}
 legend {
   border: 0;
   /* 1 */
@@ -403,7 +403,7 @@ legend {
  *    and Chrome.
  * 3. Improve appearance and consistency in all browsers.
  */
-/* line 401, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003401}}
 button,
 input,
 select,
@@ -422,7 +422,7 @@ textarea {
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 414, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003414}}
 button,
 input {
   line-height: normal;
@@ -434,7 +434,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 426, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003426}}
 button,
 select {
   text-transform: none;
@@ -449,7 +449,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 443, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003443}}
 button,
 html input[type="button"],
 input[type="reset"],
@@ -465,7 +465,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 454, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003454}}
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -477,7 +477,7 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 466, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003466}}
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -495,7 +495,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 479, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003479}}
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -509,7 +509,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 492, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003492}}
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -518,7 +518,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 3+.
  */
-/* line 501, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003501}}
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -529,7 +529,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 511, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003511}}
 textarea {
   overflow: auto;
   /* 1 */
@@ -543,7 +543,7 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-/* line 524, ../scss/_normalize.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003524}}
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -572,7 +572,7 @@ https://github.com/nibushibu/getup-css/blob/master/LICENSE
   印刷設定
 */
 /* テキスト関連初期設定 */
-/* line 133, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003133}}
 html {
   font-size: 81.25%;
   font-family: "Lucida Grande", Arial, sans-serif;
@@ -580,13 +580,13 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-/* line 140, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003140}}
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
 }
 
-/* line 145, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003145}}
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -594,7 +594,7 @@ html {
 
 /* タイポグラフィ */
 /* 見出し */
-/* line 165, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003165}}
 h1,
 h2,
 h3,
@@ -611,7 +611,7 @@ blockquote,
   margin: 10px;
 }
 
-/* line 174, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003174}}
 h1,
 h2,
 h3,
@@ -621,12 +621,12 @@ h6 {
   font-weight: bold;
 }
 
-/* line 178, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003178}}
 pre {
   margin: 10px;
 }
 
-/* line 197, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003197}}
 table h1,
 table h2,
 table h3,
@@ -646,57 +646,57 @@ ol dl {
   margin: 0;
 }
 
-/* line 201, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003201}}
 h1 {
   font-size: 1.84615384615385em;
 }
 
-/* line 205, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003205}}
 h2 {
   font-size: 1.53846153846154em;
 }
 
-/* line 209, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003209}}
 h3 {
   font-size: 1.38461538461538em;
 }
 
-/* line 213, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003213}}
 h4 {
   font-size: 1.23076923076923em;
 }
 
-/* line 217, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003217}}
 h5 {
   font-size: 1.07692307692308em;
 }
 
-/* line 221, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003221}}
 h6 {
   font-size: 1em;
 }
 
-/* line 225, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003225}}
 a {
   text-decoration: none;
 }
 
-/* line 229, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003229}}
 a:hover {
   text-decoration: underline;
 }
 
-/* line 233, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003233}}
 ul {
   list-style-position: outside;
 }
 
-/* line 237, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003237}}
 ol {
   list-style: decimal;
 }
 
-/* line 245, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003245}}
 ul,
 ol,
 .square,
@@ -705,50 +705,50 @@ ol,
   padding-left: 2em;
 }
 
-/* line 250, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003250}}
 ul ul,
 ol ul {
   list-style-type: disc;
 }
 
-/* line 254, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003254}}
 .square {
   list-style: square outside;
 }
 
-/* line 258, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003258}}
 .circle {
   list-style: circle outside;
 }
 
-/* line 262, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003262}}
 .disc {
   list-style: disc outside;
 }
 
-/* line 267, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003267}}
 .not-list,
 .no-list {
   list-style: none;
   padding-left: 0;
 }
 
-/* line 272, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003272}}
 dl {
   margin-bottom: .833em;
 }
 
-/* line 276, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003276}}
 dt {
   font-weight: bold;
 }
 
-/* line 280, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003280}}
 dd {
   margin-left: 1.667em;
 }
 
-/* line 287, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003287}}
 q,
 i,
 em,
@@ -757,54 +757,54 @@ cite {
   font-weight: inherit;
 }
 
-/* line 293, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003293}}
 b,
 strong {
   font-weight: bold;
   font-style: inherit;
 }
 
-/* line 298, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003298}}
 mark {
   background: #ffc;
 }
 
-/* line 303, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003303}}
 s,
 del {
   text-decoration: line-through;
 }
 
-/* line 307, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003307}}
 small {
   font-size: 0.9em;
   line-height: 1;
 }
 
-/* line 313, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003313}}
 pre,
 code {
   font-family: monospace;
   font-size: 1.2em;
 }
 
-/* line 318, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003318}}
 pre {
   overflow: auto;
   line-height: 1;
 }
 
-/* line 323, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003323}}
 code {
   line-height: 1;
 }
 
-/* line 327, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003327}}
 .caps {
   text-transform: uppercase;
 }
 
-/* line 335, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003335}}
 pre,
 code,
 kbd,
@@ -815,7 +815,7 @@ tt {
   line-height: 100%;
 }
 
-/* line 341, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003341}}
 hr {
   display: block;
   height: 1px;
@@ -826,12 +826,12 @@ hr {
 }
 
 /* 画像 */
-/* line 351, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003351}}
 img {
   vertical-align: middle;
 }
 
-/* line 357, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003357}}
 img.left,
 img.alignleft,
 img.fl {
@@ -839,7 +839,7 @@ img.fl {
   margin: 0 10px 10px 0;
 }
 
-/* line 364, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003364}}
 img.right,
 img.alignright,
 img.fr {
@@ -847,7 +847,7 @@ img.fr {
   margin: 0 0 10px 10px;
 }
 
-/* line 370, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003370}}
 img.aligncenter,
 img.ac {
   display: block;
@@ -856,20 +856,20 @@ img.ac {
 }
 
 /* フォーム */
-/* line 377, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003377}}
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* line 384, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003384}}
 label,
 button {
   cursor: pointer;
 }
 
-/* line 390, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003390}}
 input[type="text"],
 select,
 textarea {
@@ -898,12 +898,12 @@ textarea {
   transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
-/* line 401, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003401}}
 textarea {
   resize: vertical;
 }
 
-/* line 407, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003407}}
 input:focus,
 select:focus,
 textarea:focus {
@@ -914,14 +914,14 @@ textarea:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 
-/* line 416, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003416}}
 .lt-ie9 input:focus,
 .lt-ie9 select:focus,
 .lt-ie9 textarea:focus {
   outline: thin dotted;
 }
 
-/* line 421, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003421}}
 select {
   width: 220px;
   background-color: #ffffff;
@@ -929,14 +929,14 @@ select {
 }
 
 /* テーブル */
-/* line 428, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003428}}
 table {
   border-collapse: collapse;
   border-spacing: 0;
   max-width: 100%;
 }
 
-/* line 435, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003435}}
 th,
 td {
   vertical-align: middle;
@@ -944,53 +944,55 @@ td {
   border: 1px solid #ccc;
 }
 
-/* line 441, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003441}}
 th {
   font-weight: bold;
   text-align: center;
 }
 
-/* line 446, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003446}}
 tfoot {
   text-align: center;
 }
 
-/* line 450, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003450}}
 tfoot td {
   border-top-width: 2px;
 }
 
-/* line 454, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003454}}
 　
 table ul,
 table ol {
   margin-bottom: 0;
 }
 
-/* line 458, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003458}}
 .data table {
   width: 100%;
 }
 
 /* グリッドレイアウト */
-/* line 463, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003463}}
 .line {
   margin: 0;
   padding: 0;
+  *zoom: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\0000342}}
+.line:after, .line:before {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/* line 468, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003469}}
 .lt-ie8 .line {
   overflow: visible;
   zoom: 1;
 }
 
-/* line 473, ../scss/getup.scss */
-.ie8 .line {
-  overflow: hidden;
-}
-
-/* line 478, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003475}}
 .line:after,
 .line::after {
   clear: both;
@@ -999,23 +1001,23 @@ table ol {
   height: 0;
 }
 
-/* line 485, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003482}}
 .has-gutter {
   margin-left: -20px;
 }
 
-/* line 489, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003486}}
 .unit {
   float: left;
   list-style: none;
 }
 
-/* line 494, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003491}}
 .has-gutter > .unit {
   padding-left: 20px;
 }
 
-/* line 499, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003496}}
 .unit, .unit:after, .unit:before,
 .line, .line:after, .line:before {
   -webkit-box-sizing: border-box;
@@ -1024,527 +1026,527 @@ table ol {
   *behavior: url("/u/175530/js/vendor/boxsizing.htc");
 }
 
-/* line 504, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003501}}
 .lt-ie8 .unit {
   zoom: 1;
 }
 
-/* line 508, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003505}}
 .right-unit {
   float: right;
 }
 
-/* line 512, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003509}}
 .size1of1 {
   width: 100%;
 }
 
-/* line 516, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003513}}
 .size1of2 {
   width: 50%;
 }
 
-/* line 520, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003517}}
 .size1of3 {
   width: 33.333333%;
 }
 
-/* line 524, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003521}}
 .size2of3 {
   width: 66.666666%;
 }
 
-/* line 528, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003525}}
 .size1of4 {
   width: 25%;
 }
 
-/* line 532, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003529}}
 .size3of4 {
   width: 75%;
 }
 
-/* line 536, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003533}}
 .size1of5 {
   width: 20%;
 }
 
-/* line 540, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003537}}
 .size2of5 {
   width: 40%;
 }
 
-/* line 544, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003541}}
 .size3of5 {
   width: 60%;
 }
 
-/* line 548, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003545}}
 .size4of5 {
   width: 80%;
 }
 
-/* line 552, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003549}}
 .size1of6 {
   width: 16.666666%;
 }
 
-/* line 556, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003553}}
 .size5of6 {
   width: 83.333333%;
 }
 
-/* line 560, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003557}}
 .size1of7 {
   width: 14.2857143%;
 }
 
-/* line 564, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003561}}
 .size2of7 {
   width: 28.5714286%;
 }
 
-/* line 568, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003565}}
 .size3of7 {
   width: 42.8571429%;
 }
 
-/* line 572, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003569}}
 .size4of7 {
   width: 57.1428571%;
 }
 
-/* line 576, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003573}}
 .size5of7 {
   width: 71.4285714%;
 }
 
-/* line 580, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003577}}
 .size6of7 {
   width: 85.7142857%;
 }
 
-/* line 584, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003581}}
 .size1of8 {
   width: 12.5%;
 }
 
-/* line 588, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003585}}
 .size3of8 {
   width: 37.5%;
 }
 
-/* line 592, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003589}}
 .size5of8 {
   width: 62.5%;
 }
 
-/* line 596, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003593}}
 .size7of8 {
   width: 87.5%;
 }
 
-/* line 600, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003597}}
 .size1of9 {
   width: 11.111111111%;
 }
 
-/* line 604, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003601}}
 .size2of9 {
   width: 22.222222222%;
 }
 
-/* line 608, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003605}}
 .size3of9 {
   width: 33.333333333%;
 }
 
-/* line 612, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003609}}
 .size4of9 {
   width: 44.444444444%;
 }
 
-/* line 616, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003613}}
 .size5of9 {
   width: 55.555555555%;
 }
 
-/* line 620, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003617}}
 .size6of9 {
   width: 66.666666666%;
 }
 
-/* line 624, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003621}}
 .size7of9 {
   width: 77.777777777%;
 }
 
-/* line 628, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003625}}
 .size8of9 {
   width: 88.888888888%;
 }
 
-/* line 632, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003629}}
 .size1of10 {
   width: 10%;
 }
 
-/* line 636, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003633}}
 .size3of10 {
   width: 30%;
 }
 
-/* line 640, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003637}}
 .size4of10 {
   width: 40%;
 }
 
-/* line 644, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003641}}
 .size7of10 {
   width: 70%;
 }
 
-/* line 648, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003645}}
 .size9of10 {
   width: 90%;
 }
 
-/* line 652, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003649}}
 .before1of2 {
   margin-left: 50%;
 }
 
-/* line 656, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003653}}
 .before1of3 {
   margin-left: 33.333333%;
 }
 
-/* line 660, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003657}}
 .before2of3 {
   margin-left: 66.666666%;
 }
 
-/* line 664, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003661}}
 .before1of4 {
   margin-left: 25%;
 }
 
-/* line 668, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003665}}
 .before3of4 {
   margin-left: 75%;
 }
 
-/* line 672, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003669}}
 .before1of5 {
   margin-left: 20%;
 }
 
-/* line 676, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003673}}
 .before2of5 {
   margin-left: 40%;
 }
 
-/* line 680, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003677}}
 .before3of5 {
   margin-left: 60%;
 }
 
-/* line 684, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003681}}
 .before4of5 {
   margin-left: 80%;
 }
 
-/* line 688, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003685}}
 .before1of6 {
   margin-left: 16.666666%;
 }
 
-/* line 692, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003689}}
 .before5of6 {
   margin-left: 83.333333%;
 }
 
-/* line 696, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003693}}
 .before1of7 {
   margin-left: 14.2857143%;
 }
 
-/* line 700, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003697}}
 .before2of7 {
   margin-left: 28.5714286%;
 }
 
-/* line 704, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003701}}
 .before3of7 {
   margin-left: 42.8571429%;
 }
 
-/* line 708, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003705}}
 .before4of7 {
   margin-left: 57.1428571%;
 }
 
-/* line 712, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003709}}
 .before5of7 {
   margin-left: 71.4285714%;
 }
 
-/* line 716, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003713}}
 .before6of7 {
   margin-left: 85.7142857%;
 }
 
-/* line 720, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003717}}
 .before1of8 {
   margin-left: 12.5%;
 }
 
-/* line 724, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003721}}
 .before3of8 {
   margin-left: 37.5%;
 }
 
-/* line 728, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003725}}
 .before5of8 {
   margin-left: 62.5%;
 }
 
-/* line 732, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003729}}
 .before7of8 {
   margin-left: 87.5%;
 }
 
-/* line 736, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003733}}
 .before1of9 {
   margin-left: 11.111111111%;
 }
 
-/* line 740, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003737}}
 .before2of9 {
   margin-left: 22.222222222%;
 }
 
-/* line 744, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003741}}
 .before3of9 {
   margin-left: 33.333333333%;
 }
 
-/* line 748, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003745}}
 .before4of9 {
   margin-left: 44.444444444%;
 }
 
-/* line 752, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003749}}
 .before5of9 {
   margin-left: 55.555555555%;
 }
 
-/* line 756, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003753}}
 .before6of9 {
   margin-left: 66.666666666%;
 }
 
-/* line 760, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003757}}
 .before7of9 {
   margin-left: 77.777777777%;
 }
 
-/* line 764, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003761}}
 .before8of9 {
   margin-left: 88.888888888%;
 }
 
-/* line 768, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003765}}
 .before1of10 {
   margin-left: 10%;
 }
 
-/* line 772, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003769}}
 .before3of10 {
   margin-left: 30%;
 }
 
-/* line 776, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003773}}
 .before4of10 {
   margin-left: 40%;
 }
 
-/* line 780, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003777}}
 .before7of10 {
   margin-left: 70%;
 }
 
-/* line 784, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003781}}
 .before9of10 {
   margin-left: 90%;
 }
 
-/* line 788, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003785}}
 .after1of2 {
   margin-right: 50%;
 }
 
-/* line 792, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003789}}
 .after1of3 {
   margin-right: 33.333333%;
 }
 
-/* line 796, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003793}}
 .after2of3 {
   margin-right: 66.666666%;
 }
 
-/* line 800, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003797}}
 .after1of4 {
   margin-right: 25%;
 }
 
-/* line 804, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003801}}
 .after3of4 {
   margin-right: 75%;
 }
 
-/* line 808, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003805}}
 .after1of5 {
   margin-right: 20%;
 }
 
-/* line 812, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003809}}
 .after2of5 {
   margin-right: 40%;
 }
 
-/* line 816, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003813}}
 .after3of5 {
   margin-right: 60%;
 }
 
-/* line 820, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003817}}
 .after4of5 {
   margin-right: 80%;
 }
 
-/* line 824, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003821}}
 .after1of6 {
   margin-right: 16.666666%;
 }
 
-/* line 828, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003825}}
 .after5of6 {
   margin-right: 83.333333%;
 }
 
-/* line 832, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003829}}
 .after1of7 {
   margin-right: 14.2857143%;
 }
 
-/* line 836, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003833}}
 .after2of7 {
   margin-right: 28.5714286%;
 }
 
-/* line 840, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003837}}
 .after3of7 {
   margin-right: 42.8571429%;
 }
 
-/* line 844, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003841}}
 .after4of7 {
   margin-right: 57.1428571%;
 }
 
-/* line 848, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003845}}
 .after5of7 {
   margin-right: 71.4285714%;
 }
 
-/* line 852, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003849}}
 .after6of7 {
   margin-right: 85.7142857%;
 }
 
-/* line 856, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003853}}
 .after1of8 {
   margin-right: 12.5%;
 }
 
-/* line 860, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003857}}
 .after3of8 {
   margin-right: 37.5%;
 }
 
-/* line 864, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003861}}
 .after5of8 {
   margin-right: 62.5%;
 }
 
-/* line 868, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003865}}
 .after7of8 {
   margin-right: 87.5%;
 }
 
-/* line 872, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003869}}
 .after1of9 {
   margin-right: 11.111111111%;
 }
 
-/* line 876, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003873}}
 .after2of9 {
   margin-right: 22.222222222%;
 }
 
-/* line 880, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003877}}
 .after3of9 {
   margin-right: 33.333333333%;
 }
 
-/* line 884, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003881}}
 .after4of9 {
   margin-right: 44.444444444%;
 }
 
-/* line 888, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003885}}
 .after5of9 {
   margin-right: 55.555555555%;
 }
 
-/* line 892, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003889}}
 .after6of9 {
   margin-right: 66.666666666%;
 }
 
-/* line 896, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003893}}
 .after7of9 {
   margin-right: 77.777777777%;
 }
 
-/* line 900, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003897}}
 .after8of9 {
   margin-right: 88.888888888%;
 }
 
-/* line 904, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003901}}
 .after1of10 {
   margin-right: 10%;
 }
 
-/* line 908, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003905}}
 .after3of10 {
   margin-right: 30%;
 }
 
-/* line 912, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003909}}
 .after4of10 {
   margin-right: 40%;
 }
 
-/* line 916, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003913}}
 .after7of10 {
   margin-right: 70%;
 }
 
-/* line 920, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003917}}
 .after9of10 {
   margin-right: 90%;
 }
@@ -1554,7 +1556,7 @@ table ol {
 画像置換 (Alternative Image)
 高さはPadding-topかpadding-bottomdで設定する。
 */
-/* line 930, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003932}}
 .alt-img {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1567,7 +1569,7 @@ table ol {
 }
 
 /* Chrome Frame */
-/* line 937, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003937}}
 .chromeframe {
   background-color: #fff3f3;
   border: 1px solid #f00;
@@ -1580,7 +1582,7 @@ table ol {
 }
 
 /* 汎用ボタン */
-/* line 945, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003945}}
 .btn {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1615,7 +1617,7 @@ table ol {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 964, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003964}}
 .lt-ie7 .btn {
   display: inline;
   background-color: #e6e6e6;
@@ -1623,7 +1625,7 @@ table ol {
   zoom: 1;
 }
 
-/* line 975, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003975}}
 .btn:hover,
 .btn:active,
 .btn.active,
@@ -1633,7 +1635,7 @@ table ol {
   background-color: #e6e6e6;
 }
 
-/* line 984, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003984}}
 .lt-ie7 .btn:hover,
 .lt-ie7 .btn:active,
 .lt-ie7 .btn.active,
@@ -1642,13 +1644,13 @@ table ol {
   *background-color: #d9d9d9;
 }
 
-/* line 990, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003990}}
 .ie8 .btn:active,
 .ie8 .btn.active {
   background-color: #cccccc;
 }
 
-/* line 994, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003994}}
 .btn:hover {
   color: #333333;
   text-decoration: none;
@@ -1659,14 +1661,14 @@ table ol {
   transition: background-position 0.1s linear, 1s;
 }
 
-/* line 1001, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031001}}
 .btn:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-/* line 1008, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031008}}
 .btn.active,
 .btn:active {
   background-image: none;
@@ -1676,7 +1678,7 @@ table ol {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 1015, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031015}}
 .btn.disabled,
 .btn[disabled] {
   cursor: default;
@@ -1688,17 +1690,17 @@ table ol {
   box-shadow: none;
 }
 
-/* line 1022, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031022}}
 .chromeframe strong {
   color: #f00;
 }
 
-/* line 1026, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031026}}
 .hide {
   display: none;
 }
 
-/* line 1030, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031030}}
 .show {
   display: block;
 }
@@ -1707,12 +1709,12 @@ table ol {
 /* ここにサイト独自のスタイルを設定 */
 /* 上書きクラス */
 /* CLEARFIX */
-/* line 1044, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031044}}
 .clearfix,
 .cf {
   *zoom: 1;
 }
-/* line 42, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\0000342}}
 .clearfix:after, .clearfix:before,
 .cf:after,
 .cf:before {
@@ -1725,19 +1727,19 @@ table ol {
 以下のWordpressのリッチテキストエディタが付加するクラス(※)も合わせて設定
 ※ .alignleft / .alignright / .aligncenter
 */
-/* line 1053, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031053}}
 .txtl,
 .alignleft {
   text-align: left;
 }
 
-/* line 1058, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031058}}
 .txtr,
 .alignright {
   text-align: right;
 }
 
-/* line 1063, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031063}}
 .txtc,
 .aligncenter {
   text-align: center;
@@ -1747,21 +1749,21 @@ table ol {
 Wordpressのリッチテキストエディタが付加するクラス(※)を網羅。
 ※ .left / .right / .clear
 */
-/* line 1071, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031071}}
 .left {
   display: inline;
   float: left;
   margin-top: 0;
 }
 
-/* line 1076, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031076}}
 .right {
   display: inline;
   float: right;
   margin-top: 0;
 }
 
-/* line 1081, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031081}}
 .clear {
   clear: both;
   float: none;
@@ -1770,7 +1772,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 
 /* タブレットサイズ */
 @media (max-width: 720px) {
-  /* line 1090, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031090}}
   .breakpoint-1,
   .linearize-from-tablet {
     display: -webkit-box;
@@ -1818,7 +1820,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     -ms-align-content: flex-start;
     align-content: flex-start;
   }
-  /* line 124, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003124}}
   .breakpoint-1 > .unit,
   .linearize-from-tablet > .unit {
     -webkit-box-flex: 1;
@@ -1829,34 +1831,34 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     width: 100%;
   }
 
-  /* line 1094, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031094}}
   .show-breakpoint-1 {
     display: block;
   }
 
-  /* line 1098, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031098}}
   .hide-breakpoint-1 {
     display: none;
   }
 
-  /* line 1102, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031102}}
   .has-gutter.breakpoint-1 {
     margin-left: 0;
   }
-  /* line 1104, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031104}}
   .has-gutter.breakpoint-1 .unit {
     padding-left: 0;
   }
 }
 /* モバイルサイズ */
 @media (max-width: 480px) {
-  /* line 1114, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031114}}
   html {
     font-size: 0.875em;
     -webkit-text-size-adjust: none;
   }
 
-  /* line 1120, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031120}}
   .breakpoint-2,
   .linearize-from-motile {
     display: -webkit-box;
@@ -1904,7 +1906,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     -ms-align-content: flex-start;
     align-content: flex-start;
   }
-  /* line 124, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\00003124}}
   .breakpoint-2 > .unit,
   .linearize-from-motile > .unit {
     -webkit-box-flex: 1;
@@ -1915,34 +1917,34 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     width: 100%;
   }
 
-  /* line 1124, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031124}}
   .show-breakpoint-2 {
     display: block;
   }
 
-  /* line 1128, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031128}}
   .hide-breakpoint-2 {
     display: none;
   }
 
-  /* line 1132, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031132}}
   .has-gutter.breakpoint-2 {
     margin-left: 0;
   }
-  /* line 1134, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031134}}
   .has-gutter.breakpoint-2 .unit {
     padding-left: 0;
   }
 
   /* 画像 */
-  /* line 1140, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031140}}
   img {
     max-width: 100%;
     height: auto;
   }
 
   /* テーブル */
-  /* line 1146, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031146}}
   table {
     overflow: auto;
   }
@@ -1950,7 +1952,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 /* 印刷用 */
 @media print {
   /* テキストシャドウなど不要なエフェクトを無効化 */
-  /* line 1156, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031156}}
   * {
     background: transparent;
     color: #000;
@@ -1959,14 +1961,14 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   }
 
   /* 画像がはみ出したり変形したりしないように。 */
-  /* line 1177, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031177}}
   img {
     max-width: 100%;
     height: auto;
   }
 
   /* 画像置換をキャンセル */
-  /* line 1183, ../scss/getup.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/getup\.scss}line{font-family:\000031183}}
   .alt-img {
     background-image: none;
     height: auto;
