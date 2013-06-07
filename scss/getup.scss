@@ -29,7 +29,7 @@ https://github.com/nibushibu/getup-css/blob/master/LICENSE
 
 $box-sizing-path: "/u/175530/js/vendor/boxsizing.htc";
 
-@mixin linearize-unit-old {
+@mixin legacy-linearize-unit {
   clear: both;
   display: block;
   padding-left: 0;
@@ -121,7 +121,8 @@ $g-default-align-content: flex-start;
   @include g-justify-content(flex-start);
   @include g-align-items(stretch);
   @include g-align-content(flex-start);
-  > .unit {
+  > .unit,
+  > .legacy-unit {
     @include box-flex(1);
     float: none;
     width: 100%;
@@ -460,7 +461,8 @@ table ol {
 }
 
 /* グリッドレイアウト */
-.line {
+.line,
+.legacy-line {
   margin: 0;
   padding: 0;
   @include g-clearfix;
@@ -472,7 +474,7 @@ table ol {
 }
 
 .line:after,
-.line::after{
+.legacy-line:after,{
   clear: both;
   content: "";
   display: block;
@@ -483,7 +485,8 @@ table ol {
   margin-left: -20px;
 }
 
-.unit{
+.unit,
+.legacy-unit {
   float: left;
   list-style: none;
 }
@@ -498,7 +501,8 @@ table ol {
   *behavior: url($box-sizing-path);
 }
 
-.lt-ie8 .unit{
+.lt-ie8 .unit,
+.lt-ie8 .legacy-unit {
   zoom: 1;
 }
 
