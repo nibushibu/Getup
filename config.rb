@@ -5,7 +5,7 @@ images_dir = "img"
 javascripts_dir = "js"
 output_style = (environment == :production) ? :compressed : :expanded
 #line_comments = (environment == :production) ? :false : :true
-line_comments = false;
+line_comments = false
 relative_assets = true
 sass_options = (environment == :production) ? { :debug_info => false } : { :debug_info => true }
 
