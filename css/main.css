@@ -6,7 +6,7 @@
 /**
  * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\0000322}}
+/* line 22, ../scss/_normalize.scss */
 article,
 aside,
 details,
@@ -25,7 +25,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\0000332}}
+/* line 32, ../scss/_normalize.scss */
 audio,
 canvas,
 video {
@@ -38,7 +38,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\0000343}}
+/* line 43, ../scss/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -48,7 +48,7 @@ audio:not([controls]) {
  * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
  * Known issue: no IE 6 support.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\0000353}}
+/* line 53, ../scss/_normalize.scss */
 [hidden] {
   display: none;
 }
@@ -62,7 +62,7 @@ audio:not([controls]) {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\0000368}}
+/* line 68, ../scss/_normalize.scss */
 html {
   font-size: 100%;
   /* 1 */
@@ -76,7 +76,7 @@ html {
  * Address `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\0000383}}
+/* line 83, ../scss/_normalize.scss */
 html,
 button,
 input,
@@ -88,7 +88,7 @@ textarea {
 /**
  * Address margins handled incorrectly in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\0000391}}
+/* line 91, ../scss/_normalize.scss */
 body {
   margin: 0;
 }
@@ -99,7 +99,7 @@ body {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003103}}
+/* line 103, ../scss/_normalize.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -107,7 +107,7 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003112}}
+/* line 112, ../scss/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -121,37 +121,37 @@ a:hover {
  * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
  * and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003126}}
+/* line 126, ../scss/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003131}}
+/* line 131, ../scss/_normalize.scss */
 h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003136}}
+/* line 136, ../scss/_normalize.scss */
 h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003141}}
+/* line 141, ../scss/_normalize.scss */
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003146}}
+/* line 146, ../scss/_normalize.scss */
 h5 {
   font-size: 0.83em;
   margin: 1.67em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003151}}
+/* line 151, ../scss/_normalize.scss */
 h6 {
   font-size: 0.67em;
   margin: 2.33em 0;
@@ -160,7 +160,7 @@ h6 {
 /**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003160}}
+/* line 160, ../scss/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -168,13 +168,13 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003169}}
+/* line 169, ../scss/_normalize.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003173}}
+/* line 173, ../scss/_normalize.scss */
 blockquote {
   margin: 1em 40px;
 }
@@ -182,7 +182,7 @@ blockquote {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003181}}
+/* line 181, ../scss/_normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -191,7 +191,7 @@ dfn {
  * Address differences between Firefox and other browsers.
  * Known issue: no IE 6/7 normalization.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003190}}
+/* line 190, ../scss/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -201,7 +201,7 @@ hr {
 /**
  * Address styling not present in IE 6/7/8/9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003200}}
+/* line 200, ../scss/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -210,7 +210,7 @@ mark {
 /**
  * Address margins set differently in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003210}}
+/* line 210, ../scss/_normalize.scss */
 p,
 pre {
   margin: 1em 0;
@@ -219,7 +219,7 @@ pre {
 /**
  * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003221}}
+/* line 221, ../scss/_normalize.scss */
 code,
 kbd,
 pre,
@@ -232,7 +232,7 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003231}}
+/* line 231, ../scss/_normalize.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -242,7 +242,7 @@ pre {
 /**
  * Address CSS quotes not supported in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003241}}
+/* line 241, ../scss/_normalize.scss */
 q {
   quotes: none;
 }
@@ -250,7 +250,7 @@ q {
 /**
  * Address `quotes` property not supported in Safari 4.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003250}}
+/* line 250, ../scss/_normalize.scss */
 q:before,
 q:after {
   content: '';
@@ -260,7 +260,7 @@ q:after {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003259}}
+/* line 259, ../scss/_normalize.scss */
 small {
   font-size: 80%;
 }
@@ -268,7 +268,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003268}}
+/* line 268, ../scss/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -277,12 +277,12 @@ sup {
   vertical-align: baseline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003275}}
+/* line 275, ../scss/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003279}}
+/* line 279, ../scss/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -293,7 +293,7 @@ sub {
 /**
  * Address margins set differently in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003294}}
+/* line 294, ../scss/_normalize.scss */
 dl,
 menu,
 ol,
@@ -301,7 +301,7 @@ ul {
   margin: 1em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003298}}
+/* line 298, ../scss/_normalize.scss */
 dd {
   margin: 0 0 0 40px;
 }
@@ -309,7 +309,7 @@ dd {
 /**
  * Address paddings set differently in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003308}}
+/* line 308, ../scss/_normalize.scss */
 menu,
 ol,
 ul {
@@ -319,7 +319,7 @@ ul {
 /**
  * Correct list images handled incorrectly in IE 7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003317}}
+/* line 317, ../scss/_normalize.scss */
 nav ul,
 nav ol {
   list-style: none;
@@ -333,7 +333,7 @@ nav ol {
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
  * 2. Improve image quality when scaled in IE 7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003331}}
+/* line 331, ../scss/_normalize.scss */
 img {
   border: 0;
   /* 1 */
@@ -344,7 +344,7 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003340}}
+/* line 340, ../scss/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -355,7 +355,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003352}}
+/* line 352, ../scss/_normalize.scss */
 figure {
   margin: 0;
 }
@@ -366,7 +366,7 @@ figure {
 /**
  * Correct margin displayed oddly in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003364}}
+/* line 364, ../scss/_normalize.scss */
 form {
   margin: 0;
 }
@@ -374,7 +374,7 @@ form {
 /**
  * Define consistent border, margin, and padding.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003372}}
+/* line 372, ../scss/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -386,7 +386,7 @@ fieldset {
  * 2. Correct text not wrapping in Firefox 3.
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003384}}
+/* line 384, ../scss/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -403,7 +403,7 @@ legend {
  *    and Chrome.
  * 3. Improve appearance and consistency in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003401}}
+/* line 401, ../scss/_normalize.scss */
 button,
 input,
 select,
@@ -422,7 +422,7 @@ textarea {
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003414}}
+/* line 414, ../scss/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -434,7 +434,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003426}}
+/* line 426, ../scss/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -449,7 +449,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003443}}
+/* line 443, ../scss/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -465,7 +465,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003454}}
+/* line 454, ../scss/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -477,7 +477,7 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003466}}
+/* line 466, ../scss/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -495,7 +495,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003479}}
+/* line 479, ../scss/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -509,7 +509,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003492}}
+/* line 492, ../scss/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -518,7 +518,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 3+.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003501}}
+/* line 501, ../scss/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -529,7 +529,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003511}}
+/* line 511, ../scss/_normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -543,7 +543,7 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/_normalize\.scss}line{font-family:\00003524}}
+/* line 524, ../scss/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -572,7 +572,7 @@ https://github.com/nibushibu/getup-css/blob/master/LICENSE
   印刷設定
 */
 /* テキスト関連初期設定 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003134}}
+/* line 134, ../scss/main.scss */
 html {
   font-size: 81.25%;
   font-family: "Lucida Grande", Arial, sans-serif;
@@ -580,13 +580,13 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003141}}
+/* line 141, ../scss/main.scss */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003146}}
+/* line 146, ../scss/main.scss */
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -594,7 +594,7 @@ html {
 
 /* タイポグラフィ */
 /* 見出し */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003166}}
+/* line 166, ../scss/main.scss */
 h1,
 h2,
 h3,
@@ -611,7 +611,7 @@ blockquote,
   margin: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003175}}
+/* line 175, ../scss/main.scss */
 h1,
 h2,
 h3,
@@ -621,12 +621,12 @@ h6 {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003179}}
+/* line 179, ../scss/main.scss */
 pre {
   margin: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003198}}
+/* line 198, ../scss/main.scss */
 table h1,
 table h2,
 table h3,
@@ -646,57 +646,57 @@ ol dl {
   margin: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003202}}
+/* line 202, ../scss/main.scss */
 h1 {
   font-size: 1.84615384615385em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003206}}
+/* line 206, ../scss/main.scss */
 h2 {
   font-size: 1.53846153846154em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003210}}
+/* line 210, ../scss/main.scss */
 h3 {
   font-size: 1.38461538461538em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003214}}
+/* line 214, ../scss/main.scss */
 h4 {
   font-size: 1.23076923076923em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003218}}
+/* line 218, ../scss/main.scss */
 h5 {
   font-size: 1.07692307692308em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003222}}
+/* line 222, ../scss/main.scss */
 h6 {
   font-size: 1em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003226}}
+/* line 226, ../scss/main.scss */
 a {
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003230}}
+/* line 230, ../scss/main.scss */
 a:hover {
   text-decoration: underline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003234}}
+/* line 234, ../scss/main.scss */
 ul {
   list-style-position: outside;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003238}}
+/* line 238, ../scss/main.scss */
 ol {
   list-style: decimal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003246}}
+/* line 246, ../scss/main.scss */
 ul,
 ol,
 .square,
@@ -705,50 +705,50 @@ ol,
   padding-left: 2em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003251}}
+/* line 251, ../scss/main.scss */
 ul ul,
 ol ul {
   list-style-type: disc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003255}}
+/* line 255, ../scss/main.scss */
 .square {
   list-style: square outside;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003259}}
+/* line 259, ../scss/main.scss */
 .circle {
   list-style: circle outside;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003263}}
+/* line 263, ../scss/main.scss */
 .disc {
   list-style: disc outside;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003268}}
+/* line 268, ../scss/main.scss */
 .not-list,
 .no-list {
   list-style: none;
   padding-left: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003273}}
+/* line 273, ../scss/main.scss */
 dl {
   margin-bottom: .833em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003277}}
+/* line 277, ../scss/main.scss */
 dt {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003281}}
+/* line 281, ../scss/main.scss */
 dd {
   margin-left: 1.667em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003288}}
+/* line 288, ../scss/main.scss */
 q,
 i,
 em,
@@ -757,54 +757,54 @@ cite {
   font-weight: inherit;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003294}}
+/* line 294, ../scss/main.scss */
 b,
 strong {
   font-weight: bold;
   font-style: inherit;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003299}}
+/* line 299, ../scss/main.scss */
 mark {
   background: #ffc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003304}}
+/* line 304, ../scss/main.scss */
 s,
 del {
   text-decoration: line-through;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003308}}
+/* line 308, ../scss/main.scss */
 small {
   font-size: 0.9em;
   line-height: 1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003314}}
+/* line 314, ../scss/main.scss */
 pre,
 code {
   font-family: monospace;
   font-size: 1.2em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003319}}
+/* line 319, ../scss/main.scss */
 pre {
   overflow: auto;
   line-height: 1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003324}}
+/* line 324, ../scss/main.scss */
 code {
   line-height: 1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003328}}
+/* line 328, ../scss/main.scss */
 .caps {
   text-transform: uppercase;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003336}}
+/* line 336, ../scss/main.scss */
 pre,
 code,
 kbd,
@@ -815,7 +815,7 @@ tt {
   line-height: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003342}}
+/* line 342, ../scss/main.scss */
 hr {
   display: block;
   height: 1px;
@@ -826,12 +826,12 @@ hr {
 }
 
 /* 画像 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003352}}
+/* line 352, ../scss/main.scss */
 img {
   vertical-align: middle;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003358}}
+/* line 358, ../scss/main.scss */
 img.left,
 img.alignleft,
 img.fl {
@@ -839,7 +839,7 @@ img.fl {
   margin: 0 10px 10px 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003365}}
+/* line 365, ../scss/main.scss */
 img.right,
 img.alignright,
 img.fr {
@@ -847,7 +847,7 @@ img.fr {
   margin: 0 0 10px 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003371}}
+/* line 371, ../scss/main.scss */
 img.aligncenter,
 img.ac {
   display: block;
@@ -856,20 +856,20 @@ img.ac {
 }
 
 /* フォーム */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003378}}
+/* line 378, ../scss/main.scss */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003385}}
+/* line 385, ../scss/main.scss */
 label,
 button {
   cursor: pointer;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003391}}
+/* line 391, ../scss/main.scss */
 input[type="text"],
 select,
 textarea {
@@ -898,12 +898,12 @@ textarea {
   transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003402}}
+/* line 402, ../scss/main.scss */
 textarea {
   resize: vertical;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003408}}
+/* line 408, ../scss/main.scss */
 input:focus,
 select:focus,
 textarea:focus {
@@ -914,14 +914,14 @@ textarea:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003417}}
+/* line 417, ../scss/main.scss */
 .lt-ie9 input:focus,
 .lt-ie9 select:focus,
 .lt-ie9 textarea:focus {
   outline: thin dotted;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003422}}
+/* line 422, ../scss/main.scss */
 select {
   width: 220px;
   background-color: #ffffff;
@@ -929,14 +929,14 @@ select {
 }
 
 /* テーブル */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003429}}
+/* line 429, ../scss/main.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
   max-width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003436}}
+/* line 436, ../scss/main.scss */
 th,
 td {
   vertical-align: middle;
@@ -944,43 +944,43 @@ td {
   border: 1px solid #ccc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003442}}
+/* line 442, ../scss/main.scss */
 th {
   font-weight: bold;
   text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003447}}
+/* line 447, ../scss/main.scss */
 tfoot {
   text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003451}}
+/* line 451, ../scss/main.scss */
 tfoot td {
   border-top-width: 2px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003455}}
+/* line 455, ../scss/main.scss */
 　
 table ul,
 table ol {
   margin-bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003459}}
+/* line 459, ../scss/main.scss */
 .data table {
   width: 100%;
 }
 
 /* グリッドレイアウト */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003465}}
+/* line 465, ../scss/main.scss */
 .line,
 .legacy-line {
   margin: 0;
   padding: 0;
   *zoom: 1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\0000342}}
+/* line 42, ../scss/main.scss */
 .line:after, .line:before,
 .legacy-line:after,
 .legacy-line:before {
@@ -989,13 +989,13 @@ table ol {
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003471}}
+/* line 471, ../scss/main.scss */
 .lt-ie8 .line {
   overflow: visible;
   zoom: 1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003477}}
+/* line 477, ../scss/main.scss */
 .line:after,
 .legacy-line:after {
   clear: both;
@@ -1004,24 +1004,25 @@ table ol {
   height: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003484}}
+/* line 484, ../scss/main.scss */
 .has-gutter {
   margin-left: -20px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003489}}
+/* line 489, ../scss/main.scss */
 .unit,
 .legacy-unit {
   float: left;
   list-style: none;
+  width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003494}}
+/* line 495, ../scss/main.scss */
 .has-gutter > .unit {
   padding-left: 20px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003499}}
+/* line 500, ../scss/main.scss */
 .unit, .unit:after, .unit:before,
 .line, .line:after, .line:before {
   -webkit-box-sizing: border-box;
@@ -1030,528 +1031,528 @@ table ol {
   *behavior: url("/u/175530/js/vendor/boxsizing.htc");
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003505}}
+/* line 506, ../scss/main.scss */
 .lt-ie8 .unit,
 .lt-ie8 .legacy-unit {
   zoom: 1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003509}}
+/* line 510, ../scss/main.scss */
 .right-unit {
   float: right;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003513}}
+/* line 514, ../scss/main.scss */
 .size1of1 {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003517}}
+/* line 518, ../scss/main.scss */
 .size1of2 {
   width: 50%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003521}}
+/* line 522, ../scss/main.scss */
 .size1of3 {
   width: 33.333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003525}}
+/* line 526, ../scss/main.scss */
 .size2of3 {
   width: 66.666666%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003529}}
+/* line 530, ../scss/main.scss */
 .size1of4 {
   width: 25%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003533}}
+/* line 534, ../scss/main.scss */
 .size3of4 {
   width: 75%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003537}}
+/* line 538, ../scss/main.scss */
 .size1of5 {
   width: 20%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003541}}
+/* line 542, ../scss/main.scss */
 .size2of5 {
   width: 40%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003545}}
+/* line 546, ../scss/main.scss */
 .size3of5 {
   width: 60%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003549}}
+/* line 550, ../scss/main.scss */
 .size4of5 {
   width: 80%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003553}}
+/* line 554, ../scss/main.scss */
 .size1of6 {
   width: 16.666666%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003557}}
+/* line 558, ../scss/main.scss */
 .size5of6 {
   width: 83.333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003561}}
+/* line 562, ../scss/main.scss */
 .size1of7 {
   width: 14.2857143%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003565}}
+/* line 566, ../scss/main.scss */
 .size2of7 {
   width: 28.5714286%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003569}}
+/* line 570, ../scss/main.scss */
 .size3of7 {
   width: 42.8571429%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003573}}
+/* line 574, ../scss/main.scss */
 .size4of7 {
   width: 57.1428571%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003577}}
+/* line 578, ../scss/main.scss */
 .size5of7 {
   width: 71.4285714%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003581}}
+/* line 582, ../scss/main.scss */
 .size6of7 {
   width: 85.7142857%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003585}}
+/* line 586, ../scss/main.scss */
 .size1of8 {
   width: 12.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003589}}
+/* line 590, ../scss/main.scss */
 .size3of8 {
   width: 37.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003593}}
+/* line 594, ../scss/main.scss */
 .size5of8 {
   width: 62.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003597}}
+/* line 598, ../scss/main.scss */
 .size7of8 {
   width: 87.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003601}}
+/* line 602, ../scss/main.scss */
 .size1of9 {
   width: 11.111111111%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003605}}
+/* line 606, ../scss/main.scss */
 .size2of9 {
   width: 22.222222222%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003609}}
+/* line 610, ../scss/main.scss */
 .size3of9 {
   width: 33.333333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003613}}
+/* line 614, ../scss/main.scss */
 .size4of9 {
   width: 44.444444444%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003617}}
+/* line 618, ../scss/main.scss */
 .size5of9 {
   width: 55.555555555%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003621}}
+/* line 622, ../scss/main.scss */
 .size6of9 {
   width: 66.666666666%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003625}}
+/* line 626, ../scss/main.scss */
 .size7of9 {
   width: 77.777777777%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003629}}
+/* line 630, ../scss/main.scss */
 .size8of9 {
   width: 88.888888888%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003633}}
+/* line 634, ../scss/main.scss */
 .size1of10 {
   width: 10%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003637}}
+/* line 638, ../scss/main.scss */
 .size3of10 {
   width: 30%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003641}}
+/* line 642, ../scss/main.scss */
 .size4of10 {
   width: 40%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003645}}
+/* line 646, ../scss/main.scss */
 .size7of10 {
   width: 70%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003649}}
+/* line 650, ../scss/main.scss */
 .size9of10 {
   width: 90%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003653}}
+/* line 654, ../scss/main.scss */
 .before1of2 {
   margin-left: 50%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003657}}
+/* line 658, ../scss/main.scss */
 .before1of3 {
   margin-left: 33.333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003661}}
+/* line 662, ../scss/main.scss */
 .before2of3 {
   margin-left: 66.666666%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003665}}
+/* line 666, ../scss/main.scss */
 .before1of4 {
   margin-left: 25%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003669}}
+/* line 670, ../scss/main.scss */
 .before3of4 {
   margin-left: 75%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003673}}
+/* line 674, ../scss/main.scss */
 .before1of5 {
   margin-left: 20%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003677}}
+/* line 678, ../scss/main.scss */
 .before2of5 {
   margin-left: 40%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003681}}
+/* line 682, ../scss/main.scss */
 .before3of5 {
   margin-left: 60%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003685}}
+/* line 686, ../scss/main.scss */
 .before4of5 {
   margin-left: 80%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003689}}
+/* line 690, ../scss/main.scss */
 .before1of6 {
   margin-left: 16.666666%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003693}}
+/* line 694, ../scss/main.scss */
 .before5of6 {
   margin-left: 83.333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003697}}
+/* line 698, ../scss/main.scss */
 .before1of7 {
   margin-left: 14.2857143%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003701}}
+/* line 702, ../scss/main.scss */
 .before2of7 {
   margin-left: 28.5714286%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003705}}
+/* line 706, ../scss/main.scss */
 .before3of7 {
   margin-left: 42.8571429%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003709}}
+/* line 710, ../scss/main.scss */
 .before4of7 {
   margin-left: 57.1428571%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003713}}
+/* line 714, ../scss/main.scss */
 .before5of7 {
   margin-left: 71.4285714%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003717}}
+/* line 718, ../scss/main.scss */
 .before6of7 {
   margin-left: 85.7142857%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003721}}
+/* line 722, ../scss/main.scss */
 .before1of8 {
   margin-left: 12.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003725}}
+/* line 726, ../scss/main.scss */
 .before3of8 {
   margin-left: 37.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003729}}
+/* line 730, ../scss/main.scss */
 .before5of8 {
   margin-left: 62.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003733}}
+/* line 734, ../scss/main.scss */
 .before7of8 {
   margin-left: 87.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003737}}
+/* line 738, ../scss/main.scss */
 .before1of9 {
   margin-left: 11.111111111%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003741}}
+/* line 742, ../scss/main.scss */
 .before2of9 {
   margin-left: 22.222222222%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003745}}
+/* line 746, ../scss/main.scss */
 .before3of9 {
   margin-left: 33.333333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003749}}
+/* line 750, ../scss/main.scss */
 .before4of9 {
   margin-left: 44.444444444%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003753}}
+/* line 754, ../scss/main.scss */
 .before5of9 {
   margin-left: 55.555555555%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003757}}
+/* line 758, ../scss/main.scss */
 .before6of9 {
   margin-left: 66.666666666%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003761}}
+/* line 762, ../scss/main.scss */
 .before7of9 {
   margin-left: 77.777777777%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003765}}
+/* line 766, ../scss/main.scss */
 .before8of9 {
   margin-left: 88.888888888%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003769}}
+/* line 770, ../scss/main.scss */
 .before1of10 {
   margin-left: 10%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003773}}
+/* line 774, ../scss/main.scss */
 .before3of10 {
   margin-left: 30%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003777}}
+/* line 778, ../scss/main.scss */
 .before4of10 {
   margin-left: 40%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003781}}
+/* line 782, ../scss/main.scss */
 .before7of10 {
   margin-left: 70%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003785}}
+/* line 786, ../scss/main.scss */
 .before9of10 {
   margin-left: 90%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003789}}
+/* line 790, ../scss/main.scss */
 .after1of2 {
   margin-right: 50%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003793}}
+/* line 794, ../scss/main.scss */
 .after1of3 {
   margin-right: 33.333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003797}}
+/* line 798, ../scss/main.scss */
 .after2of3 {
   margin-right: 66.666666%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003801}}
+/* line 802, ../scss/main.scss */
 .after1of4 {
   margin-right: 25%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003805}}
+/* line 806, ../scss/main.scss */
 .after3of4 {
   margin-right: 75%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003809}}
+/* line 810, ../scss/main.scss */
 .after1of5 {
   margin-right: 20%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003813}}
+/* line 814, ../scss/main.scss */
 .after2of5 {
   margin-right: 40%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003817}}
+/* line 818, ../scss/main.scss */
 .after3of5 {
   margin-right: 60%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003821}}
+/* line 822, ../scss/main.scss */
 .after4of5 {
   margin-right: 80%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003825}}
+/* line 826, ../scss/main.scss */
 .after1of6 {
   margin-right: 16.666666%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003829}}
+/* line 830, ../scss/main.scss */
 .after5of6 {
   margin-right: 83.333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003833}}
+/* line 834, ../scss/main.scss */
 .after1of7 {
   margin-right: 14.2857143%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003837}}
+/* line 838, ../scss/main.scss */
 .after2of7 {
   margin-right: 28.5714286%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003841}}
+/* line 842, ../scss/main.scss */
 .after3of7 {
   margin-right: 42.8571429%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003845}}
+/* line 846, ../scss/main.scss */
 .after4of7 {
   margin-right: 57.1428571%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003849}}
+/* line 850, ../scss/main.scss */
 .after5of7 {
   margin-right: 71.4285714%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003853}}
+/* line 854, ../scss/main.scss */
 .after6of7 {
   margin-right: 85.7142857%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003857}}
+/* line 858, ../scss/main.scss */
 .after1of8 {
   margin-right: 12.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003861}}
+/* line 862, ../scss/main.scss */
 .after3of8 {
   margin-right: 37.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003865}}
+/* line 866, ../scss/main.scss */
 .after5of8 {
   margin-right: 62.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003869}}
+/* line 870, ../scss/main.scss */
 .after7of8 {
   margin-right: 87.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003873}}
+/* line 874, ../scss/main.scss */
 .after1of9 {
   margin-right: 11.111111111%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003877}}
+/* line 878, ../scss/main.scss */
 .after2of9 {
   margin-right: 22.222222222%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003881}}
+/* line 882, ../scss/main.scss */
 .after3of9 {
   margin-right: 33.333333333%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003885}}
+/* line 886, ../scss/main.scss */
 .after4of9 {
   margin-right: 44.444444444%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003889}}
+/* line 890, ../scss/main.scss */
 .after5of9 {
   margin-right: 55.555555555%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003893}}
+/* line 894, ../scss/main.scss */
 .after6of9 {
   margin-right: 66.666666666%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003897}}
+/* line 898, ../scss/main.scss */
 .after7of9 {
   margin-right: 77.777777777%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003901}}
+/* line 902, ../scss/main.scss */
 .after8of9 {
   margin-right: 88.888888888%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003905}}
+/* line 906, ../scss/main.scss */
 .after1of10 {
   margin-right: 10%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003909}}
+/* line 910, ../scss/main.scss */
 .after3of10 {
   margin-right: 30%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003913}}
+/* line 914, ../scss/main.scss */
 .after4of10 {
   margin-right: 40%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003917}}
+/* line 918, ../scss/main.scss */
 .after7of10 {
   margin-right: 70%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003921}}
+/* line 922, ../scss/main.scss */
 .after9of10 {
   margin-right: 90%;
 }
@@ -1561,7 +1562,7 @@ table ol {
 画像置換 (Alternative Image)
 高さはPadding-topかpadding-bottomdで設定する。
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003936}}
+/* line 937, ../scss/main.scss */
 .alt-img {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1574,7 +1575,7 @@ table ol {
 }
 
 /* Chrome Frame */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003941}}
+/* line 942, ../scss/main.scss */
 .chromeframe {
   background-color: #fff3f3;
   border: 1px solid #f00;
@@ -1587,7 +1588,7 @@ table ol {
 }
 
 /* 汎用ボタン */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003949}}
+/* line 950, ../scss/main.scss */
 .btn {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1622,7 +1623,7 @@ table ol {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003968}}
+/* line 969, ../scss/main.scss */
 .lt-ie7 .btn {
   display: inline;
   background-color: #e6e6e6;
@@ -1630,7 +1631,7 @@ table ol {
   zoom: 1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003979}}
+/* line 980, ../scss/main.scss */
 .btn:hover,
 .btn:active,
 .btn.active,
@@ -1640,7 +1641,7 @@ table ol {
   background-color: #e6e6e6;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003988}}
+/* line 989, ../scss/main.scss */
 .lt-ie7 .btn:hover,
 .lt-ie7 .btn:active,
 .lt-ie7 .btn.active,
@@ -1649,13 +1650,13 @@ table ol {
   *background-color: #d9d9d9;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003994}}
+/* line 995, ../scss/main.scss */
 .ie8 .btn:active,
 .ie8 .btn.active {
   background-color: #cccccc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003998}}
+/* line 999, ../scss/main.scss */
 .btn:hover {
   color: #333333;
   text-decoration: none;
@@ -1666,14 +1667,14 @@ table ol {
   transition: background-position 0.1s linear, 1s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031005}}
+/* line 1006, ../scss/main.scss */
 .btn:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031012}}
+/* line 1013, ../scss/main.scss */
 .btn.active,
 .btn:active {
   background-image: none;
@@ -1683,7 +1684,7 @@ table ol {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031019}}
+/* line 1020, ../scss/main.scss */
 .btn.disabled,
 .btn[disabled] {
   cursor: default;
@@ -1695,17 +1696,17 @@ table ol {
   box-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031026}}
+/* line 1027, ../scss/main.scss */
 .chromeframe strong {
   color: #f00;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031030}}
+/* line 1031, ../scss/main.scss */
 .hide {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031034}}
+/* line 1035, ../scss/main.scss */
 .show {
   display: block;
 }
@@ -1714,12 +1715,12 @@ table ol {
 /* ここにサイト独自のスタイルを設定 */
 /* 上書きクラス */
 /* CLEARFIX */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031048}}
+/* line 1049, ../scss/main.scss */
 .clearfix,
 .cf {
   *zoom: 1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\0000342}}
+/* line 42, ../scss/main.scss */
 .clearfix:after, .clearfix:before,
 .cf:after,
 .cf:before {
@@ -1732,19 +1733,19 @@ table ol {
 以下のWordpressのリッチテキストエディタが付加するクラス(※)も合わせて設定
 ※ .alignleft / .alignright / .aligncenter
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031057}}
+/* line 1058, ../scss/main.scss */
 .txtl,
 .alignleft {
   text-align: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031062}}
+/* line 1063, ../scss/main.scss */
 .txtr,
 .alignright {
   text-align: right;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031067}}
+/* line 1068, ../scss/main.scss */
 .txtc,
 .aligncenter {
   text-align: center;
@@ -1754,21 +1755,21 @@ table ol {
 Wordpressのリッチテキストエディタが付加するクラス(※)を網羅。
 ※ .left / .right / .clear
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031075}}
+/* line 1076, ../scss/main.scss */
 .left {
   display: inline;
   float: left;
   margin-top: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031080}}
+/* line 1081, ../scss/main.scss */
 .right {
   display: inline;
   float: right;
   margin-top: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031085}}
+/* line 1086, ../scss/main.scss */
 .clear {
   clear: both;
   float: none;
@@ -1777,7 +1778,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 
 /* タブレットサイズ */
 @media (max-width: 720px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031094}}
+  /* line 1095, ../scss/main.scss */
   .breakpoint-1,
   .linearize-from-tablet {
     display: -webkit-box;
@@ -1825,7 +1826,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     -ms-align-content: flex-start;
     align-content: flex-start;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003125}}
+  /* line 125, ../scss/main.scss */
   .breakpoint-1 > .unit,
   .breakpoint-1 > .legacy-unit,
   .linearize-from-tablet > .unit,
@@ -1838,34 +1839,34 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031098}}
+  /* line 1099, ../scss/main.scss */
   .show-breakpoint-1 {
     display: block;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031102}}
+  /* line 1103, ../scss/main.scss */
   .hide-breakpoint-1 {
     display: none;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031106}}
+  /* line 1107, ../scss/main.scss */
   .has-gutter.breakpoint-1 {
     margin-left: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031108}}
+  /* line 1109, ../scss/main.scss */
   .has-gutter.breakpoint-1 .unit {
     padding-left: 0;
   }
 }
 /* モバイルサイズ */
 @media (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031118}}
+  /* line 1119, ../scss/main.scss */
   html {
     font-size: 0.875em;
     -webkit-text-size-adjust: none;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031124}}
+  /* line 1125, ../scss/main.scss */
   .breakpoint-2,
   .linearize-from-motile {
     display: -webkit-box;
@@ -1913,7 +1914,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     -ms-align-content: flex-start;
     align-content: flex-start;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\00003125}}
+  /* line 125, ../scss/main.scss */
   .breakpoint-2 > .unit,
   .breakpoint-2 > .legacy-unit,
   .linearize-from-motile > .unit,
@@ -1926,34 +1927,34 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031128}}
+  /* line 1129, ../scss/main.scss */
   .show-breakpoint-2 {
     display: block;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031132}}
+  /* line 1133, ../scss/main.scss */
   .hide-breakpoint-2 {
     display: none;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031136}}
+  /* line 1137, ../scss/main.scss */
   .has-gutter.breakpoint-2 {
     margin-left: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031138}}
+  /* line 1139, ../scss/main.scss */
   .has-gutter.breakpoint-2 .unit {
     padding-left: 0;
   }
 
   /* 画像 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031144}}
+  /* line 1145, ../scss/main.scss */
   img {
     max-width: 100%;
     height: auto;
   }
 
   /* テーブル */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031150}}
+  /* line 1151, ../scss/main.scss */
   table {
     overflow: auto;
   }
@@ -1961,7 +1962,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 /* 印刷用 */
 @media print {
   /* テキストシャドウなど不要なエフェクトを無効化 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031160}}
+  /* line 1161, ../scss/main.scss */
   * {
     background: transparent;
     color: #000;
@@ -1970,14 +1971,14 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   }
 
   /* 画像がはみ出したり変形したりしないように。 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031181}}
+  /* line 1182, ../scss/main.scss */
   img {
     max-width: 100%;
     height: auto;
   }
 
   /* 画像置換をキャンセル */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nibushibu\/Dropbox\/Public\/boilerplate\/scss\/main\.scss}line{font-family:\000031187}}
+  /* line 1188, ../scss/main.scss */
   .alt-img {
     background-image: none;
     height: auto;
