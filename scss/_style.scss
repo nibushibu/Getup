@@ -1,1 +1,9 @@
 /* ここにサイト独自のスタイルを設定 */
+
+body {
+  color: $base-text-color;
+}
+
+a {
+  color: $base-link-color;
+}

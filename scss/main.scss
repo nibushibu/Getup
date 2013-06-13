@@ -27,7 +27,10 @@ https://github.com/nibushibu/getup-css/blob/master/LICENSE
   印刷設定
 */
 
+// 事前に設定すべき変数
 $box-sizing-path: "/u/175530/js/vendor/boxsizing.htc";
+$base-link-color: #074ae2;
+$base-text-color: #333;
 
 @mixin legacy-linearize-unit {
   clear: both;
@@ -936,6 +939,21 @@ table ol {
 }
 .alt-img {
   @include alt-img;
+}
+
+// ボックスリンク
+.link-box {
+  color: $base-text-color;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    .link-box-link {
+      text-decoration: underline;
+    }
+  }
+  .link-box-link {
+    color: $base-link-color;
+  }
 }
 
 /* Chrome Frame */
