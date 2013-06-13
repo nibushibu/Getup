@@ -577,7 +577,6 @@ html {
   font-size: 81.25%;
   font-family: "Lucida Grande", Arial, sans-serif;
   line-height: 1.5;
-  text-rendering: optimizeLegibility;
 }
 
 /* line 141, ../scss/main.scss */
