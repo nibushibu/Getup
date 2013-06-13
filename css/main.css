@@ -1661,10 +1661,10 @@ table ol {
   color: #333333;
   text-decoration: none;
   background-position: 0 -15px;
-  -webkit-transition: background-position 0.1s linear, 1s;
-  -moz-transition: background-position 0.1s linear, 1s;
-  -o-transition: background-position 0.1s linear, 1s;
-  transition: background-position 0.1s linear, 1s;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
 }
 
 /* line 1006, ../scss/main.scss */

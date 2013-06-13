@@ -1000,7 +1000,7 @@ table ol {
   color: #333333;
   text-decoration: none;
   background-position: 0 -15px;
-  @include single-transition(background-position 0.1s linear);
+  @include single-transition(background-position, 0.1s, linear);
 }
 
 .btn:focus {
