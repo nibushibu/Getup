@@ -7,6 +7,7 @@ module.exports = (grunt) ->
           config: 'config.rb'
       pro:
         options:
+          config: 'config.rb'
           environment: 'production'
     coffee:
       compile:
