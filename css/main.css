@@ -1730,12 +1730,12 @@ table ol {
 
 /* カスタム設定 */
 /* ここにサイト独自のスタイルを設定 */
-/* line 3, ../scss/_style.scss */
+/* line 4, ../scss/_style.scss */
 body {
   color: #333333;
 }
 
-/* line 7, ../scss/_style.scss */
+/* line 8, ../scss/_style.scss */
 a {
   color: #074ae2;
 }
