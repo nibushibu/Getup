@@ -984,7 +984,7 @@ table ol {
   padding: 0;
   *zoom: 1;
 }
-/* line 13, ../scss/_mixin.scss */
+/* line 5, ../scss/_mixin.scss */
 .line:after, .line:before,
 .legacy-line:after,
 .legacy-line:before {
@@ -1032,7 +1032,7 @@ table ol {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url("/u/175530/js/vendor/boxsizing.htc");
+  *behavior: url("/u/175530/boilerplate/js/vendor/boxsizing.htc");
 }
 
 /* line 412, ../scss/main.scss */
@@ -1561,12 +1561,22 @@ table ol {
   margin-right: 90%;
 }
 
+/* line 832, ../scss/main.scss */
+.size-free {
+  display: table-cell;
+  float: none;
+  _position: relative;
+  _left: -3px;
+  _margin-right: -3px;
+  width: auto;
+}
+
 /* 汎用クラス */
 /*
 画像置換 (Alternative Image)
 高さはPadding-topかpadding-bottomdで設定する。
 */
-/* line 843, ../scss/main.scss */
+/* line 847, ../scss/main.scss */
 .alt-img {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1578,26 +1588,26 @@ table ol {
   overflow: hidden;
 }
 
-/* line 848, ../scss/main.scss */
+/* line 852, ../scss/main.scss */
 .link-box {
   color: #333333;
   cursor: pointer;
 }
-/* line 851, ../scss/main.scss */
+/* line 855, ../scss/main.scss */
 .link-box:hover {
   text-decoration: none;
 }
-/* line 853, ../scss/main.scss */
+/* line 857, ../scss/main.scss */
 .link-box:hover .link-box-link {
   text-decoration: underline;
 }
-/* line 857, ../scss/main.scss */
+/* line 861, ../scss/main.scss */
 .link-box .link-box-link {
   color: #074ae2;
 }
 
 /* Chrome Frame */
-/* line 863, ../scss/main.scss */
+/* line 867, ../scss/main.scss */
 .chromeframe {
   background-color: #fff3f3;
   border: 1px solid #f00;
@@ -1610,7 +1620,7 @@ table ol {
 }
 
 /* 汎用ボタン */
-/* line 871, ../scss/main.scss */
+/* line 875, ../scss/main.scss */
 .btn {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1645,7 +1655,7 @@ table ol {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 890, ../scss/main.scss */
+/* line 894, ../scss/main.scss */
 .lt-ie7 .btn {
   display: inline;
   background-color: #e6e6e6;
@@ -1653,7 +1663,7 @@ table ol {
   zoom: 1;
 }
 
-/* line 901, ../scss/main.scss */
+/* line 905, ../scss/main.scss */
 .btn:hover,
 .btn:active,
 .btn.active,
@@ -1663,7 +1673,7 @@ table ol {
   background-color: #e6e6e6;
 }
 
-/* line 910, ../scss/main.scss */
+/* line 914, ../scss/main.scss */
 .lt-ie7 .btn:hover,
 .lt-ie7 .btn:active,
 .lt-ie7 .btn.active,
@@ -1672,13 +1682,13 @@ table ol {
   *background-color: #d9d9d9;
 }
 
-/* line 916, ../scss/main.scss */
+/* line 920, ../scss/main.scss */
 .ie8 .btn:active,
 .ie8 .btn.active {
   background-color: #cccccc;
 }
 
-/* line 920, ../scss/main.scss */
+/* line 924, ../scss/main.scss */
 .btn:hover {
   color: #333333;
   text-decoration: none;
@@ -1689,14 +1699,14 @@ table ol {
   transition: background-position 0.1s linear;
 }
 
-/* line 927, ../scss/main.scss */
+/* line 931, ../scss/main.scss */
 .btn:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-/* line 934, ../scss/main.scss */
+/* line 938, ../scss/main.scss */
 .btn.active,
 .btn:active {
   background-image: none;
@@ -1706,7 +1716,7 @@ table ol {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 941, ../scss/main.scss */
+/* line 945, ../scss/main.scss */
 .btn.disabled,
 .btn[disabled] {
   cursor: default;
@@ -1718,17 +1728,17 @@ table ol {
   box-shadow: none;
 }
 
-/* line 948, ../scss/main.scss */
+/* line 952, ../scss/main.scss */
 .chromeframe strong {
   color: #f00;
 }
 
-/* line 952, ../scss/main.scss */
+/* line 956, ../scss/main.scss */
 .hide {
   display: none;
 }
 
-/* line 956, ../scss/main.scss */
+/* line 960, ../scss/main.scss */
 .show {
   display: block;
 }
@@ -1747,12 +1757,12 @@ a {
 
 /* 上書きクラス */
 /* CLEARFIX */
-/* line 970, ../scss/main.scss */
+/* line 974, ../scss/main.scss */
 .clearfix,
 .cf {
   *zoom: 1;
 }
-/* line 13, ../scss/_mixin.scss */
+/* line 5, ../scss/_mixin.scss */
 .clearfix:after, .clearfix:before,
 .cf:after,
 .cf:before {
@@ -1765,19 +1775,19 @@ a {
 以下のWordpressのリッチテキストエディタが付加するクラス(※)も合わせて設定
 ※ .alignleft / .alignright / .aligncenter
 */
-/* line 979, ../scss/main.scss */
+/* line 983, ../scss/main.scss */
 .txtl,
 .alignleft {
   text-align: left;
 }
 
-/* line 984, ../scss/main.scss */
+/* line 988, ../scss/main.scss */
 .txtr,
 .alignright {
   text-align: right;
 }
 
-/* line 989, ../scss/main.scss */
+/* line 993, ../scss/main.scss */
 .txtc,
 .aligncenter {
   text-align: center;
@@ -1787,21 +1797,21 @@ a {
 Wordpressのリッチテキストエディタが付加するクラス(※)を網羅。
 ※ .left / .right / .clear
 */
-/* line 997, ../scss/main.scss */
+/* line 1001, ../scss/main.scss */
 .left {
   display: inline;
   float: left;
   margin-top: 0;
 }
 
-/* line 1002, ../scss/main.scss */
+/* line 1006, ../scss/main.scss */
 .right {
   display: inline;
   float: right;
   margin-top: 0;
 }
 
-/* line 1007, ../scss/main.scss */
+/* line 1011, ../scss/main.scss */
 .clear {
   clear: both;
   float: none;
@@ -1810,7 +1820,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 
 /* タブレットサイズ */
 @media (max-width: 720px) {
-  /* line 1016, ../scss/main.scss */
+  /* line 1020, ../scss/main.scss */
   .breakpoint-1,
   .linearize-from-tablet {
     display: -webkit-box;
@@ -1858,7 +1868,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     -ms-align-content: flex-start;
     align-content: flex-start;
   }
-  /* line 96, ../scss/_mixin.scss */
+  /* line 88, ../scss/_mixin.scss */
   .breakpoint-1 > .unit,
   .breakpoint-1 > .legacy-unit,
   .linearize-from-tablet > .unit,
@@ -1871,34 +1881,34 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     width: 100%;
   }
 
-  /* line 1020, ../scss/main.scss */
+  /* line 1024, ../scss/main.scss */
   .show-breakpoint-1 {
     display: block;
   }
 
-  /* line 1024, ../scss/main.scss */
+  /* line 1028, ../scss/main.scss */
   .hide-breakpoint-1 {
     display: none;
   }
 
-  /* line 1028, ../scss/main.scss */
+  /* line 1032, ../scss/main.scss */
   .has-gutter.breakpoint-1 {
     margin-left: 0;
   }
-  /* line 1030, ../scss/main.scss */
+  /* line 1034, ../scss/main.scss */
   .has-gutter.breakpoint-1 .unit {
     padding-left: 0;
   }
 }
 /* モバイルサイズ */
 @media (max-width: 480px) {
-  /* line 1040, ../scss/main.scss */
+  /* line 1044, ../scss/main.scss */
   html {
     font-size: 0.875em;
     -webkit-text-size-adjust: none;
   }
 
-  /* line 1046, ../scss/main.scss */
+  /* line 1050, ../scss/main.scss */
   .breakpoint-2,
   .linearize-from-motile {
     display: -webkit-box;
@@ -1946,7 +1956,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     -ms-align-content: flex-start;
     align-content: flex-start;
   }
-  /* line 96, ../scss/_mixin.scss */
+  /* line 88, ../scss/_mixin.scss */
   .breakpoint-2 > .unit,
   .breakpoint-2 > .legacy-unit,
   .linearize-from-motile > .unit,
@@ -1959,34 +1969,34 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     width: 100%;
   }
 
-  /* line 1050, ../scss/main.scss */
+  /* line 1054, ../scss/main.scss */
   .show-breakpoint-2 {
     display: block;
   }
 
-  /* line 1054, ../scss/main.scss */
+  /* line 1058, ../scss/main.scss */
   .hide-breakpoint-2 {
     display: none;
   }
 
-  /* line 1058, ../scss/main.scss */
+  /* line 1062, ../scss/main.scss */
   .has-gutter.breakpoint-2 {
     margin-left: 0;
   }
-  /* line 1060, ../scss/main.scss */
+  /* line 1064, ../scss/main.scss */
   .has-gutter.breakpoint-2 .unit {
     padding-left: 0;
   }
 
   /* 画像 */
-  /* line 1066, ../scss/main.scss */
+  /* line 1070, ../scss/main.scss */
   img {
     max-width: 100%;
     height: auto;
   }
 
   /* テーブル */
-  /* line 1072, ../scss/main.scss */
+  /* line 1076, ../scss/main.scss */
   table {
     overflow: auto;
   }
@@ -1994,7 +2004,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 /* 印刷用 */
 @media print {
   /* テキストシャドウなど不要なエフェクトを無効化 */
-  /* line 1082, ../scss/main.scss */
+  /* line 1086, ../scss/main.scss */
   * {
     background: transparent;
     color: #000;
@@ -2003,14 +2013,14 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   }
 
   /* 画像がはみ出したり変形したりしないように。 */
-  /* line 1103, ../scss/main.scss */
+  /* line 1107, ../scss/main.scss */
   img {
     max-width: 100%;
     height: auto;
   }
 
   /* 画像置換をキャンセル */
-  /* line 1109, ../scss/main.scss */
+  /* line 1113, ../scss/main.scss */
   .alt-img {
     background-image: none;
     height: auto;

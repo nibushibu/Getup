@@ -1,13 +1,5 @@
 @charset "utf-8";
 
-@mixin legacy-linearize-unit {
-  clear: both;
-  display: block;
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
-}
-
 @mixin g-clearfix {
   &:after,
   &:before {
@@ -98,4 +90,21 @@ $g-default-align-content: flex-start;
     float: none;
     width: 100%;
   }
+}
+
+@mixin legacy-linearize-unit {
+  clear: both;
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+@mixin liquid-unit {
+  display: table-cell;
+  float: none;
+  _position: relative;
+  _left: -3px;
+  _margin-right: -3px;
+  width: auto;
 }

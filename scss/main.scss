@@ -829,6 +829,10 @@ table ol {
   margin-right: 90%;
 }
 
+.size-free {
+  @include liquid-unit;
+}
+
 /* 汎用クラス */
 
 /*
