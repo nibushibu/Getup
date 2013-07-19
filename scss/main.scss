@@ -33,6 +33,7 @@ https://github.com/nibushibu/getup-css/blob/master/LICENSE
 /* テキスト関連初期設定 */
 
 html {
+  color: $base-text-color;
   font-size: 81.25%;// →13px
   font-family: "Lucida Grande", Arial, sans-serif;
   line-height: 1.5;
