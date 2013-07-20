@@ -984,15 +984,6 @@ table ol {
   margin: 0;
   padding: 0;
   letter-spacing: -.4em;
-  *zoom: 1;
-}
-/* line 75, ../scss/_mixin.scss */
-.line:after, .line:before,
-.legacy-line:after,
-.legacy-line:before {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /* line 379, ../scss/main.scss */
