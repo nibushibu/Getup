@@ -372,6 +372,7 @@ table ol {
 .legacy-line {
   margin: 0;
   padding: 0;
+  letter-spacing: -.4em;
   @include g-clearfix;
 }
 
@@ -394,8 +395,10 @@ table ol {
 
 .unit,
 .legacy-unit {
-  float: left;
+  @include inline-block;
   list-style: none;
+  letter-spacing: normal;
+  vertical-align: top;
   width: 100%;
 }
 
@@ -403,8 +406,8 @@ table ol {
   padding-left: 20px;
 }
 
-.unit, .unit:after, .unit:before,
-.line, .line:after, .line:before {
+.unit,
+.line {
   @include box-sizing(border-box);
   *behavior: url($box-sizing-path);
 }
