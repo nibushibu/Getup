@@ -102,14 +102,21 @@
   width: 100%;
 }
 
-@mixin has-liquid{
+@mixin line-gutter($gutter:20px) {
+  margin-left: -$gutter;
+  .unit {
+    padding-left: $gutter;
+  }
+}
+
+@mixin line-liquid{
   @include g-clearfix;
   .unit {
     float: left;
   }
 }
 
-@mixin liquid-unit {
+@mixin unit-liquid {
   display: table-cell;
   float: none;
   _position: relative;

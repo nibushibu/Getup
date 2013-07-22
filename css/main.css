@@ -1002,15 +1002,15 @@ table ol {
 }
 
 /* line 391, ../scss/main.scss */
-.has-gutter {
+.line-gutter {
   margin-left: -20px;
 }
-/* line 394, ../scss/main.scss */
-.has-gutter .unit {
+/* line 107, ../scss/_mixin.scss */
+.line-gutter .unit {
   padding-left: 20px;
 }
 
-/* line 400, ../scss/main.scss */
+/* line 396, ../scss/main.scss */
 .unit,
 .legacy-unit {
   display: -moz-inline-stack;
@@ -1025,22 +1025,22 @@ table ol {
   width: 100%;
 }
 
-/* line 408, ../scss/main.scss */
-.has-liquid {
+/* line 404, ../scss/main.scss */
+.line-liquid {
   *zoom: 1;
 }
 /* line 75, ../scss/_mixin.scss */
-.has-liquid:after, .has-liquid:before {
+.line-liquid:after, .line-liquid:before {
   content: "";
   display: table;
   clear: both;
 }
-/* line 107, ../scss/_mixin.scss */
-.has-liquid .unit {
+/* line 114, ../scss/_mixin.scss */
+.line-liquid .unit {
   float: left;
 }
 
-/* line 413, ../scss/main.scss */
+/* line 409, ../scss/main.scss */
 .unit,
 .line {
   -webkit-box-sizing: border-box;
@@ -1049,19 +1049,19 @@ table ol {
   *behavior: url("/u/175530/boilerplate/js/vendor/boxsizing.htc");
 }
 
-/* line 419, ../scss/main.scss */
+/* line 415, ../scss/main.scss */
 .lt-ie8 .unit,
 .lt-ie8 .legacy-unit {
   zoom: 1;
 }
 
-/* line 423, ../scss/main.scss */
+/* line 419, ../scss/main.scss */
 .right-unit {
   float: right;
 }
 
-/* line 427, ../scss/main.scss */
-.has-liquid .liquid-unit {
+/* line 423, ../scss/main.scss */
+.line-liquid .unit-liquid {
   display: table-cell;
   float: none;
   _position: relative;
@@ -1070,517 +1070,517 @@ table ol {
   width: auto;
 }
 
-/* line 431, ../scss/main.scss */
+/* line 427, ../scss/main.scss */
 .size1of1 {
   width: 100%;
 }
 
-/* line 435, ../scss/main.scss */
+/* line 431, ../scss/main.scss */
 .size1of2 {
   width: 50%;
 }
 
-/* line 439, ../scss/main.scss */
+/* line 435, ../scss/main.scss */
 .size1of3 {
   width: 33.333333%;
 }
 
-/* line 443, ../scss/main.scss */
+/* line 439, ../scss/main.scss */
 .size2of3 {
   width: 66.666666%;
 }
 
-/* line 447, ../scss/main.scss */
+/* line 443, ../scss/main.scss */
 .size1of4 {
   width: 25%;
 }
 
-/* line 451, ../scss/main.scss */
+/* line 447, ../scss/main.scss */
 .size3of4 {
   width: 75%;
 }
 
-/* line 455, ../scss/main.scss */
+/* line 451, ../scss/main.scss */
 .size1of5 {
   width: 20%;
 }
 
-/* line 459, ../scss/main.scss */
+/* line 455, ../scss/main.scss */
 .size2of5 {
   width: 40%;
 }
 
-/* line 463, ../scss/main.scss */
+/* line 459, ../scss/main.scss */
 .size3of5 {
   width: 60%;
 }
 
-/* line 467, ../scss/main.scss */
+/* line 463, ../scss/main.scss */
 .size4of5 {
   width: 80%;
 }
 
-/* line 471, ../scss/main.scss */
+/* line 467, ../scss/main.scss */
 .size1of6 {
   width: 16.666666%;
 }
 
-/* line 475, ../scss/main.scss */
+/* line 471, ../scss/main.scss */
 .size5of6 {
   width: 83.333333%;
 }
 
-/* line 479, ../scss/main.scss */
+/* line 475, ../scss/main.scss */
 .size1of7 {
   width: 14.2857143%;
 }
 
-/* line 483, ../scss/main.scss */
+/* line 479, ../scss/main.scss */
 .size2of7 {
   width: 28.5714286%;
 }
 
-/* line 487, ../scss/main.scss */
+/* line 483, ../scss/main.scss */
 .size3of7 {
   width: 42.8571429%;
 }
 
-/* line 491, ../scss/main.scss */
+/* line 487, ../scss/main.scss */
 .size4of7 {
   width: 57.1428571%;
 }
 
-/* line 495, ../scss/main.scss */
+/* line 491, ../scss/main.scss */
 .size5of7 {
   width: 71.4285714%;
 }
 
-/* line 499, ../scss/main.scss */
+/* line 495, ../scss/main.scss */
 .size6of7 {
   width: 85.7142857%;
 }
 
-/* line 503, ../scss/main.scss */
+/* line 499, ../scss/main.scss */
 .size1of8 {
   width: 12.5%;
 }
 
-/* line 507, ../scss/main.scss */
+/* line 503, ../scss/main.scss */
 .size3of8 {
   width: 37.5%;
 }
 
-/* line 511, ../scss/main.scss */
+/* line 507, ../scss/main.scss */
 .size5of8 {
   width: 62.5%;
 }
 
-/* line 515, ../scss/main.scss */
+/* line 511, ../scss/main.scss */
 .size7of8 {
   width: 87.5%;
 }
 
-/* line 519, ../scss/main.scss */
+/* line 515, ../scss/main.scss */
 .size1of9 {
   width: 11.111111111%;
 }
 
-/* line 523, ../scss/main.scss */
+/* line 519, ../scss/main.scss */
 .size2of9 {
   width: 22.222222222%;
 }
 
-/* line 527, ../scss/main.scss */
+/* line 523, ../scss/main.scss */
 .size3of9 {
   width: 33.333333333%;
 }
 
-/* line 531, ../scss/main.scss */
+/* line 527, ../scss/main.scss */
 .size4of9 {
   width: 44.444444444%;
 }
 
-/* line 535, ../scss/main.scss */
+/* line 531, ../scss/main.scss */
 .size5of9 {
   width: 55.555555555%;
 }
 
-/* line 539, ../scss/main.scss */
+/* line 535, ../scss/main.scss */
 .size6of9 {
   width: 66.666666666%;
 }
 
-/* line 543, ../scss/main.scss */
+/* line 539, ../scss/main.scss */
 .size7of9 {
   width: 77.777777777%;
 }
 
-/* line 547, ../scss/main.scss */
+/* line 543, ../scss/main.scss */
 .size8of9 {
   width: 88.888888888%;
 }
 
-/* line 551, ../scss/main.scss */
+/* line 547, ../scss/main.scss */
 .size1of10 {
   width: 10%;
 }
 
-/* line 555, ../scss/main.scss */
+/* line 551, ../scss/main.scss */
 .size3of10 {
   width: 30%;
 }
 
-/* line 559, ../scss/main.scss */
+/* line 555, ../scss/main.scss */
 .size4of10 {
   width: 40%;
 }
 
-/* line 563, ../scss/main.scss */
+/* line 559, ../scss/main.scss */
 .size7of10 {
   width: 70%;
 }
 
-/* line 567, ../scss/main.scss */
+/* line 563, ../scss/main.scss */
 .size9of10 {
   width: 90%;
 }
 
-/* line 571, ../scss/main.scss */
+/* line 567, ../scss/main.scss */
 .before1of2 {
   margin-left: 50%;
 }
 
-/* line 575, ../scss/main.scss */
+/* line 571, ../scss/main.scss */
 .before1of3 {
   margin-left: 33.333333%;
 }
 
-/* line 579, ../scss/main.scss */
+/* line 575, ../scss/main.scss */
 .before2of3 {
   margin-left: 66.666666%;
 }
 
-/* line 583, ../scss/main.scss */
+/* line 579, ../scss/main.scss */
 .before1of4 {
   margin-left: 25%;
 }
 
-/* line 587, ../scss/main.scss */
+/* line 583, ../scss/main.scss */
 .before3of4 {
   margin-left: 75%;
 }
 
-/* line 591, ../scss/main.scss */
+/* line 587, ../scss/main.scss */
 .before1of5 {
   margin-left: 20%;
 }
 
-/* line 595, ../scss/main.scss */
+/* line 591, ../scss/main.scss */
 .before2of5 {
   margin-left: 40%;
 }
 
-/* line 599, ../scss/main.scss */
+/* line 595, ../scss/main.scss */
 .before3of5 {
   margin-left: 60%;
 }
 
-/* line 603, ../scss/main.scss */
+/* line 599, ../scss/main.scss */
 .before4of5 {
   margin-left: 80%;
 }
 
-/* line 607, ../scss/main.scss */
+/* line 603, ../scss/main.scss */
 .before1of6 {
   margin-left: 16.666666%;
 }
 
-/* line 611, ../scss/main.scss */
+/* line 607, ../scss/main.scss */
 .before5of6 {
   margin-left: 83.333333%;
 }
 
-/* line 615, ../scss/main.scss */
+/* line 611, ../scss/main.scss */
 .before1of7 {
   margin-left: 14.2857143%;
 }
 
-/* line 619, ../scss/main.scss */
+/* line 615, ../scss/main.scss */
 .before2of7 {
   margin-left: 28.5714286%;
 }
 
-/* line 623, ../scss/main.scss */
+/* line 619, ../scss/main.scss */
 .before3of7 {
   margin-left: 42.8571429%;
 }
 
-/* line 627, ../scss/main.scss */
+/* line 623, ../scss/main.scss */
 .before4of7 {
   margin-left: 57.1428571%;
 }
 
-/* line 631, ../scss/main.scss */
+/* line 627, ../scss/main.scss */
 .before5of7 {
   margin-left: 71.4285714%;
 }
 
-/* line 635, ../scss/main.scss */
+/* line 631, ../scss/main.scss */
 .before6of7 {
   margin-left: 85.7142857%;
 }
 
-/* line 639, ../scss/main.scss */
+/* line 635, ../scss/main.scss */
 .before1of8 {
   margin-left: 12.5%;
 }
 
-/* line 643, ../scss/main.scss */
+/* line 639, ../scss/main.scss */
 .before3of8 {
   margin-left: 37.5%;
 }
 
-/* line 647, ../scss/main.scss */
+/* line 643, ../scss/main.scss */
 .before5of8 {
   margin-left: 62.5%;
 }
 
-/* line 651, ../scss/main.scss */
+/* line 647, ../scss/main.scss */
 .before7of8 {
   margin-left: 87.5%;
 }
 
-/* line 655, ../scss/main.scss */
+/* line 651, ../scss/main.scss */
 .before1of9 {
   margin-left: 11.111111111%;
 }
 
-/* line 659, ../scss/main.scss */
+/* line 655, ../scss/main.scss */
 .before2of9 {
   margin-left: 22.222222222%;
 }
 
-/* line 663, ../scss/main.scss */
+/* line 659, ../scss/main.scss */
 .before3of9 {
   margin-left: 33.333333333%;
 }
 
-/* line 667, ../scss/main.scss */
+/* line 663, ../scss/main.scss */
 .before4of9 {
   margin-left: 44.444444444%;
 }
 
-/* line 671, ../scss/main.scss */
+/* line 667, ../scss/main.scss */
 .before5of9 {
   margin-left: 55.555555555%;
 }
 
-/* line 675, ../scss/main.scss */
+/* line 671, ../scss/main.scss */
 .before6of9 {
   margin-left: 66.666666666%;
 }
 
-/* line 679, ../scss/main.scss */
+/* line 675, ../scss/main.scss */
 .before7of9 {
   margin-left: 77.777777777%;
 }
 
-/* line 683, ../scss/main.scss */
+/* line 679, ../scss/main.scss */
 .before8of9 {
   margin-left: 88.888888888%;
 }
 
-/* line 687, ../scss/main.scss */
+/* line 683, ../scss/main.scss */
 .before1of10 {
   margin-left: 10%;
 }
 
-/* line 691, ../scss/main.scss */
+/* line 687, ../scss/main.scss */
 .before3of10 {
   margin-left: 30%;
 }
 
-/* line 695, ../scss/main.scss */
+/* line 691, ../scss/main.scss */
 .before4of10 {
   margin-left: 40%;
 }
 
-/* line 699, ../scss/main.scss */
+/* line 695, ../scss/main.scss */
 .before7of10 {
   margin-left: 70%;
 }
 
-/* line 703, ../scss/main.scss */
+/* line 699, ../scss/main.scss */
 .before9of10 {
   margin-left: 90%;
 }
 
-/* line 707, ../scss/main.scss */
+/* line 703, ../scss/main.scss */
 .after1of2 {
   margin-right: 50%;
 }
 
-/* line 711, ../scss/main.scss */
+/* line 707, ../scss/main.scss */
 .after1of3 {
   margin-right: 33.333333%;
 }
 
-/* line 715, ../scss/main.scss */
+/* line 711, ../scss/main.scss */
 .after2of3 {
   margin-right: 66.666666%;
 }
 
-/* line 719, ../scss/main.scss */
+/* line 715, ../scss/main.scss */
 .after1of4 {
   margin-right: 25%;
 }
 
-/* line 723, ../scss/main.scss */
+/* line 719, ../scss/main.scss */
 .after3of4 {
   margin-right: 75%;
 }
 
-/* line 727, ../scss/main.scss */
+/* line 723, ../scss/main.scss */
 .after1of5 {
   margin-right: 20%;
 }
 
-/* line 731, ../scss/main.scss */
+/* line 727, ../scss/main.scss */
 .after2of5 {
   margin-right: 40%;
 }
 
-/* line 735, ../scss/main.scss */
+/* line 731, ../scss/main.scss */
 .after3of5 {
   margin-right: 60%;
 }
 
-/* line 739, ../scss/main.scss */
+/* line 735, ../scss/main.scss */
 .after4of5 {
   margin-right: 80%;
 }
 
-/* line 743, ../scss/main.scss */
+/* line 739, ../scss/main.scss */
 .after1of6 {
   margin-right: 16.666666%;
 }
 
-/* line 747, ../scss/main.scss */
+/* line 743, ../scss/main.scss */
 .after5of6 {
   margin-right: 83.333333%;
 }
 
-/* line 751, ../scss/main.scss */
+/* line 747, ../scss/main.scss */
 .after1of7 {
   margin-right: 14.2857143%;
 }
 
-/* line 755, ../scss/main.scss */
+/* line 751, ../scss/main.scss */
 .after2of7 {
   margin-right: 28.5714286%;
 }
 
-/* line 759, ../scss/main.scss */
+/* line 755, ../scss/main.scss */
 .after3of7 {
   margin-right: 42.8571429%;
 }
 
-/* line 763, ../scss/main.scss */
+/* line 759, ../scss/main.scss */
 .after4of7 {
   margin-right: 57.1428571%;
 }
 
-/* line 767, ../scss/main.scss */
+/* line 763, ../scss/main.scss */
 .after5of7 {
   margin-right: 71.4285714%;
 }
 
-/* line 771, ../scss/main.scss */
+/* line 767, ../scss/main.scss */
 .after6of7 {
   margin-right: 85.7142857%;
 }
 
-/* line 775, ../scss/main.scss */
+/* line 771, ../scss/main.scss */
 .after1of8 {
   margin-right: 12.5%;
 }
 
-/* line 779, ../scss/main.scss */
+/* line 775, ../scss/main.scss */
 .after3of8 {
   margin-right: 37.5%;
 }
 
-/* line 783, ../scss/main.scss */
+/* line 779, ../scss/main.scss */
 .after5of8 {
   margin-right: 62.5%;
 }
 
-/* line 787, ../scss/main.scss */
+/* line 783, ../scss/main.scss */
 .after7of8 {
   margin-right: 87.5%;
 }
 
-/* line 791, ../scss/main.scss */
+/* line 787, ../scss/main.scss */
 .after1of9 {
   margin-right: 11.111111111%;
 }
 
-/* line 795, ../scss/main.scss */
+/* line 791, ../scss/main.scss */
 .after2of9 {
   margin-right: 22.222222222%;
 }
 
-/* line 799, ../scss/main.scss */
+/* line 795, ../scss/main.scss */
 .after3of9 {
   margin-right: 33.333333333%;
 }
 
-/* line 803, ../scss/main.scss */
+/* line 799, ../scss/main.scss */
 .after4of9 {
   margin-right: 44.444444444%;
 }
 
-/* line 807, ../scss/main.scss */
+/* line 803, ../scss/main.scss */
 .after5of9 {
   margin-right: 55.555555555%;
 }
 
-/* line 811, ../scss/main.scss */
+/* line 807, ../scss/main.scss */
 .after6of9 {
   margin-right: 66.666666666%;
 }
 
-/* line 815, ../scss/main.scss */
+/* line 811, ../scss/main.scss */
 .after7of9 {
   margin-right: 77.777777777%;
 }
 
-/* line 819, ../scss/main.scss */
+/* line 815, ../scss/main.scss */
 .after8of9 {
   margin-right: 88.888888888%;
 }
 
-/* line 823, ../scss/main.scss */
+/* line 819, ../scss/main.scss */
 .after1of10 {
   margin-right: 10%;
 }
 
-/* line 827, ../scss/main.scss */
+/* line 823, ../scss/main.scss */
 .after3of10 {
   margin-right: 30%;
 }
 
-/* line 831, ../scss/main.scss */
+/* line 827, ../scss/main.scss */
 .after4of10 {
   margin-right: 40%;
 }
 
-/* line 835, ../scss/main.scss */
+/* line 831, ../scss/main.scss */
 .after7of10 {
   margin-right: 70%;
 }
 
-/* line 839, ../scss/main.scss */
+/* line 835, ../scss/main.scss */
 .after9of10 {
   margin-right: 90%;
 }
@@ -1590,7 +1590,7 @@ table ol {
 画像置換 (Alternative Image)
 高さはPadding-topかpadding-bottomdで設定する。
 */
-/* line 855, ../scss/main.scss */
+/* line 851, ../scss/main.scss */
 .alt-img {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1602,26 +1602,26 @@ table ol {
   overflow: hidden;
 }
 
-/* line 860, ../scss/main.scss */
+/* line 856, ../scss/main.scss */
 .link-box {
   color: #333333;
   cursor: pointer;
 }
-/* line 863, ../scss/main.scss */
+/* line 859, ../scss/main.scss */
 .link-box:hover {
   text-decoration: none;
 }
-/* line 865, ../scss/main.scss */
+/* line 861, ../scss/main.scss */
 .link-box:hover .link-box-link {
   text-decoration: underline;
 }
-/* line 869, ../scss/main.scss */
+/* line 865, ../scss/main.scss */
 .link-box .link-box-link {
   color: #074ae2;
 }
 
 /* Chrome Frame */
-/* line 875, ../scss/main.scss */
+/* line 871, ../scss/main.scss */
 .chromeframe {
   background-color: #fff3f3;
   border: 1px solid #f00;
@@ -1634,7 +1634,7 @@ table ol {
 }
 
 /* 汎用ボタン */
-/* line 883, ../scss/main.scss */
+/* line 879, ../scss/main.scss */
 .btn {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1669,7 +1669,7 @@ table ol {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 902, ../scss/main.scss */
+/* line 898, ../scss/main.scss */
 .lt-ie7 .btn {
   display: inline;
   background-color: #e6e6e6;
@@ -1677,7 +1677,7 @@ table ol {
   zoom: 1;
 }
 
-/* line 913, ../scss/main.scss */
+/* line 909, ../scss/main.scss */
 .btn:hover,
 .btn:active,
 .btn.active,
@@ -1687,7 +1687,7 @@ table ol {
   background-color: #e6e6e6;
 }
 
-/* line 922, ../scss/main.scss */
+/* line 918, ../scss/main.scss */
 .lt-ie7 .btn:hover,
 .lt-ie7 .btn:active,
 .lt-ie7 .btn.active,
@@ -1696,13 +1696,13 @@ table ol {
   *background-color: #d9d9d9;
 }
 
-/* line 928, ../scss/main.scss */
+/* line 924, ../scss/main.scss */
 .ie8 .btn:active,
 .ie8 .btn.active {
   background-color: #cccccc;
 }
 
-/* line 932, ../scss/main.scss */
+/* line 928, ../scss/main.scss */
 .btn:hover {
   color: #333333;
   text-decoration: none;
@@ -1713,14 +1713,14 @@ table ol {
   transition: background-position 0.1s linear;
 }
 
-/* line 939, ../scss/main.scss */
+/* line 935, ../scss/main.scss */
 .btn:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-/* line 946, ../scss/main.scss */
+/* line 942, ../scss/main.scss */
 .btn.active,
 .btn:active {
   background-image: none;
@@ -1730,7 +1730,7 @@ table ol {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 953, ../scss/main.scss */
+/* line 949, ../scss/main.scss */
 .btn.disabled,
 .btn[disabled] {
   cursor: default;
@@ -1742,17 +1742,17 @@ table ol {
   box-shadow: none;
 }
 
-/* line 960, ../scss/main.scss */
+/* line 956, ../scss/main.scss */
 .chromeframe strong {
   color: #f00;
 }
 
-/* line 964, ../scss/main.scss */
+/* line 960, ../scss/main.scss */
 .hide {
   display: none;
 }
 
-/* line 968, ../scss/main.scss */
+/* line 964, ../scss/main.scss */
 .show {
   display: block;
 }
@@ -1761,7 +1761,7 @@ table ol {
 /* ここにサイト独自のスタイルを設定 */
 /* 上書きクラス */
 /* CLEARFIX */
-/* line 982, ../scss/main.scss */
+/* line 978, ../scss/main.scss */
 .clearfix,
 .cf {
   *zoom: 1;
@@ -1779,19 +1779,19 @@ table ol {
 以下のWordpressのリッチテキストエディタが付加するクラス(※)も合わせて設定
 ※ .alignleft / .alignright / .aligncenter
 */
-/* line 991, ../scss/main.scss */
+/* line 987, ../scss/main.scss */
 .txtl,
 .alignleft {
   text-align: left;
 }
 
-/* line 996, ../scss/main.scss */
+/* line 992, ../scss/main.scss */
 .txtr,
 .alignright {
   text-align: right;
 }
 
-/* line 1001, ../scss/main.scss */
+/* line 997, ../scss/main.scss */
 .txtc,
 .aligncenter {
   text-align: center;
@@ -1801,21 +1801,21 @@ table ol {
 Wordpressのリッチテキストエディタが付加するクラス(※)を網羅。
 ※ .left / .right / .clear
 */
-/* line 1009, ../scss/main.scss */
+/* line 1005, ../scss/main.scss */
 .left {
   display: inline;
   float: left;
   margin-top: 0;
 }
 
-/* line 1014, ../scss/main.scss */
+/* line 1010, ../scss/main.scss */
 .right {
   display: inline;
   float: right;
   margin-top: 0;
 }
 
-/* line 1019, ../scss/main.scss */
+/* line 1015, ../scss/main.scss */
 .clear {
   clear: both;
   float: none;
@@ -1824,7 +1824,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 
 /* タブレットサイズ */
 @media (max-width: 720px) {
-  /* line 1028, ../scss/main.scss */
+  /* line 1024, ../scss/main.scss */
   .breakpoint-1,
   .linearize-from-tablet {
     display: -webkit-box;
@@ -1884,34 +1884,34 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     width: 100%;
   }
 
-  /* line 1032, ../scss/main.scss */
+  /* line 1028, ../scss/main.scss */
   .show-breakpoint-1 {
     display: block;
   }
 
-  /* line 1036, ../scss/main.scss */
+  /* line 1032, ../scss/main.scss */
   .hide-breakpoint-1 {
     display: none;
   }
 
-  /* line 1040, ../scss/main.scss */
-  .has-gutter.breakpoint-1 {
+  /* line 1036, ../scss/main.scss */
+  .line-gutter.breakpoint-1 {
     margin-left: 0;
   }
-  /* line 1042, ../scss/main.scss */
-  .has-gutter.breakpoint-1 .unit {
+  /* line 107, ../scss/_mixin.scss */
+  .line-gutter.breakpoint-1 .unit {
     padding-left: 0;
   }
 }
 /* モバイルサイズ */
 @media (max-width: 480px) {
-  /* line 1052, ../scss/main.scss */
+  /* line 1045, ../scss/main.scss */
   html {
     font-size: 0.875em;
     -webkit-text-size-adjust: none;
   }
 
-  /* line 1058, ../scss/main.scss */
+  /* line 1051, ../scss/main.scss */
   .breakpoint-2,
   .linearize-from-motile {
     display: -webkit-box;
@@ -1971,34 +1971,34 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     width: 100%;
   }
 
-  /* line 1062, ../scss/main.scss */
+  /* line 1055, ../scss/main.scss */
   .show-breakpoint-2 {
     display: block;
   }
 
-  /* line 1066, ../scss/main.scss */
+  /* line 1059, ../scss/main.scss */
   .hide-breakpoint-2 {
     display: none;
   }
 
-  /* line 1070, ../scss/main.scss */
-  .has-gutter.breakpoint-2 {
+  /* line 1063, ../scss/main.scss */
+  .line-gutter.breakpoint-2 {
     margin-left: 0;
   }
-  /* line 1072, ../scss/main.scss */
-  .has-gutter.breakpoint-2 .unit {
+  /* line 107, ../scss/_mixin.scss */
+  .line-gutter.breakpoint-2 .unit {
     padding-left: 0;
   }
 
   /* 画像 */
-  /* line 1078, ../scss/main.scss */
+  /* line 1068, ../scss/main.scss */
   img {
     max-width: 100%;
     height: auto;
   }
 
   /* テーブル */
-  /* line 1084, ../scss/main.scss */
+  /* line 1074, ../scss/main.scss */
   table {
     overflow: auto;
   }
@@ -2006,7 +2006,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 /* 印刷用 */
 @media print {
   /* テキストシャドウなど不要なエフェクトを無効化 */
-  /* line 1094, ../scss/main.scss */
+  /* line 1084, ../scss/main.scss */
   * {
     background: transparent;
     color: #000;
@@ -2015,14 +2015,14 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   }
 
   /* 画像がはみ出したり変形したりしないように。 */
-  /* line 1115, ../scss/main.scss */
+  /* line 1105, ../scss/main.scss */
   img {
     max-width: 100%;
     height: auto;
   }
 
   /* 画像置換をキャンセル */
-  /* line 1121, ../scss/main.scss */
+  /* line 1111, ../scss/main.scss */
   .alt-img {
     background-image: none;
     height: auto;

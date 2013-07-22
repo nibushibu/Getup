@@ -388,12 +388,8 @@ table ol {
   height: 0;
 }
 
-.has-gutter {
-  margin-left: -20px;
-
-  .unit {
-    padding-left: 20px;
-  }
+.line-gutter {
+  @include line-gutter();
 }
 
 .unit,
@@ -405,8 +401,8 @@ table ol {
   width: 100%;
 }
 
-.has-liquid{
-  @include has-liquid;
+.line-liquid{
+  @include line-liquid;
 }
 
 .unit,
@@ -424,8 +420,8 @@ table ol {
   float: right;
 }
 
-.has-liquid .liquid-unit {
-  @include liquid-unit;
+.line-liquid .unit-liquid {
+  @include unit-liquid;
 }
 
 .size1of1 {
@@ -1037,11 +1033,8 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     display: none;
   }
 
-  .has-gutter.breakpoint-1 {
-    margin-left: 0;
-    .unit {
-      padding-left: 0;
-    }
+  .line-gutter.breakpoint-1 {
+    @include line-gutter(0);
   }
 
 }
@@ -1067,11 +1060,8 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     display: none;
   }
 
-  .has-gutter.breakpoint-2 {
-    margin-left: 0;
-    .unit {
-      padding-left: 0;
-    }
+  .line-gutter.breakpoint-2 {
+    @include line-gutter(0);
   }
 
   /* 画像 */
