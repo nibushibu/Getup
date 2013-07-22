@@ -102,6 +102,13 @@
   width: 100%;
 }
 
+@mixin has-liquid{
+  @include g-clearfix;
+  .unit {
+    float: left;
+  }
+}
+
 @mixin liquid-unit {
   display: table-cell;
   float: none;

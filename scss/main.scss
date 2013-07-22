@@ -390,6 +390,10 @@ table ol {
 
 .has-gutter {
   margin-left: -20px;
+
+  .unit {
+    padding-left: 20px;
+  }
 }
 
 .unit,
@@ -401,8 +405,8 @@ table ol {
   width: 100%;
 }
 
-.has-gutter > .unit{
-  padding-left: 20px;
+.has-liquid{
+  @include has-liquid;
 }
 
 .unit,
@@ -418,6 +422,10 @@ table ol {
 
 .right-unit {
   float: right;
+}
+
+.has-liquid .liquid-unit {
+  @include liquid-unit;
 }
 
 .size1of1 {
@@ -832,9 +840,6 @@ table ol {
   margin-right: 90%;
 }
 
-.size-free {
-  @include liquid-unit;
-}
 
 /* 汎用クラス */
 
