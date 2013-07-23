@@ -80,6 +80,11 @@
   @include has-layout;
 }
 
+@mixin g-box-sizing($box-sizing:border-box) {
+  @include box-sizing($box-sizing);
+  *behavior: url($box-sizing-path);
+}
+
 @mixin linearize-unit {
   @include g-flex();
   @include g-flex-direction(column);

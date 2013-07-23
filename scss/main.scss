@@ -407,8 +407,7 @@ table ol {
 
 .unit,
 .line {
-  @include box-sizing(border-box);
-  *behavior: url($box-sizing-path);
+  @include g-box-sizing();
 }
 
 .lt-ie8 .unit,
