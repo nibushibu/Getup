@@ -681,15 +681,6 @@ a {
   color: #074ae2;
   text-decoration: none;
 }
-/* line 131, ../scss/main.scss */
-a:visited {
-  color: #053ab1;
-}
-/* line 135, ../scss/main.scss */
-a:hover, a:active {
-  color: #2465f8;
-  text-decoration: underline;
-}
 
 /* line 141, ../scss/main.scss */
 ul {
