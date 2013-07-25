@@ -370,49 +370,25 @@ table ol {
 /* グリッドレイアウト */
 .line,
 .legacy-line {
-  margin: 0;
-  padding: 0;
-  letter-spacing: -.4em;
+  @include line;
 }
 
-.lt-ie8 .line {
-  overflow: visible;
-  zoom: 1;
-}
-
-.line:after,
-.legacy-line:after,{
-  clear: both;
-  content: "";
-  display: block;
-  height: 0;
-}
 
 .line-gutter {
-  @include line-gutter();
+  @include line-gutter;
+}
+
+.line-right {
+  @include line-right;
 }
 
 .unit,
 .legacy-unit {
-  @include inline-block;
-  list-style: none;
-  letter-spacing: normal;
-  vertical-align: top;
-  width: 100%;
+  @include unit;
 }
 
 .line-liquid{
   @include line-liquid;
-}
-
-.unit,
-.line {
-  @include g-box-sizing();
-}
-
-.lt-ie8 .unit,
-.lt-ie8 .legacy-unit {
-  zoom: 1;
 }
 
 .unit-right {

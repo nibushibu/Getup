@@ -99,6 +99,35 @@
   }
 }
 
+@mixin line {
+  margin: 0;
+  padding: 0;
+  letter-spacing: -.4em;
+  @include g-box-sizing();
+  .lt-ie8 & {
+    overflow: visible;
+    zoom: 1;
+  }
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+  }
+}
+
+@mixin unit {
+  @include inline-block;
+  @include g-box-sizing();
+  list-style: none;
+  letter-spacing: normal;
+  vertical-align: top;
+  width: 100%;
+  .lt-ie8 & {
+    zoom: 1;
+  }
+}
+
 @mixin legacy-linearize-unit {
   clear: both;
   display: block;
@@ -128,4 +157,11 @@
   _left: -3px;
   _margin-right: -3px;
   width: auto;
+}
+
+@mixin line-right {
+  text-align: right;
+  .unit {
+    text-align: left;
+  }
 }
