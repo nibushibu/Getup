@@ -980,13 +980,13 @@ table ol {
   box-sizing: border-box;
   *behavior: url("/u/175530/boilerplate/js/vendor/boxsizing.htc");
 }
-/* line 107, ../scss/_mixin.scss */
+/* line 113, ../scss/_mixin.scss */
 .lt-ie8 .line, .lt-ie8
 .legacy-line {
   overflow: visible;
   zoom: 1;
 }
-/* line 111, ../scss/_mixin.scss */
+/* line 117, ../scss/_mixin.scss */
 .line:after,
 .legacy-line:after {
   clear: both;
@@ -999,7 +999,7 @@ table ol {
 .line-gutter {
   margin-left: -20px;
 }
-/* line 141, ../scss/_mixin.scss */
+/* line 147, ../scss/_mixin.scss */
 .line-gutter .unit {
   padding-left: 20px;
 }
@@ -1008,7 +1008,7 @@ table ol {
 .line-right {
   text-align: right;
 }
-/* line 164, ../scss/_mixin.scss */
+/* line 170, ../scss/_mixin.scss */
 .line-right .unit {
   text-align: left;
 }
@@ -1031,7 +1031,7 @@ table ol {
   vertical-align: top;
   width: 100%;
 }
-/* line 126, ../scss/_mixin.scss */
+/* line 132, ../scss/_mixin.scss */
 .lt-ie8 .unit, .lt-ie8
 .legacy-unit {
   zoom: 1;
@@ -1047,7 +1047,7 @@ table ol {
   display: table;
   clear: both;
 }
-/* line 148, ../scss/_mixin.scss */
+/* line 154, ../scss/_mixin.scss */
 .line-liquid .unit {
   float: left;
 }
@@ -1587,7 +1587,7 @@ table ol {
 画像置換 (Alternative Image)
 高さはPadding-topかpadding-bottomdで設定する。
 */
-/* line 826, ../scss/main.scss */
+/* line 821, ../scss/main.scss */
 .alt-img {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1599,26 +1599,26 @@ table ol {
   overflow: hidden;
 }
 
-/* line 831, ../scss/main.scss */
+/* line 826, ../scss/main.scss */
 .link-box {
   color: #333333;
   cursor: pointer;
 }
-/* line 834, ../scss/main.scss */
+/* line 829, ../scss/main.scss */
 .link-box:hover {
   text-decoration: none;
 }
-/* line 836, ../scss/main.scss */
+/* line 831, ../scss/main.scss */
 .link-box:hover .link-box-link {
   text-decoration: underline;
 }
-/* line 840, ../scss/main.scss */
+/* line 835, ../scss/main.scss */
 .link-box .link-box-link {
   color: #074ae2;
 }
 
 /* Chrome Frame */
-/* line 846, ../scss/main.scss */
+/* line 841, ../scss/main.scss */
 .chromeframe {
   background-color: #fff3f3;
   border: 1px solid #f00;
@@ -1631,7 +1631,7 @@ table ol {
 }
 
 /* 汎用ボタン */
-/* line 854, ../scss/main.scss */
+/* line 849, ../scss/main.scss */
 .btn {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1666,7 +1666,7 @@ table ol {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 873, ../scss/main.scss */
+/* line 868, ../scss/main.scss */
 .lt-ie7 .btn {
   display: inline;
   background-color: #e6e6e6;
@@ -1674,7 +1674,7 @@ table ol {
   zoom: 1;
 }
 
-/* line 884, ../scss/main.scss */
+/* line 879, ../scss/main.scss */
 .btn:hover,
 .btn:active,
 .btn.active,
@@ -1684,7 +1684,7 @@ table ol {
   background-color: #e6e6e6;
 }
 
-/* line 893, ../scss/main.scss */
+/* line 888, ../scss/main.scss */
 .lt-ie7 .btn:hover,
 .lt-ie7 .btn:active,
 .lt-ie7 .btn.active,
@@ -1693,13 +1693,13 @@ table ol {
   *background-color: #d9d9d9;
 }
 
-/* line 899, ../scss/main.scss */
+/* line 894, ../scss/main.scss */
 .ie8 .btn:active,
 .ie8 .btn.active {
   background-color: #cccccc;
 }
 
-/* line 903, ../scss/main.scss */
+/* line 898, ../scss/main.scss */
 .btn:hover {
   color: #333333;
   text-decoration: none;
@@ -1710,14 +1710,14 @@ table ol {
   transition: background-position 0.1s linear;
 }
 
-/* line 910, ../scss/main.scss */
+/* line 905, ../scss/main.scss */
 .btn:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-/* line 917, ../scss/main.scss */
+/* line 912, ../scss/main.scss */
 .btn.active,
 .btn:active {
   background-image: none;
@@ -1727,7 +1727,7 @@ table ol {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 924, ../scss/main.scss */
+/* line 919, ../scss/main.scss */
 .btn.disabled,
 .btn[disabled] {
   cursor: default;
@@ -1739,17 +1739,17 @@ table ol {
   box-shadow: none;
 }
 
-/* line 931, ../scss/main.scss */
+/* line 926, ../scss/main.scss */
 .chromeframe strong {
   color: #f00;
 }
 
-/* line 935, ../scss/main.scss */
+/* line 930, ../scss/main.scss */
 .hide {
   display: none;
 }
 
-/* line 939, ../scss/main.scss */
+/* line 934, ../scss/main.scss */
 .show {
   display: block;
 }
@@ -1758,7 +1758,7 @@ table ol {
 /* ここにサイト独自のスタイルを設定 */
 /* 上書きクラス */
 /* CLEARFIX */
-/* line 953, ../scss/main.scss */
+/* line 948, ../scss/main.scss */
 .clearfix,
 .cf {
   *zoom: 1;
@@ -1776,19 +1776,19 @@ table ol {
 以下のWordpressのリッチテキストエディタが付加するクラス(※)も合わせて設定
 ※ .alignleft / .alignright / .aligncenter
 */
-/* line 962, ../scss/main.scss */
+/* line 957, ../scss/main.scss */
 .txtl,
 .alignleft {
   text-align: left;
 }
 
-/* line 967, ../scss/main.scss */
+/* line 962, ../scss/main.scss */
 .txtr,
 .alignright {
   text-align: right;
 }
 
-/* line 972, ../scss/main.scss */
+/* line 967, ../scss/main.scss */
 .txtc,
 .aligncenter {
   text-align: center;
@@ -1798,21 +1798,21 @@ table ol {
 Wordpressのリッチテキストエディタが付加するクラス(※)を網羅。
 ※ .left / .right / .clear
 */
-/* line 980, ../scss/main.scss */
+/* line 975, ../scss/main.scss */
 .left {
   display: inline;
   float: left;
   margin-top: 0;
 }
 
-/* line 985, ../scss/main.scss */
+/* line 980, ../scss/main.scss */
 .right {
   display: inline;
   float: right;
   margin-top: 0;
 }
 
-/* line 990, ../scss/main.scss */
+/* line 985, ../scss/main.scss */
 .clear {
   clear: both;
   float: none;
@@ -1821,7 +1821,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 
 /* タブレットサイズ */
 @media (max-width: 720px) {
-  /* line 999, ../scss/main.scss */
+  /* line 994, ../scss/main.scss */
   .breakpoint-1,
   .linearize-from-tablet {
     display: -webkit-box;
@@ -1869,7 +1869,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     -ms-align-content: flex-start;
     align-content: flex-start;
   }
-  /* line 96, ../scss/_mixin.scss */
+  /* line 102, ../scss/_mixin.scss */
   .breakpoint-1 > .unit,
   .breakpoint-1 > .legacy-unit,
   .linearize-from-tablet > .unit,
@@ -1881,34 +1881,34 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     width: 100%;
   }
 
-  /* line 1003, ../scss/main.scss */
+  /* line 998, ../scss/main.scss */
   .show-breakpoint-1 {
     display: block;
   }
 
-  /* line 1007, ../scss/main.scss */
+  /* line 1002, ../scss/main.scss */
   .hide-breakpoint-1 {
     display: none;
   }
 
-  /* line 1011, ../scss/main.scss */
+  /* line 1006, ../scss/main.scss */
   .line-gutter.breakpoint-1 {
     margin-left: 0;
   }
-  /* line 141, ../scss/_mixin.scss */
+  /* line 147, ../scss/_mixin.scss */
   .line-gutter.breakpoint-1 .unit {
     padding-left: 0;
   }
 }
 /* モバイルサイズ */
 @media (max-width: 480px) {
-  /* line 1020, ../scss/main.scss */
+  /* line 1015, ../scss/main.scss */
   html {
     font-size: 0.875em;
     -webkit-text-size-adjust: none;
   }
 
-  /* line 1026, ../scss/main.scss */
+  /* line 1021, ../scss/main.scss */
   .breakpoint-2,
   .linearize-from-motile {
     display: -webkit-box;
@@ -1956,7 +1956,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     -ms-align-content: flex-start;
     align-content: flex-start;
   }
-  /* line 96, ../scss/_mixin.scss */
+  /* line 102, ../scss/_mixin.scss */
   .breakpoint-2 > .unit,
   .breakpoint-2 > .legacy-unit,
   .linearize-from-motile > .unit,
@@ -1968,34 +1968,34 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     width: 100%;
   }
 
-  /* line 1030, ../scss/main.scss */
+  /* line 1025, ../scss/main.scss */
   .show-breakpoint-2 {
     display: block;
   }
 
-  /* line 1034, ../scss/main.scss */
+  /* line 1029, ../scss/main.scss */
   .hide-breakpoint-2 {
     display: none;
   }
 
-  /* line 1038, ../scss/main.scss */
+  /* line 1033, ../scss/main.scss */
   .line-gutter.breakpoint-2 {
     margin-left: 0;
   }
-  /* line 141, ../scss/_mixin.scss */
+  /* line 147, ../scss/_mixin.scss */
   .line-gutter.breakpoint-2 .unit {
     padding-left: 0;
   }
 
   /* 画像 */
-  /* line 1043, ../scss/main.scss */
+  /* line 1038, ../scss/main.scss */
   img {
     max-width: 100%;
     height: auto;
   }
 
   /* テーブル */
-  /* line 1049, ../scss/main.scss */
+  /* line 1044, ../scss/main.scss */
   table {
     overflow: auto;
   }
@@ -2003,7 +2003,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 /* 印刷用 */
 @media print {
   /* テキストシャドウなど不要なエフェクトを無効化 */
-  /* line 1059, ../scss/main.scss */
+  /* line 1054, ../scss/main.scss */
   * {
     background: transparent;
     color: #000;
@@ -2012,14 +2012,14 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   }
 
   /* 画像がはみ出したり変形したりしないように。 */
-  /* line 1080, ../scss/main.scss */
+  /* line 1075, ../scss/main.scss */
   img {
     max-width: 100%;
     height: auto;
   }
 
   /* 画像置換をキャンセル */
-  /* line 1086, ../scss/main.scss */
+  /* line 1081, ../scss/main.scss */
   .alt-img {
     background-image: none;
     height: auto;

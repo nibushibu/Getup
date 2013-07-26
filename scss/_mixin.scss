@@ -80,6 +80,12 @@
   @include has-layout;
 }
 
+@mixin alt-img {
+  @include inline-block();
+  height: 0;
+  overflow: hidden;
+}
+
 @mixin g-box-sizing($box-sizing:border-box) {
   @include box-sizing($box-sizing);
   *behavior: url($box-sizing-path);

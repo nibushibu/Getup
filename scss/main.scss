@@ -818,11 +818,6 @@ table ol {
 画像置換 (Alternative Image)
 高さはPadding-topかpadding-bottomdで設定する。
 */
-@mixin alt-img {
-  @include inline-block();
-  height: 0;
-  overflow: hidden;
-}
 .alt-img {
   @include alt-img;
 }
