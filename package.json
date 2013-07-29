@@ -15,6 +15,7 @@
     "grunt-contrib-compass": "*",
     "grunt-contrib-coffee": "*",
     "grunt-contrib-uglify": "*",
+    "grunt-webfont": "*",
     "js2coffee": "*"
   }
 }
