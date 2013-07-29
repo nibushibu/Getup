@@ -98,8 +98,7 @@
   @include g-justify-content(flex-start);
   @include g-align-items(stretch);
   @include g-align-content(flex-start);
-  > .unit,
-  > .legacy-unit {
+  > * {
     @include box-flex(1);
     width: 100%;
   }
@@ -142,15 +141,21 @@
   width: 100%;
 }
 
-@mixin line-gutter($gutter:20px) {
-  margin-left: -$gutter;
+@mixin line-gutter($gutter-width:20px) {
+  margin-left: -$gutter-width;
+  > * {
+    padding-left: $gutter-width;
+  }
   .unit {
-    padding-left: $gutter;
+    padding-left: $gutter-width;
   }
 }
 
 @mixin line-liquid{
   @include g-clearfix;
+  > * {
+    float: left;
+  }
   .unit {
     float: left;
   }
@@ -167,6 +172,9 @@
 
 @mixin line-right {
   text-align: right;
+  > * {
+    text-align: left;
+  }
   .unit {
     text-align: left;
   }

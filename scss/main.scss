@@ -358,7 +358,7 @@ tfoot {
 
 tfoot td {
   border-top-width: 2px;
-}　
+}
 table ul,
 table ol {
   margin-bottom: 0;
@@ -369,11 +369,16 @@ table ol {
 }
 
 /* グリッドレイアウト */
-.line,
-.legacy-line {
+.line {
   @include line;
+  > * {
+    @include unit;
+  }
 }
 
+.unit {
+  @include unit;
+}
 
 .line-gutter {
   @include line-gutter;
@@ -383,21 +388,21 @@ table ol {
   @include line-right;
 }
 
-.unit,
-.legacy-unit {
-  @include unit;
-}
-
-.line-liquid{
-  @include line-liquid;
-}
-
+// .unit-rightはIE6は非対応
 .unit-right {
   float: right;
 }
 
-.line-liquid .unit-liquid {
-  @include unit-liquid;
+// .line-liquidの中では最後のユニットが残った領域分だけ広がります
+// .line-liquidの中身はfloatで横並びになります。（通常はinline-block）
+.line-liquid {
+  @include line-liquid;
+  > :last-child {
+    @include unit-liquid;
+  }
+  .unit-liquid {
+    @include unit-liquid;
+  }
 }
 
 .size1of1 {
