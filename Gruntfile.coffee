@@ -46,7 +46,7 @@ module.exports = (grunt) ->
           stylesheet: 'scss'
           htmlDemo: false
           syntax: 'bootstrap'
-          relativeFontPath: 'font/'
+          relativeFontPath: '../font/'
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-compass'
