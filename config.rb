@@ -8,7 +8,8 @@ line_comments = (environment == :production) ? false : true
 forcecompile = (environment == :production) ? true : false
 relative_assets = true
 require 'animation'
-# sass_options = (environment == :production) ? { :debug_info => false } : { :debug_info => true }
+# sass_options = (environment == :production) ? { :sourcemap => false} : { :sourcemap => true }
+# sass_options = (environment == :production) ? { :debug_info => false, :sourcemap => false} : { :debug_info => true, :sourcemap => true }
 # line_comments = false
 
 # # Make a copy of sprites with a name that has no uniqueness of the hash.

@@ -9,6 +9,20 @@ module.exports = (grunt) ->
         options:
           config: 'config.rb'
           environment: 'production'
+    # sass:
+    #   dev:
+    #     files:
+    #       'css/main.css': 'scss/main.scss'
+    #     options:
+    #       sourcemap: true
+    #       compass: true
+    #   pro:
+    #     files:
+    #       'css/main.css': 'scss/main.scss'
+    #     options:
+    #       sourcemap: false
+    #       compass: true
+    #       environment: 'production'
     coffee:
       compile:
         expand: true
@@ -50,6 +64,7 @@ module.exports = (grunt) ->
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-compass'
+  # grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-webfont'
