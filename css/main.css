@@ -1020,12 +1020,12 @@ table ol {
   box-sizing: border-box;
   *behavior: url("/u/175530/boilerplate/js/vendor/boxsizing.htc");
 }
-/* line 112, ../scss/_mixin.scss */
+/* line 113, ../scss/_mixin.scss */
 .lt-ie8 .line {
   overflow: visible;
   zoom: 1;
 }
-/* line 116, ../scss/_mixin.scss */
+/* line 117, ../scss/_mixin.scss */
 .line:after {
   clear: both;
   content: "";
@@ -1049,7 +1049,7 @@ table ol {
   vertical-align: top;
   width: 100%;
 }
-/* line 131, ../scss/_mixin.scss */
+/* line 132, ../scss/_mixin.scss */
 .lt-ie8 .line > * {
   zoom: 1;
 }
@@ -1071,7 +1071,7 @@ table ol {
   vertical-align: top;
   width: 100%;
 }
-/* line 131, ../scss/_mixin.scss */
+/* line 132, ../scss/_mixin.scss */
 .lt-ie8 .unit {
   zoom: 1;
 }
@@ -1080,11 +1080,11 @@ table ol {
 .line-gutter {
   margin-left: -20px;
 }
-/* line 146, ../scss/_mixin.scss */
+/* line 147, ../scss/_mixin.scss */
 .line-gutter > * {
   padding-left: 20px;
 }
-/* line 149, ../scss/_mixin.scss */
+/* line 150, ../scss/_mixin.scss */
 .line-gutter .unit {
   padding-left: 20px;
 }
@@ -1093,11 +1093,11 @@ table ol {
 .line-right {
   text-align: right;
 }
-/* line 175, ../scss/_mixin.scss */
+/* line 176, ../scss/_mixin.scss */
 .line-right > * {
   text-align: left;
 }
-/* line 178, ../scss/_mixin.scss */
+/* line 179, ../scss/_mixin.scss */
 .line-right .unit {
   text-align: left;
 }
@@ -1117,22 +1117,13 @@ table ol {
   display: table;
   clear: both;
 }
-/* line 156, ../scss/_mixin.scss */
+/* line 157, ../scss/_mixin.scss */
 .line-liquid > * {
   float: left;
 }
-/* line 159, ../scss/_mixin.scss */
+/* line 160, ../scss/_mixin.scss */
 .line-liquid .unit {
   float: left;
-}
-/* line 401, ../scss/main.scss */
-.line-liquid > :last-child {
-  display: table-cell;
-  float: none;
-  _position: relative;
-  _left: -3px;
-  _margin-right: -3px;
-  width: auto;
 }
 /* line 404, ../scss/main.scss */
 .line-liquid .unit-liquid {
@@ -2072,11 +2063,11 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   .line-gutter.breakpoint-1 {
     margin-left: 0;
   }
-  /* line 146, ../scss/_mixin.scss */
+  /* line 147, ../scss/_mixin.scss */
   .line-gutter.breakpoint-1 > * {
     padding-left: 0;
   }
-  /* line 149, ../scss/_mixin.scss */
+  /* line 150, ../scss/_mixin.scss */
   .line-gutter.breakpoint-1 .unit {
     padding-left: 0;
   }
@@ -2161,11 +2152,11 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   .line-gutter.breakpoint-2 {
     margin-left: 0;
   }
-  /* line 146, ../scss/_mixin.scss */
+  /* line 147, ../scss/_mixin.scss */
   .line-gutter.breakpoint-2 > * {
     padding-left: 0;
   }
-  /* line 149, ../scss/_mixin.scss */
+  /* line 150, ../scss/_mixin.scss */
   .line-gutter.breakpoint-2 .unit {
     padding-left: 0;
   }

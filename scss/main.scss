@@ -398,9 +398,9 @@ table ol {
 // .line-liquidの中身はfloatで横並びになります。（通常はinline-block）
 .line-liquid {
   @include line-liquid;
-  > :last-child {
-    @include unit-liquid;
-  }
+  // > :last-child {
+  //   @include unit-liquid;
+  // }
   .unit-liquid {
     @include unit-liquid;
   }
