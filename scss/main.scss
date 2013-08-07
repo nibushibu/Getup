@@ -7,6 +7,14 @@
 @import "mixin";
 @import "icon";
 
+%icon {
+  font-family:"icon";
+  display:inline-block;
+  font-weight:normal;
+  font-style:normal;
+  text-decoration:inherit;
+}
+
 /*
 Getup.css is released under the Open Source MIT license.
 http://www.opensource.org/licenses/mit-license.php
