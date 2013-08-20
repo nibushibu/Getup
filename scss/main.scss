@@ -19,7 +19,7 @@
 Getup.css is released under the Open Source MIT license.
 http://www.opensource.org/licenses/mit-license.php
 
-Getup.css is inspired by OOCSS, inuit.css, Twitter Bootstrap, HTML5 Boilerplate, PocketGrid
+Getup.css is inspired by OOCSS, inuit.css, Twitter Bootstrap, HTML5 Boilerplate, Pocketunits
 
 LICENSE
 https://github.com/nibushibu/getup-css/blob/master/LICENSE
@@ -378,8 +378,8 @@ table ol {
 }
 
 /* グリッドレイアウト */
-.line {
-  @include line;
+.units {
+  @include units;
   > * {
     @include unit;
   }
@@ -389,12 +389,12 @@ table ol {
   @include unit;
 }
 
-.line-gutter {
-  @include line-gutter;
+.units-gutter {
+  @include units-gutter;
 }
 
-.line-right {
-  @include line-right;
+.units-right {
+  @include units-right;
 }
 
 // .unit-rightはIE6は非対応
@@ -402,10 +402,10 @@ table ol {
   float: right;
 }
 
-// .line-liquidの中では最後のユニットが残った領域分だけ広がります
-// .line-liquidの中身はfloatで横並びになります。（通常はinline-block）
-.line-liquid {
-  @include line-liquid;
+// .units-liquidの中では最後のユニットが残った領域分だけ広がります
+// .units-liquidの中身はfloatで横並びになります。（通常はinline-block）
+.units-liquid {
+  @include units-liquid;
   // > :last-child {
   //   @include unit-liquid;
   // }
@@ -1006,20 +1006,20 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 @media (max-width: 720px) {
 
   .breakpoint-1,
-  .linearize-from-tablet{
+  .linearize-tablet{
     @include linearize-unit();
   }
 
-  .show-breakpoint-1 {
+  .visible-breakpoint-1 {
     display: block;
   }
 
-  .hide-breakpoint-1 {
+  .invisible-breakpoint-1 {
     display: none;
   }
 
-  .line-gutter.breakpoint-1 {
-    @include line-gutter(0);
+  .units-gutter.breakpoint-1 {
+    @include units-gutter(0);
   }
 
 }
@@ -1033,20 +1033,20 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   }
 
   .breakpoint-2,
-  .linearize-from-mobile {
+  .linearize-mobile {
     @include linearize-unit();
   }
 
-  .show-breakpoint-2 {
+  .visible-breakpoint-2 {
     display: block;
   }
 
-  .hide-breakpoint-2 {
+  .invisible-breakpoint-2 {
     display: none;
   }
 
-  .line-gutter.breakpoint-2 {
-    @include line-gutter(0);
+  .units-gutter.breakpoint-2 {
+    @include units-gutter(0);
   }
 
   /* 画像 */

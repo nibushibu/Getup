@@ -104,7 +104,7 @@
   }
 }
 
-@mixin line {
+@mixin units {
   // display: table;
   margin: 0;
   padding: 0;
@@ -142,7 +142,7 @@
   width: 100%;
 }
 
-@mixin line-gutter($gutter-width:20px) {
+@mixin units-gutter($gutter-width:20px) {
   margin-left: -$gutter-width;
   > * {
     padding-left: $gutter-width;
@@ -152,7 +152,7 @@
   }
 }
 
-@mixin line-liquid{
+@mixin units-liquid{
   @include g-clearfix;
   > * {
     float: left;
@@ -171,7 +171,7 @@
   width: auto;
 }
 
-@mixin line-right {
+@mixin units-right {
   text-align: right;
   > * {
     text-align: left;

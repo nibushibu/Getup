@@ -3,10 +3,10 @@
 
 @font-face {
 	font-family:"icon";
-	src:url("../font/icon-6ebc02504ca50329e275710bf8a3058f.eot");
-	src:url("../font/icon-6ebc02504ca50329e275710bf8a3058f.eot?#iefix") format("embedded-opentype"),
-		url("../font/icon-6ebc02504ca50329e275710bf8a3058f.woff") format("woff"),
-		url("../font/icon-6ebc02504ca50329e275710bf8a3058f.ttf") format("truetype");
+	src:url("../font/icon-ee939777d0443145c9c68709f34e042c.eot");
+	src:url("../font/icon-ee939777d0443145c9c68709f34e042c.eot?#iefix") format("embedded-opentype"),
+		url("../font/icon-ee939777d0443145c9c68709f34e042c.woff") format("woff"),
+		url("../font/icon-ee939777d0443145c9c68709f34e042c.ttf") format("truetype");
 	font-weight:normal;
 	font-style:normal;
 }
@@ -27,12 +27,27 @@
 
 
 // Icons
-.icon-heart-1:before {
+.icon-arrow-1:before {
 	content:"\f100";
 }
-.icon-heart-2:before {
+.icon-arrow-2:before {
 	content:"\f101";
 }
-.icon-mail-1:before {
+.icon-arrow-up-1:before {
 	content:"\f102";
+}
+.icon-heart-1:before {
+	content:"\f103";
+}
+.icon-heart-2:before {
+	content:"\f104";
+}
+.icon-mail-1:before {
+	content:"\f105";
+}
+.icon-mail-2:before {
+	content:"\f106";
+}
+.icon-tel-1:before {
+	content:"\f107";
 }

@@ -36,9 +36,8 @@ module.exports = (grunt) ->
       compress_target:
         options:
           mangle: false
-        files:{
+        files:
           'js/main.js': 'js/main.js'
-        }
     watch:
       compass:
         files: ['scss/*.scss']
@@ -61,6 +60,21 @@ module.exports = (grunt) ->
           htmlDemo: false
           syntax: 'bootstrap'
           relativeFontPath: '../font/'
+    # replace:
+    #   dist:
+    #     src: ['scss/_icon.scss']
+    #     overwrite: true
+    #     replacements: [
+    #       from: '.icon_'
+    #       to: '.icon--'
+    #     ]
+    imageoptim:
+      files: ['img']
+      options:
+        jpegMini: false
+        imageAlpha: true
+        quitAfter: true
+
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-compass'
@@ -68,6 +82,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-webfont'
+  # grunt.loadNpmTasks 'grunt-text-replace'
+  grunt.loadNpmTasks('grunt-imageoptim');
 
   grunt.registerTask 'default', ['watch'];
-  grunt.registerTask "min", ['uglify', 'compass:pro']
+  grunt.registerTask 'min', ['uglify', 'compass:pro', 'imageoptim']
+  # grunt.registerTask 'icon', ['webfont', 'replace']

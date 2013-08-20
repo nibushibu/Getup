@@ -10,12 +10,13 @@
   "author": "Genki Katsutani",
   "license": "MIT",
   "dependencies": {
+    "js2coffee": "*",
     "grunt": "*",
     "grunt-contrib-watch": "*",
     "grunt-contrib-compass": "*",
     "grunt-contrib-coffee": "*",
     "grunt-contrib-uglify": "*",
     "grunt-webfont": "*",
-    "js2coffee": "*"
+    "grunt-imageoptim": "*"
   }
 }
