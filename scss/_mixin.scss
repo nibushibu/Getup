@@ -91,7 +91,12 @@
   *behavior: url($box-sizing-path);
 }
 
-@mixin linearize-unit {
+@mixin unit-vertical {
+  @include box-flex(1);
+  width: 100%;
+}
+
+@mixin units-vertical {
   @include g-flex();
   @include g-flex-direction(column);
   @include g-flex-wrap(nowrap);
@@ -99,8 +104,7 @@
   @include g-align-items(stretch);
   @include g-align-content(flex-start);
   > * {
-    @include box-flex(1);
-    width: 100%;
+    @include unit-vertical;
   }
 }
 
@@ -134,7 +138,7 @@
   }
 }
 
-@mixin legacy-linearize-unit {
+@mixin legacy-unit-vertical {
   clear: both;
   display: block;
   padding-left: 0;

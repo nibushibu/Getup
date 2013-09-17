@@ -954,7 +954,7 @@ table ol {
 /* カスタム設定 */
 //////////////////////////////////////////////////////////
 
-@import "style";
+@import "main";
 
 /* 上書きクラス */
 
@@ -1007,7 +1007,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 
   .breakpoint-1,
   .linearize-tablet{
-    @include linearize-unit();
+    @include unit-vertical();
   }
 
   .visible-breakpoint-1 {
@@ -1034,7 +1034,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 
   .breakpoint-2,
   .linearize-mobile {
-    @include linearize-unit();
+    @include unit-vertical();
   }
 
   .visible-breakpoint-2 {
