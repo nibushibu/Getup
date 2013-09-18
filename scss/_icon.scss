@@ -3,10 +3,10 @@
 
 @font-face {
 	font-family:"icon";
-	src:url("../font/icon-ee939777d0443145c9c68709f34e042c.eot");
-	src:url("../font/icon-ee939777d0443145c9c68709f34e042c.eot?#iefix") format("embedded-opentype"),
-		url("../font/icon-ee939777d0443145c9c68709f34e042c.woff") format("woff"),
-		url("../font/icon-ee939777d0443145c9c68709f34e042c.ttf") format("truetype");
+	src:url("../font/icon-1b244e9fcd26a675f60daf720b317eb0.eot");
+	src:url("../font/icon-1b244e9fcd26a675f60daf720b317eb0.eot?#iefix") format("embedded-opentype"),
+		url("../font/icon-1b244e9fcd26a675f60daf720b317eb0.woff") format("woff"),
+		url("../font/icon-1b244e9fcd26a675f60daf720b317eb0.ttf") format("truetype");
 	font-weight:normal;
 	font-style:normal;
 }
@@ -19,9 +19,12 @@
 	display:inline-block;
 	font-weight:normal;
 	font-style:normal;
+	speak:none;
 	text-decoration:inherit;
+	text-transform:none;
+	text-rendering:optimizeLegibility;
+	-webkit-font-smoothing:antialiased;
 }
-
 
 
 
@@ -48,6 +51,12 @@
 .icon-mail-2:before {
 	content:"\f106";
 }
-.icon-tel-1:before {
+.icon-menu-1:before {
 	content:"\f107";
+}
+.icon-menu-2:before {
+	content:"\f108";
+}
+.icon-tel-1:before {
+	content:"\f109";
 }
