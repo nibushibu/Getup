@@ -138,14 +138,14 @@ h6 {
 a {
   color: $base-link-color;
   text-decoration: none;
-  &:visited {
-    color: darken($base-link-color, 10%);
-  }
-  &:hover,
-  &:active {
-    color: lighten($base-link-color, 10%);
-    text-decoration: underline;
-  }
+  // &:visited {
+  //   color: darken($base-link-color, 10%);
+  // }
+  // &:hover,
+  // &:active {
+  //   color: lighten($base-link-color, 10%);
+  //   text-decoration: underline;
+  // }
 }
 
 ul {
@@ -954,7 +954,7 @@ table ol {
 /* カスタム設定 */
 //////////////////////////////////////////////////////////
 
-@import "main";
+@import "style";
 
 /* 上書きクラス */
 
