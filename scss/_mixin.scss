@@ -103,9 +103,9 @@
   @include g-justify-content(flex-start);
   @include g-align-items(stretch);
   @include g-align-content(flex-start);
-  > * {
-    @include unit--vertical;
-  }
+  // > * {
+  //   @include unit--vertical;
+  // }
 }
 
 @mixin units {
