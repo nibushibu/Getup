@@ -19,7 +19,7 @@
 Getup.css is released under the Open Source MIT license.
 http://www.opensource.org/licenses/mit-license.php
 
-Getup.css is inspired by OOCSS, inuit.css, Twitter Bootstrap, HTML5 Boilerplate, Pocketunits
+Getup.css is inspired by OOCSS, inuit.css, Twitter Bootstrap, HTML5 Boilerplate, PocketGrid
 
 LICENSE
 https://github.com/nibushibu/getup-css/blob/master/LICENSE
@@ -141,11 +141,11 @@ a {
   // &:visited {
   //   color: darken($base-link-color, 10%);
   // }
-  // &:hover,
-  // &:active {
-  //   color: lighten($base-link-color, 10%);
-  //   text-decoration: underline;
-  // }
+  &:hover,
+  &:active {
+    // color: lighten($base-link-color, 10%);
+    text-decoration: underline;
+  }
 }
 
 ul {
@@ -389,28 +389,32 @@ table ol {
   @include unit;
 }
 
-.units-gutter {
-  @include units-gutter;
+.units--gutter {
+  @include units--gutter;
 }
 
-.units-right {
-  @include units-right;
+.units--right {
+  @include units--right;
 }
 
-// .unit-rightはIE6は非対応
-.unit-right {
+// .unit--right, .unit--leftはIE6は非対応
+.unit--left {
+  float: left;
+}
+
+.unit--right {
   float: right;
 }
 
-// .units-liquidの中では最後のユニットが残った領域分だけ広がります
-// .units-liquidの中身はfloatで横並びになります。（通常はinline-block）
-.units-liquid {
-  @include units-liquid;
+// .units--liquidの中では最後のユニットが残った領域分だけ広がります
+// .units--liquidの中身はfloatで横並びになります。（通常はinline-block）
+.units--liquid {
+  @include units--liquid;
   // > :last-child {
   //   @include unit-liquid;
   // }
-  .unit-liquid {
-    @include unit-liquid;
+  .unit--liquid {
+    @include unit--liquid;
   }
 }
 
@@ -1007,19 +1011,19 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 
   .breakpoint-1,
   .linearize-tablet{
-    @include unit-vertical();
+    @include unit--vertical();
   }
 
-  .visible-breakpoint-1 {
+  .visible--breakpoint-1 {
     display: block;
   }
 
-  .invisible-breakpoint-1 {
+  .invisible--breakpoint-1 {
     display: none;
   }
 
-  .units-gutter.breakpoint-1 {
-    @include units-gutter(0);
+  .units--gutter.breakpoint-1 {
+    @include units--gutter(0);
   }
 
 }
@@ -1034,19 +1038,19 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 
   .breakpoint-2,
   .linearize-mobile {
-    @include unit-vertical();
+    @include unit--vertical();
   }
 
-  .visible-breakpoint-2 {
+  .visible--breakpoint-2 {
     display: block;
   }
 
-  .invisible-breakpoint-2 {
+  .invisible--breakpoint-2 {
     display: none;
   }
 
-  .units-gutter.breakpoint-2 {
-    @include units-gutter(0);
+  .units--gutter.breakpoint-2 {
+    @include units--gutter(0);
   }
 
   /* 画像 */
