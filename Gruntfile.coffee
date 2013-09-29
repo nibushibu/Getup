@@ -86,5 +86,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-imageoptim'
 
   grunt.registerTask 'default', ['watch'];
-  grunt.registerTask 'min', ['uglify', 'compass:pro', 'imageoptim']
+  grunt.registerTask 'min', ['uglify', 'compass:pro']
   # grunt.registerTask 'icon', ['webfont', 'replace']
