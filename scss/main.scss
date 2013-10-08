@@ -8,11 +8,11 @@
 @import "icon";
 
 %icon {
-  font-family:"icon";
   display:inline-block;
+  text-decoration:inherit;
   font-weight:normal;
   font-style:normal;
-  text-decoration:inherit;
+  font-family:"icon";
 }
 
 /*
@@ -183,8 +183,8 @@ ol ul {
 
 .not-list,
 .no-list {
-  list-style: none;
   padding-left: 0;
+  list-style: none;
 }
 
 dl {
@@ -203,8 +203,8 @@ q,
 i,
 em,
 cite {
-  font-style: italic;
   font-weight: inherit;
+  font-style: italic;
 }
 
 b,
@@ -229,8 +229,8 @@ small {
 
 pre,
 code {
-  font-family: monospace;
   font-size: 1.2em;
+  font-family: monospace;
 }
 
 pre {
@@ -252,17 +252,17 @@ kbd,
 samp,
 tt {
   font-family: monospace;
-  *font-size: 108%;
   line-height: 100%;
+  *font-size: 108%;
 }
 
 hr {
   display: block;
+  margin: 1em 0;
+  padding: 0;
   height: 1px;
   border: 0;
   border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
 }
 
 /* 画像 */
@@ -287,15 +287,15 @@ img.fr {
 img.aligncenter,
 img.ac {
   display: block;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 /* フォーム */
 fieldset {
-  border: 0;
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 label,
@@ -307,13 +307,13 @@ input[type="text"],
 select,
 textarea {
   @include inline-block();
-  padding: 4px 6px;
-  color: #555555;
-  vertical-align: middle;
   @include border-radius(4px);
-  border: 1px solid #ccc;
   @include single-box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
   @include transition(border linear 0.2s, box-shadow linear 0.2s);
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  color: #555555;
+  vertical-align: middle;
 }
 
 textarea {
@@ -323,9 +323,9 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: rgba(82, 168, 236, 0.8);
-  outline: 0;
   @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
+  outline: 0;
+  border-color: rgba(82, 168, 236, 0.8);
 }
 
 .lt-ie9 {
@@ -338,27 +338,27 @@ textarea:focus {
 
 select {
   width: 220px;
-  background-color: #ffffff;
   border: 1px solid #cccccc;
+  background-color: #ffffff;
 }
 
 /* テーブル */
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
   max-width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 th,
 td {
-  vertical-align: middle;
   padding: 0.5em;
   border: 1px solid #ccc;
+  vertical-align: middle;
 }
 
 th {
-  font-weight: bold;
   text-align: center;
+  font-weight: bold;
 }
 
 tfoot {
@@ -858,36 +858,36 @@ table ol {
 
 /* Chrome Frame */
 .chromeframe {
-  background-color: #fff3f3;
-  border: 1px solid #f00;
   @include border-radius();
   padding: 10px;
+  border: 1px solid #f00;
+  background-color: #fff3f3;
 }
 
 /* 汎用ボタン */
 .btn {
   @include inline-block();
-  padding: 4px 12px;
-  color: #333333;
-  text-align: center;
   @include single-text-shadow(0 1px 1px rgba(255, 255, 255, 0.75));
-  vertical-align: middle;
-  cursor: pointer;
-  background-color: #f5f5f5;
   @include background-image(linear-gradient(top, #ffffff, #e6e6e6));
-  background-repeat: repeat-x;
+  @include border-radius(4px);
+  @include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05));
+  padding: 4px 12px;
   border: 1px solid #bbbbbb;
   border-color: #e6e6e6 #e6e6e6 #bfbfbf;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   border-bottom-color: #a2a2a2;
-  @include border-radius(4px);
-  @include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05));
+  background-color: #f5f5f5;
+  background-repeat: repeat-x;
+  color: #333333;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
 }
 
 .lt-ie7 .btn {
   display: inline;
-  background-color: #e6e6e6;
   border: 0;
+  background-color: #e6e6e6;
   zoom: 1;
 }
 
@@ -896,8 +896,8 @@ table ol {
 .btn.active,
 .btn.disabled,
 .btn[disabled] {
-  color: #333333;
   background-color: #e6e6e6;
+  color: #333333;
 }
 
 .lt-ie7 .btn:hover,
@@ -915,10 +915,10 @@ table ol {
 }
 
 .btn:hover {
+  @include single-transition(background-position, 0.1s, linear);
+  background-position: 0 -15px;
   color: #333333;
   text-decoration: none;
-  background-position: 0 -15px;
-  @include single-transition(background-position, 0.1s, linear);
 }
 
 .btn:focus {
@@ -929,17 +929,17 @@ table ol {
 
 .btn.active,
 .btn:active {
-  background-image: none;
-  outline: 0;
   @include box-shadow(inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05));
+  outline: 0;
+  background-image: none;
 }
 
 .btn.disabled,
 .btn[disabled] {
-  cursor: default;
-  background-image: none;
   @include opacity(0.65);
   @include box-shadow(none);
+  background-image: none;
+  cursor: default;
 }
 
 .chromeframe strong {
@@ -1002,8 +1002,8 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 }
 
 .clear {
-  clear: both;
   @include reset-float();
+  clear: both;
 }
 
 /* タブレットサイズ */
@@ -1072,9 +1072,9 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   /* テキストシャドウなど不要なエフェクトを無効化 */
   * {
     background: transparent;
+    box-shadow: none;
     color: #000;
     text-shadow: none;
-    box-shadow: none;
   }
 
   // a,
@@ -1098,9 +1098,10 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 
   /* 画像置換をキャンセル */
   .alt-img {
-    background-image: none;
-    height: auto;
     padding: 0;
+    width: auto !important;
+    height: auto;
+    background-image: none;
   }
 
 }
