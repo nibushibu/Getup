@@ -50,6 +50,10 @@ html {
   // text-rendering: optimizeLegibility;// text-renderingプロパティ 参考:http://terkel.jp/archives/2012/09/text-rendering-optimizelegibility/
 }
 
+.lt-ie9 {
+  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+}
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;

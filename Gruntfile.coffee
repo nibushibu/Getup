@@ -58,16 +58,16 @@ module.exports = (grunt) ->
           types: ['woff','ttf','eot']
           stylesheet: 'scss'
           htmlDemo: false
-          syntax: 'bootstrap'
+          syntax: 'bem'
           relativeFontPath: '../font/'
-    # replace:
-    #   dist:
-    #     src: ['scss/_icon.scss']
-    #     overwrite: true
-    #     replacements: [
-    #       from: '.icon_'
-    #       to: '.icon--'
-    #     ]
+    replace:
+      dist:
+        src: ['scss/_icon.scss']
+        overwrite: true
+        replacements: [
+          from: '.icon_'
+          to: '.icon--'
+        ]
     imageoptim:
       files: ['img']
       options:
@@ -82,9 +82,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-webfont'
-  # grunt.loadNpmTasks 'grunt-text-replace'
+  grunt.loadNpmTasks 'grunt-text-replace'
   grunt.loadNpmTasks 'grunt-imageoptim'
 
   grunt.registerTask 'default', ['watch'];
   grunt.registerTask 'min', ['uglify', 'compass:pro']
-  # grunt.registerTask 'icon', ['webfont', 'replace']
+  grunt.registerTask 'icon', ['webfont', 'replace']
