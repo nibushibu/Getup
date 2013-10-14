@@ -69,7 +69,7 @@ module.exports = (grunt) ->
           to: '.icon--'
         ]
     imageoptim:
-      files: ['img']
+      src: ['img']
       options:
         jpegMini: false
         imageAlpha: true
