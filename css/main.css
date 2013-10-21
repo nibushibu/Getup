@@ -1015,7 +1015,7 @@ table {
 /* line 356, ../scss/main.scss */
 th,
 td {
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #ccc;
   vertical-align: middle;
 }
