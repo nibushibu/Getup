@@ -1020,7 +1020,7 @@ table {
 /* line 361, ../scss/main.scss */
 th,
 td {
-  padding: 5px;
+  padding: 8px;
   border: 1px solid #ccc;
   vertical-align: middle;
 }
