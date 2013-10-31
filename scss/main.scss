@@ -369,6 +369,34 @@ th {
   font-weight: bold;
 }
 
+th,
+td {
+
+  .center {
+    text-align: center;
+  }
+
+  .left {
+    text-align: left;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  .top {
+    vertical-align: top;
+  }
+
+  .middle {
+    vertical-align: middle;
+  }
+
+  .bottom {
+    vertical-align: bottom;
+  }
+}
+
 tfoot {
   text-align: center;
 }
