@@ -17,6 +17,7 @@
     "grunt-contrib-coffee": "*",
     "grunt-contrib-uglify": "*",
     "grunt-webfont": "*",
-    "grunt-imageoptim": "*"
+    "grunt-imageoptim": "*",
+    "grunt-autoprefixer": "*"
   }
 }
