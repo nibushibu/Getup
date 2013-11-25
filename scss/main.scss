@@ -1047,7 +1047,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 
   .breakpoint-1,
   .linearize-tablet{
-    @include unit--vertical();
+    @include units--vertical();
   }
 
   .visible--breakpoint-1 {
@@ -1074,7 +1074,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 
   .breakpoint-2,
   .linearize-mobile {
-    @include unit--vertical();
+    @include units--vertical();
   }
 
   .visible--breakpoint-2 {

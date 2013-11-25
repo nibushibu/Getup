@@ -71,19 +71,19 @@
   }
 
 @mixin g-clearfix {
+  @include has-layout;
   &:after,
   &:before {
-    content: "";
     display: table;
     clear: both;
+    content: "";
    }
-  @include has-layout;
 }
 
 @mixin alt-img {
   @include inline-block();
-  height: 0;
   overflow: hidden;
+  height: 0;
 }
 
 @mixin g-box-sizing($box-sizing:border-box) {
@@ -91,67 +91,79 @@
   *behavior: url($box-sizing-path);
 }
 
-@mixin unit--vertical {
-  @include box-flex(1);
-  width: 100%;
-}
-
-// 一部環境でバグが発生する可能性有り
-@mixin units--vertical {
-  @include g-flex();
-  @include g-flex-direction(column);
-  @include g-flex-wrap(nowrap);
-  @include g-justify-content(flex-start);
-  @include g-align-items(stretch);
-  @include g-align-content(flex-start);
-  > * {
-    @include unit--vertical;
-  }
-}
-
 @mixin units {
+  @include g-box-sizing();
+  @include g-flex;
+  @include g-flex-wrap(wrap);
   // display: table;
   margin: 0;
   padding: 0;
   letter-spacing: -.4em;
-  @include g-box-sizing();
+
+  .no-flexbox & {
+    display: block;
+  }
+
   .lt-ie8 & {
     overflow: visible;
     zoom: 1;
   }
+
   &:after {
-    clear: both;
-    content: "";
     display: block;
+    clear: both;
     height: 0;
+    content: "";
   }
 }
 
 @mixin unit {
   @include inline-block;
   @include g-box-sizing();
-  list-style: none;
-  letter-spacing: normal;
-  vertical-align: top;
   width: 100%;
+  list-style: none;
+  vertical-align: top;
+  letter-spacing: normal;
+
   .lt-ie8 & {
     zoom: 1;
   }
 }
 
-@mixin legacy-unit--vertical {
-  clear: both;
+@mixin unit--vertical {
+  // @include box-flex(1 1 100%);
+  width: 100%;
+}
+
+// 一部環境でバグが発生する可能性有り
+@mixin units--vertical {
+  // @include g-flex();
+  // @include g-flex-direction(column);
+  // @include g-flex-wrap(nowrap);
+  // @include g-justify-content(flex-start);
+  // @include g-align-items(stretch);
+  // @include g-align-content(flex-start);
   display: block;
-  padding-left: 0;
+  > * {
+    @include unit--vertical;
+  }
+}
+
+@mixin legacy-unit--vertical {
+  display: block;
+  clear: both;
   padding-right: 0;
+  padding-left: 0;
   width: 100%;
 }
 
 @mixin units--gutter($gutter-width:20px) {
   margin-left: -$gutter-width;
+
   > * {
     padding-left: $gutter-width;
   }
+
   .unit {
     padding-left: $gutter-width;
   }
@@ -159,9 +171,12 @@
 
 @mixin units--liquid{
   @include g-clearfix;
+  display: block;
+
   > * {
     float: left;
   }
+
   .unit {
     float: left;
   }
@@ -170,10 +185,10 @@
 @mixin unit--liquid {
   display: table-cell;
   float: none;
+  width: auto;
   _position: relative;
   _left: -3px;
   _margin-right: -3px;
-  width: auto;
 }
 
 @mixin units--right {
@@ -253,8 +268,8 @@
 }
 
 @mixin animation($animation...) {
-  -o-animation: $animation;
-  -moz-animation: $animation;
   -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -o-animation: $animation;
   animation: $animation;
 }

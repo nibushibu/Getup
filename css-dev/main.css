@@ -1086,25 +1086,45 @@ table ol {
 /* グリッドレイアウト */
 /* line 417, ../scss/main.scss */
 .units {
-  margin: 0;
-  padding: 0;
-  letter-spacing: -.4em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url("/u/175530/boilerplate/js/vendor/boxsizing.htc");
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -ms-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  letter-spacing: -.4em;
 }
-/* line 118, ../scss/_mixin.scss */
+/* line 103, ../scss/_mixin.scss */
+.no-flexbox .units {
+  display: block;
+}
+/* line 107, ../scss/_mixin.scss */
 .lt-ie8 .units {
   overflow: visible;
   zoom: 1;
 }
-/* line 122, ../scss/_mixin.scss */
+/* line 112, ../scss/_mixin.scss */
 .units:after {
-  clear: both;
-  content: "";
   display: block;
+  clear: both;
   height: 0;
+  content: "";
 }
 /* line 419, ../scss/main.scss */
 .units > * {
@@ -1118,12 +1138,12 @@ table ol {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url("/u/175530/boilerplate/js/vendor/boxsizing.htc");
-  list-style: none;
-  letter-spacing: normal;
-  vertical-align: top;
   width: 100%;
+  list-style: none;
+  vertical-align: top;
+  letter-spacing: normal;
 }
-/* line 137, ../scss/_mixin.scss */
+/* line 128, ../scss/_mixin.scss */
 .lt-ie8 .units > * {
   zoom: 1;
 }
@@ -1140,12 +1160,12 @@ table ol {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url("/u/175530/boilerplate/js/vendor/boxsizing.htc");
-  list-style: none;
-  letter-spacing: normal;
-  vertical-align: top;
   width: 100%;
+  list-style: none;
+  vertical-align: top;
+  letter-spacing: normal;
 }
-/* line 137, ../scss/_mixin.scss */
+/* line 128, ../scss/_mixin.scss */
 .lt-ie8 .unit {
   zoom: 1;
 }
@@ -1154,11 +1174,11 @@ table ol {
 .units--gutter {
   margin-left: -20px;
 }
-/* line 152, ../scss/_mixin.scss */
+/* line 163, ../scss/_mixin.scss */
 .units--gutter > * {
   padding-left: 20px;
 }
-/* line 155, ../scss/_mixin.scss */
+/* line 167, ../scss/_mixin.scss */
 .units--gutter .unit {
   padding-left: 20px;
 }
@@ -1167,11 +1187,11 @@ table ol {
 .units--right {
   text-align: right;
 }
-/* line 181, ../scss/_mixin.scss */
+/* line 196, ../scss/_mixin.scss */
 .units--right > * {
   text-align: left;
 }
-/* line 184, ../scss/_mixin.scss */
+/* line 199, ../scss/_mixin.scss */
 .units--right .unit {
   text-align: left;
 }
@@ -1189,18 +1209,19 @@ table ol {
 /* line 447, ../scss/main.scss */
 .units--liquid {
   *zoom: 1;
+  display: block;
 }
-/* line 75, ../scss/_mixin.scss */
+/* line 76, ../scss/_mixin.scss */
 .units--liquid:after, .units--liquid:before {
-  content: "";
   display: table;
   clear: both;
+  content: "";
 }
-/* line 162, ../scss/_mixin.scss */
+/* line 176, ../scss/_mixin.scss */
 .units--liquid > * {
   float: left;
 }
-/* line 165, ../scss/_mixin.scss */
+/* line 180, ../scss/_mixin.scss */
 .units--liquid .unit {
   float: left;
 }
@@ -1208,10 +1229,10 @@ table ol {
 .units--liquid .unit--liquid {
   display: table-cell;
   float: none;
+  width: auto;
   _position: relative;
   _left: -3px;
   _margin-right: -3px;
-  width: auto;
 }
 
 /* line 457, ../scss/main.scss */
@@ -1742,8 +1763,8 @@ table ol {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  height: 0;
   overflow: hidden;
+  height: 0;
 }
 
 /* line 881, ../scss/main.scss */
@@ -2012,13 +2033,13 @@ pre {
 .cf {
   *zoom: 1;
 }
-/* line 75, ../scss/_mixin.scss */
+/* line 76, ../scss/_mixin.scss */
 .clearfix:after, .clearfix:before,
 .cf:after,
 .cf:before {
-  content: "";
   display: table;
   clear: both;
+  content: "";
 }
 
 /* テキスト方向
@@ -2073,10 +2094,11 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   /* line 1049, ../scss/main.scss */
   .breakpoint-1,
   .linearize-tablet {
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -ms-box-flex: 1;
-    box-flex: 1;
+    display: block;
+  }
+  /* line 147, ../scss/_mixin.scss */
+  .breakpoint-1 > *,
+  .linearize-tablet > * {
     width: 100%;
   }
 
@@ -2094,11 +2116,11 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   .units--gutter.breakpoint-1 {
     margin-left: 0;
   }
-  /* line 152, ../scss/_mixin.scss */
+  /* line 163, ../scss/_mixin.scss */
   .units--gutter.breakpoint-1 > * {
     padding-left: 0;
   }
-  /* line 155, ../scss/_mixin.scss */
+  /* line 167, ../scss/_mixin.scss */
   .units--gutter.breakpoint-1 .unit {
     padding-left: 0;
   }
@@ -2114,10 +2136,11 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   /* line 1076, ../scss/main.scss */
   .breakpoint-2,
   .linearize-mobile {
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -ms-box-flex: 1;
-    box-flex: 1;
+    display: block;
+  }
+  /* line 147, ../scss/_mixin.scss */
+  .breakpoint-2 > *,
+  .linearize-mobile > * {
     width: 100%;
   }
 
@@ -2135,11 +2158,11 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   .units--gutter.breakpoint-2 {
     margin-left: 0;
   }
-  /* line 152, ../scss/_mixin.scss */
+  /* line 163, ../scss/_mixin.scss */
   .units--gutter.breakpoint-2 > * {
     padding-left: 0;
   }
-  /* line 155, ../scss/_mixin.scss */
+  /* line 167, ../scss/_mixin.scss */
   .units--gutter.breakpoint-2 .unit {
     padding-left: 0;
   }
