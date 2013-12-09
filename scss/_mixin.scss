@@ -171,6 +171,15 @@
   }
 }
 
+@mixin unit--liquid {
+  display: table-cell;
+  float: none;
+  width: auto;
+  _position: relative;
+  _left: -3px;
+  _margin-right: -3px;
+}
+
 @mixin units--liquid{
   @include g-clearfix;
   display: block;
@@ -181,6 +190,10 @@
 
   > .unit {
     float: left;
+
+    &:last-child {
+      @include unit--liquid;
+    }
   }
 
   .lt-ie7 & {
@@ -193,15 +206,6 @@
       float: none;
     }
   }
-}
-
-@mixin unit--liquid {
-  display: table-cell;
-  float: none;
-  width: auto;
-  _position: relative;
-  _left: -3px;
-  _margin-right: -3px;
 }
 
 @mixin units--right {
@@ -231,7 +235,8 @@
       float: right;
     }
 
-    > .unit--liquid {
+    > .unit--liquid,
+    > .unit:last-child {
       float: none;
     }
   }

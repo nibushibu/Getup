@@ -1220,19 +1220,28 @@ table ol {
   clear: both;
   content: "";
 }
-/* line 178, ../scss/_mixin.scss */
+/* line 187, ../scss/_mixin.scss */
 .units--liquid > * {
   float: left;
 }
-/* line 182, ../scss/_mixin.scss */
+/* line 191, ../scss/_mixin.scss */
 .units--liquid > .unit {
   float: left;
 }
-/* line 188, ../scss/_mixin.scss */
+/* line 194, ../scss/_mixin.scss */
+.units--liquid > .unit:last-child {
+  display: table-cell;
+  float: none;
+  width: auto;
+  _position: relative;
+  _left: -3px;
+  _margin-right: -3px;
+}
+/* line 201, ../scss/_mixin.scss */
 .lt-ie7 .units--liquid .unit {
   float: left;
 }
-/* line 192, ../scss/_mixin.scss */
+/* line 205, ../scss/_mixin.scss */
 .lt-ie7 .units--liquid * .unit {
   float: none;
 }
@@ -1257,16 +1266,16 @@ table ol {
   -ms-box-pack: end;
   box-pack: end;
 }
-/* line 211, ../scss/_mixin.scss */
+/* line 215, ../scss/_mixin.scss */
 .no-flexbox .units--right {
   display: block;
   text-align: right;
 }
-/* line 215, ../scss/_mixin.scss */
+/* line 219, ../scss/_mixin.scss */
 .no-flexbox .units--right > * {
   text-align: left;
 }
-/* line 219, ../scss/_mixin.scss */
+/* line 223, ../scss/_mixin.scss */
 .no-flexbox .units--right > .unit {
   text-align: left;
 }
@@ -1286,27 +1295,28 @@ table ol {
   -ms-box-direction: reverse;
   box-direction: reverse;
 }
-/* line 230, ../scss/_mixin.scss */
+/* line 234, ../scss/_mixin.scss */
 .units--right-order.units--liquid > .unit {
   float: right;
 }
-/* line 234, ../scss/_mixin.scss */
-.units--right-order.units--liquid > .unit--liquid {
+/* line 239, ../scss/_mixin.scss */
+.units--right-order.units--liquid > .unit--liquid,
+.units--right-order.units--liquid > .unit:last-child {
   float: none;
 }
-/* line 239, ../scss/_mixin.scss */
+/* line 244, ../scss/_mixin.scss */
 .no-flexbox .units--right-order {
   display: block;
 }
-/* line 242, ../scss/_mixin.scss */
+/* line 247, ../scss/_mixin.scss */
 .no-flexbox .units--right-order > .unit {
   float: right;
 }
-/* line 249, ../scss/_mixin.scss */
+/* line 254, ../scss/_mixin.scss */
 .lt-ie7 .units--right-order .unit {
   float: right;
 }
-/* line 253, ../scss/_mixin.scss */
+/* line 258, ../scss/_mixin.scss */
 .lt-ie7 .units--right-order * .unit {
   float: none;
 }
