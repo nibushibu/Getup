@@ -179,8 +179,19 @@
     float: left;
   }
 
-  .unit {
+  > .unit {
     float: left;
+  }
+
+  .lt-ie7 & {
+
+    .unit {
+      float: left;
+    }
+
+    * .unit {
+      float: none;
+    }
   }
 }
 
@@ -214,11 +225,33 @@
 @mixin units--right-order() {
   @include g-flex-direction(row-reverse);
 
+  &.units--liquid {
+
+    > .unit {
+      float: right;
+    }
+
+    > .unit--liquid {
+      float: none;
+    }
+  }
+
   .no-flexbox & {
     display: block;
 
     > .unit {
       float: right;
+    }
+  }
+
+  .lt-ie7 & {
+
+    .unit {
+      float: right
+    }
+
+    * .unit {
+      float: none;
     }
   }
 }

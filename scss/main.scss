@@ -429,14 +429,6 @@ table ol {
   @include units--gutter;
 }
 
-.units--right {
-  @include units--right;
-}
-
-.units--right-order {
-  @include units--right-order;
-}
-
 // .unit--right, .unit--leftはIE6は非対応
 .unit--left {
   float: left;
@@ -456,6 +448,14 @@ table ol {
   .unit--liquid {
     @include unit--liquid;
   }
+}
+
+.units--right {
+  @include units--right;
+}
+
+.units--right-order {
+  @include units--right-order;
 }
 
 .size1of1 {
