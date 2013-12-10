@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
   "author": "Genki Katsutani",
   "license": "MIT",
   "dependencies": {
@@ -18,6 +17,7 @@
     "grunt-contrib-uglify": "*",
     "grunt-webfont": "*",
     "grunt-imageoptim": "*",
-    "grunt-autoprefixer": "*"
+    "grunt-autoprefixer": "*",
+    "grunt-text-replace": "~0.3.10"
   }
 }
