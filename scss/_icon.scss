@@ -2,10 +2,10 @@
 
 @font-face {
 	font-family:"icon";
-	src:url("../font/icon-cabf88a445e5353265bf29e37b46d3fa.eot");
-	src:url("../font/icon-cabf88a445e5353265bf29e37b46d3fa.eot?#iefix") format("embedded-opentype"),
-		url("../font/icon-cabf88a445e5353265bf29e37b46d3fa.woff") format("woff"),
-		url("../font/icon-cabf88a445e5353265bf29e37b46d3fa.ttf") format("truetype");
+	src:url("../font/icon-0b85a59df6d5b7119762d0f0f27347de.eot");
+	src:url("../font/icon-0b85a59df6d5b7119762d0f0f27347de.eot?#iefix") format("embedded-opentype"),
+		url("../font/icon-0b85a59df6d5b7119762d0f0f27347de.woff") format("woff"),
+		url("../font/icon-0b85a59df6d5b7119762d0f0f27347de.ttf") format("truetype");
 	font-weight:normal;
 	font-style:normal;
 }
@@ -64,5 +64,17 @@
 
 .icon--icon-010:before {
 	content:"\f109";
+}
+
+.icon--icon-011:before {
+	content:"\f10a";
+}
+
+.icon--icon-012:before {
+	content:"\f10b";
+}
+
+.icon--icon-013:before {
+	content:"\f10c";
 }
 
