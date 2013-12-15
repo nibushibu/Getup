@@ -243,10 +243,6 @@
 
   .no-flexbox & {
     display: block;
-
-    > .unit {
-      float: right;
-    }
   }
 
   .lt-ie7 & {

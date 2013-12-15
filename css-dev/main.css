@@ -1323,15 +1323,11 @@ table ol {
 .no-flexbox .units--right-order {
   display: block;
 }
-/* line 247, ../scss/_mixin.scss */
-.no-flexbox .units--right-order > .unit {
-  float: right;
-}
-/* line 254, ../scss/_mixin.scss */
+/* line 250, ../scss/_mixin.scss */
 .lt-ie7 .units--right-order .unit {
   float: right;
 }
-/* line 258, ../scss/_mixin.scss */
+/* line 254, ../scss/_mixin.scss */
 .lt-ie7 .units--right-order * .unit {
   float: none;
 }

@@ -1312,13 +1312,11 @@ table ol {
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   -webkit-box-direction: normal;
-  -moz-box-direction: normal;
   flex-direction: row;
   -webkit-box-orient: horizontal;
   -moz-box-orient: horizontal;
   -ms-box-orient: horizontal;
   -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
   box-orient: horizontal;
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
@@ -1551,8 +1549,6 @@ table ol {
   -ms-box-orient: horizontal;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -moz-box-orient: vertical;
-  -moz-box-direction: normal;
   box-orient: horizontal;
   -webkit-box-direction: reverse;
   -moz-box-direction: reverse;
@@ -1579,19 +1575,13 @@ table ol {
   display: block;
 }
 
-/* line 247, ../scss/_mixin.scss */
-
-.no-flexbox .units--right-order > .unit {
-  float: right;
-}
-
-/* line 254, ../scss/_mixin.scss */
+/* line 250, ../scss/_mixin.scss */
 
 .lt-ie7 .units--right-order .unit {
   float: right;
 }
 
-/* line 258, ../scss/_mixin.scss */
+/* line 254, ../scss/_mixin.scss */
 
 .lt-ie7 .units--right-order * .unit {
   float: none;
