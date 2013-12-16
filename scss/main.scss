@@ -1054,11 +1054,11 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     @include units--vertical();
   }
 
-  .visible--breakpoint-1 {
+  .show-breakpoint-1 {
     display: block;
   }
 
-  .invisible--breakpoint-1 {
+  .hide-breakpoint-1 {
     display: none;
   }
 
@@ -1081,11 +1081,11 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     @include units--vertical();
   }
 
-  .visible--breakpoint-2 {
+  .show-breakpoint-2 {
     display: block;
   }
 
-  .invisible--breakpoint-2 {
+  .hide-breakpoint-2 {
     display: none;
   }
 

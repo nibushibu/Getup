@@ -2207,12 +2207,12 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   }
 
   /* line 1057, ../scss/main.scss */
-  .visible--breakpoint-1 {
+  .show-breakpoint-1 {
     display: block;
   }
 
   /* line 1061, ../scss/main.scss */
-  .invisible--breakpoint-1 {
+  .hide-breakpoint-1 {
     display: none;
   }
 
@@ -2249,12 +2249,12 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   }
 
   /* line 1084, ../scss/main.scss */
-  .visible--breakpoint-2 {
+  .show-breakpoint-2 {
     display: block;
   }
 
   /* line 1088, ../scss/main.scss */
-  .invisible--breakpoint-2 {
+  .hide-breakpoint-2 {
     display: none;
   }
 
