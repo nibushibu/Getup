@@ -5,7 +5,7 @@ images_dir = "img"
 javascripts_dir = "js"
 output_style = (environment == :production) ? :compressed : :expanded
 line_comments = (environment == :production) ? false : true
-forcecompile = (environment == :production) ? true : false
+# forcecompile = (environment == :production) ? true : false
 relative_assets = true
 require 'animation'
 # sass_options = (environment == :production) ? { :sourcemap => false} : { :sourcemap => true }

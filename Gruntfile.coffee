@@ -81,6 +81,10 @@ module.exports = (grunt) ->
         jpegMini: false
         imageAlpha: true
         quitAfter: true
+    cssmin:
+      minifiy:
+        src: 'css-dev/main.css'
+        dest: 'css/main.css'
 
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-contrib-compass"
@@ -91,7 +95,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-text-replace"
   grunt.loadNpmTasks "grunt-imageoptim"
   grunt.loadNpmTasks "grunt-autoprefixer"
+  grunt.loadNpmTasks "grunt-contrib-cssmin"
 
   grunt.registerTask "default", ["watch"];
-  grunt.registerTask "min", ["uglify", "compass:pro"]
+  grunt.registerTask "min", ["uglify", "compass:pro", "autoprefixer", "cssmin"]
   grunt.registerTask "icon", ["webfont", "replace"]
