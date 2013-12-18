@@ -1136,12 +1136,11 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     height: auto;
   }
 
-  /* 画像置換をキャンセル */
-  .alt-img {
-    padding: 0;
-    width: auto !important;
-    height: auto;
-    background-image: none;
-  }
-
+  // 画像置換解除
+  // .alt-img {
+  //   padding: 0 !important;
+  //   width: auto !important;
+  //   height: auto !important;
+  //   background-image: none !important;
+  // }
 }

@@ -84,6 +84,14 @@
   @include inline-block();
   overflow: hidden;
   height: 0;
+
+  // 印刷時に画像置換をキャンセルする場合には以下を有効化する
+  // @media screen {
+  //   padding: 0 !important;
+  //   width: auto !important;
+  //   height: auto !important;
+  //   background-image: none !important;
+  // }
 }
 
 @mixin g-box-sizing($box-sizing:border-box) {

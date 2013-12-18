@@ -1340,20 +1340,20 @@ table ol {
   letter-spacing: -.4em;
 }
 
-/* line 105, ../scss/_mixin.scss */
+/* line 113, ../scss/_mixin.scss */
 
 .no-flexbox .units {
   display: block;
 }
 
-/* line 109, ../scss/_mixin.scss */
+/* line 117, ../scss/_mixin.scss */
 
 .lt-ie8 .units {
   overflow: visible;
   zoom: 1;
 }
 
-/* line 114, ../scss/_mixin.scss */
+/* line 122, ../scss/_mixin.scss */
 
 .units:after {
   display: block;
@@ -1381,7 +1381,7 @@ table ol {
   letter-spacing: normal;
 }
 
-/* line 130, ../scss/_mixin.scss */
+/* line 138, ../scss/_mixin.scss */
 
 .lt-ie8 .units > * {
   zoom: 1;
@@ -1406,7 +1406,7 @@ table ol {
   letter-spacing: normal;
 }
 
-/* line 130, ../scss/_mixin.scss */
+/* line 138, ../scss/_mixin.scss */
 
 .lt-ie8 .unit {
   zoom: 1;
@@ -1418,13 +1418,13 @@ table ol {
   margin-left: -20px;
 }
 
-/* line 165, ../scss/_mixin.scss */
+/* line 173, ../scss/_mixin.scss */
 
 .units--gutter > * {
   padding-left: 20px;
 }
 
-/* line 169, ../scss/_mixin.scss */
+/* line 177, ../scss/_mixin.scss */
 
 .units--gutter .unit {
   padding-left: 20px;
@@ -1458,19 +1458,19 @@ table ol {
   content: "";
 }
 
-/* line 187, ../scss/_mixin.scss */
+/* line 195, ../scss/_mixin.scss */
 
 .units--liquid > * {
   float: left;
 }
 
-/* line 191, ../scss/_mixin.scss */
+/* line 199, ../scss/_mixin.scss */
 
 .units--liquid > .unit {
   float: left;
 }
 
-/* line 194, ../scss/_mixin.scss */
+/* line 202, ../scss/_mixin.scss */
 
 .units--liquid > .unit:last-child {
   display: table-cell;
@@ -1481,13 +1481,13 @@ table ol {
   _margin-right: -3px;
 }
 
-/* line 201, ../scss/_mixin.scss */
+/* line 209, ../scss/_mixin.scss */
 
 .lt-ie7 .units--liquid .unit {
   float: left;
 }
 
-/* line 205, ../scss/_mixin.scss */
+/* line 213, ../scss/_mixin.scss */
 
 .lt-ie7 .units--liquid * .unit {
   float: none;
@@ -1518,20 +1518,20 @@ table ol {
   box-pack: end;
 }
 
-/* line 215, ../scss/_mixin.scss */
+/* line 223, ../scss/_mixin.scss */
 
 .no-flexbox .units--right {
   display: block;
   text-align: right;
 }
 
-/* line 219, ../scss/_mixin.scss */
+/* line 227, ../scss/_mixin.scss */
 
 .no-flexbox .units--right > * {
   text-align: left;
 }
 
-/* line 223, ../scss/_mixin.scss */
+/* line 231, ../scss/_mixin.scss */
 
 .no-flexbox .units--right > .unit {
   text-align: left;
@@ -1556,32 +1556,32 @@ table ol {
   box-direction: reverse;
 }
 
-/* line 234, ../scss/_mixin.scss */
+/* line 242, ../scss/_mixin.scss */
 
 .units--right-order.units--liquid > .unit {
   float: right;
 }
 
-/* line 239, ../scss/_mixin.scss */
+/* line 247, ../scss/_mixin.scss */
 
 .units--right-order.units--liquid > .unit--liquid,
 .units--right-order.units--liquid > .unit:last-child {
   float: none;
 }
 
-/* line 244, ../scss/_mixin.scss */
+/* line 252, ../scss/_mixin.scss */
 
 .no-flexbox .units--right-order {
   display: block;
 }
 
-/* line 250, ../scss/_mixin.scss */
+/* line 258, ../scss/_mixin.scss */
 
 .lt-ie7 .units--right-order .unit {
   float: right;
 }
 
-/* line 254, ../scss/_mixin.scss */
+/* line 262, ../scss/_mixin.scss */
 
 .lt-ie7 .units--right-order * .unit {
   float: none;
@@ -2611,7 +2611,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     display: block;
   }
 
-  /* line 149, ../scss/_mixin.scss */
+  /* line 157, ../scss/_mixin.scss */
 
   .breakpoint-1 > *,
   .linearize-tablet > * {
@@ -2636,13 +2636,13 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     margin-left: 0;
   }
 
-  /* line 165, ../scss/_mixin.scss */
+  /* line 173, ../scss/_mixin.scss */
 
   .units--gutter.breakpoint-1 > * {
     padding-left: 0;
   }
 
-  /* line 169, ../scss/_mixin.scss */
+  /* line 177, ../scss/_mixin.scss */
 
   .units--gutter.breakpoint-1 .unit {
     padding-left: 0;
@@ -2666,7 +2666,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     display: block;
   }
 
-  /* line 149, ../scss/_mixin.scss */
+  /* line 157, ../scss/_mixin.scss */
 
   .breakpoint-2 > *,
   .linearize-mobile > * {
@@ -2691,13 +2691,13 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     margin-left: 0;
   }
 
-  /* line 165, ../scss/_mixin.scss */
+  /* line 173, ../scss/_mixin.scss */
 
   .units--gutter.breakpoint-2 > * {
     padding-left: 0;
   }
 
-  /* line 169, ../scss/_mixin.scss */
+  /* line 177, ../scss/_mixin.scss */
 
   .units--gutter.breakpoint-2 .unit {
     padding-left: 0;
@@ -2743,16 +2743,5 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   img {
     max-width: 100%;
     height: auto;
-  }
-
-  /* 画像置換をキャンセル */
-
-  /* line 1140, ../scss/main.scss */
-
-  .alt-img {
-    padding: 0;
-    width: auto !important;
-    height: auto;
-    background-image: none;
   }
 }
