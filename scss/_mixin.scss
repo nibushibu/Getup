@@ -243,7 +243,11 @@
       float: right;
     }
 
-    > .unit--liquid,
+    > .unit--liquid {
+      float: none;
+      z-index: 1;
+    }
+
     > .unit:last-child {
       float: none;
     }
@@ -251,6 +255,11 @@
 
   .no-flexbox & {
     display: block;
+
+    > .unit--liquid,
+    > .unit:last-child {
+      display: table-cell;
+    }
   }
 
   .lt-ie7 & {

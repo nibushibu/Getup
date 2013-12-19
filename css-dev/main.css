@@ -1314,20 +1314,29 @@ table ol {
 .units--right-order.units--liquid > .unit {
   float: right;
 }
-/* line 247, ../scss/_mixin.scss */
-.units--right-order.units--liquid > .unit--liquid,
+/* line 246, ../scss/_mixin.scss */
+.units--right-order.units--liquid > .unit--liquid {
+  float: none;
+  z-index: 1;
+}
+/* line 251, ../scss/_mixin.scss */
 .units--right-order.units--liquid > .unit:last-child {
   float: none;
 }
-/* line 252, ../scss/_mixin.scss */
+/* line 256, ../scss/_mixin.scss */
 .no-flexbox .units--right-order {
   display: block;
 }
-/* line 258, ../scss/_mixin.scss */
+/* line 260, ../scss/_mixin.scss */
+.no-flexbox .units--right-order > .unit--liquid,
+.no-flexbox .units--right-order > .unit:last-child {
+  display: table-cell;
+}
+/* line 267, ../scss/_mixin.scss */
 .lt-ie7 .units--right-order .unit {
   float: right;
 }
-/* line 262, ../scss/_mixin.scss */
+/* line 271, ../scss/_mixin.scss */
 .lt-ie7 .units--right-order * .unit {
   float: none;
 }
