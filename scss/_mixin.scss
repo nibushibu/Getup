@@ -196,13 +196,13 @@
     float: left;
   }
 
-  > .unit {
-    float: left;
+  // > .unit {
+  //   float: left;
 
-    &:last-child {
-      @include unit--liquid;
-    }
-  }
+  //   &:last-child {
+  //     @include unit--liquid;
+  //   }
+  // }
 
   .lt-ie7 & {
 

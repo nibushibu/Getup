@@ -445,9 +445,10 @@ table ol {
   // > :last-child {
   //   @include unit-liquid;
   // }
-  .unit--liquid {
-    @include unit--liquid;
-  }
+}
+
+.unit--liquid {
+  @include unit--liquid;
 }
 
 .units--right {
