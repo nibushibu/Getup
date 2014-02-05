@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'entypo';
+  src: url('entypo.eot');
+  src: url('entypo.eot?#iefix') format('embedded-opentype'),
+     url('entypo.woff') format('woff'),
+     url('entypo.ttf') format('truetype'),
+     url('entypo.svg#entypo') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'entypo-social';
+  src: url('entypo-social.eot');
+  src: url('entypo-social.eot?#iefix') format('embedded-opentype'),
+     url('entypo-social.woff') format('woff'),
+     url('entypo-social.ttf') format('truetype'),
+     url('entypo-social.svg#entypo-social') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon--entypo {
+  @extend .icon;
+  font-family: "entypo";
+}
+
+.icon--entypo-social {
+  @extend .icon;
+  font-family: "entypo-social";
+}
