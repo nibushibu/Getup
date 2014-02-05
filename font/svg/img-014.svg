@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>Slice 1</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="img-014" sketch:type="MSLayerGroup" transform="translate(11.000000, 11.000000)" fill="#000000">
+            <path d="M77.226,66.838 L58.331,47.943 C61.18,43.262 62.82,37.766 62.82,31.885 C62.82,14.802 48.017,0 30.932,0 C13.85,0 2.27373675e-13,13.85 2.27373675e-13,30.934 C2.27373675e-13,48.018 14.802,62.819 31.884,62.819 C37.565,62.819 42.884,61.281 47.458,58.609 L66.455,77.606 C68.314,79.465 71.328,79.465 73.185,77.606 L77.897,72.895 C79.759,71.037 79.085,68.697 77.226,66.838 L77.226,66.838 Z M9.52,30.935 C9.52,19.107 19.108,9.519 30.933,9.519 C42.762,9.519 53.302,20.058 53.302,31.886 C53.302,43.714 43.713,53.302 31.885,53.302 C20.059,53.302 9.52,42.763 9.52,30.935 L9.52,30.935 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

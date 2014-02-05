@@ -414,7 +414,8 @@ table ol {
 }
 
 /* グリッドレイアウト */
-.units {
+.units,
+.line {
   @include units;
   > * {
     @include unit;
@@ -425,7 +426,8 @@ table ol {
   @include unit;
 }
 
-.units--gutter {
+.units--gutter,
+.line--gutter {
   @include units--gutter;
 }
 
@@ -440,22 +442,24 @@ table ol {
 
 // .units--liquidの中では最後のユニットが残った領域分だけ広がります
 // .units--liquidの中身はfloatで横並びになります。（通常はinline-block）
-.units--liquid {
+.units--liquid,
+.line--liquid {
   @include units--liquid;
   // > :last-child {
   //   @include unit-liquid;
   // }
+  .unit--liquid {
+    @include unit--liquid;
+  }
 }
 
-.unit--liquid {
-  @include unit--liquid;
-}
-
-.units--right {
+.units--right,
+.line--right {
   @include units--right;
 }
 
-.units--right-order {
+.units--right-order,
+.line--right-order {
   @include units--right-order;
 }
 
@@ -1063,7 +1067,8 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     display: none;
   }
 
-  .units--gutter.breakpoint-1 {
+  .units--gutter.breakpoint-1,
+  .line--gutter.breakpoint-1 {
     @include units--gutter(0);
   }
 
@@ -1090,7 +1095,8 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     display: none;
   }
 
-  .units--gutter.breakpoint-2 {
+  .units--gutter.breakpoint-2,
+  .line--gutter.breakpoint-2 {
     @include units--gutter(0);
   }
 
