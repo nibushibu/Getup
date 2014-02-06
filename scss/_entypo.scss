@@ -26,10 +26,12 @@
   @extend .icon;
   font-family: "entypo";
   font-size: 2em;
+  text-decoration: none;
 }
 
 .icon--entypo-social {
   @extend .icon;
   font-family: "entypo-social";
   font-size: 2em;
+  text-decoration: none;
 }
