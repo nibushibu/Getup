@@ -1,4 +1,3 @@
-boilerplate
-===========
+#Getup
 
-my HTML boilerplate
+This is a simple CSS(SASS/Compass) framework.
