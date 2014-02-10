@@ -9,6 +9,7 @@ module.exports = (grunt) ->
         options:
           config: "config.rb"
           environment: "production"
+          force: true
     coffee:
       compile:
         expand: true
@@ -97,6 +98,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-copy"
 
   grunt.registerTask "default", ["watch"];
-  grunt.registerTask "min", ["uglify", "compass:pro", "autoprefixer"]
+  grunt.registerTask "min", ["coffee", "uglify", "compass:pro", "autoprefixer"]
   grunt.registerTask "icon", ["webfont", "replace"]
   grunt.registerTask "init", ["copy", "concat"]
