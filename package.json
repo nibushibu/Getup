@@ -19,6 +19,7 @@
     "grunt-imageoptim": "*",
     "grunt-autoprefixer": "*",
     "grunt-text-replace": "*",
-    "grunt-contrib-cssmin": "*"
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*"
   }
 }

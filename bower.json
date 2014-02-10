@@ -1,0 +1,21 @@
+{
+  "name": "Getup",
+  "version": "0.0.0",
+  "homepage": "https://github.com/nibushibu/Getup",
+  "authors": [
+    "Genki Katsutani <nibushibu@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1",
+    "modernizr": "~2.7.1",
+    "jquery.transit": "~0.9.9"
+  }
+}
