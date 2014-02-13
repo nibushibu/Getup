@@ -15,7 +15,9 @@
   ],
   "dependencies": {
     "jquery": "1",
-    "modernizr": "~2.7.1",
-    "jquery.transit": "~0.9.9"
+    "modernizr": "*",
+    "jquery.transit": "*",
+    "normalize-css": "1",
+    "font-awesome": "~4.0.3"
   }
 }

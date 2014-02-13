@@ -69,7 +69,7 @@ module.exports = (grunt) ->
         imageAlpha: true
         quitAfter: true
     copy:
-      files:
+      js:
         expand: true
         flatten: true
         src: [
@@ -78,6 +78,24 @@ module.exports = (grunt) ->
         ]
         dest: "js/vendor/"
         filter: "isFile"
+      css:
+        src: "bower_components/normalize-css/normalize.css"
+        dest: "scss/_normalize.scss"
+      fontAwesomeFont:
+        expand: true
+        cwd: "bower_components/font-awesome/fonts/"
+        src: "**"
+        dest: "font/"
+        filter: "isFile"
+        flatten: true
+      fontAwesomeSCSS:
+        expand: true
+        cwd: "bower_components/font-awesome/scss/"
+        src: "_**"
+        dest: "scss/font-awesome/"
+        filter: "isFile"
+        flatten: true
+
     concat:
       dist:
         src: [
@@ -100,4 +118,4 @@ module.exports = (grunt) ->
   grunt.registerTask "default", ["watch"];
   grunt.registerTask "min", ["coffee", "uglify", "compass:pro", "autoprefixer"]
   grunt.registerTask "icon", ["webfont", "replace"]
-  grunt.registerTask "init", ["copy", "concat"]
+  grunt.registerTask "init", ["copy",  "concat"]
