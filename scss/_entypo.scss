@@ -28,9 +28,10 @@
   font-size: 2.5em;
   font-family: "entypo";
   line-height: .6;
+  position: relative;
+  top: -0.05em;
 
   .lt-ie10 & {
-    position: relative;
     top: .1em;
     vertical-align: baseline;
   }
@@ -47,9 +48,10 @@
   font-size: 2.5em;
   font-family: "entypo-social";
   line-height: .6;
+  position: relative;
+  top: -0.05em;
 
   .lt-ie10 & {
-    position: relative;
     top: .1em;
     vertical-align: baseline;
   }
