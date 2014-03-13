@@ -9,7 +9,8 @@ module.exports = (grunt) ->
         options:
           config: "config.rb"
           environment: "production"
-          force: true
+          # スプライトが重くなるのでコメントアウト
+          # force: true
     coffee:
       compile:
         expand: true
@@ -43,25 +44,28 @@ module.exports = (grunt) ->
       #   files: ["js/*.js"]
       #   tasks: "uglify"
     webfont:
-      dist:
+      icon:
         src: "font/svg/*.svg"
         dest: "font/"
         destCss: "scss/"
         options:
           font: "icon"
-          types: ["woff","ttf","eot"]
           stylesheet: "scss"
           htmlDemo: false
           syntax: "bem"
           relativeFontPath: "../font/"
-    replace:
-      dist:
-        src: ["scss/_icon.scss"]
-        overwrite: true
-        replacements: [
-          from: ".icon_"
-          to: ".icon--"
-        ]
+          templateOptions:
+            baseClass: 'icon',
+            classPrefix: 'icon--',
+            mixinPrefix: 'icon-'
+    # replace:
+    #   dist:
+    #     src: ["scss/_icon.scss"]
+    #     overwrite: true
+    #     replacements: [
+    #       from: ".icon_"
+    #       to: ".icon--"
+    #     ]
     imageoptim:
       src: ["img"]
       options:
@@ -117,5 +121,5 @@ module.exports = (grunt) ->
 
   grunt.registerTask "default", ["watch"];
   grunt.registerTask "min", ["coffee", "uglify", "compass:pro", "autoprefixer"]
-  grunt.registerTask "icon", ["webfont", "replace"]
+  grunt.registerTask "icon", ["webfont"]
   grunt.registerTask "init", ["copy",  "concat"]
