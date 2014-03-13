@@ -51,7 +51,7 @@ module.exports = (grunt) ->
         options:
           font: "icon"
           stylesheet: "scss"
-          htmlDemo: false
+          htmlDemo: true
           syntax: "bem"
           relativeFontPath: "../font/"
           templateOptions:
