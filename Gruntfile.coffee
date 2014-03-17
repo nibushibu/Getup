@@ -82,9 +82,12 @@ module.exports = (grunt) ->
         ]
         dest: "js/vendor/"
         filter: "isFile"
-      css:
+      normalizecss:
         src: "bower_components/normalize-css/normalize.css"
         dest: "scss/_normalize.scss"
+      animatecss:
+        src: "bower_components/animate.css/animate.min.css"
+        dest: "scss/_animate.scss"
       fontAwesomeFont:
         expand: true
         cwd: "bower_components/font-awesome/fonts/"
