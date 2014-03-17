@@ -7,7 +7,7 @@ output_style = (environment == :production) ? :compressed : :expanded
 line_comments = (environment == :production) ? false : true
 # forcecompile = (environment == :production) ? true : false
 relative_assets = true
-require 'animation'
+# require 'animation'
 # sass_options = (environment == :production) ? { :sourcemap => false} : { :sourcemap => true }
 # sass_options = (environment == :production) ? { :debug_info => false, :sourcemap => false} : { :debug_info => true, :sourcemap => true }
 # line_comments = false
