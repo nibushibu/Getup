@@ -79,6 +79,7 @@ module.exports = (grunt) ->
         src: [
           "bower_components/jquery/jquery.min.js"
           "bower_components/modernizr/modernizr.js"
+          "bower_components/box-sizing-polyfill/boxsizing.htc"
         ]
         dest: "js/vendor/"
         filter: "isFile"
