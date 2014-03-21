@@ -18,7 +18,8 @@
     "modernizr": "*",
     "jquery.transit": "*",
     "normalize-css": "1",
-    "font-awesome": "~4.0.3",
-    "animate.css": "~3.1.0"
+    "font-awesome": "*",
+    "animate.css": "*",
+    "box-sizing-polyfill": "*"
   }
 }
