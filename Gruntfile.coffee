@@ -45,15 +45,15 @@ module.exports = (grunt) ->
       #   tasks: "uglify"
     webfont:
       icon:
-        src: "font/svg/*.svg"
-        dest: "font/"
+        src: "fonts/svg/*.svg"
+        dest: "fonts/"
         destCss: "scss/"
         options:
           font: "icon"
           stylesheet: "scss"
           htmlDemo: true
           syntax: "bem"
-          relativeFontPath: "../font/"
+          relativeFontPath: "../fonts/"
           templateOptions:
             baseClass: 'icon',
             classPrefix: 'icon--',
@@ -93,7 +93,7 @@ module.exports = (grunt) ->
         expand: true
         cwd: "bower_components/font-awesome/fonts/"
         src: "**"
-        dest: "font/"
+        dest: "fonts/"
         filter: "isFile"
         flatten: true
       fontAwesomeSCSS:
