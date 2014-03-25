@@ -454,8 +454,14 @@ table ol {
   }
 }
 
-.ie-units-fix {
-  margin-top: 0;
+.units--offset-top,
+.units--offset {
+  margin-top: -10px;
+}
+
+.units--offset-bottom,
+.units--offset {
+  margin-bottom: -10px;
 }
 
 .unit {
