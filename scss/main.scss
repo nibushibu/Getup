@@ -204,9 +204,24 @@ ol ul {
 }
 
 .not-list,
-.no-list {
+.no-list,
+.list-unstyled,
+.list-inline {
   padding-left: 0;
   list-style: none;
+}
+
+.list-inline {
+
+  > li {
+    @include inline-block;
+    padding-right: 10px;
+  }
+
+  .ie-child {
+    @include inline-block;
+    padding-right: 10px;
+  }
 }
 
 dl {
