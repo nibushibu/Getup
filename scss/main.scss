@@ -1097,7 +1097,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 }
 
 /* タブレットサイズ */
-@media (max-width: 720px) {
+@media (max-width: $screen-tablet) {
 
   .breakpoint-1,
   .linearize-tablet{
@@ -1124,7 +1124,7 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
 }
 
 /* モバイルサイズ */
-@media (max-width: 480px) {
+@media (max-width: $screen-mobile) {
 
   html {
     font-size: 0.875em;//Mobileではデフォルトのテキストサイズを14pxに
