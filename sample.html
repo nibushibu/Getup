@@ -33,37 +33,37 @@
     <p class="intro">カラム分けをする場合、unitsクラスとunitクラスを使用します。<br />unitsクラスは、その親に対して100%の幅で表示されるので、ページ固定幅で表示する場合(多くの場合そうだと思いますが)には、unitsクラスをwidthを指定した要素で囲います。<br />本サンプルページでは幅を固定していないため、ウインドウサイズに合わせて全体のサイズも変化します。また740px未満のサイズではスマートフォンなどを想定した、縦並びのレイアウトになります。</p>
     <h2 id="basic-class">基本クラス</h2>
     <div class="data">
-    <table>
-      <thead>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>クラス名</th>
+            <th>概要</th>
+          </tr>
+        </thead>
+        <tbody>
         <tr>
-          <th>クラス名</th>
-          <th>概要</th>
+          <th scope="row"><code>units</code></th>
+          <td>unitをまとめるクラス。Tableで言うならtrタグ。</td>
         </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <th scope="row"><code>units</code></th>
-        <td>unitをまとめるクラス。Tableで言うならtrタグ。</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>unit</code></th>
-        <td>カラムを意味するクラス。Tableで言うならtdタグ。unitは、モバイルサイズの場合は常に横幅が100%になります。</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>size<strong>X</strong>of<strong>Y</strong></code></th>
-        <td>unitクラスを拡張するクラス。例えば、<code>size3of4</code> を指定すると、親のスペースに対して3/4の横幅に。
-    用意されているサイズは 1/1, 1/2, 1/3, 2/3, 1/4, 3/4, 1/5, 2/5, 3/5, 4/5, 1/6, 5/6 です。</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>breakpoint-1</code></th>
-        <td>unitsクラスを設定した要素に合わせて設定することで、タブレットサイズ以下でリニアライズ（縦並び）されます。</td>
-      </tr>
-      <tr>
-        <th scope="row"><code>breakpoint-2</code></th>
-        <td>unitsクラスを設定した要素に合わせて設定することで、モバイルサイズ以下でリニアライズ（縦並び）されます。</td>
-      </tr>
-      </tbody>
-    </table>
+        <tr>
+          <th scope="row"><code>unit</code></th>
+          <td>カラムを意味するクラス。Tableで言うならtdタグ。unitは、モバイルサイズの場合は常に横幅が100%になります。</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>size<strong>X</strong>of<strong>Y</strong></code></th>
+          <td>unitクラスを拡張するクラス。例えば、<code>size3of4</code> を指定すると、親のスペースに対して3/4の横幅に。
+      用意されているサイズは 1/1, 1/2, 1/3, 2/3, 1/4, 3/4, 1/5, 2/5, 3/5, 4/5, 1/6, 5/6 です。</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>breakpoint-1</code></th>
+          <td>unitsクラスを設定した要素に合わせて設定することで、タブレットサイズ以下でリニアライズ（縦並び）されます。</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>breakpoint-2</code></th>
+          <td>unitsクラスを設定した要素に合わせて設定することで、モバイルサイズ以下でリニアライズ（縦並び）されます。</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
     <h2 id="column-2">2等分</h2>
     <div class="units breakpoint-1">
