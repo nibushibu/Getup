@@ -106,7 +106,7 @@
   @include g-flex-wrap(wrap);
   @include g-justify-content(flex-start);
   // display: table;
-  margin: 0;
+  margin: -10px 0 0;
   padding: 0;
   letter-spacing: -.4em;
 
@@ -124,6 +124,10 @@
     clear: both;
     height: 0;
     content: "";
+  }
+
+  .unit > & {
+    margin-top: 0;
   }
 }
 
