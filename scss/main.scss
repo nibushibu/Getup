@@ -96,6 +96,10 @@ blockquote,
   margin: 10px;
 }
 
+.data {
+  overflow: auto;
+}
+
 h1,
 h2,
 h3,
@@ -369,43 +373,42 @@ table {
   border-collapse: collapse;
 }
 
-th,
-td {
-  padding: 8px;
-  border: 1px solid #ccc;
-  vertical-align: middle;
-}
+.table {
 
-th {
-  text-align: center;
-  font-weight: bold;
-}
-
-th,
-td {
-
-  .center {
-    text-align: center;
-  }
-
-  .left {
-    text-align: left;
-  }
-
-  .right {
-    text-align: right;
-  }
-
-  .top {
-    vertical-align: top;
-  }
-
-  .middle {
+  th,
+  td {
+    padding: 8px;
+    border: 1px solid #ccc;
     vertical-align: middle;
+
+    .center {
+      text-align: center;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    .top {
+      vertical-align: top;
+    }
+
+    .middle {
+      vertical-align: middle;
+    }
+
+    .bottom {
+      vertical-align: bottom;
+    }
   }
 
-  .bottom {
-    vertical-align: bottom;
+  th {
+    font-weight: bold;
+    white-space: nowrap;
   }
 }
 
@@ -421,7 +424,7 @@ table ol {
   margin-bottom: 0;
 }
 
-.data table {
+.data .table {
   width: 100%;
 }
 
@@ -432,6 +435,10 @@ table ol {
   > * {
     @include unit;
   }
+}
+
+.ie-units-fix {
+  margin-top: 0;
 }
 
 .unit {
@@ -903,12 +910,15 @@ table ol {
 .link-box {
   color: $base-text-color;
   cursor: pointer;
+
   &:hover {
     text-decoration: none;
+
     .link-box-link {
       text-decoration: underline;
     }
   }
+
   .link-box-link {
     color: $base-link-color;
   }
