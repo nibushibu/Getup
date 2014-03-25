@@ -425,7 +425,6 @@ table {
   th {
     text-align: center;
     font-weight: bold;
-    white-space: nowrap;
   }
 }
 
@@ -1116,6 +1115,10 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   .units--gutter.breakpoint-1,
   .line--gutter.breakpoint-1 {
     @include units--gutter(0);
+  }
+
+  th {
+    white-space: nowrap;
   }
 
 }
