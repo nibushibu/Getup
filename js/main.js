@@ -1,0 +1,1 @@
+$(function(){return $("html").hasClass("lt-ie7")?($(".list-inline > li").addClass("ie-child"),$(".unit > .units").assClass("ie-units-fix")):void 0});
