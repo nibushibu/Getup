@@ -112,6 +112,30 @@ h6 {
   &.condenced {
     margin-top: 10px;
   }
+
+  &.collapse,
+  &.collapse-vartical,
+  &.collapse-top {
+    margin-top: 0;
+  }
+
+  &.collapse,
+  &.collapse-vartical,
+  &.collapse-bottom {
+    margin-bottom: 0;
+  }
+
+  &.collapse,
+  &.collapse-horizontal,
+  &.collapse-left {
+    margin-left: 0;
+  }
+
+  &.collapse,
+  &.collapse-horizontal,
+  &.collapse-right {
+    margin-right: 0;
+  }
 }
 
 pre {
