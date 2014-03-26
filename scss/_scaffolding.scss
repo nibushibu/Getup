@@ -1,0 +1,275 @@
+html {
+  color: $base-text-color;
+  font-size: 81.25%;// →13px
+  font-family: "Lucida Grande", Arial, sans-serif;
+  line-height: 1.5;
+  // text-rendering: optimizeLegibility;// text-renderingプロパティ 参考:http://terkel.jp/archives/2012/09/text-rendering-optimizelegibility/
+}
+
+.lt-ie9 {
+  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* タイポグラフィ */
+
+/* 見出し */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+p,
+blockquote,
+.data,
+.mod {
+  margin: 10px;
+}
+
+.data {
+  overflow: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin-top: 20px;
+
+  &.condenced {
+    margin-top: 10px;
+  }
+}
+
+pre {
+  margin: 10px;
+}
+
+table h1,
+table h2,
+table h3,
+table h4,
+table h5,
+table h6,
+table p,
+table ul,
+table ol,
+table dl,
+ul ul,
+ul ol,
+ul dl,
+ol ul,
+ol ol,
+ol dl {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.84615384615385em;// 24px
+}
+
+h2 {
+  font-size: 1.53846153846154em;// 20px
+}
+
+h3 {
+  font-size: 1.38461538461538em;// 18px
+}
+
+h4 {
+  font-size: 1.23076923076923em;// 16px
+}
+
+h5 {
+  font-size: 1.07692307692308em;// 14px
+}
+
+h6 {
+  font-size: 1em;// 13px
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+  // &:visited {
+  //   color: darken($base-link-color, 10%);
+  // }
+  &:hover,
+  &:active {
+    // color: lighten($base-link-color, 10%);
+    text-decoration: underline;
+  }
+}
+
+ul {
+  list-style-position: outside;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul,
+ol,
+.square,
+.circle,
+.disc {
+  padding-left: 2em;
+}
+
+ul ul,
+ol ul {
+  list-style-type: disc;
+}
+
+.square {
+  list-style: square outside;
+}
+
+.circle {
+  list-style: circle outside;
+}
+
+.disc {
+  list-style: disc outside;
+}
+
+.not-list,
+.no-list,
+.list-unstyled,
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline {
+
+  > li {
+    @include inline-block;
+    padding-right: 10px;
+  }
+
+  .ie-child {
+    @include inline-block;
+    padding-right: 10px;
+  }
+}
+
+dl {
+  margin-bottom: .833em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 1.667em;
+}
+
+q,
+i,
+em,
+cite {
+  font-weight: inherit;
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bold;
+  font-style: inherit;
+}
+
+mark {
+  background: #ffc;
+}
+
+s,
+del {
+  text-decoration: line-through;
+}
+
+small {
+  font-size: 0.9em;
+  line-height: 1;
+}
+
+pre,
+code {
+  font-size: 1.2em;
+  font-family: monospace;
+}
+
+pre {
+  overflow: auto;
+  line-height: 1;
+}
+
+code {
+  line-height: 1;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+pre,
+code,
+kbd,
+samp,
+tt {
+  font-family: monospace;
+  line-height: 100%;
+  *font-size: 108%;
+}
+
+hr {
+  display: block;
+  margin: 1em 0;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+img {
+  vertical-align: middle;
+}
+
+img.left,
+img.alignleft,
+img.fl {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+img.right,
+img.alignright,
+img.fr {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+img.aligncenter,
+img.ac {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}

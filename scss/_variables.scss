@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+///////////////////////////////////////
+// 設定
+///////////////////////////////////////
+
+// boxsizing.htcへのパス（スラッシュ始まり）
+$box-sizing-path: "/js/vendor/boxsizing.htc";
+
+// Font Awesome 用
+$fa-font-path: "../font";
+
+// 基本テキストカラー
+$base-text-color: #333;
+
+// 基本リンクテキストカラー
+$base-link-color: #074ae2;
+
+// タブレットサイズ
+$screen-tablet: 720px;
+
+// モバイルサイズ
+$screen-mobile: 480px;
+
+$gray-1: #dcdcdc;

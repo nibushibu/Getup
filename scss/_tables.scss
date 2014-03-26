@@ -1,0 +1,57 @@
+
+table {
+  max-width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.table {
+
+  th,
+  td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+
+    &.center {
+      text-align: center;
+    }
+
+    &.left {
+      text-align: left;
+    }
+
+    &.right {
+      text-align: right;
+    }
+
+    &.top {
+      vertical-align: top;
+    }
+
+    &.middle {
+      vertical-align: middle;
+    }
+
+    &.bottom {
+      vertical-align: bottom;
+    }
+  }
+
+  th {
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+tfoot {
+  text-align: center;
+}
+
+tfoot td {
+  border-top-width: 2px;
+}
+
+.data .table {
+  width: 100%;
+}

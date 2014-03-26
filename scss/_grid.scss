@@ -1,0 +1,471 @@
+.units,
+.line {
+  @include units;
+  > * {
+    @include unit;
+  }
+}
+
+.units--offset-top,
+.units--offset {
+  margin-top: -10px;
+}
+
+.units--offset-bottom,
+.units--offset {
+  margin-bottom: -10px;
+}
+
+.unit {
+  @include unit;
+}
+
+.units--gutter,
+.line--gutter {
+  @include units--gutter;
+}
+
+// .unit--right, .unit--leftはIE6は非対応
+.unit--left {
+  float: left;
+}
+
+.unit--right {
+  float: right;
+}
+
+// .units--liquidの中では最後のユニットが残った領域分だけ広がります
+// .units--liquidの中身はfloatで横並びになります。（通常はinline-block）
+.units--liquid,
+.line--liquid {
+  @include units--liquid;
+  // > :last-child {
+  //   @include unit-liquid;
+  // }
+}
+
+.unit--liquid {
+  @include unit--liquid;
+}
+
+.units--right,
+.line--right {
+  @include units--right;
+}
+
+.units--right-order,
+.line--right-order {
+  @include units--right-order;
+}
+
+.size1of1 {
+  width: 100%;
+}
+
+.size1of2 {
+  width: 50%;
+}
+
+.size1of3 {
+  width: 33.333333%;
+}
+
+.size2of3 {
+  width: 66.666666%;
+}
+
+.size1of4 {
+  width: 25%;
+}
+
+.size3of4 {
+  width: 75%;
+}
+
+.size1of5 {
+  width: 20%;
+}
+
+.size2of5 {
+  width: 40%;
+}
+
+.size3of5 {
+  width: 60%;
+}
+
+.size4of5 {
+  width: 80%;
+}
+
+.size1of6 {
+  width: 16.666666%;
+}
+
+.size5of6 {
+  width: 83.333333%;
+}
+
+.size1of7 {
+  width: 14.2857143%;
+}
+
+.size2of7 {
+  width: 28.5714286%;
+}
+
+.size3of7 {
+  width: 42.8571429%;
+}
+
+.size4of7 {
+  width: 57.1428571%;
+}
+
+.size5of7 {
+  width: 71.4285714%;
+}
+
+.size6of7 {
+  width: 85.7142857%;
+}
+
+.size1of8 {
+  width: 12.5%;
+}
+
+.size3of8 {
+  width: 37.5%;
+}
+
+.size5of8 {
+  width: 62.5%;
+}
+
+.size7of8 {
+  width: 87.5%;
+}
+
+.size1of9 {
+  width: 11.111111111%;
+}
+
+.size2of9 {
+  width: 22.222222222%;
+}
+
+.size3of9 {
+  width: 33.333333333%;
+}
+
+.size4of9 {
+  width: 44.444444444%;
+}
+
+.size5of9 {
+  width: 55.555555555%;
+}
+
+.size6of9 {
+  width: 66.666666666%;
+}
+
+.size7of9 {
+  width: 77.777777777%;
+}
+
+.size8of9 {
+  width: 88.888888888%;
+}
+
+.size1of10 {
+  width: 10%;
+}
+
+.size3of10 {
+  width: 30%;
+}
+
+.size4of10 {
+  width: 40%;
+}
+
+.size7of10 {
+  width: 70%;
+}
+
+.size9of10 {
+  width: 90%;
+}
+
+.before1of2 {
+  margin-left: 50%;
+}
+
+.before1of3 {
+  margin-left: 33.333333%;
+}
+
+.before2of3 {
+  margin-left: 66.666666%;
+}
+
+.before1of4 {
+  margin-left: 25%;
+}
+
+.before3of4 {
+  margin-left: 75%;
+}
+
+.before1of5 {
+  margin-left: 20%;
+}
+
+.before2of5 {
+  margin-left: 40%;
+}
+
+.before3of5 {
+  margin-left: 60%;
+}
+
+.before4of5 {
+  margin-left: 80%;
+}
+
+.before1of6 {
+  margin-left: 16.666666%;
+}
+
+.before5of6 {
+  margin-left: 83.333333%;
+}
+
+.before1of7 {
+  margin-left: 14.2857143%;
+}
+
+.before2of7 {
+  margin-left: 28.5714286%;
+}
+
+.before3of7 {
+  margin-left: 42.8571429%;
+}
+
+.before4of7 {
+  margin-left: 57.1428571%;
+}
+
+.before5of7 {
+  margin-left: 71.4285714%;
+}
+
+.before6of7 {
+  margin-left: 85.7142857%;
+}
+
+.before1of8 {
+  margin-left: 12.5%;
+}
+
+.before3of8 {
+  margin-left: 37.5%;
+}
+
+.before5of8 {
+  margin-left: 62.5%;
+}
+
+.before7of8 {
+  margin-left: 87.5%;
+}
+
+.before1of9 {
+  margin-left: 11.111111111%;
+}
+
+.before2of9 {
+  margin-left: 22.222222222%;
+}
+
+.before3of9 {
+  margin-left: 33.333333333%;
+}
+
+.before4of9 {
+  margin-left: 44.444444444%;
+}
+
+.before5of9 {
+  margin-left: 55.555555555%;
+}
+
+.before6of9 {
+  margin-left: 66.666666666%;
+}
+
+.before7of9 {
+  margin-left: 77.777777777%;
+}
+
+.before8of9 {
+  margin-left: 88.888888888%;
+}
+
+.before1of10 {
+  margin-left: 10%;
+}
+
+.before3of10 {
+  margin-left: 30%;
+}
+
+.before4of10 {
+  margin-left: 40%;
+}
+
+.before7of10 {
+  margin-left: 70%;
+}
+
+.before9of10 {
+  margin-left: 90%;
+}
+
+.after1of2 {
+  margin-right: 50%;
+}
+
+.after1of3 {
+  margin-right: 33.333333%;
+}
+
+.after2of3 {
+  margin-right: 66.666666%;
+}
+
+.after1of4 {
+  margin-right: 25%;
+}
+
+.after3of4 {
+  margin-right: 75%;
+}
+
+.after1of5 {
+  margin-right: 20%;
+}
+
+.after2of5 {
+  margin-right: 40%;
+}
+
+.after3of5 {
+  margin-right: 60%;
+}
+
+.after4of5 {
+  margin-right: 80%;
+}
+
+.after1of6 {
+  margin-right: 16.666666%;
+}
+
+.after5of6 {
+  margin-right: 83.333333%;
+}
+
+.after1of7 {
+  margin-right: 14.2857143%;
+}
+
+.after2of7 {
+  margin-right: 28.5714286%;
+}
+
+.after3of7 {
+  margin-right: 42.8571429%;
+}
+
+.after4of7 {
+  margin-right: 57.1428571%;
+}
+
+.after5of7 {
+  margin-right: 71.4285714%;
+}
+
+.after6of7 {
+  margin-right: 85.7142857%;
+}
+
+.after1of8 {
+  margin-right: 12.5%;
+}
+
+.after3of8 {
+  margin-right: 37.5%;
+}
+
+.after5of8 {
+  margin-right: 62.5%;
+}
+
+.after7of8 {
+  margin-right: 87.5%;
+}
+
+.after1of9 {
+  margin-right: 11.111111111%;
+}
+
+.after2of9 {
+  margin-right: 22.222222222%;
+}
+
+.after3of9 {
+  margin-right: 33.333333333%;
+}
+
+.after4of9 {
+  margin-right: 44.444444444%;
+}
+
+.after5of9 {
+  margin-right: 55.555555555%;
+}
+
+.after6of9 {
+  margin-right: 66.666666666%;
+}
+
+.after7of9 {
+  margin-right: 77.777777777%;
+}
+
+.after8of9 {
+  margin-right: 88.888888888%;
+}
+
+.after1of10 {
+  margin-right: 10%;
+}
+
+.after3of10 {
+  margin-right: 30%;
+}
+
+.after4of10 {
+  margin-right: 40%;
+}
+
+.after7of10 {
+  margin-right: 70%;
+}
+
+.after9of10 {
+  margin-right: 90%;
+}

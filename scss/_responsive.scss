@@ -1,0 +1,65 @@
+/* タブレットサイズ */
+@media (max-width: $screen-tablet) {
+
+  .breakpoint-1,
+  .linearize-tablet{
+    @include units--vertical();
+  }
+
+  .show-breakpoint-1 {
+    display: block;
+  }
+
+  .hide-breakpoint-1 {
+    display: none;
+  }
+
+  .units--gutter.breakpoint-1,
+  .line--gutter.breakpoint-1 {
+    @include units--gutter(0);
+  }
+
+  th {
+    white-space: nowrap;
+  }
+
+}
+
+/* モバイルサイズ */
+@media (max-width: $screen-mobile) {
+
+  html {
+    font-size: 0.875em;//Mobileではデフォルトのテキストサイズを14pxに
+    -webkit-text-size-adjust: none;//デバイスが横になった時の文字拡大をOFF
+  }
+
+  .breakpoint-2,
+  .linearize-mobile {
+    @include units--vertical();
+  }
+
+  .show-breakpoint-2 {
+    display: block;
+  }
+
+  .hide-breakpoint-2 {
+    display: none;
+  }
+
+  .units--gutter.breakpoint-2,
+  .line--gutter.breakpoint-2 {
+    @include units--gutter(0);
+  }
+
+  /* 画像 */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* テーブル */
+  table {
+    overflow: auto;
+  }
+
+}

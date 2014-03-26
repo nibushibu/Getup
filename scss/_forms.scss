@@ -1,0 +1,65 @@
+/* フォーム */
+
+form {
+  display: inline;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+.form-control {
+  @include inline-block();
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  color: #555555;
+  vertical-align: middle;
+  width: 100%;
+  @include g-box-sizing;
+
+  .form-inline & {
+    width: auto;
+  }
+
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    background-color: #ccc;
+    opacity: 1; // iOS fix for unreadable disabled content
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-control:focus,
+select:focus {
+  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
+  outline: 0;
+  border-color: rgba(82, 168, 236, 0.8);
+}
+
+.lt-ie9 {
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: thin dotted;
+  }
+}
+
+select {
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}

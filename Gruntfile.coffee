@@ -103,6 +103,13 @@ module.exports = (grunt) ->
         dest: "scss/font-awesome/"
         filter: "isFile"
         flatten: true
+      # bootstrap:
+      #   expand: true
+      #   cwd: "bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap"
+      #   src: "_**"
+      #   dest: "scss/bootstrap/"
+      #   filter: "isFile"
+      #   flatten: true
 
     concat:
       dist:

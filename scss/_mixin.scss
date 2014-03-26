@@ -142,7 +142,6 @@
 
 @mixin unit--vertical {
   // @include box-flex(1 1 100%);
-  display: block;
   width: 100%;
 }
 
@@ -273,6 +272,14 @@
       float: none;
     }
   }
+}
+
+%icon {
+  display:inline-block;
+  text-decoration:inherit;
+  font-weight:normal;
+  font-style:normal;
+  font-family:"icon";
 }
 
 ////////////////////////////////////////////////
