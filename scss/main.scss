@@ -114,13 +114,13 @@ h6 {
   }
 
   &.collapse,
-  &.collapse-vartical,
+  &.collapse-vertical,
   &.collapse-top {
     margin-top: 0;
   }
 
   &.collapse,
-  &.collapse-vartical,
+  &.collapse-vertical,
   &.collapse-bottom {
     margin-bottom: 0;
   }
@@ -425,27 +425,27 @@ table {
     border: 1px solid #ccc;
     vertical-align: middle;
 
-    .center {
+    &.center {
       text-align: center;
     }
 
-    .left {
+    &.left {
       text-align: left;
     }
 
-    .right {
+    &.right {
       text-align: right;
     }
 
-    .top {
+    &.top {
       vertical-align: top;
     }
 
-    .middle {
+    &.middle {
       vertical-align: middle;
     }
 
-    .bottom {
+    &.bottom {
       vertical-align: bottom;
     }
   }
