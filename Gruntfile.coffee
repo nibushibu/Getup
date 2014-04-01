@@ -50,6 +50,7 @@ module.exports = (grunt) ->
       compress_target:
         files:
           "js/main.js": "js/main.js"
+          "js/vendor/modernizr.min.js": "bower_components/modernizr/modernizr.js"
     watch:
       compass:
         files: ["scss/*.scss"]
@@ -98,7 +99,6 @@ module.exports = (grunt) ->
         flatten: true
         src: [
           "bower_components/jquery/jquery.min.js"
-          "bower_components/modernizr/modernizr.js"
           "bower_components/box-sizing-polyfill/boxsizing.htc"
         ]
         dest: "js/vendor/"
@@ -153,4 +153,4 @@ module.exports = (grunt) ->
   grunt.registerTask "default", ["watch"];
   grunt.registerTask "min", ["coffee", "uglify", "compass:pro", "autoprefixer"]
   grunt.registerTask "icon", ["webfont"]
-  grunt.registerTask "init", ["copy",  "concat"]
+  grunt.registerTask "init", ["copy", "concat", "uglify"]
