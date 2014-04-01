@@ -23,6 +23,10 @@
     white-space: nowrap;
   }
 
+  .data {
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
 }
 
 /* モバイルサイズ */
