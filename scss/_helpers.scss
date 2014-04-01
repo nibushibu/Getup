@@ -1,0 +1,111 @@
+
+.collapse,
+.collapse-vertical,
+.collapse-top {
+  margin-top: 0;
+}
+
+.collapse,
+.collapse-vertical,
+.collapse-bottom {
+  margin-bottom: 0;
+}
+
+.collapse,
+.collapse-horizontal,
+.collapse-left {
+  margin-left: 0;
+}
+
+.collapse,
+.collapse-horizontal,
+.collapse-right {
+  margin-right: 0;
+}
+
+.separate,
+.separate-top,
+.separate-vertical {
+  margin-top: 10px;
+}
+
+.separate,
+.separate-bottom,
+.separate-vertical {
+  margin-bottom: 10px;
+}
+
+.separate,
+.separate-left,
+.separate-horizontal {
+  margin-left: 10px;
+}
+
+.separate,
+.separate-right,
+.separate-horizontal {
+  margin-right: 10px;
+}
+
+/* CLEARFIX */
+.clearfix,
+.cf {
+  @include g-clearfix();
+}
+
+/* テキスト方向
+以下のWordpressのリッチテキストエディタが付加するクラス(※)も合わせて設定
+※ .alignleft / .alignright / .aligncenter
+*/
+.txtl,
+.alignleft {
+  text-align: left;
+}
+
+.txtr,
+.alignright {
+  text-align: right;
+}
+
+.txtc,
+.aligncenter {
+  text-align: center;
+}
+
+/* フロート
+Wordpressのリッチテキストエディタが付加するクラス(※)を網羅。
+※ .left / .right / .clear
+*/
+.left {
+  @include float(left);
+  margin-top: 0;
+}
+
+.right {
+  @include float(right);
+  margin-top: 0;
+}
+
+.clear {
+  @include reset-float();
+  clear: both;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+// Emmet Style Helpers
+// http://docs.emmet.io/cheat-sheet/
+
+.posr {
+  position: relative;
+}
+
+.ovh {
+  overflow: hidden;
+}

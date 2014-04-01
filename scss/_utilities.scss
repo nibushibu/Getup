@@ -1,100 +1,25 @@
-
-.collapse,
-.collapse-vertical,
-.collapse-top {
-  margin-top: 0;
-}
-
-.collapse,
-.collapse-vertical,
-.collapse-bottom {
-  margin-bottom: 0;
-}
-
-.collapse,
-.collapse-horizontal,
-.collapse-left {
-  margin-left: 0;
-}
-
-.collapse,
-.collapse-horizontal,
-.collapse-right {
-  margin-right: 0;
-}
-
-.separate,
-.separate-top,
-.separate-vertical {
-  margin-top: 10px;
-}
-
-.separate,
-.separate-bottom,
-.separate-vertical {
-  margin-bottom: 10px;
-}
-
-.separate,
-.separate-left,
-.separate-horizontal {
-  margin-left: 10px;
-}
-
-.separate,
-.separate-right,
-.separate-horizontal {
-  margin-right: 10px;
-}
-
-/* CLEARFIX */
-.clearfix,
-.cf {
-  @include g-clearfix();
-}
-
-/* テキスト方向
-以下のWordpressのリッチテキストエディタが付加するクラス(※)も合わせて設定
-※ .alignleft / .alignright / .aligncenter
+/*
+画像置換 (Alternative Image)
+高さはPadding-topかpadding-bottomdで設定する。
 */
-.txtl,
-.alignleft {
-  text-align: left;
+.alt-img {
+  @include alt-img;
 }
 
-.txtr,
-.alignright {
-  text-align: right;
-}
+// ボックスリンク
+.link-box {
+  color: $base-text-color;
+  cursor: pointer;
 
-.txtc,
-.aligncenter {
-  text-align: center;
-}
+  &:hover {
+    text-decoration: none;
 
-/* フロート
-Wordpressのリッチテキストエディタが付加するクラス(※)を網羅。
-※ .left / .right / .clear
-*/
-.left {
-  @include float(left);
-  margin-top: 0;
-}
+    .link-box-link {
+      text-decoration: underline;
+    }
+  }
 
-.right {
-  @include float(right);
-  margin-top: 0;
-}
-
-.clear {
-  @include reset-float();
-  clear: both;
-}
-
-.hide {
-  display: none;
-}
-
-.show {
-  display: block;
+  .link-box-link {
+    color: $base-link-color;
+  }
 }
