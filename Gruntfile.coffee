@@ -1,5 +1,24 @@
 module.exports = (grunt) ->
 
+  # ライセンスコメントを残した圧縮
+  # http://qiita.com/shinnn/items/57327006390f2181f550
+  licenseRegexp = /^\!|^@preserve|^@cc_on|\bMIT\b|\bMPL\b|\bGPL\b|\(c\)|License|Copyright/mi
+
+  isLicenseComment = do ->
+    _prevCommentLine = 0
+
+    (node, comment) ->
+      if licenseRegexp.test(comment.value) or
+      comment.line is 1 or
+      comment.line is _prevCommentLine + 1
+
+        _prevCommentLine = comment.line
+        return true
+
+      _prevCommentLine = 0
+      false
+
+
   grunt.initConfig
     compass:
       dev:
@@ -27,6 +46,7 @@ module.exports = (grunt) ->
     uglify:
       options:
         mangle: false
+        preserveComments: isLicenseComment
       compress_target:
         files:
           "js/main.js": "js/main.js"
