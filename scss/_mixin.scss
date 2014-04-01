@@ -114,6 +114,11 @@
     display: block;
   }
 
+  table & {
+    // IE11とIE10ではテーブル内のFlaxboxが良からぬ動きをする
+    display: block;
+  }
+
   .lt-ie8 & {
     overflow: visible;
     zoom: 1;
