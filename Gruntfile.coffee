@@ -18,7 +18,6 @@ module.exports = (grunt) ->
       _prevCommentLine = 0
       false
 
-
   grunt.initConfig
     compass:
       dev:
@@ -138,6 +137,14 @@ module.exports = (grunt) ->
           "bower_components/jquery.transit/jquery.transit.js"
         ]
         dest: "js/plugins.js"
+    csso:
+      dynamic_mappings:
+        option:
+          restructure: false
+        expand: true
+        cwd: "css/"
+        src: ['*.css']
+        dest: "css/"
 
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-contrib-compass"
@@ -149,8 +156,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-autoprefixer"
   grunt.loadNpmTasks "grunt-contrib-concat"
   grunt.loadNpmTasks "grunt-contrib-copy"
+  grunt.loadNpmTasks "grunt-csso"
 
   grunt.registerTask "default", ["watch"];
-  grunt.registerTask "min", ["coffee", "uglify", "compass:pro", "autoprefixer"]
+  grunt.registerTask "min", ["coffee", "uglify", "compass:pro", "autoprefixer", "csso"]
   grunt.registerTask "icon", ["webfont"]
   grunt.registerTask "init", ["copy", "concat", "uglify"]
