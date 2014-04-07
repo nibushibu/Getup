@@ -41,8 +41,9 @@ module.exports = (grunt) ->
           bare: true
     autoprefixer:
       single_file:
-        src: "css-dev/main.css"
-        dest: "css/main.css"
+        # src: "css-dev/main.css"
+        # dest: "css/main.css"
+        src: "css/main.css"
     uglify:
       options:
         mangle: false
@@ -54,13 +55,13 @@ module.exports = (grunt) ->
     watch:
       compass:
         files: ["scss/*.scss"]
-        tasks: "compass:dev"
+        tasks: [
+          "compass:dev"
+          "autoprefixer"
+        ]
       coffee:
         files: ["coffee/*.coffee"]
         tasks: "coffee"
-      autoprefixer:
-        files: ["css-dev/main.css"]
-        tasks: "autoprefixer"
       # js:
       #   files: ["js/*.js"]
       #   tasks: "uglify"
@@ -130,7 +131,6 @@ module.exports = (grunt) ->
       #   dest: "scss/bootstrap/"
       #   filter: "isFile"
       #   flatten: true
-
     concat:
       dist:
         src: [
