@@ -6,13 +6,13 @@
   }
 }
 
-.units--offset-top,
-.units--offset {
+.units#{$modifier-prefix}offset-top,
+.units#{$modifier-prefix}offset {
   margin-top: -10px;
 }
 
-.units--offset-bottom,
-.units--offset {
+.units#{$modifier-prefix}offset-bottom,
+.units#{$modifier-prefix}offset {
   margin-bottom: -10px;
 }
 
@@ -20,41 +20,41 @@
   @include unit;
 }
 
-.units--gutter,
-.line--gutter {
+.units#{$modifier-prefix}gutter,
+.line#{$modifier-prefix}gutter {
   @include units--gutter;
 }
 
-// .unit--right, .unit--leftはIE6は非対応
-.unit--left {
+// .uni--right, .unit#{$modifier-prefix}leftはIE6は非対応
+.unit#{$modifier-prefix}left {
   float: left;
 }
 
-.unit--right {
+.unit#{$modifier-prefix}right {
   float: right;
 }
 
 // .units--liquidの中では最後のユニットが残った領域分だけ広がります
 // .units--liquidの中身はfloatで横並びになります。（通常はinline-block）
-.units--liquid,
-.line--liquid {
+.units#{$modifier-prefix}liquid,
+.line#{$modifier-prefix}liquid {
   @include units--liquid;
   // > :last-child {
   //   @include unit-liquid;
   // }
 }
 
-.unit--liquid {
+.unit#{$modifier-prefix}liquid {
   @include unit--liquid;
 }
 
-.units--right,
-.line--right {
+.units#{$modifier-prefix}right,
+.line#{$modifier-prefix}right {
   @include units--right;
 }
 
-.units--right-order,
-.line--right-order {
+.units#{$modifier-prefix}right-order,
+.line#{$modifier-prefix}right-order {
   @include units--right-order;
 }
 
