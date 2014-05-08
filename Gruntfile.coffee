@@ -34,7 +34,7 @@ module.exports = (grunt) ->
         expand: true
         flatten: true
         src: ["coffee/*.coffee"]
-        dest: "js/"
+        dest: "public/js/"
         ext: ".js"
         options:
           bare: true
@@ -42,15 +42,15 @@ module.exports = (grunt) ->
       single_file:
         # src: "css-dev/main.css"
         # dest: "css/main.css"
-        src: "css/main.css"
+        src: "public/css/main.css"
     uglify:
       options:
         mangle: false
         preserveComments: isLicenseComment
       compress_target:
         files:
-          "js/main.js": "js/main.js"
-          "js/vendor/modernizr.min.js": "bower_components/modernizr/modernizr.js"
+          "public/js/main.js": "public/js/main.js"
+          "public/js/vendor/modernizr.min.js": "bower_components/modernizr/modernizr.js"
     watch:
       compass:
         files: ["scss/*.scss"]
@@ -66,8 +66,8 @@ module.exports = (grunt) ->
       #   tasks: "uglify"
     webfont:
       icon:
-        src: "fonts/svg/*.svg"
-        dest: "fonts/"
+        src: "public/fonts/svg/*.svg"
+        dest: "public/fonts/"
         destCss: "scss/"
         options:
           font: "icon"
@@ -101,7 +101,7 @@ module.exports = (grunt) ->
           "bower_components/jquery/jquery.min.js"
           "bower_components/box-sizing-polyfill/boxsizing.htc"
         ]
-        dest: "js/vendor/"
+        dest: "public/js/vendor/"
         filter: "isFile"
       normalizecss:
         src: "bower_components/normalize-css/normalize.css"
@@ -113,7 +113,7 @@ module.exports = (grunt) ->
         expand: true
         cwd: "bower_components/font-awesome/fonts/"
         src: "**"
-        dest: "fonts/"
+        dest: "public/fonts/"
         filter: "isFile"
         flatten: true
       fontAwesomeSCSS:
@@ -134,15 +134,15 @@ module.exports = (grunt) ->
       dist:
         src: [
           "js/plugins-base.js"
-          "bower_components/jquery.transit/jquery.transit.js"
+          "bower_components/jquery.transit/site/jquery.transit-0.9.9.min.js"
         ]
-        dest: "js/plugins.js"
+        dest: "public/js/plugins.js"
     csso:
       dynamic_mappings:
-        option:
+        options:
           restructure: false
         expand: true
-        cwd: "css/"
+        cwd: "public/css/"
         src: ['*.css']
         dest: "css/"
 

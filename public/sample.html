@@ -1,10 +1,9 @@
 <!DOCTYPE HTML>
-<!--[if lt IE 7]>      <html class="no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie11 lt-ie10 lt-ie9"> <![endif]-->
-<!--[if IE 9]>         <html class="no-js lt-ie11 lt-ie10"> <![endif]-->
-<!--[if IE 10]>        <html class="no-js lt-ie11"> <![endif]-->
-<!--[if gt IE 11]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="UTF-8">
     <title>Getup.css サンプル</title>
@@ -12,6 +11,35 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/vendor/modernizr.min.js"></script>
+    <style>
+      /////////////////////////////////
+      // サンプル用
+      pre strong, dt strong{color: #0B8C8F;}
+      pre{padding: 20px;background-color: #FCF8BC;overflow:auto;width:auto;}
+      .line{background-color:#e2e2e2;}
+      .size1of1{background-color:pink;}
+      .size1of2{background-color:red;}
+      .size1of3{background-color:orange;}
+      .size2of3{background-color:yellow;}
+      .size1of4{background-color:lime;}
+      .size3of4{background-color:green;}
+      .size1of5{background-color:aqua;}
+      .size2of5{background-color:blue;}
+      .size3of5{background-color:purple;}
+      .size4of5{background-color:magenta;}
+      .size1of6{background-color:teal;}
+      .size5of6{background-color:fuchsia;}
+      .mod{background-color:#afbcda;}
+      .alt-img-sample{background:url(http://quickimage.it/300x50&text=Image+Replacement) left top no-repeat;height:50px;width: 300px;}
+      .box{background:#fff;border: 1px solid #aaa;}
+      .size-1 {width: 200px;}
+
+      code {
+        background-color: #d2d2d2;
+        border-radius: 3px;
+        padding: 2px 5px;
+      }
+    </style>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -444,8 +472,8 @@
         <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
       </p>
       <p>
-        <input type="submit" class="btn" />
-        <input type="reset" class="btn" />
+        <input type="submit" class="btn" value="送信" />
+        <input type="reset" class="btn" value="リセット" />
         <button class="btn">button タグ</button>
       </p>
     </form>
@@ -522,6 +550,14 @@
       <li>Phasellus iaculis</li>
       <li>Nulla volutpat</li>
     </ul>
+
+    <dl>
+      <dt>定義済リスト
+        <dd>アイテム</dd>
+        <dd>アイテム</dd>
+        <dd>アイテム</dd>
+      </dt>
+    </dl>
 
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/plugins.js"></script>

@@ -1,8 +1,8 @@
-http_path = "/"
-css_dir = "css"
+http_path = "public/"
+css_dir = "public/css"
 sass_dir = "scss"
-images_dir = "img"
-javascripts_dir = "js"
+images_dir = "public/img"
+javascripts_dir = "public/js"
 output_style = (environment == :production) ? :compressed : :expanded
 line_comments = (environment == :production) ? false : true
 # forcecompile = (environment == :production) ? true : false
