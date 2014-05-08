@@ -1,15 +1,27 @@
 @charset "utf-8";
 
+///////////////////////////////////////
+// 設定
+///////////////////////////////////////
+
+$modifier-prefix: "--";
+$element-prefix: "__";
+$default-side-margin: no;
+
+// boxsizing.htcへのパス（スラッシュ始まり）
+$box-sizing-path: "/js/vendor/boxsizing.htc" !default;
+
+// 基本テキストサイズ
+$base-text-size: 13px !default;
+
 // 基本テキストカラー
-$base-text-color: #333;
+$base-text-color: #333 !default;
 
 // 基本リンクテキストカラー
-$base-link-color: #074ae2;
+$base-link-color: #074ae2 !default;
 
 // タブレットサイズ
-$screen-tablet: 720px;
+$screen-tablet: 720px !default;
 
 // モバイルサイズ
-$screen-mobile: 480px;
-
-$gray-1: #dcdcdc;
+$screen-mobile: 480px !default;

@@ -83,18 +83,17 @@
 @mixin alt-img {
   @include inline-block();
   overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
+  height: 0;
+  // text-indent: 100%;
+  // white-space: nowrap;
 
   a {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
   }
-
 
   // 印刷時に画像置換をキャンセルする場合には以下を有効化する
   // @media screen {
-  //   padding: 0 !important;
   //   width: auto !important;
   //   height: auto !important;
   //   background-image: none !important;

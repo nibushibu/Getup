@@ -57,6 +57,7 @@ module.exports = (grunt) ->
         tasks: [
           "compass:dev"
           "autoprefixer"
+          # "kss"
         ]
       coffee:
         files: ["coffee/*.coffee"]
@@ -144,7 +145,17 @@ module.exports = (grunt) ->
         expand: true
         cwd: "public/css/"
         src: ['*.css']
-        dest: "css/"
+        dest: "public/css/"
+    # KSS styleguide generator for grunt.
+    kss:
+      options:
+        includeType: 'css'
+        includePath: 'public/css/main.css'
+        template: 'docs/template'
+      dist:
+        files:
+          # dest : src
+          'docs/styleguide': ['scss']
 
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-contrib-compass"
@@ -157,8 +168,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-concat"
   grunt.loadNpmTasks "grunt-contrib-copy"
   grunt.loadNpmTasks "grunt-csso"
+  grunt.loadNpmTasks 'grunt-kss'
 
   grunt.registerTask "default", ["watch"];
-  grunt.registerTask "min", ["coffee", "uglify", "compass:pro", "autoprefixer", "csso"]
+  grunt.registerTask "min", ["coffee", "uglify", "compass:pro", "autoprefixer", "csso", "kss"]
   grunt.registerTask "icon", ["webfont"]
   grunt.registerTask "init", ["copy", "concat", "uglify"]

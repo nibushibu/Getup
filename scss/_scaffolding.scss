@@ -1,6 +1,73 @@
+// 見出し
+//
+// Markup:
+// <h1>h1テキスト</h1>
+// <h2>h2テキスト</h2>
+// <h3>h3テキスト</h3>
+// <h4>h4テキスト</h4>
+// <h5>h5テキスト</h5>
+// <h6>h6テキスト</h6>
+//
+// Styleguide 1
+
+// リスト
+//
+// Markup:
+// <ul class="{$modifiers}">
+//   <li>リストアイテム</li>
+//   <li>リストアイテム</li>
+//   <li>リストアイテム
+//     <ul class="{$modifiers}">
+//       <li>子リストアイテム</li>
+//       <li>子リストアイテム</li>
+//       <li>子リストアイテム</li>
+//     </ul>
+//   </li>
+// </ul>
+//
+// .square - .squareクラス
+// .circle - .circleクラス
+// .disc - .discクラス
+// .list-unstyled - list-unstyledクラス（Bootstrap参考）
+// .list-inline - list-inlineクラス（Bootstrap参考）
+//
+// Styleguide 2
+
+// 数字リスト
+//
+// Markup:
+// <ol>
+//   <li>アイテム</li>
+//   <li>アイテム</li>
+//   <li>アイテム
+//     <ol>
+//       <li>子アイテム</li>
+//       <li>子アイテム</li>
+//       <li>子アイテム</li>
+//     </ol>
+//   </li>
+// </ol>
+//
+// Styleguide 2.1
+
+// 定義済リスト
+//
+// デフォルトの定義済みリスト
+//
+// Markup:
+// <dl>
+//   <dt>定義済みリスト
+//     <dd>アイテム</dd>
+//     <dd>アイテム</dd>
+//     <dd>アイテム</dd>
+//   </dt>
+// </dl>
+//
+// Styleguide 2.2
+
 html {
   color: $base-text-color;
-  font-size: 81.25%;// →13px
+  font-size: $base-text-size;
   font-family: "Lucida Grande", Arial, sans-serif;
   line-height: 1.5;
   // text-rendering: optimizeLegibility;// text-renderingプロパティ 参考:http://terkel.jp/archives/2012/09/text-rendering-optimizelegibility/
@@ -34,9 +101,14 @@ ol,
 dl,
 p,
 blockquote,
+pre,
 .data,
 .mod {
-  margin: 10px;
+  @if $default-side-margin == no {
+    margin: 10px 0;
+  } @else {
+    margin: 10px;
+  }
 }
 
 h1,
@@ -51,29 +123,6 @@ h6 {
   &.condenced {
     margin-top: 10px;
   }
-}
-
-pre {
-  margin: 10px;
-}
-
-table h1,
-table h2,
-table h3,
-table h4,
-table h5,
-table h6,
-table p,
-table ul,
-table ol,
-table dl,
-ul ul,
-ul ol,
-ul dl,
-ol ul,
-ol ol,
-ol dl {
-  margin: 0;
 }
 
 h1 {
@@ -100,15 +149,32 @@ h6 {
   font-size: 1em;// 13px
 }
 
+table h1,
+table h2,
+table h3,
+table h4,
+table h5,
+table h6,
+table p,
+table ul,
+table ol,
+table dl,
+ul ul,
+ul ol,
+ul dl,
+ol ul,
+ol ol,
+ol dl {
+  margin: 0;
+}
+
 a {
   color: $base-link-color;
   text-decoration: none;
-  // &:visited {
-  //   color: darken($base-link-color, 10%);
-  // }
+
   &:hover,
   &:active {
-    // color: lighten($base-link-color, 10%);
+    color: lighten($base-link-color, 10%);
     text-decoration: underline;
   }
 }
@@ -167,16 +233,12 @@ ol ul {
   }
 }
 
-dl {
-  margin-bottom: .833em;
-}
-
 dt {
   font-weight: bold;
 }
 
 dd {
-  margin-left: 1.667em;
+  margin-left: 1.5em;
 }
 
 q,
@@ -209,7 +271,7 @@ small {
 
 pre,
 code {
-  font-size: 1.2em;
+  // font-size: 1.2em;
   font-family: monospace;
 }
 
@@ -220,10 +282,6 @@ pre {
 
 code {
   line-height: 1;
-}
-
-.caps {
-  text-transform: uppercase;
 }
 
 pre,

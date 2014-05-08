@@ -21,6 +21,7 @@
     "grunt-text-replace": "*",
     "grunt-contrib-concat": "*",
     "grunt-contrib-copy": "*",
-    "grunt-csso": "^0.6.1"
+    "grunt-csso": "^0.6.1",
+    "grunt-kss": "^0.3.1"
   }
 }

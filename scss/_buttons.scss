@@ -1,3 +1,15 @@
+// ボタン
+//
+// 汎用するボタンクラス。Formとかにも使用。
+//
+// Markup:
+// <button class="btn {$modifiers}">ボタン</button>
+// <button class="btn {$modifiers}" disabled="disabled">ボタン</button>
+//
+// .disabled - Disabled
+//
+// Styleguide 3
+
 .btn {
   @include inline-block();
   @include single-text-shadow(0 1px 1px rgba(255, 255, 255, 0.75));
