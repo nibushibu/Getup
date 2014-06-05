@@ -71,15 +71,15 @@ module.exports = (grunt) ->
         dest: "public/fonts/"
         destCss: "scss/"
         options:
-          font: "icon"
+          font: "my-icon"
           stylesheet: "scss"
           htmlDemo: true
           syntax: "bem"
           relativeFontPath: "../fonts/"
           templateOptions:
-            baseClass: 'icon',
-            classPrefix: 'icon--',
-            mixinPrefix: 'icon-'
+            baseClass: 'my-icon',
+            classPrefix: 'my-icon--',
+            mixinPrefix: 'my-icon-'
     # replace:
     #   dist:
     #     src: ["scss/_icon.scss"]

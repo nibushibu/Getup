@@ -22,8 +22,8 @@
      url('../font/entypo-social.svg#entypo-social') format('svg');
 }
 
-.icon--entypo {
-  @extend .icon;
+.entypo {
+  @extend .my-icon;
   text-decoration: none;
   font-size: 2em;
   font-family: "entypo";
@@ -42,8 +42,8 @@
   }
 }
 
-.icon--entypo-social {
-  @extend .icon;
+.entypo-social {
+  @extend .my-icon;
   text-decoration: none;
   font-size: 2.5em;
   font-family: "entypo-social";
