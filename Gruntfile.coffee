@@ -136,6 +136,7 @@ module.exports = (grunt) ->
         src: [
           "js/plugins-base.js"
           "bower_components/jquery.transit/site/jquery.transit-0.9.9.min.js"
+          "bower_components/respond/dest/respond.min.js"
         ]
         dest: "public/js/plugins.js"
     csso:
