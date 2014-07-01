@@ -17,10 +17,12 @@
     "jquery": "1",
     "modernizr": "*",
     "jquery.transit": "*",
-    "normalize-css": "1",
+    "normalize-css": "*",
     "font-awesome": "*",
     "animate.css": "*",
     "box-sizing-polyfill": "*",
-    "bootstrap-sass-official": "*"
-  }
+    "bootstrap-sass-official": "*",
+    "respond": "*"
+  },
+  "devDependencies": {}
 }
