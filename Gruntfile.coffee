@@ -157,6 +157,12 @@ module.exports = (grunt) ->
         files:
           # dest : src
           'docs/styleguide': ['scss']
+    cssshrink:
+      target:
+        src: "public/css/*.css"
+        dest: "public/css/"
+
+
 
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-contrib-compass"
@@ -168,10 +174,11 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-autoprefixer"
   grunt.loadNpmTasks "grunt-contrib-concat"
   grunt.loadNpmTasks "grunt-contrib-copy"
-  grunt.loadNpmTasks "grunt-csso"
+  # grunt.loadNpmTasks "grunt-csso"
   grunt.loadNpmTasks 'grunt-kss'
+  grunt.loadNpmTasks 'grunt-cssshrink'
 
   grunt.registerTask "default", ["watch"];
-  grunt.registerTask "min", ["coffee", "uglify", "compass:pro", "autoprefixer", "csso", "kss"]
+  grunt.registerTask "min", ["coffee", "uglify", "compass:pro", "autoprefixer", "cssshrink", "kss"]
   grunt.registerTask "icon", ["webfont"]
   grunt.registerTask "init", ["copy", "concat", "uglify"]
