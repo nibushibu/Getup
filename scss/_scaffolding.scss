@@ -66,15 +66,11 @@
 // Styleguide 2.2
 
 html {
-  color: $base-text-color;
-  font-size: $base-text-size;
-  font-family: "Lucida Grande", Arial, sans-serif;
+  color: $text-color;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
   line-height: 1.5;
   // text-rendering: optimizeLegibility;// text-renderingプロパティ 参考:http://terkel.jp/archives/2012/09/text-rendering-optimizelegibility/
-}
-
-.lt-ie9 {
-  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
 }
 
 ::-moz-selection {
@@ -102,6 +98,7 @@ dl,
 p,
 blockquote,
 pre,
+figure,
 .data,
 .mod {
   @if $default-side-margin == no {
@@ -125,30 +122,6 @@ h6 {
   }
 }
 
-h1 {
-  font-size: 1.84615384615385em;// 24px
-}
-
-h2 {
-  font-size: 1.53846153846154em;// 20px
-}
-
-h3 {
-  font-size: 1.38461538461538em;// 18px
-}
-
-h4 {
-  font-size: 1.23076923076923em;// 16px
-}
-
-h5 {
-  font-size: 1.07692307692308em;// 14px
-}
-
-h6 {
-  font-size: 1em;// 13px
-}
-
 table h1,
 table h2,
 table h3,
@@ -169,35 +142,15 @@ ol dl {
 }
 
 a {
-  color: $base-link-color;
+  color: $link-color;
   text-decoration: none;
 
   &:hover,
   &:active {
-    color: lighten($base-link-color, 10%);
+    // style.cssのスタイルに勝つことがあるので無効化
+    // color: lighten($link-color, 10%);
     text-decoration: underline;
   }
-}
-
-ul {
-  list-style-position: outside;
-}
-
-ol {
-  list-style: decimal;
-}
-
-ul,
-ol,
-.square,
-.circle,
-.disc {
-  padding-left: 2em;
-}
-
-ul ul,
-ol ul {
-  list-style-type: disc;
 }
 
 .square {
@@ -231,76 +184,6 @@ ol ul {
     @include inline-block;
     padding-right: 10px;
   }
-}
-
-dt {
-  font-weight: bold;
-}
-
-dd {
-  margin-left: 1.5em;
-}
-
-q,
-i,
-em,
-cite {
-  font-weight: inherit;
-  font-style: italic;
-}
-
-b,
-strong {
-  font-weight: bold;
-  font-style: inherit;
-}
-
-mark {
-  background: #ffc;
-}
-
-s,
-del {
-  text-decoration: line-through;
-}
-
-small {
-  font-size: 0.9em;
-  line-height: 1;
-}
-
-pre,
-code {
-  // font-size: 1.2em;
-  font-family: monospace;
-}
-
-pre {
-  overflow: auto;
-  line-height: 1;
-}
-
-code {
-  line-height: 1;
-}
-
-pre,
-code,
-kbd,
-samp,
-tt {
-  font-family: monospace;
-  line-height: 100%;
-  *font-size: 108%;
-}
-
-hr {
-  display: block;
-  margin: 1em 0;
-  padding: 0;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
 }
 
 img {
