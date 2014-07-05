@@ -9,19 +9,20 @@
   "author": "Genki Katsutani",
   "license": "MIT",
   "devDependencies": {
-    "js2coffee": "*",
     "grunt": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-compass": "*",
-    "grunt-contrib-coffee": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-webfont": "*",
-    "grunt-imageoptim": "*",
     "grunt-autoprefixer": "*",
-    "grunt-text-replace": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-compass": "*",
     "grunt-contrib-concat": "*",
     "grunt-contrib-copy": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
     "grunt-csso": "^0.6.1",
-    "grunt-kss": "^0.3.1"
+    "grunt-cssshrink": "0.0.5",
+    "grunt-imageoptim": "*",
+    "grunt-kss": "^0.3.1",
+    "grunt-text-replace": "*",
+    "grunt-webfont": "*",
+    "js2coffee": "*"
   }
 }
