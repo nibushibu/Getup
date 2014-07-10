@@ -12,16 +12,23 @@ $default-side-margin: no;
 $box-sizing-path: "/js/vendor/boxsizing.htc" !default;
 
 // 基本テキストサイズ
-$base-text-size: 13px !default;
+$font-size-base: 13px !default;
 
 // 基本テキストカラー
-$base-text-color: #333 !default;
+$text-color: #333 !default;
 
 // 基本リンクテキストカラー
-$base-link-color: #074ae2 !default;
+$link-color: #074ae2 !default;
 
 // タブレットサイズ
 $screen-tablet: 720px !default;
 
 // モバイルサイズ
 $screen-mobile: 480px !default;
+
+// フォント設定
+$font-family-sans-serif:  'Hiragino Kaku Gothic ProN', Meiryo, sans-serif !default;
+// $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+// $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
