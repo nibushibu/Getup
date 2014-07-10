@@ -8,7 +8,7 @@
 
 // ボックスリンク
 .link-box {
-  color: $base-text-color;
+  color: $text-color;
   cursor: pointer;
 
   &:hover {
@@ -20,7 +20,7 @@
   }
 
   .link-box-link {
-    color: $base-link-color;
+    color: $link-color;
   }
 }
 
