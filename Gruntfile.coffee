@@ -51,6 +51,7 @@ module.exports = (grunt) ->
         files:
           "public/js/main.js": "public/js/main.js"
           "public/js/vendor/modernizr.min.js": "bower_components/modernizr/modernizr.js"
+          "public/js/plugins.js": "public/js/plugins.js"
     watch:
       compass:
         files: ["scss/*.scss"]
@@ -135,7 +136,7 @@ module.exports = (grunt) ->
       dist:
         src: [
           "js/plugins-base.js"
-          "bower_components/jquery.transit/site/jquery.transit-0.9.9.min.js"
+          "bower_components/jquery.transit/jquery.transit.js"
           "bower_components/respond/dest/respond.min.js"
         ]
         dest: "public/js/plugins.js"
