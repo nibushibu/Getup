@@ -72,13 +72,18 @@ gulp.task('symbols', function(){
 
 gulp.task('compass', function() {
   gulp.src('./scss/*.scss')
-  .pipe(compass({
-    config_file: './config.rb',
-    sass: 'scss',
-    css: 'public/css'
-  }))
-  .pipe(gulp.dest('public/'))
-  .pipe(prefixer('last 2 version'));
+    .pipe(compass({
+      config_file: './config.rb',
+      sass: 'scss',
+      css: 'public/css'
+    }))
+    .pipe(gulp.dest('public/'));
+});
+
+gulp.task('prefixer', function() {
+  gulp.src('./public/css/*.css')
+    .pipe(prefixer())
+    .pipe(gulp.dest('./public/css/'))
 });
 
 gulp.task('coffee', function() {
@@ -131,6 +136,7 @@ gulp.task('watch', function(){
     gulp.watch('*.sketch/Data', ['symbols']);
     gulp.watch('scss/**/*.scss',['compass']);
     gulp.watch('coffee/**/*.coffee',['coffee']);
+    gulp.watch('public/css/*.css', ['prefixer']);
 });
 
 gulp.task('default', ['update', 'watch']);
