@@ -1,0 +1,136 @@
+var gulp = require("gulp");
+var csso = require('gulp-csso');
+var bower = require('gulp-bower');
+var concat = require('gulp-concat');
+var rename = require("gulp-rename");
+var sketch = require("gulp-sketch");
+var coffee = require('gulp-coffee');
+var uglify = require('gulp-uglify');
+var compass = require('gulp-compass');
+var imagemin = require('gulp-imagemin');
+var iconfont = require('gulp-iconfont');
+var uglifyjs = require('gulp-uglifyjs');
+var prefixer = require('gulp-autoprefixer');
+var pngcrush = require('imagemin-pngcrush');
+var consolidate = require('gulp-consolidate');
+
+
+var fontName = 'symbols'; // set name of your symbol font
+var template = 'fontawesome-style'; // you can also choose 'foundation-style'
+
+var isLicenseComment, licenseRegexp;
+licenseRegexp = /^\!|^@preserve|^@cc_on|\bMIT\b|\bMPL\b|\bGPL\b|\(c\)|License|Copyright/mi;
+isLicenseComment = (function() {
+  var _prevCommentLine;
+  _prevCommentLine = 0;
+  return function(node, comment) {
+    if (licenseRegexp.test(comment.value) || comment.line === 1 || comment.line === _prevCommentLine + 1) {
+      _prevCommentLine = comment.line;
+      return true;
+    }
+    _prevCommentLine = 0;
+    return false;
+  };
+})();
+
+
+gulp.task('symbols', function(){
+  gulp.src('symbol-font-14px.sketch') // you can also choose 'symbol-font-16px.sketch'
+    .pipe(sketch({
+      export: 'artboards',
+      formats: 'svg'
+    }))
+    .pipe(iconfont({ fontName: fontName }))
+    .on('codepoints', function(codepoints) {
+      var options = {
+        glyphs: codepoints,
+        fontName: fontName,
+        fontPath: '../fonts/', // set path to font (from your CSS file if relative)
+        className: 's' // set class name in your CSS
+      };
+      gulp.src('templates/' + template + '.css')
+        .pipe(consolidate('lodash', options))
+        .pipe(rename({ basename:fontName }))
+        .pipe(gulp.dest('symbols/css/')) // set path to export your CSS
+        .pipe(rename({
+          basename:fontName,
+          prefix:'_',
+          extname:'.scss'
+        }))
+        .pipe(gulp.dest('scss/'))
+
+      // if you don't need sample.html, remove next 4 lines
+      gulp.src('templates/' + template + '.html')
+        .pipe(consolidate('lodash', options))
+        .pipe(rename({ basename:'sample' }))
+        .pipe(gulp.dest('symbols/')); // set path to export your sample HTML
+
+    })
+    .pipe(gulp.dest('symbols/fonts/')) // set path to export your fonts
+    .pipe(gulp.dest('public/fonts/')); // set path to export your fonts
+});
+
+gulp.task('compass', function() {
+  gulp.src('./scss/*.scss')
+  .pipe(compass({
+    config_file: './config.rb',
+    sass: 'scss',
+    css: 'public/css'
+  }))
+  .pipe(gulp.dest('public/'))
+  .pipe(prefixer('last 2 version'));
+});
+
+gulp.task('coffee', function() {
+  gulp.src('./coffee/*.coffee')
+    .pipe(coffee({bare: true}))
+    .pipe(gulp.dest('./public/js/'));
+});
+
+gulp.task('min', function(){
+  gulp.src('./public/css/*.css')
+    .pipe(csso(false))
+    .pipe(gulp.dest('./public/css/'));
+  gulp.src('./public/img/*')
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngcrush()]
+    }))
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('update', function() {
+  return bower()
+    .pipe(gulp.dest('./bower_components/'));
+  gulp.src([
+    "bower_components/dist/jquery.min.js",
+    "bower_components/box-sizing-polyfill/boxsizing.htc",
+    "bower_components/modernizr/modernizr.js"
+  ])
+    .pipe(gulp.dest('public/js/vendor/'));
+  gulp.src('public/js/vendor/modernizr.js')
+    .pipe(uglify({
+      mangle: false,
+      preserveComments:isLicenseComment
+    }))
+    .pipe(rename({suffix:'.min'}))
+    .pipe(gulp.dest('public/js/vendor/'));
+  gulp.src([
+    "js/plugins-base.js",
+    "bower_components/jquery.transit/jquery.transit.js"
+    ])
+    .pipe(concat('plugins.js',{base: './'}))
+    .pipe(uglify({
+      mangle: false,
+      preserveComments:isLicenseComment
+    }))
+});
+
+gulp.task('watch', function(){
+    gulp.watch('*.sketch/Data', ['symbols']);
+    gulp.watch('scss/**/*.scss',['compass']);
+    gulp.watch('coffee/**/*.coffee',['coffee']);
+});
+
+gulp.task('default', ['update', 'watch']);
