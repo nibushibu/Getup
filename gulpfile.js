@@ -91,13 +91,13 @@ gulp.task('min', function(){
   gulp.src('./public/css/*.css')
     .pipe(csso(false))
     .pipe(gulp.dest('./public/css/'));
-  gulp.src('./public/img/*')
+  gulp.src('./public/img/sprite-*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
       use: [pngcrush()]
     }))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('./public/img/'));
 });
 
 gulp.task('update', function() {
