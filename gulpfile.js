@@ -79,7 +79,6 @@ gulp.task('compass', function() {
       sass: 'scss',
       css: 'public/css'
     }))
-    .pipe(gulp.dest('public/'));
 });
 
 gulp.task('prefixer', function() {
@@ -103,14 +102,14 @@ gulp.task('min', function(){
       mangle: false,
       preserveComments:isLicenseComment
     }))
-    .pipe(gulp.dest('./public/js/*.js'))
+    .pipe(gulp.dest('./public/js/'))
   gulp.src('./public/img/sprite-*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],
       use: [pngcrush()]
     }))
-    .pipe(gulp.dest('./public/js/'));
+    .pipe(gulp.dest('./public/img/'));
 });
 
 gulp.task('bower', function() {
