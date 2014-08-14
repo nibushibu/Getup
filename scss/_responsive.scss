@@ -10,6 +10,10 @@
     display: block;
   }
 
+  .show-inline-breakpoint-1 {
+    display: inline;
+  }
+
   .hide-breakpoint-1 {
     display: none;
   }
@@ -44,6 +48,10 @@
 
   .show-breakpoint-2 {
     display: block;
+  }
+
+  .show-inline-breakpoint-2 {
+    display: inline;
   }
 
   .hide-breakpoint-2 {
