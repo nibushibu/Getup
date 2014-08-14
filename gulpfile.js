@@ -9,11 +9,10 @@ var sketch = require("gulp-sketch");
 var coffee = require('gulp-coffee');
 var uglify = require('gulp-uglify');
 var compass = require('gulp-compass');
-var imagemin = require('gulp-imagemin');
+var pngmin = require('gulp-pngmin');
 var iconfont = require('gulp-iconfont');
 var uglifyjs = require('gulp-uglifyjs');
 var prefixer = require('gulp-autoprefixer');
-var pngcrush = require('imagemin-pngcrush');
 var consolidate = require('gulp-consolidate');
 
 
@@ -104,11 +103,7 @@ gulp.task('min', function(){
     }))
     .pipe(gulp.dest('./public/js/'))
   gulp.src('./public/img/sprite-*')
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
-      use: [pngcrush()]
-    }))
+    .pipe(pngmin())
     .pipe(gulp.dest('./public/img/'));
 });
 
