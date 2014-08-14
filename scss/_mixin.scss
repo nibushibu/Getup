@@ -153,6 +153,8 @@
 
 @mixin unit--vertical {
   // @include box-flex(1 1 100%);
+  padding-left: 0;
+  padding-right: 0;
   width: 100%;
 }
 
@@ -165,6 +167,8 @@
   // @include g-align-items(stretch);
   // @include g-align-content(flex-start);
   display: block;
+  margin-left: 0;
+  margin-right: 0;
   > * {
     @include unit--vertical;
   }
