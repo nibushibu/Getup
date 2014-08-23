@@ -1,37 +1,23 @@
 @charset "utf-8";
 
 /////////////////////////////////////////////////
-// flexbox関連
+// flexbox
 
   @mixin g-flex {
-    @include display-box;
-    @include experimental-value(display, flex, -moz, -webkit, not -o, -ms, not -khtml, official);
+    @include display-flex;
+    // @include experimental-value(display, flex, -moz, -webkit, not -o, -ms, not -khtml, official);
   }
 
   $g-default-flex-direction: row;
   @mixin g-flex-direction($direction: $g-default-flex-direction) {
-    @include experimental(flex-direction, $direction, -moz, -webkit, not -o, -ms, not -khtml, official);
-    @if $direction == row {
-      @include box-orient(horizontal);
-    } @else if $direction == column {
-      @include box-orient(vertical);
-    } @else if $direction == row-reverse {
-      @include box-orient(horizontal);
-      @include box-direction(reverse);
-    } @else if $direction == column-reverse {
-      @include box-orient(vertical);
-      @include box-direction(reverse);
-    }
+    // @include experimental(flex-direction, $direction, -moz, -webkit, not -o, -ms, not -khtml, official);
+    @include flex-direction($direction);
   }
 
   $g-default-flex-wrap: wrap;
   @mixin g-flex-wrap($wrap: $g-default-flex-wrap) {
-    @include experimental(flex-wrap, $wrap, -moz, -webkit, not -o, -ms, not -khtml, official);
-    @if $wrap == wrap {
-      @include box-lines(multiple);
-    } @else {
-      @include box-lines(single);
-    }
+    // @include experimental(flex-wrap, $wrap, -moz, -webkit, not -o, -ms, not -khtml, official);
+    @include flex-wrap($wrap);
   }
 
   @mixin g-flex-flow($direction: $g-default-flex-direction, $wrap: $g-default-flex-wrap) {
@@ -41,33 +27,20 @@
 
   $g-default-justify-content: flex-start;
   @mixin g-justify-content($justify-content: $g-default-justify-content) {
-    @include experimental(justify-content, $justify-content, -moz, -webkit, not -o, -ms, not -khtml, official);
-    @if $justify-content == flex-start {
-      @include box-pack(start);
-    } @else if $justify-content == flex-end {
-      @include box-pack(end);
-    } @else if $justify-content == center {
-      @include box-pack(center);
-    }
+    // @include experimental(justify-content, $justify-content, -moz, -webkit, not -o, -ms, not -khtml, official);
+    @include justify-content($justify-content);
   }
 
   $g-default-align-items: stretch;
   @mixin g-align-items($align-items: $g-default-align-items){
-    @include experimental(align-items, $align-items, -moz, -webkit, not -o, -ms, not -khtml, official);
-    @if $align-items == stretch {
-      @include box-align(stretch);
-    } @else if $align-items == flex-start {
-      @include box-align(start);
-    } @else if $align-items == fles-end {
-      @include box-align(end);
-    } @else {
-      @include box-align($align-items);
-    }
+    // @include experimental(align-items, $align-items, -moz, -webkit, not -o, -ms, not -khtml, official);
+    @include align-items($align-items);
   }
 
   $g-default-align-content: flex-start;
   @mixin g-align-content($align-content: $g-default-align-content){
-    @include experimental(align-content, $align-content, -moz, -webkit, not -o, -ms, not -khtml, official);
+    // @include experimental(align-content, $align-content, -moz, -webkit, not -o, -ms, not -khtml, official);
+    @include align-content($aling-content);
   }
 
 @mixin g-clearfix {
