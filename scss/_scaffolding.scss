@@ -71,6 +71,10 @@ html {
   font-family: $font-family-base;
   line-height: 1.5;
   // text-rendering: optimizeLegibility;// text-renderingプロパティ 参考:http://terkel.jp/archives/2012/09/text-rendering-optimizelegibility/
+
+  &.windows {
+    font-family: $font-family-base-windows;
+  }
 }
 
 ::-moz-selection {

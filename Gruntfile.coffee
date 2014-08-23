@@ -90,7 +90,7 @@ module.exports = (grunt) ->
     #       to: ".icon--"
     #     ]
     imageoptim:
-      src: ["img"]
+      src: ["public/img"]
       options:
         jpegMini: false
         imageAlpha: true
@@ -136,8 +136,8 @@ module.exports = (grunt) ->
       dist:
         src: [
           "js/plugins-base.js"
-          "bower_components/jquery.transit/jquery.transit.js"
           "bower_components/respond/dest/respond.min.js"
+          # "bower_components/jquery.transit/jquery.transit.js"
         ]
         dest: "public/js/plugins.js"
     csso:
