@@ -9,24 +9,6 @@
   "author": "Genki Katsutani",
   "license": "MIT",
   "devDependencies": {
-<<<<<<< HEAD
-    "grunt": "*",
-    "grunt-autoprefixer": "*",
-    "grunt-contrib-coffee": "*",
-    "grunt-contrib-compass": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-csso": "^0.6.1",
-    "grunt-cssshrink": "0.0.5",
-    "grunt-imageoptim": "*",
-    "grunt-kss": "^0.3.1",
-    "grunt-text-replace": "*",
-    "grunt-webfont": "*",
-    "js2coffee": "*"
-  }
-=======
     "gulp": "^3.8.6",
     "gulp-autoprefixer": "^0.0.8",
     "gulp-bower": "^0.0.6",
@@ -58,5 +40,4 @@
     "url": "https://github.com/nibushibu/Getup/issues"
   },
   "homepage": "https://github.com/nibushibu/Getup"
->>>>>>> origin/gulp
 }
