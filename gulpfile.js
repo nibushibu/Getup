@@ -131,7 +131,21 @@ gulp.task('modernizr',['copy'],function(){
     .pipe(gulp.dest('public/js/vendor/'));
 });
 
-gulp.task('concat',['modernizr'],function(){
+gulp.task('fa-font', ['modernizr'], function(){
+  return gulp.src([
+    "bower_components/font-awesome/fonts/*"
+  ])
+    .pipe(gulp.dest('public/fonts/'));
+});
+
+gulp.task('fa-scss', ['fa-font'], function(){
+  return gulp.src([
+    "bower_components/font-awesome/scss/_*.scss"
+  ])
+    .pipe(gulp.dest('scss/font-awesome/'));
+});
+
+gulp.task('concat',['fa-scss'],function(){
   gulp.src([
     "js/plugins-base.js",
     "bower_components/jquery.transit/jquery.transit.js"
@@ -146,7 +160,7 @@ gulp.task('concat',['modernizr'],function(){
 
 gulp.task('watch', function(){
     gulp.watch('*.sketch/Data', ['symbols']);
-    gulp.watch('scss/**/*.scss',['compass']);
+    gulp.watch('scss/*.scss',['compass']);
     gulp.watch('coffee/**/*.coffee',['coffee']);
     gulp.watch('public/css/*.css', ['prefixer']);
 });
