@@ -3,45 +3,45 @@
 /////////////////////////////////////////////////
 // flexbox
 
-  @mixin g-flex {
-    @include display-flex;
-    // @include experimental-value(display, flex, -moz, -webkit, not -o, -ms, not -khtml, official);
-  }
+@mixin g-flex {
+  @include display-flex;
+  // @include experimental-value(display, flex, -moz, -webkit, not -o, -ms, not -khtml, official);
+}
 
-  $g-default-flex-direction: row;
-  @mixin g-flex-direction($direction: $g-default-flex-direction) {
-    // @include experimental(flex-direction, $direction, -moz, -webkit, not -o, -ms, not -khtml, official);
-    @include flex-direction($direction);
-  }
+$g-default-flex-direction: row;
+@mixin g-flex-direction($direction: $g-default-flex-direction) {
+  // @include experimental(flex-direction, $direction, -moz, -webkit, not -o, -ms, not -khtml, official);
+  @include flex-direction($direction);
+}
 
-  $g-default-flex-wrap: wrap;
-  @mixin g-flex-wrap($wrap: $g-default-flex-wrap) {
-    // @include experimental(flex-wrap, $wrap, -moz, -webkit, not -o, -ms, not -khtml, official);
-    @include flex-wrap($wrap);
-  }
+$g-default-flex-wrap: wrap;
+@mixin g-flex-wrap($wrap: $g-default-flex-wrap) {
+  // @include experimental(flex-wrap, $wrap, -moz, -webkit, not -o, -ms, not -khtml, official);
+  @include flex-wrap($wrap);
+}
 
-  @mixin g-flex-flow($direction: $g-default-flex-direction, $wrap: $g-default-flex-wrap) {
-    @include g-flex-direction($direction);
-    @include g-flex-wrap($wrap);
-  }
+@mixin g-flex-flow($direction: $g-default-flex-direction, $wrap: $g-default-flex-wrap) {
+  @include g-flex-direction($direction);
+  @include g-flex-wrap($wrap);
+}
 
-  $g-default-justify-content: flex-start;
-  @mixin g-justify-content($justify-content: $g-default-justify-content) {
-    // @include experimental(justify-content, $justify-content, -moz, -webkit, not -o, -ms, not -khtml, official);
-    @include justify-content($justify-content);
-  }
+$g-default-justify-content: flex-start;
+@mixin g-justify-content($justify-content: $g-default-justify-content) {
+  // @include experimental(justify-content, $justify-content, -moz, -webkit, not -o, -ms, not -khtml, official);
+  @include justify-content($justify-content);
+}
 
-  $g-default-align-items: stretch;
-  @mixin g-align-items($align-items: $g-default-align-items){
-    // @include experimental(align-items, $align-items, -moz, -webkit, not -o, -ms, not -khtml, official);
-    @include align-items($align-items);
-  }
+$g-default-align-items: stretch;
+@mixin g-align-items($align-items: $g-default-align-items){
+  // @include experimental(align-items, $align-items, -moz, -webkit, not -o, -ms, not -khtml, official);
+  @include align-items($align-items);
+}
 
-  $g-default-align-content: flex-start;
-  @mixin g-align-content($align-content: $g-default-align-content){
-    // @include experimental(align-content, $align-content, -moz, -webkit, not -o, -ms, not -khtml, official);
-    @include align-content($aling-content);
-  }
+$g-default-align-content: flex-start;
+@mixin g-align-content($align-content: $g-default-align-content){
+  // @include experimental(align-content, $align-content, -moz, -webkit, not -o, -ms, not -khtml, official);
+  @include align-content($aling-content);
+}
 
 @mixin g-clearfix {
   @include has-layout;
