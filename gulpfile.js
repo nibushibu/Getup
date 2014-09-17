@@ -14,6 +14,8 @@ var iconfont = require('gulp-iconfont');
 var uglifyjs = require('gulp-uglifyjs');
 var prefixer = require('gulp-autoprefixer');
 var consolidate = require('gulp-consolidate');
+var plumber = require('gulp-plumber');
+
 
 
 var fontName = 'symbols'; // set name of your symbol font
@@ -73,6 +75,7 @@ gulp.task('symbols', function(){
 
 gulp.task('compass', function() {
   gulp.src('./scss/*.scss')
+    .pipe(plumber())
     .pipe(compass({
       config_file: './config.rb',
       sass: 'scss',
@@ -88,6 +91,7 @@ gulp.task('prefixer', function() {
 
 gulp.task('coffee', function() {
   gulp.src('./coffee/*.coffee')
+    .pipe(plumber())
     .pipe(coffee({bare: true}))
     .pipe(gulp.dest('./public/js/'));
 });
