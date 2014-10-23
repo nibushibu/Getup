@@ -9,6 +9,7 @@
   "author": "Genki Katsutani",
   "license": "MIT",
   "devDependencies": {
+    "coffee-script": "^1.8.0",
     "gulp": "^3.8.7",
     "gulp-autoprefixer": "^0.0.8",
     "gulp-bower": "^0.0.6",
@@ -27,7 +28,6 @@
     "gulp-uglifyjs": "^0.4.2",
     "gulp-util": "^3.0.0",
     "gulp-watch": "^0.6.8",
-    "js2coffee": "*",
     "lodash": "^2.4.1"
   },
   "directories": {
