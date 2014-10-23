@@ -1,5 +1,5 @@
 /* タブレットサイズ */
-@media (max-width: $screen-tablet) {
+@media (max-width: map-get($screen-size, tablet)) {
 
   .breakpoint-1,
   .linearize-tablet{
@@ -8,10 +8,6 @@
 
   .show-breakpoint-1 {
     display: block;
-  }
-
-  .show-inline-breakpoint-1 {
-    display: inline;
   }
 
   .hide-breakpoint-1 {
@@ -34,7 +30,7 @@
 }
 
 /* モバイルサイズ */
-@media (max-width: $screen-mobile) {
+@media (max-width: map-get($screen-size, mobile)) {
 
   html {
     font-size: 0.875em;//Mobileではデフォルトのテキストサイズを14pxに
@@ -48,10 +44,6 @@
 
   .show-breakpoint-2 {
     display: block;
-  }
-
-  .show-inline-breakpoint-2 {
-    display: inline;
   }
 
   .hide-breakpoint-2 {

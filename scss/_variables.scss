@@ -20,8 +20,13 @@ $base-text-color: #333 !default;
 // 基本リンクテキストカラー
 $base-link-color: #074ae2 !default;
 
-// タブレットサイズ
-$screen-tablet: 720px !default;
-
-// モバイルサイズ
-$screen-mobile: 480px !default;
+// スクリーンサイズマップ
+$screen-size: (
+  pc: 960px,
+  pc-max: 960px - 1,
+  tablet: 720px,
+  tablet-max: 720px - 1,
+  my-breakpoint-1: 560px,
+  mobile: 480px,
+  mobile-max: 480px - 1
+);
