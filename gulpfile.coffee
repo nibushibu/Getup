@@ -123,7 +123,7 @@ gulp.task "bower", ->
 gulp.task "copy", ["bower"], ->
   gulp
   .src([
-    "bower_components/dist/jquery.min.js"
+    "bower_components/jquery/dist/jquery.min.js"
     "bower_components/box-sizing-polyfill/boxsizing.htc"
     "bower_components/modernizr/modernizr.js"
   ])
