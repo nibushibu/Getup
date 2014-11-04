@@ -102,7 +102,7 @@ gulp.task "coffee", ->
 gulp.task "min", ->
   gulp
   .src("./public/css/*.css")
-  .pipe(csso(false))
+  .pipe(csso(true))
   .pipe gulp.dest("./public/css/")
   gulp
   .src("./public/js/*.js")
