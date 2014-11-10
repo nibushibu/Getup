@@ -1,96 +1,112 @@
 .collapse,
 .collapse-vertical,
-.collapse-top {
+.collapse-top,
+.h-mtn {
   margin-top: 0;
 }
 
 .collapse,
 .collapse-vertical,
-.collapse-bottom {
+.collapse-bottom,
+.h-mbn {
   margin-bottom: 0;
 }
 
 .collapse,
 .collapse-horizontal,
-.collapse-left {
+.collapse-left,
+.h-mln {
   margin-left: 0;
 }
 
 .collapse,
 .collapse-horizontal,
-.collapse-right {
+.collapse-right,
+.h-mrn {
   margin-right: 0;
 }
 
 .separate,
 .separate-top,
-.separate-vertical {
+.separate-vertical,
+.h-mtm {
   margin-top: 10px;
 }
 
 .separate,
 .separate-bottom,
-.separate-vertical {
+.separate-vertical,
+.h-mbm {
   margin-bottom: 10px;
 }
 
 .separate,
 .separate-left,
-.separate-horizontal {
+.separate-horizontal,
+.h-mlm {
   margin-left: 10px;
 }
 
 .separate,
 .separate-right,
-.separate-horizontal {
+.separate-horizontal,
+.h-mrm {
   margin-right: 10px;
 }
 
 .separate-l,
 .separate-top-l,
-.separate-vertical-l {
+.separate-vertical-l,
+.h-mtl {
   margin-top: 20px;
 }
 
 .separate-l,
 .separate-bottom-l,
-.separate-vertical-l {
+.separate-vertical-l,
+.h-mbl {
   margin-bottom: 20px;
 }
 
 .separate-l,
 .separate-left-l,
-.separate-horizontal-l {
+.separate-horizontal-l,
+.h-mll {
   margin-left: 20px;
 }
 
 .separate-l,
 .separate-right-l,
-.separate-horizontal-l {
+.separate-horizontal-l,
+.h-mrl {
   margin-right: 20px;
 }
 
 .separate-s,
 .separate-top-s,
-.separate-vertical-s {
+.separate-vertical-s,
+.h-mts {
   margin-top: 5px;
 }
 
 .separate-s,
 .separate-bottom-s,
-.separate-vertical-s {
+.separate-vertical-s,
+.h-mbs {
   margin-bottom: 5px;
 }
 
 .separate-s,
 .separate-left-s,
-.separate-horizontal-s {
+.separate-horizontal-s,
+.h-mls {
   margin-left: 5px;
 }
 
 .separate-s,
 .separate-right-s,
-.separate-horizontal-s {
+.separate-horizontal-s,
+.h-mrs {
   margin-right: 5px;
 }
 
@@ -105,17 +121,20 @@
 ※ .alignleft / .alignright / .aligncenter
 */
 .txtl,
-.alignleft {
+.alignleft,
+.h-tal {
   text-align: left;
 }
 
 .txtr,
-.alignright {
+.alignright,
+.h-tar {
   text-align: right;
 }
 
 .txtc,
-.aligncenter {
+.aligncenter,
+.h-tac {
   text-align: center;
 }
 
@@ -123,36 +142,43 @@
 Wordpressのリッチテキストエディタが付加するクラス(※)を網羅。
 ※ .left / .right / .clear
 */
-.left {
+.left,
+.h-fll {
   @include float(left);
   margin-top: 0;
 }
 
-.right {
+.right,
+.h-flr {
   @include float(right);
   margin-top: 0;
 }
 
-.clear {
+.clear,
+.h-cl {
   @include reset-float();
   clear: both;
 }
 
-.hide {
+.hide,
+.h-dn {
   display: none;
 }
 
-.show {
+.show,
+.h-db {
   display: block;
 }
 
 // Emmet Style Helpers
 // http://docs.emmet.io/cheat-sheet/
 
-.posr {
+.posr,
+.h-posr {
   position: relative;
 }
 
-.ovh {
+.ovh,
+.h-ovh {
   overflow: hidden;
 }
