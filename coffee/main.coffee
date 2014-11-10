@@ -7,7 +7,8 @@ $ ->
 
   # アンカースクロール
   $("a[href*=#]").click ->
-    if location.pathname.replace(/^\//, "") is @pathname.replace(/^\//, "") and location.hostname is @hostname
+    if location.pathname.replace(/^\//, "") is @pathname.replace(/^\//, "") and
+       location.hostname is @hostname
       $target = $(@hash)
       $target = $target.length and $target or $("[name=" + @hash.slice(1) + "]")
       if $target.length
