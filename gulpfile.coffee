@@ -16,6 +16,8 @@ consolidate = require("gulp-consolidate")
 plumber = require("gulp-plumber")
 fontName = "symbols" # set name of your symbol font
 template = "fontawesome-style" # you can also choose 'foundation-style'
+appPath = "public/"
+
 
 licenseRegexp =
   /^\!|^@preserve|^@cc_on|\bMIT\b|\bMPL\b|\bGPL\b|\(c\)|License|Copyright/i
@@ -74,7 +76,7 @@ gulp.task "symbols", ->
     .pipe gulp.dest("symbols/")
   )
   .pipe(gulp.dest("symbols/fonts/"))
-  .pipe gulp.dest("public/fonts/")
+  .pipe gulp.dest("#{appPath}fonts/")
 
 gulp.task "compass", ->
   gulp
@@ -83,38 +85,38 @@ gulp.task "compass", ->
   .pipe compass(
     config_file: "./config.rb"
     sass: "scss"
-    css: "public/css"
+    css: "#{appPath}css"
   )
 
 gulp.task "prefixer", ->
   gulp
-  .src("./public/css/*.css")
+  .src("./#{appPath}css/*.css")
   .pipe(prefixer())
-  .pipe gulp.dest("./public/css/")
+  .pipe gulp.dest("./#{appPath}css/")
 
 gulp.task "coffee", ->
   gulp
   .src("./coffee/*.coffee")
   .pipe(plumber())
   .pipe(coffee(bare: true))
-  .pipe gulp.dest("./public/js/")
+  .pipe gulp.dest("./#{appPath}js/")
 
 gulp.task "min", ->
   gulp
-  .src("./public/css/*.css")
+  .src("./#{appPath}css/*.css")
   .pipe(csso(true))
-  .pipe gulp.dest("./public/css/")
+  .pipe gulp.dest("./#{appPath}css/")
   gulp
-  .src("./public/js/*.js")
+  .src("./#{appPath}js/*.js")
   .pipe(uglify(
     mangle: false
     preserveComments: isLicenseComment
   ))
-  .pipe gulp.dest("./public/js/")
+  .pipe gulp.dest("./#{appPath}js/")
   gulp
-  .src("./public/img/sprite-*")
+  .src("./#{appPath}img/sprite-*")
   .pipe(pngmin())
-  .pipe gulp.dest("./public/img/")
+  .pipe gulp.dest("./#{appPath}img/")
 
 gulp.task "bower", ->
   bower()
@@ -127,22 +129,22 @@ gulp.task "copy", ["bower"], ->
     "bower_components/box-sizing-polyfill/boxsizing.htc"
     "bower_components/modernizr/modernizr.js"
   ])
-  .pipe gulp.dest("public/js/vendor/")
+  .pipe gulp.dest("#{appPath}js/vendor/")
 
 gulp.task "modernizr", ["copy"], ->
   gulp
-  .src("public/js/vendor/modernizr.js")
+  .src("#{appPath}js/vendor/modernizr.js")
   .pipe(uglify(
     mangle: false
     preserveComments: isLicenseComment
   ))
   .pipe(rename(suffix: ".min"))
-  .pipe gulp.dest("public/js/vendor/")
+  .pipe gulp.dest("#{appPath}js/vendor/")
 
 gulp.task "fa-font", ["modernizr"], ->
   gulp
   .src(["bower_components/font-awesome/fonts/*"])
-  .pipe gulp.dest("public/fonts/")
+  .pipe gulp.dest("#{appPath}fonts/")
 
 gulp.task "fa-scss", ["fa-font"], ->
   gulp
@@ -160,13 +162,13 @@ gulp.task "concat", ["fa-scss"], ->
     mangle: false
     preserveComments: isLicenseComment
   ))
-  .pipe gulp.dest("public/js/")
+  .pipe gulp.dest("#{appPath}js/")
 
 gulp.task "watch", ->
   gulp.watch "*.sketch/Data", ["symbols"]
   gulp.watch "scss/*.scss", ["compass"]
   gulp.watch "coffee/**/*.coffee", ["coffee"]
-  gulp.watch "public/css/*.css", ["prefixer"]
+  gulp.watch "#{appPath}css/*.css", ["prefixer"]
 
 gulp.task "default", [
   "concat"
