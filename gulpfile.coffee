@@ -34,49 +34,56 @@ isLicenseComment = do ->
     false
 
 gulp.task "symbols", ->
-  # you can also choose 'symbol-font-16px.sketch'
-  # set path to font (from your CSS file if relative)
-  # set class name in your CSS
-  # set path to export your CSS
 
-  # if you don't need sample.html, remove next 4 lines
-  # set path to export your sample HTML
-  # set path to export your fonts
+  osType = $.os.type()
+  if osType is 'Darwin'
 
-  gulp
-  .src("symbol-font-14px.sketch")
-  .pipe(sketch( # set path to export your fonts
-    export: "artboards"
-    formats: "svg"
-  ))
-  .pipe(iconfont(fontName: fontName))
-  .on("codepoints", (codepoints) ->
-    options =
-      glyphs: codepoints
-      fontName: fontName
-      fontPath: "../fonts/"
-      className: "s"
+    # =======================================================
+    # もしMac環境だったらSketchファイルからフォントを生成
+    # =======================================================
 
+    # you can also choose 'symbol-font-16px.sketch'
+    # set path to font (from your CSS file if relative)
+    # set class name in your CSS
+    # set path to export your CSS
+
+    # if you don't need sample.html, remove next 4 lines
+    # set path to export your sample HTML
+    # set path to export your fonts
     gulp
-    .src("templates/" + template + ".css")
-    .pipe(consolidate("lodash", options))
-    .pipe(rename(basename: fontName))
-    .pipe(gulp.dest("symbols/css/"))
-    .pipe(rename(
-      basename: fontName
-      prefix: "_"
-      extname: ".scss"
+    .src("symbol-font-14px.sketch")
+    .pipe(sketch( # set path to export your fonts
+      export: "artboards"
+      formats: "svg"
     ))
-    .pipe gulp.dest("scss/")
+    .pipe(iconfont(fontName: fontName))
+    .on("codepoints", (codepoints) ->
+      options =
+        glyphs: codepoints
+        fontName: fontName
+        fontPath: "../fonts/"
+        className: "s"
 
-    gulp
-    .src("templates/" + template + ".html")
-    .pipe(consolidate("lodash", options))
-    .pipe(rename(basename: "sample"))
-    .pipe gulp.dest("symbols/")
-  )
-  .pipe(gulp.dest("symbols/fonts/"))
-  .pipe gulp.dest("#{appPath}fonts/")
+      gulp
+      .src("templates/" + template + ".css")
+      .pipe(consolidate("lodash", options))
+      .pipe(rename(basename: fontName))
+      .pipe(gulp.dest("symbols/css/"))
+      .pipe(rename(
+        basename: fontName
+        prefix: "_"
+        extname: ".scss"
+      ))
+      .pipe gulp.dest("scss/")
+
+      gulp
+      .src("templates/" + template + ".html")
+      .pipe(consolidate("lodash", options))
+      .pipe(rename(basename: "sample"))
+      .pipe gulp.dest("symbols/")
+    )
+    .pipe(gulp.dest("symbols/fonts/"))
+    .pipe gulp.dest("#{appPath}fonts/")
 
 gulp.task "compass", ->
   gulp
