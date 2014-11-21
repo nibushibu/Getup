@@ -24,6 +24,7 @@
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^0.7.2",
     "gulp-sketch": "^0.0.3",
+    "gulp-sourcemaps": "^1.2.8",
     "gulp-uglify": "^0.3.1",
     "gulp-uglifyjs": "^0.4.2",
     "gulp-util": "^3.0.0",

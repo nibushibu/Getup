@@ -13,6 +13,7 @@ iconfont = require("gulp-iconfont")
 uglifyjs = require("gulp-uglifyjs")
 prefixer = require("gulp-autoprefixer")
 consolidate = require("gulp-consolidate")
+sourcemaps = require('gulp-sourcemaps')
 plumber = require("gulp-plumber")
 fontName = "symbols" # set name of your symbol font
 template = "fontawesome-style" # you can also choose 'foundation-style'
@@ -105,7 +106,9 @@ gulp.task "coffee", ->
   gulp
   .src("./coffee/*.coffee")
   .pipe(plumber())
+  .pipe(sourcemaps.init())
   .pipe(coffee(bare: true))
+  .pipe(sourcemaps.write("./"))
   .pipe gulp.dest("./#{appPath}js/")
 
 gulp.task "min", ->
