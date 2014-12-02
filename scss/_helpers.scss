@@ -1,184 +1,217 @@
-.collapse,
-.collapse-vertical,
-.collapse-top,
-.h-mtn {
-  margin-top: 0;
+@mixin helper-class($prefix) {
+
+  .h-#{$prefix}mtn {
+    margin-top: 0;
+  }
+
+  .h-#{$prefix}mbn {
+    margin-bottom: 0;
+  }
+
+  .h-#{$prefix}mln {
+    margin-left: 0;
+  }
+
+  .h-#{$prefix}mrn {
+    margin-right: 0;
+  }
+
+  .h-#{$prefix}mtm {
+    margin-top: 10px;
+  }
+
+  .h-#{$prefix}mbm {
+    margin-bottom: 10px;
+  }
+
+  .h-#{$prefix}mlm {
+    margin-left: 10px;
+  }
+
+  .h-#{$prefix}mrm {
+    margin-right: 10px;
+  }
+
+  .h-#{$prefix}mtl {
+    margin-top: 20px;
+  }
+
+  .h-#{$prefix}mbl {
+    margin-bottom: 20px;
+  }
+
+  .h-#{$prefix}mll {
+    margin-left: 20px;
+  }
+
+  .h-#{$prefix}mrl {
+    margin-right: 20px;
+  }
+
+  .h-#{$prefix}mts {
+    margin-top: 5px;
+  }
+
+  .h-#{$prefix}mbs {
+    margin-bottom: 5px;
+  }
+
+  .h-#{$prefix}mls {
+    margin-left: 5px;
+  }
+
+  .h-#{$prefix}mrs {
+    margin-right: 5px;
+  }
+
+  .h-#{$prefix}ptn {
+    padding-top: 0;
+  }
+
+  .h-#{$prefix}pbn {
+    padding-bottom: 0;
+  }
+
+  .h-#{$prefix}pln {
+    padding-left: 0;
+  }
+
+  .h-#{$prefix}prn {
+    padding-right: 0;
+  }
+
+  .h-#{$prefix}ptm {
+    padding-top: 10px;
+  }
+
+  .h-#{$prefix}pbm {
+    padding-bottom: 10px;
+  }
+
+  .h-#{$prefix}plm {
+    padding-left: 10px;
+  }
+
+  .h-#{$prefix}prm {
+    padding-right: 10px;
+  }
+
+  .h-#{$prefix}ptl {
+    padding-top: 20px;
+  }
+
+  .h-#{$prefix}pbl {
+    padding-bottom: 20px;
+  }
+
+  .h-#{$prefix}pll {
+    padding-left: 20px;
+  }
+
+  .h-#{$prefix}prl {
+    padding-right: 20px;
+  }
+
+  .h-#{$prefix}pts {
+    padding-top: 5px;
+  }
+
+  .h-#{$prefix}pbs {
+    padding-bottom: 5px;
+  }
+
+  .h-#{$prefix}pls {
+    padding-left: 5px;
+  }
+
+  .h-#{$prefix}prs {
+    padding-right: 5px;
+  }
+
+  /* CLEARFIX */
+  .clearfix,
+  .cf {
+    @include g-clearfix();
+  }
+
+  /* テキスト方向
+  以下のWordpressのリッチテキストエディタが付加するクラス(※)も合わせて設定
+  ※ .alignleft / .alignright / .aligncenter
+  */
+  .txtl,
+  .alignleft,
+  .h-#{$prefix}tal {
+    text-align: left;
+  }
+
+  .txtr,
+  .alignright,
+  .h-#{$prefix}tar {
+    text-align: right;
+  }
+
+  .txtc,
+  .aligncenter,
+  .h-#{$prefix}tac {
+    text-align: center;
+  }
+
+  /* フロート
+  Wordpressのリッチテキストエディタが付加するクラス(※)を網羅。
+  ※ .left / .right / .clear
+  */
+  .left,
+  .h-#{$prefix}fll {
+    @include float(left);
+    margin-top: 0;
+  }
+
+  .right,
+  .h-#{$prefix}flr {
+    @include float(right);
+    margin-top: 0;
+  }
+
+  .clear,
+  .h-#{$prefix}cl {
+    @include reset-float();
+    clear: both;
+  }
+
+  .hide,
+  .h-#{$prefix}dn {
+    display: none;
+  }
+
+  .show,
+  .h-#{$prefix}db {
+    display: block;
+  }
+
+  // Emmet Style Helpers
+  // http://docs.emmet.io/cheat-sheet/
+
+  .posr,
+  .h-#{$prefix}posr {
+    position: relative;
+  }
+
+  .ovh,
+  .h-#{$prefix}ovh {
+    overflow: hidden;
+  }
 }
 
-.collapse,
-.collapse-vertical,
-.collapse-bottom,
-.h-mbn {
-  margin-bottom: 0;
-}
+@each $name, $size in $screen-size {
 
-.collapse,
-.collapse-horizontal,
-.collapse-left,
-.h-mln {
-  margin-left: 0;
-}
+  $prefix: "#{$name}-";
 
-.collapse,
-.collapse-horizontal,
-.collapse-right,
-.h-mrn {
-  margin-right: 0;
-}
-
-.separate,
-.separate-top,
-.separate-vertical,
-.h-mtm {
-  margin-top: 10px;
-}
-
-.separate,
-.separate-bottom,
-.separate-vertical,
-.h-mbm {
-  margin-bottom: 10px;
-}
-
-.separate,
-.separate-left,
-.separate-horizontal,
-.h-mlm {
-  margin-left: 10px;
-}
-
-.separate,
-.separate-right,
-.separate-horizontal,
-.h-mrm {
-  margin-right: 10px;
-}
-
-.separate-l,
-.separate-top-l,
-.separate-vertical-l,
-.h-mtl {
-  margin-top: 20px;
-}
-
-.separate-l,
-.separate-bottom-l,
-.separate-vertical-l,
-.h-mbl {
-  margin-bottom: 20px;
-}
-
-.separate-l,
-.separate-left-l,
-.separate-horizontal-l,
-.h-mll {
-  margin-left: 20px;
-}
-
-.separate-l,
-.separate-right-l,
-.separate-horizontal-l,
-.h-mrl {
-  margin-right: 20px;
-}
-
-.separate-s,
-.separate-top-s,
-.separate-vertical-s,
-.h-mts {
-  margin-top: 5px;
-}
-
-.separate-s,
-.separate-bottom-s,
-.separate-vertical-s,
-.h-mbs {
-  margin-bottom: 5px;
-}
-
-.separate-s,
-.separate-left-s,
-.separate-horizontal-s,
-.h-mls {
-  margin-left: 5px;
-}
-
-.separate-s,
-.separate-right-s,
-.separate-horizontal-s,
-.h-mrs {
-  margin-right: 5px;
-}
-
-/* CLEARFIX */
-.clearfix,
-.cf {
-  @include g-clearfix();
-}
-
-/* テキスト方向
-以下のWordpressのリッチテキストエディタが付加するクラス(※)も合わせて設定
-※ .alignleft / .alignright / .aligncenter
-*/
-.txtl,
-.alignleft,
-.h-tal {
-  text-align: left;
-}
-
-.txtr,
-.alignright,
-.h-tar {
-  text-align: right;
-}
-
-.txtc,
-.aligncenter,
-.h-tac {
-  text-align: center;
-}
-
-/* フロート
-Wordpressのリッチテキストエディタが付加するクラス(※)を網羅。
-※ .left / .right / .clear
-*/
-.left,
-.h-fll {
-  @include float(left);
-  margin-top: 0;
-}
-
-.right,
-.h-flr {
-  @include float(right);
-  margin-top: 0;
-}
-
-.clear,
-.h-cl {
-  @include reset-float();
-  clear: both;
-}
-
-.hide,
-.h-dn {
-  display: none;
-}
-
-.show,
-.h-db {
-  display: block;
-}
-
-// Emmet Style Helpers
-// http://docs.emmet.io/cheat-sheet/
-
-.posr,
-.h-posr {
-  position: relative;
-}
-
-.ovh,
-.h-ovh {
-  overflow: hidden;
+  @if $name == pc {
+    $prefix: "";
+    @include helper-class($prefix);
+  } @else {
+    @media (max-width: $size) {
+      @include helper-class($prefix);
+    }
+  }
 }
