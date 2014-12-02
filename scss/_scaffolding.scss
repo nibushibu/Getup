@@ -220,17 +220,9 @@ ol ul {
   list-style: none;
 }
 
-.list-inline {
-
-  > li {
-    @include inline-block;
-    padding-right: 10px;
-  }
-
-  .ie-child {
-    @include inline-block;
-    padding-right: 10px;
-  }
+.list-inline_item {
+  @include inline-block;
+  padding-right: 10px;
 }
 
 dt {
