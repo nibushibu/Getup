@@ -22,6 +22,7 @@
     "gulp-plumber"      : "*",
     "gulp-pngmin"       : "*",
     "gulp-rename"       : "*",
+    "gulp-run-sequence" : "*",
     "gulp-sass"         : "*",
     "gulp-sketch"       : "*",
     "gulp-sourcemaps"   : "*",

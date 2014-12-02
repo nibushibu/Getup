@@ -1,20 +1,21 @@
 "use strict"
-gulp = require("gulp")
-csso = require("gulp-csso")
-bower = require("gulp-bower")
-concat = require("gulp-concat")
-rename = require("gulp-rename")
-sketch = require("gulp-sketch")
-coffee = require("gulp-coffee")
-uglify = require("gulp-uglify")
-compass = require("gulp-compass")
-pngmin = require("gulp-pngmin")
-iconfont = require("gulp-iconfont")
-uglifyjs = require("gulp-uglifyjs")
-prefixer = require("gulp-autoprefixer")
-consolidate = require("gulp-consolidate")
-sourcemaps = require('gulp-sourcemaps')
-plumber = require("gulp-plumber")
+gulp = require "gulp"
+csso = require "gulp-csso"
+bower = require "gulp-bower"
+concat = require "gulp-concat"
+rename = require "gulp-rename"
+sketch = require "gulp-sketch"
+coffee = require "gulp-coffee"
+uglify = require "gulp-uglify"
+compass = require "gulp-compass"
+pngmin = require "gulp-pngmin"
+iconfont = require "gulp-iconfont"
+uglifyjs = require "gulp-uglifyjs"
+prefixer = require "gulp-autoprefixer"
+consolidate = require "gulp-consolidate"
+sourcemaps = require 'gulp-sourcemaps'
+plumber = require "gulp-plumber"
+runSequence = require "gulp-run-sequence"
 fontName = "symbols" # set name of your symbol font
 template = "fontawesome-style" # you can also choose 'foundation-style'
 appPath = "public/"
@@ -111,7 +112,7 @@ gulp.task "bower", ->
   bower()
   .pipe gulp.dest("./bower_components/")
 
-gulp.task "copy", ["bower"], ->
+gulp.task "copy", ->
   gulp
   .src([
     "bower_components/jquery/dist/jquery.min.*"
@@ -120,7 +121,7 @@ gulp.task "copy", ["bower"], ->
   ])
   .pipe gulp.dest("#{appPath}js/vendor/")
 
-gulp.task "modernizr", ["copy"], ->
+gulp.task "modernizr", ->
   gulp
   .src("#{appPath}js/vendor/modernizr.js")
   .pipe(uglify(
@@ -130,21 +131,21 @@ gulp.task "modernizr", ["copy"], ->
   .pipe(rename(suffix: ".min"))
   .pipe gulp.dest("#{appPath}js/vendor/")
 
-gulp.task "fa-font", ["modernizr"], ->
+gulp.task "fa-font", ->
   gulp
   .src(["bower_components/font-awesome/fonts/*"])
   .pipe gulp.dest("#{appPath}fonts/")
 
-gulp.task "fa-scss", ["fa-font"], ->
+gulp.task "fa-scss", ->
   gulp
   .src(["bower_components/font-awesome/scss/_*.scss"])
   .pipe gulp.dest("scss/font-awesome/")
 
-gulp.task "concat", ["fa-scss"], ->
+gulp.task "concat", ->
   gulp
   .src([
     "js/plugins-base.js"
-    "bower_components/jquery.transit/jquery.transit.js"
+    "bower_components/soundmanager/script/soundmanager2-jsmin.js"
   ])
   .pipe(concat("plugins.js"))
   .pipe(uglify(
@@ -159,7 +160,20 @@ gulp.task "watch", ->
   gulp.watch "coffee/**/*.coffee", ["coffee"]
   gulp.watch "#{appPath}css/*.css", ["prefixer"]
 
-gulp.task "default", [
-  "concat"
-  "watch"
-]
+# gulp.task "default", [
+#   "concat"
+#   "watch"
+# ]
+
+gulp.task "default", (callback) -> runSequence(
+  'bower'
+  [
+    'copy'
+    'modernizr'
+    'fa-font'
+    'fa-scss'
+    'concat'
+  ]
+  'watch'
+  callback
+)
