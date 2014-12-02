@@ -22,11 +22,11 @@ $base-link-color: #074ae2 !default;
 
 // スクリーンサイズマップ
 $screen-size: (
-  pc: 960px,
-  pc-max: 960px - 1,
-  tablet: 720px,
-  tablet-max: 720px - 1,
-  my-breakpoint-1: 560px,
-  mobile: 480px,
-  mobile-max: 480px - 1
+  pc              : 960px,
+  pc-max          : 960px - 1,
+  tablet          : 720px,
+  tablet-max      : 720px - 1,
+  my-breakpoint-1 : 560px,
+  mobile          : 480px,
+  mobile-max      : 480px - 1
 );
