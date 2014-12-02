@@ -145,13 +145,13 @@ gulp.task "concat", ->
   gulp
   .src([
     "js/plugins-base.js"
-    "bower_components/soundmanager/script/soundmanager2-jsmin.js"
+    # "bower_components/soundmanager/script/soundmanager2-jsmin.js"
   ])
   .pipe(concat("plugins.js"))
-  .pipe(uglify(
-    mangle: false
-    preserveComments: isLicenseComment
-  ))
+  # .pipe(uglify(
+  #   mangle: false
+  #   preserveComments: isLicenseComment
+  # ))
   .pipe gulp.dest("#{appPath}js/")
 
 gulp.task "watch", ->
