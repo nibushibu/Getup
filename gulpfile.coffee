@@ -155,7 +155,7 @@ gulp.task "concat", ->
   .pipe gulp.dest("#{appPath}js/")
 
 gulp.task "watch", ->
-  gulp.watch "*.sketch/Data", ["symbols"]
+  gulp.watch "*.sketch", ["symbols"]
   gulp.watch "scss/*.scss", ["compass"]
   gulp.watch "coffee/**/*.coffee", ["coffee"]
   gulp.watch "#{appPath}css/*.css", ["prefixer"]
