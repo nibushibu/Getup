@@ -12,7 +12,8 @@ $default-side-margin: no;
 $box-sizing-path: "/js/vendor/boxsizing.htc" !default;
 
 // 基本テキストサイズ
-$base-text-size: 13px !default;
+$base-text-size-px: 13 !default;
+$base-text-size: #{$base-text-size-px}px !default;
 
 // 基本テキストカラー
 $base-text-color: #333 !default;

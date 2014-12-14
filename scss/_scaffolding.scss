@@ -126,27 +126,27 @@ h6 {
 }
 
 h1 {
-  font-size: 1.84615384615385em;// 24px
+  font-size: #{24/$base-text-size-px}em;
 }
 
 h2 {
-  font-size: 1.53846153846154em;// 20px
+  font-size: #{20/$base-text-size-px}em;
 }
 
 h3 {
-  font-size: 1.38461538461538em;// 18px
+  font-size: #{18/$base-text-size-px}em;
 }
 
 h4 {
-  font-size: 1.23076923076923em;// 16px
+  font-size: #{16/$base-text-size-px}em;
 }
 
 h5 {
-  font-size: 1.07692307692308em;// 14px
+  font-size: #{14/$base-text-size-px}em;
 }
 
 h6 {
-  font-size: 1em;// 13px
+  font-size: #{13/$base-text-size-px}em;
 }
 
 table h1,
