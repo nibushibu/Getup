@@ -115,6 +115,7 @@ $g-default-align-content: flex-start;
   @include inline-block;
   @include g-box-sizing();
   width: 100%;
+  margin: 0;
   list-style: none;
   vertical-align: top;
   letter-spacing: normal;
