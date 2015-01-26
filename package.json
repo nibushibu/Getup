@@ -22,7 +22,6 @@
     "gulp-plumber"      : "*",
     "gulp-pngmin"       : "*",
     "gulp-rename"       : "*",
-    "gulp-run-sequence" : "*",
     "gulp-sass"         : "*",
     "gulp-sketch"       : "*",
     "gulp-sourcemaps"   : "*",
@@ -30,7 +29,8 @@
     "gulp-uglifyjs"     : "*",
     "gulp-util"         : "*",
     "gulp-watch"        : "*",
-    "lodash"            : "*"
+    "lodash"            : "*",
+    "run-sequence"      : "*"
   },
   "directories": {
     "doc": "docs"
