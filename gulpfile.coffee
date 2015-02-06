@@ -109,7 +109,9 @@ gulp.task "min", ->
   .pipe gulp.dest("./#{appPath}img/")
 
 gulp.task "bower", ->
-  bower()
+  bower(
+    cmd: 'update'
+  )
   .pipe gulp.dest("./bower_components/")
 
 gulp.task "copy", ->
