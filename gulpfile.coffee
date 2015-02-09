@@ -110,7 +110,7 @@ gulp.task "min", ->
 
 gulp.task "bower", ->
   bower(
-    cmd: 'update'
+    # cmd: 'update'
   )
   .pipe gulp.dest("./bower_components/")
 
