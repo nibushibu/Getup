@@ -7,7 +7,7 @@ html {
 body {
   color: #444444;
   background: #fefefe;
-  font-family: 'Droid Serif', Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+  font-family: sans-serif;
   font-size: 12px;
   line-height: 1.5em;
   padding: 1em;
@@ -52,7 +52,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Droid Serif', Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+  font-family: sans-serif;
   color: #111111;
   font-weight: normal;
   line-height: 1em;
@@ -99,7 +99,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: 'Monaco', 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
+  font-family: monospace;
   color: #2b2b2b;
   font-size: 0.98em;
 }

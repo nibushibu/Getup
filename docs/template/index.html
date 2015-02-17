@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ja"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="ja"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="ja"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="ja"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
@@ -12,8 +12,7 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="public/kss.css">
-  <link rel="stylesheet" href="public/style.css">
+  <link rel="stylesheet" href="public/main.css">
 
 </head>
 <body><div id="kss-wrapper">
@@ -23,7 +22,7 @@
     </header>
     <aside>
       <nav><ul>
-        <li><a href="index.html">0.0: 概要</a></li>
+        <!-- <li><a href="index.html">0.0: 概要</a></li> -->
         {{#eachRoot}}
           <li><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
         {{/eachRoot}}
@@ -56,8 +55,8 @@
                 <div class="data">
                   <div class="kss-mod-list">
                     <div class="units kss-mod-desc-group">
-                      <div class="units size1of2 kss-mod-desc"><p>デフォルト表示</p></div>
-                      <div class="units size1of2 kss-mod-name"></div>
+                      <div class="unit size1of2 kss-mod-desc"><p>デフォルト表示</p></div>
+                      <div class="unit size1of2 kss-mod-name"></div>
                     </div>
                     <div class="kss-mod-example">
                       <td colspan="2">{{modifierMarkup}}</td>
