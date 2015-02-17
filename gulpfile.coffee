@@ -1,5 +1,6 @@
 "use strict"
 gulp = require "gulp"
+kss = require "gulp-kss"
 csso = require "gulp-csso"
 bower = require "gulp-bower"
 concat = require "gulp-concat"
@@ -51,7 +52,7 @@ gulp.task "symbols", ->
     options =
       glyphs: codepoints
       fontName: fontName
-      fontPath: "../fonts/"
+      fontPath: ".fonts/"
       className: "s"
 
     gulp
@@ -62,57 +63,81 @@ gulp.task "symbols", ->
       prefix: "_"
       extname: ".scss"
     ))
-    .pipe(gulp.dest("scss/"))
+    .pipe(gulp.dest("scss"))
   )
-  .pipe gulp.dest("./#{appPath}fonts/")
+  .pipe gulp.dest("#{appPath}fonts")
 
 gulp.task "compass", ->
   gulp
-  .src("./scss/*.scss")
+  .src("scss/*.scss")
   .pipe(plumber())
   .pipe compass(
-    config_file: "./config.rb"
+    config_file: "config.rb"
     sass: "scss"
     css: "#{appPath}css"
   )
 
 gulp.task "prefixer", ->
   gulp
-  .src("./#{appPath}css/*.css")
+  .src("#{appPath}css/*.css")
   .pipe(prefixer())
-  .pipe gulp.dest("./#{appPath}css/")
+  .pipe gulp.dest("#{appPath}css")
+
+gulp.task "kss", ->
+  gulp
+  .src(["scss/**/*.scss"])
+  .pipe(kss(
+    # templateDirectory: "docs/template"
+  ))
+  .pipe gulp.dest("docs/styleguide")
+  gulp
+  .src([
+    "docs/template/public/base.css"
+    "#{appPath}css/*.css"
+  ])
+  .pipe(concat("main.css"))
+  .pipe gulp.dest("docs/styleguide/public")
+
+gulp.task "kss-css", ->
+  gulp
+  .src([
+    "docs/template/public/base.css"
+    "#{appPath}css/*.css"
+  ])
+  .pipe(concat("main.css"))
+  .pipe gulp.dest("docs/styleguide/public")
 
 gulp.task "coffee", ->
   gulp
-  .src("./coffee/*.coffee")
+  .src("coffee/*.coffee")
   .pipe(plumber())
   .pipe(sourcemaps.init())
   .pipe(coffee(bare: true))
-  .pipe(sourcemaps.write("./"))
-  .pipe gulp.dest("./#{appPath}js/")
+  .pipe(sourcemaps.write(""))
+  .pipe gulp.dest("#{appPath}js")
 
-gulp.task "min", ->
+gulp.task "minify", ->
   gulp
-  .src("./#{appPath}css/*.css")
+  .src("#{appPath}css/*.css")
   .pipe(csso(true))
-  .pipe gulp.dest("./#{appPath}css/")
+  .pipe gulp.dest("#{appPath}css")
   gulp
-  .src("./#{appPath}js/*.js")
+  .src("#{appPath}js/*.js")
   .pipe(uglify(
     mangle: false
     preserveComments: isLicenseComment
   ))
-  .pipe gulp.dest("./#{appPath}js/")
+  .pipe gulp.dest("#{appPath}js")
   gulp
-  .src("./#{appPath}img/sprite-*")
+  .src("#{appPath}img/sprite-*")
   .pipe(pngmin())
-  .pipe gulp.dest("./#{appPath}img/")
+  .pipe gulp.dest("#{appPath}img")
 
 gulp.task "bower", ->
   bower(
     # cmd: 'update'
   )
-  .pipe gulp.dest("./bower_components/")
+  .pipe gulp.dest("bower_components")
 
 gulp.task "copy", ->
   gulp
@@ -121,7 +146,7 @@ gulp.task "copy", ->
     "bower_components/box-sizing-polyfill/boxsizing.htc"
     "bower_components/modernizr/modernizr.js"
   ])
-  .pipe gulp.dest("#{appPath}js/vendor/")
+  .pipe gulp.dest("#{appPath}js/vendor")
 
 gulp.task "modernizr", ->
   gulp
@@ -131,17 +156,17 @@ gulp.task "modernizr", ->
     preserveComments: isLicenseComment
   ))
   .pipe(rename(suffix: ".min"))
-  .pipe gulp.dest("#{appPath}js/vendor/")
+  .pipe gulp.dest("#{appPath}js/vendor")
 
 gulp.task "fa-font", ->
   gulp
   .src(["bower_components/font-awesome/fonts/*"])
-  .pipe gulp.dest("#{appPath}fonts/")
+  .pipe gulp.dest("#{appPath}fonts")
 
 gulp.task "fa-scss", ->
   gulp
   .src(["bower_components/font-awesome/scss/_*.scss"])
-  .pipe gulp.dest("scss/font-awesome/")
+  .pipe gulp.dest("scss/font-awesome")
 
 gulp.task "concat", ->
   gulp
@@ -154,18 +179,19 @@ gulp.task "concat", ->
   #   mangle: false
   #   preserveComments: isLicenseComment
   # ))
-  .pipe gulp.dest("#{appPath}js/")
+  .pipe gulp.dest("#{appPath}js")
+
+gulp.task "compass-build", (callback) -> runSequence(
+  'compass'
+  'prefixer'
+  'kss'
+  callback
+)
 
 gulp.task "watch", ->
   gulp.watch "*.sketch", ["symbols"]
-  gulp.watch "scss/*.scss", ["compass"]
+  gulp.watch "scss/*.scss", ["compass-build"]
   gulp.watch "coffee/**/*.coffee", ["coffee"]
-  gulp.watch "#{appPath}css/*.css", ["prefixer"]
-
-# gulp.task "default", [
-#   "concat"
-#   "watch"
-# ]
 
 gulp.task "default", (callback) -> runSequence(
   'bower'
@@ -177,5 +203,11 @@ gulp.task "default", (callback) -> runSequence(
     'concat'
   ]
   'watch'
+  callback
+)
+
+gulp.task "min", (callback) -> runSequence(
+  'minify'
+  'kss'
   callback
 )
