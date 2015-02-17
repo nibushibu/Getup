@@ -1,42 +1,5 @@
 @charset "utf-8";
 
-/////////////////////////////////////////////////
-// flexbox
-
-@mixin g-flex {
-  @include display-flex;
-}
-
-$g-default-flex-direction: row;
-@mixin g-flex-direction($direction: $g-default-flex-direction) {
-  @include flex-direction($direction);
-}
-
-$g-default-flex-wrap: wrap;
-@mixin g-flex-wrap($wrap: $g-default-flex-wrap) {
-  @include flex-wrap($wrap);
-}
-
-@mixin g-flex-flow($direction: $g-default-flex-direction, $wrap: $g-default-flex-wrap) {
-  @include g-flex-direction($direction);
-  @include g-flex-wrap($wrap);
-}
-
-$g-default-justify-content: flex-start;
-@mixin g-justify-content($justify-content: $g-default-justify-content) {
-  @include justify-content($justify-content);
-}
-
-$g-default-align-items: stretch;
-@mixin g-align-items($align-items: $g-default-align-items){
-  @include align-items($align-items);
-}
-
-$g-default-align-content: flex-start;
-@mixin g-align-content($align-content: $g-default-align-content){
-  @include align-content($aling-content);
-}
-
 @mixin g-clearfix {
   @include has-layout;
   &:after,
@@ -67,23 +30,19 @@ $g-default-align-content: flex-start;
   // }
 }
 
-@mixin g-box-sizing($box-sizing:border-box) {
-  @include box-sizing($box-sizing);
+@mixin g-box-sizing($box-sizing:bordger-box) {
+  box-sizing: $box-sizing;
   *behavior: url($box-sizing-path);
 }
 
 @mixin units {
   @include g-box-sizing();
-  // @include g-flex;
-  // @include g-flex-direction(row);
-  // @include g-flex-wrap(wrap);
-  // @include g-justify-content(flex-start);
-  // display: table;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
 
+  // display: table;
   margin: 0;
   padding: 0;
   letter-spacing: -.4em;
@@ -114,10 +73,10 @@ $g-default-align-content: flex-start;
   @include inline-block;
   @include g-box-sizing();
   width: 100%;
-  margin: 0;
   list-style: none;
   vertical-align: top;
   letter-spacing: normal;
+  margin: 0;
 
   .lt-ie8 & {
     zoom: 1;
@@ -125,18 +84,11 @@ $g-default-align-content: flex-start;
 }
 
 @mixin unit--vertical {
-  // @include box-flex(1 1 100%);
   width: 100%;
 }
 
 // 一部環境でバグが発生する可能性有り
 @mixin units--vertical {
-  // @include g-flex();
-  // @include g-flex-direction(column);
-  // @include g-flex-wrap(nowrap);
-  // @include g-justify-content(flex-start);
-  // @include g-align-items(stretch);
-  // @include g-align-content(flex-start);
   display: block;
   > * {
     @include unit--vertical;
@@ -275,6 +227,10 @@ $g-default-align-content: flex-start;
 }
 
 @mixin echo-unit-size ($prefix: "") {
+
+  .#{$prefix}size-a {
+    width: auto;
+  }
 
   .#{$prefix}size1of1 {
     width: 100%;
@@ -954,19 +910,19 @@ $g-default-align-content: flex-start;
   */
   .left,
   .h-#{$prefix}fll {
-    @include float(left);
+    float: left;
     margin-top: 0;
   }
 
   .right,
   .h-#{$prefix}flr {
-    @include float(right);
+    float: right;
     margin-top: 0;
   }
 
   .clear,
   .h-#{$prefix}cl {
-    @include reset-float();
+    float: none;
     clear: both;
   }
 
