@@ -30,7 +30,7 @@
   // }
 }
 
-@mixin g-box-sizing($box-sizing:bordger-box) {
+@mixin g-box-sizing($box-sizing:border-box) {
   box-sizing: $box-sizing;
   *behavior: url($box-sizing-path);
 }
