@@ -11,7 +11,7 @@
 }
 
 @mixin alt-img {
-  @include inline-block();
+  display: inline-block;
   overflow: hidden;
   height: 0;
   // text-indent: 100%;
