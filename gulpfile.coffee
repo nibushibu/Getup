@@ -129,7 +129,8 @@ gulp.task "minify", ->
   ))
   .pipe gulp.dest("#{appPath}js")
   gulp
-  .src("#{appPath}img/sprite-*")
+  .src("#{appPath}img/**.png")
+  # .src("#{appPath}img/sprite-*") #スプライトだけ最適化する場合
   .pipe(pngmin())
   .pipe gulp.dest("#{appPath}img")
 

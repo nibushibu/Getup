@@ -740,6 +740,11 @@
     margin: 20px;
   }
 
+  .h-#{$prefix}mvn {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .h-#{$prefix}mvs {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -753,6 +758,11 @@
   .h-#{$prefix}mvl {
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+
+  .h-#{$prefix}mhn {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .h-#{$prefix}mhs {
