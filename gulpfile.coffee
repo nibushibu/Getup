@@ -1,7 +1,7 @@
 "use strict"
 gulp = require "gulp"
 kss = require "gulp-kss"
-csso = require "gulp-csso"
+cleancss = require "gulp-cleancss"
 bower = require "gulp-bower"
 concat = require "gulp-concat"
 rename = require "gulp-rename"
@@ -119,7 +119,7 @@ gulp.task "coffee", ->
 gulp.task "minify", ->
   gulp
   .src("#{appPath}css/*.css")
-  .pipe(csso(true))
+  .pipe(cleancss({keepBreaks: false}))
   .pipe gulp.dest("#{appPath}css")
   gulp
   .src("#{appPath}js/*.js")
