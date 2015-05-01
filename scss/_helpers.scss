@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @each $name, $size in $screen-size {
 
   $prefix: "#{$name}-";
