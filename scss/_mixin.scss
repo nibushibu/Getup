@@ -705,14 +705,11 @@
 
   @each $name, $size in $map {
 
-    $prefix: "#{$name}-";
-
     @if $name == pc {
-      $prefix: "";
-      @include echo-unit-size($prefix);
+      @include echo-unit-size();
     } @else {
       @media (max-width: $size) {
-        @include echo-unit-size($prefix);
+        @include echo-unit-size("#{$name}-");
       }
     }
   }

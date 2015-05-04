@@ -2,14 +2,11 @@
 
 @each $name, $size in $screen-size {
 
-  $prefix: "#{$name}-";
-
   @if $name == pc {
-    $prefix: "";
-    @include helper-class($prefix);
+    @include helper-class();
   } @else {
     @media (max-width: $size) {
-      @include helper-class($prefix);
+      @include helper-class("#{$name}-");
     }
   }
 }
