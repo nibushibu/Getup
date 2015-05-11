@@ -705,239 +705,99 @@
 
   @each $name, $size in $map {
 
+    $prefix: "#{$name}-";
+
     @if $name == pc {
-      @include echo-unit-size();
+      $prefix: "";
+      @include echo-unit-size($prefix);
     } @else {
       @media (max-width: $size) {
-        @include echo-unit-size("#{$name}-");
+        @include echo-unit-size($prefix);
       }
     }
   }
 }
 
-@mixin helper-class($prefix) {
+@mixin margin-class($prefix, $suffix, $size) {
 
-  .h-#{$prefix}mtn {
-    margin-top: 0;
+  .h-#{$prefix}mt#{$suffix} {
+    margin-top: $size;
   }
 
-  .h-#{$prefix}mbn {
-    margin-bottom: 0;
+  .h-#{$prefix}mb#{$suffix} {
+    margin-bottom: $size;
   }
 
-  .h-#{$prefix}mln {
-    margin-left: 0;
+  .h-#{$prefix}ml#{$suffix} {
+    margin-left: $size;
   }
 
-  .h-#{$prefix}mrn {
-    margin-right: 0;
+  .h-#{$prefix}mr#{$suffix} {
+    margin-right: $size;
   }
 
-  .h-#{$prefix}mtm {
-    margin-top: 10px;
+  .h-#{$prefix}mv#{$suffix} {
+    margin-top: $size;
+    margin-bottom: $size;
   }
 
-  .h-#{$prefix}mbm {
-    margin-bottom: 10px;
+  .h-#{$prefix}mh#{$suffix} {
+    margin-right: $size;
+    margin-left: $size;
   }
 
-  .h-#{$prefix}mlm {
-    margin-left: 10px;
+  .h-#{$prefix}ma#{$suffix} {
+    margin: $size;
+  }
+}
+
+@mixin padding-class($prefix, $suffix, $size) {
+
+  .h-#{$prefix}pt#{$suffix} {
+    padding-top: $size;
   }
 
-  .h-#{$prefix}mrm {
-    margin-right: 10px;
+  .h-#{$prefix}pb#{$suffix} {
+    padding-bottom: $size;
   }
 
-  .h-#{$prefix}mtl {
-    margin-top: 20px;
+  .h-#{$prefix}pl#{$suffix} {
+    padding-left: $size;
   }
 
-  .h-#{$prefix}mbl {
-    margin-bottom: 20px;
+  .h-#{$prefix}pr#{$suffix} {
+    padding-right: $size;
   }
 
-  .h-#{$prefix}mll {
-    margin-left: 20px;
+  .h-#{$prefix}pv#{$suffix} {
+    padding-top: $size;
+    padding-bottom: $size;
   }
 
-  .h-#{$prefix}mrl {
-    margin-right: 20px;
+  .h-#{$prefix}ph#{$suffix} {
+    padding-right: $size;
+    padding-left: $size;
   }
 
-  .h-#{$prefix}mts {
-    margin-top: 5px;
+  .h-#{$prefix}pa#{$suffix} {
+    padding: $size;
   }
+}
 
-  .h-#{$prefix}mbs {
-    margin-bottom: 5px;
-  }
 
-  .h-#{$prefix}mls {
-    margin-left: 5px;
-  }
+@mixin helper-class($prefix:"") {
 
-  .h-#{$prefix}mrs {
-    margin-right: 5px;
-  }
+  // マージン
+  @include margin-class($prefix, n, 0);
+  @include margin-class($prefix, s, 5px);
+  @include margin-class($prefix, m, 10px);
+  @include margin-class($prefix, l, 20px);
 
-  .h-#{$prefix}mas {
-    margin: 5px;
-  }
-
-  .h-#{$prefix}mam {
-    margin: 10px;
-  }
-
-  .h-#{$prefix}mal {
-    margin: 20px;
-  }
-
-  .h-#{$prefix}mvn {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .h-#{$prefix}mvs {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
-  .h-#{$prefix}mvm {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .h-#{$prefix}mvl {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .h-#{$prefix}mhn {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .h-#{$prefix}mhs {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-
-  .h-#{$prefix}mhm {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .h-#{$prefix}mhl {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .h-#{$prefix}ptn {
-    padding-top: 0;
-  }
-
-  .h-#{$prefix}pbn {
-    padding-bottom: 0;
-  }
-
-  .h-#{$prefix}pln {
-    padding-left: 0;
-  }
-
-  .h-#{$prefix}prn {
-    padding-right: 0;
-  }
-
-  .h-#{$prefix}ptm {
-    padding-top: 10px;
-  }
-
-  .h-#{$prefix}pbm {
-    padding-bottom: 10px;
-  }
-
-  .h-#{$prefix}plm {
-    padding-left: 10px;
-  }
-
-  .h-#{$prefix}prm {
-    padding-right: 10px;
-  }
-
-  .h-#{$prefix}ptl {
-    padding-top: 20px;
-  }
-
-  .h-#{$prefix}pbl {
-    padding-bottom: 20px;
-  }
-
-  .h-#{$prefix}pll {
-    padding-left: 20px;
-  }
-
-  .h-#{$prefix}prl {
-    padding-right: 20px;
-  }
-
-  .h-#{$prefix}pts {
-    padding-top: 5px;
-  }
-
-  .h-#{$prefix}pbs {
-    padding-bottom: 5px;
-  }
-
-  .h-#{$prefix}pls {
-    padding-left: 5px;
-  }
-
-  .h-#{$prefix}prs {
-    padding-right: 5px;
-  }
-
-  .h-#{$prefix}pas {
-    padding: 5px;
-  }
-
-  .h-#{$prefix}pam {
-    padding: 10px;
-  }
-
-  .h-#{$prefix}pal {
-    padding: 20px;
-  }
-
-  .h-#{$prefix}pvs {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
-  .h-#{$prefix}pvm {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .h-#{$prefix}pvl {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .h-#{$prefix}phs {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  .h-#{$prefix}phm {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .h-#{$prefix}phl {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+  // パディング
+  @include padding-class($prefix, n, 0);
+  @include padding-class($prefix, s, 5px);
+  @include padding-class($prefix, m, 10px);
+  @include padding-class($prefix, l, 20px);
 
   /* CLEARFIX */
   .clearfix,
@@ -1010,5 +870,17 @@
   .ovh,
   .h-#{$prefix}ovh {
     overflow: hidden;
+  }
+
+  .h-#{$prefix}ovv {
+    overflow: visible;
+  }
+
+  .h-#{$prefix}pen {
+    pointer-events: none;
+  }
+
+  .h-#{$prefix}vat {
+    vertical-align: top;
   }
 }
