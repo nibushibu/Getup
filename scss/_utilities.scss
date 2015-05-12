@@ -2,7 +2,8 @@
 画像置換 (Alternative Image)
 高さはPadding-topかpadding-bottomdで設定する。
 */
-.alt-img {
+.alt-img,
+.sprite {
   @include alt-img;
 }
 
