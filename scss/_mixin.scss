@@ -805,25 +805,31 @@
     @include g-clearfix();
   }
 
+  // Emmet Style Helpers
+  // http://docs.emmet.io/cheat-sheet/
+
   /* テキスト方向
   以下のWordpressのリッチテキストエディタが付加するクラス(※)も合わせて設定
   ※ .alignleft / .alignright / .aligncenter
   */
   .txtl,
   .alignleft,
-  .h-#{$prefix}tal {
+  .h-#{$prefix}tal,
+  .h-#{$prefix}ta-l {
     text-align: left;
   }
 
   .txtr,
   .alignright,
-  .h-#{$prefix}tar {
+  .h-#{$prefix}tar,
+  .h-#{$prefix}ta-r {
     text-align: right;
   }
 
   .txtc,
   .aligncenter,
-  .h-#{$prefix}tac {
+  .h-#{$prefix}tac,
+  .h-#{$prefix}ta-c {
     text-align: center;
   }
 
@@ -832,13 +838,15 @@
   ※ .left / .right / .clear
   */
   .left,
-  .h-#{$prefix}fll {
+  .h-#{$prefix}fll,
+  .h-#{$prefix}fl-l {
     float: left;
     margin-top: 0;
   }
 
   .right,
-  .h-#{$prefix}flr {
+  .h-#{$prefix}flr,
+  .h-#{$prefix}fl-r {
     float: right;
     margin-top: 0;
   }
@@ -850,37 +858,41 @@
   }
 
   .hide,
-  .h-#{$prefix}dn {
+  .h-#{$prefix}dn,
+  .h-#{$prefix}d-n {
     display: none;
   }
 
   .show,
-  .h-#{$prefix}db {
+  .h-#{$prefix}db,
+  .h-#{$prefix}d-b {
     display: block;
   }
 
-  // Emmet Style Helpers
-  // http://docs.emmet.io/cheat-sheet/
-
   .posr,
-  .h-#{$prefix}posr {
+  .h-#{$prefix}posr,
+  .h-#{$prefix}pos-r {
     position: relative;
   }
 
   .ovh,
-  .h-#{$prefix}ovh {
+  .h-#{$prefix}ovh,
+  .h-#{$prefix}ov-h {
     overflow: hidden;
   }
 
-  .h-#{$prefix}ovv {
+  .h-#{$prefix}ovv,
+  .h-#{$prefix}ov-v {
     overflow: visible;
   }
 
-  .h-#{$prefix}pen {
+  .h-#{$prefix}pen,
+  .h-#{$prefix}pe-n {
     pointer-events: none;
   }
 
-  .h-#{$prefix}vat {
+  .h-#{$prefix}vat,
+  .h-#{$prefix}va-t {
     vertical-align: top;
   }
 }
