@@ -720,70 +720,69 @@
 
 @mixin margin-class($prefix, $suffix, $size) {
 
-  .h-#{$prefix}mt#{$suffix} {
+  .h-#{$prefix}mt#{$size-divider}#{$suffix} {
     margin-top: $size;
   }
 
-  .h-#{$prefix}mb#{$suffix} {
+  .h-#{$prefix}mb#{$size-divider}#{$suffix} {
     margin-bottom: $size;
   }
 
-  .h-#{$prefix}ml#{$suffix} {
+  .h-#{$prefix}ml#{$size-divider}#{$suffix} {
     margin-left: $size;
   }
 
-  .h-#{$prefix}mr#{$suffix} {
+  .h-#{$prefix}mr#{$size-divider}#{$suffix} {
     margin-right: $size;
   }
 
-  .h-#{$prefix}mv#{$suffix} {
+  .h-#{$prefix}mv#{$size-divider}#{$suffix} {
     margin-top: $size;
     margin-bottom: $size;
   }
 
-  .h-#{$prefix}mh#{$suffix} {
+  .h-#{$prefix}mh#{$size-divider}#{$suffix} {
     margin-right: $size;
     margin-left: $size;
   }
 
-  .h-#{$prefix}ma#{$suffix} {
+  .h-#{$prefix}ma#{$size-divider}#{$suffix} {
     margin: $size;
   }
 }
 
 @mixin padding-class($prefix, $suffix, $size) {
 
-  .h-#{$prefix}pt#{$suffix} {
+  .h-#{$prefix}pt#{$size-divider}#{$suffix} {
     padding-top: $size;
   }
 
-  .h-#{$prefix}pb#{$suffix} {
+  .h-#{$prefix}pb#{$size-divider}#{$suffix} {
     padding-bottom: $size;
   }
 
-  .h-#{$prefix}pl#{$suffix} {
+  .h-#{$prefix}pl#{$size-divider}#{$suffix} {
     padding-left: $size;
   }
 
-  .h-#{$prefix}pr#{$suffix} {
+  .h-#{$prefix}pr#{$size-divider}#{$suffix} {
     padding-right: $size;
   }
 
-  .h-#{$prefix}pv#{$suffix} {
+  .h-#{$prefix}pv#{$size-divider}#{$suffix} {
     padding-top: $size;
     padding-bottom: $size;
   }
 
-  .h-#{$prefix}ph#{$suffix} {
+  .h-#{$prefix}ph#{$size-divider}#{$suffix} {
     padding-right: $size;
     padding-left: $size;
   }
 
-  .h-#{$prefix}pa#{$suffix} {
+  .h-#{$prefix}pa#{$size-divider}#{$suffix} {
     padding: $size;
   }
 }
-
 
 @mixin helper-class($prefix:"") {
 
