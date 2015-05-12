@@ -295,6 +295,7 @@ hr {
 img {
   vertical-align: middle;
   max-width: 100%;
+  width: 100%;// IE8以下で画像が表示されなくなるバグを回避するために必要
   height: auto;
 }
 
