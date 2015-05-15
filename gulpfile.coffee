@@ -1,7 +1,7 @@
 "use strict"
 gulp = require "gulp"
 kss = require "gulp-kss"
-cleancss = require "gulp-cleancss"
+minifycss = require "gulp-minify-css"
 bower = require "gulp-bower"
 concat = require "gulp-concat"
 rename = require "gulp-rename"
@@ -11,7 +11,6 @@ uglify = require "gulp-uglify"
 compass = require "gulp-compass"
 pngmin = require "gulp-pngmin"
 iconfont = require "gulp-iconfont"
-uglifyjs = require "gulp-uglifyjs"
 prefixer = require "gulp-autoprefixer"
 consolidate = require "gulp-consolidate"
 sourcemaps = require 'gulp-sourcemaps'
@@ -115,7 +114,8 @@ gulp.task "coffee", ->
 gulp.task "minify", ->
   gulp
   .src "#{appPath}css/*.css"
-  .pipe cleancss keepBreaks: false
+  .pipe minifycss
+    compatibility: "ie8"
   .pipe gulp.dest "#{appPath}css"
   gulp
   .src "#{appPath}js/*.js"
