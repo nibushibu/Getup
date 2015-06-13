@@ -79,6 +79,11 @@ html {
   font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
 }
 
+body {
+  font-size: $base-text-size-px + px;
+  font-size: $base-text-size-px / 10 + rem;
+}
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -128,27 +133,27 @@ h6 {
 }
 
 h1 {
-  font-size: #{24/$base-text-size-px}em;
+  @include font-size(24);
 }
 
 h2 {
-  font-size: #{20/$base-text-size-px}em;
+  @include font-size(20);
 }
 
 h3 {
-  font-size: #{18/$base-text-size-px}em;
+  @include font-size(18);
 }
 
 h4 {
-  font-size: #{16/$base-text-size-px}em;
+  @include font-size(16);
 }
 
 h5 {
-  font-size: #{14/$base-text-size-px}em;
+  @include font-size(14);
 }
 
 h6 {
-  font-size: #{13/$base-text-size-px}em;
+  @include font-size(13);
 }
 
 table h1,

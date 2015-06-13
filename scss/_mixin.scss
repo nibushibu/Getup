@@ -10,6 +10,11 @@
    }
 }
 
+@mixin font-size ($px) {
+  font-size: $px + px;
+  font-size: $px / 10 + rem;
+}
+
 @mixin alt-img {
   display: inline-block;
   overflow: hidden;
