@@ -57,4 +57,5 @@
   @include units--right-order;
 }
 
+@include unit--g();
 @include unit-size($screen-size);

@@ -32,3 +32,6 @@ $screen-size: (
   mobile          : 480px,
   mobile-max      : 480px - 1
 );
+
+// 出力するグリッドの隙間
+$unit-gutter: 10, 20;
