@@ -20,7 +20,6 @@
     "normalize-css": "1",
     "font-awesome": "*",
     "animate.css": "*",
-    "box-sizing-polyfill": "*",
     "bootstrap-sass-official": "*"
   }
 }
