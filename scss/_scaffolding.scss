@@ -72,6 +72,7 @@ html {
   font-size: $base-text-size;
   font-family: "Lucida Grande", Arial, sans-serif;
   line-height: 1.5;
+  font-size: percentage(10 / 16);
   // text-rendering: optimizeLegibility;// text-renderingプロパティ 参考:http://terkel.jp/archives/2012/09/text-rendering-optimizelegibility/
 }
 
@@ -80,8 +81,7 @@ html {
 }
 
 body {
-  font-size: $base-text-size-px + px;
-  font-size: $base-text-size-px / 10 + rem;
+  @include font-size($base-text-size-px);
 }
 
 ::-moz-selection {
