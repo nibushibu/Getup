@@ -138,7 +138,6 @@ gulp.task "copy", ->
   gulp
   .src [
     "bower_components/jquery/dist/jquery.min.*"
-    "bower_components/box-sizing-polyfill/boxsizing.htc"
     "bower_components/modernizr/modernizr.js"
   ]
   .pipe gulp.dest "#{appPath}js/vendor"

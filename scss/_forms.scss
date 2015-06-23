@@ -23,7 +23,7 @@ button {
   color: #555555;
   vertical-align: middle;
   width: 100%;
-  @include g-box-sizing;
+  box-sizing: border-box;
 
   .form-inline & {
     width: auto;
