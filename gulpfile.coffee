@@ -139,6 +139,7 @@ gulp.task "copy", ->
   .src [
     "bower_components/jquery/dist/jquery.min.*"
     "bower_components/modernizr/modernizr.js"
+    "bower_components/respond/dest/respond.min.js"
   ]
   .pipe gulp.dest "#{appPath}js/vendor"
 

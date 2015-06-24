@@ -20,6 +20,7 @@
     "normalize-css": "1",
     "font-awesome": "*",
     "animate.css": "*",
-    "bootstrap-sass-official": "*"
+    "bootstrap-sass-official": "*",
+    "respond": "*"
   }
 }
