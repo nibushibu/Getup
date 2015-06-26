@@ -18,7 +18,7 @@ plumber = require "gulp-plumber"
 runSequence = require "run-sequence"
 fontName = "symbols" # set name of your symbol font
 template = "fontawesome-style" # you can also choose 'foundation-style'
-appPath = "public/"
+appPath = "app/"
 
 
 licenseRegexp =
