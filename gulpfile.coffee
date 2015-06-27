@@ -142,6 +142,14 @@ gulp.task "copy", ->
     "bower_components/respond/dest/respond.min.js"
   ]
   .pipe gulp.dest "#{appPath}js/vendor"
+  gulp
+  .src [
+    "bower_components/normalize-css/normalize.css"
+  ]
+  .pipe rename
+    prefix: "_"
+    extname: ".scss"
+  .pipe gulp.dest "scss"
 
 gulp.task "modernizr", ->
   gulp

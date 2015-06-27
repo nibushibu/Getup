@@ -17,10 +17,10 @@
     "jquery": "1",
     "modernizr": "*",
     "jquery.transit": "*",
-    "normalize-css": "1",
     "font-awesome": "*",
     "animate.css": "*",
     "bootstrap-sass-official": "*",
-    "respond": "*"
+    "respond": "*",
+    "normalize-css": "*"
   }
 }
