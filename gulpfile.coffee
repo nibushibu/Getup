@@ -116,6 +116,7 @@ gulp.task "minify", ->
   .src "#{appPath}css/*.css"
   .pipe minifycss
     compatibility: "ie8"
+    advanced: false
   .pipe gulp.dest "#{appPath}css"
   gulp
   .src "#{appPath}js/*.js"
