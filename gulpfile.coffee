@@ -45,23 +45,26 @@ gulp.task "symbols", ->
   .pipe sketch # set path to export your fonts
     export: "artboards"
     formats: "svg"
-  .pipe iconfont fontName: fontName
-  .on "codepoints", (codepoints) ->
-    options =
-      glyphs: codepoints
+  .pipe iconfont
+    fontName: fontName
+    # fixedWidth: true
+    # appendUnicode: true
+  .on "glyphs", (glyphs) ->
+    option =
+      glyphs: glyphs.map (glyph) ->
+        name: glyph.name
+        codepoint: glyph.unicode[0].charCodeAt(0)
       fontName: fontName
-      fontPath: "../fonts/"
-      className: "s"
-
+      fontPath: '../fonts/' # set path to font (from your CSS file if relative)
+      className: 's' # set class name in your CSS
     gulp
-    .src "templates/" + template + ".css"
-    .pipe consolidate "lodash", options
+    .src "templates/#{template}.css"
+    .pipe consolidate "lodash", option
     .pipe rename
       basename: fontName
       prefix: "_"
       extname: ".scss"
     .pipe gulp.dest "scss"
-
   .pipe gulp.dest "#{appPath}fonts"
 
 gulp.task "compass", ->
