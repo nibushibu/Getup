@@ -142,7 +142,6 @@ gulp.task "copy", ->
   gulp
   .src [
     "bower_components/jquery/dist/jquery.min.*"
-    "bower_components/modernizr/modernizr.js"
     "bower_components/respond/dest/respond.min.js"
   ]
   .pipe gulp.dest "#{appPath}js/vendor"
@@ -157,7 +156,7 @@ gulp.task "copy", ->
 
 gulp.task "modernizr", ->
   gulp
-  .src "#{appPath}js/vendor/modernizr.js"
+  .src "bower_components/modernizr/modernizr.js"
   .pipe uglify
     mangle: false
     preserveComments: isLicenseComment
