@@ -1,15 +1,21 @@
 @charset "utf-8";
 
-// ボタン
+// _buttons.scss
 //
-// 汎用するボタンクラス。Formとかにも使用。
+// Getupデフォルト
+//
+// Styleguide 2
+
+// 汎用するボタン
+//
+// Formとかにも使用。
 //
 // Markup:
 // <button class="btn {$modifiers}">ボタン</button>
 //
 // .disabled - Disabled
 //
-// Styleguide 3
+// Styleguide 2.1
 
 .btn {
   @include inline-block();

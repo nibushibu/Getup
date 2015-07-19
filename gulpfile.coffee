@@ -82,11 +82,15 @@ gulp.task "prefixer", ->
   .pipe gulp.dest "#{appPath}css"
 
 gulp.task "kss", ->
+
   gulp
   .src "scss/**/*.scss"
-  .pipe kss()
-  # .pipe kss templateDirectory: "docs/template"
+  .pipe kss
+    overview: "docs/template/styleguide.md"
+    templateDirectory: "docs/template/"
   .pipe gulp.dest "docs/styleguide"
+
+  # CSSをコピー
   gulp
   .src [
     "docs/template/public/base.css"
@@ -95,14 +99,10 @@ gulp.task "kss", ->
   .pipe concat "main.css"
   .pipe gulp.dest "docs/styleguide/public"
 
-gulp.task "kss-css", ->
+  # フォントファイルをコピー
   gulp
-  .src [
-    "docs/template/public/base.css"
-    "#{appPath}css/*.css"
-  ]
-  .pipe concat "main.css"
-  .pipe gulp.dest "docs/styleguide/public"
+  .src "#{appPath}/fonts/*"
+  .pipe gulp.dest "docs/styleguide/fonts"
 
 gulp.task "coffee", ->
   gulp

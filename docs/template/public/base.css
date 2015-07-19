@@ -1,4 +1,4 @@
-html {
+/*html {
   font-size: 100%;
   overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
@@ -234,7 +234,7 @@ td {
   h3 {
     page-break-after: avoid;
   }
-}
+}*/
 #kss-nav {
   width: 20%;
   background-color: #eee;
