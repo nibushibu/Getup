@@ -9,7 +9,7 @@
   font-style: normal;
 }
 
-.s {
+@mixin s {
   display: inline-block;
   font-family: "symbols";
   font-style: normal;
@@ -19,49 +19,96 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.s-lg {
+.s:before {
+  @include s;
+}
+
+@mixin s-lg {
   font-size: 1.3333333333333333em;
   line-height: 0.75em;
   vertical-align: -15%;
 }
-.s-2x { font-size: 2em; }
-.s-3x { font-size: 3em; }
-.s-4x { font-size: 4em; }
-.s-5x { font-size: 5em; }
-.s-fw {
+
+.s-lg {
+  @include s-lg;
+}
+
+@mixin s-2x { font-size: 2em; }
+@mixin s-3x { font-size: 3em; }
+@mixin s-4x { font-size: 4em; }
+@mixin s-5x { font-size: 5em; }
+@mixin s-fw {
   width: 1.2857142857142858em;
   text-align: center;
 }
 
-.s-glyph01:before { content: "\E001" }
-.s-glyph02:before { content: "\E002" }
-.s-glyph03:before { content: "\E003" }
-.s-glyph04:before { content: "\E004" }
-.s-glyph05:before { content: "\E005" }
-.s-glyph06:before { content: "\E006" }
-.s-glyph07:before { content: "\E007" }
-.s-glyph08:before { content: "\E008" }
-.s-glyph09:before { content: "\E009" }
-.s-glyph10:before { content: "\E00A" }
-.s-glyph11:before { content: "\E00B" }
-.s-glyph12:before { content: "\E00C" }
-.s-glyph13:before { content: "\E00D" }
-.s-glyph14:before { content: "\E00E" }
-.s-glyph15:before { content: "\E00F" }
-.s-glyph16:before { content: "\E010" }
-.s-glyph17:before { content: "\E011" }
-.s-glyph18:before { content: "\E012" }
-.s-glyph19:before { content: "\E013" }
-.s-glyph20:before { content: "\E014" }
-.s-glyph21:before { content: "\E015" }
-.s-glyph22:before { content: "\E016" }
-.s-glyph23:before { content: "\E017" }
-.s-glyph24:before { content: "\E018" }
-.s-glyph25:before { content: "\E019" }
-.s-glyph26:before { content: "\E01A" }
-.s-glyph27:before { content: "\E01B" }
-.s-glyph28:before { content: "\E01C" }
-.s-glyph29:before { content: "\E01D" }
-.s-glyph30:before { content: "\E01E" }
-.s-glyph31:before { content: "\E01F" }
-.s-glyph32:before { content: "\E020" }
+.s-2x { @include s-2x; }
+.s-3x { @include s-3x; }
+.s-4x { @include s-4x; }
+.s-5x { @include s-5x; }
+.s-fw { @include s-fw; }
+
+@mixin s-glyph01 { content: "\EA01"; }
+.s-glyph01:before { @include s-glyph01; }
+@mixin s-glyph02 { content: "\EA02"; }
+.s-glyph02:before { @include s-glyph02; }
+@mixin s-glyph03 { content: "\EA03"; }
+.s-glyph03:before { @include s-glyph03; }
+@mixin s-glyph04 { content: "\EA04"; }
+.s-glyph04:before { @include s-glyph04; }
+@mixin s-glyph05 { content: "\EA05"; }
+.s-glyph05:before { @include s-glyph05; }
+@mixin s-glyph06 { content: "\EA06"; }
+.s-glyph06:before { @include s-glyph06; }
+@mixin s-glyph07 { content: "\EA07"; }
+.s-glyph07:before { @include s-glyph07; }
+@mixin s-glyph08 { content: "\EA08"; }
+.s-glyph08:before { @include s-glyph08; }
+@mixin s-glyph09 { content: "\EA09"; }
+.s-glyph09:before { @include s-glyph09; }
+@mixin s-glyph10 { content: "\EA0A"; }
+.s-glyph10:before { @include s-glyph10; }
+@mixin s-glyph11 { content: "\EA0B"; }
+.s-glyph11:before { @include s-glyph11; }
+@mixin s-glyph12 { content: "\EA0C"; }
+.s-glyph12:before { @include s-glyph12; }
+@mixin s-glyph13 { content: "\EA0D"; }
+.s-glyph13:before { @include s-glyph13; }
+@mixin s-glyph14 { content: "\EA0E"; }
+.s-glyph14:before { @include s-glyph14; }
+@mixin s-glyph15 { content: "\EA0F"; }
+.s-glyph15:before { @include s-glyph15; }
+@mixin s-glyph16 { content: "\EA10"; }
+.s-glyph16:before { @include s-glyph16; }
+@mixin s-glyph17 { content: "\EA11"; }
+.s-glyph17:before { @include s-glyph17; }
+@mixin s-glyph18 { content: "\EA12"; }
+.s-glyph18:before { @include s-glyph18; }
+@mixin s-glyph19 { content: "\EA13"; }
+.s-glyph19:before { @include s-glyph19; }
+@mixin s-glyph20 { content: "\EA14"; }
+.s-glyph20:before { @include s-glyph20; }
+@mixin s-glyph21 { content: "\EA15"; }
+.s-glyph21:before { @include s-glyph21; }
+@mixin s-glyph22 { content: "\EA16"; }
+.s-glyph22:before { @include s-glyph22; }
+@mixin s-glyph23 { content: "\EA17"; }
+.s-glyph23:before { @include s-glyph23; }
+@mixin s-glyph24 { content: "\EA18"; }
+.s-glyph24:before { @include s-glyph24; }
+@mixin s-glyph25 { content: "\EA19"; }
+.s-glyph25:before { @include s-glyph25; }
+@mixin s-glyph26 { content: "\EA1A"; }
+.s-glyph26:before { @include s-glyph26; }
+@mixin s-glyph27 { content: "\EA1B"; }
+.s-glyph27:before { @include s-glyph27; }
+@mixin s-glyph28 { content: "\EA1C"; }
+.s-glyph28:before { @include s-glyph28; }
+@mixin s-glyph29 { content: "\EA1D"; }
+.s-glyph29:before { @include s-glyph29; }
+@mixin s-glyph30 { content: "\EA1E"; }
+.s-glyph30:before { @include s-glyph30; }
+@mixin s-glyph31 { content: "\EA1F"; }
+.s-glyph31:before { @include s-glyph31; }
+@mixin s-glyph32 { content: "\EA20"; }
+.s-glyph32:before { @include s-glyph32; }

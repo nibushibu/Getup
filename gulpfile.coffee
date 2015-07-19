@@ -17,7 +17,6 @@ sourcemaps = require 'gulp-sourcemaps'
 plumber = require "gulp-plumber"
 runSequence = require "run-sequence"
 fontName = "symbols" # set name of your symbol font
-template = "fontawesome-style" # you can also choose 'foundation-style'
 appPath = "app/"
 
 
@@ -58,7 +57,7 @@ gulp.task "symbols", ->
       fontPath: '../fonts/' # set path to font (from your CSS file if relative)
       className: 's' # set class name in your CSS
     gulp
-    .src "templates/#{template}.css"
+    .src "templates/symbols.scss"
     .pipe consolidate "lodash", option
     .pipe rename
       basename: fontName
