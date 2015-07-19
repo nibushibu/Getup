@@ -148,19 +148,14 @@
 
   .no-flexbox & {
     display: block;
-    text-align: right;
-
-    > * {
-      text-align: left;
-    }
 
     > .unit {
-      text-align: left;
+      float: right;
     }
   }
 }
 
-@mixin units--right-order() {
+@mixin units--reverse() {
   flex-direction: row-reverse;
 
   &.units--liquid {
@@ -180,22 +175,9 @@
   }
 
   .no-flexbox & {
-    display: block;
 
-    > .unit--liquid,
-    > .unit:last-child {
-      display: table-cell;
-    }
-  }
-
-  .lt-ie7 & {
-
-    .unit {
-      float: right
-    }
-
-    * .unit {
-      float: none;
+    > .unit {
+      float: right;
     }
   }
 }

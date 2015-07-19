@@ -52,9 +52,9 @@
   @include units--right;
 }
 
-.units#{$modifier-prefix}right-order,
-.line#{$modifier-prefix}right-order {
-  @include units--right-order;
+.units#{$modifier-prefix}reverse,
+.line#{$modifier-prefix}reverse {
+  @include units--reverse;
 }
 
 @include unit--g();
