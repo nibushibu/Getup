@@ -98,13 +98,14 @@ gulp.task "kss", ->
     "#{appPath}css/*.css"
   ]
   .pipe concat "main.css"
-  .pipe replace /(url\()\.\.\//g, "$1../../../#{appPath}"
+  .pipe replace /url\(\.\.\//g, 'url(../../../app/'
+  .pipe replace /url\(\"\.\.\//g, 'url("../../../app/'
   .pipe gulp.dest "docs/styleguide/public"
 
-  # フォントファイルをコピー
+  # KSS生成時に不足するCSSもコピー
   gulp
-  .src "#{appPath}/fonts/*"
-  .pipe gulp.dest "docs/styleguide/fonts"
+  .src "docs/template/public/github.css"
+  .pipe gulp.dest "docs/styleguide/public"
 
 gulp.task "coffee", ->
   gulp

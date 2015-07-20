@@ -1,128 +1,95 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ja"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="ja"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="ja"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="ja" class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="ja" class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="ja" class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html lang="ja" class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="ja" class="no-js"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-
-  <title>Getup: Living Styleguide</title>
-  <meta name="description" content="">
-  <meta name="generator" content="kss-node" />
-
-  <meta name="viewport" content="width=device-width">
-
-  <link rel="stylesheet" href="public/main.css">
-
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Styleguide Example</title>
+  <link rel="stylesheet" href="public/kss.css" type="text/css" />
+  <link rel="stylesheet" href="public/main.css" type="text/css" />
+  <script src="../../app/js/vendor/modernizr.min.js"></script>
 </head>
-<body><div id="kss-wrapper">
-  <div id="kss-nav">
-    <header id="kss-header">
-      <hgroup><h1>Getup Styleguide</h1></hgroup>
-    </header>
-    <aside>
-      <nav><ul>
+<body id="styleguide">
+  <header class="styleguide-header styleguide-reset">
+    <div class="styleguide-container">
+      <h1>Styleguide</h1>
+    </div>
+  </header>
+  <div class="styleguide-container">
+    <nav class="styleguide-menu styleguide-reset">
+       <ul class="styleguide-menu-list" data-kss-ref="{{rootNumber}}">
+        <li><a href="./">0. Overview</a></li>
         {{#eachRoot}}
-          <li><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
+        <li><a href="section-{{reference}}.html">{{reference}}. {{header}}</a></li>
         {{/eachRoot}}
-      </ul></nav>
-    </aside>
-  </div>
-  <div role="main" id="kss-main">
-    <article id="kss-content">
+      </ul>
+    </nav>
+
+    <div class="styleguide-content">
+
       {{#if overview}}
-        {{html overview}}
+      <div class="styleguide-markdown-body styleguide-reset">
+        {{{overview}}}
+      </div>
       {{else}}
+      {{#eachSection rootNumber}}
+      {{#if markup}}
+      <div class="styleguide-example">
+        <header class="styleguide-example-header styleguide-reset">
+          <h3>{{reference}} <em>{{header}}</em></h3>
+        </header>
+        {{#if description}}
+        <div class="styleguide-description styleguide-markdown-body styleguide-reset">
+          {{{description}}}
 
-        {{!
-          Find each section, in order.
-          If there's no markup or modifiers supplied, use a Markdown-only
-          layout instead.
+          <ul class="styleguide-modifier">
+              {{#eachModifier}}
+              <li><strong>{{name}}</strong> - {{{description}}}</li>
+              {{/eachModifier}}
+          </ul>
+        </div>
+        {{/if}}
 
-          The "root" element comes first in this loop, and can be detected using
-          the "#whenDepth 1" block as seen below.
-        }}
-        {{#eachSection rootNumber}}
-          {{#whenDepth 1}}
-            <h1 class="kss-title"><span class="kss-ref">{{ reference }}.0</span> - {{ header }}</h1>
-          {{else}}
-           <section class="kss-depth-{{ refDepth }}">
-            <h1 class="kss-title"><span class="kss-ref">{{ reference }}</span> - {{ header }}</h1>
-          {{/whenDepth}}
-            {{#ifAny markup modifiers}}
-                <div class="kss-box">{{html description}}</div>
-                <div class="data">
-                  <div class="kss-mod-list">
-                    <div class="units kss-mod-desc-group">
-                      <div class="unit size1of2 kss-mod-desc"><p>デフォルト表示</p></div>
-                      <div class="unit size1of2 kss-mod-name"></div>
-                    </div>
-                    <div class="kss-mod-example">
-                      <td colspan="2">{{modifierMarkup}}</td>
-                    </div>
-                  {{#eachModifier}}
-                    <div class="units kss-mod-desc-group">
-                      <div class="unit size1of2 kss-mod-desc">{{html description}}</div>
-                      <div class="unit size1of2 kss-mod-name"><p>{{name}}</p></div>
-                    </div>
-                    <div class="kss-mod-example">
-                      <td colspan="2">{{modifierMarkup}}</td>
-                    </div>
-                  {{/eachModifier}}
-                </div>
-                </div>
-                <div class="kss-markup">
-                  <pre class="prettyprint lang-html">{{markup}}</pre>
-                </div>
-            {{else}}
-                {{#if description}}
-                  {{html description}}
-                {{/if}}
-            {{/ifAny}}
-          {{#whenDepth 1}} {{else}}
-            </section>
-          {{/whenDepth}}
-        {{/eachSection}}
+        <div class="styleguide-element">
+          {{modifierMarkup}}
+        </div>
+
+        {{#eachModifier}}
+        <div class="styleguide-element styleguide-modifier">
+          <span class="styleguide-modifier-name">{{name}}</span>
+          {{modifierMarkup}}
+        </div>
+        {{/eachModifier}}
+
+        <div class="styleguide-html styleguide-reset">
+          <div class="styleguide-html-highlight">
+            <pre><code class="xml">{{markup}}</code></pre>
+          </div>
+        </div>
+      </div>
+      {{else}}
+      <header class="example-header styleguide-reset">
+        <h1>{{header}}</h1>
+      </header>
+      {{#if description}}
+      <div class="markdown-body styleguide-reset">
+        {{{description}}}
+      </div>
       {{/if}}
-    </article>
+      {{/if}}
+      {{/eachSection}}
+      {{/if}}
+    </div>
   </div>
-  <footer>
-    {{#if argv.xdemo}}<a href="http://github.com/hughsk/kss-node"><img id="kss-github" style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>{{/if}}
+
+  <footer class="styleguide-footer styleguide-reset styleguide-container">
+    <p>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a>.</p>
+    <p>Designed by <a href="https://github.com/">GitHub</a> , <a href="http://warpspire.com/">Kyle Neath</a>. Adjusted by 1026</p>
   </footer>
-  <!-- SCRIPTS -->
   <script src="public/kss.js"></script>
-  <script src="public/prettify.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      var sidebarAdjust = function() {
-        // Match footer/body height
-        var height = Math.max($(window).height(), $('#kss-main').height());
-
-        if ($(window).width() <= 768) {
-          $('#kss-main, #kss-nav').height('auto');
-        } else {
-          $('#kss-main, #kss-nav').height(height);
-        }
-      };
-
-      $(window).resize(sidebarAdjust);
-      $(window).scroll(sidebarAdjust);
-      sidebarAdjust();
-
-      // Ensure code blocks are highlighted properly...
-      $('pre>code').addClass('prettyprint');
-      prettyPrint();
-
-    });
-  </script>
-
-  {{! This won't be included in the demo page }}
-  {{#if argv.xdemo}}
-    <script type="text/javascript">
-    var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-12249588-4']); _gaq.push(['_trackPageview']);
-    (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
-    </script>
-  {{/if}}
-</div></body>
+  <script src="public/highlight.pack.js"></script>
+  <script src="public/jquery-1.10.2.min.js"></script>
+  <script src="public/styleguide.js"></script>
+</body>
 </html>
