@@ -10,6 +10,7 @@ coffee = require "gulp-coffee"
 uglify = require "gulp-uglify"
 compass = require "gulp-compass"
 pngmin = require "gulp-pngmin"
+replace = require "gulp-replace"
 iconfont = require "gulp-iconfont"
 prefixer = require "gulp-autoprefixer"
 consolidate = require "gulp-consolidate"
@@ -97,6 +98,7 @@ gulp.task "kss", ->
     "#{appPath}css/*.css"
   ]
   .pipe concat "main.css"
+  .pipe replace /(url\()\.\.\//g, "$1../../../#{appPath}"
   .pipe gulp.dest "docs/styleguide/public"
 
   # フォントファイルをコピー

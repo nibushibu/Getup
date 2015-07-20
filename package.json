@@ -42,5 +42,8 @@
   "bugs": {
     "url": "https://github.com/nibushibu/Getup/issues"
   },
-  "homepage": "https://github.com/nibushibu/Getup"
+  "homepage": "https://github.com/nibushibu/Getup",
+  "dependencies": {
+    "gulp-replace": "^0.5.3"
+  }
 }
