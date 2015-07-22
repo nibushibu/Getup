@@ -136,8 +136,8 @@ gulp.task "minify", ->
   .pipe gulp.dest "#{appPath}img"
 
 gulp.task "bower", ->
-  bower()
-  # bower cmd: 'update'
+  # bower()
+  bower cmd: 'update'
   .pipe gulp.dest "bower_components"
 
 gulp.task "copy", ->
