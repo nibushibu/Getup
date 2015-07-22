@@ -8,6 +8,7 @@
 }
 
 // ボックスリンク
+
 .link-box {
   color: $base-text-color;
   cursor: pointer;
@@ -23,4 +24,38 @@
   .link-box-link {
     color: $base-link-color;
   }
+}
+
+// Media Block
+
+.media {
+  display: table;
+  width: 100%;
+}
+
+.media__img,
+.media__body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.media--middle {
+  vertical-align: middle;
+}
+
+.media--bottom {
+  vertical-align: bottom;
+}
+
+.media__img {
+  padding-right: 15px;
+}
+
+.media__img--reverse {
+  padding-right: 0;
+  padding-left: 15px;
+}
+
+.media__body {
+  width: 100%;
 }
