@@ -165,12 +165,12 @@ gulp.task "modernizr", ->
   .pipe rename suffix: ".min"
   .pipe gulp.dest "#{appPath}js/vendor"
 
-gulp.task "fa-font", ->
+gulp.task "fa", ->
+  # font
   gulp
-  .src "bower_components/font-awesome/fonts/*"
+  .src "bower_components/font-awesome/fonts/fontawesome-*"
   .pipe gulp.dest "#{appPath}fonts"
-
-gulp.task "fa-scss", ->
+  # scss
   gulp
   .src "bower_components/font-awesome/scss/_*.scss"
   .pipe gulp.dest "scss/font-awesome"
@@ -206,8 +206,7 @@ gulp.task "default", (callback) ->
     [
       'copy'
       'modernizr'
-      'fa-font'
-      'fa-scss'
+      'fa'
       'concat'
     ]
     'watch'
