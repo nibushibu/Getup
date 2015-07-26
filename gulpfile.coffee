@@ -200,7 +200,7 @@ gulp.task "watch", ->
   gulp.watch "scss/*.scss", ["compass-build"]
   gulp.watch "coffee/**/*.coffee", ["coffee"]
 
-gulp.task "default", (callback) ->
+gulp.task "update", (callback) ->
   runSequence(
     'bower'
     [
@@ -209,6 +209,12 @@ gulp.task "default", (callback) ->
       'fa'
       'concat'
     ]
+    'watch'
+    callback
+  )
+
+gulp.task "default", (callback) ->
+  runSequence(
     'watch'
     callback
   )
