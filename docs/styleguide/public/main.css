@@ -4702,12 +4702,12 @@ table .units, table
   display: table-cell;
   vertical-align: top;
 }
-
-.media--middle {
+.media--middle > .media__img, .media--middle >
+.media__body {
   vertical-align: middle;
 }
-
-.media--bottom {
+.media--bottom > .media__img, .media--bottom >
+.media__body {
   vertical-align: bottom;
 }
 

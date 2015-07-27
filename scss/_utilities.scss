@@ -26,7 +26,7 @@
   }
 }
 
-// Media Block
+// Media Box
 
 .media {
   display: table;
@@ -37,14 +37,14 @@
 .media__body {
   display: table-cell;
   vertical-align: top;
-}
 
-.media--middle {
-  vertical-align: middle;
-}
+  .media--middle > & {
+    vertical-align: middle;
+  }
 
-.media--bottom {
-  vertical-align: bottom;
+  .media--bottom > & {
+    vertical-align: bottom;
+  }
 }
 
 .media__img {
