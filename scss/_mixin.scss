@@ -101,7 +101,7 @@
   margin-left: -$gutter-width;
 
   > * {
-    padding-left: $gutter-width;
+    padding: 0 0 $gutter-width $gutter-width;
   }
 }
 
@@ -204,7 +204,7 @@
         }
 
         .unit--g#{$gutter} {
-          padding-left: #{$gutter}px;
+          padding: 0 0 #{$gutter}px #{$gutter}px;
         }
       }
     } @else {
@@ -218,7 +218,7 @@
           }
 
           .#{$name}-unit--g#{$gutter} {
-            padding-left: #{$gutter}px;
+            padding: 0 0 #{$gutter}px #{$gutter}px;
           }
         }
       }
