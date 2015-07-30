@@ -3715,7 +3715,7 @@ table .units, table
 }
 
 .units--g10 {
-  margin-left: -10px;
+  margin: 0 0 -10px -10px;
 }
 
 .unit--g10 {
@@ -3723,7 +3723,7 @@ table .units, table
 }
 
 .units--g20 {
-  margin-left: -20px;
+  margin: 0 0 -20px -20px;
 }
 
 .unit--g20 {
@@ -3732,7 +3732,7 @@ table .units, table
 
 @media (max-width: 959px) {
   .pc-max-units--g10 {
-    margin-left: -10px;
+    margin: 0 0 -10px -10px;
   }
 
   .pc-max-unit--g10 {
@@ -3740,7 +3740,7 @@ table .units, table
   }
 
   .pc-max-units--g20 {
-    margin-left: -20px;
+    margin: 0 0 -20px -20px;
   }
 
   .pc-max-unit--g20 {
@@ -3749,7 +3749,7 @@ table .units, table
 }
 @media (max-width: 720px) {
   .tablet-units--g10 {
-    margin-left: -10px;
+    margin: 0 0 -10px -10px;
   }
 
   .tablet-unit--g10 {
@@ -3757,7 +3757,7 @@ table .units, table
   }
 
   .tablet-units--g20 {
-    margin-left: -20px;
+    margin: 0 0 -20px -20px;
   }
 
   .tablet-unit--g20 {
@@ -3766,7 +3766,7 @@ table .units, table
 }
 @media (max-width: 719px) {
   .tablet-max-units--g10 {
-    margin-left: -10px;
+    margin: 0 0 -10px -10px;
   }
 
   .tablet-max-unit--g10 {
@@ -3774,7 +3774,7 @@ table .units, table
   }
 
   .tablet-max-units--g20 {
-    margin-left: -20px;
+    margin: 0 0 -20px -20px;
   }
 
   .tablet-max-unit--g20 {
@@ -3783,7 +3783,7 @@ table .units, table
 }
 @media (max-width: 560px) {
   .my-breakpoint-1-units--g10 {
-    margin-left: -10px;
+    margin: 0 0 -10px -10px;
   }
 
   .my-breakpoint-1-unit--g10 {
@@ -3791,7 +3791,7 @@ table .units, table
   }
 
   .my-breakpoint-1-units--g20 {
-    margin-left: -20px;
+    margin: 0 0 -20px -20px;
   }
 
   .my-breakpoint-1-unit--g20 {
@@ -3800,7 +3800,7 @@ table .units, table
 }
 @media (max-width: 480px) {
   .mobile-units--g10 {
-    margin-left: -10px;
+    margin: 0 0 -10px -10px;
   }
 
   .mobile-unit--g10 {
@@ -3808,7 +3808,7 @@ table .units, table
   }
 
   .mobile-units--g20 {
-    margin-left: -20px;
+    margin: 0 0 -20px -20px;
   }
 
   .mobile-unit--g20 {
@@ -3817,7 +3817,7 @@ table .units, table
 }
 @media (max-width: 479px) {
   .mobile-max-units--g10 {
-    margin-left: -10px;
+    margin: 0 0 -10px -10px;
   }
 
   .mobile-max-unit--g10 {
@@ -3825,7 +3825,7 @@ table .units, table
   }
 
   .mobile-max-units--g20 {
-    margin-left: -20px;
+    margin: 0 0 -20px -20px;
   }
 
   .mobile-max-unit--g20 {

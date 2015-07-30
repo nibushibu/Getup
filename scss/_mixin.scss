@@ -200,7 +200,7 @@
       @each $gutter in $unit-gutter {
 
         .units--g#{$gutter} {
-          margin-left: -#{$gutter}px;
+          margin: 0 0 -#{$gutter}px -#{$gutter}px;
         }
 
         .unit--g#{$gutter} {
@@ -214,7 +214,7 @@
         @each $gutter in $unit-gutter {
 
           .#{$name}-units--g#{$gutter} {
-            margin-left: -#{$gutter}px;
+            margin: 0 0 -#{$gutter}px -#{$gutter}px;
           }
 
           .#{$name}-unit--g#{$gutter} {
