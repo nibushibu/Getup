@@ -5005,6 +5005,10 @@ table .units, table
 
 .media__img {
   padding-right: 1em;
+  max-width: none;
+}
+.media__img > img {
+  max-width: none;
 }
 
 .media__img--reverse {
