@@ -5007,7 +5007,7 @@ table .units, table
   padding-right: 1em;
   max-width: none;
 }
-.media__img > img {
+.media__img img {
   max-width: none;
 }
 
