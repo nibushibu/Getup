@@ -5427,6 +5427,12 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   position: relative;
 }
 
+.posa,
+.h-posa,
+.h-pos-a {
+  position: absolute;
+}
+
 .ovh,
 .h-ovh,
 .h-ov-h {
@@ -5767,6 +5773,12 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   .h-pc-max-posr,
   .h-pc-max-pos-r {
     position: relative;
+  }
+
+  .posa,
+  .h-pc-max-posa,
+  .h-pc-max-pos-a {
+    position: absolute;
   }
 
   .ovh,
@@ -6111,6 +6123,12 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     position: relative;
   }
 
+  .posa,
+  .h-tablet-posa,
+  .h-tablet-pos-a {
+    position: absolute;
+  }
+
   .ovh,
   .h-tablet-ovh,
   .h-tablet-ov-h {
@@ -6451,6 +6469,12 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   .h-tablet-max-posr,
   .h-tablet-max-pos-r {
     position: relative;
+  }
+
+  .posa,
+  .h-tablet-max-posa,
+  .h-tablet-max-pos-a {
+    position: absolute;
   }
 
   .ovh,
@@ -6795,6 +6819,12 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     position: relative;
   }
 
+  .posa,
+  .h-my-breakpoint-1-posa,
+  .h-my-breakpoint-1-pos-a {
+    position: absolute;
+  }
+
   .ovh,
   .h-my-breakpoint-1-ovh,
   .h-my-breakpoint-1-ov-h {
@@ -7137,6 +7167,12 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
     position: relative;
   }
 
+  .posa,
+  .h-mobile-posa,
+  .h-mobile-pos-a {
+    position: absolute;
+  }
+
   .ovh,
   .h-mobile-ovh,
   .h-mobile-ov-h {
@@ -7477,6 +7513,12 @@ Wordpressのリッチテキストエディタが付加するクラス(※)を網
   .h-mobile-max-posr,
   .h-mobile-max-pos-r {
     position: relative;
+  }
+
+  .posa,
+  .h-mobile-max-posa,
+  .h-mobile-max-pos-a {
+    position: absolute;
   }
 
   .ovh,

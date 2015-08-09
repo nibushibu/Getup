@@ -874,6 +874,12 @@
     position: relative;
   }
 
+  .posa,
+  .h-#{$prefix}posa,
+  .h-#{$prefix}pos-a {
+    position: absolute;
+  }
+
   .ovh,
   .h-#{$prefix}ovh,
   .h-#{$prefix}ov-h {
