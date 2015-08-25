@@ -3533,10 +3533,6 @@ table {
 .table td.bottom {
   vertical-align: bottom;
 }
-.table th {
-  text-align: center;
-  font-weight: bold;
-}
 
 tfoot {
   text-align: center;
