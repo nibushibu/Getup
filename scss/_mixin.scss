@@ -228,7 +228,7 @@
 
 @mixin echo-unit-size ($prefix: "") {
 
-  .#{$prefix}size#{$size-divider}-a {
+  .#{$prefix}size#{$size-divider}-auto {
     width: auto;
   }
 
