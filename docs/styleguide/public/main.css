@@ -3016,7 +3016,7 @@ th {
   font-weight: normal;
   font-style: normal;
 }
-.s:before {
+.s {
   display: inline-block;
   font-family: "symbols";
   font-style: normal;
