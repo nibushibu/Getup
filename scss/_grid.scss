@@ -5,55 +5,15 @@
   @include units;
 }
 
-.units#{$modifier-prefix}offset-top,
-.units#{$modifier-prefix}offset {
-  margin-top: -10px;
-}
-
-.units#{$modifier-prefix}offset-bottom,
-.units#{$modifier-prefix}offset {
-  margin-bottom: -10px;
-}
-
 .unit {
   @include unit;
 }
 
-.units#{$modifier-prefix}gutter,
-.line#{$modifier-prefix}gutter {
-  @include units--gutter;
-}
-
-// .uni--right, .unit#{$modifier-prefix}leftはIE6は非対応
-.unit#{$modifier-prefix}left {
-  float: left;
-}
-
-.unit#{$modifier-prefix}right {
-  float: right;
-}
-
-// .units--liquidの中では最後のユニットが残った領域分だけ広がります
-// .units--liquidの中身はfloatで横並びになります。（通常はinline-block）
-.units#{$modifier-prefix}liquid,
-.line#{$modifier-prefix}liquid {
-  @include units--liquid;
-  // > :last-child {
-  //   @include unit-liquid;
-  // }
-}
-
-.unit#{$modifier-prefix}liquid {
-  @include unit--liquid;
-}
-
-.units#{$modifier-prefix}right,
-.line#{$modifier-prefix}right {
+.units#{$modifier-prefix}right {
   @include units--right;
 }
 
-.units#{$modifier-prefix}reverse,
-.line#{$modifier-prefix}reverse {
+.units#{$modifier-prefix}reverse{
   @include units--reverse;
 }
 
