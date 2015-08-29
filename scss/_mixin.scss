@@ -201,10 +201,10 @@
 
         .units--g#{$gutter} {
           margin: 0 0 -#{$gutter}px -#{$gutter}px;
-        }
 
-        .unit--g#{$gutter} {
-          padding: 0 0 #{$gutter}px #{$gutter}px;
+          & > .unit {
+            padding: 0 0 #{$gutter}px #{$gutter}px;
+          }
         }
       }
     } @else {
@@ -215,10 +215,10 @@
 
           .#{$name}-units--g#{$gutter} {
             margin: 0 0 -#{$gutter}px -#{$gutter}px;
-          }
 
-          .#{$name}-unit--g#{$gutter} {
-            padding: 0 0 #{$gutter}px #{$gutter}px;
+            & > .unit {
+              padding: 0 0 #{$gutter}px #{$gutter}px;
+            }
           }
         }
       }
