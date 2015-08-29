@@ -3949,6 +3949,10 @@ table .units, table
   width: 43.75%;
 }
 
+.size-9of16 {
+  width: 56.25%;
+}
+
 .size-11of16 {
   width: 68.75%;
 }
@@ -4164,6 +4168,10 @@ table .units, table
 
   .pc-max-size-7of16 {
     width: 43.75%;
+  }
+
+  .pc-max-size-9of16 {
+    width: 56.25%;
   }
 
   .pc-max-size-11of16 {
@@ -4383,6 +4391,10 @@ table .units, table
     width: 43.75%;
   }
 
+  .tablet-size-9of16 {
+    width: 56.25%;
+  }
+
   .tablet-size-11of16 {
     width: 68.75%;
   }
@@ -4598,6 +4610,10 @@ table .units, table
 
   .tablet-max-size-7of16 {
     width: 43.75%;
+  }
+
+  .tablet-max-size-9of16 {
+    width: 56.25%;
   }
 
   .tablet-max-size-11of16 {
@@ -4817,6 +4833,10 @@ table .units, table
     width: 43.75%;
   }
 
+  .my-breakpoint-1-size-9of16 {
+    width: 56.25%;
+  }
+
   .my-breakpoint-1-size-11of16 {
     width: 68.75%;
   }
@@ -5034,6 +5054,10 @@ table .units, table
     width: 43.75%;
   }
 
+  .mobile-size-9of16 {
+    width: 56.25%;
+  }
+
   .mobile-size-11of16 {
     width: 68.75%;
   }
@@ -5249,6 +5273,10 @@ table .units, table
 
   .mobile-max-size-7of16 {
     width: 43.75%;
+  }
+
+  .mobile-max-size-9of16 {
+    width: 56.25%;
   }
 
   .mobile-max-size-11of16 {
