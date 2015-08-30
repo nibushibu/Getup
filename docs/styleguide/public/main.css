@@ -5353,6 +5353,24 @@ table .units, table
   width: 100%;
 }
 
+.media--g10 > .media__img {
+  padding-right: 10px;
+}
+
+.media--g10 > .media__img--reverse {
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+.media--g20 > .media__img {
+  padding-right: 20px;
+}
+
+.media--g20 > .media__img--reverse {
+  padding-right: 0;
+  padding-left: 20px;
+}
+
 .btn {
   display: inline-block;
   vertical-align: middle;

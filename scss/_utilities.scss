@@ -64,3 +64,15 @@
 .media__body {
   width: 100%;
 }
+
+@each $gutter in $unit-gutter {
+
+  .media--g#{$gutter} > .media__img {
+    padding-right: #{$gutter}px;
+  }
+
+  .media--g#{$gutter} > .media__img--reverse {
+    padding-right: 0;
+    padding-left: #{$gutter}px;
+  }
+}
