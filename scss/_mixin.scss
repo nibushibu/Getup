@@ -93,22 +93,6 @@
 @mixin units--reverse() {
   flex-direction: row-reverse;
 
-  &.units--liquid {
-
-    > .unit {
-      float: right;
-    }
-
-    > .unit--liquid {
-      float: none;
-      z-index: 1;
-    }
-
-    > .unit:last-child {
-      float: none;
-    }
-  }
-
   .no-flexbox & {
 
     > .unit {

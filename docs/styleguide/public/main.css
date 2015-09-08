@@ -3627,16 +3627,6 @@ table .units, table
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
-.units--reverse.units--liquid > .unit {
-  float: right;
-}
-.units--reverse.units--liquid > .unit--liquid {
-  float: none;
-  z-index: 1;
-}
-.units--reverse.units--liquid > .unit:last-child {
-  float: none;
-}
 .no-flexbox .units--reverse > .unit {
   float: right;
 }
