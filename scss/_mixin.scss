@@ -327,6 +327,8 @@
   @include margin-class($prefix, s, 5px);
   @include margin-class($prefix, m, 10px);
   @include margin-class($prefix, l, 20px);
+  @include margin-class($prefix, 2l, 30px);
+  @include margin-class($prefix, 3l, 40px);
 
   // パディング
   @include padding-class($prefix, n, 0);
@@ -349,22 +351,19 @@
   */
   .txtl,
   .alignleft,
-  .h-#{$prefix}tal,
-  .h-#{$prefix}ta-l {
+  .h-#{$prefix}ta#{$size-divider}l {
     text-align: left;
   }
 
   .txtr,
   .alignright,
-  .h-#{$prefix}tar,
-  .h-#{$prefix}ta-r {
+  .h-#{$prefix}ta#{$size-divider}r {
     text-align: right;
   }
 
   .txtc,
   .aligncenter,
-  .h-#{$prefix}tac,
-  .h-#{$prefix}ta-c {
+  .h-#{$prefix}ta#{$size-divider}c {
     text-align: center;
   }
 
@@ -373,15 +372,13 @@
   ※ .left / .right / .clear
   */
   .left,
-  .h-#{$prefix}fll,
-  .h-#{$prefix}fl-l {
+  .h-#{$prefix}fl#{$size-divider}l {
     float: left;
     margin-top: 0;
   }
 
   .right,
-  .h-#{$prefix}flr,
-  .h-#{$prefix}fl-r {
+  .h-#{$prefix}fl#{$size-divider}r {
     float: right;
     margin-top: 0;
   }
@@ -393,47 +390,62 @@
   }
 
   .hide,
-  .h-#{$prefix}dn,
   .h-#{$prefix}d-n {
     display: none;
   }
 
   .show,
-  .h-#{$prefix}db,
   .h-#{$prefix}d-b {
     display: block;
   }
 
+  .h-#{$prefix}d-i {
+    display: inline;
+  }
+
+  .h-#{$prefix}d-ib {
+    display: inline-block;
+  }
+
   .posr,
-  .h-#{$prefix}posr,
-  .h-#{$prefix}pos-r {
+  .h-#{$prefix}pos#{$size-divider}r {
     position: relative;
   }
 
-  .posa,
-  .h-#{$prefix}posa,
   .h-#{$prefix}pos-a {
     position: absolute;
   }
 
   .ovh,
-  .h-#{$prefix}ovh,
-  .h-#{$prefix}ov-h {
+  .h-#{$prefix}ov#{$size-divider}h {
     overflow: hidden;
   }
 
-  .h-#{$prefix}ovv,
-  .h-#{$prefix}ov-v {
+  .h-#{$prefix}ov#{$size-divider}v {
     overflow: visible;
   }
 
-  .h-#{$prefix}pen,
-  .h-#{$prefix}pe-n {
+  .h-#{$prefix}pe#{$size-divider}n {
     pointer-events: none;
   }
 
-  .h-#{$prefix}vat,
-  .h-#{$prefix}va-t {
+  .h-#{$prefix}va#{$size-divider}t {
     vertical-align: top;
+  }
+
+  .h-#{$prefix}va#{$size-divider}m {
+    vertical-align: middle;
+  }
+
+  .h-#{$prefix}va#{$size-divider}b {
+    vertical-align: bottom;
+  }
+
+  .h-#{$prefix}fw#{$size-divider}b {
+    font-weight: bold;
+  }
+
+  .h-#{$prefix}fw#{$size-divider}n {
+    font-weight: normal;
   }
 }
