@@ -76,13 +76,13 @@ gulp.task("autoprefixer", () => {
 
 // KSS
 gulp.task("kss", () => {
-  return gulp.src("scss/**/*.scss")
+  gulp.src("scss/**/*.scss")
   .pipe($.kss({
     overview: "docs/template/styleguide.md",
     templateDirectory: "docs/template/"
   }))
   .pipe(gulp.dest("docs/styleguide"));
-  return gulp.src(["docs/template/public/base.css", appPath + "css/*.css"])
+  gulp.src(["docs/template/public/base.css", appPath + "css/*.css"])
   .pipe($.concat("main.css"))
   .pipe($.replace(/url\(\.\.\//g, 'url(../../../app/'))
   .pipe($.replace(/url\(\"\.\.\//g, 'url("../../../app/'))
@@ -111,13 +111,13 @@ gulp.task("babel", () => {
 
 // minify
 gulp.task("minify", () => {
-  return gulp.src(appPath + "css/*.css")
+  gulp.src(appPath + "css/*.css")
   .pipe($.minifycss({
     compatibility: "ie8",
     advanced: false
   }))
   .pipe(gulp.dest(appPath + "css"));
-  return gulp.src(appPath + "js/*.js")
+  gulp.src(appPath + "js/*.js")
   .pipe($.uglify({
     mangle: false,
     preserveComments: isLicenseComment
@@ -137,15 +137,15 @@ gulp.task("bower", () => {
 
 // Copy
 gulp.task("copy", () => {
-  return gulp.src(["bower_components/jquery/dist/jquery.min.*", "bower_components/respond/dest/respond.min.js"])
+  gulp.src(["bower_components/jquery/dist/jquery.min.*", "bower_components/respond/dest/respond.min.js"])
   .pipe(gulp.dest(appPath + "js/vendor"));
-  return gulp.src(["bower_components/normalize-css/normalize.css"])
+  gulp.src(["bower_components/normalize-css/normalize.css"])
   .pipe($.rename({
     prefix: "_",
     extname: ".scss"
   }))
   .pipe(gulp.dest("scss"));
-  return gulp.src("bower_components/font-awesome/fonts/fontawesome-*")
+  gulp.src("bower_components/font-awesome/fonts/fontawesome-*")
   .pipe(gulp.dest(appPath + "fonts"));
   return gulp.src("bower_components/font-awesome/scss/_*.scss")
   .pipe(gulp.dest("scss/font-awesome"));
@@ -162,7 +162,7 @@ gulp.task("concat", () => {
 
 // Compass
 gulp.task("compass-build", (callback) => {
-  runSequence('compass', 'autoprefixer', 'kss', callback);
+  return runSequence('compass', 'autoprefixer', 'kss', callback);
 });
 
 // EJS
@@ -173,9 +173,7 @@ gulp.task("ejs", (callback) => {
   ])
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe(
-    $.ejs({
-      msg: "Hello"
-    })
+    $.ejs()
     .on('error', $.util.log)
   )
   .pipe($.rename({
@@ -195,13 +193,13 @@ gulp.task("watch", () => {
 
 // Command
 gulp.task("update", (callback) => {
-  runSequence('bower', ['copy', 'concat'], 'watch', callback);
+  return runSequence('bower', ['copy', 'concat'], 'watch', callback);
 });
 
 gulp.task("default", (callback) => {
-  runSequence('watch', callback);
+  return runSequence('watch', callback);
 });
 
 gulp.task("min", (callback) => {
-  runSequence('minify', 'kss', callback);
+  return runSequence('minify', 'kss', callback);
 });
