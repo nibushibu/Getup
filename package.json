@@ -1,17 +1,15 @@
 {
-  "name": "my-boilerplate",
+  "name": "Getup",
   "version": "0.0.0",
-  "description": "my HTML boilerplate",
+  "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "license": "MIT",
   "devDependencies": {
     "babel": "^5.8.23",
-    "coffee-script": "*",
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-babel": "^5.3.0",
     "gulp-bower": "*",
-    "gulp-coffee": "*",
     "gulp-compass": "*",
     "gulp-concat": "*",
     "gulp-consolidate": "*",
@@ -29,7 +27,6 @@
     "gulp-uglify": "*",
     "gulp-util": "*",
     "gulp-watch": "*",
-    "gulp-webpack": "^1.5.0",
     "lodash": "*",
     "run-sequence": "*"
   },
