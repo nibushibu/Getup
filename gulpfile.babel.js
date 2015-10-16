@@ -178,6 +178,9 @@ gulp.task("ejs", (callback) => {
     })
     .on('error', $.util.log)
   )
+  .pipe($.rename({
+    extname: ".html"
+  }))
   .pipe(gulp.dest(appPath));
 });
 
