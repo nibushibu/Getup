@@ -1,17 +1,17 @@
-var runSequence = require("run-sequence");
-var gulp = require("gulp");
-var gulpLoadPlugins = require("gulp-load-plugins");
+import runSequence from "run-sequence";
+import gulp from "gulp";
+import gulpLoadPlugins from "gulp-load-plugins";
 gulpLoadPlugins({
   rename: {
     'gulp-minify-css': 'minifycss'
   }
 });
-var $ = gulpLoadPlugins();
-var fontName = "symbols";
-var appPath = "app/";
-var licenseRegexp = /^\!|^@preserve|^@cc_on|\bMIT\b|\bMPL\b|\bGPL\b|\(c\)|License|Copyright/i;
-var isLicenseComment = (() => {
-  var _prevCommentLine = 0;
+const $ = gulpLoadPlugins();
+const fontName = "symbols";
+const appPath = "app/";
+const licenseRegexp = /^\!|^@preserve|^@cc_on|\bMIT\b|\bMPL\b|\bGPL\b|\(c\)|License|Copyright/i;
+const isLicenseComment = (() => {
+  let _prevCommentLine = 0;
   return (node, comment) => {
     if (licenseRegexp.test(comment.value) || comment.line === 1 || comment.line === _prevCommentLine + 1) {
       _prevCommentLine = comment.line;
@@ -24,7 +24,7 @@ var isLicenseComment = (() => {
 
 // Webフォント
 gulp.task("symbols", () => {
-  gulp.src("symbol-font-14px.sketch")
+  return gulp.src("symbol-font-14px.sketch")
   .pipe($.sketch({
     "export": "artboards",
     formats: "svg"
@@ -33,7 +33,7 @@ gulp.task("symbols", () => {
     fontName: fontName
   }))
   .on("glyphs", (glyphs) => {
-    var option = {
+    let option = {
       glyphs: glyphs.map((glyph) => {
         return {
           name: glyph.name,
@@ -58,8 +58,8 @@ gulp.task("symbols", () => {
 
 // Compass
 gulp.task("compass", () => {
-  gulp.src("scss/*.scss")
-  .pipe($.plumber())
+  return gulp.src("scss/*.scss")
+  .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.compass({
     config_file: "config.rb",
     sass: "scss",
@@ -69,38 +69,40 @@ gulp.task("compass", () => {
 
 // AutoPrefixer
 gulp.task("autoprefixer", () => {
-  gulp.src(appPath + "css/*.css")
+  return gulp.src(appPath + "css/*.css")
   .pipe($.autoprefixer())
   .pipe(gulp.dest(appPath + "css"));
 });
 
 // KSS
 gulp.task("kss", () => {
-  gulp.src("scss/**/*.scss")
+  return gulp.src("scss/**/*.scss")
   .pipe($.kss({
     overview: "docs/template/styleguide.md",
     templateDirectory: "docs/template/"
   }))
   .pipe(gulp.dest("docs/styleguide"));
-  gulp.src(["docs/template/public/base.css", appPath + "css/*.css"])
+  return gulp.src(["docs/template/public/base.css", appPath + "css/*.css"])
   .pipe($.concat("main.css"))
   .pipe($.replace(/url\(\.\.\//g, 'url(../../../app/'))
   .pipe($.replace(/url\(\"\.\.\//g, 'url("../../../app/'))
   .pipe(gulp.dest("docs/styleguide/public"));
-  gulp.src("docs/template/public/github.css")
+  return gulp.src("docs/template/public/github.css")
   .pipe(gulp.dest("docs/styleguide/public"));
 });
 
 // gulp.task("coffee", function() {
-//   gulp.src("coffee/*.coffee").pipe($.plumber()).pipe($.sourcemaps.init()).pipe($.coffee({
+//   return gulp.src("coffee/*.coffee").pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')})).pipe($.sourcemaps.init()).pipe($.coffee({
 //     bare: true
-//   })).pipe($.sourcemaps.write("")).pipe(gulp.dest(appPath + "js"));
+//   }))
+//   .pipe($.sourcemaps.write(""))
+//   .pipe(gulp.dest(appPath + "js"));
 // });
 
 // Babel
 gulp.task("babel", () => {
-  gulp.src("js/*.js")
-  .pipe($.plumber())
+  return gulp.src("js/*.js")
+  .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.sourcemaps.init())
   .pipe($.babel())
   .pipe($.sourcemaps.write("."))
@@ -109,19 +111,19 @@ gulp.task("babel", () => {
 
 // minify
 gulp.task("minify", () => {
-  gulp.src(appPath + "css/*.css")
+  return gulp.src(appPath + "css/*.css")
   .pipe($.minifycss({
     compatibility: "ie8",
     advanced: false
   }))
   .pipe(gulp.dest(appPath + "css"));
-  gulp.src(appPath + "js/*.js")
+  return gulp.src(appPath + "js/*.js")
   .pipe($.uglify({
     mangle: false,
     preserveComments: isLicenseComment
   }))
   .pipe(gulp.dest(appPath + "js"));
-  gulp.src(appPath + "img/**.png")
+  return gulp.src(appPath + "img/**.png")
   .pipe($.pngmin())
   .pipe(gulp.dest(appPath + "img"));
 });
@@ -133,44 +135,64 @@ gulp.task("bower", () => {
   }).pipe(gulp.dest("bower_components"));
 });
 
-//
+// Copy
 gulp.task("copy", () => {
-  gulp.src(["bower_components/jquery/dist/jquery.min.*", "bower_components/respond/dest/respond.min.js"])
+  return gulp.src(["bower_components/jquery/dist/jquery.min.*", "bower_components/respond/dest/respond.min.js"])
   .pipe(gulp.dest(appPath + "js/vendor"));
-  gulp.src(["bower_components/normalize-css/normalize.css"])
+  return gulp.src(["bower_components/normalize-css/normalize.css"])
   .pipe($.rename({
     prefix: "_",
     extname: ".scss"
   }))
   .pipe(gulp.dest("scss"));
-});
-
-gulp.task("fa", () => {
-  gulp.src("bower_components/font-awesome/fonts/fontawesome-*")
+  return gulp.src("bower_components/font-awesome/fonts/fontawesome-*")
   .pipe(gulp.dest(appPath + "fonts"));
-  gulp.src("bower_components/font-awesome/scss/_*.scss")
+  return gulp.src("bower_components/font-awesome/scss/_*.scss")
   .pipe(gulp.dest("scss/font-awesome"));
 });
 
+// Concat
 gulp.task("concat", () => {
-  gulp.src(["js/plugins-base.js"])
+  return gulp.src([
+    "js/plugins-base.js"
+  ])
   .pipe($.concat("plugins.js"))
   .pipe(gulp.dest(appPath + "js"));
 });
 
+// Compass
 gulp.task("compass-build", (callback) => {
   runSequence('compass', 'autoprefixer', 'kss', callback);
 });
 
+// EJS
+gulp.task("ejs", (callback) => {
+  return gulp.src([
+    "ejs/**/*.ejs",
+    '!' + "ejs/**/_*.ejs"//_始まりは除外
+  ])
+  .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
+  .pipe(
+    $.ejs({
+      msg: "Hello"
+    })
+    .on('error', $.util.log)
+  )
+  .pipe(gulp.dest(appPath));
+});
+
+// Watch
 gulp.task("watch", () => {
   gulp.watch("*.sketch", ["symbols"]);
   gulp.watch("scss/*.scss", ["compass-build"]);
   // gulp.watch("coffee/**/*.coffee", ["coffee"]);
   gulp.watch("js/**/*.js", ["babel"]);
+  gulp.watch("ejs/**/*.ejs", ["ejs"]);
 });
 
+// Command
 gulp.task("update", (callback) => {
-  runSequence('bower', ['copy', 'fa', 'concat'], 'watch', callback);
+  runSequence('bower', ['copy', 'concat'], 'watch', callback);
 });
 
 gulp.task("default", (callback) => {
