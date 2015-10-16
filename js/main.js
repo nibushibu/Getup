@@ -1,18 +1,16 @@
 // Easingの追加
-"use strict";
-
-jQuery.easing.quart = function (x, t, b, c, d) {
+jQuery.easing.quart = (x, t, b, c, d) => {
   return -c * ((t = t / d - 1) * t * t * t - 1) + b;
 };
 
-$(function () {
+$(() => {
 
   // アンカースクロール
-  $("a[href*=#]").click(function () {
+  $("a[href*=#]").click(() => {
     var $target, targetOffset;
-    if (location.pathname.replace(/^\//, "") === undefined.pathname.replace(/^\//, "") && location.hostname === undefined.hostname) {
-      $target = $(undefined.hash);
-      $target = $target.length && $target || $("[name=" + undefined.hash.slice(1) + "]");
+    if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && location.hostname === this.hostname) {
+      $target = $(this.hash);
+      $target = $target.length && $target || $("[name=" + this.hash.slice(1) + "]");
       if ($target.length) {
         targetOffset = $target.offset().top;
         $("html,body").animate({
@@ -28,4 +26,3 @@ $(function () {
   //   return $(".list-inline > li").addClass("ie-child");
   // }
 });
-//# sourceMappingURL=main.js.map

@@ -2,16 +2,14 @@
   "name": "my-boilerplate",
   "version": "0.0.0",
   "description": "my HTML boilerplate",
-  "main": "Gruntfile.coffee",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Genki Katsutani",
   "license": "MIT",
   "devDependencies": {
+    "babel": "^5.8.23",
     "coffee-script": "*",
     "gulp": "*",
     "gulp-autoprefixer": "*",
+    "gulp-babel": "^5.3.0",
     "gulp-bower": "*",
     "gulp-coffee": "*",
     "gulp-compass": "*",
@@ -19,16 +17,19 @@
     "gulp-consolidate": "*",
     "gulp-iconfont": "*",
     "gulp-kss": "*",
+    "gulp-load-plugins": "^1.0.0",
     "gulp-minify-css": "*",
     "gulp-plumber": "*",
     "gulp-pngmin": "*",
     "gulp-rename": "*",
+    "gulp-replace": "^0.5.3",
     "gulp-sass": "*",
     "gulp-sketch": "*",
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
     "gulp-util": "*",
     "gulp-watch": "*",
+    "gulp-webpack": "^1.5.0",
     "lodash": "*",
     "run-sequence": "*"
   },
@@ -42,8 +43,5 @@
   "bugs": {
     "url": "https://github.com/nibushibu/Getup/issues"
   },
-  "homepage": "https://github.com/nibushibu/Getup",
-  "dependencies": {
-    "gulp-replace": "^0.5.3"
-  }
+  "homepage": "https://github.com/nibushibu/Getup"
 }
