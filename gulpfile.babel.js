@@ -22,6 +22,7 @@ var isLicenseComment = (() => {
   };
 })();
 
+// Webフォント
 gulp.task("symbols", () => {
   gulp.src("symbol-font-14px.sketch").pipe(plugins.sketch({
     "export": "artboards",
@@ -48,6 +49,7 @@ gulp.task("symbols", () => {
   }).pipe(gulp.dest(appPath + "fonts"));
 });
 
+// Compass
 gulp.task("compass", () => {
   gulp.src("scss/*.scss").pipe(plugins.plumber()).pipe(plugins.compass({
     config_file: "config.rb",
@@ -56,10 +58,12 @@ gulp.task("compass", () => {
   }));
 });
 
+// AutoPrefixer
 gulp.task("autoprefixer", () => {
   gulp.src(appPath + "css/*.css").pipe(plugins.autoprefixer()).pipe(gulp.dest(appPath + "css"));
 });
 
+// KSS
 gulp.task("kss", () => {
   gulp.src("scss/**/*.scss").pipe(plugins.kss({
     overview: "docs/template/styleguide.md",
@@ -75,6 +79,7 @@ gulp.task("kss", () => {
 //   })).pipe(plugins.sourcemaps.write("")).pipe(gulp.dest(appPath + "js"));
 // });
 
+// Babel
 gulp.task("babel", () => {
   gulp.src("js/*.js")
   .pipe(plugins.plumber())
@@ -84,6 +89,7 @@ gulp.task("babel", () => {
   .pipe(gulp.dest(appPath + "js"));
 });
 
+// minify
 gulp.task("minify", () => {
   gulp.src(appPath + "css/*.css").pipe(plugins.minifycss({
     compatibility: "ie8",
@@ -96,12 +102,14 @@ gulp.task("minify", () => {
   gulp.src(appPath + "img/**.png").pipe(plugins.pngmin()).pipe(gulp.dest(appPath + "img"));
 });
 
+// Bower
 gulp.task("bower", () => {
   plugins.bower({
     cmd: 'update'
   }).pipe(gulp.dest("bower_components"));
 });
 
+//
 gulp.task("copy", () => {
   gulp.src(["bower_components/jquery/dist/jquery.min.*", "bower_components/respond/dest/respond.min.js"]).pipe(gulp.dest(appPath + "js/vendor"));
   gulp.src(["bower_components/normalize-css/normalize.css"]).pipe(plugins.rename({
