@@ -3623,6 +3623,20 @@ table .units, table
   float: right;
 }
 
+.units--center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.no-flexbox .units--center {
+  display: block;
+  text-align: center;
+}
+.no-flexbox .units--center > .unit {
+  text-align: left;
+}
+
 .units--g10 {
   margin: 0 0 -10px -10px;
 }
