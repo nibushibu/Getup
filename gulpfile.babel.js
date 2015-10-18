@@ -1,11 +1,6 @@
 import runSequence from "run-sequence";
 import gulp from "gulp";
 import gulpLoadPlugins from "gulp-load-plugins";
-gulpLoadPlugins({
-  rename: {
-    'gulp-minify-css': 'minifycss'
-  }
-});
 const $ = gulpLoadPlugins();
 const fontName = "symbols";
 const appPath = "app/";
@@ -112,7 +107,7 @@ gulp.task("babel", () => {
 // minify
 gulp.task("minify", () => {
   gulp.src(appPath + "css/*.css")
-  .pipe($.minifycss({
+  .pipe($.minifyCss({
     compatibility: "ie8",
     advanced: false
   }))
@@ -130,7 +125,7 @@ gulp.task("minify", () => {
 
 // Bower
 gulp.task("bower", () => {
-  $.bower({
+  return $.bower({
     cmd: 'update'
   }).pipe(gulp.dest("bower_components"));
 });
