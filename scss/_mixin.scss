@@ -174,7 +174,7 @@
   }
 
   .#{$prefix}push#{$size-divider}1of2 {
-    width: 50%;
+    margin-left: 50%;
   }
 
   @each $n in 1, 2 {
