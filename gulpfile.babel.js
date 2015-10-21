@@ -189,13 +189,13 @@ gulp.task("copyCss", () => {
 });
 
 // Copy FontAwesome fonts
-gulp.task("faFont", () => {
+gulp.task("copyFont", () => {
   return gulp.src("bower_components/font-awesome/fonts/fontawesome-*")
   .pipe(gulp.dest(appPath + "fonts"));
 });
 
 // Copy FontAwesome SCSS
-gulp.task("faCss", () => {
+gulp.task("copyFaCss", () => {
   return gulp.src("bower_components/font-awesome/scss/_*.scss")
   .pipe(gulp.dest("scss/font-awesome"));
 });
@@ -248,8 +248,8 @@ gulp.task("update", (callback) => {
     [
       'copyJs',
       'copyCss',
-      'faFont',
-      'faCss',
+      'copyFont',
+      'copyFaCss',
       'concat'
     ],
     'watch',
