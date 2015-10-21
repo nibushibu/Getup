@@ -15,11 +15,11 @@
   ],
   "dependencies": {
     "jquery": "1",
-    "jquery.transit": "*",
     "font-awesome": "*",
     "animate.css": "*",
     "bootstrap-sass-official": "*",
     "respond": "*",
-    "normalize-css": "*"
+    "normalize-css": "*",
+    "velocity": "~1.2.3"
   }
 }
