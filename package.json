@@ -27,6 +27,7 @@
     "gulp-sketch": "*",
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
+    "gulp-utf8ize-sourcemaps": "^1.0.0",
     "gulp-util": "*",
     "gulp-watch": "*",
     "lodash": "*",

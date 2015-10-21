@@ -86,14 +86,6 @@ gulp.task("kss", () => {
   .pipe(gulp.dest("docs/styleguide/public"));
 });
 
-// gulp.task("coffee", function() {
-//   return gulp.src("coffee/*.coffee").pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')})).pipe($.sourcemaps.init()).pipe($.coffee({
-//     bare: true
-//   }))
-//   .pipe($.sourcemaps.write(""))
-//   .pipe(gulp.dest(appPath + "js"));
-// });
-
 // Babel
 gulp.task("babel", () => {
   return gulp.src("js/*.js")
@@ -101,6 +93,7 @@ gulp.task("babel", () => {
   .pipe($.sourcemaps.init())
   .pipe($.babel())
   .pipe($.sourcemaps.write("."))
+  .pipe($utf8izeSourcemaps())
   .pipe(gulp.dest(appPath + "js"));
 });
 
