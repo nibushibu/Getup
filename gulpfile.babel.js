@@ -17,6 +17,27 @@ const isLicenseComment = (() => {
   };
 })();
 
+/*
+  関数を遅延実行（deferred）するオブジェクト
+    -- untilで指定したeventを全て待ち合わせてからexecで指定した関数を実行する。
+    via. http://qiita.com/morou/items/d54000396a2a7d0714de
+*/
+let Defer = function() {
+  let wait_max = 0, wait_count = 0, callback = null;
+  function onEventEnd() {
+    if (max === ++count) {
+      callback && callback();
+    }
+  }
+  this.until = function(ev) {
+    max++;
+    ev.on('end', onEventEnd);
+  };
+  this.exec = function(cb) {
+    callback = cb;
+  };
+};
+
 // Webフォント
 gulp.task("symbols", () => {
   return gulp.src("symbol-font-14px.sketch")
@@ -71,6 +92,7 @@ gulp.task("autoprefixer", () => {
 
 // KSS
 gulp.task("kss", () => {
+  let d = new Defer();
   gulp.src("scss/**/*.scss")
   .pipe($.kss({
     overview: "docs/template/styleguide.md",
@@ -82,9 +104,21 @@ gulp.task("kss", () => {
   .pipe($.replace(/url\(\.\.\//g, 'url(../../../app/'))
   .pipe($.replace(/url\(\"\.\.\//g, 'url("../../../app/'))
   .pipe(gulp.dest("docs/styleguide/public"));
-  return gulp.src("docs/template/public/github.css")
+  gulp.src("docs/template/public/github.css")
   .pipe(gulp.dest("docs/styleguide/public"));
 });
+
+// CoffeeScript
+// gulp.task("coffee", function() {
+//   return gulp.src("coffee/*.coffee")
+//   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
+//   .pipe($.sourcemaps.init())
+//   .pipe($.coffee({
+//     bare: true
+//   }))
+//   .pipe($.sourcemaps.write(""))
+//   .pipe(gulp.dest(appPath + "js"));
+// });
 
 // Babel
 gulp.task("babel", () => {
@@ -92,25 +126,33 @@ gulp.task("babel", () => {
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.sourcemaps.init())
   .pipe($.babel())
-  .pipe($.sourcemaps.write("."))
-  .pipe($utf8izeSourcemaps())
+  .pipe($.sourcemaps.write())
+  .pipe($.utf8izeSourcemaps())
   .pipe(gulp.dest(appPath + "js"));
 });
 
-// minify
-gulp.task("minify", () => {
-  gulp.src(appPath + "css/*.css")
+// minify CSS
+gulp.task("minifyCss", () => {
+  return gulp.src(appPath + "css/*.css")
   .pipe($.minifyCss({
     compatibility: "ie8",
     advanced: false
   }))
   .pipe(gulp.dest(appPath + "css"));
-  gulp.src(appPath + "js/*.js")
+});
+
+// minify JavaScript
+gulp.task("minifyJs", () => {
+  return gulp.src(appPath + "js/*.js")
   .pipe($.uglify({
     mangle: false,
     preserveComments: isLicenseComment
   }))
   .pipe(gulp.dest(appPath + "js"));
+});
+
+// minify PNG Images
+gulp.task("minifyPng", () => {
   return gulp.src(appPath + "img/**.png")
   .pipe($.pngmin())
   .pipe(gulp.dest(appPath + "img"));
@@ -123,18 +165,37 @@ gulp.task("bower", () => {
   }).pipe(gulp.dest("bower_components"));
 });
 
-// Copy
-gulp.task("copy", () => {
-  gulp.src(["bower_components/jquery/dist/jquery.min.*", "bower_components/respond/dest/respond.min.js"])
+// Copy Javascript
+gulp.task("copyJs", () => {
+  return gulp.src([
+    "bower_components/jquery/dist/jquery.min.*",
+    "bower_components/respond/dest/respond.min.js"
+  ])
   .pipe(gulp.dest(appPath + "js/vendor"));
-  gulp.src(["bower_components/normalize-css/normalize.css"])
+});
+
+// Copy CSS(SCSS)
+gulp.task("copyCss", () => {
+  return gulp.src([
+    "bower_components/normalize-css/normalize.css",
+    "bower_components/slick-carousel/slick/slick.scss",
+    "bower_components/slick-carousel/slick/slick-theme.scss"
+  ])
   .pipe($.rename({
     prefix: "_",
     extname: ".scss"
   }))
   .pipe(gulp.dest("scss"));
-  gulp.src("bower_components/font-awesome/fonts/fontawesome-*")
+});
+
+// Copy FontAwesome fonts
+gulp.task("faFont", () => {
+  return gulp.src("bower_components/font-awesome/fonts/fontawesome-*")
   .pipe(gulp.dest(appPath + "fonts"));
+});
+
+// Copy FontAwesome SCSS
+gulp.task("faCss", () => {
   return gulp.src("bower_components/font-awesome/scss/_*.scss")
   .pipe(gulp.dest("scss/font-awesome"));
 });
@@ -142,7 +203,9 @@ gulp.task("copy", () => {
 // Concat
 gulp.task("concat", () => {
   return gulp.src([
-    "js/plugins-base.js"
+    "js/plugins-base.js",
+    "bower_components/velocity/velocity.min.js",
+    "bower_components/velocity/velocity.ui.min.js",
   ])
   .pipe($.concat("plugins.js"))
   .pipe(gulp.dest(appPath + "js"));
@@ -174,14 +237,24 @@ gulp.task("ejs", (callback) => {
 gulp.task("watch", () => {
   gulp.watch("*.sketch", ["symbols"]);
   gulp.watch("scss/*.scss", ["compass-build"]);
-  // gulp.watch("coffee/**/*.coffee", ["coffee"]);
   gulp.watch("js/**/*.js", ["babel"]);
   gulp.watch("ejs/**/*.ejs", ["ejs"]);
 });
 
 // Command
 gulp.task("update", (callback) => {
-  return runSequence('bower', ['copy', 'concat'], 'watch', callback);
+  return runSequence(
+    'bower',
+    [
+      'copyJs',
+      'copyCss',
+      'faFont',
+      'faCss',
+      'concat'
+    ],
+    'watch',
+    callback
+  );
 });
 
 gulp.task("default", (callback) => {
@@ -189,5 +262,13 @@ gulp.task("default", (callback) => {
 });
 
 gulp.task("min", (callback) => {
-  return runSequence('minify', 'kss', callback);
+  return runSequence(
+    [
+      'minifyCss',
+      'minifyJs',
+      'minifyPng'
+    ],
+    'kss',
+    callback
+  );
 });
