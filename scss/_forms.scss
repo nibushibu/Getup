@@ -25,9 +25,6 @@ button {
   width: 100%;
   box-sizing: border-box;
 
-  .form-inline & {
-    width: auto;
-  }
 
   &[disabled],
   fieldset[disabled] & {
@@ -35,6 +32,10 @@ button {
     background-color: #eee;
     opacity: 1; // iOS fix for unreadable disabled content
   }
+}
+
+.form-control--inline {
+  width: auto;
 }
 
 textarea {
