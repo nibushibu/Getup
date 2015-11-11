@@ -20,6 +20,6 @@
     "bootstrap-sass-official": "*",
     "respond": "*",
     "normalize-css": "*",
-    "velocity": "~1.2.3"
+    "velocity": "*"
   }
 }
