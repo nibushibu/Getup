@@ -1,13 +1,13 @@
-import runSequence from "run-sequence";
-import gulp from "gulp";
-import gulpLoadPlugins from "gulp-load-plugins";
-const $ = gulpLoadPlugins();
-const fontName = "symbols";
-const appPath = "app/";
-const licenseRegexp = /^\!|^@preserve|^@cc_on|\bMIT\b|\bMPL\b|\bGPL\b|\(c\)|License|Copyright/i;
-const isLicenseComment = (() => {
-  let _prevCommentLine = 0;
-  return (node, comment) => {
+var runSequence = require("run-sequence");
+var gulp = require("gulp");
+var gulpLoadPlugins = require("gulp-load-plugins");
+var $ = gulpLoadPlugins();
+var fontName = "symbols";
+var appPath = "app/";
+var licenseRegexp = /^\!|^@preserve|^@cc_on|\bMIT\b|\bMPL\b|\bGPL\b|\(c\)|License|Copyright/i;
+var isLicenseComment = (function () {
+  var _prevCommentLine = 0;
+  return function (node, comment) {
     if (licenseRegexp.test(comment.value) || comment.line === 1 || comment.line === _prevCommentLine + 1) {
       _prevCommentLine = comment.line;
       return true;
@@ -22,8 +22,8 @@ const isLicenseComment = (() => {
     -- untilで指定したeventを全て待ち合わせてからexecで指定した関数を実行する。
     via. http://qiita.com/morou/items/d54000396a2a7d0714de
 */
-let Defer = function() {
-  let wait_max = 0, wait_count = 0, callback = null;
+var Defer = function() {
+  var wait_max = 0, wait_count = 0, callback = null;
   function onEventEnd() {
     if (max === ++count) {
       callback && callback();
@@ -39,7 +39,7 @@ let Defer = function() {
 };
 
 // Webフォント
-gulp.task("symbols", () => {
+gulp.task("symbols", function () {
   return gulp.src("symbol-font-14px.sketch")
   .pipe($.sketch({
     "export": "artboards",
@@ -48,9 +48,9 @@ gulp.task("symbols", () => {
   .pipe($.iconfont({
     fontName: fontName
   }))
-  .on("glyphs", (glyphs) => {
-    let option = {
-      glyphs: glyphs.map((glyph) => {
+  .on("glyphs", function (glyphs) {
+    var option = {
+      glyphs: glyphs.map(function (glyph) {
         return {
           name: glyph.name,
           codepoint: glyph.unicode[0].charCodeAt(0)
@@ -73,7 +73,7 @@ gulp.task("symbols", () => {
 });
 
 // Compass
-gulp.task("compass", () => {
+gulp.task("compass", function () {
   return gulp.src("scss/*.scss")
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.compass({
@@ -84,15 +84,15 @@ gulp.task("compass", () => {
 });
 
 // AutoPrefixer
-gulp.task("autoprefixer", () => {
+gulp.task("autoprefixer", function () {
   return gulp.src(appPath + "css/*.css")
   .pipe($.autoprefixer())
   .pipe(gulp.dest(appPath + "css"));
 });
 
 // KSS
-gulp.task("kss", () => {
-  let d = new Defer();
+gulp.task("kss", function () {
+  var d = new Defer();
   gulp.src("scss/**/*.scss")
   .pipe($.kss({
     overview: "docs/template/styleguide.md",
@@ -121,7 +121,7 @@ gulp.task("kss", () => {
 // });
 
 // Babel
-gulp.task("babel", () => {
+gulp.task("babel", function () {
   return gulp.src("js/*.js")
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.sourcemaps.init())
@@ -132,7 +132,7 @@ gulp.task("babel", () => {
 });
 
 // minify CSS
-gulp.task("minifyCss", () => {
+gulp.task("minifyCss", function () {
   return gulp.src(appPath + "css/*.css")
   .pipe($.minifyCss({
     compatibility: "ie8",
@@ -142,7 +142,7 @@ gulp.task("minifyCss", () => {
 });
 
 // minify JavaScript
-gulp.task("minifyJs", () => {
+gulp.task("minifyJs", function () {
   return gulp.src(appPath + "js/*.js")
   .pipe($.uglify({
     mangle: false,
@@ -152,21 +152,21 @@ gulp.task("minifyJs", () => {
 });
 
 // minify PNG Images
-gulp.task("minifyPng", () => {
+gulp.task("minifyPng", function () {
   return gulp.src(appPath + "img/**.png")
   .pipe($.pngmin())
   .pipe(gulp.dest(appPath + "img"));
 });
 
 // Bower
-gulp.task("bower", () => {
+gulp.task("bower", function () {
   return $.bower({
     cmd: 'update'
   }).pipe(gulp.dest("bower_components"));
 });
 
 // Copy Javascript
-gulp.task("copyJs", () => {
+gulp.task("copyJs", function () {
   return gulp.src([
     "bower_components/jquery/dist/jquery.min.*",
     "bower_components/respond/dest/respond.min.js"
@@ -175,7 +175,7 @@ gulp.task("copyJs", () => {
 });
 
 // Copy CSS(SCSS)
-gulp.task("copyCss", () => {
+gulp.task("copyCss", function () {
   return gulp.src([
     "bower_components/normalize-css/normalize.css",
     "bower_components/slick-carousel/slick/slick.scss",
@@ -189,19 +189,19 @@ gulp.task("copyCss", () => {
 });
 
 // Copy FontAwesome fonts
-gulp.task("copyFont", () => {
+gulp.task("copyFont", function () {
   return gulp.src("bower_components/font-awesome/fonts/fontawesome-*")
   .pipe(gulp.dest(appPath + "fonts"));
 });
 
 // Copy FontAwesome SCSS
-gulp.task("copyFaCss", () => {
+gulp.task("copyFaCss", function () {
   return gulp.src("bower_components/font-awesome/scss/_*.scss")
   .pipe(gulp.dest("scss/font-awesome"));
 });
 
 // Concat
-gulp.task("concat", () => {
+gulp.task("concat", function () {
   return gulp.src([
     "js/plugins-base.js",
     "bower_components/velocity/velocity.min.js",
@@ -212,12 +212,12 @@ gulp.task("concat", () => {
 });
 
 // Compass
-gulp.task("compass-build", (callback) => {
+gulp.task("compass-build", function (callback) {
   return runSequence('compass', 'autoprefixer', 'kss', callback);
 });
 
 // EJS
-gulp.task("ejs", (callback) => {
+gulp.task("ejs", function (callback) {
   return gulp.src([
     "ejs/**/*.ejs",
     '!' + "ejs/**/_*.ejs"//_始まりは除外
@@ -234,7 +234,7 @@ gulp.task("ejs", (callback) => {
 });
 
 // Watch
-gulp.task("watch", () => {
+gulp.task("watch", function () {
   gulp.watch("*.sketch", ["symbols"]);
   gulp.watch("scss/*.scss", ["compass-build"]);
   gulp.watch("js/**/*.js", ["babel"]);
@@ -242,7 +242,7 @@ gulp.task("watch", () => {
 });
 
 // Command
-gulp.task("update", (callback) => {
+gulp.task("update", function (callback) {
   return runSequence(
     'bower',
     [
@@ -257,11 +257,11 @@ gulp.task("update", (callback) => {
   );
 });
 
-gulp.task("default", (callback) => {
+gulp.task("default", function (callback) {
   return runSequence('watch', callback);
 });
 
-gulp.task("min", (callback) => {
+gulp.task("min", function (callback) {
   return runSequence(
     [
       'minifyCss',
