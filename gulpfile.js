@@ -158,18 +158,10 @@ gulp.task("minifyPng", function () {
   .pipe(gulp.dest(appPath + "img"));
 });
 
-// Bower
-gulp.task("bower", function () {
-  return $.bower({
-    cmd: 'update'
-  }).pipe(gulp.dest("bower_components"));
-});
-
 // Copy Javascript
 gulp.task("copyJs", function () {
   return gulp.src([
-    "bower_components/jquery/dist/jquery.min.*",
-    "bower_components/respond/dest/respond.min.js"
+    "node_modules/jquery/dist/jquery.min.*"
   ])
   .pipe(gulp.dest(appPath + "js/vendor"));
 });
@@ -177,9 +169,9 @@ gulp.task("copyJs", function () {
 // Copy CSS(SCSS)
 gulp.task("copyCss", function () {
   return gulp.src([
-    "bower_components/normalize-css/normalize.css",
-    "bower_components/slick-carousel/slick/slick.scss",
-    "bower_components/slick-carousel/slick/slick-theme.scss"
+    "node_modules/normalize.css/normalize.css",
+    "node_modules/slick-carousel/slick/slick.scss",
+    "node_modules/slick-carousel/slick/slick-theme.scss"
   ])
   .pipe($.rename({
     prefix: "_",
@@ -190,13 +182,13 @@ gulp.task("copyCss", function () {
 
 // Copy FontAwesome fonts
 gulp.task("copyFont", function () {
-  return gulp.src("bower_components/font-awesome/fonts/fontawesome-*")
+  return gulp.src("node_modules/font-awesome/fonts/fontawesome-*")
   .pipe(gulp.dest(appPath + "fonts"));
 });
 
 // Copy FontAwesome SCSS
 gulp.task("copyFaCss", function () {
-  return gulp.src("bower_components/font-awesome/scss/_*.scss")
+  return gulp.src("node_modules/font-awesome/scss/_*.scss")
   .pipe(gulp.dest("scss/font-awesome"));
 });
 
@@ -204,8 +196,8 @@ gulp.task("copyFaCss", function () {
 gulp.task("concat", function () {
   return gulp.src([
     "js/plugins-base.js",
-    "bower_components/velocity/velocity.min.js",
-    "bower_components/velocity/velocity.ui.min.js",
+    "node_modules/velocity-animate/velocity.min.js",
+    "node_modules/velocity-animate/velocity.ui.min.js",
   ])
   .pipe($.concat("plugins.js"))
   .pipe(gulp.dest(appPath + "js"));
@@ -244,7 +236,6 @@ gulp.task("watch", function () {
 // Command
 gulp.task("update", function (callback) {
   return runSequence(
-    'bower',
     [
       'copyJs',
       'copyCss',

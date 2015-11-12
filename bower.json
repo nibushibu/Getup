@@ -13,13 +13,5 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "jquery": "1",
-    "font-awesome": "*",
-    "animate.css": "*",
-    "bootstrap-sass-official": "*",
-    "respond": "*",
-    "normalize-css": "*",
-    "velocity": "*"
-  }
+  "dependencies": {}
 }

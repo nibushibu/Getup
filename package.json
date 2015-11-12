@@ -9,10 +9,10 @@
     "babel-eslint": "*",
     "babel-preset-es2015": "*",
     "eslint": "*",
+    "font-awesome": "^4.4.0",
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-babel": "*",
-    "gulp-bower": "*",
     "gulp-compass": "*",
     "gulp-concat": "*",
     "gulp-consolidate": "*",
@@ -33,8 +33,12 @@
     "gulp-utf8ize-sourcemaps": "*",
     "gulp-util": "*",
     "gulp-watch": "*",
+    "jquery": "^1.11.3",
     "lodash": "*",
-    "run-sequence": "*"
+    "normalize.css": "^3.0.3",
+    "run-sequence": "*",
+    "slick-carousel": "^1.5.8",
+    "velocity-animate": "^1.2.3"
   },
   "directories": {
     "doc": "docs"
