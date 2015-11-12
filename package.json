@@ -9,7 +9,7 @@
     "babel-eslint": "*",
     "babel-preset-es2015": "*",
     "eslint": "*",
-    "font-awesome": "^4.4.0",
+    "font-awesome": "*",
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-babel": "*",
@@ -33,12 +33,12 @@
     "gulp-utf8ize-sourcemaps": "*",
     "gulp-util": "*",
     "gulp-watch": "*",
-    "jquery": "^1.11.3",
+    "jquery": "1",
     "lodash": "*",
-    "normalize.css": "^3.0.3",
+    "normalize.css": "*",
     "run-sequence": "*",
-    "slick-carousel": "^1.5.8",
-    "velocity-animate": "^1.2.3"
+    "slick-carousel": "*",
+    "velocity-animate": "*"
   },
   "directories": {
     "doc": "docs"
