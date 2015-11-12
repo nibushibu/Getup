@@ -91,12 +91,12 @@ body {
 }
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: lighten($base-link-color, 40%);
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: lighten($base-link-color, 40%);
   text-shadow: none;
 }
 
