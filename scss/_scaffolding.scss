@@ -226,9 +226,10 @@ ol,
 .list-inline {
   padding-left: 0;
   list-style: none;
+  margin-right: -10px;
 }
 
-.list-inline_item {
+.list-inline__item {
   @include inline-block;
   padding-right: 10px;
 }
