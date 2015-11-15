@@ -122,7 +122,10 @@ gulp.task("kss", function () {
 
 // Babel
 gulp.task("babel", function () {
-  return gulp.src("js/*.js")
+  return gulp.src([
+    "js/*.js",
+    "!" + "js/plugins-base.js"
+  ])
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.sourcemaps.init())
   .pipe($.babel())
