@@ -13,19 +13,6 @@ table {
   td {
     padding: 8px;
     border: 1px solid #ccc;
-    vertical-align: middle;
-
-    &.top {
-      vertical-align: top;
-    }
-
-    &.middle {
-      vertical-align: middle;
-    }
-
-    &.bottom {
-      vertical-align: bottom;
-    }
   }
 }
 
