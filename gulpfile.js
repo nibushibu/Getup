@@ -101,8 +101,8 @@ gulp.task("kss", function () {
   .pipe(gulp.dest("docs/styleguide"));
   gulp.src(["docs/template/public/base.css", appPath + "css/*.css"])
   .pipe($.concat("main.css"))
-  .pipe($.replace(/url\(\.\.\//g, 'url(../../../app/'))
-  .pipe($.replace(/url\(\"\.\.\//g, 'url("../../../app/'))
+  .pipe($.replace(/url\(\.\.\//g, 'url(../../../' + appPath))
+  .pipe($.replace(/url\(\"\.\.\//g, 'url("../../../' + appPath))
   .pipe(gulp.dest("docs/styleguide/public"));
   gulp.src("docs/template/public/github.css")
   .pipe(gulp.dest("docs/styleguide/public"));
