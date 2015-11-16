@@ -510,4 +510,8 @@
   .h-#{$prefix}fw#{$size-divider}n {
     font-weight: normal;
   }
+
+  .h-#{$prefix}ws#{$size-divider}nw {
+    white-space: nowrap;
+  }
 }
