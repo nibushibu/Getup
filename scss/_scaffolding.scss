@@ -220,12 +220,13 @@ ol,
   list-style: disc outside;
 }
 
-.not-list,
-.no-list,
 .list-unstyled,
 .list-inline {
   padding-left: 0;
   list-style: none;
+}
+
+.list-inline {
   margin-right: -10px;
 }
 
