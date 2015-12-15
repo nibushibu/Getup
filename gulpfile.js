@@ -38,13 +38,19 @@ var Defer = function() {
   };
 };
 
-// Webフォント
-gulp.task("symbols", function () {
+// Sketch
+gulp.task("sketch", function () {
   return gulp.src("symbol-font-14px.sketch")
   .pipe($.sketch({
     "export": "artboards",
     formats: "svg"
   }))
+  .pipe(gulp.dest('svg'));
+});
+
+// iconfont
+gulp.task("iconfont", function() {
+  return gulp.src("svg/*.svg")
   .pipe($.iconfont({
     fontName: fontName
   }))
@@ -230,7 +236,8 @@ gulp.task("ejs", function (callback) {
 
 // Watch
 gulp.task("watch", function () {
-  gulp.watch("*.sketch", ["symbols"]);
+  gulp.watch("*.sketch", ["sketch"]);
+  gulp.watch("svg/*.svg", ["iconfont"]);
   gulp.watch("scss/*.scss", ["compass-build"]);
   gulp.watch("js/**/*.js", ["babel"]);
   gulp.watch("ejs/**/*.ejs", ["ejs"]);
