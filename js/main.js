@@ -27,19 +27,10 @@ $(() => {
   // アンカースクロールアニメーション
   if(!_ua.Mobile || !_ua.Tablet){
     $("a[href*=#]").click(function() {
-      var $target, targetOffset;
-      var headerHeight = $(".js-header").height();
-      if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && location.hostname === this.hostname) {
-        $target = $(this.hash);
-        $target = $target.length && $target || $("[name=" + this.hash.slice(1) + "]");
-        if ($target.length) {
-          targetOffset = $target.offset().top;
-          $("html,body").animate({
-            scrollTop: targetOffset - headerHeight - 10
-          }, 200, "quart");
-          return false;
-        }
-      }
+      var href = $(this).attr("href");
+      var $target = $(href === "#" || href === "" ? 'html' : href);
+      $target.velocity("scroll", { duration: 1000, easing: "ease" });
+      return false;
     });
   }
 
