@@ -124,34 +124,45 @@
 }
 
 
-@mixin unit--g() {
+@mixin units-gap($gap) {
+  margin: 0 0 -#{$gap}px -#{$gap}px;
+
+  > * {
+    padding: 0 0 #{$gap}px #{$gap}px;
+  }
+}
+
+@mixin screen-size-units-gap($screen-size, $gap) {
+  margin: 0 0 -#{$gap}px -#{$gap}px;
+
+  > * {
+    padding: 0 0 #{$gap}px #{$gap}px;
+  }
+}
+
+
+@mixin echo-units-gap() {
 
   @each $name, $size in $screen-size {
 
     @if $name == pc {
 
-      @each $gutter in $unit-gutter {
+      @each $gap in $unit-gaps {
 
-        .units--g#{$gutter} {
-          margin: 0 0 -#{$gutter}px -#{$gutter}px;
-
-          & > .unit {
-            padding: 0 0 #{$gutter}px #{$gutter}px;
-          }
+        .units-gap-#{$gap},
+        .units--g#{$gap} {
+          @include units-gap(#{$gap});
         }
       }
     } @else {
 
       @media (max-width: $size) {
 
-        @each $gutter in $unit-gutter {
+        @each $gap in $unit-gaps {
 
-          .#{$name}-units--g#{$gutter} {
-            margin: 0 0 -#{$gutter}px -#{$gutter}px;
-
-            & > .unit {
-              padding: 0 0 #{$gutter}px #{$gutter}px;
-            }
+          .#{$name}-units-gap-#{$gap},
+          .#{$name}-units--g#{$gap}, {
+            @include screen-size-units-gap($name, $gap);
           }
         }
       }
@@ -451,12 +462,10 @@
     clear: both;
   }
 
-  .hide,
   .h-#{$prefix}d-n {
     display: none;
   }
 
-  .show,
   .h-#{$prefix}d-b {
     display: block;
   }
@@ -469,16 +478,18 @@
     display: inline-block;
   }
 
-  .posr,
   .h-#{$prefix}pos#{$size-divider}r {
     position: relative;
   }
 
-  .h-#{$prefix}pos-a {
+  .h-#{$prefix}pos#{$size-divider}a {
     position: absolute;
   }
 
-  .ovh,
+  .h-#{$prefix}pos#{$size-divider}s {
+    position: static;
+  }
+
   .h-#{$prefix}ov#{$size-divider}h {
     overflow: hidden;
   }

@@ -21,7 +21,7 @@
   @include units--center;
 }
 
-@include unit--g();
+@include echo-units-gap();
 
 // Media Box
 
@@ -56,15 +56,15 @@
   width: 100%;
 }
 
-@each $gutter in $unit-gutter {
+@each $gap in $unit-gaps {
 
-  .media--g#{$gutter} > .media__img {
-    padding-right: #{$gutter}px;
+  .media--g#{$gap} > .media__img {
+    padding-right: #{$gap}px;
   }
 
-  .media--g#{$gutter} > .media__img--reverse {
+  .media--g#{$gap} > .media__img--reverse {
     padding-right: 0;
-    padding-left: #{$gutter}px;
+    padding-left: #{$gap}px;
   }
 }
 
