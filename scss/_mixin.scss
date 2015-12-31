@@ -149,8 +149,7 @@
 
       @each $gap in $unit-gaps {
 
-        .units-gap-#{$gap},
-        .units--g#{$gap} {
+        .units-gap-#{$gap} {
           @include units-gap(#{$gap});
         }
       }
