@@ -34,6 +34,7 @@
 .media__body {
   display: table-cell;
   vertical-align: top;
+  box-sizing: border-box;
 
   .media--middle > & {
     vertical-align: middle;
@@ -58,13 +59,12 @@
 
 @each $gap in $unit-gaps {
 
-  .media--g#{$gap} > .media__img {
-    padding-right: #{$gap}px;
-  }
+  .media--gap-#{$gap} {
+    margin: 0 0 -#{$gap}px -#{$gap}px;
 
-  .media--g#{$gap} > .media__img--reverse {
-    padding-right: 0;
-    padding-left: #{$gap}px;
+    > * {
+      padding: 0 0 #{$gap}px #{$gap}px;
+    }
   }
 }
 

@@ -160,8 +160,7 @@
 
         @each $gap in $unit-gaps {
 
-          .#{$name}-units-gap-#{$gap},
-          .#{$name}-units--g#{$gap}, {
+          .#{$name}-units-gap-#{$gap} {
             @include screen-size-units-gap($name, $gap);
           }
         }
