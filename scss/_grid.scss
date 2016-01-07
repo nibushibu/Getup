@@ -21,8 +21,6 @@
   @include units--center;
 }
 
-@include echo-gap();
-
 // Media Box
 
 .media {
@@ -57,15 +55,5 @@
   width: 100%;
 }
 
-@each $gap in $gaps {
-
-  .media--gap-#{$gap} {
-    margin: 0 0 -#{$gap}px -#{$gap}px;
-
-    > * {
-      padding: 0 0 #{$gap}px #{$gap}px;
-    }
-  }
-}
-
+@include echo-gap();
 @include unit-size($screen-size);
