@@ -21,7 +21,7 @@
   @include units--center;
 }
 
-@include echo-units-gap();
+@include echo-gap();
 
 // Media Box
 
@@ -57,7 +57,7 @@
   width: 100%;
 }
 
-@each $gap in $unit-gaps {
+@each $gap in $gaps {
 
   .media--gap-#{$gap} {
     margin: 0 0 -#{$gap}px -#{$gap}px;

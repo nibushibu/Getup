@@ -124,7 +124,7 @@
 }
 
 
-@mixin units-gap($gap) {
+@mixin gap($gap) {
   margin: 0 0 -#{$gap}px -#{$gap}px;
 
   > * {
@@ -132,7 +132,7 @@
   }
 }
 
-@mixin screen-size-units-gap($screen-size, $gap) {
+@mixin screen-size-gap($screen-size, $gap) {
   margin: 0 0 -#{$gap}px -#{$gap}px;
 
   > * {
@@ -141,26 +141,26 @@
 }
 
 
-@mixin echo-units-gap() {
+@mixin echo-gap() {
 
   @each $name, $size in $screen-size {
 
     @if $name == pc {
 
-      @each $gap in $unit-gaps {
+      @each $gap in $gaps {
 
-        .units-gap-#{$gap} {
-          @include units-gap(#{$gap});
+        .gap-#{$gap} {
+          @include gap(#{$gap});
         }
       }
     } @else {
 
       @media (max-width: $size) {
 
-        @each $gap in $unit-gaps {
+        @each $gap in $gaps {
 
-          .#{$name}-units-gap-#{$gap} {
-            @include screen-size-units-gap($name, $gap);
+          .#{$name}-gap-#{$gap} {
+            @include screen-size-gap($name, $gap);
           }
         }
       }
