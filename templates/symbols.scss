@@ -23,6 +23,57 @@
   @include <%= className %>;
 }
 
+@mixin <%= className %>-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+@mixin <%= className %>-2x {
+  font-size: 2em;
+}
+
+@mixin <%= className %>-3x {
+  font-size: 3em;
+}
+
+@mixin <%= className %>-4x {
+  font-size: 4em;
+}
+
+@mixin <%= className %>-5x {
+  font-size: 5em;
+}
+
+@mixin <%= className %>-fw {
+  width: (18em / 14);
+  text-align: center;
+}
+
+.<%= className %>-lg {
+  @include <%= className %>-lg;
+}
+
+.<%= className %>-2x {
+  @include <%= className %>-2x;
+}
+
+.<%= className %>-3x {
+  @include <%= className %>-3x;
+}
+
+.<%= className %>-4x {
+  @include <%= className %>-4x;
+}
+
+.<%= className %>-5x {
+  @include <%= className %>-5x;
+}
+
+.<%= className %>-fw {
+  @include <%= className %>-fw;
+}
+
 <% _.each(glyphs, function(glyph) {
 %>@mixin <%= className %>-<%= glyph.name %> { content: "\<%= glyph.codepoint.toString(16).toUpperCase() %>"; }
 .<%= className %>-<%= glyph.name %>:before { @include <%= className %>-<%= glyph.name %>; }

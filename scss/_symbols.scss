@@ -29,24 +29,50 @@
   vertical-align: -15%;
 }
 
+@mixin s-2x {
+  font-size: 2em;
+}
+
+@mixin s-3x {
+  font-size: 3em;
+}
+
+@mixin s-4x {
+  font-size: 4em;
+}
+
+@mixin s-5x {
+  font-size: 5em;
+}
+
+@mixin s-fw {
+  width: (18em / 14);
+  text-align: center;
+}
+
 .s-lg {
   @include s-lg;
 }
 
-@mixin s-2x { font-size: 2em; }
-@mixin s-3x { font-size: 3em; }
-@mixin s-4x { font-size: 4em; }
-@mixin s-5x { font-size: 5em; }
-@mixin s-fw {
-  width: 1.2857142857142858em;
-  text-align: center;
+.s-2x {
+  @include s-2x;
 }
 
-.s-2x { @include s-2x; }
-.s-3x { @include s-3x; }
-.s-4x { @include s-4x; }
-.s-5x { @include s-5x; }
-.s-fw { @include s-fw; }
+.s-3x {
+  @include s-3x;
+}
+
+.s-4x {
+  @include s-4x;
+}
+
+.s-5x {
+  @include s-5x;
+}
+
+.s-fw {
+  @include s-fw;
+}
 
 @mixin s-glyph01 { content: "\EA01"; }
 .s-glyph01:before { @include s-glyph01; }
