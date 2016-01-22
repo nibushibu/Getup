@@ -143,7 +143,7 @@ gulp.task("babel", function () {
 // minify CSS
 gulp.task("minifyCss", function () {
   return gulp.src(appPath + "css/*.css")
-  .pipe($.minifyCss({
+  .pipe($.cssnano({
     compatibility: "ie8",
     advanced: false
   }))
