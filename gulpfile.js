@@ -40,7 +40,7 @@ var Defer = function() {
 
 // Sketch
 gulp.task("sketch", function () {
-  return gulp.src("*.sketch")
+  return gulp.src("symbol-font-14px.sketch")
   .pipe($.sketch({
     "export": "artboards",
     formats: "svg"
