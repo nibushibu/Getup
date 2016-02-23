@@ -16,7 +16,7 @@
     "gulp-compass": "*",
     "gulp-concat": "*",
     "gulp-consolidate": "*",
-    "gulp-cssnano": "^2.1.0",
+    "gulp-cssnano": "*",
     "gulp-ejs": "*",
     "gulp-iconfont": "*",
     "gulp-kss": "*",
