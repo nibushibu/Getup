@@ -26,7 +26,7 @@ $(() => {
 
   // アンカースクロールアニメーション
   if(!_ua.Mobile || !_ua.Tablet){
-    $("a[href*=#]").click(function() {
+    $("a[href*='#']").click(function() {
       var href = $(this).attr("href");
       var $target = $(href === "#" || href === "" ? 'html' : href);
       $target.velocity("scroll", { duration: 1000, easing: "ease" });
