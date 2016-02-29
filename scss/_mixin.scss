@@ -132,11 +132,11 @@
   }
 }
 
-@mixin screen-size-gap($screen-size, $gap) {
-  margin: 0 0 -#{$gap}px -#{$gap}px;
+@mixin gap-vertical($gap) {
+  margin-bottom: -#{$gap}px;
 
   > * {
-    padding: 0 0 #{$gap}px #{$gap}px;
+    padding-bottom: #{$gap}px;
   }
 }
 
@@ -153,6 +153,13 @@
           @include gap(#{$gap});
         }
       }
+
+      @each $gap in $gaps {
+
+        .gap-vertical-#{$gap} {
+          @include gap-vertical(#{$gap});
+        }
+      }
     } @else {
 
       @media (max-width: $size) {
@@ -160,7 +167,14 @@
         @each $gap in $gaps {
 
           .#{$name}-gap-#{$gap} {
-            @include screen-size-gap($name, $gap);
+            @include gap($gap);
+          }
+        }
+
+        @each $gap in $gaps {
+
+          .#{$name}-gap-vertical-#{$gap} {
+            @include gap-vertical(#{$gap});
           }
         }
       }
