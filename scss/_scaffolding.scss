@@ -75,10 +75,10 @@
 
 html {
   color: $base-text-color;
-  font-size: $base-text-size;
-  // font-family: "Lucida Grande", Arial, sans-serif;
+  font-size: 10px;
   line-height: 1.5;
-  font-size: percentage(10 / 16);
+  // font-family: "Lucida Grande", Arial, sans-serif;
+  // font-size: percentage(10 / 16);
   // text-rendering: optimizeLegibility;// text-renderingプロパティ 参考:http://terkel.jp/archives/2012/09/text-rendering-optimizelegibility/
 }
 
