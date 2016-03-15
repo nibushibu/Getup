@@ -24,39 +24,59 @@
 // Media Box
 
 .media {
-  display: table;
-  min-width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.media__img,
+.media--middle {
+  align-items: center;
+}
+
+.media--bottom {
+  align-items: flex-end;
+}
+
+
 .media__body {
-  display: table-cell;
-  vertical-align: top;
-  box-sizing: border-box;
-
-  .media--middle > & {
-    vertical-align: middle;
-  }
-
-  .media--bottom > & {
-    vertical-align: bottom;
-  }
+  flex: 1;
 }
 
-.media__img {
-  max-width: none;
+.no-flexbox {
 
-  img {
-    max-width: none;
+  .media {
+    display: table;
+    min-width: 100%;
+  }
 
-    @media (max-width: map-get($screen-size, pc-max)) {
-      max-width: 100%;
+  .media__img,
+  .media__figure,
+  .media__body {
+    display: table-cell;
+    vertical-align: top;
+    box-sizing: border-box;
+
+    .media--middle > & {
+      vertical-align: middle;
+    }
+
+    .media--bottom > & {
+      vertical-align: bottom;
     }
   }
-}
 
-.media__body {
-  width: 100%;
+  .media__img,
+  .media__figure {
+    max-width: none;
+
+    img {
+      max-width: none;
+    }
+  }
+
+  .media__body {
+    width: 100%;
+  }
 }
 
 @include echo-gap();
