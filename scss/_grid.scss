@@ -48,6 +48,10 @@
 
   img {
     max-width: none;
+
+    @media (max-width: map-get($screen-size, pc-max)) {
+      max-width: 100%;
+    }
   }
 }
 
