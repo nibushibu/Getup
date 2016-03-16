@@ -189,9 +189,12 @@ gulp.task("copyCss", function () {
   .pipe(gulp.dest("scss"));
 });
 
-// Copy FontAwesome fonts
+// Copy fonts
 gulp.task("copyFont", function () {
-  return gulp.src("node_modules/font-awesome/fonts/fontawesome-*")
+  return gulp.src([
+    "node_modules/font-awesome/fonts/fontawesome-*",
+    "node_modules/slick-carousel/slick/fonts/*"
+  ])
   .pipe(gulp.dest(appPath + "fonts"));
 });
 
