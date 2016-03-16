@@ -218,6 +218,7 @@ gulp.task("concat", function () {
     "js/plugins-base.js",
     "node_modules/velocity-animate/velocity.min.js",
     "node_modules/velocity-animate/velocity.ui.min.js",
+    "node_modules/slick-carousel/slick/slick.min.js",
     "node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js",
     "node_modules/scrollmagic/scrollmagic/minified/plugins/jquery.ScrollMagic.min.js",
     "node_modules/scrollmagic/scrollmagic/minified/plugins/animation.velocity.min.js",
