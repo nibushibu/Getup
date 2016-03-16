@@ -37,6 +37,7 @@
     "lodash": "*",
     "normalize.css": "*",
     "run-sequence": "*",
+    "scrollmagic": "*",
     "slick-carousel": "*",
     "velocity-animate": "*"
   },
