@@ -204,6 +204,14 @@ gulp.task("copyFaCss", function () {
   .pipe(gulp.dest("scss/font-awesome"));
 });
 
+// Copy Images
+gulp.task("copyImg", function(){
+  return gulp.src([
+    "node_modules/slick-carousel/slick/ajax-loader.gif"
+  ])
+  .pipe(gulp.dest(appPath + "img"))
+})
+
 // Concat
 gulp.task("concat", function () {
   return gulp.src([
@@ -254,6 +262,7 @@ gulp.task("update", function (callback) {
       'copyCss',
       'copyFont',
       'copyFaCss',
+      'copyImg',
       'concat'
     ],
     'watch',
