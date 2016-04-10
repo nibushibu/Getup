@@ -34,3 +34,6 @@ linters:
 
   SelectorFormat:
     enabled: false
+
+  Comment:
+    enabled: false
