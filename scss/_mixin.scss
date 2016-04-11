@@ -409,17 +409,18 @@
 
   // マージン
   @include margin-class($prefix, n, 0);
-  @include margin-class($prefix, s, 5px);
-  @include margin-class($prefix, m, 10px);
-  @include margin-class($prefix, l, 20px);
-  @include margin-class($prefix, 2l, 30px);
-  @include margin-class($prefix, 3l, 40px);
+  @include margin-class($prefix, s, .5em);
+  @include margin-class($prefix, m, 1em);
+  @include margin-class($prefix, l, 1.5em);
+  @include margin-class($prefix, 2l, 2em);
+  @include margin-class($prefix, 3l, 3em);
 
   // パディング
   @include padding-class($prefix, n, 0);
-  @include padding-class($prefix, s, 5px);
-  @include padding-class($prefix, m, 10px);
-  @include padding-class($prefix, l, 20px);
+  @include padding-class($prefix, s, .5em);
+  @include padding-class($prefix, m, 1em);
+  @include padding-class($prefix, l, 1.5em);
+  @include padding-class($prefix, 2l, 2em);
 
   /* CLEARFIX */
   .clearfix,
