@@ -19,6 +19,9 @@ $base-text-color: #333 !default;
 // 基本リンクテキストカラー
 $base-link-color: #074ae2 !default;
 
+// 基本フォント
+$base-font-family: 'Noto Sans CJK JP', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+
 // スクリーンサイズマップ
 $screen-size: (
   pc              : 960px,

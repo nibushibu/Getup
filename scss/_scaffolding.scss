@@ -77,13 +77,9 @@ html {
   color: $base-text-color;
   font-size: 10px;
   line-height: 1.5;
-  // font-family: "Lucida Grande", Arial, sans-serif;
+  font-family: $base-font-family;
   // font-size: percentage(10 / 16);
   // text-rendering: optimizeLegibility;// text-renderingプロパティ 参考:http://terkel.jp/archives/2012/09/text-rendering-optimizelegibility/
-}
-
-.lt-ie9 {
-  // font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
 }
 
 body {
