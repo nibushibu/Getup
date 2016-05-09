@@ -9,19 +9,19 @@
 
 // ボックスリンク
 
-.link-box {
+.block-link {
   color: $base-text-color;
   cursor: pointer;
 
   &:hover {
     text-decoration: none;
 
-    .link-box-link {
+    .block-link__link {
       text-decoration: underline;
     }
   }
 
-  .link-box-link {
+  .block-link__link {
     color: $base-link-color;
   }
 }
