@@ -25,3 +25,9 @@
     color: $base-link-color;
   }
 }
+
+// 中のマージンをキャンセル
+.cancel-child-margin {
+
+  @include cancel-child-margin;
+}
