@@ -27,6 +27,27 @@
   //   height: auto !important;
   //   background-image: none !important;
   // }
+
+  @each $name, $size in $screen-size {
+
+    @if $name == pc {
+      &.is-canceled {
+        width: auto;
+        height: auto;
+        background-image: none;
+        padding-top: 0;
+      }
+    } @else {
+      @media (max-width: $size) {
+        &.#{$name}-is-canceled {
+          width: auto;
+          height: auto;
+          background-image: none;
+          padding-top: 0;
+        }
+      }
+    }
+  }
 }
 
 @mixin units {
