@@ -229,7 +229,7 @@ gulp.task("concat", function () {
 });
 
 // Compass
-gulp.task("compass-build", function (callback) {
+gulp.task("buildCss", function (callback) {
   return runSequence('compass', 'autoprefixer', 'kss', callback);
 });
 
@@ -254,7 +254,7 @@ gulp.task("ejs", function (callback) {
 gulp.task("watch", function () {
   gulp.watch("*.sketch", ["sketch"]);
   gulp.watch("svg/*.svg", ["iconfont"]);
-  gulp.watch("scss/*.scss", ["compass-build"]);
+  gulp.watch("scss/*.scss", ["buildCss"]);
   gulp.watch("js/**/*.js", ["babel"]);
   gulp.watch("ejs/**/*.ejs", ["ejs"]);
 });

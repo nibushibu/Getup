@@ -77,13 +77,9 @@ html {
   color: $base-text-color;
   font-size: 10px;
   line-height: 1.5;
-  // font-family: "Lucida Grande", Arial, sans-serif;
+  font-family: $base-font-family;
   // font-size: percentage(10 / 16);
   // text-rendering: optimizeLegibility;// text-renderingプロパティ 参考:http://terkel.jp/archives/2012/09/text-rendering-optimizelegibility/
-}
-
-.lt-ie9 {
-  // font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
 }
 
 body {
@@ -118,9 +114,9 @@ pre,
 .data,
 .mod {
   @if $default-side-margin == no {
-    margin: 10px 0;
+    margin: .5em 0;
   } @else {
-    margin: 10px;
+    margin: .5em;
   }
 }
 
@@ -131,10 +127,10 @@ h4,
 h5,
 h6 {
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 1em;
 
   &.condenced {
-    margin-top: 10px;
+    margin-top: .5em;
   }
 }
 
@@ -227,12 +223,12 @@ ol,
 }
 
 .list-inline {
-  margin-right: -10px;
+  margin-right: -1em;
 }
 
 .list-inline__item {
   @include inline-block;
-  padding-right: 10px;
+  padding-right: 1em;
 }
 
 dt {
@@ -320,14 +316,14 @@ img.left,
 img.alignleft,
 img.fl {
   float: left;
-  margin: 0 10px 10px 0;
+  margin: 0 1em 1em 0;
 }
 
 img.right,
 img.alignright,
 img.fr {
   float: right;
-  margin: 0 0 10px 10px;
+  margin: 0 0 1em 1em;
 }
 
 img.aligncenter,
