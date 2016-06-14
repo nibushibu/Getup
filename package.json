@@ -33,7 +33,7 @@
     "gulp-utf8ize-sourcemaps": "*",
     "gulp-util": "*",
     "gulp-watch": "*",
-    "jquery": "1",
+    "jquery": "*",
     "lodash": "*",
     "normalize.css": "*",
     "run-sequence": "*",
