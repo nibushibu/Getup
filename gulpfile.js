@@ -192,16 +192,9 @@ gulp.task("copyCss", function () {
 // Copy fonts
 gulp.task("copyFont", function () {
   return gulp.src([
-    "node_modules/font-awesome/fonts/fontawesome-*",
     "node_modules/slick-carousel/slick/fonts/*"
   ])
   .pipe(gulp.dest(appPath + "fonts"));
-});
-
-// Copy FontAwesome SCSS
-gulp.task("copyFaCss", function () {
-  return gulp.src("node_modules/font-awesome/scss/_*.scss")
-  .pipe(gulp.dest("scss/font-awesome"));
 });
 
 // Copy Images
@@ -266,7 +259,6 @@ gulp.task("update", function (callback) {
       'copyJs',
       'copyCss',
       'copyFont',
-      'copyFaCss',
       'copyImg',
       'concat'
     ],
