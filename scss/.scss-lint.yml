@@ -37,3 +37,6 @@ linters:
 
   Comment:
     enabled: false
+
+  UrlQuotes:
+    enabled: false

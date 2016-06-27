@@ -474,6 +474,10 @@
     text-align: center;
   }
 
+  .h-#{$prefix}ta#{$size-divider}j {
+    text-align: justify;
+  }
+
   /* フロート
   Wordpressのリッチテキストエディタが付加するクラス(※)を網羅。
   ※ .left / .right / .clear
