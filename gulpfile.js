@@ -145,7 +145,8 @@ gulp.task("minifyCss", function () {
   return gulp.src(appPath + "css/*.css")
   .pipe($.cssnano({
     compatibility: "ie8",
-    advanced: false
+    advanced: false,
+    zindex: false
   }))
   .pipe(gulp.dest(appPath + "css"));
 });
