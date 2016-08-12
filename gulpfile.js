@@ -92,7 +92,9 @@ gulp.task("compass", function () {
 // AutoPrefixer
 gulp.task("autoprefixer", function () {
   return gulp.src(appPath + "css/*.css")
-  .pipe($.autoprefixer())
+  .pipe($.postcss([
+    require('autoprefixer')
+  ]))
   .pipe(gulp.dest(appPath + "css"));
 });
 
