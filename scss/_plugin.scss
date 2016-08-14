@@ -1,0 +1,12 @@
+// Slick用調整
+
+@function font-url($url) {
+  @return url("../fonts/" + $url);
+}
+
+@function img-url($url) {
+  @return url("../img/" + $url);
+}
+
+@import "slick";
+@import "slick-theme";
