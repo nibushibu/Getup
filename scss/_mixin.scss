@@ -15,7 +15,7 @@
   font-size: $px / 10 + rem;
 }
 
-@mixin alt-img {
+@mixin sprite {
   display: inline-block;
   height: 0;
   vertical-align: middle;
