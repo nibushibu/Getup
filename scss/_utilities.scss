@@ -4,7 +4,11 @@
 */
 .alt-img,
 .sprite {
-  @include alt-img;
+  @include sprite;
+}
+
+.alt-img {
+  overflow: hidden;
 }
 
 // ボックスリンク
