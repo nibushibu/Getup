@@ -40,3 +40,6 @@ linters:
 
   UrlQuotes:
     enabled: false
+
+  StringQuotes:
+    style: single_quotes
