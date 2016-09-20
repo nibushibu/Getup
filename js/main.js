@@ -31,7 +31,7 @@ $(() => {
     $('a[href*="#"]').click(function() {
       var href = $(this).attr('href');
       var $target = $(href === '#' || href === '' ? 'html' : href);
-      $target.velocity('scroll', { duration: 1000, easing: 'ease' });
+      TweenMax.to(window, 1, {scrollTo:$target.offset().top});
       return false;
     });
   }
