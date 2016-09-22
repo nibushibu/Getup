@@ -224,6 +224,14 @@
     margin-right: 50%;
   }
 
+  .#{$prefix}push#{$size-divider}0 {
+    margin-left: 0;
+  }
+
+  .#{$prefix}pull#{$size-divider}0 {
+    margin-right: 0;
+  }
+
   @each $n in 1, 2 {
 
     .#{$prefix}size#{$size-divider}#{$n}of3 {
