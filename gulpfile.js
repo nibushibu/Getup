@@ -1,9 +1,9 @@
-var runSequence = require("run-sequence");
-var gulp = require("gulp");
-var gulpLoadPlugins = require("gulp-load-plugins");
+var runSequence = require('run-sequence');
+var gulp = require('gulp');
+var gulpLoadPlugins = require('gulp-load-plugins');
 var $ = gulpLoadPlugins();
-var fontName = "symbols";
-var appPath = "app/";
+var fontName = 'symbols';
+var appPath = 'app/';
 var licenseRegexp = /^\!|^@preserve|^@cc_on|\bMIT\b|\bMPL\b|\bGPL\b|\(c\)|License|Copyright/i;
 var isLicenseComment = (function () {
   var _prevCommentLine = 0;
@@ -39,22 +39,22 @@ var Defer = function() {
 };
 
 // Sketch
-gulp.task("sketch", function () {
-  return gulp.src("symbol-font-14px.sketch")
+gulp.task('sketch', function () {
+  return gulp.src('symbol-font-14px.sketch')
   .pipe($.sketch({
-    "export": "artboards",
-    formats: "svg"
+    'export': 'artboards',
+    formats: 'svg'
   }))
   .pipe(gulp.dest('svg'));
 });
 
 // iconfont
-gulp.task("iconfont", function() {
-  return gulp.src("svg/*.svg")
+gulp.task('iconfont', function() {
+  return gulp.src('svg/*.svg')
   .pipe($.iconfont({
     fontName: fontName
   }))
-  .on("glyphs", function (glyphs) {
+  .on('glyphs', function (glyphs) {
     var option = {
       glyphs: glyphs.map(function (glyph) {
         return {
@@ -66,174 +66,175 @@ gulp.task("iconfont", function() {
       fontPath: '../fonts/',
       className: 's'
     };
-    gulp.src("templates/symbols.scss")
-    .pipe($.consolidate("lodash", option))
+    gulp.src('templates/symbols.scss')
+    .pipe($.consolidate('lodash', option))
     .pipe($.rename({
       basename: fontName,
-      prefix: "_",
-      extname: ".scss"
+      prefix: '_',
+      extname: '.scss'
     }))
-    .pipe(gulp.dest("scss"));
+    .pipe(gulp.dest('scss'));
   })
-  .pipe(gulp.dest(appPath + "fonts"));
+  .pipe(gulp.dest(appPath + 'fonts'));
 });
 
 // Compass
-gulp.task("compass", function () {
-  return gulp.src("scss/*.scss")
+gulp.task('compass', function () {
+  return gulp.src('scss/*.scss')
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.compass({
-    config_file: "config.rb",
-    sass: "scss",
-    css: appPath + "css"
+    config_file: 'config.rb',
+    sass: 'scss',
+    css: appPath + 'css'
   }));
 });
 
 // AutoPrefixer
-gulp.task("autoprefixer", function () {
-  return gulp.src(appPath + "css/*.css")
+gulp.task('autoprefixer', function () {
+  return gulp.src(appPath + 'css/*.css')
   .pipe($.postcss([
     require('autoprefixer')
   ]))
-  .pipe(gulp.dest(appPath + "css"));
+  .pipe(gulp.dest(appPath + 'css'));
 });
 
 // KSS
-gulp.task("kss", function () {
+gulp.task('kss', function () {
   var d = new Defer();
-  gulp.src("scss/**/*.scss")
+  gulp.src('scss/**/*.scss')
   .pipe($.kss({
-    overview: "docs/template/styleguide.md",
-    templateDirectory: "docs/template/"
+    overview: 'docs/template/styleguide.md',
+    templateDirectory: 'docs/template/'
   }))
-  .pipe(gulp.dest("docs/styleguide"));
-  gulp.src(["docs/template/public/base.css", appPath + "css/*.css"])
-  .pipe($.concat("main.css"))
+  .pipe(gulp.dest('docs/styleguide'));
+  gulp.src(['docs/template/public/base.css', appPath + 'css/*.css'])
+  .pipe($.concat('main.css'))
   .pipe($.replace(/url\(\.\.\//g, 'url(../../../' + appPath))
-  .pipe($.replace(/url\(\"\.\.\//g, 'url("../../../' + appPath))
-  .pipe(gulp.dest("docs/styleguide/public"));
-  gulp.src("docs/template/public/github.css")
-  .pipe(gulp.dest("docs/styleguide/public"));
+  .pipe($.replace(/url\(\'\.\.\//g, 'url("../../../' + appPath))
+  .pipe(gulp.dest('docs/styleguide/public'));
+  gulp.src('docs/template/public/github.css')
+  .pipe(gulp.dest('docs/styleguide/public'));
 });
 
 // CoffeeScript
-// gulp.task("coffee", function() {
-//   return gulp.src("coffee/*.coffee")
+// gulp.task('coffee', function() {
+//   return gulp.src('coffee/*.coffee')
 //   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
 //   .pipe($.sourcemaps.init())
 //   .pipe($.coffee({
 //     bare: true
 //   }))
-//   .pipe($.sourcemaps.write(""))
-//   .pipe(gulp.dest(appPath + "js"));
+//   .pipe($.sourcemaps.write(''))
+//   .pipe(gulp.dest(appPath + 'js'));
 // });
 
 // Babel
-gulp.task("babel", function () {
+gulp.task('babel', function () {
   return gulp.src([
-    "js/*.js",
-    "!" + "js/plugins-base.js"
+    'js/*.js',
+    '!' + 'js/plugins-base.js'
   ])
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.sourcemaps.init())
   .pipe($.babel())
   .pipe($.sourcemaps.write())
   .pipe($.utf8izeSourcemaps())
-  .pipe(gulp.dest(appPath + "js"));
+  .pipe(gulp.dest(appPath + 'js'));
 });
 
 // minify CSS
-gulp.task("minifyCss", function () {
-  return gulp.src(appPath + "css/*.css")
+gulp.task('minifyCss', function () {
+  return gulp.src(appPath + 'css/*.css')
   .pipe($.cssnano({
-    compatibility: "ie8",
+    compatibility: 'ie8',
     advanced: false,
     zindex: false
   }))
-  .pipe(gulp.dest(appPath + "css"));
+  .pipe(gulp.dest(appPath + 'css'));
 });
 
 // minify JavaScript
-gulp.task("minifyJs", function () {
-  return gulp.src(appPath + "js/*.js")
+gulp.task('minifyJs', function () {
+  return gulp.src(appPath + 'js/*.js')
   .pipe($.uglify({
     mangle: false,
     preserveComments: isLicenseComment
   }))
-  .pipe(gulp.dest(appPath + "js"));
+  .pipe(gulp.dest(appPath + 'js'));
 });
 
 // minify PNG Images
-gulp.task("minifyPng", function () {
-  return gulp.src(appPath + "img/**.png")
+gulp.task('minifyPng', function () {
+  return gulp.src(appPath + 'img/**.png')
   .pipe($.pngmin())
-  .pipe(gulp.dest(appPath + "img"));
+  .pipe(gulp.dest(appPath + 'img'));
 });
 
 // Copy Javascript
-gulp.task("copyJs", function () {
+gulp.task('copyJs', function () {
   return gulp.src([
-    "node_modules/jquery/dist/jquery.min.*"
+    'node_modules/jquery/dist/jquery.min.*'
   ])
-  .pipe(gulp.dest(appPath + "js/vendor"));
+  .pipe(gulp.dest(appPath + 'js/vendor'));
 });
 
 // Copy CSS(SCSS)
-gulp.task("copyCss", function () {
+gulp.task('copyCss', function () {
   return gulp.src([
-    "node_modules/normalize.css/normalize.css",
-    "node_modules/slick-carousel/slick/slick.scss",
-    "node_modules/slick-carousel/slick/slick-theme.scss"
+    'node_modules/normalize.css/normalize.css',
+    'node_modules/slick-carousel/slick/slick.scss',
+    'node_modules/slick-carousel/slick/slick-theme.scss'
   ])
   .pipe($.rename({
-    prefix: "_",
-    extname: ".scss"
+    prefix: '_',
+    extname: '.scss'
   }))
-  .pipe(gulp.dest("scss"));
+  .pipe(gulp.dest('scss'));
 });
 
 // Copy fonts
-gulp.task("copyFont", function () {
+gulp.task('copyFont', function () {
   return gulp.src([
-    "node_modules/slick-carousel/slick/fonts/*"
+    'node_modules/slick-carousel/slick/fonts/*'
   ])
-  .pipe(gulp.dest(appPath + "fonts"));
+  .pipe(gulp.dest(appPath + 'fonts'));
 });
 
 // Copy Images
-gulp.task("copyImg", function(){
+gulp.task('copyImg', function(){
   return gulp.src([
-    "node_modules/slick-carousel/slick/ajax-loader.gif"
+    'node_modules/slick-carousel/slick/ajax-loader.gif'
   ])
-  .pipe(gulp.dest(appPath + "img"))
+  .pipe(gulp.dest(appPath + 'img'))
 })
 
 // Concat
-gulp.task("concat", function () {
+gulp.task('concat', function () {
   return gulp.src([
-    "js/plugins-base.js",
-    "node_modules/velocity-animate/velocity.min.js",
-    "node_modules/velocity-animate/velocity.ui.min.js",
-    "node_modules/slick-carousel/slick/slick.min.js",
-    "node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js",
-    "node_modules/scrollmagic/scrollmagic/minified/plugins/jquery.ScrollMagic.min.js",
-    "node_modules/scrollmagic/scrollmagic/minified/plugins/animation.velocity.min.js",
-    "node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"
+    'js/plugins-base.js',
+    'node_modules/gsap/src/minified/TweenMax.min.js',
+    'node_modules/gsap/src/minified/TimelineMax.min.js',
+    'node_modules/gsap/src/minified/plugins/ScrollToPlugin.min.js',
+    'node_modules/slick-carousel/slick/slick.min.js',
+    'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+    'node_modules/scrollmagic/scrollmagic/minified/plugins/jquery.ScrollMagic.min.js',
+    'node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
+    'node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js'
   ])
-  .pipe($.concat("plugins.js"))
-  .pipe(gulp.dest(appPath + "js"));
+  .pipe($.concat('plugins.js'))
+  .pipe(gulp.dest(appPath + 'js'));
 });
 
 // Compass
-gulp.task("buildCss", function (callback) {
+gulp.task('buildCss', function (callback) {
   return runSequence('compass', 'autoprefixer', 'kss', callback);
 });
 
 // EJS
-gulp.task("ejs", function (callback) {
+gulp.task('ejs', function (callback) {
   return gulp.src([
-    "ejs/**/*.ejs",
-    '!' + "ejs/**/_*.ejs"//_始まりは除外
+    'ejs/**/*.ejs',
+    '!' + 'ejs/**/_*.ejs'//_始まりは除外
   ])
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe(
@@ -241,22 +242,22 @@ gulp.task("ejs", function (callback) {
     .on('error', $.util.log)
   )
   .pipe($.rename({
-    extname: ".html"
+    extname: '.html'
   }))
   .pipe(gulp.dest(appPath));
 });
 
 // Watch
-gulp.task("watch", function () {
-  gulp.watch("*.sketch", ["sketch"]);
-  gulp.watch("svg/*.svg", ["iconfont"]);
-  gulp.watch("scss/*.scss", ["buildCss"]);
-  gulp.watch("js/**/*.js", ["babel"]);
-  gulp.watch("ejs/**/*.ejs", ["ejs"]);
+gulp.task('watch', function () {
+  gulp.watch('*.sketch', ['sketch']);
+  gulp.watch('svg/*.svg', ['iconfont']);
+  gulp.watch('scss/*.scss', ['buildCss']);
+  gulp.watch('js/**/*.js', ['babel']);
+  gulp.watch('ejs/**/*.ejs', ['ejs']);
 });
 
 // Command
-gulp.task("update", function (callback) {
+gulp.task('update', function (callback) {
   return runSequence(
     [
       'copyJs',
@@ -270,11 +271,11 @@ gulp.task("update", function (callback) {
   );
 });
 
-gulp.task("default", function (callback) {
+gulp.task('default', function (callback) {
   return runSequence('watch', callback);
 });
 
-gulp.task("min", function (callback) {
+gulp.task('min', function (callback) {
   return runSequence(
     [
       'minifyCss',

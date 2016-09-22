@@ -220,6 +220,10 @@
     margin-left: 50%;
   }
 
+  .#{$prefix}pull#{$size-divider}1of2 {
+    margin-right: 50%;
+  }
+
   @each $n in 1, 2 {
 
     .#{$prefix}size#{$size-divider}#{$n}of3 {
@@ -228,6 +232,10 @@
 
     .#{$prefix}push#{$size-divider}#{$n}of3 {
       margin-left: percentage( $n / 3 );
+    }
+
+    .#{$prefix}pull#{$size-divider}#{$n}of3 {
+      margin-right: percentage( $n / 3 );
     }
   }
 
@@ -240,6 +248,10 @@
     .#{$prefix}push#{$size-divider}#{$n}of4 {
       margin-left: percentage( $n / 4 );
     }
+
+    .#{$prefix}pull#{$size-divider}#{$n}of4 {
+      margin-right: percentage( $n / 4 );
+    }
   }
 
   @for $n from 1 through 4 {
@@ -250,6 +262,10 @@
 
     .#{$prefix}push#{$size-divider}#{$n}of5 {
       margin-left: percentage( $n / 5 );
+    }
+
+    .#{$prefix}pull#{$size-divider}#{$n}of5 {
+      margin-right: percentage( $n / 5 );
     }
   }
 
@@ -262,6 +278,10 @@
     .#{$prefix}push#{$size-divider}#{$n}of6 {
       margin-left: percentage( $n / 6 );
     }
+
+    .#{$prefix}pull#{$size-divider}#{$n}of6 {
+      margin-right: percentage( $n / 6 );
+    }
   }
 
   @for $n from 1 through 6 {
@@ -272,6 +292,10 @@
 
     .#{$prefix}push#{$size-divider}#{$n}of7 {
       margin-left: percentage( $n / 7 );
+    }
+
+    .#{$prefix}pull#{$size-divider}#{$n}of7 {
+      margin-right: percentage( $n / 7 );
     }
   }
 
@@ -284,6 +308,10 @@
     .#{$prefix}push#{$size-divider}#{$n}of8 {
       margin-left: percentage( $n / 8 );
     }
+
+    .#{$prefix}pull#{$size-divider}#{$n}of8 {
+      margin-right: percentage( $n / 8 );
+    }
   }
 
   @each $n in 1, 2, 4, 5, 7, 8 {
@@ -294,6 +322,10 @@
 
     .#{$prefix}push#{$size-divider}#{$n}of9 {
       margin-left: percentage( $n / 9 );
+    }
+
+    .#{$prefix}pull#{$size-divider}#{$n}of9 {
+      margin-right: percentage( $n / 9 );
     }
   }
 
@@ -306,6 +338,10 @@
     .#{$prefix}push#{$size-divider}#{$n}of10 {
       margin-left: percentage( $n / 10 );
     }
+
+    .#{$prefix}pull#{$size-divider}#{$n}of10 {
+      margin-right: percentage( $n / 10 );
+    }
   }
 
   @for $n from 1 through 10 {
@@ -316,6 +352,10 @@
 
     .#{$prefix}push#{$size-divider}#{$n}of11 {
       margin-left: percentage( $n / 11 );
+    }
+
+    .#{$prefix}pull#{$size-divider}#{$n}of11 {
+      margin-right: percentage( $n / 11 );
     }
   }
 
@@ -328,6 +368,10 @@
     .#{$prefix}push#{$size-divider}#{$n}of12 {
       margin-left: percentage( $n / 12 );
     }
+
+    .#{$prefix}pull#{$size-divider}#{$n}of12 {
+      margin-right: percentage( $n / 12 );
+    }
   }
 
   @each $n in 1, 3, 5, 7, 9, 11, 13, 15 {
@@ -338,6 +382,10 @@
 
     .#{$prefix}push#{$size-divider}#{$n}of16 {
       margin-left: percentage( $n / 16 );
+    }
+
+    .#{$prefix}pull#{$size-divider}#{$n}of16 {
+      margin-right: percentage( $n / 16 );
     }
   }
 }
