@@ -208,6 +208,7 @@
     width: auto;
   }
 
+  .#{$prefix}size#{$size-divider}1,
   .#{$prefix}size#{$size-divider}1of1 {
     width: 100%;
   }
