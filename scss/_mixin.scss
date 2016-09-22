@@ -208,6 +208,7 @@
     width: auto;
   }
 
+  .#{$prefix}size#{$size-divider}1,
   .#{$prefix}size#{$size-divider}1of1 {
     width: 100%;
   }
@@ -222,6 +223,14 @@
 
   .#{$prefix}pull#{$size-divider}1of2 {
     margin-right: 50%;
+  }
+
+  .#{$prefix}push#{$size-divider}0 {
+    margin-left: 0;
+  }
+
+  .#{$prefix}pull#{$size-divider}0 {
+    margin-right: 0;
   }
 
   @each $n in 1, 2 {
