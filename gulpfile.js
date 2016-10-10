@@ -27,27 +27,6 @@ var getFolders = function (dir) {
   });
 }
 
-/*
-  関数を遅延実行（deferred）するオブジェクト
-    -- untilで指定したeventを全て待ち合わせてからexecで指定した関数を実行する。
-    via. http://qiita.com/morou/items/d54000396a2a7d0714de
-*/
-var Defer = function() {
-  var wait_max = 0, wait_count = 0, callback = null;
-  function onEventEnd() {
-    if (max === ++count) {
-      callback && callback();
-    }
-  }
-  this.until = function(ev) {
-    max++;
-    ev.on('end', onEventEnd);
-  };
-  this.exec = function(cb) {
-    callback = cb;
-  };
-};
-
 // Sketch
 gulp.task('sketch', function () {
   return gulp.src('symbol-font-14px.sketch')
@@ -93,7 +72,7 @@ gulp.task('sass', function () {
   return gulp.src('scss/*.scss')
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.sass())
-  .pipe(gulp.dest(appPath + 'css'))
+  .pipe(gulp.dest(appPath + 'css'));
 });
 
 // SpriteSmith
@@ -128,7 +107,6 @@ gulp.task('autoprefixer', function () {
 
 // KSS
 gulp.task('kss', function () {
-  var d = new Defer();
   gulp.src('scss/**/*.scss')
   .pipe($.kss({
     overview: 'docs/template/styleguide.md',
