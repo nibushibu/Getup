@@ -2,6 +2,8 @@ var runSequence = require('run-sequence');
 var gulp = require('gulp');
 var gulpLoadPlugins = require('gulp-load-plugins');
 var $ = gulpLoadPlugins();
+var fs = require('fs');
+var path = require('path');
 var fontName = 'symbols';
 var appPath = 'app/';
 var licenseRegexp = /^\!|^@preserve|^@cc_on|\bMIT\b|\bMPL\b|\bGPL\b|\(c\)|License|Copyright/i;
@@ -16,6 +18,14 @@ var isLicenseComment = (function () {
     return false;
   };
 })();
+
+// SpriteSmithで使うディレクトリ取得関数
+var getFolders = function (dir) {
+  return fs.readdirSync(dir)
+  .filter(function (file) {
+    return fs.statSync(path.join(dir, file)).isDirectory();
+  });
+}
 
 /*
   関数を遅延実行（deferred）するオブジェクト
@@ -84,6 +94,27 @@ gulp.task('sass', function () {
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.sass())
   .pipe(gulp.dest(appPath + 'css'))
+});
+
+// SpriteSmith
+gulp.task('sprite', function () {
+  var folders = getFolders('sprite');
+
+  folders.map(function (folder) {
+    var spriteData = gulp.src(folder + '/*.png', {cwd: 'sprite'})
+    .pipe($.spritesmith({
+      imgName: 'sprite-' + folder + '.png',
+      imgPath:  '../img/sprite-' + folder + '.png',
+      cssName: '_sprite-' + folder + '.scss',
+      algorithm: 'binary-tree',
+      padding: 4,
+      // cssFormat: 'scss',
+      cssTemplate: 'templates/sprite.handlebars'
+    }));
+
+    spriteData.img.pipe(gulp.dest(appPath + 'img'));
+    spriteData.css.pipe(gulp.dest('scss'));
+  });
 });
 
 // AutoPrefixer
@@ -251,6 +282,7 @@ gulp.task('watch', function () {
   gulp.watch('scss/*.scss', ['buildCss']);
   gulp.watch('js/**/*.js', ['babel']);
   gulp.watch('ejs/**/*.ejs', ['ejs']);
+  gulp.watch('sprite/**/*', ['sprite']);
 });
 
 // Command
