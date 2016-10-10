@@ -1,2 +1,8 @@
-@charset "utf-8";
-/* ここにサイト独自のスタイルを設定 */
+@charset 'utf-8';
+
+@import 'sprite-1';
+@import 'sprite-2';
+
+.test {
+  @include sprite($sprite-blogpark-icon-interview-big);
+}

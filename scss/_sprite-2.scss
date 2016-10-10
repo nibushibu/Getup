@@ -1,0 +1,118 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$sprite-blogpark-icon-interview-big-name: 'blogpark-icon-interview-big';
+$sprite-blogpark-icon-interview-big-x: 0px;
+$sprite-blogpark-icon-interview-big-y: 0px;
+$sprite-blogpark-icon-interview-big-offset-x: 0px;
+$sprite-blogpark-icon-interview-big-offset-y: 0px;
+$sprite-blogpark-icon-interview-big-width: 100px;
+$sprite-blogpark-icon-interview-big-height: 100px;
+$sprite-blogpark-icon-interview-big-total-width: 204px;
+$sprite-blogpark-icon-interview-big-total-height: 150px;
+$sprite-blogpark-icon-interview-big-image: '../img/sprite-2.png';
+$sprite-blogpark-icon-interview-big: (0px, 0px, 0px, 0px, 100px, 100px, 204px, 150px, '../img/sprite-2.png', 'blogpark-icon-interview-big', );
+$sprite-blogpark-icon-interview-name: 'blogpark-icon-interview';
+$sprite-blogpark-icon-interview-x: 0px;
+$sprite-blogpark-icon-interview-y: 104px;
+$sprite-blogpark-icon-interview-offset-x: 0px;
+$sprite-blogpark-icon-interview-offset-y: -104px;
+$sprite-blogpark-icon-interview-width: 46px;
+$sprite-blogpark-icon-interview-height: 46px;
+$sprite-blogpark-icon-interview-total-width: 204px;
+$sprite-blogpark-icon-interview-total-height: 150px;
+$sprite-blogpark-icon-interview-image: '../img/sprite-2.png';
+$sprite-blogpark-icon-interview: (0px, 104px, 0px, -104px, 46px, 46px, 204px, 150px, '../img/sprite-2.png', 'blogpark-icon-interview', );
+$sprite-blogpark-icon-trends-big-name: 'blogpark-icon-trends-big';
+$sprite-blogpark-icon-trends-big-x: 104px;
+$sprite-blogpark-icon-trends-big-y: 0px;
+$sprite-blogpark-icon-trends-big-offset-x: -104px;
+$sprite-blogpark-icon-trends-big-offset-y: 0px;
+$sprite-blogpark-icon-trends-big-width: 100px;
+$sprite-blogpark-icon-trends-big-height: 100px;
+$sprite-blogpark-icon-trends-big-total-width: 204px;
+$sprite-blogpark-icon-trends-big-total-height: 150px;
+$sprite-blogpark-icon-trends-big-image: '../img/sprite-2.png';
+$sprite-blogpark-icon-trends-big: (104px, 0px, -104px, 0px, 100px, 100px, 204px, 150px, '../img/sprite-2.png', 'blogpark-icon-trends-big', );
+$sprite-blogpark-icon-wind-bts-photo-name: 'blogpark-icon-wind-bts-photo';
+$sprite-blogpark-icon-wind-bts-photo-x: 50px;
+$sprite-blogpark-icon-wind-bts-photo-y: 104px;
+$sprite-blogpark-icon-wind-bts-photo-offset-x: -50px;
+$sprite-blogpark-icon-wind-bts-photo-offset-y: -104px;
+$sprite-blogpark-icon-wind-bts-photo-width: 46px;
+$sprite-blogpark-icon-wind-bts-photo-height: 46px;
+$sprite-blogpark-icon-wind-bts-photo-total-width: 204px;
+$sprite-blogpark-icon-wind-bts-photo-total-height: 150px;
+$sprite-blogpark-icon-wind-bts-photo-image: '../img/sprite-2.png';
+$sprite-blogpark-icon-wind-bts-photo: (50px, 104px, -50px, -104px, 46px, 46px, 204px, 150px, '../img/sprite-2.png', 'blogpark-icon-wind-bts-photo', );
+$sprite-spritesheet-width: 204px;
+$sprite-spritesheet-height: 150px;
+$sprite-spritesheet-image: '../img/sprite-2.png';
+$sprite-spritesheet-sprites: ($sprite-blogpark-icon-interview-big, $sprite-blogpark-icon-interview, $sprite-blogpark-icon-trends-big, $sprite-blogpark-icon-wind-bts-photo, );
+$sprite-spritesheet: (204px, 150px, '../img/sprite-2.png', $sprite-spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: 0;
+  padding-top: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+  background-repeat: no-repeat;
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .sprite-#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+@include sprites($sprite-spritesheet-sprites);
