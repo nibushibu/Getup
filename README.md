@@ -1,3 +1,3 @@
 #Getup
 
-This is a simple CSS(SASS/Compass) framework.
+My simple CSS framework.
