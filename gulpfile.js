@@ -78,15 +78,12 @@ gulp.task('iconfont', function() {
   .pipe(gulp.dest(appPath + 'fonts'));
 });
 
-// Compass
-gulp.task('compass', function () {
+// SASS
+gulp.task('sass', function () {
   return gulp.src('scss/*.scss')
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
-  .pipe($.compass({
-    config_file: 'config.rb',
-    sass: 'scss',
-    css: appPath + 'css'
-  }));
+  .pipe($.sass())
+  .pipe(gulp.dest(appPath + 'css'))
 });
 
 // AutoPrefixer
@@ -227,7 +224,7 @@ gulp.task('concat', function () {
 
 // Compass
 gulp.task('buildCss', function (callback) {
-  return runSequence('compass', 'autoprefixer', 'kss', callback);
+  return runSequence('sass', 'autoprefixer', 'kss', callback);
 });
 
 // EJS
