@@ -15,7 +15,6 @@
     "gsap": "*",
     "gulp": "*",
     "gulp-babel": "*",
-    "gulp-compass": "*",
     "gulp-concat": "*",
     "gulp-consolidate": "*",
     "gulp-ejs": "*",
