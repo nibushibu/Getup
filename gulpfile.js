@@ -229,7 +229,7 @@ gulp.task('concat', function () {
   .pipe(gulp.dest(appPath + 'js'));
 });
 
-// Compass
+// Build CSS
 gulp.task('buildCss', function (callback) {
   return runSequence('sass', 'autoprefixer', 'kss', callback);
 });
