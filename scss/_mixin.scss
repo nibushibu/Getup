@@ -144,7 +144,7 @@
 
 
 @mixin gap($gap) {
-  margin: 0 0 (-#{$gap}) + px (-#{$gap}) + px;
+  margin: 0 0 -#{$gap}px -#{$gap}px;
 
   > * {
     padding: 0 0 #{$gap}px #{$gap}px;
@@ -152,7 +152,7 @@
 }
 
 @mixin gap-vertical($gap) {
-  margin-bottom: (-#{$gap}) + px;
+  margin-bottom: -#{$gap}px;
 
   > * {
     padding-bottom: #{$gap}px;
