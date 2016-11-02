@@ -3,10 +3,6 @@
 /* タブレットサイズ */
 @media (max-width: map-get($screen-size, tablet)) {
 
-  th {
-    white-space: nowrap;
-  }
-
   .data {
     overflow-y: hidden;
     overflow-x: auto;
