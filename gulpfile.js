@@ -4,6 +4,8 @@ var gulpLoadPlugins = require('gulp-load-plugins');
 var $ = gulpLoadPlugins();
 var fs = require('fs');
 var path = require('path');
+var webpack = require('webpack-stream');
+var autoprefixer = require('autoprefixer');
 var fontName = 'symbols';
 var appPath = 'app/';
 var licenseRegexp = /^\!|^@preserve|^@cc_on|\bMIT\b|\bMPL\b|\bGPL\b|\(c\)|License|Copyright/i;
@@ -71,7 +73,13 @@ gulp.task('iconfont', function() {
 gulp.task('sass', function () {
   return gulp.src('scss/*.scss')
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
+  .pipe($.sourcemaps.init())
   .pipe($.sass())
+  .pipe($.postcss([
+    require('autoprefixer')
+  ]))
+  .pipe($.sourcemaps.write('./'))
+  .pipe($.utf8izeSourcemaps())
   .pipe(gulp.dest(appPath + 'css'));
 });
 
@@ -92,17 +100,12 @@ gulp.task('sprite', function () {
     }));
 
     spriteData.img.pipe(gulp.dest(appPath + 'img'));
-    spriteData.css.pipe(gulp.dest('scss'));
+    spriteData.css.pipe(
+      gulp.dest('scss').on('end', function(){
+        console.log('complete sprite task');
+      })
+    );
   });
-});
-
-// AutoPrefixer
-gulp.task('autoprefixer', function () {
-  return gulp.src(appPath + 'css/*.css')
-  .pipe($.postcss([
-    require('autoprefixer')
-  ]))
-  .pipe(gulp.dest(appPath + 'css'));
 });
 
 // KSS
@@ -122,31 +125,19 @@ gulp.task('kss', function () {
   .pipe(gulp.dest('docs/styleguide/public'));
 });
 
-// CoffeeScript
-// gulp.task('coffee', function() {
-//   return gulp.src('coffee/*.coffee')
-//   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
-//   .pipe($.sourcemaps.init())
-//   .pipe($.coffee({
-//     bare: true
-//   }))
-//   .pipe($.sourcemaps.write(''))
-//   .pipe(gulp.dest(appPath + 'js'));
-// });
-
-// Babel
-gulp.task('babel', function () {
+// WebPack (Babel)
+gulp.task('webpack', function () {
   return gulp.src([
-    'js/*.js',
-    '!' + 'js/plugins-base.js'
+    'js/main.js'
   ])
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.sourcemaps.init())
-  .pipe($.babel())
-  .pipe($.sourcemaps.write())
+  .pipe(webpack( require('./webpack.config.js') ))
+  .pipe($.sourcemaps.write('./'))
   .pipe($.utf8izeSourcemaps())
   .pipe(gulp.dest(appPath + 'js'));
 });
+
 
 // minify CSS
 gulp.task('minifyCss', function () {
@@ -231,7 +222,7 @@ gulp.task('concat', function () {
 
 // Build CSS
 gulp.task('buildCss', function (callback) {
-  return runSequence('sass', 'autoprefixer', 'kss', callback);
+  return runSequence('sass', 'kss', callback);
 });
 
 // EJS
@@ -256,7 +247,7 @@ gulp.task('watch', function () {
   gulp.watch('*.sketch', ['sketch']);
   gulp.watch('svg/*.svg', ['iconfont']);
   gulp.watch('scss/*.scss', ['buildCss']);
-  gulp.watch('js/**/*.js', ['babel']);
+  gulp.watch('js/**/*.js', ['webpack']);
   gulp.watch('ejs/**/*.ejs', ['ejs']);
   gulp.watch('sprite/**/*', ['sprite']);
 });
