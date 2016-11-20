@@ -53,12 +53,22 @@
     display: table-cell;
     vertical-align: top;
     box-sizing: border-box;
+  }
 
-    .media--middle > & {
+  .media--middle {
+
+    .media__img,
+    .media__figure,
+    .media__body {
       vertical-align: middle;
     }
+  }
 
-    .media--bottom > & {
+  .media--bottom {
+
+    .media__img,
+    .media__figure,
+    .media__body {
       vertical-align: bottom;
     }
   }

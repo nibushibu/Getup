@@ -74,67 +74,69 @@
   @include s-fw;
 }
 
-@mixin s-glyph01 { content: "\EA01"; }
+@mixin s-caret-right { content: "\EA01"; }
+.s-caret-right:before { @include s-caret-right; }
+@mixin s-glyph01 { content: "\EA02"; }
 .s-glyph01:before { @include s-glyph01; }
-@mixin s-glyph02 { content: "\EA02"; }
+@mixin s-glyph02 { content: "\EA03"; }
 .s-glyph02:before { @include s-glyph02; }
-@mixin s-glyph03 { content: "\EA03"; }
+@mixin s-glyph03 { content: "\EA04"; }
 .s-glyph03:before { @include s-glyph03; }
-@mixin s-glyph04 { content: "\EA04"; }
+@mixin s-glyph04 { content: "\EA05"; }
 .s-glyph04:before { @include s-glyph04; }
-@mixin s-glyph05 { content: "\EA05"; }
+@mixin s-glyph05 { content: "\EA06"; }
 .s-glyph05:before { @include s-glyph05; }
-@mixin s-glyph06 { content: "\EA06"; }
+@mixin s-glyph06 { content: "\EA07"; }
 .s-glyph06:before { @include s-glyph06; }
-@mixin s-glyph07 { content: "\EA07"; }
+@mixin s-glyph07 { content: "\EA08"; }
 .s-glyph07:before { @include s-glyph07; }
-@mixin s-glyph08 { content: "\EA08"; }
+@mixin s-glyph08 { content: "\EA09"; }
 .s-glyph08:before { @include s-glyph08; }
-@mixin s-glyph09 { content: "\EA09"; }
+@mixin s-glyph09 { content: "\EA0A"; }
 .s-glyph09:before { @include s-glyph09; }
-@mixin s-glyph10 { content: "\EA0A"; }
+@mixin s-glyph10 { content: "\EA0B"; }
 .s-glyph10:before { @include s-glyph10; }
-@mixin s-glyph11 { content: "\EA0B"; }
+@mixin s-glyph11 { content: "\EA0C"; }
 .s-glyph11:before { @include s-glyph11; }
-@mixin s-glyph12 { content: "\EA0C"; }
+@mixin s-glyph12 { content: "\EA0D"; }
 .s-glyph12:before { @include s-glyph12; }
-@mixin s-glyph13 { content: "\EA0D"; }
+@mixin s-glyph13 { content: "\EA0E"; }
 .s-glyph13:before { @include s-glyph13; }
-@mixin s-glyph14 { content: "\EA0E"; }
+@mixin s-glyph14 { content: "\EA0F"; }
 .s-glyph14:before { @include s-glyph14; }
-@mixin s-glyph15 { content: "\EA0F"; }
+@mixin s-glyph15 { content: "\EA10"; }
 .s-glyph15:before { @include s-glyph15; }
-@mixin s-glyph16 { content: "\EA10"; }
+@mixin s-glyph16 { content: "\EA11"; }
 .s-glyph16:before { @include s-glyph16; }
-@mixin s-glyph17 { content: "\EA11"; }
+@mixin s-glyph17 { content: "\EA12"; }
 .s-glyph17:before { @include s-glyph17; }
-@mixin s-glyph18 { content: "\EA12"; }
+@mixin s-glyph18 { content: "\EA13"; }
 .s-glyph18:before { @include s-glyph18; }
-@mixin s-glyph19 { content: "\EA13"; }
+@mixin s-glyph19 { content: "\EA14"; }
 .s-glyph19:before { @include s-glyph19; }
-@mixin s-glyph20 { content: "\EA14"; }
+@mixin s-glyph20 { content: "\EA15"; }
 .s-glyph20:before { @include s-glyph20; }
-@mixin s-glyph21 { content: "\EA15"; }
+@mixin s-glyph21 { content: "\EA16"; }
 .s-glyph21:before { @include s-glyph21; }
-@mixin s-glyph22 { content: "\EA16"; }
+@mixin s-glyph22 { content: "\EA17"; }
 .s-glyph22:before { @include s-glyph22; }
-@mixin s-glyph23 { content: "\EA17"; }
+@mixin s-glyph23 { content: "\EA18"; }
 .s-glyph23:before { @include s-glyph23; }
-@mixin s-glyph24 { content: "\EA18"; }
+@mixin s-glyph24 { content: "\EA19"; }
 .s-glyph24:before { @include s-glyph24; }
-@mixin s-glyph25 { content: "\EA19"; }
+@mixin s-glyph25 { content: "\EA1A"; }
 .s-glyph25:before { @include s-glyph25; }
-@mixin s-glyph26 { content: "\EA1A"; }
+@mixin s-glyph26 { content: "\EA1B"; }
 .s-glyph26:before { @include s-glyph26; }
-@mixin s-glyph27 { content: "\EA1B"; }
+@mixin s-glyph27 { content: "\EA1C"; }
 .s-glyph27:before { @include s-glyph27; }
-@mixin s-glyph28 { content: "\EA1C"; }
+@mixin s-glyph28 { content: "\EA1D"; }
 .s-glyph28:before { @include s-glyph28; }
-@mixin s-glyph29 { content: "\EA1D"; }
+@mixin s-glyph29 { content: "\EA1E"; }
 .s-glyph29:before { @include s-glyph29; }
-@mixin s-glyph30 { content: "\EA1E"; }
+@mixin s-glyph30 { content: "\EA1F"; }
 .s-glyph30:before { @include s-glyph30; }
-@mixin s-glyph31 { content: "\EA1F"; }
+@mixin s-glyph31 { content: "\EA20"; }
 .s-glyph31:before { @include s-glyph31; }
-@mixin s-glyph32 { content: "\EA20"; }
+@mixin s-glyph32 { content: "\EA21"; }
 .s-glyph32:before { @include s-glyph32; }
