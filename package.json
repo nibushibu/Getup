@@ -8,8 +8,8 @@
     "autoprefixer": "*",
     "babel": "*",
     "babel-eslint": "*",
+    "babel-loader": "*",
     "babel-preset-es2015": "*",
-    "node-sass": "*",
     "csswring": "*",
     "eslint": "*",
     "graceful-fs": "*",
@@ -38,10 +38,14 @@
     "gulp.spritesmith": "*",
     "jquery": "*",
     "lodash": "*",
+    "node-sass": "*",
     "normalize.css": "*",
+    "require-dir": "*",
     "run-sequence": "*",
     "scrollmagic": "*",
-    "slick-carousel": "*"
+    "slick-carousel": "*",
+    "webpack": "*",
+    "webpack-stream": "*"
   },
   "directories": {
     "doc": "docs"
