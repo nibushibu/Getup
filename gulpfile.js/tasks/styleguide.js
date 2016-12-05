@@ -4,7 +4,7 @@ var $ = require('gulp-load-plugins')();
 
 // KSS
 gulp.task('kss', function () {
-  gulp.src('scss/**/*.scss')
+  gulp.src('css/**/*.css')
   .pipe($.kss({
     overview: 'docs/template/styleguide.md',
     templateDirectory: 'docs/template/'

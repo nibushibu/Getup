@@ -1,0 +1,584 @@
+@define-mixin g-clearfix {
+  &:after,
+  &:before {
+    display: table;
+    clear: both;
+    content: "";
+   }
+}
+
+@define-mixin font-size $px {
+  font-size: $px + px;
+  font-size: $px / 10 + rem;
+}
+
+@define-mixin sprite-img {
+  display: inline-block;
+  height: 0;
+  vertical-align: middle;
+}
+
+@define-mixin sprite-img-cancel {
+  width: auto;
+  height: auto;
+  background-image: none;
+  padding-top: 0;
+}
+
+@define-mixin units {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  margin: 0;
+  padding: 0;
+  letter-spacing: -.4em;
+
+  .no-flexbox & {
+    display: block;
+  }
+
+  table & {
+    display: block;
+  }
+
+  .lt-ie8 & {
+    overflow: visible;
+    zoom: 1;
+  }
+
+  &:after {
+    display: block;
+    clear: both;
+    height: 0;
+    content: "";
+  }
+}
+
+@define-mixin unit {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  list-style: none;
+  vertical-align: top;
+  letter-spacing: normal;
+  margin: 0;
+
+  .lt-ie8 & {
+    zoom: 1;
+  }
+}
+
+@define-mixin units--right {
+
+  justify-content: flex-end;
+
+  .no-flexbox & {
+    display: block;
+    text-align: right;
+
+    > .unit {
+      text-align: left;
+    }
+  }
+}
+
+@define-mixin units--reverse {
+  flex-direction: row-reverse;
+
+  .no-flexbox & {
+
+    > .unit {
+      float: right;
+    }
+  }
+}
+
+@define-mixin units--center {
+  justify-content: center;
+
+  .no-flexbox & {
+    display: block;
+    text-align: center;
+
+    > .unit {
+      text-align: left;
+    }
+  }
+}
+
+%icon {
+  display:inline-block;
+  text-decoration:inherit;
+  font-weight:normal;
+  font-style:normal;
+  font-family:"icon";
+}
+
+
+@define-mixin gap $gap {
+  margin: 0 0 -$(gap)px -$(gap)px;
+
+  > * {
+    padding: 0 0 $(gap)px $(gap)px;
+  }
+}
+
+@define-mixin gap-vertical $gap {
+  margin-bottom: -$(gap)px;
+
+  > * {
+    padding-bottom: $(gap)px;
+  }
+}
+
+@define-mixin echo-gap {
+
+  @each $gap in (10, 20) {
+
+    .gap-$(gap) {
+      @mixin gap $(gap);
+    }
+  }
+
+  @each $gap in (10, 20) {
+
+    .gap-vertical-$(gap) {
+      @mixin gap-vertical $(gap);
+    }
+  }
+}
+
+@define-mixin echo-unit-size $prefix {
+
+  .$(prefix)size$(size-divider)auto {
+    width: auto;
+  }
+
+  .$(prefix)size$(size-divider)1,
+  .$(prefix)size$(size-divider)1of1 {
+    width: 100%;
+  }
+
+  .$(prefix)size$(size-divider)1of2 {
+    width: 50%;
+  }
+
+  .$(prefix)push$(size-divider)1of2 {
+    margin-left: 50%;
+  }
+
+  .$(prefix)pull$(size-divider)1of2 {
+    margin-right: 50%;
+  }
+
+  .$(prefix)push$(size-divider)0 {
+    margin-left: 0;
+  }
+
+  .$(prefix)pull$(size-divider)0 {
+    margin-right: 0;
+  }
+
+  @each $n in 1, 2 {
+
+    .$(prefix)size$(size-divider)$(n)of3 {
+      width: percentage( $n / 3 );
+    }
+
+    .$(prefix)push$(size-divider)$(n)of3 {
+      margin-left: percentage( $n / 3 );
+    }
+
+    .$(prefix)pull$(size-divider)$(n)of3 {
+      margin-right: percentage( $n / 3 );
+    }
+  }
+
+  @each $n in 1, 3 {
+
+    .$(prefix)size$(size-divider)$(n)of4 {
+      width: percentage( $n / 4 );
+    }
+
+    .$(prefix)push$(size-divider)$(n)of4 {
+      margin-left: percentage( $n / 4 );
+    }
+
+    .$(prefix)pull$(size-divider)$(n)of4 {
+      margin-right: percentage( $n / 4 );
+    }
+  }
+
+  @for $n from 1 through 4 {
+
+    .$(prefix)size$(size-divider)$(n)of5 {
+      width: percentage( $n / 5 );
+    }
+
+    .$(prefix)push$(size-divider)$(n)of5 {
+      margin-left: percentage( $n / 5 );
+    }
+
+    .$(prefix)pull$(size-divider)$(n)of5 {
+      margin-right: percentage( $n / 5 );
+    }
+  }
+
+  @each $n in 1, 5 {
+
+    .$(prefix)size$(size-divider)$(n)of6 {
+      width: percentage( $n / 6 );
+    }
+
+    .$(prefix)push$(size-divider)$(n)of6 {
+      margin-left: percentage( $n / 6 );
+    }
+
+    .$(prefix)pull$(size-divider)$(n)of6 {
+      margin-right: percentage( $n / 6 );
+    }
+  }
+
+  @for $n from 1 through 6 {
+
+    .$(prefix)size$(size-divider)$(n)of7 {
+      width: percentage( $n / 7 );
+    }
+
+    .$(prefix)push$(size-divider)$(n)of7 {
+      margin-left: percentage( $n / 7 );
+    }
+
+    .$(prefix)pull$(size-divider)$(n)of7 {
+      margin-right: percentage( $n / 7 );
+    }
+  }
+
+  @each $n in 1, 3, 5, 7 {
+
+    .$(prefix)size$(size-divider)$(n)of8 {
+      width: percentage( $n / 8 );
+    }
+
+    .$(prefix)push$(size-divider)$(n)of8 {
+      margin-left: percentage( $n / 8 );
+    }
+
+    .$(prefix)pull$(size-divider)$(n)of8 {
+      margin-right: percentage( $n / 8 );
+    }
+  }
+
+  @each $n in 1, 2, 4, 5, 7, 8 {
+
+    .$(prefix)size$(size-divider)$(n)of9 {
+      width: percentage( $n / 9 );
+    }
+
+    .$(prefix)push$(size-divider)$(n)of9 {
+      margin-left: percentage( $n / 9 );
+    }
+
+    .$(prefix)pull$(size-divider)$(n)of9 {
+      margin-right: percentage( $n / 9 );
+    }
+  }
+
+  @each $n in 1, 3, 7, 9 {
+
+    .$(prefix)size$(size-divider)$(n)of10 {
+      width: percentage( $n / 10 );
+    }
+
+    .$(prefix)push$(size-divider)$(n)of10 {
+      margin-left: percentage( $n / 10 );
+    }
+
+    .$(prefix)pull$(size-divider)$(n)of10 {
+      margin-right: percentage( $n / 10 );
+    }
+  }
+
+  @for $n from 1 through 10 {
+
+    .$(prefix)size$(size-divider)$(n)of11 {
+      width: percentage( $n / 11 );
+    }
+
+    .$(prefix)push$(size-divider)$(n)of11 {
+      margin-left: percentage( $n / 11 );
+    }
+
+    .$(prefix)pull$(size-divider)$(n)of11 {
+      margin-right: percentage( $n / 11 );
+    }
+  }
+
+  @each $n in 1, 5, 7, 11 {
+
+    .$(prefix)size$(size-divider)$(n)of12 {
+      width: percentage( $n / 12 );
+    }
+
+    .$(prefix)push$(size-divider)$(n)of12 {
+      margin-left: percentage( $n / 12 );
+    }
+
+    .$(prefix)pull$(size-divider)$(n)of12 {
+      margin-right: percentage( $n / 12 );
+    }
+  }
+
+  @each $n in 1, 3, 5, 7, 9, 11, 13, 15 {
+
+    .$(prefix)size$(size-divider)$(n)of16 {
+      width: percentage( $n / 16 );
+    }
+
+    .$(prefix)push$(size-divider)$(n)of16 {
+      margin-left: percentage( $n / 16 );
+    }
+
+    .$(prefix)pull$(size-divider)$(n)of16 {
+      margin-right: percentage( $n / 16 );
+    }
+  }
+}
+
+@define-mixin unit-size $map {
+
+  @each $name, $size in $map {
+
+    $prefix: "$(name)-";
+
+    @if $name == pc {
+      $prefix: "";
+      @mixin echo-unit-size $prefix;
+    } @else {
+      @media (max-width: $size) {
+        @mixin echo-unit-size $prefix;
+      }
+    }
+  }
+}
+
+@define-mixin margin-class $prefix, $suffix, $size {
+
+  .h-$(prefix)mt$(size-divider)$(suffix) {
+    margin-top: $size;
+  }
+
+  .h-$(prefix)mb$(size-divider)$(suffix) {
+    margin-bottom: $size;
+  }
+
+  .h-$(prefix)ml$(size-divider)$(suffix) {
+    margin-left: $size;
+  }
+
+  .h-$(prefix)mr$(size-divider)$(suffix) {
+    margin-right: $size;
+  }
+
+  .h-$(prefix)mv$(size-divider)$(suffix) {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+
+  .h-$(prefix)mh$(size-divider)$(suffix) {
+    margin-right: $size;
+    margin-left: $size;
+  }
+
+  .h-$(prefix)ma$(size-divider)$(suffix) {
+    margin: $size;
+  }
+}
+
+@define-mixin padding-class $prefix, $suffix, $size {
+
+  .h-$(prefix)pt$(size-divider)$(suffix) {
+    padding-top: $size;
+  }
+
+  .h-$(prefix)pb$(size-divider)$(suffix) {
+    padding-bottom: $size;
+  }
+
+  .h-$(prefix)pl$(size-divider)$(suffix) {
+    padding-left: $size;
+  }
+
+  .h-$(prefix)pr$(size-divider)$(suffix) {
+    padding-right: $size;
+  }
+
+  .h-$(prefix)pv$(size-divider)$(suffix) {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+
+  .h-$(prefix)ph$(size-divider)$(suffix) {
+    padding-right: $size;
+    padding-left: $size;
+  }
+
+  .h-$(prefix)pa$(size-divider)$(suffix) {
+    padding: $size;
+  }
+}
+
+@define-mixin helper-class $prefix {
+
+  /* マージン */
+  @mixin margin-class $prefix, n, 0;
+  @mixin margin-class $prefix, s, .5em;
+  @mixin margin-class $prefix, m, 1em;
+  @mixin margin-class $prefix, l, 1.5em;
+  @mixin margin-class $prefix, 2l, 2em;
+  @mixin margin-class $prefix, 3l, 3em;
+
+  /* パディング */
+  @mixin padding-class $prefix, n, 0;
+  @mixin padding-class $prefix, s, .5em;
+  @mixin padding-class $prefix, m, 1em;
+  @mixin padding-class $prefix, l, 1.5em;
+  @mixin padding-class $prefix, 2l, 2em;
+
+  /* CLEARFIX */
+  .clearfix,
+  .cf {
+    @mixin g-clearfix;
+  }
+
+  /*
+  Emmet Style Helpers
+  http://docs.emmet.io/cheat-sheet/
+   */
+
+  /* テキスト方向
+  以下のWordpressのリッチテキストエディタが付加するクラス(※)も合わせて設定
+  ※ .alignleft / .alignright / .aligncenter
+  */
+  .txtl,
+  .alignleft,
+  .h-$(prefix)ta$(size-divider)l {
+    text-align: left;
+  }
+
+  .txtr,
+  .alignright,
+  .h-$(prefix)ta$(size-divider)r {
+    text-align: right;
+  }
+
+  .txtc,
+  .aligncenter,
+  .h-$(prefix)ta$(size-divider)c {
+    text-align: center;
+  }
+
+  .h-$(prefix)ta$(size-divider)j {
+    text-align: justify;
+  }
+
+  /* フロート
+  Wordpressのリッチテキストエディタが付加するクラス(※)を網羅。
+  ※ .left / .right / .clear
+  */
+  .left,
+  .h-$(prefix)fl$(size-divider)l {
+    float: left;
+    margin-top: 0;
+  }
+
+  .right,
+  .h-$(prefix)fl$(size-divider)r {
+    float: right;
+    margin-top: 0;
+  }
+
+  .clear,
+  .h-$(prefix)cl {
+    float: none;
+    clear: both;
+  }
+
+  .h-$(prefix)d-n {
+    display: none;
+  }
+
+  .h-$(prefix)d-b {
+    display: block;
+  }
+
+  .h-$(prefix)d-i {
+    display: inline;
+  }
+
+  .h-$(prefix)d-ib {
+    display: inline-block;
+  }
+
+  .h-$(prefix)pos$(size-divider)r {
+    position: relative;
+  }
+
+  .h-$(prefix)pos$(size-divider)a {
+    position: absolute;
+  }
+
+  .h-$(prefix)pos$(size-divider)s {
+    position: static;
+  }
+
+  .h-$(prefix)ov$(size-divider)h {
+    overflow: hidden;
+  }
+
+  .h-$(prefix)ov$(size-divider)v {
+    overflow: visible;
+  }
+
+  .h-$(prefix)pe$(size-divider)n {
+    pointer-events: none;
+  }
+
+  .h-$(prefix)va$(size-divider)t {
+    vertical-align: top;
+  }
+
+  .h-$(prefix)va$(size-divider)m {
+    vertical-align: middle;
+  }
+
+  .h-$(prefix)va$(size-divider)b {
+    vertical-align: bottom;
+  }
+
+  .h-$(prefix)fw$(size-divider)b {
+    font-weight: bold;
+  }
+
+  .h-$(prefix)fw$(size-divider)n {
+    font-weight: normal;
+  }
+
+  .h-$(prefix)ws$(size-divider)nw {
+    white-space: nowrap;
+  }
+}
+
+@definen-mixin cancel-child-margin {
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}

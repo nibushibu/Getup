@@ -9,14 +9,14 @@ gulp.task('copyJs', function () {
   .pipe(gulp.dest(config.appPath + 'js/vendor'));
 });
 
-// Copy CSS(SCSS)
+// Copy CSS
 gulp.task('copyCss', function () {
   return gulp.src(config.copy.css)
   .pipe($.rename({
     prefix: '_',
-    extname: '.scss'
+    extname: '.css'
   }))
-  .pipe(gulp.dest('scss'));
+  .pipe(gulp.dest('css'));
 });
 
 // Copy fonts

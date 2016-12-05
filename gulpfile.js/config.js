@@ -31,4 +31,10 @@ module.exports = {
     ]
   },
 
+  css : {
+    file: [
+      'css/main.css'
+    ]
+  }
+
 };

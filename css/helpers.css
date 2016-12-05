@@ -1,20 +1,19 @@
-@charset "utf-8";
-
 @each $name, $size in $screen-size {
 
   @if $name == pc {
-    @include helper-class();
+    @mixin helper-class;
   } @else {
     @media (max-width: $size) {
-      @include helper-class("#{$name}-");
+      @mixin helper-class "#{$name}-";
     }
   }
 }
 
-// Only display content to screen readers
-// See: http://a11yproject.com/posts/how-to-hide-content/
-// via. Boostrap 3
-
+/*
+Only display content to screen readers
+See: http://a11yproject.com/posts/how-to-hide-content/
+via. Boostrap 3
+*/
 .h-invisible {
   position: absolute;
   width: 1px;

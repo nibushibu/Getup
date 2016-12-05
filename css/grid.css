@@ -1,23 +1,21 @@
-@charset "utf-8";
-
 .units {
-  @include units;
+  @mixin units;
 }
 
 .unit {
-  @include unit;
+  @mixin unit;
 }
 
-.units#{$modifier-prefix}right {
-  @include units--right;
+.units$(modifier-prefix)right {
+  @mixin units--right;
 }
 
-.units#{$modifier-prefix}reverse{
-  @include units--reverse;
+.units$(modifier-prefix)reverse{
+  @mixin units--reverse;
 }
 
-.units#{$modifier-prefix}center{
-  @include units--center;
+.units$(modifier-prefix)center{
+  @mixin units--center;
 }
 
 // Media Box
@@ -87,5 +85,5 @@
   }
 }
 
-@include echo-gap();
-@include unit-size($screen-size);
+@mixin echo-gap;
+@mixin unit-size $screen-size;

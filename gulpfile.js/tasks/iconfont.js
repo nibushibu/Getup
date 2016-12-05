@@ -31,14 +31,13 @@ gulp.task('iconfont', function() {
       fontPath: '../fonts/',
       className: 's'
     };
-    gulp.src('templates/symbols.scss')
+    gulp.src('templates/symbols.css')
     .pipe($.consolidate('lodash', option))
     .pipe($.rename({
       basename: fontName,
-      prefix: '_',
-      extname: '.scss'
+      extname: '.css'
     }))
-    .pipe(gulp.dest('scss'));
+    .pipe(gulp.dest('css'));
   })
   .pipe(gulp.dest(config.appPath + 'fonts'));
 });
