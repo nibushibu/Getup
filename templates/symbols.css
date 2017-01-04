@@ -76,5 +76,5 @@
 
 <% _.each(glyphs, function(glyph) {
 %>@define-mixin <%= className %>-<%= glyph.name %> { content: "\<%= glyph.codepoint.toString(16).toUpperCase() %>"; }
-.<%= className %>-<%= glyph.name %>:before { @mixin <%= className %>-<%= glyph.name %>; }
+.<%= className %>-<%= glyph.name %>::before { @mixin <%= className %>-<%= glyph.name %>; }
 <% }); %>
