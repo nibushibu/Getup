@@ -8,13 +8,7 @@ gulp.task('postcss', function () {
 
   var processors = [
     require('precss'),
-    require('postcss-cssnext'),
-    require('postcss-map'),
-    require('postcss-map')({
-      maps: [
-        'css/breakpoint.yml',
-      ]
-    })
+    require('postcss-easings')
   ];
 
   return gulp.src(config.css.file)
