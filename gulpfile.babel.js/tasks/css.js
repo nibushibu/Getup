@@ -21,6 +21,7 @@ gulp.task('postcss', function () {
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.sourcemaps.init())
   .pipe($.postcss(processors))
+  .pipe($.stylefmt())
   .pipe($.sourcemaps.write('./'))
   .pipe($.utf8izeSourcemaps())
   .pipe(gulp.dest(config.appPath + 'css'));
