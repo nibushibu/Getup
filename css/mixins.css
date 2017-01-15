@@ -25,14 +25,13 @@
   padding-top: 0;
 }
 
-@define-mixin units {
+@define-mixin grid {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-
-  margin: 0;
+  margin: 0 0 -$(default-gutter)px -$(default-gutter)px;
   padding: 0;
   letter-spacing: -.4em;
 
@@ -57,7 +56,7 @@
   }
 }
 
-@define-mixin unit {
+@define-mixin grid__cell {
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
@@ -65,13 +64,14 @@
   vertical-align: top;
   letter-spacing: normal;
   margin: 0;
+  padding: 0 0 $(default-gutter)px $(default-gutter)px;
 
   .lt-ie8 & {
     zoom: 1;
   }
 }
 
-@define-mixin units--right {
+@define-mixin grid--right {
 
   justify-content: flex-end;
 
@@ -79,73 +79,56 @@
     display: block;
     text-align: right;
 
-    > .unit {
+    > * {
       text-align: left;
     }
   }
 }
 
-@define-mixin units--reverse {
+@define-mixin grid--reverse {
   flex-direction: row-reverse;
 
   .no-flexbox & {
 
-    > .unit {
+    > * {
       float: right;
     }
   }
 }
 
-@define-mixin units--center {
+@define-mixin grid--center {
   justify-content: center;
 
   .no-flexbox & {
     display: block;
     text-align: center;
 
-    > .unit {
+    > * {
       text-align: left;
     }
   }
 }
 
-%icon {
-  display:inline-block;
-  text-decoration:inherit;
-  font-weight:normal;
-  font-style:normal;
-  font-family:"icon";
-}
-
-@define-mixin gap $gap {
-  margin: 0 0 -$(gap)px -$(gap)px;
+@define-mixin gutter $gutter {
+  margin: 0 0 -$(gutter)px -$(gutter)px;
 
   > * {
-    padding: 0 0 $(gap)px $(gap)px;
+    padding: 0 0 $(gutter)px $(gutter)px;
   }
 }
 
-@define-mixin gap-vertical $gap {
-  margin-bottom: -$(gap)px;
+@define-mixin gutter-vertical $gutter {
+  margin-bottom: -$(gutter)px;
 
   > * {
-    padding-bottom: $(gap)px;
+    padding-bottom: $(gutter)px;
   }
 }
 
-@define-mixin echo-gap {
+@define-mixin gutter-horizontal $gutter {
+  margin-left: -$(gutter)px;
 
-  @each $gap in (10, 20) {
-
-    .gap-$(gap) {
-      @mixin gap $(gap);
-    }
-  }
-
-  @each $gap in (10, 20) {
-
-    .gap-vertical-$(gap) {
-      @mixin gap-vertical $(gap);
-    }
+  > * {
+    padding-left: $(gutter)px;
   }
 }
