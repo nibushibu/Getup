@@ -572,7 +572,7 @@
   }
 }
 
-@definen-mixin cancel-child-margin {
+@define-mixin cancel-child-margin {
 
   > :first-child {
     margin-top: 0;

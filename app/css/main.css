@@ -618,18 +618,6 @@ template{
     /* for Chrome */
 }
 /*出力するグリッドの隙間*/
-@definen-mixin cancel-child-margin{
-
-    > :first-child{
-
-        margin-top: 0;
-    }
-
-    > :last-child{
-
-        margin-bottom: 0;
-    }
-}
 html{
 
     color: #333;
