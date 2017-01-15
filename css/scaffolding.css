@@ -3,8 +3,7 @@ html {
   font-size: 10px;
   line-height: 1.5;
   font-family: $base-font-family;
-  // font-size: percentage(10 / 16);
-  // text-rendering: optimizeLegibility;
+  /* !text-rendering: optimizeLegibility; */
 }
 
 body {
@@ -194,7 +193,7 @@ small {
 
 pre,
 code {
-  // font-size: 1.2em;
+  /* !font-size: 1.2em; */
   font-family: monospace;
 }
 
@@ -233,7 +232,8 @@ hr {
 img {
   vertical-align: middle;
   max-width: 100%;
-  // width: 100%;// IE8以下で画像が表示されなくなるバグを回避するために必要→強制的に幅100%は不都合が多い。IE8ではimgタグにサイズ指定をしないこと。
+  /* !IE8以下で画像が表示されなくなるバグを回避するために必要→強制的に幅100%は不都合が多い。IE8ではimgタグにサイズ指定をしないこと。 */
+  /* !width: 100%; */
   height: auto;
 }
 

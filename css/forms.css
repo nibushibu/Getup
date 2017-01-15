@@ -25,7 +25,9 @@ button {
   fieldset[disabled] & {
     cursor: not-allowed;
     background-color: #eee;
-    // iOS fix for unreadable disabled content
+    /*
+     * iOS fix for unreadable disabled content
+     */
     opacity: 1;
   }
 }

@@ -18,7 +18,9 @@
   @mixin units--center;
 }
 
-// Media Box
+/*
+ * Media Box
+ */
 
 .media {
   display: flex;

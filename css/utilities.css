@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 
-// ボックスリンク
+/* ボックスリンク */
 
 .block-link {
   color: $base-text-color;

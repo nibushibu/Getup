@@ -11,8 +11,7 @@
 @media (max-width: map-get($screen-size, mobile)) {
 
   html {
-    // font-size: 0.875em;//Mobileではデフォルトのテキストサイズを14pxに
-    //デバイスが横になった時の文字拡大をOFF
+/*デバイスが横になった時の文字拡大をOFF*/
     -webkit-text-size-adjust: none;
   }
 
