@@ -45,3 +45,30 @@ $base-font-family:
 
 /*出力するグリッドの隙間*/
 $gaps: 0, 10, 20;
+
+/*スクリーンサイズ一覧*/
+$screen-size-pc: 960px;
+$screen-size-pc-max: 959px;
+$screen-size-tablet: 720px;
+$screen-size-tablet-max: 719px;
+$screen-size-breakpoint-1: 640px;
+$screen-size-mobile: 480px;
+$screen-size-mobile-max: 479px;
+
+$screen-size:
+  $screen-size-pc,
+  $screen-size-pc-max,
+  $screen-size-tablet,
+  $screen-size-tablet-max,
+  $screen-size-breakpoint-1,
+  $screen-size-mobile,
+  $screen-size-mobile-max;
+
+$screen-size-name:
+  pc,
+  pc-max,
+  tablet,
+  tablet-max,
+  breakpoint-1,
+  mobile,
+  mobile-max;
