@@ -86,4 +86,3 @@
 }
 
 @mixin echo-gap;
-@mixin unit-size $screen-size;
