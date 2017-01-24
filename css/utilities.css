@@ -1,0 +1,94 @@
+/*
+画像置換 (Alternative Image)
+高さはPadding-topかpadding-bottomdで設定する。
+*/
+.alt-img,
+.sprite {
+  @include sprite-img;
+}
+
+.alt-img {
+  overflow: hidden;
+}
+
+/* ボックスリンク */
+
+.block-link {
+  color: $base-text-color;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+
+    .block-link__link {
+      text-decoration: underline;
+    }
+  }
+
+  .block-link__link {
+    color: $base-link-color;
+  }
+}
+
+/* Clearfix */
+.clearfix,
+.cf {
+  @mixin g-clearfix;
+}
+
+/* テキスト方向
+Wordpressのリッチテキストエディタ用
+※ .alignleft / .alignright / .aligncenter
+ */
+
+.alignleft {
+  text-align: left;
+}
+
+.alignright {
+  text-align: right;
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.alignjustify {
+  text-align: justify;
+}
+
+/* フロート
+Wordpressのリッチテキストエディタ用。
+※ .left / .right / .clear
+*/
+
+.left {
+  float: left;
+  margin-top: 0;
+}
+
+.right {
+  float: right;
+  margin-top: 0;
+}
+
+.clear {
+  float: none;
+  clear: both;
+}
+
+/*
+Only display content to screen readers
+See: http://a11yproject.com/posts/how-to-hide-content/
+via. Boostrap 3
+*/
+.invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

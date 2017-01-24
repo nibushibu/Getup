@@ -1,6 +1,6 @@
-// Slick用調整
+/*Slick用調整*/
 
-@function font-url($url) {
+/*@function font-url($url) {
   @return url("../fonts/" + $url);
 }
 
@@ -9,4 +9,4 @@
 }
 
 @import "slick";
-@import "slick-theme";
+@import "slick-theme";*/

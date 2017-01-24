@@ -1,25 +1,20 @@
-@charset "utf-8";
+/*設定*/
 
-///////////////////////////////////////
-// 設定
-///////////////////////////////////////
-
-$modifier-prefix: "--";
-$element-prefix: "__";
+$modifier-prefix: --;
+$element-prefix: __;
 $default-side-margin: no;
-$size-divider: "-";
 
-// 基本テキストサイズ
-$base-text-size-px: 13 !default;
-$base-text-size: #{$base-text-size-px}px !default;
+/*基本テキストサイズ*/
+$base-text-size-px: 13;
+$base-text-size: $($base-text-size-px)px;
 
-// 基本テキストカラー
-$base-text-color: #333 !default;
+/*基本テキストカラー*/
+$base-text-color: #333;
 
-// 基本リンクテキストカラー
-$base-link-color: #074ae2 !default;
+/*基本リンクテキストカラー*/
+$base-link-color: #074ae2;
 
-// 基本フォント
+/*基本フォント*/
 
 @font-face {
   font-family: "MyYuGothicM";
@@ -47,16 +42,5 @@ $base-font-family:
   Meiryo, /* Windows メイリオ */
   sans-serif;
 
-// スクリーンサイズマップ
-$screen-size: (
-  pc              : 960px,
-  pc-max          : 960px - 1,
-  tablet          : 720px,
-  tablet-max      : 720px - 1,
-  breakpoint-1    : 640px,
-  mobile          : 480px,
-  mobile-max      : 480px - 1
-);
-
-// 出力するグリッドの隙間
-$gaps: 0, 10, 20;
+/* デフォルトのグリッド（とメディアブロック）の隙間サイズ（px） */
+$default-gutter: 10;

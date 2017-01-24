@@ -30,9 +30,7 @@ gulp.task('min', function (callback) {
 // minify CSS
 gulp.task('minifyCss', function () {
   return gulp.src(config.appPath + 'css/*.css')
-  .pipe($.postcss([
-    require('csswring')
-  ]))
+  .pipe($.postcss([require('csswring')]))
   .pipe(gulp.dest(config.appPath + 'css'));
 });
 

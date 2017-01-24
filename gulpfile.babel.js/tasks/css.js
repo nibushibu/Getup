@@ -1,18 +1,24 @@
 var gulp = require('gulp');
 var config = require('../config');
 var $ = require('gulp-load-plugins')();
-var autoprefixer = require('autoprefixer');
 var runSequence = require('run-sequence');
 
 // SASS
-gulp.task('sass', function () {
-  return gulp.src('scss/*.scss')
+gulp.task('postcss', function () {
+
+  var processors = [
+    require('precss'),
+    require('postcss-easings'),
+    require('perfectionist')({
+      indentSize: 2,
+    }),
+  ];
+
+  return gulp.src(config.css.file)
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.sourcemaps.init())
-  .pipe($.sass())
-  .pipe($.postcss([
-    autoprefixer()
-  ]))
+  .pipe($.postcss(processors))
+  // .pipe($.stylefmt())
   .pipe($.sourcemaps.write('./'))
   .pipe($.utf8izeSourcemaps())
   .pipe(gulp.dest(config.appPath + 'css'));
@@ -20,5 +26,5 @@ gulp.task('sass', function () {
 
 // Build CSS
 gulp.task('css', function (callback) {
-  return runSequence('sass', 'kss', callback);
+  return runSequence('postcss', 'kss', callback);
 });

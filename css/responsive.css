@@ -1,5 +1,3 @@
-@charset "utf-8";
-
 /* タブレットサイズ */
 @media (max-width: map-get($screen-size, tablet)) {
 
@@ -13,8 +11,8 @@
 @media (max-width: map-get($screen-size, mobile)) {
 
   html {
-    // font-size: 0.875em;//Mobileではデフォルトのテキストサイズを14pxに
-    -webkit-text-size-adjust: none;//デバイスが横になった時の文字拡大をOFF
+/*デバイスが横になった時の文字拡大をOFF*/
+    -webkit-text-size-adjust: none;
   }
 
   /* 画像 */

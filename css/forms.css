@@ -1,7 +1,3 @@
-@charset "utf-8";
-
-// フォーム
-
 fieldset {
   margin: 0;
   padding: 0;
@@ -29,7 +25,10 @@ button {
   fieldset[disabled] & {
     cursor: not-allowed;
     background-color: #eee;
-    opacity: 1; // iOS fix for unreadable disabled content
+    /*
+     * iOS fix for unreadable disabled content
+     */
+    opacity: 1;
   }
 }
 
@@ -43,7 +42,7 @@ textarea {
 
 .form-control:focus,
 select:focus {
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(lighten($base-link-color, 40%), 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(lighten($(base-link-color), 40%), 0.6);
   outline: 0;
   border-color: rgba(lighten($base-link-color, 40%), 0.8);
 }
