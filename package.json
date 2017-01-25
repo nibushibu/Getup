@@ -39,7 +39,6 @@
     "jquery": "*",
     "lodash": "*",
     "node-sass": "*",
-    "normalize.css": "*",
     "perfectionist": "^*",
     "postcss-cssnext": "*",
     "postcss-easings": "github:postcss/postcss-easings",
