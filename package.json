@@ -45,6 +45,7 @@
     "precss": "*",
     "require-dir": "*",
     "run-sequence": "*",
+    "sanitize.css": "*",
     "scrollmagic": "*",
     "slick-carousel": "*",
     "webpack": "*",
