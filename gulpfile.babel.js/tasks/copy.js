@@ -12,10 +12,6 @@ gulp.task('copyJs', function () {
 // Copy CSS
 gulp.task('copyCss', function () {
   return gulp.src(config.copy.css)
-  .pipe($.rename({
-    prefix: '_',
-    extname: '.css'
-  }))
   .pipe(gulp.dest('css'));
 });
 
