@@ -10,7 +10,7 @@ LICENSE
 https://github.com/nibushibu/getup-css/blob/master/LICENSE
 */
 
-@import "normalize.css";
+@import "sanitize.css";
 @import "variables.css";
 @import "mixins.css";
 @import "scaffolding.css";
