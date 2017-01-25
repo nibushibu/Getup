@@ -48,6 +48,7 @@
     "sanitize.css": "*",
     "scrollmagic": "*",
     "slick-carousel": "*",
+    "velocity-animate": "*",
     "webpack": "*",
     "webpack-stream": "*"
   },
