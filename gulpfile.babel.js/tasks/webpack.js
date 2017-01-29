@@ -10,7 +10,7 @@ gulp.task('webpack', function () {
   ])
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.sourcemaps.init())
-  .pipe(webpack( require('./webpack.config.js') ))
+  .pipe(webpack( require('../../webpack.config.js') ))
   .pipe($.sourcemaps.write('./'))
   .pipe($.utf8izeSourcemaps())
   .pipe(gulp.dest(config.appPath + 'js'));
