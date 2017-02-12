@@ -5,6 +5,7 @@
   "author": "Genki Katsutani",
   "license": "MIT",
   "devDependencies": {
+    "animejs": "^1.1.3",
     "autoprefixer": "*",
     "babel": "*",
     "babel-eslint": "*",
@@ -46,7 +47,6 @@
     "sanitize.css": "*",
     "scrollmagic": "*",
     "slick-carousel": "*",
-    "velocity-animate": "*",
     "webpack": "*",
     "webpack-stream": "*"
   },

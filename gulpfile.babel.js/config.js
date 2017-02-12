@@ -20,16 +20,10 @@ module.exports = {
   concat: {
     js: [
       'js/plugins-base.js',
-      'node_modules/velocity-animate/velocity.min.js',
-      'node_modules/velocity-animate/velocity.ui.min.js',
-      // 'node_modules/gsap/src/minified/TweenMax.min.js',
-      // 'node_modules/gsap/src/minified/TimelineMax.min.js',
-      // 'node_modules/gsap/src/minified/plugins/ScrollToPlugin.min.js',
+      'node_modules/animejs/anime.js',
       'node_modules/slick-carousel/slick/slick.min.js',
-      // 'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-      // 'node_modules/scrollmagic/scrollmagic/minified/plugins/jquery.ScrollMagic.min.js',
-      // 'node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
-      // 'node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
+      'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+      'node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
     ]
   },
 
