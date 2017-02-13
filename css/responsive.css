@@ -1,0 +1,29 @@
+/* タブレットサイズ */
+@media (max-width: map-get($screen-size, tablet)) {
+
+  .data {
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+}
+
+/* モバイルサイズ */
+@media (max-width: map-get($screen-size, mobile)) {
+
+  html {
+/*デバイスが横になった時の文字拡大をOFF*/
+    -webkit-text-size-adjust: none;
+  }
+
+  /* 画像 */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* テーブル */
+  table {
+    overflow: auto;
+  }
+
+}

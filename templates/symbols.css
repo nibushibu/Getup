@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "<%= fontName %>";
+  src: url('<%= fontPath %><%= fontName %>.eot');
+  src: url('<%= fontPath %><%= fontName %>.eot?#iefix') format('eot'),
+    url('<%= fontPath %><%= fontName %>.woff') format('woff'),
+    url('<%= fontPath %><%= fontName %>.ttf') format('truetype'),
+    url('<%= fontPath %><%= fontName %>.svg#<%= fontName %>') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@define-mixin <%= className %> {
+  display: inline-block;
+  font-family: "<%= fontName %>";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.<%= className %> {
+  @mixin <%= className %>;
+}
+
+@define-mixin <%= className %>-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+@define-mixin <%= className %>-2x {
+  font-size: 2em;
+}
+
+@define-mixin <%= className %>-3x {
+  font-size: 3em;
+}
+
+@define-mixin <%= className %>-4x {
+  font-size: 4em;
+}
+
+@define-mixin <%= className %>-5x {
+  font-size: 5em;
+}
+
+@define-mixin <%= className %>-fw {
+  width: (18em / 14);
+  text-align: center;
+}
+
+.<%= className %>-lg {
+  @mixin <%= className %>-lg;
+}
+
+.<%= className %>-2x {
+  @mixin <%= className %>-2x;
+}
+
+.<%= className %>-3x {
+  @mixin <%= className %>-3x;
+}
+
+.<%= className %>-4x {
+  @mixin <%= className %>-4x;
+}
+
+.<%= className %>-5x {
+  @mixin <%= className %>-5x;
+}
+
+.<%= className %>-fw {
+  @mixin <%= className %>-fw;
+}
+
+<% _.each(glyphs, function(glyph) {
+%>@define-mixin <%= className %>-<%= glyph.name %> { content: "\<%= glyph.codepoint.toString(16).toUpperCase() %>"; }
+.<%= className %>-<%= glyph.name %>::before { @mixin <%= className %>-<%= glyph.name %>; }
+<% }); %>
