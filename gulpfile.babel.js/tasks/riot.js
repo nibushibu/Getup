@@ -17,5 +17,6 @@ gulp.task('riot', function(){
       },
     },
   }))
-  .pipe(gulp.dest(config.appPath + 'modules'));
+  .pipe($.concat("modules.js"))
+  .pipe(gulp.dest(config.appPath + 'js'));
 })
