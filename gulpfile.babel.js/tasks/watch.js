@@ -6,8 +6,9 @@ var $ = require('gulp-load-plugins')();
 gulp.task('watch', function () {
   gulp.watch('*.sketch', ['sketch']);
   gulp.watch('svg/*.svg', ['iconfont']);
-  gulp.watch('css/*.css', ['css']);
+  gulp.watch(['css/**/*.css', 'riot/**/*.css'], ['css']);
   gulp.watch('js/**/*.js', ['webpack']);
   gulp.watch('ejs/**/*.ejs', ['ejs']);
   gulp.watch('sprite/**/*', ['sprite']);
+  gulp.watch('riot/**/*.tag.html', ['riot']);
 });

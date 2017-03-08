@@ -9,6 +9,7 @@ module.exports = {
   copy: {
     js: [
       'node_modules/jquery/dist/jquery.min.*',
+      'node_modules/riot/riot.min.js'
     ],
     css: [
       'node_modules/sanitize.css/sanitize.css',
@@ -20,7 +21,8 @@ module.exports = {
   concat: {
     js: [
       'js/plugins-base.js',
-      'node_modules/animejs/anime.js',
+      'node_modules/riot/riot.min.js',
+      'node_modules/animejs/anime.min.js',
       'node_modules/slick-carousel/slick/slick.min.js',
       'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
       'node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
@@ -29,6 +31,7 @@ module.exports = {
 
   css : {
     file: [
+      'riot/**/*.css',
       'css/main.css'
     ]
   }
