@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  @mixin font-size $base-text-size-px;
+  font-size: $base-text-size-px;
 }
 
 
