@@ -25,6 +25,7 @@ module.exports = {
       'node_modules/riot/riot.min.js',
       'node_modules/animejs/anime.min.js',
       'node_modules/slick-carousel/slick/slick.min.js',
+      'node_modules/svg4everybody/dist/svg4everybody.min.js',
       'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
       'node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
     ]
