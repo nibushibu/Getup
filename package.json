@@ -14,6 +14,7 @@
     "babel-preset-es2015-riot": "*",
     "csswring": "*",
     "eslint": "*",
+    "feature.js": "^1.0.0",
     "gsap": "*",
     "gulp": "*",
     "gulp-babel": "*",
