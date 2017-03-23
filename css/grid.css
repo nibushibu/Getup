@@ -2,8 +2,8 @@
   @mixin grid;
 }
 
-.grid__cell {
-  @mixin grid__cell;
+.grid__item {
+  @mixin grid__item;
 }
 
 .grid$(modifier-prefix)right {

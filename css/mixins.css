@@ -56,7 +56,7 @@
   }
 }
 
-@define-mixin grid__cell {
+@define-mixin grid__item {
   display: inline-block;
   box-sizing: border-box;
   width: 100%;

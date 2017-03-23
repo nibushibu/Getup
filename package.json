@@ -4,7 +4,7 @@
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "animejs": "*",
     "autoprefixer": "*",
     "babel": "*",
@@ -14,9 +14,11 @@
     "babel-preset-es2015-riot": "*",
     "csswring": "*",
     "eslint": "*",
+    "feature.js": "^1.0.0",
     "gsap": "*",
     "gulp": "*",
     "gulp-babel": "*",
+    "gulp-cheerio": "^0.6.2",
     "gulp-concat": "*",
     "gulp-consolidate": "*",
     "gulp-ejs": "*",
@@ -33,6 +35,8 @@
     "gulp-sass": "*",
     "gulp-sketch": "*",
     "gulp-sourcemaps": "*",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "*",
     "gulp-utf8ize-sourcemaps": "*",
     "gulp-util": "*",
@@ -50,6 +54,7 @@
     "sanitize.css": "*",
     "scrollmagic": "*",
     "slick-carousel": "*",
+    "svg4everybody": "^2.1.7",
     "webpack": "*",
     "webpack-stream": "*"
   },

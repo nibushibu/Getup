@@ -7,8 +7,9 @@ html {
 }
 
 body {
-  @mixin font-size $base-text-size-px;
+  font-size: $base-text-size-px;
 }
+
 
 ::-moz-selection {
   background: lighten($base-link-color, 40%);
@@ -20,87 +21,6 @@ body {
   text-shadow: none;
 }
 
-/* タイポグラフィ */
-
-/* 見出し */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-dl,
-p,
-blockquote,
-pre,
-.data,
-.mod {
-  @if $default-side-margin == no {
-    margin: .5em 0;
-  } @else {
-    margin: .5em;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
-  margin-top: 1em;
-
-  &.condenced {
-    margin-top: .5em;
-  }
-}
-
-h1 {
-  @mixin font-size 24;
-}
-
-h2 {
-  @mixin font-size 20;
-}
-
-h3 {
-  @mixin font-size 18;
-}
-
-h4 {
-  @mixin font-size 16;
-}
-
-h5 {
-  @mixin font-size 14;
-}
-
-h6 {
-  @mixin font-size 13;
-}
-
-table h1,
-table h2,
-table h3,
-table h4,
-table h5,
-table h6,
-table p,
-table ul,
-table ol,
-table dl,
-ul ul,
-ul ol,
-ul dl,
-ol ul,
-ol ol,
-ol dl {
-  margin: 0;
-}
-
 a {
   color: $base-link-color;
   text-decoration: none;
@@ -110,114 +30,6 @@ a {
     color: lighten($base-link-color, 10%);
     text-decoration: underline;
   }
-}
-
-ul {
-  list-style-position: outside;
-}
-
-ol {
-  list-style: decimal;
-}
-
-ul,
-ol,
-.square,
-.circle,
-.disc {
-  padding-left: 2em;
-}
-
-.square {
-  list-style: square outside;
-}
-
-.circle {
-  list-style: circle outside;
-}
-
-.disc {
-  list-style: disc outside;
-}
-
-.list-unstyled,
-.list-inline {
-  padding-left: 0;
-  list-style: none;
-}
-
-.list-inline {
-  margin-right: -1em;
-}
-
-.list-inline__item {
-  display: inline-block;
-  padding-right: 1em;
-}
-
-dt {
-  font-weight: bold;
-}
-
-dd {
-  margin-left: 1.5em;
-}
-
-q,
-i,
-em,
-cite {
-  font-weight: inherit;
-  font-style: italic;
-}
-
-b,
-strong {
-  font-weight: bold;
-  font-style: inherit;
-}
-
-mark {
-  background: #ffc;
-}
-
-s,
-del {
-  text-decoration: line-through;
-}
-
-small {
-  font-size: 0.9em;
-  line-height: 1;
-}
-
-pre,
-code {
-  /* !font-size: 1.2em; */
-  font-family: monospace;
-}
-
-pre {
-  overflow: auto;
-  line-height: 1;
-}
-
-code {
-  line-height: 1;
-}
-
-pre,
-code,
-kbd,
-samp,
-tt {
-  font-family: monospace;
-  line-height: 100%;
-  *font-size: 108%;
-}
-
-figure {
-  margin: 0;
 }
 
 hr {
