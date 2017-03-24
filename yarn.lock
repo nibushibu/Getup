@@ -91,7 +91,7 @@ ansi-styles@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-1.0.0.tgz#cb102df1c56f5123eab8b67cd7b98027a0279178"
 
-any-promise@~0.1.0:
+any-promise@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/any-promise/-/any-promise-0.1.0.tgz#830b680aa7e56f33451d4b049f3bd8044498ee27"
 
@@ -1608,13 +1608,13 @@ domain-browser@^1.1.1:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.1.7.tgz#867aa4b093faa05f1de08c06f4d7b21fdf8698bc"
 
-domelementtype@1, domelementtype@~1.1.1:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-1.1.3.tgz#bd28773e2642881aec51544924299c5cd822185b"
-
-domelementtype@^1.3.0:
+domelementtype@1, domelementtype@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-1.3.0.tgz#b17aed82e8ab59e52dd9c19b1756e0fc187204c2"
+
+domelementtype@~1.1.1:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-1.1.3.tgz#bd28773e2642881aec51544924299c5cd822185b"
 
 domhandler@^2.3.0:
   version "2.3.0"
@@ -2163,21 +2163,6 @@ fs-exists-sync@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/fs-exists-sync/-/fs-exists-sync-0.1.0.tgz#982d6893af918e72d08dec9e8673ff2b5a8d6add"
 
-fs-extra@^0.24.0:
-  version "0.24.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-0.24.0.tgz#d4e4342a96675cb7846633a6099249332b539952"
-  dependencies:
-    graceful-fs "^4.1.2"
-    jsonfile "^2.1.0"
-    path-is-absolute "^1.0.0"
-    rimraf "^2.2.8"
-
-fs-promise@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/fs-promise/-/fs-promise-0.3.1.tgz#bf34050368f24d6dc9dfc6688ab5cead8f86842a"
-  dependencies:
-    any-promise "~0.1.0"
-
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -2354,16 +2339,6 @@ glob@^4.3.1:
     minimatch "^2.0.1"
     once "^1.3.0"
 
-glob@^5.0.3:
-  version "5.0.15"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-5.0.15.tgz#1bc936b9e02f4a603fcc222ecf7633d30b8b93b1"
-  dependencies:
-    inflight "^1.0.4"
-    inherits "2"
-    minimatch "2 || 3"
-    once "^1.3.0"
-    path-is-absolute "^1.0.0"
-
 glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@~7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.1.tgz#805211df04faaf1c63a3600306cdf5ade50b2ec8"
@@ -2409,17 +2384,6 @@ global-prefix@^0.1.4:
 globals@^9.0.0, globals@^9.14.0:
   version "9.16.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-9.16.0.tgz#63e903658171ec2d9f51b1d31de5e2b8dc01fb80"
-
-globby@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/globby/-/globby-3.0.1.tgz#2094af8421e19152150d5893eb6416b312d9a22f"
-  dependencies:
-    array-union "^1.0.1"
-    arrify "^1.0.0"
-    glob "^5.0.3"
-    object-assign "^4.0.1"
-    pify "^2.0.0"
-    pinkie-promise "^1.0.0"
 
 globby@^5.0.0:
   version "5.0.0"
@@ -2468,7 +2432,7 @@ got@^0.2.0:
   dependencies:
     object-assign "^0.3.0"
 
-graceful-fs@4.X, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
+graceful-fs@4.X, graceful-fs@^4.1.2:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
@@ -2713,14 +2677,14 @@ gulp-svgicons2svgfont@^3.0.1:
     readable-stream "^2.0.2"
     svgicons2svgfont "^5.0.0"
 
-gulp-svgmin@^1.2.3:
+gulp-svgmin@*:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/gulp-svgmin/-/gulp-svgmin-1.2.3.tgz#88947b132e15b2de43d1dbccb30455319c5e50b5"
   dependencies:
     gulp-util "^3.0.4"
     svgo "^0.7.0"
 
-gulp-svgstore@^6.1.0:
+gulp-svgstore@*:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/gulp-svgstore/-/gulp-svgstore-6.1.0.tgz#04b203ac0e13f8ed6dbfc940d25965c4e2456676"
   dependencies:
@@ -3404,12 +3368,6 @@ json5@^0.5.0:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
 
-jsonfile@^2.1.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-2.4.0.tgz#3736a2b428b87bbda0cc83b53fa3d633a35c2ae8"
-  optionalDependencies:
-    graceful-fs "^4.1.6"
-
 jsonify@~0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
@@ -3990,15 +3948,15 @@ minimatch@0.3, minimatch@0.3.0:
     lru-cache "2"
     sigmund "~1.0.0"
 
-"minimatch@2 || 3", minimatch@^3.0.0, minimatch@^3.0.2, minimatch@~3.0.2:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774"
-  dependencies:
-    brace-expansion "^1.0.0"
-
 minimatch@^2.0.1, minimatch@~2.0.4:
   version "2.0.10"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-2.0.10.tgz#8d087c39c6b38c001b97fca7ce6d0e1e80afbac7"
+  dependencies:
+    brace-expansion "^1.0.0"
+
+minimatch@^3.0.0, minimatch@^3.0.2, minimatch@~3.0.2:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774"
   dependencies:
     brace-expansion "^1.0.0"
 
@@ -4553,7 +4511,7 @@ pbkdf2@^3.0.3:
   dependencies:
     create-hmac "^1.1.2"
 
-perfectionist@^*:
+perfectionist@*:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/perfectionist/-/perfectionist-2.4.0.tgz#c147ad3714e126467f1764129ee72df861d47ea0"
   dependencies:
@@ -4576,21 +4534,11 @@ pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
 
-pinkie-promise@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/pinkie-promise/-/pinkie-promise-1.0.0.tgz#d1da67f5482563bb7cf57f286ae2822ecfbf3670"
-  dependencies:
-    pinkie "^1.0.0"
-
 pinkie-promise@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pinkie-promise/-/pinkie-promise-2.0.1.tgz#2135d6dfa7a358c069ac9b178776288228450ffa"
   dependencies:
     pinkie "^2.0.0"
-
-pinkie@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-1.0.0.tgz#5a47f28ba1015d0201bda7bf0f358e47bec8c7e4"
 
 pinkie@^2.0.0:
   version "2.0.4"
@@ -4667,24 +4615,12 @@ pngquant@^0.1.5:
   optionalDependencies:
     pngquant-bin "=0.1.7"
 
-postcss-advanced-variables@1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/postcss-advanced-variables/-/postcss-advanced-variables-1.2.2.tgz#90a6213262e66a050a368b4a9c5d4778d72dbd74"
-  dependencies:
-    postcss "^5.0.10"
-
 postcss-apply@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/postcss-apply/-/postcss-apply-0.3.0.tgz#a2f37c5bdfa881e4c15f4f245ec0cd96dd2e70d5"
   dependencies:
     balanced-match "^0.4.1"
     postcss "^5.0.21"
-
-postcss-atroot@^0.1.2:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/postcss-atroot/-/postcss-atroot-0.1.3.tgz#6752c0230c745140549345b2b0e30ebeda01a405"
-  dependencies:
-    postcss "^5.0.5"
 
 postcss-attribute-case-insensitive@^1.0.1:
   version "1.0.1"
@@ -4828,12 +4764,6 @@ postcss-easings@*:
   dependencies:
     postcss "^5.0.2"
 
-postcss-extend@^1.0.1:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/postcss-extend/-/postcss-extend-1.0.5.tgz#5ea98bf787ba3cacf4df4609743f80a833b1d0e7"
-  dependencies:
-    postcss "^5.0.4"
-
 postcss-font-family-system-ui@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/postcss-font-family-system-ui/-/postcss-font-family-system-ui-1.0.2.tgz#3e1a5e3fb7e31e5e9e71439ccb0e8014556927c7"
@@ -4847,6 +4777,17 @@ postcss-font-variant@^2.0.0:
   resolved "https://registry.yarnpkg.com/postcss-font-variant/-/postcss-font-variant-2.0.1.tgz#7ca29103f59fa02ca3ace2ca22b2f756853d4ef8"
   dependencies:
     postcss "^5.0.4"
+
+postcss-import@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-import/-/postcss-import-9.1.0.tgz#95fe9876a1e79af49fbdc3589f01fe5aa7cc1e80"
+  dependencies:
+    object-assign "^4.0.1"
+    postcss "^5.0.14"
+    postcss-value-parser "^3.2.3"
+    promise-each "^2.2.0"
+    read-cache "^1.0.0"
+    resolve "^1.1.7"
 
 postcss-initial@^1.3.1:
   version "1.5.3"
@@ -4888,43 +4829,11 @@ postcss-message-helpers@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/postcss-message-helpers/-/postcss-message-helpers-2.0.0.tgz#a4f2f4fab6e4fe002f0aed000478cdf52f9ba60e"
 
-postcss-mixins@^2.1.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-mixins/-/postcss-mixins-2.1.1.tgz#b141a0803efa8e2d744867f8d91596890cf9241b"
-  dependencies:
-    globby "^3.0.1"
-    postcss "^5.0.10"
-    postcss-simple-vars "^1.0.1"
-
-postcss-nested@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-1.0.0.tgz#d136bd4b576bd5632df142c12b2198a9ccf794df"
-  dependencies:
-    postcss "^5.0.2"
-
-postcss-nesting@^2.0.5, postcss-nesting@^2.0.6:
+postcss-nesting@^2.0.5:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-2.3.1.tgz#94a6b6a4ef707fbec20a87fee5c957759b4e01cf"
   dependencies:
     postcss "^5.0.19"
-
-postcss-partial-import@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/postcss-partial-import/-/postcss-partial-import-1.3.0.tgz#2f4b773a76c7b0a69b389dcf475c4d362d0d2576"
-  dependencies:
-    fs-extra "^0.24.0"
-    fs-promise "^0.3.1"
-    object-assign "^4.0.1"
-    postcss "^5.0.5"
-    string-hash "^1.1.0"
-
-postcss-property-lookup@^1.1.3:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/postcss-property-lookup/-/postcss-property-lookup-1.2.1.tgz#30450a1361b7aae758bbedd5201fbe057bb8270b"
-  dependencies:
-    object-assign "^4.0.1"
-    postcss "^5.0.4"
-    tcomb "^2.5.1"
 
 postcss-pseudo-class-any-link@^1.0.0:
   version "1.0.0"
@@ -4981,17 +4890,11 @@ postcss-selector-parser@^2.2.0:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss-simple-vars@^1.0.1:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/postcss-simple-vars/-/postcss-simple-vars-1.2.0.tgz#2e6689921144b74114e765353275a3c32143f150"
-  dependencies:
-    postcss "^5.0.13"
-
 postcss-value-parser@^3.0.2, postcss-value-parser@^3.2.3, postcss-value-parser@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.0.tgz#87f38f9f18f774a4ab4c8a232f5c5ce8872a9d15"
 
-postcss@^5.0.0, postcss@^5.0.10, postcss@^5.0.13, postcss@^5.0.16, postcss@^5.0.19, postcss@^5.0.2, postcss@^5.0.21, postcss@^5.0.3, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.8, postcss@^5.1.1, postcss@^5.2.0, postcss@^5.2.12, postcss@^5.2.16, postcss@^5.2.4:
+postcss@^5.0.0, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.19, postcss@^5.0.2, postcss@^5.0.21, postcss@^5.0.3, postcss@^5.0.4, postcss@^5.0.8, postcss@^5.1.1, postcss@^5.2.0, postcss@^5.2.12, postcss@^5.2.16, postcss@^5.2.4:
   version "5.2.16"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.16.tgz#732b3100000f9ff8379a48a53839ed097376ad57"
   dependencies:
@@ -4999,27 +4902,6 @@ postcss@^5.0.0, postcss@^5.0.10, postcss@^5.0.13, postcss@^5.0.16, postcss@^5.0.
     js-base64 "^2.1.9"
     source-map "^0.5.6"
     supports-color "^3.2.3"
-
-precss@*:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/precss/-/precss-1.4.0.tgz#8d7c3ae70f10a00a3955287f85a66e0f8b31cda3"
-  dependencies:
-    postcss "^5.0.10"
-    postcss-advanced-variables "1.2.2"
-    postcss-atroot "^0.1.2"
-    postcss-color-function "^2.0.0"
-    postcss-custom-media "^5.0.0"
-    postcss-custom-properties "^5.0.0"
-    postcss-custom-selectors "^3.0.0"
-    postcss-extend "^1.0.1"
-    postcss-media-minmax "^2.1.0"
-    postcss-mixins "^2.1.0"
-    postcss-nested "^1.0.0"
-    postcss-nesting "^2.0.6"
-    postcss-partial-import "^1.3.0"
-    postcss-property-lookup "^1.1.3"
-    postcss-selector-matches "^2.0.0"
-    postcss-selector-not "^2.0.0"
 
 prelude-ls@~1.1.2:
   version "1.1.2"
@@ -5052,6 +4934,12 @@ process@^0.11.0:
 progress@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/progress/-/progress-1.1.8.tgz#e260c78f6161cdd9b0e56cc3e0a85de17c7a57be"
+
+promise-each@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/promise-each/-/promise-each-2.2.0.tgz#3353174eff2694481037e04e01f77aa0fb6d1b60"
+  dependencies:
+    any-promise "^0.1.0"
 
 prr@~0.0.0:
   version "0.0.0"
@@ -5125,6 +5013,12 @@ rc@^1.1.7:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
+
+read-cache@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/read-cache/-/read-cache-1.0.0.tgz#e664ef31161166c9751cdbe8dbcf86b5fb58f774"
+  dependencies:
+    pify "^2.3.0"
 
 read-file-stdin@^0.2.0:
   version "0.2.1"
@@ -5816,10 +5710,6 @@ streamfilter@^1.0.5:
   dependencies:
     readable-stream "^2.0.2"
 
-string-hash@^1.1.0:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/string-hash/-/string-hash-1.1.3.tgz#e8aafc0ac1855b4666929ed7dd1275df5d6c811b"
-
 string-width@^1.0.1, string-width@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-1.0.2.tgz#118bdf5b8cdc51a2a7e70d211e07e2b0b9b107d3"
@@ -5951,7 +5841,7 @@ svg2ttf@^4.0.0:
     svgpath "^2.1.5"
     xmldom "~0.1.22"
 
-svg4everybody@^2.1.7:
+svg4everybody@*:
   version "2.1.7"
   resolved "https://registry.yarnpkg.com/svg4everybody/-/svg4everybody-2.1.7.tgz#bc6e3e8de25eefe537274e1a1d259139f4c9441d"
 
@@ -6034,10 +5924,6 @@ tar@^2.0.0, tar@^2.2.1:
     block-stream "*"
     fstream "^1.0.2"
     inherits "2"
-
-tcomb@^2.5.1:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/tcomb/-/tcomb-2.7.0.tgz#10d62958041669a5d53567b9a4ee8cde22b1c2b0"
 
 tempfile@^0.1.2:
   version "0.1.3"

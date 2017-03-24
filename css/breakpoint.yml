@@ -1,7 +1,0 @@
-pc              : 960px,
-pc-max          : 960px - 1,
-tablet          : 720px,
-tablet-max      : 720px - 1,
-breakpoint-1    : 640px,
-mobile          : 480px,
-mobile-max      : 480px - 1

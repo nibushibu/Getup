@@ -12,14 +12,9 @@ https://github.com/nibushibu/getup-css/blob/master/LICENSE
 
 @import "sanitize.css";
 @import "variables.css";
-@import "mixins.css";
 @import "scaffolding.css";
-@import "forms.css";
-@import "tables.css";
-@import "grid.css";
 @import "utilities.css";
-@import "buttons.css";
-@import "plugin.css";
+@import "plugins.css";
 @import "style.css";
 @import "riot.css";
 @import "responsive.css";

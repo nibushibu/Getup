@@ -1,17 +1,3 @@
-/*設定*/
-
-$modifier-prefix: --;
-$element-prefix: __;
-
-/*基本テキストサイズ*/
-$base-text-size: 1.4rem;
-
-/*基本テキストカラー*/
-$base-text-color: #333;
-
-/*基本リンクテキストカラー*/
-$base-link-color: #074ae2;
-
 /*基本フォント*/
 
 @font-face {
@@ -29,17 +15,26 @@ $base-link-color: #074ae2;
   local('Yu Gothic'); /* for Chrome */
 }
 
-$base-font-family:
-  'Noto Sans JP',
-  'Noto Sans CJK JP',
-  'Noto Sans CJK Japanese',
-  MyYuGothicM, /* Windows 游ゴシック */
-  YuGothic, /* OS X 游ゴシック */
-  -apple-system, /* OS X, iOS San Francisco */
-  BlinkMacSystemFont, /* OS X, iOS Chrome San Francisco */
-  'Hiragino Kaku Gothic ProN', /* OS X, iOS ヒラギノ */
-  Meiryo, /* Windows メイリオ */
-  sans-serif;
+:root {
 
-/* デフォルトのグリッド（とメディアブロック）の隙間サイズ（px） */
-$default-gutter: 10;
+  /*基本テキストサイズ*/
+  --base-text-size: 1.4rem;
+
+  /*基本テキストカラー*/
+  --base-text-color: #333;
+
+  /*基本リンクテキストカラー*/
+  --base-link-color: #074ae2;
+
+  --base-font-family:
+    'Noto Sans JP',
+    'Noto Sans CJK JP',
+    'Noto Sans CJK Japanese',
+    MyYuGothicM, /* Windows 游ゴシック */
+    YuGothic, /* OS X 游ゴシック */
+    -apple-system, /* OS X, iOS San Francisco */
+    BlinkMacSystemFont, /* OS X, iOS Chrome San Francisco */
+    'Hiragino Kaku Gothic ProN', /* OS X, iOS ヒラギノ */
+    Meiryo, /* Windows メイリオ */
+    sans-serif;
+}

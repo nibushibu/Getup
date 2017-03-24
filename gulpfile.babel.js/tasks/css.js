@@ -7,7 +7,8 @@ var runSequence = require('run-sequence');
 gulp.task('postcss', function () {
 
   var processors = [
-    require('precss'),
+    require('postcss-import'),
+    require('postcss-cssnext'),
     require('postcss-easings'),
     require('perfectionist')({
       indentSize: 2,

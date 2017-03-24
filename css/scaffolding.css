@@ -1,33 +1,27 @@
 html {
-  color: $base-text-color;
+  color: var(--base-text-color);
   font-size: 10px;
   line-height: 1.5;
-  font-family: $base-font-family;
+  font-family: var(--base-font-family);
   /* !text-rendering: optimizeLegibility; */
 }
 
 body {
-  font-size: $base-text-size-px;
-}
-
-
-::-moz-selection {
-  background: lighten($base-link-color, 40%);
-  text-shadow: none;
+  font-size: var(--base-text-size);
 }
 
 ::selection {
-  background: lighten($base-link-color, 40%);
+  background: lighten(var(--base-link-color) 40%);
   text-shadow: none;
 }
 
 a {
-  color: $base-link-color;
+  color: var(--base-link-color);
   text-decoration: none;
 
   &:hover,
   &:active {
-    color: lighten($base-link-color, 10%);
+    color: lighten(var(--base-link-color) 10%);
     text-decoration: underline;
   }
 }
@@ -44,8 +38,6 @@ hr {
 img {
   vertical-align: middle;
   max-width: 100%;
-  /* !IE8以下で画像が表示されなくなるバグを回避するために必要→強制的に幅100%は不都合が多い。IE8ではimgタグにサイズ指定をしないこと。 */
-  /* !width: 100%; */
   height: auto;
 }
 
@@ -68,4 +60,88 @@ img.ac {
   display: block;
   margin-right: auto;
   margin-left: auto;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.table {
+
+  th,
+  td {
+    padding: .5em;
+    border: 1px solid #ccc;
+  }
+
+  a {
+    word-break: break-all;
+  }
+}
+
+tfoot {
+  text-align: center;
+}
+
+tfoot td {
+  border-top-width: 2px;
+}
+
+.data .table {
+  width: 100%;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+.form-control {
+  display: inline-block;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  padding: .5em;
+  border: 1px solid #ccc;
+  color: #555555;
+  width: 100%;
+  box-sizing: border-box;
+
+
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    background-color: #eee;
+    /* iOS fix for unreadable disabled content */
+    opacity: 1;
+  }
+}
+
+.form-control--inline {
+  width: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-control:focus,
+select:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px color(var(--base-link-color) lightness(40%) a(.6));
+  outline: 0;
+  border-color: color(var(--base-link-color) lightness(40%) a(.8));
+}
+
+select {
+  border: 1px solid #ccc;
+  background-color: #fff;
 }

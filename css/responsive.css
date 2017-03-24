@@ -1,5 +1,5 @@
 /* タブレットサイズ */
-@media (max-width: map-get($screen-size, tablet)) {
+@media (max-width: 768px) {
 
   .data {
     overflow-y: hidden;
@@ -8,10 +8,10 @@
 }
 
 /* モバイルサイズ */
-@media (max-width: map-get($screen-size, mobile)) {
+@media (max-width: 768px) {
 
   html {
-/*デバイスが横になった時の文字拡大をOFF*/
+    /*デバイスが横になった時の文字拡大をOFF*/
     -webkit-text-size-adjust: none;
   }
 
