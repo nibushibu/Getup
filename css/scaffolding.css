@@ -1,3 +1,33 @@
+/*
+@styleguide
+
+@title Scaffolding
+
+<h3>境界線</h3>
+<hr>
+<h3>テーブル</h3>
+<table class="table">
+  <tr>
+    <th>タイトル</th>
+    <td>テキスト</td>
+  </tr>
+  <tr>
+    <th>タイトル</th>
+    <td>テキスト</td>
+  </tr>
+  <tr>
+    <th>タイトル</th>
+    <td>テキスト</td>
+  </tr>
+</table>
+<h3>フォーム関連</h3>
+<form action="">
+  <input type="text" class="form-control">
+  <input type="text" class="form-control form-control--inline">
+  <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+</form>
+*/
+
 html {
   color: var(--base-text-color);
   font-size: 10px;
@@ -71,13 +101,14 @@ table {
 
 .table {
 
-  th,
-  td {
+  @nest
+  & th,
+  & td {
     padding: .5em;
     border: 1px solid #ccc;
   }
 
-  a {
+  @nest & a {
     word-break: break-all;
   }
 }
@@ -117,7 +148,7 @@ button {
   box-sizing: border-box;
 
 
-  &[disabled],
+  @nest &[disabled],
   fieldset[disabled] & {
     cursor: not-allowed;
     background-color: #eee;

@@ -8,8 +8,11 @@ gulp.task('postcss', function () {
 
   var processors = [
     require('postcss-import'),
-    require('postcss-cssnext'),
     require('postcss-easings'),
+    require('postcss-cssnext'),
+    require('postcss-style-guide')({
+      dest: 'styleguide/index.html',
+    }),
     require('perfectionist')({
       indentSize: 2,
     }),
@@ -27,5 +30,5 @@ gulp.task('postcss', function () {
 
 // Build CSS
 gulp.task('css', function (callback) {
-  return runSequence('postcss', 'kss', callback);
+  return runSequence('postcss', callback);
 });

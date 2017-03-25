@@ -17,23 +17,17 @@
   color: var(--base-text-color);
   cursor: pointer;
 
-  &:hover {
+  @nest &:hover {
     text-decoration: none;
 
-    .block-link__link {
+    @nest & .block-link__link {
       text-decoration: underline;
     }
   }
 
-  .block-link__link {
+  @nest & .block-link__link {
     color: var(--base-link-color);
   }
-}
-
-/* Clearfix */
-.clearfix,
-.cf {
-  @mixin g-clearfix;
 }
 
 /* テキスト方向

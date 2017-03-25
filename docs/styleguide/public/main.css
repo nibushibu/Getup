@@ -574,8 +574,25 @@ a, area, button, input, label, select, summary, textarea, [tabindex] {
 }
 
 :root {
-  /*基本テキストサイズ*//*基本テキストカラー*//*基本リンクテキストカラー*/
+  /*基本テキストサイズ*/
 }
+
+/* @start color */
+
+:root {
+  /*基本テキストカラー*//*基本リンクテキストカラー*/
+}
+
+/* @end color */
+
+/*
+@styleguide
+
+@title Scaffolding
+
+境界線
+<hr>
+*/
 
 html {
   color: #333;
@@ -658,14 +675,15 @@ table {
 }
 
 .table {
-  th, td {
-    padding: .5em;
-    border: 1px solid #ccc;
-  }
+}
 
-  a {
-    word-break: break-all;
-  }
+.table th, @nest .table td {
+  padding: .5em;
+  border: 1px solid #ccc;
+}
+
+.table a {
+  word-break: break-all;
 }
 
 tfoot {
@@ -701,13 +719,13 @@ label, button {
   color: #555;
   width: 100%;
   box-sizing: border-box;
+}
 
-  &[disabled], fieldset[disabled] & {
-    cursor: not-allowed;
-    background-color: #eee;
-    /* iOS fix for unreadable disabled content */
-    opacity: 1;
-  }
+.form-control[disabled], fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #eee;
+  /* iOS fix for unreadable disabled content */
+  opacity: 1;
 }
 
 .form-control--inline {
@@ -747,24 +765,18 @@ select {
 .block-link {
   color: #333;
   cursor: pointer;
-
-  .block-link__link {
-    color: #074ae2;
-  }
 }
 
 .block-link:hover {
   text-decoration: none;
-
-  .block-link__link {
-    text-decoration: underline;
-  }
 }
 
-/* Clearfix */
+.block-link:hover .block-link__link {
+  text-decoration: underline;
+}
 
-.clearfix, .cf {
-  @mixin g-clearfix;
+.block-link .block-link__link {
+  color: #074ae2;
 }
 
 /* テキスト方向
@@ -1131,6 +1143,8 @@ Wordpressのリッチテキストエディタ用。
   opacity: .75;
   color: black;
 }
+
+/* site style */
 
 /*
   このファイルで、RiotタグのCSSを@importで読み込む

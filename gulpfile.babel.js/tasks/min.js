@@ -23,7 +23,6 @@ gulp.task('min', (callback) => {
       'minifyJs',
       'minifyPng'
     ],
-    'kss',
     callback
   );
 });

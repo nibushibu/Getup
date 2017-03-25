@@ -20,12 +20,6 @@
   /*基本テキストサイズ*/
   --base-text-size: 1.4rem;
 
-  /*基本テキストカラー*/
-  --base-text-color: #333;
-
-  /*基本リンクテキストカラー*/
-  --base-link-color: #074ae2;
-
   --base-font-family:
     'Noto Sans JP',
     'Noto Sans CJK JP',
@@ -37,4 +31,10 @@
     'Hiragino Kaku Gothic ProN', /* OS X, iOS ヒラギノ */
     Meiryo, /* Windows メイリオ */
     sans-serif;
+
+    /*基本テキストカラー*/
+    --base-text-color: #333;
+
+    /*基本リンクテキストカラー*/
+    --base-link-color: #074ae2;
 }

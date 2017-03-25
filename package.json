@@ -48,6 +48,7 @@
     "postcss-cssnext": "*",
     "postcss-easings": "*",
     "postcss-import": "*",
+    "postcss-style-guide": "*",
     "require-dir": "*",
     "riot": "*",
     "run-sequence": "*",
