@@ -147,7 +147,6 @@ button {
   width: 100%;
   box-sizing: border-box;
 
-
   @nest &[disabled],
   fieldset[disabled] & {
     cursor: not-allowed;
