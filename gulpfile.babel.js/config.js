@@ -31,11 +31,16 @@ module.exports = {
     ]
   },
 
-  css : {
+  css: {
     file: [
       'riot/**/*.css',
       'css/main.css'
     ]
-  }
+  },
 
+  js: {
+    file: [
+      'js/**/*.js'
+    ]
+  }
 };

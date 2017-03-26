@@ -7,7 +7,7 @@ gulp.task('watch', function () {
   gulp.watch('*.sketch', ['sketch']);
   gulp.watch('svg/*.svg', ['icons']);
   gulp.watch(['css/**/*.css', 'riot/**/*.css'], ['css']);
-  gulp.watch('js/**/*.js', ['webpack']);
+  gulp.watch('js/**/*.js', ['babel']);
   gulp.watch('ejs/**/*.ejs', ['ejs']);
   gulp.watch('sprite/**/*', ['sprite']);
   gulp.watch('riot/**/*.tag.html', ['riot']);

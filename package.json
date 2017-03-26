@@ -17,7 +17,7 @@
     "feature.js": "*",
     "gsap": "*",
     "gulp": "*",
-    "gulp-babel": "*",
+    "gulp-babel": "^6.1.2",
     "gulp-cheerio": "*",
     "gulp-concat": "*",
     "gulp-consolidate": "*",
@@ -55,9 +55,7 @@
     "sanitize.css": "*",
     "scrollmagic": "*",
     "slick-carousel": "*",
-    "svg4everybody": "*",
-    "webpack": "*",
-    "webpack-stream": "*"
+    "svg4everybody": "*"
   },
   "directories": {
     "doc": "docs"

@@ -36,10 +36,6 @@ $(() => {
     });
   }
 
-  // IE用Fix
-  // if ($('html').hasClass('lt-ie7')) {
-  //   return $('.list-inline > li').addClass('ie-child');
-  // }
 });
 
 })(jQuery);
