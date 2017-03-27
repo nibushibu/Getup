@@ -40,7 +40,8 @@ module.exports = {
 
   js: {
     file: [
-      'js/**/*.js'
+      'js/**/*.js',
+      '!js/plugins-base.js'
     ]
   }
 };
