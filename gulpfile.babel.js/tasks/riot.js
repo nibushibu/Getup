@@ -12,8 +12,7 @@ gulp.task('riot', function(){
     type: 'es6',
     parsers: {
       js: {
-        babelrc: false,
-        presets: ["es2015-riot"],
+        babelrc: true,
       },
     },
   }))
