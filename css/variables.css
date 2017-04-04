@@ -32,9 +32,16 @@
     Meiryo, /* Windows メイリオ */
     sans-serif;
 
-    /*基本テキストカラー*/
-    --base-text-color: #333;
+  /*基本テキストカラー*/
+  --base-text-color: #333;
 
-    /*基本リンクテキストカラー*/
-    --base-link-color: #074ae2;
+  /*基本リンクテキストカラー*/
+  --base-link-color: #074ae2;
+
+  /* スプライト画像 */
+  --sprite-img: {
+    display: inline-block;
+    height: 0;
+    vertical-align: middle;
+  }
 }

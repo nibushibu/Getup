@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var config = require('../config');
 var $ = require('gulp-load-plugins')();
-var fontName = 'symbols';
+var fontName = 'iconfont';
 
 // Sketch
 gulp.task('sketch', function () {
@@ -29,9 +29,9 @@ gulp.task('iconfont', function() {
       }),
       fontName: fontName,
       fontPath: '../fonts/',
-      className: 's'
+      className: 'i'
     };
-    gulp.src('templates/symbols.css')
+    gulp.src('templates/iconfont.css')
     .pipe($.consolidate('lodash', option))
     .pipe($.rename({
       basename: fontName,

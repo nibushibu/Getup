@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "<%= fontName %>";
+  src: url('<%= fontPath %><%= fontName %>.eot');
+  src: url('<%= fontPath %><%= fontName %>.eot?#iefix') format('eot'),
+    url('<%= fontPath %><%= fontName %>.woff') format('woff'),
+    url('<%= fontPath %><%= fontName %>.ttf') format('truetype'),
+    url('<%= fontPath %><%= fontName %>.svg#<%= fontName %>') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+
+  --<%= className %>: {
+    display: inline-block;
+    font-family: "<%= fontName %>";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  --<%= className %>-lg: {
+    font-size: 1.3333333333333333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+  }
+
+  --<%= className %>-2x: {
+    font-size: 2em;
+  }
+
+  --<%= className %>-3x: {
+    font-size: 3em;
+  }
+
+  --<%= className %>-4x: {
+    font-size: 4em;
+  }
+
+  --<%= className %>-5x: {
+    font-size: 5em;
+  }
+
+  --<%= className %>-fw: {
+    width: (18em / 14);
+    text-align: center;
+  }
+  <% _.each(glyphs, function(glyph) {%>
+  --<%= className %>-<%= glyph.name %>: {
+    content: "\<%= glyph.codepoint.toString(16).toUpperCase() %>";
+  }
+  <% }); %>
+}
+
+.<%= className %> {
+  @apply --<%= className %>;
+}
+
+.<%= className %>-lg {
+  @apply --<%= className %>-lg;
+}
+
+.<%= className %>-2x {
+  @apply --<%= className %>-2x;
+}
+
+.<%= className %>-3x {
+  @apply --<%= className %>-3x;
+}
+
+.<%= className %>-4x {
+  @apply --<%= className %>-4x;
+}
+
+.<%= className %>-5x {
+  @apply --<%= className %>-5x;
+}
+
+.<%= className %>-fw {
+  @apply --<%= className %>-fw;
+}
+<% _.each(glyphs, function(glyph) {%>
+:root {
+  --<%= className %>-<%= glyph.name %> {
+    content: "\<%= glyph.codepoint.toString(16).toUpperCase() %>";
+  }
+}
+<% }); %>
+<% _.each(glyphs, function(glyph) { %>
+.<%= className %>-<%= glyph.name %>::before {
+  @apply --<%= className %>-<%= glyph.name %>;
+}
+<% }); %>
