@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "symbols";
+  src: url('../fonts/symbols.eot');
+  src: url('../fonts/symbols.eot?#iefix') format('eot'),
+    url('../fonts/symbols.woff') format('woff'),
+    url('../fonts/symbols.ttf') format('truetype'),
+    url('../fonts/symbols.svg#symbols') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@define-mixin s {
+  display: inline-block;
+  font-family: "symbols";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.s {
+  @mixin s;
+}
+
+@define-mixin s-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+@define-mixin s-2x {
+  font-size: 2em;
+}
+
+@define-mixin s-3x {
+  font-size: 3em;
+}
+
+@define-mixin s-4x {
+  font-size: 4em;
+}
+
+@define-mixin s-5x {
+  font-size: 5em;
+}
+
+@define-mixin s-fw {
+  width: (18em / 14);
+  text-align: center;
+}
+
+.s-lg {
+  @mixin s-lg;
+}
+
+.s-2x {
+  @mixin s-2x;
+}
+
+.s-3x {
+  @mixin s-3x;
+}
+
+.s-4x {
+  @mixin s-4x;
+}
+
+.s-5x {
+  @mixin s-5x;
+}
+
+.s-fw {
+  @mixin s-fw;
+}
+
+@define-mixin s-caret-right { content: "\EA01"; }
+.s-caret-right::before { @mixin s-caret-right; }

@@ -15,7 +15,7 @@ gulp.task('sketch', function () {
 
 // iconfont
 gulp.task('iconfont', function() {
-  return gulp.src('svg/*.svg')
+  return gulp.src('iconfont/*.svg')
   .pipe($.iconfont({
     fontName: fontName
   }))
