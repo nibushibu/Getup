@@ -11,7 +11,7 @@ gulp.task('postcss', function () {
     require('postcss-easings'),
     require('postcss-cssnext'),
     require('postcss-style-guide')({
-      dest: 'styleguide/index.html',
+      dest: 'styleguide/html/index.html',
     }),
     require('perfectionist')({
       indentSize: 2,

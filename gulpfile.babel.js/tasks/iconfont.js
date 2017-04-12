@@ -39,5 +39,6 @@ gulp.task('iconfont', function() {
     }))
     .pipe(gulp.dest('css'));
   })
-  .pipe(gulp.dest(config.appPath + 'fonts'));
+  .pipe(gulp.dest(config.appPath + 'fonts'))
+  .pipe(gulp.dest('styleguide/fonts'));
 });
