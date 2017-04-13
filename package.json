@@ -16,7 +16,7 @@
     "feature.js": "*",
     "gsap": "*",
     "gulp": "*",
-    "gulp-babel": "^6.1.2",
+    "gulp-babel": "*",
     "gulp-cheerio": "*",
     "gulp-concat": "*",
     "gulp-consolidate": "*",
@@ -48,13 +48,15 @@
     "postcss-easings": "*",
     "postcss-import": "*",
     "postcss-style-guide": "*",
+    "promise-polyfill": "*",
     "require-dir": "*",
     "riot": "*",
     "run-sequence": "*",
     "sanitize.css": "*",
     "scrollmagic": "*",
     "slick-carousel": "*",
-    "svg4everybody": "*"
+    "svg4everybody": "*",
+    "whatwg-fetch": "*"
   },
   "directories": {
     "doc": "docs"
