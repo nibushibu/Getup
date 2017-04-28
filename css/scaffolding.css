@@ -41,7 +41,7 @@ body {
 }
 
 ::selection {
-  background: lighten(var(--base-link-color) 40%);
+  background: color(var(--base-link-color) tint(10%));
   text-shadow: none;
 }
 
@@ -51,7 +51,7 @@ a {
 
   &:hover,
   &:active {
-    color: lighten(var(--base-link-color) 10%);
+    color: color(var(--base-link-color) tint(10%));
     text-decoration: underline;
   }
 }
@@ -166,8 +166,8 @@ textarea {
 
 .form-control:focus,
 select:focus {
-  border-color: color(var(--base-link-color) lightness(40%) a(.8));
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px color(var(--base-link-color) lightness(40%) a(.6));
+  border-color: color(var(--base-link-color) tint(10%) a(.8));
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px color(var(--base-link-color) tint(10%) a(.6));
   outline: 0;
 }
 
