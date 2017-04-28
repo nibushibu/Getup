@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-var config = require('../config');
-var $ = require('gulp-load-plugins')();
-var runSequence = require('run-sequence');
+let gulp = require('gulp');
+let config = require('../config');
+let $ = require('gulp-load-plugins')();
+let runSequence = require('run-sequence');
 
 // SVG Sprite
-gulp.task('icons', function () {
+gulp.task('icons', () => {
   return gulp.src('svg/**.svg')
   .pipe($.svgmin())
   .pipe($.svgstore())

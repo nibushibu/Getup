@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-var config = require('../config');
-var $ = require('gulp-load-plugins')();
-var fontName = 'iconfont';
+let gulp = require('gulp');
+let config = require('../config');
+let $ = require('gulp-load-plugins')();
+let fontName = 'iconfont';
 
 // Sketch
-gulp.task('sketch', function () {
+gulp.task('sketch', () => {
   return gulp.src(config.iconfont.sketch)
   .pipe($.sketch({
     'export': 'artboards',
@@ -14,14 +14,14 @@ gulp.task('sketch', function () {
 });
 
 // iconfont
-gulp.task('iconfont', function() {
+gulp.task('iconfont', () => {
   return gulp.src('iconfont/*.svg')
   .pipe($.iconfont({
     fontName: fontName
   }))
-  .on('glyphs', function (glyphs) {
+  .on('glyphs', glyphs => {
     var option = {
-      glyphs: glyphs.map(function (glyph) {
+      glyphs: glyphs.map( glyph => {
         return {
           name: glyph.name,
           codepoint: glyph.unicode[0].charCodeAt(0)

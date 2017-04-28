@@ -1,9 +1,9 @@
-var gulp = require('gulp');
-var config = require('../config');
-var $ = require('gulp-load-plugins')();
-var runSequence = require('run-sequence');
+let gulp = require('gulp');
+let config = require('../config');
+let $ = require('gulp-load-plugins')();
+let runSequence = require('run-sequence');
 
-gulp.task('riot', function(){
+gulp.task('riot', () => {
   return gulp.src(['riot/**/*.tag.html'])
   .pipe($.plumber({
     errorHandler: $.notify.onError("Error in Riot: <%= error.message %>")

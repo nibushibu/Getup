@@ -1,9 +1,9 @@
-var gulp = require('gulp');
-var config = require('../config');
-var $ = require('gulp-load-plugins')();
+let gulp = require('gulp');
+let config = require('../config');
+let $ = require('gulp-load-plugins')();
 
 // Babel
-gulp.task('babel', function () {
+gulp.task('babel', () => {
   return gulp.src(config.js.file)
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
   .pipe($.sourcemaps.init())

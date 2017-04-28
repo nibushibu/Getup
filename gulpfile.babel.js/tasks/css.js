@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-var config = require('../config');
-var $ = require('gulp-load-plugins')();
-var runSequence = require('run-sequence');
+let gulp = require('gulp');
+let config = require('../config');
+let $ = require('gulp-load-plugins')();
+let runSequence = require('run-sequence');
 
 // SASS
-gulp.task('postcss', function () {
+gulp.task('postcss', () => {
 
   var processors = [
     require('postcss-import'),
@@ -29,6 +29,6 @@ gulp.task('postcss', function () {
 });
 
 // Build CSS
-gulp.task('css', function (callback) {
+gulp.task('css', callback => {
   return runSequence('postcss', callback);
 });

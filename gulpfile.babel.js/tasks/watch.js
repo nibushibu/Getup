@@ -1,9 +1,9 @@
-var gulp = require('gulp');
-var config = require('../config');
-var $ = require('gulp-load-plugins')();
+let gulp = require('gulp');
+let config = require('../config');
+let $ = require('gulp-load-plugins')();
 
 // Watch
-gulp.task('watch', function () {
+gulp.task('watch', () => {
   gulp.watch('*.sketch', ['sketch']);
   gulp.watch('svg/*.svg', ['icons']);
   gulp.watch('iconfont/*.svg', ['iconfont']);

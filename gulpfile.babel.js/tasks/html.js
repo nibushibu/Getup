@@ -1,9 +1,9 @@
-var gulp = require('gulp');
-var config = require('../config');
-var $ = require('gulp-load-plugins')();
+let gulp = require('gulp');
+let config = require('../config');
+let $ = require('gulp-load-plugins')();
 
 // EJS
-gulp.task('ejs', function (callback) {
+gulp.task('ejs', callback => {
   return gulp.src([
     'ejs/**/*.ejs',
     '!' + 'ejs/**/_*.ejs'//_始まりは除外
