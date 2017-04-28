@@ -26,13 +26,18 @@ $(() => {
     }
   })(window.navigator.userAgent.toLowerCase());
 
+  // スクロールアニメ
+  const scrollTo = (selector) => {
+    const speed = 500;
+    const target = $(selector === "#index" || selector === "" ? 'html' : selector);
+    const position = target.offset().top;
+    $("html, body").animate( { scrollTop: position }, speed, "swing");
+  }
+
   // アンカースクロールアニメーション
   if(!_ua.Mobile || !_ua.Tablet){
-    $('a[href*="#"]').click(function() {
-      var href = $(this).attr('href');
-      var $target = $(href === '#' || href === '' ? 'html' : href);
-      TweenMax.to(window, 1, {scrollTo:$target.offset().top});
-      return false;
+    $('a[href^="#"]').on('click', (e) => {
+      scrollTo( $(e.currentTaret).attr('href') );
     });
   }
 
