@@ -22,7 +22,6 @@
     "gulp-consolidate": "*",
     "gulp-ejs": "*",
     "gulp-iconfont": "*",
-    "gulp-kss": "*",
     "gulp-load-plugins": "*",
     "gulp-notify": "*",
     "gulp-plumber": "*",
