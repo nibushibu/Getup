@@ -46,7 +46,7 @@ gulp.task('minifyJs', () => {
 
 // minify PNG Images
 gulp.task('minifyPng', () => {
-  return gulp.src(config.appPath + 'img/**.png')
+  return gulp.src(config.appPath + 'img/**/*.png')
   .pipe($.pngmin())
   .pipe(gulp.dest(config.appPath + 'img'));
 });
