@@ -28,7 +28,18 @@ gulp.task('postcss', () => {
   .pipe(gulp.dest(config.appPath + 'css'));
 });
 
+gulp.task('colorPalette', () => {
+
+  gulp.src(config.css.colorFile)
+  .pipe($.postcss([
+    require('postcss-style-guide')({
+      project: 'Color Palette',
+      dest: 'styleguide/html/color.html'
+    })
+  ]));
+});
+
 // Build CSS
 gulp.task('css', callback => {
-  return runSequence('postcss', callback);
+  return runSequence(['colorPalette', 'postcss'], callback);
 });

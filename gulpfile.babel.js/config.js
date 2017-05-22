@@ -37,6 +37,9 @@ module.exports = {
     file: [
       'riot/**/*.css',
       'css/main.css'
+    ],
+    colorFile: [
+      'css/variables.css'
     ]
   },
 
