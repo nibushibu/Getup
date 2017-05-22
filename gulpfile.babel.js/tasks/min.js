@@ -39,7 +39,9 @@ gulp.task('minifyJs', () => {
   return gulp.src(config.appPath + 'js/*.js')
   .pipe($.uglify({
     mangle: false,
-    preserveComments: isLicenseComment
+    output: {
+      comments: licenseRegexp
+    }
   }).on('error', gutil.log))
   .pipe(gulp.dest(config.appPath + 'js'));
 });
