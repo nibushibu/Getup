@@ -4,17 +4,6 @@ let $ = require('gulp-load-plugins')();
 let gutil = require('gulp-util');
 let runSequence = require('run-sequence');
 let licenseRegexp = /^\!|^@preserve|^@cc_on|\bMIT\b|\bMPL\b|\bGPL\b|\(c\)|License|Copyright/i;
-let isLicenseComment = (function () {
-  let _prevCommentLine = 0;
-  return (node, comment) => {
-    if (licenseRegexp.test(comment.value) || comment.line === 1 || comment.line === _prevCommentLine + 1) {
-      _prevCommentLine = comment.line;
-      return true;
-    }
-    _prevCommentLine = 0;
-    return false;
-  };
-})();
 
 gulp.task('min', callback => {
   return runSequence(
