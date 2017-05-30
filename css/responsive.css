@@ -22,8 +22,8 @@
   }
 
   /* テーブル */
-  table {
+  .table {
     overflow: auto;
+    display: block;
   }
-
 }
