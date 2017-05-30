@@ -19,7 +19,11 @@ gulp.task('min', callback => {
 // minify CSS
 gulp.task('minifyCss', () => {
   return gulp.src(config.appPath + 'css/*.css')
-  .pipe($.postcss([require('csswring')]))
+  .pipe($.postcss([
+    require('perfectionist')({
+      format: 'compressed'
+    })
+  ]))
   .pipe(gulp.dest(config.appPath + 'css'));
 });
 
