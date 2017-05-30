@@ -20,6 +20,7 @@ gulp.task('min', callback => {
 gulp.task('minifyCss', () => {
   return gulp.src(config.appPath + 'css/*.css')
   .pipe($.postcss([
+    require("css-mqpacker"),
     require('perfectionist')({
       format: 'compressed'
     })
