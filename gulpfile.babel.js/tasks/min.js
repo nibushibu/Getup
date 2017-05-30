@@ -10,7 +10,8 @@ gulp.task('min', callback => {
     [
       'minifyCss',
       'minifyJs',
-      'minifyPng'
+      'minifyPng',
+      'minifySvg'
     ],
     callback
   );
@@ -44,5 +45,12 @@ gulp.task('minifyJs', () => {
 gulp.task('minifyPng', () => {
   return gulp.src(config.appPath + 'img/**/*.png')
   .pipe($.pngmin())
+  .pipe(gulp.dest(config.appPath + 'img'));
+});
+
+// minify SVG
+gulp.task('minifySvg', () => {
+  return gulp.src(config.appPath + 'img/**/*.svg')
+  .pipe($.svgo())
   .pipe(gulp.dest(config.appPath + 'img'));
 });

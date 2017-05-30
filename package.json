@@ -34,6 +34,7 @@
     "gulp-sketch": "^1.0.4",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-svgmin": "^1.2.4",
+    "gulp-svgo": "^1.0.3",
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-utf8ize-sourcemaps": "^1.0.0",
