@@ -26,21 +26,37 @@ $(() => {
     }
   })(window.navigator.userAgent.toLowerCase());
 
-  // スクロールアニメ
-  const scrollTo = (selector) => {
-    const speed = 500;
-    const target = $(selector === "#index" || selector === "" ? 'html' : selector);
-    const position = target.offset().top;
-    $("html, body").animate( { scrollTop: position }, speed, "swing");
-  }
-
   // アンカースクロールアニメーション
-  if(!_ua.Mobile || !_ua.Tablet){
-    $('a[href^="#"]').on('click', (e) => {
-      scrollTo( $(e.currentTaret).attr('href') );
-    });
+  const anchorScroll = () => {
+
+    function scrollTo(selector, offset, cb) {
+      console.log(selector);
+      var body = [document.body, document.documentElement];
+      var offset = offset || 0;
+      if(_ua.Mobile){
+        offset += 60;
+      }
+      var el = document.querySelector(selector);
+      var scrollAnim = anime({
+        targets: body,
+        scrollTop: el.offsetTop - offset,
+        duration: 500,
+        easing: 'easeInOutQuart',
+        complete: function() { if (cb) cb(); }
+      });
+    }
+
+    if(!_ua.Tablet){
+      $('a[href^="#"], .js-anchor-scroll').on('click', (e) => {
+        e.preventDefault();
+        var href = $(e.currentTarget).attr('href');
+        scrollTo(href);
+        return false;
+      });
+    }
   }
 
+  anchorScroll();
 });
 
 })(jQuery);
