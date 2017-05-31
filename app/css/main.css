@@ -199,7 +199,7 @@ Wordpressのリッチテキストエディタ用。
   このファイルで、RiotタグのCSSを@importで読み込む
 
   @import "../riot/sample-tag/sample-tag.css";
- *//* タブレットサイズ */@media (max-width: 768px){.data{overflow-y:hidden;overflow-x:auto}}/* モバイルサイズ */@media (max-width: 768px){html{/*デバイスが横になった時の文字拡大をOFF*/-webkit-text-size-adjust:none}/* 画像 */img{max-width:100%;height:auto}/* テーブル */.table{overflow:auto;display:block}}/* 印刷用 */@media print{/* テキストシャドウなど不要なエフェクトを無効化 */*{background:transparent;box-shadow:none;color:#000;text-shadow:none}/* 画像がはみ出したり変形したりしないように。 */img{max-width:100%;height:auto}/*画像置換解除*//*.alt-img {
+ *//* タブレットサイズ *//* モバイルサイズ *//* 印刷用 */@media (max-width: 768px){.data{overflow-y:hidden;overflow-x:auto}html{/*デバイスが横になった時の文字拡大をOFF*/-webkit-text-size-adjust:none}/* 画像 */img{max-width:100%;height:auto}/* テーブル */.table{overflow:auto;display:block}}@media print{/* テキストシャドウなど不要なエフェクトを無効化 */*{background:transparent;box-shadow:none;color:#000;text-shadow:none}/* 画像がはみ出したり変形したりしないように。 */img{max-width:100%;height:auto}/*画像置換解除*//*.alt-img {
    padding: 0 !important;
    width: auto !important;
    height: auto !important;
