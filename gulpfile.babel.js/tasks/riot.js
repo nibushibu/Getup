@@ -4,7 +4,7 @@ let $ = require('gulp-load-plugins')();
 let runSequence = require('run-sequence');
 
 gulp.task('riot', () => {
-  return gulp.src(['riot/**/*.tag.html'])
+  return gulp.src(['riot/**/*.tag'])
   .pipe($.plumber({
     errorHandler: $.notify.onError("Error in Riot: <%= error.message %>")
   }))
