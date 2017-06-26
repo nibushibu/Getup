@@ -11,5 +11,5 @@ gulp.task('watch', () => {
   gulp.watch('js/**/*.js', ['babel']);
   gulp.watch('ejs/**/*.ejs', ['ejs']);
   gulp.watch('sprite/**/*', ['sprite']);
-  gulp.watch('riot/**/*.tag', ['riot']);
+  gulp.watch('riot/**/*.+(tag|tag.html)', ['riot']);
 });
