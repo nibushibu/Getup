@@ -3,7 +3,7 @@ let config = require('../config');
 let $ = require('gulp-load-plugins')();
 let runSequence = require('run-sequence');
 
-// SASS
+// PostCSS
 gulp.task('postcss', () => {
 
   var processors = [
