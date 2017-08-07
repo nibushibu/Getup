@@ -11,6 +11,7 @@ gulp.task('postcss', () => {
     require('postcss-easings'),
     require('postcss-cssnext'),
     require("css-mqpacker"),
+    require("postcss-flexibility"),
     require('postcss-style-guide')({
       dest: 'styleguide/html/index.html',
     }),
