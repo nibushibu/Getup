@@ -1,9 +1,9 @@
-let gulp = require('gulp');
-let config = require('../config');
-let $ = require('gulp-load-plugins')();
-let gutil = require('gulp-util');
-let runSequence = require('run-sequence');
-let licenseRegexp = /^\!|^@preserve|^@cc_on|\bMIT\b|\bMPL\b|\bGPL\b|\(c\)|License|Copyright/i;
+const gulp = require('gulp');
+const config = require('../config');
+const $ = require('gulp-load-plugins')();
+const gutil = require('gulp-util');
+const runSequence = require('run-sequence');
+const licenseRegexp = /^\!|^@preserve|^@cc_on|\bMIT\b|\bMPL\b|\bGPL\b|\(c\)|License|Copyright/i;
 
 gulp.task('min', callback => {
   return runSequence(

@@ -1,8 +1,8 @@
-let gulp = require('gulp');
-let config = require('../config');
-let $ = require('gulp-load-plugins')();
-let fs = require('fs');
-let path = require('path');
+const gulp = require('gulp');
+const config = require('../config');
+const $ = require('gulp-load-plugins')();
+const fs = require('fs');
+const path = require('path');
 
 // SpriteSmithで使うディレクトリ取得関数
 let getFolders =  dir => {

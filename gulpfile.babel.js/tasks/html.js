@@ -1,6 +1,6 @@
-let gulp = require('gulp');
-let config = require('../config');
-let $ = require('gulp-load-plugins')();
+const gulp = require('gulp');
+const config = require('../config');
+const $ = require('gulp-load-plugins')();
 
 // EJS
 gulp.task('ejs', callback => {

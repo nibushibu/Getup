@@ -1,3 +1,5 @@
+const $ = require("animejs");
+
 (function($){
 
 // Easingの追加

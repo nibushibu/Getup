@@ -1,7 +1,7 @@
-let gulp = require('gulp');
-let config = require('../config');
-let $ = require('gulp-load-plugins')();
-let runSequence = require('run-sequence');
+const gulp = require('gulp');
+const config = require('../config');
+const $ = require('gulp-load-plugins')();
+const runSequence = require('run-sequence');
 
 gulp.task('riot', () => {
   return gulp.src(['riot/**/*.+(tag|tag.html)'])
@@ -16,6 +16,6 @@ gulp.task('riot', () => {
       },
     },
   }))
-  .pipe($.concat("modules.js"))
+  .pipe($.concat("tags.js"))
   .pipe(gulp.dest(config.appPath + 'js'));
 })

@@ -1,7 +1,7 @@
-let gulp = require('gulp');
-let config = require('../config');
-let $ = require('gulp-load-plugins')();
-let fontName = 'iconfont';
+const gulp = require('gulp');
+const config = require('../config');
+const $ = require('gulp-load-plugins')();
+const fontName = 'iconfont';
 
 // Sketch
 gulp.task('sketch', () => {

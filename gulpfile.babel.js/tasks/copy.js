@@ -1,7 +1,7 @@
-let gulp = require('gulp');
-let config = require('../config');
-let $ = require('gulp-load-plugins')();
-let runSequence = require('run-sequence');
+const gulp = require('gulp');
+const config = require('../config');
+const $ = require('gulp-load-plugins')();
+const runSequence = require('run-sequence');
 
 // Copy Javascript
 gulp.task('copyJs', () => {

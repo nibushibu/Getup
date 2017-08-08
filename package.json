@@ -9,6 +9,7 @@
     "autoprefixer": "^7.1.1",
     "babel": "^6.23.0",
     "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2015-riot": "^1.1.0",
     "css-mqpacker": "^6.0.0",
@@ -58,6 +59,8 @@
     "scrollmagic": "^2.0.5",
     "slick-carousel": "^1.6.0",
     "svg4everybody": "^2.1.8",
+    "webpack": "^3.5.1",
+    "webpack-stream": "^4.0.0",
     "whatwg-fetch": "^2.0.3"
   },
   "directories": {
