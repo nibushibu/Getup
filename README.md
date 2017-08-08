@@ -1,3 +1,3 @@
 #Getup
 
-My simple CSS framework.
+My Website Boilerplate
