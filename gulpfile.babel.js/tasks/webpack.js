@@ -12,7 +12,7 @@ const webpackConfig = require("../../webpack.config");
 gulp.task("webpack", () => {
   // return webpackStream(webpackConfig, webpack)
   return gulp.src('js/**/main.js')
-  .pipe(webpackStream(webpackConfig, webpack))
   .pipe($.plumber({errorHandler: $.notify.onError('<%= error.message %>')}))
+  .pipe(webpackStream(webpackConfig, webpack))
   .pipe(gulp.dest(config.appPath + 'js'));
 });
