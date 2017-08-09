@@ -9,86 +9,43 @@
   font-style: normal;
 }
 
-:root {
-
-  --i: {
-    display: inline-block;
-    font-family: "iconfont";
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  --i-lg: {
-    font-size: 1.3333333333333333em;
-    line-height: 0.75em;
-    vertical-align: -15%;
-  }
-
-  --i-2x: {
-    font-size: 2em;
-  }
-
-  --i-3x: {
-    font-size: 3em;
-  }
-
-  --i-4x: {
-    font-size: 4em;
-  }
-
-  --i-5x: {
-    font-size: 5em;
-  }
-
-  --i-fw: {
-    width: (18em / 14);
-    text-align: center;
-  }
-  
-  --i-caret-right: {
-    content: "\EA01";
-  }
-  
-}
-
 .i {
-  @apply --i;
+  display: inline-block;
+  font-family: "iconfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .i-lg {
-  @apply --i-lg;
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
 }
 
 .i-2x {
-  @apply --i-2x;
+  font-size: 2em;
 }
 
 .i-3x {
-  @apply --i-3x;
+  font-size: 3em;
 }
 
 .i-4x {
-  @apply --i-4x;
+  font-size: 4em;
 }
 
 .i-5x {
-  @apply --i-5x;
+  font-size: 5em;
 }
 
 .i-fw {
-  @apply --i-fw;
+  width: (18em / 14);
+  text-align: center;
 }
-
-:root {
-  --i-caret-right {
-    content: "\EA01";
-  }
-}
-
 
 .i-caret-right::before {
-  @apply --i-caret-right;
+  content: "\EA01";
 }
