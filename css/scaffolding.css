@@ -99,18 +99,14 @@ table {
   width: 100%;
 }
 
-.table {
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: .5em;
+}
 
-  @nest
-  & th,
-  & td {
-    border: 1px solid #ccc;
-    padding: .5em;
-  }
-
-  @nest & a {
-    word-break: break-all;
-  }
+.table a {
+  word-break: break-all;
 }
 
 tfoot {

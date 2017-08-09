@@ -16,18 +16,18 @@
 .block-link {
   color: var(--base-text-color);
   cursor: pointer;
+}
 
-  @nest &:hover {
-    text-decoration: none;
+.block-link:hover {
+  text-decoration: none;
+}
 
-    @nest & .block-link__link {
-      text-decoration: underline;
-    }
-  }
+.block-link:hover .block-link__link {
+  text-decoration: underline;
+}
 
-  @nest & .block-link__link {
-    color: var(--base-link-color);
-  }
+.block-link .block-link__link {
+  color: var(--base-link-color);
 }
 
 /* テキスト方向
