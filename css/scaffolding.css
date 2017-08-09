@@ -48,12 +48,12 @@ body {
 a {
   color: var(--base-link-color);
   text-decoration: none;
+}
 
-  &:hover,
-  &:active {
-    color: color(var(--base-link-color) tint(10%));
-    text-decoration: underline;
-  }
+a:hover,
+a:active {
+  color: color(var(--base-link-color) tint(10%));
+  text-decoration: underline;
 }
 
 hr {
@@ -142,14 +142,14 @@ button {
   padding: .5em;
   transition: border linear 0.2s, box-shadow linear 0.2s;
   width: 100%;
+}
 
-  @nest &[disabled],
-  fieldset[disabled] & {
-    cursor: not-allowed;
-    background-color: #eee;
-    /* iOS fix for unreadable disabled content */
-    opacity: 1;
-  }
+.form-control[disabled],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #eee;
+  /* iOS fix for unreadable disabled content */
+  opacity: 1;
 }
 
 .form-control--inline {
