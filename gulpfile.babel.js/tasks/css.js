@@ -9,6 +9,7 @@ gulp.task('postcss', () => {
   var processors = [
     require('postcss-import'),
     require('postcss-easings'),
+    require('postcss-mixins'),
     require('postcss-cssnext'),
     require("css-mqpacker"),
     require("postcss-flexibility"),
