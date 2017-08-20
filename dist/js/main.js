@@ -1,13 +1,12 @@
-const $ = require("animejs");
 
 (function($){
 
 // Easingの追加
-jQuery.easing.quart = (x, t, b, c, d) => {
+jQuery.easing.quart = function (x, t, b, c, d) {
   return -c * ((t = t / d - 1) * t * t * t - 1) + b;
 };
 
-$(() => {
+$(function () {
 
   // スマホ判定
   var _ua = (function(u){
@@ -29,7 +28,7 @@ $(() => {
   })(window.navigator.userAgent.toLowerCase());
 
   // アンカースクロールアニメーション
-  const anchorScroll = () => {
+  var anchorScroll = function () {
 
     function scrollTo(selector, offset, cb) {
       console.log(selector);
@@ -44,12 +43,12 @@ $(() => {
         scrollTop: el.offsetTop - offset,
         duration: 500,
         easing: 'easeInOutQuart',
-        complete: function() { if (cb) cb(); }
+        complete: function() { if (cb) { cb(); } }
       });
     }
 
     if(!_ua.Tablet){
-      $('a[href^="#"], .js-anchor-scroll').on('click', (e) => {
+      $('a[href^="#"], .js-anchor-scroll').on('click', function (e) {
         e.preventDefault();
         var href = $(e.currentTarget).attr('href');
         scrollTo(href);
@@ -62,3 +61,4 @@ $(() => {
 });
 
 })(jQuery);
+

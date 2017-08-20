@@ -1,9 +1,9 @@
 module.exports = {
   /* 特別な定義が不要なタスクの設定 */
-  appPath: 'app/',
+  appPath: 'dist/',
 
   iconfont: {
-    sketch: 'symbol-font-14px.sketch',
+    sketch: 'src/symbol-font-14px.sketch',
   },
 
   copy: {
@@ -21,7 +21,7 @@ module.exports = {
 
   concat: {
     js: [
-      'js/plugins-base.js',
+      'src/js/plugins-base.js',
       'node_modules/riot/riot.min.js',
       'node_modules/animejs/anime.min.js',
       'node_modules/promise-polyfill/promise.min.js',
@@ -35,17 +35,10 @@ module.exports = {
 
   css: {
     file: [
-      'css/main.css'
+      'src/css/main.css'
     ],
     colorFile: [
-      'css/variables.css'
+      'src/css/variables.css'
     ]
   },
-
-  js: {
-    file: [
-      'js/**/*.js',
-      '!js/plugins-base.js'
-    ]
-  }
 };

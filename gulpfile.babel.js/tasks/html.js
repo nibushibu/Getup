@@ -3,7 +3,7 @@ const config = require('../config');
 const $ = require('gulp-load-plugins')();
 
 // EJS
-gulp.task('ejs', callback => {
+gulp.task('html', callback => {
   return gulp.src([
     'ejs/**/*.ejs',
     '!' + 'ejs/**/_*.ejs'//_始まりは除外
