@@ -9,7 +9,7 @@
   font-style: normal;
 }
 
-.i {
+@define-mixin i {
   display: inline-block;
   font-family: "iconfont";
   font-style: normal;
@@ -19,33 +19,83 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.i-lg {
+@define-mixin i-lg {
   font-size: 1.3333333333333333em;
   line-height: 0.75em;
   vertical-align: -15%;
 }
 
-.i-2x {
+@define-mixin i-2x {
   font-size: 2em;
 }
 
-.i-3x {
+@define-mixin i-3x {
   font-size: 3em;
 }
 
-.i-4x {
+@define-mixin i-4x {
   font-size: 4em;
 }
 
-.i-5x {
+@define-mixin i-5x {
   font-size: 5em;
 }
 
-.i-fw {
+@define-mixin i-fw {
   width: (18em / 14);
   text-align: center;
 }
 
-.i-caret-right::before {
+@define-mixin i-caret-right {
   content: "\EA01";
+}
+
+@define-mixin i-circle {
+  content: "\EA02";
+}
+
+
+.i {
+  @add-mixin i;
+}
+
+.i-lg {
+  @add-mixin i-lg;
+}
+
+.i-2x {
+  @add-mixin i-2x;
+}
+
+.i-3x {
+  @add-mixin i-3x;
+}
+
+.i-4x {
+  @add-mixin i-4x;
+}
+
+.i-5x {
+  @add-mixin i-5x;
+}
+
+.i-fw {
+  @add-mixin i-fw;
+}
+
+@define-mixin i-caret-right {
+  content: "\EA01";
+}
+
+@define-mixin i-circle {
+  content: "\EA02";
+}
+
+
+.i-caret-right:before {
+  @add-mixin i-caret-right;
+}
+
+.i-circle:before {
+  @add-mixin i-circle;
 }

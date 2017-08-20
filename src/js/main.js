@@ -1,10 +1,11 @@
+import slick from 'slick-carousel'
+import mojs from 'mo-js'
+import riot from 'riot'
+import './app.tag'
+
+riot.mount(app)
 
 (function($){
-
-// Easingの追加
-jQuery.easing.quart = (x, t, b, c, d) => {
-  return -c * ((t = t / d - 1) * t * t * t - 1) + b;
-};
 
 $(() => {
 
