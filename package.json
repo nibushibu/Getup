@@ -14,6 +14,8 @@
     "watch:iconfont": "onchange src/iconfont -- gulp iconfont",
     "watch": "npm-run-all --parallel watch:*",
     "min:css": "postcss dist/css/main.css -e minify -o dist/css/main.css",
+    "min:image": "",
+    "min": "npm-run-all --parallel min:image",
     "copy:font": "cpx \"node_modules/slick-carousel/slick/fonts/**\" dist/css/fonts",
     "copy:img": "cpx \"node_modules/slick-carousel/slick/ajax-loader.gif\" dist/css",
     "copy": "npm-run-all --parallel copy:*"
