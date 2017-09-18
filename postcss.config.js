@@ -33,10 +33,10 @@ module.exports = ctx => {
         // }),
         require('cssnano')({
           preset: ['default', {
-              MergeRules: false,
-              normalizeString: {
-                preferredQuote: 'single'
-              }
+            MergeRules: false,
+            normalizeString: {
+              preferredQuote: 'single'
+            }
           }]
         })
       ]
