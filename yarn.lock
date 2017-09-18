@@ -2988,6 +2988,12 @@ postcss-flexibility@^2.0.0:
   dependencies:
     postcss "^6.0.1"
 
+postcss-focus@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-focus/-/postcss-focus-2.0.0.tgz#e4ad175566125b2837f9fc44f782ce1b0160678c"
+  dependencies:
+    postcss "^6.0.1"
+
 postcss-font-family-system-ui@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/postcss-font-family-system-ui/-/postcss-font-family-system-ui-2.0.1.tgz#318a075fdcb84b864aa823a51935ef0a5872e911"

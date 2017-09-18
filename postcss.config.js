@@ -24,6 +24,7 @@ module.exports = ctx => {
         require('postcss-cssnext')({
           warnForDuplicates: false
         }),
+        require("postcss-focus"),
         require("css-mqpacker"),
         require("postcss-flexibility"),
         require('postcss-style-guide')({
