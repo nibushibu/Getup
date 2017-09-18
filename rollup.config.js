@@ -15,10 +15,17 @@ function cssnext (tagName, css) {
   return css
 }
 
-export default {
+const main = {
   entry: 'src/js/main.js',
-  dest: 'dist/js/main.js',
-  format: 'iife',
+  dest: 'dist/js/main.js'
+}
+
+const common = {
+  format: 'es',
+  // moduleName: 'MyBundle',
+  // globals: {
+  //   jQuery: '$'
+  // },
   sourceMap: true,
   plugins: [
     riot({
@@ -33,3 +40,7 @@ export default {
     uglify()
   ]
 }
+
+export default [
+  Object.assign({}, main, common)
+]
