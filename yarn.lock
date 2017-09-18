@@ -733,6 +733,14 @@ csso@~2.3.1:
     clap "^1.0.9"
     source-map "^0.5.3"
 
+csswring@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/csswring/-/csswring-6.0.1.tgz#ecc4439bcb9552f9ed4750c10360a3474fdabf67"
+  dependencies:
+    minimist "^1.2.0"
+    onecolor "^3.0.4"
+    postcss "^6.0.9"
+
 cubic2quad@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/cubic2quad/-/cubic2quad-1.1.1.tgz#69b19c61a3f5b41ecf2f1d5fae8fb03415aa8b15"
