@@ -1,6 +1,7 @@
 module.exports = ctx => {
   if(ctx.env === 'minify'){
     return {
+      map: { inline: false },
       plugins: [
         require('cssnano')({
           preset: ['default', {
