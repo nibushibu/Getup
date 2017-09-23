@@ -44,3 +44,17 @@ const common = {
 export default [
   Object.assign({}, main, common)
 ]
+
+/**
+ * Transforms new CSS specs into more compatible CSS
+ * https://github.com/riot/examples/blob/gh-pages/rollup/rollup.config.js
+ * https://qiita.com/cognitom/items/c20c22614560627062cb
+ */
+function cssnext (tagName, css) {
+  // A small hack: it passes :scope as :root to PostCSS.
+  // This make it easy to use css variables inside tags.
+  css = css.replace(/:scope/g, ':root')
+  css = postcss([postcssCssnext]).process(css).css
+  css = css.replace(/:root/g, ':scope')
+  return css
+}
