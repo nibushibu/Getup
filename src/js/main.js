@@ -10,7 +10,12 @@ import anime from 'animejs'
 // import ScrollMagic from 'scrollmagic'
 // import slick from 'slick-carousel'
 
-import './app.vue'
+import MyApp from './my-app.vue'
+
+new Vue ({
+  el: '#app',
+  components: { MyApp }
+})
 
 ;(function($){
 
