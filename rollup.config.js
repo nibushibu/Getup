@@ -1,38 +1,52 @@
 import nodeResolve  from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import buble from 'rollup-plugin-buble'
-import riot from 'rollup-plugin-riot'
+import vue from 'rollup-plugin-vue'
+import postcss from 'rollup-plugin-postcss'
 import uglify from 'rollup-plugin-uglify'
 
-// 基本的には、タグ内のCSSは書かない形にしたいけど、念のため
-// http://qiita.com/cognitom/items/c20c22614560627062cb#riotのオプションにカスタムパーサを入れる
-function cssnext (tagName, css) {
-  // ちょっとだけハックして、:scopeを:rootに置き換えてPostCSSに渡す
-  // タグの中でCSS変数を使いやすくするため
-  css = css.replace(/:scope/g, ':root')
-  css = postcss([postcssCssnext]).process(css).css
-  css = css.replace(/:root/g, ':scope')
-  return css
-}
-
 const main = {
-  entry: 'src/js/main.js',
-  dest: 'dist/js/main.js'
+  input: 'src/js/main.js',
+  output: {
+    file: 'dist/js/main.js',
+    format: 'es',
+    sourcemap: true
+  }
 }
 
 const common = {
-  format: 'es',
   // moduleName: 'MyBundle',
   // globals: {
   //   jQuery: '$'
   // },
-  sourceMap: true,
   plugins: [
-    riot({
-      style: 'cssnext',
-      parsers: {
-        css: { cssnext }
-      }
+    vue({ autoStyles: false, styleToImports: true }),
+    postcss({
+      plugins: [
+        require('postcss-import'),
+        require('postcss-easings'),
+        require('postcss-mixins'),
+        require('postcss-cssnext')({
+          warnForDuplicates: false
+        }),
+        require("postcss-focus"),
+        require("css-mqpacker"),
+        require("postcss-flexibility"),
+        require('postcss-style-guide')({
+          dest: 'styleguide/html/index.html',
+        }),
+        // require('perfectionist')({
+        //   indentSize: 2,
+        // }),
+        require('cssnano')({
+          preset: ['default', {
+            MergeRules: false,
+            normalizeString: {
+              preferredQuote: 'single'
+            }
+          }]
+        })
+      ]
     }),
     nodeResolve({ jsnext: true }),
     commonjs(),

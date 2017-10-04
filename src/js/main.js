@@ -4,15 +4,13 @@
 // import 'whatwg-fetch'
 // import 'feature.js'
 // import Promise from 'promise-polyfill'
-import riot from 'riot'
+import Vue from 'vue'
 import anime from 'animejs'
 // import p5 from 'p5'
 // import ScrollMagic from 'scrollmagic'
 // import slick from 'slick-carousel'
 
-import './app.tag'
-
-// riot.mount('app')
+import './app.vue'
 
 ;(function($){
 
