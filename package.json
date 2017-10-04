@@ -7,9 +7,9 @@
     "js": "rollup -c",
     "css": "postcss src/css/main.css -d dist/css",
     "html": "ejs-cli --base-dir src/ejs '*.ejs' --out dist/",
-    "watch:js": "onchange src/js -- yarn run js",
-    "watch:css": "onchange src/css -- yarn run css",
-    "watch:html": "onchange src/ejs -- yarn run html",
+    "watch:js": "onchange src/js -- npm run js",
+    "watch:css": "onchange src/css -- npm run css",
+    "watch:html": "onchange src/ejs -- npm run html",
     "watch:sketch": "onchange src/symbol-font-14px.sketch -- gulp sketch",
     "watch:iconfont": "onchange src/iconfont -- gulp iconfont",
     "watch": "npm-run-all --parallel watch:*",
@@ -80,5 +80,6 @@
   "bugs": {
     "url": "https://github.com/nibushibu/Getup/issues"
   },
+  "license": "MIT",
   "homepage": "https://github.com/nibushibu/Getup"
 }

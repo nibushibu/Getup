@@ -12,8 +12,11 @@ import anime from 'animejs'
 
 import MyApp from './my-app.vue'
 
+Vue.config.productionTip = true
+
 new Vue ({
   el: '#app',
+  template: '<App/>',
   components: { MyApp }
 })
 
