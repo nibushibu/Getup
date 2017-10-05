@@ -2,7 +2,7 @@ import nodeResolve  from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import buble from 'rollup-plugin-buble'
 import riot from 'rollup-plugin-riot'
-import uglify from 'rollup-plugin-uglify'
+import uglify from 'rollup-plugin-uglify-es'
 
 /**
  * 基本的には、タグ内のCSSは書かない形にしたいけど、念のため
@@ -26,7 +26,7 @@ const main = {
   input: 'src/js/main.js',
   output: {
     file: 'dist/js/main.js',
-    format: 'es'
+    format: 'iife'
   }
 }
 
@@ -45,7 +45,9 @@ const common = {
     }),
     nodeResolve({ jsnext: true }),
     commonjs(),
-    buble(),
+    buble({
+      exclude: 'node_modules/**'
+    }),
     uglify()
   ]
 }
