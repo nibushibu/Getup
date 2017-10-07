@@ -8,12 +8,12 @@ import anime from 'animejs'
 import ScrollMagic from 'scrollmagic'
 import slick from 'slick-carousel'
 
+Vue.config.productionTip = false
+
 // import './app.tag'
 // riot.mount('app')
 
 import App from './app.vue'
-
-console.log('テ')
 
 new Vue({
   el: '#app',
