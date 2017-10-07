@@ -26,11 +26,11 @@
     "concat": "concat -o dist/js/vendor.js node_modules/jquery/dist/jquery.min.js node_modules/riot/riot.min.js node_modules/animejs/anime.min.js node_modules/whatwg-fetch/fetch.js node_modules/feature.js/feature.min.js node_modules/p5/lib/p5.min.js node_modules/promise-polyfill/promise.min.js node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js node_modules/slick-carousel/slick/slick.min.js",
     "webpack": "webpack --display-error-details",
     "dev": "node build/dev-server.js",
-    "start": "npm run dev",
+    "start": "yarn run dev",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
+    "test": "yarn run unit && yarn run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
@@ -51,7 +51,7 @@
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
-        "babel-core": "^6.26.0",
+    "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2015-riot": "^1.1.0",
