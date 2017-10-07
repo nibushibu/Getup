@@ -23,5 +23,9 @@ module.exports = {
     'generator-star-spacing': 0,
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    // 括弧（()）の前にスペースが入っているかどうかチェック
+    'space-before-function-paren': 0,
+    // ブロック（{}）の前にスペースが入っているかチェック
+    'space-before-blocks': 0
   }
 }
