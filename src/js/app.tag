@@ -1,8 +1,8 @@
 <app-test>
-  <p>テスト</p>
+  <p>{test}</p>
 
   <script>
     const tag = this
-    console.log('test')
+    tag.test = 'テスト'
   </script>
 </app-test>

@@ -1,18 +1,25 @@
-// import jQuery from "jquery"
-// window.$ = window.jQuery = jQuery
-
-// import 'whatwg-fetch'
-// import 'feature.js'
-// import Promise from 'promise-polyfill'
+import 'bootstrap'
 import riot from 'riot'
+import Vue from 'vue'
+import feature from 'feature.js'
+import 'whatwg-fetch'
+import Promise from 'promise-polyfill'
 import anime from 'animejs'
-// import p5 from 'p5'
-// import ScrollMagic from 'scrollmagic'
-// import slick from 'slick-carousel'
+import ScrollMagic from 'scrollmagic'
+import slick from 'slick-carousel'
 
-import './app.tag'
-
+// import './app.tag'
 // riot.mount('app')
+
+import App from './app.vue'
+
+console.log('テ')
+
+new Vue({
+  el: '#app',
+  components: { App },
+  render: h => h(App)
+})
 
 ;(function($){
 
@@ -53,22 +60,21 @@ $(() => {
 
 })(jQuery)
 
-const sketch = p => {
+var s = function (sketch) {
 
-  setup = () => {
-    createCanvas(640, 480)
+  var x = 100
+  var y = 100
+
+  sketch.setup = function () {
+    sketch.createCanvas(200, 200);
   }
 
-  draw = () => {
-    if (mouseIsPressed) {
-      fill(0)
-    } else {
-      fill(255)
-    }
-    ellipse(mouseX, mouseY, 80, 80)
+  sketch.draw = function () {
+    sketch.background(0)
+    sketch.fill(255)
+    sketch.rect(x, y, 50, 50)
   }
 }
 
-new p5(sketch)
-
+var myp5 = new p5(s);
 console.log(`feature.touch = ${feature.touch}`)

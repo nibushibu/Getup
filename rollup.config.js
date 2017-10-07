@@ -4,44 +4,39 @@ import buble from 'rollup-plugin-buble'
 import riot from 'rollup-plugin-riot'
 import uglify from 'rollup-plugin-uglify-es'
 
-/**
- * 基本的には、タグ内のCSSは書かない形にしたいけど、念のため
- * http://qiita.com/cognitom/items/c20c22614560627062cb#riotのオプションにカスタムパーサを入れる
- * 
- * Transforms new CSS specs into more compatible CSS
- * https://github.com/riot/examples/blob/gh-pages/rollup/rollup.config.js
- * https://qiita.com/cognitom/items/c20c22614560627062cb
- */
-
-function cssnext (tagName, css) {
-  // ちょっとだけハックして、:scopeを:rootに置き換えてPostCSSに渡す
-  // タグの中でCSS変数を使いやすくするため
-  css = css.replace(/:scope/g, ':root')
-  css = postcss([postcssCssnext]).process(css).css
-  css = css.replace(/:root/g, ':scope')
-  return css
-}
-
-const main = {
+export default {  
   input: 'src/js/main.js',
   output: {
     file: 'dist/js/main.js',
     format: 'iife'
-  }
-}
-
-const common = {
-  // moduleName: 'MyBundle',
+  },
+  // external: [
+  //   'jquery',
+  //   'whatwg-fetch',
+  //   'feature.js',
+  //   'bootstrap',
+  //   'promise-polyfill',
+  //   'riot',
+  //   'animejs',
+  //   'p5',
+  //   'scrollmagic',
+  //   'slick-carousel'
+  // ],
   // globals: {
-  //   jQuery: '$'
+  //   jquery: '$',
+  //   jqyery: 'jQuery',
+  //   riot: 'riot',
+  //   p5: 'p5',
+  //   slick: 'slickCarousel',
+  //   Promise: 'promisePolyfill',
+  //   scrollmagic: 'ScrollMagic',
+  //   animejs: 'anime',
   // },
+  name: 'main',
   sourcemap: true,
   plugins: [
     riot({
-      style: 'cssnext',
-      parsers: {
-        css: { cssnext }
-      }
+      style: 'scss'
     }),
     nodeResolve({ jsnext: true }),
     commonjs(),
@@ -51,7 +46,3 @@ const common = {
     uglify()
   ]
 }
-
-export default [
-  Object.assign({}, main, common)
-]
