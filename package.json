@@ -152,6 +152,15 @@
   "directories": {
     "doc": "docs"
   },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/nibushibu/Getup.git"
