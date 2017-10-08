@@ -22,6 +22,7 @@
     "copy-font": "cpx \"node_modules/slick-carousel/slick/fonts/**\" dist/css/fonts",
     "copy-img": "cpx \"node_modules/slick-carousel/slick/ajax-loader.gif\" dist/css",
     "copy-bootstrap": "cpx \"node_modules/bootstrap/scss/**/_*\" src/scss",
+    "copy-gulp": "gulp copy",
     "copy": "npm-run-all copy-*",
     "concat": "concat -o dist/js/vendor.js node_modules/jquery/dist/jquery.min.js node_modules/riot/riot.min.js node_modules/animejs/anime.min.js node_modules/whatwg-fetch/fetch.js node_modules/feature.js/feature.min.js node_modules/p5/lib/p5.min.js node_modules/promise-polyfill/promise.min.js node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js node_modules/slick-carousel/slick/slick.min.js",
     "webpack": "webpack --display-error-details"
