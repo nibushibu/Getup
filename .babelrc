@@ -1,6 +1,5 @@
 {
   "presets": [
-    "env",
-    "es2015-riot"
+    "env"
   ]
 }

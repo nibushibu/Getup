@@ -1,5 +1,4 @@
 import 'bootstrap'
-import riot from 'riot'
 import Vue from 'vue'
 import feature from 'feature.js'
 import 'whatwg-fetch'
@@ -8,12 +7,7 @@ import anime from 'animejs'
 import ScrollMagic from 'scrollmagic'
 import slick from 'slick-carousel'
 
-// import './app.tag'
-// riot.mount('app')
-
 import App from './app.vue'
-
-console.log('テ')
 
 new Vue({
   el: '#app',

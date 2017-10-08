@@ -38,13 +38,6 @@ module.exports = {
   module: {
     rules: [
 
-      // Riot.js タグ
-      {
-        test: /\.tag$/,
-        exclude: /node_modules/,
-        loader: 'tag-loader'
-      },
-
       // Vue.js
       {
         test: /\.vue$/,
