@@ -31,13 +31,14 @@ gulp.task('iconfont', () => {
       fontPath: '../fonts/',
       className: 'i'
     }
-    gulp.src('src/templates/iconfont.css')
+    gulp.src('src/templates/iconfont.scss')
     .pipe($.consolidate('lodash', option))
     .pipe($.rename({
+      prefix: '_',
       basename: fontName,
-      extname: '.css'
+      extname: '.scss'
     }))
-    .pipe(gulp.dest('src/css'))
+    .pipe(gulp.dest('src/scss'))
   })
   .pipe(gulp.dest('dist/fonts'))
   .pipe(gulp.dest('styleguide/fonts'))
