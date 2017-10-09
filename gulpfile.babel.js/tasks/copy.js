@@ -3,16 +3,14 @@ const config = require('../config');
 const $ = require('gulp-load-plugins')();
 const runSequence = require('run-sequence');
 
-// Copy Javascript
-gulp.task('copyJs', () => {
-  return gulp.src(config.copy.js)
-  .pipe(gulp.dest(config.appPath + 'js/vendor'));
-});
-
 // Copy CSS
-gulp.task('copyCss', () => {
-  return gulp.src(config.copy.css)
-  .pipe(gulp.dest('css'));
+gulp.task('copyScss', () => {
+  return gulp.src(config.copy.scss)
+  .pipe($.rename({
+    prefix: '_',
+    extname: '.scss'
+  }))
+  .pipe(gulp.dest('src/scss'));
 });
 
 // Copy fonts
@@ -31,22 +29,13 @@ gulp.task('copyImg', () =>{
   .pipe(gulp.dest(config.appPath + 'css'))
 })
 
-// Concat JS
-gulp.task('concatJs', () => {
-  return gulp.src(config.concat.js)
-  .pipe($.concat('plugins.js'))
-  .pipe(gulp.dest(config.appPath + 'js'));
-});
-
 // Command
 gulp.task('copy', callback => {
   return runSequence(
     [
-      'copyJs',
-      'copyCss',
+      'copyScss',
       'copyFont',
       'copyImg',
-      'concatJs'
     ],
     callback
   );

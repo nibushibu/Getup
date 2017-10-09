@@ -18,12 +18,6 @@ module.exports = ctx => {
     return {
       map: { inline: false },
       plugins: [
-        require('postcss-import'),
-        require('postcss-easings'),
-        require('postcss-mixins'),
-        require('postcss-cssnext')({
-          warnForDuplicates: false
-        }),
         require("postcss-focus"),
         require("css-mqpacker"),
         require("postcss-flexibility"),

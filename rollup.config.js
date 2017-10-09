@@ -2,59 +2,47 @@ import nodeResolve  from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import buble from 'rollup-plugin-buble'
 import riot from 'rollup-plugin-riot'
-import uglify from 'rollup-plugin-uglify'
+import uglify from 'rollup-plugin-uglify-es'
 
-// 基本的には、タグ内のCSSは書かない形にしたいけど、念のため
-// http://qiita.com/cognitom/items/c20c22614560627062cb#riotのオプションにカスタムパーサを入れる
-function cssnext (tagName, css) {
-  // ちょっとだけハックして、:scopeを:rootに置き換えてPostCSSに渡す
-  // タグの中でCSS変数を使いやすくするため
-  css = css.replace(/:scope/g, ':root')
-  css = postcss([postcssCssnext]).process(css).css
-  css = css.replace(/:root/g, ':scope')
-  return css
-}
-
-const main = {
-  entry: 'src/js/main.js',
-  dest: 'dist/js/main.js'
-}
-
-const common = {
-  format: 'es',
-  // moduleName: 'MyBundle',
+export default {  
+  input: 'src/js/main.js',
+  output: {
+    file: 'dist/js/main.js',
+    format: 'iife'
+  },
+  // external: [
+  //   'jquery',
+  //   'whatwg-fetch',
+  //   'feature.js',
+  //   'bootstrap',
+  //   'promise-polyfill',
+  //   'riot',
+  //   'animejs',
+  //   'p5',
+  //   'scrollmagic',
+  //   'slick-carousel'
+  // ],
   // globals: {
-  //   jQuery: '$'
+  //   jquery: '$',
+  //   jqyery: 'jQuery',
+  //   riot: 'riot',
+  //   p5: 'p5',
+  //   slick: 'slickCarousel',
+  //   Promise: 'promisePolyfill',
+  //   scrollmagic: 'ScrollMagic',
+  //   animejs: 'anime',
   // },
-  sourceMap: true,
+  name: 'main',
+  sourcemap: true,
   plugins: [
     riot({
-      style: 'cssnext',
-      parsers: {
-        css: { cssnext }
-      }
+      style: 'scss'
     }),
     nodeResolve({ jsnext: true }),
     commonjs(),
-    buble(),
+    buble({
+      exclude: 'node_modules/**'
+    }),
     uglify()
   ]
-}
-
-export default [
-  Object.assign({}, main, common)
-]
-
-/**
- * Transforms new CSS specs into more compatible CSS
- * https://github.com/riot/examples/blob/gh-pages/rollup/rollup.config.js
- * https://qiita.com/cognitom/items/c20c22614560627062cb
- */
-function cssnext (tagName, css) {
-  // A small hack: it passes :scope as :root to PostCSS.
-  // This make it easy to use css variables inside tags.
-  css = css.replace(/:scope/g, ':root')
-  css = postcss([postcssCssnext]).process(css).css
-  css = css.replace(/:root/g, ':scope')
-  return css
 }
