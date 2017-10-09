@@ -7,15 +7,9 @@ module.exports = {
   },
 
   copy: {
-    js: [
-      'node_modules/jquery/dist/jquery.min.*',
-      'node_modules/riot/riot.min.js',
-      'node_modules/feature.js/feature.min.js',
-    ],
-    css: [
-      'node_modules/sanitize.css/sanitize.css',
-      'node_modules/slick-carousel/slick/slick.css',
-      'node_modules/slick-carousel/slick/slick-theme.css',
+    scss: [
+      'node_modules/slick-carousel/slick/slick.scss',
+      'node_modules/slick-carousel/slick/slick-theme.scss',
     ],
   },
 
