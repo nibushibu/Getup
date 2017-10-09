@@ -10583,7 +10583,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 new _vue2.default({
   el: '#app',
-  components: { App: _app2.default },
   render: function render(h) {
     return h(_app2.default);
   }
