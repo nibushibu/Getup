@@ -25,7 +25,8 @@
     "copy-bootstrap": "cpx \"node_modules/bootstrap/scss/**/_*\" src/scss",
     "copy-gulp": "gulp copy",
     "copy": "npm-run-all copy-*",
-    "webpack": "webpack --display-error-details"
+    "webpack": "webpack --display-error-details",
+    "pro": "NODE_ENV=production npm-run-all webpack"
   },
   "dependencies": {
     "animejs": "^2.0.2",
@@ -86,6 +87,7 @@
     "sass-loader": "^6.0.6",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "webpack-merge": "^4.1.0"
   }
 }

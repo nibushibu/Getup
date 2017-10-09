@@ -3,47 +3,6 @@
  */
 var webpack = require('webpack')
 
-/**
- * グローバル関数として定義するJSモジュールの指定
- */
-var providePlugin = new webpack.ProvidePlugin({
-  $: 'jquery',
-  jQuery: 'jquery',
-  Popper: 'popper.js',
-  p5: 'p5'
-})
-
-/**
- * 開発モードのプラグイン設定
- */
-var developPluginsArray = [
-  providePlugin
-]
-
-/**
- * 本番モードのプラグイン設定
- */
-var productionPluginsArray = [
-  providePlugin,
-  // http://vuejs.github.io/vue-loader/en/workflow/production.html
-  new webpack.DefinePlugin({
-    'process.env': 'production'
-  }),
-  new webpack.optimize.UglifyJsPlugin({
-    compress: {
-      warnings: false
-    },
-    sourceMap: true
-  }),
-]
-
-/**
- * プラグイン設定の切り替え
- */
-var pluginsArray = process.env.NODE_ENV === 'production'
-  ? productionPluginsArray
-  : developPluginsArray
-
 module.exports = {
 
   // エントリーファイル
@@ -110,7 +69,8 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [
-          __dirname + '/src/js',
+          __dirname + 'src',
+          __dirname + 'test'
         ]
       }
     ]
@@ -125,5 +85,12 @@ module.exports = {
   /**
    * グローバル関数として定義するJSモジュールの指定
    */
-  plugins: pluginsArray
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      Popper: 'popper.js',
+      p5: 'p5'
+    })
+  ]
 }

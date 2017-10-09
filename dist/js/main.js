@@ -10542,101 +10542,110 @@ process.umask = function() { return 0; };
 
 /***/ }),
 /* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(jQuery, p5) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bootstrap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_feature_js__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_feature_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_feature_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_whatwg_fetch__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_whatwg_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_whatwg_fetch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_promise_polyfill__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_promise_polyfill___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_promise_polyfill__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_animejs__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_animejs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_animejs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_scrollmagic__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_scrollmagic___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_scrollmagic__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_slick_carousel__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_slick_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_slick_carousel__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_vue__ = __webpack_require__(16);
+/* WEBPACK VAR INJECTION */(function(jQuery, p5) {
 
+__webpack_require__(5);
 
+var _vue = __webpack_require__(7);
 
+var _vue2 = _interopRequireDefault(_vue);
 
+var _feature = __webpack_require__(8);
 
+var _feature2 = _interopRequireDefault(_feature);
 
+__webpack_require__(9);
 
+var _promisePolyfill = __webpack_require__(10);
 
+var _promisePolyfill2 = _interopRequireDefault(_promisePolyfill);
 
+var _animejs = __webpack_require__(13);
 
+var _animejs2 = _interopRequireDefault(_animejs);
 
-new __WEBPACK_IMPORTED_MODULE_1_vue__["a" /* default */]({
+var _scrollmagic = __webpack_require__(14);
+
+var _scrollmagic2 = _interopRequireDefault(_scrollmagic);
+
+var _slickCarousel = __webpack_require__(15);
+
+var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
+
+var _app = __webpack_require__(16);
+
+var _app2 = _interopRequireDefault(_app);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+new _vue2.default({
   el: '#app',
-  components: { App: __WEBPACK_IMPORTED_MODULE_8__app_vue__["a" /* default */] },
-  render: h => h(__WEBPACK_IMPORTED_MODULE_8__app_vue__["a" /* default */])
-})
-
-;(function($){
-
-$(() => {
-
-  // アンカースクロールアニメーション
-  const anchorScroll = () => {
-
-    function scrollTo(selector, offset, cb) {
-      console.log(selector)
-      var body = [document.body, document.documentElement]
-      var offset = offset || 0
-      if(__WEBPACK_IMPORTED_MODULE_2_feature_js___default.a.touch){
-        offset += 60
-      }
-      var el = document.querySelector(selector)
-      var scrollAnim = __WEBPACK_IMPORTED_MODULE_5_animejs___default()({
-        targets: body,
-        scrollTop: el.offsetTop - offset,
-        duration: 500,
-        easing: 'easeInOutQuart',
-        complete: function() { if (cb) cb(); }
-      })
-    }
-
-    if(!__WEBPACK_IMPORTED_MODULE_2_feature_js___default.a.touch){
-      $('a[href^="#"], .js-anchor-scroll').on('click', (e) => {
-        e.preventDefault()
-        var href = $(e.currentTarget).attr('href')
-        scrollTo(href)
-        return false
-      })
-    }
+  components: { App: _app2.default },
+  render: function render(h) {
+    return h(_app2.default);
   }
+});(function ($) {
 
-  anchorScroll()
-})
+  $(function () {
 
-})(jQuery)
+    // アンカースクロールアニメーション
+    var anchorScroll = function anchorScroll() {
 
-var s = function (sketch) {
+      function scrollTo(selector, offset, cb) {
+        console.log(selector);
+        var body = [document.body, document.documentElement];
+        var offset = offset || 0;
+        if (_feature2.default.touch) {
+          offset += 60;
+        }
+        var el = document.querySelector(selector);
+        var scrollAnim = (0, _animejs2.default)({
+          targets: body,
+          scrollTop: el.offsetTop - offset,
+          duration: 500,
+          easing: 'easeInOutQuart',
+          complete: function complete() {
+            if (cb) cb();
+          }
+        });
+      }
 
-  var x = 100
-  var y = 100
+      if (!_feature2.default.touch) {
+        $('a[href^="#"], .js-anchor-scroll').on('click', function (e) {
+          e.preventDefault();
+          var href = $(e.currentTarget).attr('href');
+          scrollTo(href);
+          return false;
+        });
+      }
+    };
+
+    anchorScroll();
+  });
+})(jQuery);
+
+var s = function s(sketch) {
+
+  var x = 100;
+  var y = 100;
 
   sketch.setup = function () {
     sketch.createCanvas(200, 200);
-  }
+  };
 
   sketch.draw = function () {
-    sketch.background(0)
-    sketch.fill(255)
-    sketch.rect(x, y, 50, 50)
-  }
-}
+    sketch.background(0);
+    sketch.fill(255);
+    sketch.rect(x, y, 50, 50);
+  };
+};
 
 var myp5 = new p5(s);
-console.log(`feature.touch = ${__WEBPACK_IMPORTED_MODULE_2_feature_js___default.a.touch}`)
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(4)))
+console.log('feature.touch = ' + _feature2.default.touch);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(4)))
 
 /***/ }),
 /* 4 */
@@ -86130,6 +86139,7 @@ Popper.Defaults = Defaults;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(process, global) {/*!
  * Vue.js v2.4.4
  * (c) 2014-2017 Evan You
@@ -93674,7 +93684,7 @@ setTimeout(function () {
 
 /*  */
 
-/* harmony default export */ __webpack_exports__["a"] = (Vue$3);
+/* harmony default export */ __webpack_exports__["default"] = (Vue$3);
 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2), __webpack_require__(0)))
 
@@ -100720,6 +100730,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_app_vue__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_app_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_app_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_92b6461c_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_vue_loader_lib_selector_type_template_index_0_app_vue__ = __webpack_require__(19);
@@ -100762,7 +100773,7 @@ if (false) {(function () {
   })
 })()}
 
-/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
 
 
 /***/ }),
