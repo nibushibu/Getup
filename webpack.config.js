@@ -143,5 +143,13 @@ module.exports = {
   /**
    * グローバル関数として定義するJSモジュールの指定
    */
-  plugins: pluginsArray
+  plugins: pluginsArray,
+
+  /**
+   * webpack-dev-serverの設定
+   */
+  devServer: {
+    contentBase: __dirname + '/dist',
+    port: 3000,
+  }
 }
