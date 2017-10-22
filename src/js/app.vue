@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>これはテストです</h1>
+    <h1>This is Vue test.</h1>
     <p>{{test}}</p>
   </div>
 </template>
@@ -9,7 +9,7 @@
 module.exports = {
   data () {
     return {
-      test: 'Hello'
+      test: 'Hello Vue'
     }
   }
 }
