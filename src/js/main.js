@@ -8,6 +8,7 @@ import anime from 'animejs'
 import mojs from 'mo-js'
 import ScrollMagic from 'scrollmagic'
 import slick from 'slick-carousel'
+import p5 from 'p5'
 
 import App from './app.vue'
 import './app-tag.tag'
