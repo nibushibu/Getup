@@ -105,6 +105,24 @@ module.exports = {
         }
       },
 
+      /**
+       * Riot.js
+       * https://github.com/riot/tag-loader
+       */
+      {
+        test: /\.tag$/,
+        exclude: /node_modules/,
+        loader: 'riot-tag-loader',
+        query: {
+          hot: false, // set it to true if you are using hmr
+          // add here all the other riot-compiler options riotjs.com/guide/compiler/
+          loaders: {
+            js: 'babel-loader',
+            scss: 'sass-loader'
+          },
+        }
+      },
+
       // JavaScript(ES6)をBabelでES5にトランスパイル
       {
         test: /\.js$/,
