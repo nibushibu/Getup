@@ -27,6 +27,7 @@ module.exports = ctx => {
         // require('perfectionist')({
         //   indentSize: 2,
         // }),
+        require('autoprefixer'),
         require('cssnano')({
           preset: ['default', {
             MergeRules: false,
