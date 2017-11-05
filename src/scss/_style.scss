@@ -1,3 +1,24 @@
 /**
  * このファイルにプロジェクト用の任意のスタイルを記載
  */
+
+.my-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -16px 0 0 -16px;
+}
+
+.my-col {
+  flex: 0 0 auto;
+  width: calc(25% - 16px);
+  margin: 16px 0 0 16px;
+}
+
+.sample-row {
+  background-color: #cbc9dd;
+}
+
+.sample-col {
+  background-color: #b8dbfc;
+  height: 100px;
+}
