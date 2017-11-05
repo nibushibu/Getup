@@ -8,6 +8,9 @@
 // 角丸を無効化
 $enable-rounded: false;
 
+// グリットの隙間を変更
+$grid-gutter-width: 16px;
+
 /**
  * Windowsで游ゴシックが細くなる問題を@font-faceで解決
  * 
