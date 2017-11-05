@@ -82,15 +82,23 @@ console.log(`feature.touch = ${feature.touch}`)
 anime({
   targets: '.js-anime',
   translateX: 250,
-  loop: true
+  loop: true,
+  direction: 'alternate',
+  duration: 500,
+  delay: 500
 })
 
 // mo.js動作チェック
 const mojsAnime = new mojs.Html({
   el: '.js-anime-2',
   y: {0: 250},
-  repeat: true,
+  angleZ: {0: 360},
   duration: 500,
-  easing: 'elastic.out',
-  onComplete() { this.replay() }
+  easing: 'expo.out',
+  repeat: true,
+  isYoyo: true,
+  delay: 500,
+  onComplete() {
+    this.replay()
+  }
 }).play()
