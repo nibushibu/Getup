@@ -40,6 +40,6 @@ gulp.task('iconfont', () => {
     }))
     .pipe(gulp.dest('src/scss'))
   })
-  .pipe(gulp.dest(appPath + 'fonts'))
+  .pipe(gulp.dest(config.appPath + 'fonts'))
   .pipe(gulp.dest('styleguide/fonts'))
 })
