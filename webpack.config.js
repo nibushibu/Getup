@@ -54,7 +54,6 @@ const postcssFocus = require('postcss-focus')
 const cssMqpacker = require('css-mqpacker')
 const postcssFlexibility = require('postcss-flexibility')
 const autoprefixer = require('autoprefixer')
-const cssnano = require('cssnano')
 
 /**
  * Riot用CSSカスタムパーサー（Sass + Autoprefixer）
@@ -67,7 +66,12 @@ riot.parsers.css.myCssParser = function (tagName, css) {
   }
 
   css = sass.renderSync(sassOptions).css
-  css = postcss([autoprefixer]).process(css).css
+  css = postcss([
+    postcssFocus,
+    cssMqpacker,
+    autoprefixer,
+    postcssFlexibility
+  ]).process(css).css
   return css
 }
 
