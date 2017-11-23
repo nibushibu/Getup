@@ -4,6 +4,16 @@
     <p>{ test }</p>
   </div>
 
+  <style type="myCssParser">
+    :scope {
+
+      h1 {
+        color: red;
+        display: flex;
+      }
+    }
+  </style>
+
   <script type="es6">
     const tag = this
 
