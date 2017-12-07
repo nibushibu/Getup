@@ -1,4 +1,3 @@
-import 'bootstrap'
 import riot from 'riot'
 import Vue from 'vue'
 import feature from 'feature.js'
