@@ -3,16 +3,6 @@ const config = require('../config');
 const $ = require('gulp-load-plugins')();
 const runSequence = require('run-sequence');
 
-// Copy CSS
-gulp.task('copyScss', () => {
-  return gulp.src(config.copy.scss)
-  .pipe($.rename({
-    prefix: '_',
-    extname: '.scss'
-  }))
-  .pipe(gulp.dest('src/scss'));
-});
-
 // Copy fonts
 gulp.task('copyFont', () => {
   return gulp.src([
@@ -33,7 +23,6 @@ gulp.task('copyImg', () =>{
 gulp.task('copy', callback => {
   return runSequence(
     [
-      'copyScss',
       'copyFont',
       'copyImg',
     ],
