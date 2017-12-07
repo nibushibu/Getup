@@ -1,67 +1,76 @@
 /**
- * Bootstrapの環境変数を上書き
+ * Settings
  */
-@import 'override_bootstrap';
+@import 'settings.app';
 
 /**
- * Bootstrap v4.0.0-beta (https://getbootstrap.com)
- * Copyright 2011-2017 The Bootstrap Authors
- * Copyright 2011-2017 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Generics
  */
-@import 'functions';
-@import 'variables';
-@import 'mixins';
-@import 'root';
-@import 'print';
-@import 'reboot';
-@import 'type';
-@import 'images';
-@import 'code';
-@import 'grid';
-@import 'tables';
-@import 'forms';
-@import 'buttons';
-@import 'transitions';
-@import 'dropdown';
-@import 'button-group';
-@import 'input-group';
-@import 'custom-forms';
-@import 'nav';
-@import 'navbar';
-@import 'card';
-@import 'breadcrumb';
-@import 'pagination';
-@import 'badge';
-@import 'jumbotron';
-@import 'alert';
-@import 'progress';
-@import 'media';
-@import 'list-group';
-@import 'close';
-@import 'modal';
-@import 'tooltip';
-@import 'popover';
-@import 'carousel';
+// @import '../../node_modules/blaze/scss/generics.global';
+@import '../../node_modules/sanitize.css/sanitize';
 
 /**
- * Slick.js用のスタイル読み込み
+ * Base
  */
-@import 'slick';
-@import 'slick-theme';
+@import 'base';
 
 /**
- * 自前のアイコンフォント用スタイルの読み込み
+ * Objects
  */
-@import 'iconfont';
+@import '../../node_modules/blaze/scss/objects.containers';
+@import '../../node_modules/blaze/scss/objects.grid';
+@import '../../node_modules/blaze/scss/objects.grid.responsive';
+@import '../../node_modules/blaze/scss/objects.images';
+@import '../../node_modules/blaze/scss/objects.panels';
+@import '../../node_modules/blaze/scss/objects.media';
+@import '../../node_modules/blaze/scss/objects.forms';
+@import '../../node_modules/blaze/scss/objects.modals';
+@import '../../node_modules/blaze/scss/objects.drawers';
+@import 'objects.iconfont';
+@import 'objects.app';
 
 /**
- * サイト用のスタイルの読み込み
+ * Components
  */
-@import 'style';
+@import '../../node_modules/blaze/scss/components.typography';
+@import '../../node_modules/blaze/scss/components.badges';
+@import '../../node_modules/blaze/scss/components.headings';
+@import '../../node_modules/blaze/scss/components.addresses';
+@import '../../node_modules/blaze/scss/components.tables';
+@import '../../node_modules/blaze/scss/components.cards';
+@import '../../node_modules/blaze/scss/components.buttons';
+@import '../../node_modules/blaze/scss/components.links';
+@import '../../node_modules/blaze/scss/components.lists';
+@import '../../node_modules/blaze/scss/components.breadcrumbs';
+@import '../../node_modules/blaze/scss/components.trees';
+@import '../../node_modules/blaze/scss/components.tabs';
+@import '../../node_modules/blaze/scss/components.inputs';
+@import '../../node_modules/blaze/scss/components.input-groups';
+@import '../../node_modules/blaze/scss/components.hints';
+@import '../../node_modules/blaze/scss/components.toggles';
+@import '../../node_modules/blaze/scss/components.tags';
+@import '../../node_modules/blaze/scss/components.ranges';
+@import '../../node_modules/blaze/scss/components.pagination';
+@import '../../node_modules/blaze/scss/components.overlays';
+@import '../../node_modules/blaze/scss/components.bubbles';
+@import '../../node_modules/blaze/scss/components.tooltips';
+@import '../../node_modules/blaze/scss/components.alerts';
+@import '../../node_modules/blaze/scss/components.calendars';
+@import '../../node_modules/blaze/scss/components.navs';
+@import '../../node_modules/blaze/scss/components.progress';
+@import '../../node_modules/blaze/scss/components.avatars';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/slick-carousel/slick/slick-theme.scss';
+@import 'components.app';
 
 /**
- * Bootstrapのutilitiesはスタイルの一時的な上書きに使われる場合があるので最後に読み込む。
+ * Trumps
+ *
+ * Utility styles
  */
-@import 'utilities';
+@import '../../node_modules/blaze/scss/utilities.alignment';
+@import '../../node_modules/blaze/scss/utilities.boxing';
+@import '../../node_modules/blaze/scss/utilities.elevation';
+@import '../../node_modules/blaze/scss/utilities.sizes';
+@import '../../node_modules/blaze/scss/utilities.visibility';
 

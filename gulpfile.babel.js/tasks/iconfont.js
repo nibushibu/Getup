@@ -34,7 +34,7 @@ gulp.task('iconfont', () => {
     gulp.src('src/templates/iconfont.scss')
     .pipe($.consolidate('lodash', option))
     .pipe($.rename({
-      prefix: '_',
+      prefix: '_theme.',
       basename: fontName,
       extname: '.scss'
     }))

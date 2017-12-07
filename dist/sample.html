@@ -11,57 +11,61 @@
   </head>
   <body> 
     <section>
-      <h1>Bootstrapに頼らないグリッドレイアウトパターン</h1>
-      <div class="my-row sample-row">
-        <div class="my-col sample-col"></div>
-        <div class="my-col sample-col"></div>
-        <div class="my-col sample-col"></div>
-        <div class="my-col sample-col"></div>
-        <div class="my-col sample-col"></div>
-        <div class="my-col sample-col"></div>
+      <h1 class="c-heading u-xlarge">グリッドレイアウト（オリジナル）</h1>
+      <div class="o-row">
+        <div class="o-col u-sample-col"></div>
+        <div class="o-col u-sample-col"></div>
+        <div class="o-col u-sample-col"></div>
+        <div class="o-col u-sample-col"></div>
+        <div class="o-col u-sample-col"></div>
+        <div class="o-col u-sample-col"></div>
       </div>
     </section>
     <section>
-      <h1>Bootstrapのグリッドパターン</h1>
-      <div class="container-fluid">
-        <div class="row sample-row">
-          <div class="col-sm-3">
-            <div class="sample-col">
-              <p>テキストテキストテキストテキストテキストテキスト</p>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="sample-col">
-              <p>テキストテキストテキストテキストテキストテキスト</p>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="sample-col">
-              <p>テキストテキストテキストテキストテキストテキスト</p>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="sample-col">
-              <p>テキストテキストテキストテキストテキストテキスト</p>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="sample-col">
-              <p>テキストテキストテキストテキストテキストテキスト</p>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="sample-col">
-              <p>テキストテキストテキストテキストテキストテキスト</p>
-            </div>
-          </div>
+      <h1 class="c-heading u-xlarge">Blaze.css グリッド</h1>
+      <div class="o-grid o-grid--wrap">
+        <div class="o-grid__cell o-grid__cell--width-33">
+          <div class="u-sample-col"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-33">
+          <div class="u-sample-col"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-33">
+          <div class="u-sample-col"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-33">
+          <div class="u-sample-col"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-33">
+          <div class="u-sample-col"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-33">
+          <div class="u-sample-col"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--width-33">
+          <div class="u-sample-col"></div>
         </div>
       </div>
     </section>
+    <button class="c-button">Button</button>
+    <p class="c-paragraph"><a href="" class="c-link">リンク</a></p>
+    <p class="c-paragraph">通常テキスト</p>
+    <ul class="c-list">
+      <li class="li c-list__item">リストアイテム</li>
+      <li class="li c-list__item">リストアイテム</li>
+      <li class="li c-list__item">リストアイテム
+        <ul class="c-list">
+          <li class="c-list_item">リストアイテム</li>
+          <li class="c-list_item">リストアイテム</li>
+          <li class="c-list_item">リストアイテム</li>
+        </ul>
+      </li>
+      <li class="li c-list__item">リストアイテム</li>
+    </ul>
     <app id="app"></app>
     <app-tag></app-tag>
-    <button class="btn js-anime">ボタン</button>
-    <button class="btn js-anime-2">ボタン</button>
+    <button class="c-buttons js-anime">ボタン</button>
+    <button class="c-buttons js-anime-2">ボタン</button>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -22,16 +22,15 @@
     "min": "npm-run-all --parallel min-image",
     "copy-font": "cpx \"node_modules/slick-carousel/slick/fonts/**\" ${npm_package_config_distDir}/css/fonts",
     "copy-img": "cpx \"node_modules/slick-carousel/slick/ajax-loader.gif\" ${npm_package_config_distDir}/css",
-    "copy-bootstrap": "cpx \"node_modules/bootstrap/scss/**/_*\" src/scss",
     "copy-gulp": "gulp copy",
-    "copy": "npm-run-all copy-*",
+    "copy": "npm-run-all --parallel copy-*",
     "webpack": "webpack --display-error-details",
     "pro": "NODE_ENV=production npm-run-all webpack",
     "server": "webpack-dev-server --inline"
   },
   "dependencies": {
     "animejs": "^2.0.2",
-    "bootstrap": "^4.0.0-beta.2",
+    "blaze": "^3.6.3",
     "feature.js": "^1.0.0",
     "flexibility": "^2.0.1",
     "jquery": "^3.2.1",
