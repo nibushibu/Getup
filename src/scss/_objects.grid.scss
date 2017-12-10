@@ -1,0 +1,14 @@
+.o-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    flex: 0 1 auto;
+  }
+
+  @include o-grid-gap;
+}
+
+.o-grid--no-gap {
+  @include o-grid-gap(0);
+}
