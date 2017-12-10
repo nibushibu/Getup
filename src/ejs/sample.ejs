@@ -12,60 +12,109 @@
   <body> 
     <section>
       <h1 class="c-heading u-xlarge">グリッドレイアウト（オリジナル）</h1>
-      <div class="o-row">
-        <div class="o-col u-sample-col"></div>
-        <div class="o-col u-sample-col"></div>
-        <div class="o-col u-sample-col"></div>
-        <div class="o-col u-sample-col"></div>
-        <div class="o-col u-sample-col"></div>
-        <div class="o-col u-sample-col"></div>
+      <div class="o-grid u-sample-row">
+        <div class="o-width-1">
+          <section class="u-sample-col o-contents">
+            <h1>通常テキスト</h1>
+            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          </sect>
+        </div>
+        <div class="o-width-1">
+          <section class="u-sample-col o-contents">
+            <h1>リンク</h1>
+            <p><a href="">リンク</a></p>
+          </section>
+        </div>
+        <div class="o-width-1">
+          <section class="u-sample-col o-contents">
+            <h1>リスト</h1>
+            <ul>
+              <li>リストアイテム</li>
+              <li>リストアイテム</li>
+              <li>リストアイテム
+                <ul>
+                  <li>リストアイテム</li>
+                  <li>リストアイテム</li>
+                  <li>リストアイテム</li>
+                </ul>
+              </li>
+              <li>リストアイテム</li>
+            </ul>
+          </section>
+        </div>
+        <div class="o-width-1">
+          <section class="u-sample-col o-contents">
+            <h1>数字リスト</h1>
+            <ol>
+              <li>リストアイテム</li>
+              <li>リストアイテム</li>
+              <li>リストアイテム
+                <ol>
+                  <li>リストアイテム</li>
+                  <li>リストアイテム</li>
+                  <li>リストアイテム</li>
+                </ol>
+              </li>
+              <li>リストアイテム</li>
+            </ol>
+          </section>
+        </div>
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
+        </div>
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
+        </div>
       </div>
-    </section>
-    <section>
-      <h1 class="c-heading u-xlarge">Blaze.css グリッド</h1>
-      <div class="o-grid o-grid--wrap">
-        <div class="o-grid__cell o-grid__cell--width-33">
-          <div class="u-sample-col"></div>
+      <div class="o-grid o-grid--no-gap u-sample-row">
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
         </div>
-        <div class="o-grid__cell o-grid__cell--width-33">
-          <div class="u-sample-col"></div>
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
         </div>
-        <div class="o-grid__cell o-grid__cell--width-33">
-          <div class="u-sample-col"></div>
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
         </div>
-        <div class="o-grid__cell o-grid__cell--width-33">
-          <div class="u-sample-col"></div>
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
         </div>
-        <div class="o-grid__cell o-grid__cell--width-33">
-          <div class="u-sample-col"></div>
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
         </div>
-        <div class="o-grid__cell o-grid__cell--width-33">
-          <div class="u-sample-col"></div>
-        </div>
-        <div class="o-grid__cell o-grid__cell--width-33">
-          <div class="u-sample-col"></div>
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
         </div>
       </div>
-    </section>
+      <div class="o-grid o-grid--custom u-sample-row">
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
+        </div>
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
+        </div>
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
+        </div>
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
+        </div>
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
+        </div>
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
+        </div>
+        <div class="o-width-1">
+          <div class="u-sample-col o-contents"></div>
+        </div>
+      </div>
+    </s>
     <button class="c-button">Button</button>
-    <p class="c-paragraph"><a href="" class="c-link">リンク</a></p>
-    <p class="c-paragraph">通常テキスト</p>
-    <ul class="c-list">
-      <li class="li c-list__item">リストアイテム</li>
-      <li class="li c-list__item">リストアイテム</li>
-      <li class="li c-list__item">リストアイテム
-        <ul class="c-list">
-          <li class="c-list_item">リストアイテム</li>
-          <li class="c-list_item">リストアイテム</li>
-          <li class="c-list_item">リストアイテム</li>
-        </ul>
-      </li>
-      <li class="li c-list__item">リストアイテム</li>
-    </ul>
     <app id="app"></app>
     <app-tag></app-tag>
-    <button class="c-buttons js-anime">ボタン</button>
-    <button class="c-buttons js-anime-2">ボタン</button>
+    <button class="c-button js-anime">ボタン</button>
+    <button class="c-button js-anime-2">ボタン</button>
     <script src="js/main.js"></script>
   </body>
 </html>
