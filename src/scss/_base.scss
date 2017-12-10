@@ -13,19 +13,26 @@
 }
 
 html {
-  font-family: 'Noto Sans JP',
-    'Noto Sans CJK JP',
-    'Noto Sans CJK Japanese',
-    MyYuGothicM, /* Windows 游ゴシック */
-    YuGothic, /* OS X 游ゴシック */
-    -apple-system, /* OS X, iOS San Francisco */
-    BlinkMacSystemFont, /* OS X, iOS Chrome San Francisco */
-    'Hiragino Kaku Gothic ProN', /* OS X, iOS ヒラギノ */
-    Meiryo, /* Windows メイリオ */
-    sans-serif;
+  font-family: $base-font-family;
   font-size: 62.5%;
 }
 
 body {
   font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin-bottom: 0;
+}
+
+a {
+  color: $link-color;
 }

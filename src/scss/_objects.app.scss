@@ -1,11 +1,11 @@
-.o-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -16px 0 0 -16px;
+.o-grid--custom {
+  @include o-grid-gap(2em, 1em);
 }
 
-.o-col {
-  flex: 0 0 auto;
-  width: calc(25% - 16px);
-  margin: 16px 0 0 16px;
+.o-width-1 {
+  width: 50%;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }

@@ -1,12 +1,14 @@
 /**
- * Settings
+ * Settings & Tools
+ *
+ * Variables and Mixins
  */
+@import 'settings';
 @import 'settings.app';
 
 /**
- * Generics
+ * Generic
  */
-// @import '../../node_modules/blaze/scss/generics.global';
 @import '../../node_modules/sanitize.css/sanitize';
 
 /**
@@ -17,15 +19,8 @@
 /**
  * Objects
  */
-@import '../../node_modules/blaze/scss/objects.containers';
-@import '../../node_modules/blaze/scss/objects.grid';
-@import '../../node_modules/blaze/scss/objects.grid.responsive';
-@import '../../node_modules/blaze/scss/objects.images';
-@import '../../node_modules/blaze/scss/objects.panels';
-@import '../../node_modules/blaze/scss/objects.media';
-@import '../../node_modules/blaze/scss/objects.forms';
-@import '../../node_modules/blaze/scss/objects.modals';
-@import '../../node_modules/blaze/scss/objects.drawers';
+@import 'objects.grid';
+@import 'objects.contents';
 @import 'objects.iconfont';
 @import 'objects.app';
 
@@ -73,4 +68,7 @@
 @import '../../node_modules/blaze/scss/utilities.elevation';
 @import '../../node_modules/blaze/scss/utilities.sizes';
 @import '../../node_modules/blaze/scss/utilities.visibility';
+@import 'utilities';
+@import 'utilities.app';
+
 

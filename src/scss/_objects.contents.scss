@@ -1,0 +1,11 @@
+/**
+ * Container of Contents
+ *
+ * Cancel top margin of first child
+ */
+.o-contents {
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+}
