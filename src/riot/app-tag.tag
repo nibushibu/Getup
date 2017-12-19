@@ -8,7 +8,7 @@
     :scope {
 
       h1 {
-        color: red;
+        color: orange;
         display: flex;
       }
     }

@@ -7,9 +7,9 @@ var webpack = require('webpack')
  * グローバル関数として定義するJSモジュールの指定
  */
 var providePlugin = new webpack.ProvidePlugin({
+  riot: 'riot',
   $: 'jquery',
   jQuery: 'jquery',
-  Popper: 'popper.js',
   p5: 'p5'
 })
 
@@ -25,10 +25,15 @@ var developPluginsArray = [
  */
 var productionPluginsArray = [
   providePlugin,
-  // http://vuejs.github.io/vue-loader/en/workflow/production.html
+
+  /**
+   * 参考
+   * http://vuejs.github.io/vue-loader/en/workflow/production.html
+   */
   new webpack.DefinePlugin({
     'process.env': 'production'
   }),
+
   new webpack.optimize.UglifyJsPlugin({
     compress: {
       warnings: false
@@ -44,37 +49,6 @@ var pluginsArray = process.env.NODE_ENV === 'production'
   ? productionPluginsArray
   : developPluginsArray
 
-/**
- * Riotのカスタムパーサーの定義に必要なモジュールの読み込み
- */
-const riot = require('riot')
-const sass = require('node-sass')
-const postcss = require('postcss')
-const postcssFocus = require('postcss-focus')
-const cssMqpacker = require('css-mqpacker')
-const postcssFlexibility = require('postcss-flexibility')
-const autoprefixer = require('autoprefixer')
-
-/**
- * Riot用CSSカスタムパーサー（Sass + Autoprefixer）
- */
-riot.parsers.css.myCssParser = function (tagName, css) {
-
-  const sassOptions = {
-    data: css,
-    indentType: 'space'
-  }
-
-  css = sass.renderSync(sassOptions).css
-  css = postcss([
-    postcssFocus,
-    cssMqpacker,
-    autoprefixer,
-    postcssFlexibility
-  ]).process(css).css
-  return css
-}
-
 module.exports = {
 
   // エントリーファイル
@@ -84,7 +58,7 @@ module.exports = {
   watchOptions: {
     poll: true
   },
-  watch: true,
+  watch: process.env.NODE_ENV === 'production' ? false : true,
   cache: true,
 
   // 処理したファイルの出力先
@@ -140,24 +114,6 @@ module.exports = {
             img: 'src',
             image: 'xlink:href'
           }
-        }
-      },
-
-      /**
-       * Riot.js
-       * https://github.com/riot/tag-loader
-       */
-      {
-        test: /\.tag$/,
-        exclude: /node_modules/,
-        loader: 'riot-tag-loader',
-        query: {
-          hot: false, // set it to true if you are using hmr
-          // add here all the other riot-compiler options riotjs.com/guide/compiler/
-          loaders: {
-            js: 'babel-loader',
-            scss: 'sass-loader'
-          },
         }
       },
 

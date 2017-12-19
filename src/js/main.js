@@ -7,7 +7,7 @@ import ScrollMagic from 'scrollmagic'
 import slick from 'slick-carousel'
 // import p5 from 'p5'
 
-import './app-tag.tag'
+import './tags'
 riot.mount('*')
 
 ;(function($){
