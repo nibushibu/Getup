@@ -1,22 +1,13 @@
 import riot from 'riot'
-import Vue from 'vue'
 import feature from 'feature.js'
 import 'whatwg-fetch'
 import Promise from 'promise-polyfill'
-import anime from 'animejs'
 import mojs from 'mo-js'
 import ScrollMagic from 'scrollmagic'
 import slick from 'slick-carousel'
-import p5 from 'p5'
+// import p5 from 'p5'
 
-import App from './app.vue'
 import './app-tag.tag'
-
-new Vue({
-  el: '#app',
-  render: h => h(App)
-})
-
 riot.mount('*')
 
 ;(function($){
@@ -74,25 +65,14 @@ var s = function (sketch) {
   }
 }
 
-var myp5 = new p5(s);
 console.log(`feature.touch = ${feature.touch}`)
-
-// anime.js動作チェック
-anime({
-  targets: '.js-anime',
-  translateX: 250,
-  loop: true,
-  direction: 'alternate',
-  duration: 500,
-  delay: 500
-})
 
 // mo.js動作チェック
 const mojsAnime = new mojs.Html({
-  el: '.js-anime-2',
-  y: {0: 250},
+  el: '.js-anime',
+  x: {0: 250},
   angleZ: {0: 360},
-  duration: 500,
+  duration: 800,
   easing: 'expo.out',
   repeat: true,
   isYoyo: true,
