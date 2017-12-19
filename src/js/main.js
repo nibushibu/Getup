@@ -1,4 +1,5 @@
 import riot from 'riot'
+import $ from 'jquery'
 import feature from 'feature.js'
 import 'whatwg-fetch'
 import Promise from 'promise-polyfill'
