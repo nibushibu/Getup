@@ -3,7 +3,8 @@ import feature from 'feature.js'
 import 'whatwg-fetch'
 import Promise from 'promise-polyfill'
 import mojs from 'mo-js'
-import ScrollMagic from 'scrollmagic'
+import jump from 'jump.js'
+// import ScrollMagic from 'scrollmagic'
 import slick from 'slick-carousel'
 // import p5 from 'p5'
 
@@ -14,37 +15,14 @@ riot.mount('*')
 
 $(() => {
 
-  // アンカースクロールアニメーション
-  const anchorScroll = () => {
-
-    function scrollTo(selector, offset, cb) {
-      console.log(selector)
-      var body = [document.body, document.documentElement]
-      var offset = offset || 0
-      if(feature.touch){
-        offset += 60
-      }
-      var el = document.querySelector(selector)
-      var scrollAnim = anime({
-        targets: body,
-        scrollTop: el.offsetTop - offset,
-        duration: 500,
-        easing: 'easeInOutQuart',
-        complete: function() { if (cb) cb(); }
-      })
-    }
-
     if(!feature.touch){
       $('a[href^="#"], .js-anchor-scroll').on('click', (e) => {
         e.preventDefault()
         var href = $(e.currentTarget).attr('href')
-        scrollTo(href)
+      jump(href)
         return false
       })
     }
-  }
-
-  anchorScroll()
 })
 
 })(jQuery)
