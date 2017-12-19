@@ -28,7 +28,6 @@
     "server": "webpack-dev-server --inline"
   },
   "dependencies": {
-    "animejs": "^2.0.2",
     "blaze": "^3.6.3",
     "feature.js": "^1.0.0",
     "flexibility": "^2.0.1",
@@ -42,7 +41,6 @@
     "sanitize.css": "^5.0.0",
     "scrollmagic": "^2.0.5",
     "slick-carousel": "^1.7.1",
-    "vue": "^2.5.2",
     "whatwg-fetch": "^2.0.3"
   },
   "directories": {
