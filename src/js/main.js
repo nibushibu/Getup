@@ -7,7 +7,7 @@ import mojs from 'mo-js'
 import jump from 'jump.js'
 // import ScrollMagic from 'scrollmagic'
 import slick from 'slick-carousel'
-// import p5 from 'p5'
+import p5 from 'p5'
 
 import './tags'
 riot.mount('*')
@@ -16,14 +16,14 @@ riot.mount('*')
 
 $(() => {
 
-    if(!feature.touch){
-      $('a[href^="#"], .js-anchor-scroll').on('click', (e) => {
-        e.preventDefault()
-        var href = $(e.currentTarget).attr('href')
+  if(!feature.touch){
+    $('a[href^="#"], .js-anchor-scroll').on('click', (e) => {
+      e.preventDefault()
+      var href = $(e.currentTarget).attr('href')
       jump(href)
-        return false
-      })
-    }
+      return false
+    })
+  }
 })
 
 })(jQuery)
@@ -43,6 +43,7 @@ var s = function (sketch) {
     sketch.rect(x, y, 50, 50)
   }
 }
+var myp5 = new p5(s)
 
 console.log(`feature.touch = ${feature.touch}`)
 
