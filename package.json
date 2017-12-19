@@ -11,7 +11,7 @@
     "css-postcss": "postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css",
     "css": "npm-run-all css-sass css-postcss",
     "html": "ejs-cli --base-dir src/ejs '*.ejs' --out ${npm_package_config_distDir}/",
-    "watch-js": "onchange src/js -- yarn run webpack",
+    "watch-js": "webpack --display-error-details",
     "watch-scss": "onchange src/scss -- yarn run css",
     "watch-html": "onchange src/ejs -- yarn run html",
     "watch-sketch": "onchange src/symbol-font-14px.sketch -- gulp sketch",
@@ -24,7 +24,6 @@
     "copy-img": "cpx \"node_modules/slick-carousel/slick/ajax-loader.gif\" ${npm_package_config_distDir}/css",
     "copy-gulp": "gulp copy",
     "copy": "npm-run-all --parallel copy-*",
-    "webpack": "webpack --display-error-details",
     "pro": "NODE_ENV=production npm-run-all webpack",
     "server": "webpack-dev-server --inline"
   },

@@ -80,7 +80,10 @@ module.exports = {
   // エントリーファイル
   entry: './src/js/main.js',
 
-  // キャッシュを有効化
+  // 監視とキャッシュを有効化
+  watchOptions: {
+    poll: true
+  },
   watch: true,
   cache: true,
 
