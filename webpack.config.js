@@ -80,6 +80,10 @@ module.exports = {
   // エントリーファイル
   entry: './src/js/main.js',
 
+  // キャッシュを有効化
+  watch: true,
+  cache: true,
+
   // 処理したファイルの出力先
   output: {
     path: __dirname + '/dist/js',
@@ -158,6 +162,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        exclude: /node_modules/,
         include: [
           __dirname + '/src/js',
         ]
