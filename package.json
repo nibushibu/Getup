@@ -30,7 +30,7 @@
     "server": "webpack-dev-server --inline"
   },
   "dependencies": {
-    "blaze": "^3.6.3",
+    "blaze": "^4.0.0-1",
     "feature.js": "^1.0.0",
     "flexibility": "^2.0.1",
     "jquery": "^3.2.1",
@@ -59,7 +59,7 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^7.1.6",
+    "autoprefixer": "^8.0.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
     "babel-loader": "^7.1.2",
