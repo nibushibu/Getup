@@ -13535,9 +13535,7 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _feature = __webpack_require__(4);
-
-var _feature2 = _interopRequireDefault(_feature);
+__webpack_require__(4);
 
 __webpack_require__(5);
 
@@ -13571,7 +13569,7 @@ _riot2.default.mount('*');
 
   $(function () {
 
-    if (!_feature2.default.touch) {
+    if (!feature.touch) {
       $('a[href^="#"], .js-anchor-scroll').on('click', function (e) {
         e.preventDefault();
         var href = $(e.currentTarget).attr('href');
@@ -13599,7 +13597,7 @@ var s = function s(sketch) {
 };
 var myp5 = new _p2.default(s);
 
-console.log('feature.touch = ' + _feature2.default.touch);
+console.log('feature.touch = ' + feature.touch);
 
 // mo.js動作チェック
 var mojsAnime = new _moJs2.default.Html({
