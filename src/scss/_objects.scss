@@ -13,6 +13,14 @@
   @include o-grid-gap;
 }
 
+.o-grid--fill {
+  flex-wrap: nowrap;
+
+  > * {
+    flex: 1 1 auto;
+  }
+}
+
 .o-grid--no-gap {
   @include o-grid-gap(0);
 }
@@ -25,7 +33,7 @@
 
 .o-box {
 
-  &>*:first-child {
+  & > *:first-child {
     margin-top: 0;
   }
 }
