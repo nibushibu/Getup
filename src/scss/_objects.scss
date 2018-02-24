@@ -32,8 +32,25 @@
  */
 
 .o-box {
+  @include o-box;
+}
+
+.o-media {
+  margin-top: 1em;
+
+  & > * {
+    @include o-box;
+  }
 
   & > *:first-child {
-    margin-top: 0;
+    margin-right: 1em;
   }
+}
+
+.o-media__body {
+  margin-left: 0;
+}
+
+.o-media__image {
+  width: auto;
 }
