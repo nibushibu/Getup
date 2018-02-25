@@ -29,7 +29,7 @@
     "server": "webpack-dev-server --inline"
   },
   "dependencies": {
-    "blaze": "^4.0.0-1",
+    "blaze": "^4.0.0-2",
     "feature.js": "^1.0.0",
     "flexibility": "^2.0.1",
     "gulp-ejs": "^3.1.2",
@@ -45,6 +45,7 @@
     "sanitize.css": "^5.0.0",
     "scrollmagic": "^2.0.5",
     "slick-carousel": "^1.7.1",
+    "webpack-cli": "^2.0.9",
     "whatwg-fetch": "^2.0.3"
   },
   "directories": {
@@ -90,8 +91,8 @@
     "require-dir": "^1.0.0",
     "run-sequence": "^2.1.0",
     "sass-loader": "^6.0.6",
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.3",
+    "webpack": "^4.0.0",
+    "webpack-dev-server": "^3.0.0",
     "webpack-merge": "^4.1.0"
   }
 }
