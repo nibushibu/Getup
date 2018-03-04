@@ -43,10 +43,6 @@
 .o-media {
   display: flex;
   @include o-grid-gap;
-
-  & > * {
-    @include o-box;
-  }
 }
 
 .o-media__body {
