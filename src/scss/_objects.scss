@@ -35,22 +35,24 @@
   @include o-box;
 }
 
+
+/**
+ * Media block
+ */
+
 .o-media {
-  margin-top: 1em;
+  display: flex;
+  @include o-grid-gap;
 
   & > * {
     @include o-box;
   }
-
-  & > *:first-child {
-    margin-right: 1em;
-  }
 }
 
 .o-media__body {
-  margin-left: 0;
+  flex: 1 1 auto;
 }
 
 .o-media__image {
-  width: auto;
+  flex: 0 0 auto;
 }
