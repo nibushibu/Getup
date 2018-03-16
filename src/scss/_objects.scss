@@ -43,7 +43,6 @@
   @include o-box;
 }
 
-
 /**
  * Media block
  */
@@ -51,6 +50,10 @@
 .o-media {
   display: flex;
   @include o-grid-gap;
+}
+
+.o-media--middle {
+  align-items: center;
 }
 
 .o-media__body {
