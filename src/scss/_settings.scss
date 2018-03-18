@@ -62,3 +62,10 @@ $grid-gap-size: 1em;
     margin-top: 0;
   }
 }
+
+@mixin o-box-all {
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+}

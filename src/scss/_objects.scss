@@ -43,6 +43,10 @@
   @include o-box;
 }
 
+.o-box-all {
+  @include o-box-all;
+}
+
 /**
  * Media block
  */
@@ -62,4 +66,6 @@
 
 .o-media__image {
   flex: 0 0 auto;
+  max-width: 50%;
+  text-align: center;
 }
