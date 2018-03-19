@@ -1,6 +1,6 @@
 import riot from 'riot'
 import $ from 'jquery'
-import feature from 'feature.js'
+import 'feature.js'
 import 'whatwg-fetch'
 import Promise from 'promise-polyfill'
 import mojs from 'mo-js'

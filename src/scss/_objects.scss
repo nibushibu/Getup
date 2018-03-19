@@ -13,6 +13,22 @@
   @include o-grid-gap;
 }
 
+.o-grid--fill {
+  flex-wrap: nowrap;
+
+  > * {
+    flex: 1 1 auto;
+  }
+}
+
+.o-grid--fill-equal {
+  flex-wrap: nowrap;
+
+  > * {
+    flex: 1 1 0;
+  }
+}
+
 .o-grid--no-gap {
   @include o-grid-gap(0);
 }
@@ -24,8 +40,32 @@
  */
 
 .o-box {
+  @include o-box;
+}
 
-  &>*:first-child {
-    margin-top: 0;
-  }
+.o-box-all {
+  @include o-box-all;
+}
+
+/**
+ * Media block
+ */
+
+.o-media {
+  display: flex;
+  @include o-grid-gap;
+}
+
+.o-media--middle {
+  align-items: center;
+}
+
+.o-media__body {
+  flex: 1 1 auto;
+}
+
+.o-media__image {
+  flex: 0 0 auto;
+  max-width: 50%;
+  text-align: center;
 }

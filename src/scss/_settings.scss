@@ -50,3 +50,22 @@ $grid-gap-size: 1em;
     padding: $gap-y 0 0 $gap-x;
   }
 }
+
+/**
+ * BOX: Container box
+ *
+ * Cancel top margin of first child
+ */
+@mixin o-box {
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+}
+
+@mixin o-box-all {
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+}

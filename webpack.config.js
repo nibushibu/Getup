@@ -32,14 +32,7 @@ var productionPluginsArray = [
    */
   new webpack.DefinePlugin({
     'process.env': 'production'
-  }),
-
-  new webpack.optimize.UglifyJsPlugin({
-    compress: {
-      warnings: false
-    },
-    sourceMap: true
-  }),
+  })
 ]
 
 /**
@@ -50,6 +43,8 @@ var pluginsArray = process.env.NODE_ENV === 'production'
   : developPluginsArray
 
 module.exports = {
+
+  mode: 'production',
 
   // エントリーファイル
   entry: './src/js/main.js',
