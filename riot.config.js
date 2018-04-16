@@ -30,13 +30,13 @@ riot.parsers.css.myCssParser = function (tagName, css) {
   return css
 }
 
-// /**
-//  * Riot用JSカスタムパーサー（Bubble）
-//  */
-// riot.parsers.js.buble = function(js, options) {
-//   js = buble.transform(js)
-//   return js
-// }
+/**
+ * Riot用JSカスタムパーサー（Bubble）
+ */
+riot.parsers.js.buble = function(js, options) {
+  js = buble.transform(js)
+  return js
+}
 
 export default {
   from: 'src/riot',
