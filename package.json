@@ -10,7 +10,9 @@
     "css-sass": "node-sass --output ${npm_package_config_distDir}/css --output-style expanded --source-map true --source-map-contents true --include-path src/css --precision 6 'src/scss'",
     "css-postcss": "postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css",
     "css": "npm-run-all css-sass css-postcss",
-    "watch-js": "npm-run-all --parallel riot webpack",
+    "buble": "buble -i src/js -m -o ${npm_package_config_distDir}/js",
+    "watch-riot": "npm-run-all --parallel riot",
+    "watch-js": "onchange src/js -- yarn run buble",
     "watch-scss": "onchange src/scss -- yarn run css",
     "watch-html": "onchange src/ejs -- gulp html",
     "watch-sketch": "onchange src/symbol-font-14px.sketch -- gulp sketch",
@@ -24,9 +26,7 @@
     "copy-font": "cpx \"node_modules/slick-carousel/slick/fonts/**\" ${npm_package_config_distDir}/css/fonts",
     "copy-img": "cpx \"node_modules/slick-carousel/slick/ajax-loader.gif\" ${npm_package_config_distDir}/css",
     "copy-gulp": "gulp copy",
-    "copy": "npm-run-all --parallel copy-*",
-    "pro": "NODE_ENV=production npm-run-all webpack",
-    "server": "webpack-dev-server --inline"
+    "copy": "npm-run-all --parallel copy-*"
   },
   "dependencies": {
     "blaze": "^4.0.0-2",
@@ -45,7 +45,6 @@
     "sanitize.css": "^5.0.0",
     "scrollmagic": "^2.0.5",
     "slick-carousel": "^1.7.1",
-    "webpack-cli": "^2.0.9",
     "whatwg-fetch": "^2.0.3"
   },
   "directories": {
@@ -63,16 +62,16 @@
   "devDependencies": {
     "autoprefixer": "^8.0.0",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.1",
-    "babel-loader": "^7.1.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
     "babel-preset-es2015-riot": "^1.1.0",
+    "buble": "^0.19.3",
+    "concat": "^1.0.3",
     "cpx": "^1.5.0",
     "css-mqpacker": "^6.0.0",
     "cssnano": "^3.10.0",
     "eslint": "^4.9.0",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "gulp-consolidate": "^0.2.0",
     "gulp-iconfont": "^9.0.0",
     "gulp-load-plugins": "^1.5.0",
@@ -89,10 +88,6 @@
     "postcss-focus": "^3.0.0",
     "postcss-style-guide": "^0.14.0",
     "require-dir": "^1.0.0",
-    "run-sequence": "^2.1.0",
-    "sass-loader": "^6.0.6",
-    "webpack": "^4.0.0",
-    "webpack-dev-server": "^3.0.0",
-    "webpack-merge": "^4.1.0"
+    "run-sequence": "^2.1.0"
   }
 }

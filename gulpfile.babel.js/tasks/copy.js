@@ -19,12 +19,20 @@ gulp.task('copyImg', () =>{
   .pipe(gulp.dest(config.appPath + 'css'))
 })
 
+// Concat JS
+gulp.task('concatJs', () => {
+  return gulp.src(config.js)
+    .pipe($.concat('vendors.js'))
+    .pipe(gulp.dest(config.appPath + 'js'));
+});
+
 // Command
 gulp.task('copy', callback => {
   return runSequence(
     [
       'copyFont',
       'copyImg',
+      'concatJs'
     ],
     callback
   );

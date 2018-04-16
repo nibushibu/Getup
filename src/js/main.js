@@ -1,15 +1,3 @@
-import riot from 'riot'
-import $ from 'jquery'
-import 'feature.js'
-import 'whatwg-fetch'
-import Promise from 'promise-polyfill'
-import mojs from 'mo-js'
-import jump from 'jump.js'
-// import ScrollMagic from 'scrollmagic'
-import slick from 'slick-carousel'
-import p5 from 'p5'
-
-import './tags'
 riot.mount('*')
 
 ;(function($){
