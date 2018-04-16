@@ -8,6 +8,7 @@ const postcssFocus = require('postcss-focus')
 const cssMqpacker = require('css-mqpacker')
 const postcssFlexibility = require('postcss-flexibility')
 const autoprefixer = require('autoprefixer')
+const buble = require('buble')
 
 /**
  * Riot用CSSカスタムパーサー（Sass + Autoprefixer）
@@ -29,9 +30,17 @@ riot.parsers.css.myCssParser = function (tagName, css) {
   return css
 }
 
+// /**
+//  * Riot用JSカスタムパーサー（Bubble）
+//  */
+// riot.parsers.js.buble = function(js, options) {
+//   js = buble.transform(js)
+//   return js
+// }
+
 export default {
   from: 'src/riot',
-  to: 'src/js/tags.js',
-  type: 'es6',
+  to: 'dist/js/tags.js',
+  type: 'buble',
   style: 'myCssParser'
 }
