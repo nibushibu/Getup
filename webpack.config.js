@@ -141,5 +141,12 @@ module.exports = {
   devServer: {
     contentBase: __dirname + '/dist',
     port: 3000,
+  },
+
+  /**
+   * https://qiita.com/ota-meshi/items/8d30743fd72f8389628c
+  */
+  optimization: {
+    minimize: true,
   }
 }
