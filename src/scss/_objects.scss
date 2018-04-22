@@ -1,8 +1,8 @@
 /**
- * Grid
+ * Tile - General Layout Module
  */
 
-.o-grid {
+.o-tile {
   display: flex;
   flex-wrap: wrap;
 
@@ -10,10 +10,10 @@
     flex: 0 1 auto;
   }
 
-  @include o-grid-gap;
+  @include o-tile-gap;
 }
 
-.o-grid--fill {
+.o-tile--fill {
   flex-wrap: nowrap;
 
   > * {
@@ -21,7 +21,7 @@
   }
 }
 
-.o-grid--fill-equal {
+.o-tile--fill-equal {
   flex-wrap: nowrap;
 
   > * {
@@ -29,8 +29,8 @@
   }
 }
 
-.o-grid--no-gap {
-  @include o-grid-gap(0);
+.o-tile--no-gap {
+  @include o-tile-gap(0);
 }
 
 /**
@@ -53,7 +53,7 @@
 
 .o-media {
   display: flex;
-  @include o-grid-gap;
+  @include o-tile-gap;
 }
 
 .o-media--middle {
