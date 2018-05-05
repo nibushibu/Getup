@@ -74,6 +74,7 @@
     "gulp-load-plugins": "^1.5.0",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
     "lodash": "^4.17.4",
     "node-sass": "^4.5.3",
     "onchange": "^3.2.1",
@@ -83,6 +84,7 @@
     "postcss-flexibility": "^2.0.0",
     "postcss-focus": "^3.0.0",
     "postcss-style-guide": "^0.14.0",
+    "pump": "^3.0.0",
     "require-dir": "^1.0.0",
     "run-sequence": "^2.1.0",
     "uglify-js": "^3.3.23"
