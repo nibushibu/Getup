@@ -17,7 +17,6 @@
     "watch-html": "onchange src/ejs -- gulp html",
     "watch": "npm-run-all --parallel watch-*",
     "riot": "riot -w --config riot.config",
-    "webpack": "webpack --display-error-details",
     "min-css": "postcss ${npm_package_config_distDir}/css/main.css -e minify -o ${npm_package_config_distDir}/css/main.css",
     "min-image": "imagemin ${npm_package_config_distDir}/img/*.{jpg,png} --out-dir=${npm_package_config_distDir}/img",
     "min": "npm-run-all --parallel min-image",
