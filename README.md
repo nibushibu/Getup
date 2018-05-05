@@ -99,5 +99,5 @@ export default {
 }
 ```
 
-**from** = Riotタグファイルの在り処
+**from** = Riotタグファイルの在り処<br>
 **to** = RiotタグファイルをまとめてJSにコンパイルしたファイルの出力先
