@@ -57,6 +57,47 @@ min-image | dist/imgディレクトリ内の画像を圧縮。ファイルをそ
 
 ## 設定ファイルについて
 
-プロジェクトによっては、コンパイル後のと出力
+プロジェクトによっては、コンパイル後のCSSなどの出力先を変更することがあると思います。
+その際に
 
 ## package.jsonの設定
+
+```js
+  "config": {
+    "distDir": "dist"
+  },
+```
+**distDir** = SCSSのコンパイル後のCSSの出力先。
+
+## Gulp関係
+
+`gulpfile.babel.js/config.js`
+
+```js
+module.exports = {
+  /* 特別な定義が不要なタスクの設定 */
+  appPath: 'dist/',
+
+  js: [
+    'node_modules/riot/riot.min.js',
+    ...
+  ]
+};
+```
+
+**appPath** = JS、CSS、HTMLのトップディレクトリ
+**js（配列）** = vendors.jsにまとめるJSライブラリファイル一式
+
+## Riot.js
+
+```js
+export default {
+  from: 'src/riot',
+  to: 'dist/js/tags.js',
+  type: 'buble',
+  style: 'myCssParser'
+}
+```
+
+**from** = Riotタグファイルの在り処
+**to** = RiotタグファイルをまとめてJSにコンパイルしたファイルの出力先
