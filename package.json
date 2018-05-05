@@ -21,8 +21,8 @@
     "min-image": "imagemin ${npm_package_config_distDir}/img/*.{jpg,png} --out-dir=${npm_package_config_distDir}/img",
     "min-js": "uglifyjs dist/js/main.js",
     "min": "npm-run-all --parallel min-image",
-    "copy-font": "cpx \"node_modules/slick-carousel/slick/fonts/**\" ${npm_package_config_distDir}/css/fonts",
-    "copy-img": "cpx \"node_modules/slick-carousel/slick/ajax-loader.gif\" ${npm_package_config_distDir}/css",
+    "x-copy-font": "cpx \"node_modules/slick-carousel/slick/fonts/**\" ${npm_package_config_distDir}/css/fonts",
+    "x-copy-img": "cpx \"node_modules/slick-carousel/slick/ajax-loader.gif\" ${npm_package_config_distDir}/css",
     "copy-gulp": "gulp copy",
     "copy": "npm-run-all --parallel copy-*"
   },
@@ -84,6 +84,7 @@
     "postcss-focus": "^3.0.0",
     "postcss-style-guide": "^0.14.0",
     "require-dir": "^1.0.0",
-    "run-sequence": "^2.1.0"
+    "run-sequence": "^2.1.0",
+    "uglify-js": "^3.3.23"
   }
 }
