@@ -1,0 +1,41 @@
+/**
+ * 非表示テキスト
+ * WordPressに合わせたクラス名
+ */
+.u-screen-reader-text,
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+/**
+ * 親要素継承クラス
+ */
+.u-inherted {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/**
+ * マージン上書きクラス
+ */
+.u-collapsed {
+  margin-top: 0;
+}
+
+/**
+ * テキストスタイル上書き
+ */
+.u-text-bolder {
+  font-weight: 500;
+}
+
+.u-unformatted-text {
+  font-weight: normal;
+  text-align: left;
+}
