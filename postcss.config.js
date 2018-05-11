@@ -18,9 +18,10 @@ module.exports = ctx => {
     return {
       map: { inline: false },
       plugins: [
-        require("postcss-focus"),
-        require("css-mqpacker"),
-        require("postcss-flexibility"),
+        require('postcss-import'),
+        require('postcss-focus'),
+        require('css-mqpacker'),
+        require('postcss-flexibility'),
         require('postcss-style-guide')({
           dest: 'styleguide/html/index.html',
         }),

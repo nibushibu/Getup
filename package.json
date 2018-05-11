@@ -83,6 +83,7 @@
     "postcss-easings": "^1.0.0",
     "postcss-flexibility": "^2.0.0",
     "postcss-focus": "^3.0.0",
+    "postcss-import": "^11.1.0",
     "postcss-style-guide": "^0.14.0",
     "pump": "^3.0.0",
     "require-dir": "^1.0.0",
