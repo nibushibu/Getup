@@ -48,26 +48,21 @@
 }
 
 /**
- * Media block
+ * for Media block
  */
 
-.o-media {
-  display: flex;
-  @include o-tile-gap;
+.o-tile--nowrap {
+  flex-wrap: nowrap;
 }
 
-.o-media--middle {
-  align-items: center;
-}
-
-.o-media__body {
-  flex: 1 1 auto;
-}
-
-.o-media__image {
+.o-width-fixed {
   flex: 0 0 auto;
   max-width: 50%;
   text-align: center;
+}
+
+.o-width-fill {
+  flex: 1 1 auto;
 }
 
 .o-icon {
