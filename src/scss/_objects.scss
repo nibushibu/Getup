@@ -72,3 +72,15 @@
   line-height: inherit;
   vertical-align: middle;
 }
+
+.o-tile--custom {
+  @include o-tile-gap(2em, 1em);
+}
+
+.o-width-1 {
+  width: 50%;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}

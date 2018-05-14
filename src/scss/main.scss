@@ -5,7 +5,6 @@
  */
 
 @import 'settings';
-@import 'settings.app';
 
 /**
  * Generic
@@ -33,7 +32,6 @@
 // @import '../../node_modules/blaze/scss/src/objects.modals';
 // @import '../../node_modules/blaze/scss/src/objects.drawers';
 @import 'objects';
-@import 'objects.app';
 
 /**
  * Components
@@ -68,7 +66,7 @@
 // @import '../../node_modules/blaze/scss/src/components.avatars';
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 @import '../../node_modules/slick-carousel/slick/slick-theme.scss';
-@import 'components.app';
+@import 'components';
 
 /**
  * Trumps
@@ -82,4 +80,3 @@
 @import '../../node_modules/blaze/scss/src/utilities.sizes';
 @import '../../node_modules/blaze/scss/src/utilities.visibility';
 @import 'utilities';
-@import 'utilities.app';
