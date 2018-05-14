@@ -24,7 +24,7 @@
 /**
  * マージン上書きクラス
  */
-.u-collapsed {
+.u-reset-margin {
   margin-top: 0;
 }
 
@@ -38,4 +38,17 @@
 .u-reset-text {
   font-weight: normal;
   text-align: left;
+}
+
+.u-sample-row {
+  background-color: #cbc9dd;
+}
+
+.u-sample-col {
+  background-color: #b8dbfc;
+  min-height: 100px;
+}
+
+.u-sample-col--type-2 {
+  min-height: 200px;
 }
