@@ -9,7 +9,9 @@
   "scripts": {
     "css-sass": "node-sass --output ${npm_package_config_distDir}/css --output-style expanded --source-map true --source-map-contents true --include-path src/css --precision 6 'src/scss'",
     "css-postcss": "postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css",
+    "css-postcss-guide": "postcss --config postcss.config.js -e guide --replace ${npm_package_config_distDir}/css/**/*.css",
     "css": "npm-run-all css-sass css-postcss",
+    "css-guide": "npm-run-all css-sass css-postcss-guide",
     "buble": "buble -i src/js -m -o ${npm_package_config_distDir}/js",
     "watch-riot": "npm-run-all --parallel riot",
     "watch-js": "onchange src/js -- yarn run buble",
@@ -20,7 +22,7 @@
     "min-css": "postcss ${npm_package_config_distDir}/css/main.css -e minify -o ${npm_package_config_distDir}/css/main.css",
     "min-image": "imagemin ${npm_package_config_distDir}/img/*.{jpg,png} --out-dir=${npm_package_config_distDir}/img",
     "min-js": "uglifyjs dist/js/main.js",
-    "min": "npm-run-all --parallel min-image",
+    "min": "npm-run-all --parallel min-*",
     "x-copy-font": "cpx \"node_modules/slick-carousel/slick/fonts/**\" ${npm_package_config_distDir}/css/fonts",
     "x-copy-img": "cpx \"node_modules/slick-carousel/slick/ajax-loader.gif\" ${npm_package_config_distDir}/css",
     "copy-gulp": "gulp copy",
@@ -39,7 +41,7 @@
     "p5": "^0.6.1",
     "popper.js": "^1.12.5",
     "promise-polyfill": "^7.0.0",
-    "riot": "^3.7.3",
+    "riot": "^3.10.1",
     "sanitize.css": "^5.0.0",
     "scrollmagic": "^2.0.5",
     "slick-carousel": "^1.7.1",
@@ -80,14 +82,14 @@
     "onchange": "^4.0.0",
     "perfectionist": "^2.4.0",
     "postcss-cssnext": "^3.0.2",
+    "postcss-devtools": "^1.1.1",
     "postcss-easings": "^1.0.0",
-    "postcss-flexibility": "^2.0.0",
     "postcss-focus": "^3.0.0",
     "postcss-import": "^11.1.0",
     "postcss-style-guide": "^0.14.0",
     "pump": "^3.0.0",
     "require-dir": "^1.0.0",
     "run-sequence": "^2.1.0",
-    "uglify-js": "^3.3.23"
+    "uglify-js": "^3.3.26"
   }
 }
