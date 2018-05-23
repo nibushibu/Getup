@@ -76,7 +76,6 @@
     "gulp-load-plugins": "^1.5.0",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.3",
-    "gulp-uglify": "^3.0.0",
     "lodash": "^4.17.4",
     "node-sass": "^4.5.3",
     "onchange": "^4.0.0",
