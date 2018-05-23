@@ -1488,8 +1488,8 @@ ejs@^2.3.1:
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.6.1.tgz#498ec0d495655abc6f23cd61868d926464071aa0"
 
 electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.30, electron-to-chromium@^1.3.47:
-  version "1.3.47"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.47.tgz#764e887ca9104d01a0ac8eabee7dfc0e2ce14104"
+  version "1.3.48"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.48.tgz#d3b0d8593814044e092ece2108fc3ac9aea4b900"
 
 end-of-stream@^1.1.0:
   version "1.4.1"
@@ -2932,10 +2932,6 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-jump.js@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/jump.js/-/jump.js-1.0.2.tgz#e0641b47f40a38f2139c25fda0500bf28e43015a"
-
 kew@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/kew/-/kew-0.7.0.tgz#79d93d2d33363d6fdd2970b335d9141ad591d79b"
@@ -3164,10 +3160,6 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-macaddress@^0.2.8:
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/macaddress/-/macaddress-0.2.8.tgz#5904dc537c39ec6dbefeae902327135fa8511f12"
-
 magic-string@^0.22.4:
   version "0.22.5"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.22.5.tgz#8e9cf5afddf44385c1da5bc2a6a0dbd10b03657e"
@@ -3313,10 +3305,10 @@ minimist@^1.1.0, minimist@^1.1.3, minimist@^1.2.0, minimist@~1.2.0:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
 
 minipass@^2.2.1, minipass@^2.2.4:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/minipass/-/minipass-2.3.1.tgz#4e872b959131a672837ab3cb554962bc84b1537d"
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/minipass/-/minipass-2.3.3.tgz#a7dcc8b7b833f5d368759cce544dccb55f50f233"
   dependencies:
-    safe-buffer "^5.1.1"
+    safe-buffer "^5.1.2"
     yallist "^3.0.0"
 
 minizlib@^1.1.0:
@@ -4103,11 +4095,10 @@ postcss-easings@^1.0.0:
     postcss-value-parser "^3.3.0"
 
 postcss-filter-plugins@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/postcss-filter-plugins/-/postcss-filter-plugins-2.0.2.tgz#6d85862534d735ac420e4a85806e1f5d4286d84c"
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/postcss-filter-plugins/-/postcss-filter-plugins-2.0.3.tgz#82245fdf82337041645e477114d8e593aa18b8ec"
   dependencies:
     postcss "^5.0.4"
-    uniqid "^4.0.0"
 
 postcss-focus@^3.0.0:
   version "3.0.0"
@@ -5438,8 +5429,8 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
 uglify-js@^3.0.5, uglify-js@^3.3.26:
-  version "3.3.26"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.3.26.tgz#858b74e5e7262e876c834b907a5fa57d4fa0d525"
+  version "3.3.27"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.3.27.tgz#eb8c3c9429969f86ff5b0a2422ffc78c3cea8cc0"
   dependencies:
     commander "~2.15.0"
     source-map "~0.6.1"
@@ -5460,12 +5451,6 @@ union-value@^1.0.0:
 uniq@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/uniq/-/uniq-1.0.1.tgz#b31c5ae8254844a3a8281541ce2b04b865a734ff"
-
-uniqid@^4.0.0:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/uniqid/-/uniqid-4.1.1.tgz#89220ddf6b751ae52b5f72484863528596bb84c1"
-  dependencies:
-    macaddress "^0.2.8"
 
 uniqs@^2.0.0:
   version "2.0.0"

@@ -4,7 +4,7 @@ module.exports = ctx => {
     // require('postcss-devtools'),
     require('postcss-import'),
     require('postcss-focus'),
-    require('css-mqpacker'),
+    // require('css-mqpacker'),
     // require('perfectionist')({
     //   indentSize: 2,
     // }),

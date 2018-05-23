@@ -27,23 +27,6 @@ gulp.task('concatJs', () => {
   .pipe(gulp.dest(config.appPath + 'js'));
 });
 
-// Uglify vendors.js
-gulp.task('uglifyJs', cb => {
-  pump(
-    [
-      gulp.src(config.appPath + 'js/vendors.js'),
-      $.uglify({
-        mangle: false,
-        output: {
-          comments: 'some'
-        }
-      }),
-      gulp.dest(config.appPath + 'js')
-    ],
-    cb
-  )
-})
-
 // Command
 gulp.task('copy', callback => {
   return runSequence(
@@ -52,7 +35,6 @@ gulp.task('copy', callback => {
       'copyImg',
       'concatJs'
     ],
-    // 'uglifyJs',
     callback
   );
 });

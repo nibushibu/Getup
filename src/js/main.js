@@ -5,10 +5,15 @@ riot.mount('*')
 $(() => {
 
   if(!feature.touch){
-    $('a[href^="#"], .js-anchor-scroll').on('click', (e) => {
+    $('a[href^="#"], .js-anchor-scroll').on('click', e => {
       e.preventDefault()
-      var href = $(e.currentTarget).attr('href')
-      jump(href)
+      let headerHeight = 0
+      let $target = $(e.currentTarget.attributes.href.value)
+      console.log($target)
+      let targetOffset = $target.offset().top
+      $("html,body").animate({
+        scrollTop: targetOffset - headerHeight - 10
+      }, 300)
       return false
     })
   }
