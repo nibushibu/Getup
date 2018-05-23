@@ -5,7 +5,6 @@ const riot = require('riot')
 const sass = require('node-sass')
 const postcss = require('postcss')
 const postcssFocus = require('postcss-focus')
-const cssMqpacker = require('css-mqpacker')
 const autoprefixer = require('autoprefixer')
 const buble = require('buble')
 
@@ -22,7 +21,6 @@ riot.parsers.css.myCssParser = function (tagName, css) {
   css = sass.renderSync(sassOptions).css
   css = postcss([
     postcssFocus,
-    cssMqpacker,
     autoprefixer,
   ]).process(css).css
   return css
