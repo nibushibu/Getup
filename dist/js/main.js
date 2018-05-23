@@ -7,8 +7,13 @@ $(function () {
   if(!feature.touch){
     $('a[href^="#"], .js-anchor-scroll').on('click', function (e) {
       e.preventDefault()
-      var href = $(e.currentTarget).attr('href')
-      jump(href)
+      var headerHeight = 0
+      var $target = $(e.currentTarget.attributes.href.value)
+      console.log($target)
+      var targetOffset = $target.offset().top
+      $("html,body").animate({
+        scrollTop: targetOffset - headerHeight - 10
+      }, 300)
       return false
     })
   }
