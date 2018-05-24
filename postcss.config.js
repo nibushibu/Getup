@@ -26,13 +26,13 @@ module.exports = ctx => {
       ]
     }
   }
-  if(ctx.env === 'guide'){
+  else if(ctx.env === 'guide'){
     return {
       map: { inline: false },
       plugins: [
         ...plugins,
         require('postcss-style-guide')({
-          dest: 'styleguide/html/index.html',
+          dest: 'docs/styleguide/index.html'
         }),
       ]
     }

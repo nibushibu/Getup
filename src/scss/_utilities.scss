@@ -1,3 +1,10 @@
+/*
+@styleguide
+
+@title Utility Style
+最終調整として利用するユーティリティクラス
+*/
+
 /**
  * 非表示テキスト
  * WordPressに合わせたクラス名
@@ -31,10 +38,25 @@
 /**
  * テキストスタイル上書き
  */
+
+/*
+@styleguide
+🎨 強制的にBoldに
+<p class="u-text-bolder">テキスト</p>
+
+    <p class="u-text-bolder">テキスト</p>
+*/
 .u-text-bolder {
-  font-weight: 500;
+  font-weight: bolder;
 }
 
+/*
+@styleguide
+🎨 フォントスタイルを戻す
+<p class="u-reset-text">テキスト</p>
+
+    <p class="u-reset-test">テキスト</p>
+*/
 .u-reset-text {
   font-weight: normal;
   text-align: left;
