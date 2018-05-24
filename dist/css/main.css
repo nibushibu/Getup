@@ -542,33 +542,33 @@ img {
 /**
  * Tile - General Layout Module
  */
-.o-tile {
+.o-flex {
   display: flex;
   flex-wrap: wrap;
   margin: -20px 0 0 -20px;
 }
-.o-tile > * {
+.o-flex > * {
   flex: 0 1 auto;
 }
-.o-tile > * {
+.o-flex > * {
   padding: 20px 0 0 20px;
 }
-.o-tile--fill {
+.o-flex--fill {
   flex-wrap: nowrap;
 }
-.o-tile--fill > * {
+.o-flex--fill > * {
   flex: 1 1 auto;
 }
-.o-tile--fill-equal {
+.o-flex--fill-equal {
   flex-wrap: nowrap;
 }
-.o-tile--fill-equal > * {
+.o-flex--fill-equal > * {
   flex: 1 1 0;
 }
-.o-tile--no-gap {
+.o-flex--no-gap {
   margin: 0 0 0 0;
 }
-.o-tile--no-gap > * {
+.o-flex--no-gap > * {
   padding: 0 0 0 0;
 }
 /**
@@ -576,16 +576,16 @@ img {
  *
  * Cancel top margin of first child
  */
-.o-box > *:first-child {
+.o-fit > *:first-child {
   margin-top: 0;
 }
-.o-box-all > *:first-child {
+.o-fit-all > *:first-child {
   margin-top: 0;
 }
 /**
  * for Media block
  */
-.o-tile--nowrap {
+.o-flex--nowrap {
   flex-wrap: nowrap;
 }
 .o-width-fixed {
@@ -603,10 +603,10 @@ img {
   line-height: inherit;
   vertical-align: middle;
 }
-.o-tile--custom {
+.o-flex--custom {
   margin: -1em 0 0 -2em;
 }
-.o-tile--custom > * {
+.o-flex--custom > * {
   padding: 1em 0 0 2em;
 }
 .o-width-1 {
