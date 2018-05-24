@@ -21,7 +21,7 @@ riot.parsers.css.myCssParser = function (tagName, css) {
   css = sass.renderSync(sassOptions).css
   css = postcss([
     postcssFocus,
-    autoprefixer,
+    autoprefixer({ grid: true }),
   ]).process(css).css
   return css
 }
