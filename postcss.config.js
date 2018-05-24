@@ -32,7 +32,7 @@ module.exports = ctx => {
       plugins: [
         ...plugins,
         require('postcss-style-guide')({
-          dest: 'styleguide/html/index.html',
+          dest: 'docs/styleguide/index.html'
         }),
       ]
     }
