@@ -26,7 +26,7 @@ module.exports = ctx => {
       ]
     }
   }
-  if(ctx.env === 'guide'){
+  else if(ctx.env === 'guide'){
     return {
       map: { inline: false },
       plugins: [
