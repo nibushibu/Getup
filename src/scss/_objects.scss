@@ -2,7 +2,7 @@
  * Tile - General Layout Module
  */
 
-.o-tile {
+.o-flex {
   display: flex;
   flex-wrap: wrap;
 
@@ -10,10 +10,10 @@
     flex: 0 1 auto;
   }
 
-  @include o-tile-gap;
+  @include o-flex-gap;
 }
 
-.o-tile--fill {
+.o-flex--fill {
   flex-wrap: nowrap;
 
   > * {
@@ -21,7 +21,7 @@
   }
 }
 
-.o-tile--fill-equal {
+.o-flex--fill-equal {
   flex-wrap: nowrap;
 
   > * {
@@ -29,8 +29,8 @@
   }
 }
 
-.o-tile--no-gap {
-  @include o-tile-gap(0);
+.o-flex--no-gap {
+  @include o-flex-gap(0);
 }
 
 /**
@@ -39,19 +39,19 @@
  * Cancel top margin of first child
  */
 
-.o-box {
-  @include o-box;
+.o-fit {
+  @include o-fit;
 }
 
-.o-box-all {
-  @include o-box-all;
+.o-fit-all {
+  @include o-fit-all;
 }
 
 /**
  * for Media block
  */
 
-.o-tile--nowrap {
+.o-flex--nowrap {
   flex-wrap: nowrap;
 }
 
@@ -73,8 +73,8 @@
   vertical-align: middle;
 }
 
-.o-tile--custom {
-  @include o-tile-gap(2em, 1em);
+.o-flex--custom {
+  @include o-flex-gap(2em, 1em);
 }
 
 .o-width-1 {
