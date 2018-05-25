@@ -8,7 +8,7 @@ module.exports = ctx => {
     // require('perfectionist')({
     //   indentSize: 2,
     // }),
-    require('autoprefixer'),
+    require('autoprefixer')({ grid: true }),
   ]
 
   if(ctx.env === 'minify'){

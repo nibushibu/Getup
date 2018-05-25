@@ -1103,7 +1103,7 @@ img {
  */
 /*
 @styleguide
-🎨 強制的にBoldに
+🎨強制的にBoldに
 <p class="u-text-bolder">テキスト</p>
 
     <p class="u-text-bolder">テキスト</p>
@@ -1113,7 +1113,7 @@ img {
 }
 /*
 @styleguide
-🎨 フォントスタイルを戻す
+🎨フォントスタイルを戻す
 <p class="u-reset-text">テキスト</p>
 
     <p class="u-reset-test">テキスト</p>
