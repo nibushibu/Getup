@@ -9,6 +9,7 @@
  * 非表示テキスト
  * WordPressに合わせたクラス名
  */
+
 .u-screen-reader-text,
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
@@ -23,6 +24,7 @@
 /**
  * 親要素継承クラス
  */
+
 .u-inherit {
   font-size: inherit;
   font-weight: inherit;
@@ -31,6 +33,7 @@
 /**
  * マージン上書きクラス
  */
+
 .u-reset-margin {
   margin-top: 0;
 }
@@ -46,6 +49,7 @@
 
     <p class="u-text-bolder">テキスト</p>
 */
+
 .u-text-bolder {
   font-weight: bolder;
 }
@@ -57,6 +61,7 @@
 
     <p class="u-reset-test">テキスト</p>
 */
+
 .u-reset-text {
   font-weight: normal;
   text-align: left;

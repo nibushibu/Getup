@@ -1,52 +1,66 @@
 /**
  * Basa Font Family
  */
+
 @font-face {
   font-family: 'MyYuGothicM';
   font-weight: normal;
-  src: local('YuGothic-Medium'),
-         /* Postscript name */ local('Yu Gothic Medium'),
-         /* for Chrome */ local('YuGothic-Regular'); /* Mediumがない場合 */
+  src: local('YuGothic-Medium'), /* Postscript name */
+  local('Yu Gothic Medium'), /* for Chrome */
+  local('YuGothic-Regular');
+  /* Mediumがない場合 */
 }
 
 @font-face {
   font-family: 'MyYuGothicM';
   font-weight: bold;
-  src: local('YuGothic-Bold'), /* Postscript name */ local('Yu Gothic'); /* for Chrome */
+  src: local('YuGothic-Bold'), /* Postscript name */
+  local('Yu Gothic');
+  /* for Chrome */
 }
 
 $base-font-family: 'Noto Sans JP',
-  'Noto Sans CJK JP',
-  'Noto Sans CJK Japanese',
-  MyYuGothicM, /* Windows 游ゴシック */
-  YuGothic, /* OS X 游ゴシック */
-  -apple-system, /* OS X, iOS San Francisco */
-  BlinkMacSystemFont, /* OS X, iOS Chrome San Francisco */
-  'Hiragino Kaku Gothic ProN', /* OS X, iOS ヒラギノ */
-  Meiryo, /* Windows メイリオ */
-  sans-serif !default;
+'Noto Sans CJK JP',
+'Noto Sans CJK Japanese',
+MyYuGothicM,
+/* Windows 游ゴシック */
 
+YuGothic,
+/* OS X 游ゴシック */
+
+-apple-system,
+/* OS X, iOS San Francisco */
+
+BlinkMacSystemFont,
+/* OS X, iOS Chrome San Francisco */
+
+'Hiragino Kaku Gothic ProN',
+/* OS X, iOS ヒラギノ */
+
+Meiryo,
+/* Windows メイリオ */
+
+sans-serif !default;
 /**
  * Base Font Size
  *
  * 10pxに対するrem値で設定
  */
-$base-font-size: 1.6rem !default;
 
+$base-font-size: 1.6rem !default;
 /**
  * Link
  */
-$link-color: #0088ff;
 
+$link-color: #0088ff;
 /**
  * Tile Settings
  */
-$tile-gap-size: 20px;
 
+$tile-gap-size: 20px;
 @mixin o-flex-gap($gap-x: $tile-gap-size, $gap-y: $gap-x) {
   margin: (-$gap-y) 0 0 (-$gap-x);
-
-  > * {
+  >* {
     padding: $gap-y 0 0 $gap-x;
   }
 }
@@ -56,16 +70,15 @@ $tile-gap-size: 20px;
  *
  * Cancel top margin of first child
  */
-@mixin o-fit {
 
-  & > *:first-child {
+@mixin o-fit {
+  &>*:first-child {
     margin-top: 0;
   }
 }
 
 @mixin o-fit-all {
-
-  & > *:first-child {
+  &>*:first-child {
     margin-top: 0;
   }
 }
