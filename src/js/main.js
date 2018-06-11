@@ -1,23 +1,24 @@
 riot.mount('*')
 
-;(function($){
+;
+(function ($) {
 
-$(() => {
+  $(() => {
 
-  if(!feature.touch){
-    $('a[href^="#"], .js-anchor-scroll').on('click', e => {
-      e.preventDefault()
-      let headerHeight = 0
-      let $target = $(e.currentTarget.attributes.href.value)
-      console.log($target)
-      let targetOffset = $target.offset().top
-      $("html,body").animate({
-        scrollTop: targetOffset - headerHeight - 10
-      }, 300)
-      return false
-    })
-  }
-})
+    if (!feature.touch) {
+      $('a[href^="#"], .js-anchor-scroll').on('click', e => {
+        e.preventDefault()
+        let headerHeight = 0
+        let $target = $(e.currentTarget.attributes.href.value)
+        console.log($target)
+        let targetOffset = $target.offset().top
+        $("html,body").animate({
+          scrollTop: targetOffset - headerHeight - 10
+        }, 300)
+        return false
+      })
+    }
+  })
 
 })(jQuery)
 
@@ -43,8 +44,12 @@ console.log(`feature.touch = ${feature.touch}`)
 // mo.js動作チェック
 const mojsAnime = new mojs.Html({
   el: '.js-anime',
-  x: {0: 250},
-  angleZ: {0: 360},
+  x: {
+    0: 250
+  },
+  angleZ: {
+    0: 360
+  },
   duration: 800,
   easing: 'expo.out',
   repeat: true,
