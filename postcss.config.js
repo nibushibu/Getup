@@ -8,27 +8,28 @@ module.exports = ctx => {
     // require('perfectionist')({
     //   indentSize: 2,
     // }),
-    require('autoprefixer')({ grid: true }),
+    require('autoprefixer')({
+      grid: true
+    }),
   ]
 
-  if(ctx.env === 'minify'){
+  if (ctx.env === 'minify') {
     return {
-      map: { inline: false },
+      map: ctx.options.map,
       plugins: [
         require('cssnano')({
           preset: ['default', {
-              MergeRules: false,
-              normalizeString: {
-                preferredQuote: 'single'
-              }
+            MergeRules: false,
+            normalizeString: {
+              preferredQuote: 'single'
+            }
           }]
         })
       ]
     }
-  }
-  else if(ctx.env === 'guide'){
+  } else if (ctx.env === 'guide') {
     return {
-      map: { inline: false },
+      map: ctx.options.map,
       plugins: [
         ...plugins,
         require('postcss-style-guide')({
@@ -36,10 +37,9 @@ module.exports = ctx => {
         }),
       ]
     }
-  }
-  else{
+  } else {
     return {
-      map: { inline: false },
+      map: ctx.options.map,
       plugins: [
         ...plugins,
       ]
