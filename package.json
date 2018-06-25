@@ -40,7 +40,7 @@
     "p5": "^0.6.1",
     "popper.js": "^1.12.5",
     "promise-polyfill": "^8.0.0",
-    "riot": "^3.10.1",
+    "riot": "^3.10.3",
     "sanitize.css": "^5.0.0",
     "scrollmagic": "^2.0.5",
     "slick-carousel": "^1.7.1",
@@ -59,7 +59,7 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^8.0.0",
+    "autoprefixer": "^8.6.3",
     "babel-core": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015-riot": "^1.1.0",
@@ -68,7 +68,8 @@
     "cpx": "^1.5.0",
     "css-mqpacker": "^6.0.0",
     "cssnano": "^3.10.0",
-    "eslint": "^4.9.0",
+    "eslint": "^5.0.0",
+    "eslint-config-riot": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-consolidate": "^0.2.0",
@@ -89,6 +90,6 @@
     "pump": "^3.0.0",
     "require-dir": "^1.0.0",
     "run-sequence": "^2.1.0",
-    "uglify-js": "^3.3.26"
+    "uglify-js": "^3.4.1"
   }
 }
