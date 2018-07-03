@@ -1,82 +1,16 @@
-/**
- * Settings & Tools
- *
- * Variables and Mixins
- */
-
+// Settings
 @import 'settings';
 
-/**
- * Generic
- */
-
+// Generic
 @import '../../node_modules/sanitize.css/sanitize.css';
 
-/**
- * Base
- */
-
+// Base
 @import 'base';
 
-/**
- * Objects
- */
-
-// @import '../../node_modules/blaze/scss/src/objects.containers';
-// @import '../../node_modules/blaze/scss/src/objects.grid';
-// @import '../../node_modules/blaze/scss/src/objects.grid.responsive';
-// @import '../../node_modules/blaze/scss/src/objects.images';
-// @import '../../node_modules/blaze/scss/src/objects.panels';
-// @import '../../node_modules/blaze/scss/src/objects.media';
-// @import '../../node_modules/blaze/scss/src/objects.forms';
-// @import '../../node_modules/blaze/scss/src/objects.modals';
-// @import '../../node_modules/blaze/scss/src/objects.drawers';
-@import 'objects';
-
-/**
- * Components
- */
-
-// @import '../../node_modules/blaze/scss/src/components.typography';
-// @import '../../node_modules/blaze/scss/src/components.badges';
-// @import '../../node_modules/blaze/scss/src/components.headings';
-// @import '../../node_modules/blaze/scss/src/components.addresses';
-// @import '../../node_modules/blaze/scss/src/components.tables';
-// @import '../../node_modules/blaze/scss/src/components.cards';
-// @import '../../node_modules/blaze/scss/src/components.buttons';
-// @import '../../node_modules/blaze/scss/src/components.links';
-// @import '../../node_modules/blaze/scss/src/components.lists';
-// @import '../../node_modules/blaze/scss/src/components.breadcrumbs';
-// @import '../../node_modules/blaze/scss/src/components.trees';
-// @import '../../node_modules/blaze/scss/src/components.tabs';
-// @import '../../node_modules/blaze/scss/src/components.inputs';
-// @import '../../node_modules/blaze/scss/src/components.input-groups';
-// @import '../../node_modules/blaze/scss/src/components.hints';
-// @import '../../node_modules/blaze/scss/src/components.toggles';
-// @import '../../node_modules/blaze/scss/src/components.tags';
-// @import '../../node_modules/blaze/scss/src/components.ranges';
-// @import '../../node_modules/blaze/scss/src/components.pagination';
-// @import '../../node_modules/blaze/scss/src/components.overlays';
-// @import '../../node_modules/blaze/scss/src/components.bubbles';
-// @import '../../node_modules/blaze/scss/src/components.tooltips';
-// @import '../../node_modules/blaze/scss/src/components.alerts';
-// @import '../../node_modules/blaze/scss/src/components.calendars';
-// @import '../../node_modules/blaze/scss/src/components.navs';
-// @import '../../node_modules/blaze/scss/src/components.progress';
-// @import '../../node_modules/blaze/scss/src/components.avatars';
+// Components
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 @import '../../node_modules/slick-carousel/slick/slick-theme.scss';
 @import 'components';
 
-/**
- * Trumps
- *
- * Utility styles
- */
-
-@import '../../node_modules/blaze/scss/src/utilities.alignment';
-@import '../../node_modules/blaze/scss/src/utilities.boxing';
-@import '../../node_modules/blaze/scss/src/utilities.elevation';
-@import '../../node_modules/blaze/scss/src/utilities.sizes';
-@import '../../node_modules/blaze/scss/src/utilities.visibility';
+// Utilities
 @import 'utilities';
