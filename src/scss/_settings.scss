@@ -58,7 +58,7 @@ $link-color: #0088ff;
  */
 
 $tile-gap-size: 20px;
-@mixin o-flex-gap($gap-x: $tile-gap-size, $gap-y: $gap-x) {
+@mixin flex-gap($gap-x: $tile-gap-size, $gap-y: $gap-x) {
   margin: (-$gap-y) 0 0 (-$gap-x);
   >* {
     padding: $gap-y 0 0 $gap-x;
@@ -71,13 +71,13 @@ $tile-gap-size: 20px;
  * Cancel top margin of first child
  */
 
-@mixin o-fit {
+@mixin fit {
   &>*:first-child {
     margin-top: 0;
   }
 }
 
-@mixin o-fit-all {
+@mixin fit-all {
   &>*:first-child {
     margin-top: 0;
   }

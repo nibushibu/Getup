@@ -2,31 +2,31 @@
  * Tile - General Layout Module
  */
 
-.o-flex {
+.flex {
   display: flex;
   flex-wrap: wrap;
   >* {
     flex: 0 1 auto;
   }
-  @include o-flex-gap;
+  @include flex-gap;
 }
 
-.o-flex--fill {
+.flex--fill {
   flex-wrap: nowrap;
   >* {
     flex: 1 1 auto;
   }
 }
 
-.o-flex--fill-equal {
+.flex--fill-equal {
   flex-wrap: nowrap;
   >* {
     flex: 1 1 0;
   }
 }
 
-.o-flex--no-gap {
-  @include o-flex-gap(0);
+.flex--no-gap {
+  @include flex-gap(0);
 }
 
 /**
@@ -35,33 +35,33 @@
  * Cancel top margin of first child
  */
 
-.o-fit {
-  @include o-fit;
+.fit {
+  @include fit;
 }
 
-.o-fit-all {
-  @include o-fit-all;
+.fit-all {
+  @include fit-all;
 }
 
 /**
  * for Media block
  */
 
-.o-flex--nowrap {
+.flex--nowrap {
   flex-wrap: nowrap;
 }
 
-.o-width-fixed {
+.width-fixed {
   flex: 0 0 auto;
   max-width: 50%;
   text-align: center;
 }
 
-.o-width-fill {
+.width-fill {
   flex: 1 1 auto;
 }
 
-.o-icon {
+.icon {
   display: inline-block;
   height: 1em;
   width: auto;
@@ -69,11 +69,11 @@
   vertical-align: middle;
 }
 
-.o-flex--custom {
-  @include o-flex-gap(2em, 1em);
+.flex--custom {
+  @include flex-gap(2em, 1em);
 }
 
-.o-width-1 {
+.width-1 {
   width: 50%;
   @media (max-width: 600px) {
     width: 100%;
