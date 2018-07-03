@@ -1,0 +1,81 @@
+/**
+ * Tile - General Layout Module
+ */
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  >* {
+    flex: 0 1 auto;
+  }
+  @include flex-gap;
+}
+
+.flex--fill {
+  flex-wrap: nowrap;
+  >* {
+    flex: 1 1 auto;
+  }
+}
+
+.flex--fill-equal {
+  flex-wrap: nowrap;
+  >* {
+    flex: 1 1 0;
+  }
+}
+
+.flex--no-gap {
+  @include flex-gap(0);
+}
+
+/**
+ * BOX: Container box
+ *
+ * Cancel top margin of first child
+ */
+
+.fit {
+  @include fit;
+}
+
+.fit-all {
+  @include fit-all;
+}
+
+/**
+ * for Media block
+ */
+
+.flex--nowrap {
+  flex-wrap: nowrap;
+}
+
+.width-fixed {
+  flex: 0 0 auto;
+  max-width: 50%;
+  text-align: center;
+}
+
+.width-fill {
+  flex: 1 1 auto;
+}
+
+.icon {
+  display: inline-block;
+  height: 1em;
+  width: auto;
+  line-height: inherit;
+  vertical-align: middle;
+}
+
+.flex--custom {
+  @include flex-gap(2em, 1em);
+}
+
+.width-1 {
+  width: 50%;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
