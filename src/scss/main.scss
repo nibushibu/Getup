@@ -1,11 +1,17 @@
 // Settings
 @import 'settings';
 
+// Tools
+@import 'tools';
+
 // Generic
 @import '../../node_modules/sanitize.css/sanitize.css';
 
 // Base
 @import 'base';
+
+// Objects
+@import 'objects';
 
 // Components
 @import '../../node_modules/slick-carousel/slick/slick.scss';

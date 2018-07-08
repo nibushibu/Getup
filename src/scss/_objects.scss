@@ -1,0 +1,81 @@
+/**
+ * Flexbox - General Layout Module
+ */
+
+.o-flex {
+  display: flex;
+  flex-wrap: wrap;
+  >* {
+    flex: 0 1 auto;
+  }
+  @include getup-flex-gap;
+}
+
+.o-flex--fill {
+  flex-wrap: nowrap;
+  >* {
+    flex: 1 1 auto;
+  }
+}
+
+.o-flex--fill-equal {
+  flex-wrap: nowrap;
+  >* {
+    flex: 1 1 0;
+  }
+}
+
+.o-flex--no-gap {
+  @include getup-flex-gap(0);
+}
+
+/**
+ * BOX: Container box
+ *
+ * Cancel top margin of first child
+ */
+
+.o-fit {
+  @include getup-fit;
+}
+
+.o-fit-all {
+  @include getup-fit-all;
+}
+
+/**
+ * for Media block
+ */
+
+.o-flex--nowrap {
+  flex-wrap: nowrap;
+}
+
+.o-width-fixed {
+  flex: 0 0 auto;
+  max-width: 50%;
+  text-align: center;
+}
+
+.o-width-fill {
+  flex: 1 1 auto;
+}
+
+.o-icon {
+  display: inline-block;
+  height: 1em;
+  width: auto;
+  line-height: inherit;
+  vertical-align: middle;
+}
+
+.o-flex--custom {
+  @include getup-flex-gap(2em, 1em);
+}
+
+.o-width-1 {
+  width: 50%;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
