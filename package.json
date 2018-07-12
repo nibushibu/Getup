@@ -29,6 +29,7 @@
     "copy": "npm-run-all --parallel copy-*"
   },
   "dependencies": {
+    "animore": "^2.0.3",
     "feature.js": "^1.0.0",
     "flexibility": "^2.0.1",
     "gulp-ejs": "^3.1.2",
