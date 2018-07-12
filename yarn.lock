@@ -59,6 +59,14 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+animore@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/animore/-/animore-2.0.3.tgz#1ab51854bb105c1b6d2a9661305c34545a29388c"
+  dependencies:
+    bianco.attr "0.0.3"
+    bianco.events "0.0.6"
+    bianco.query "0.0.7"
+
 ansi-colors@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-1.1.0.tgz#6374b4dd5d4718ff3ce27a671a3b1cad077132a9"
@@ -719,6 +727,28 @@ bcrypt-pbkdf@^1.0.0:
 beeper@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/beeper/-/beeper-1.1.1.tgz#e6d5ea8c5dad001304a70b22638447f69cb2f809"
+
+bianco.attr@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/bianco.attr/-/bianco.attr-0.0.3.tgz#43ec09df1508749627b82a3591f60c1ff025ff38"
+  dependencies:
+    bianco.dom-to-array "^0.0.8"
+
+bianco.dom-to-array@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/bianco.dom-to-array/-/bianco.dom-to-array-0.0.8.tgz#3a1173533971bb11166f6fe2872408550ed31baf"
+
+bianco.events@0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/bianco.events/-/bianco.events-0.0.6.tgz#53d7d0d82d010d31107c6e539795aae8a3e6b6de"
+  dependencies:
+    bianco.dom-to-array "^0.0.8"
+
+bianco.query@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/bianco.query/-/bianco.query-0.0.7.tgz#7ec621d32f6736719b6d59e333296c1511b5299b"
+  dependencies:
+    bianco.dom-to-array "^0.0.8"
 
 binary-extensions@^1.0.0:
   version "1.11.0"
