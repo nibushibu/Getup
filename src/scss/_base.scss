@@ -1,6 +1,7 @@
 html {
   font-family: $base-font-family;
-  font-size: 62.5%;
+  font-size: 10px;
+  line-height: 1.5;
 }
 
 body {
@@ -27,4 +28,8 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+svg {
+  fill: none;
 }
