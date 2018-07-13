@@ -4,7 +4,9 @@ module.exports = {
 
   js: [
     'node_modules/html5-boilerplate/dist/js/plugins.js',
+    'node_modules/animejs/anime.min.js',
     'node_modules/riot/riot.min.js',
+    'node_modules/animore/animore.js',
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/feature.js/feature.min.js',
     'node_modules/promise-polyfill/dist/promise.min.js',
