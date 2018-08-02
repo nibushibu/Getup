@@ -89,6 +89,7 @@
     "postcss-easings": "^1.0.0",
     "postcss-focus": "^3.0.0",
     "postcss-import": "^11.1.0",
+    "postcss-normalize-charset": "^4.0.0",
     "postcss-style-guide": "^0.14.0",
     "require-dir": "^1.0.0",
     "run-sequence": "^2.1.0"

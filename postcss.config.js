@@ -8,6 +8,7 @@ module.exports = ctx => {
     // require('perfectionist')({
     //   indentSize: 2,
     // }),
+    require('postcss-normalize-charset'),
     require('autoprefixer')({
       grid: true
     }),
