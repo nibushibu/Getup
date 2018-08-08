@@ -19,7 +19,7 @@
     "watch-html": "onchange src/ejs -- gulp html",
     "watch": "npm-run-all --parallel watch-*",
     "riot": "riot -w --config riot.config",
-    "min-css": "postcss ${npm_package_config_distDir}/css/main.css -e minify -o ${npm_package_config_distDir}/css/main.css",
+    "min-css": "postcss ${npm_package_config_distDir}/css/main.css --env minify -o ${npm_package_config_distDir}/css/main.css",
     "min-image": "imagemin ${npm_package_config_distDir}/img/*.{jpg,png} --out-dir=${npm_package_config_distDir}/img",
     "min-js": "uglifyjs dist/js/main.js",
     "min": "npm-run-all --parallel min-*",
