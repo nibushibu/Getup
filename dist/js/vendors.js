@@ -35,452 +35,242 @@ function(a){a=P(a);for(var c=v.length;c--;)for(var d=v[c],b=d.animations,f=b.len
 var t,e;t=this,e=function(t){"use strict";function a(t,e){return(e||document).querySelector(t)}var e,n,y=[],w={},s="yield",_="__global_mixin",N="riot-",u=["ref","data-ref"],f="data-is",p="if",d="each",r="no-reorder",A="show",C="hide",i="key",x="__riot-events__",o="string",$="object",l="undefined",c="function",h="http://www.w3.org/1999/xlink",m="http://www.w3.org/2000/svg",g=/^xlink:(\w+)/,v=typeof window===l?void 0:window,b=/^on/,O=/([-\w]+) ?= ?(?:"([^"]*)|'([^']*)|({[^}]*}))/g,k={viewbox:"viewBox",preserveaspectratio:"preserveAspectRatio"},E=/^(?:disabled|checked|readonly|required|allowfullscreen|auto(?:focus|play)|compact|controls|default|formnovalidate|hidden|ismap|itemscope|loop|multiple|muted|no(?:resize|shade|validate|wrap)?|open|reversed|seamless|selected|sortable|truespeed|typemustmatch)$/,L=0|(v&&v.document||{}).documentMode;function T(t){return"svg"===t?document.createElementNS(m,t):document.createElement(t)}function j(t,e,n){var r=g.exec(e);r&&r[1]?t.setAttributeNS(h,r[1],n):t.setAttribute(e,n)}var M,S,I={},R=!1;v&&(M=T("style"),S=a("style[type=riot]"),j(M,"type","text/css"),S?(S.id&&(M.id=S.id),S.parentNode.replaceChild(M,S)):document.head.appendChild(M),n=(e=M).styleSheet);var P={styleNode:e,add:function(t,e){I[e]=t,R=!0},inject:function(){if(v&&R){R=!1;var t=Object.keys(I).map(function(t){return I[t]}).join("\n");n?n.cssText=t:e.innerHTML=t}},remove:function(t){delete I[t],R=!0}},V=function(){var u=["case","default","do","else","in","instanceof","prefix","return","typeof","void","yield"],l=u.reduce(function(t,e){return t+e.slice(-1)},""),c=/^\/(?=[^*>/])[^[/\\]*(?:(?:\\.|\[(?:\\.|[^\]\\]*)*\])[^[\\/]*)*?\/[gimuy]*/,f=/[$\w]/;function p(t,e){for(;0<=--e&&/\s/.test(t[e]););return e}return function(t,e){var n=/.*/g,r=n.lastIndex=e++,i=n.exec(t)[0].match(c);if(i){var o=r+i[0].length,a=t[r=p(t,r)];if(r<0||~"[{(,;:?=|&!^~>%*/".indexOf(a))return o;if("."===a)"."===t[r-1]&&(e=o);else if("+"===a||"-"===a)(t[--r]!==a||(r=p(t,r))<0||!f.test(t[r]))&&(e=o);else if(~l.indexOf(a)){for(var s=r+1;0<=--r&&f.test(t[r]););~u.indexOf(t.slice(r+1,s))&&(e=o)}}return e}}(),H=function(t){var e,n,r="g",i=/"[^"\\]*(?:\\[\S\s][^"\\]*)*"|'[^'\\]*(?:\\[\S\s][^'\\]*)*'|`[^`\\]*(?:\\[\S\s][^`\\]*)*`/g,o=i.source+"|"+/(?:\breturn\s+|(?:[$\w\)\]]|\+\+|--)\s*(\/)(?![*\/]))/.source+"|"+/\/(?=[^*\/])[^[\/\\]*(?:(?:\[(?:\\.|[^\]\\]*)*\]|\\.)[^[\/\\]*)*?([^<]\/)[gim]*/.source,a=RegExp("[\\x00-\\x1F<>a-zA-Z0-9'\",;\\\\]"),s=/(?=[[\]()*+?.^$|])/g,u=i.source+"|"+/(\/)(?![*\/])/.source,y={"(":RegExp("([()])|"+u,r),"[":RegExp("([[\\]])|"+u,r),"{":RegExp("([{}])|"+u,r)},l="{ }",c=["{","}","{","}",/{[^}]*}/,/\\([{}])/g,/\\({)|{/g,RegExp("\\\\(})|([[({])|(})|"+u,r),l,/^\s*{\^?\s*([$\w]+)(?:\s*,\s*(\S+))?\s+in\s+(\S.*)\s*}/,/(^|[^\\]){=[\S\s]*?}/],f=void 0,_=[];function p(t){return t}function d(t,e){return e||(e=_),new RegExp(t.source.replace(/{/g,e[2]).replace(/}/g,e[3]),t.global?r:"")}function h(t){if(t===l)return c;var e=t.split(" ");if(2!==e.length||a.test(t))throw new Error('Unsupported brackets "'+t+'"');return(e=e.concat(t.replace(s,"\\").split(" ")))[4]=d(1<e[1].length?/{[\S\s]*?}/:c[4],e),e[5]=d(3<t.length?/\\({|})/g:c[5],e),e[6]=d(c[6],e),e[7]=RegExp("\\\\("+e[3]+")|([[({])|("+e[3]+")|"+u,r),e[8]=t,e}function m(t){return t instanceof RegExp?e(t):_[t]}function g(t){(t||(t=l))!==_[8]&&(_=h(t),e=t===l?p:d,_[9]=e(c[9])),f=t}return m.split=function(r,i,e){e||(e=_);var t,n,o,a,s,u,l=[],c=e[6],f=[],p="";for(n=o=c.lastIndex=0;t=c.exec(r);){if(u=c.lastIndex,a=t.index,n){if(t[2]){var d=t[2],h=y[d],m=1;for(h.lastIndex=u;t=h.exec(r);)if(t[1]){if(t[1]===d)++m;else if(!--m)break}else h.lastIndex=v(t.index,h.lastIndex,t[2]);c.lastIndex=m?r.length:h.lastIndex;continue}if(!t[3]){c.lastIndex=v(a,u,t[4]);continue}}t[1]||(g(r.slice(o,a)),o=c.lastIndex,(c=e[6+(n^=1)]).lastIndex=o)}return r&&o<r.length&&g(r.slice(o)),l.qblocks=f,l;function g(t){p&&(t=p+t,p=""),i||n?l.push(t&&t.replace(e[5],"$1")):l.push(t)}function v(t,e,n){return n&&(e=V(r,t)),i&&t+2<e&&(s="⁗"+f.length+"~",f.push(r.slice(t,e)),p+=r.slice(o,t)+s,o=e),e}},m.hasExpr=function(t){return _[4].test(t)},m.loopKeys=function(t){var e=t.match(_[9]);return e?{key:e[1],pos:e[2],val:_[0]+e[3].trim()+_[1]}:{val:t.trim()}},m.array=function(t){return t?h(t):_},Object.defineProperty(m,"settings",{set:function(t){var e;e=(t=t||{}).brackets,Object.defineProperty(t,"brackets",{set:g,get:function(){return f},enumerable:!0}),n=t,g(e)},get:function(){return n}}),m.settings="undefined"!=typeof riot&&riot.settings||{},m.set=g,m.skipRegex=V,m.R_STRINGS=i,m.R_MLCOMMS=/\/\*[^*]*\*+(?:[^*\/][^*]*\*+)*\//g,m.S_QBLOCKS=o,m.S_QBLOCK2=u,m}(),U=function(){var n={};function r(t,e){return t?(n[t]||(n[t]=function(t){var e=function(t){var e,n=H.split(t.replace(s,'"'),1),r=n.qblocks;if(2<n.length||n[0]){var i,o,a=[];for(i=o=0;i<n.length;++i)(e=n[i])&&(e=1&i?l(e,1,r):'"'+e.replace(/\\/g,"\\\\").replace(/\r\n?|\n/g,"\\n").replace(/"/g,'\\"')+'"')&&(a[o++]=e);e=o<2?a[0]:"["+a.join(",")+'].join("")'}else e=l(n[1],0,r);r.length&&(e=e.replace(u,function(t,e){return r[e].replace(/\r/g,"\\r").replace(/\n/g,"\\n")}));return e}(t);"try{return "!==e.slice(0,11)&&(e="return "+e);return new Function("E",e+";")}(t))).call(e,function(t,e){t.riotData={tagName:e&&e.__&&e.__.tagName,_riot_id:e&&e._riot_id},r.errorHandler?r.errorHandler(t):"undefined"!=typeof console&&"function"==typeof console.error&&(console.error(t.message),console.log("<%s> %s",t.riotData.tagName||"Unknown tag",this.tmpl),console.log(this.data))}.bind({data:e,tmpl:t})):t}r.hasExpr=H.hasExpr,r.loopKeys=H.loopKeys,r.clearCache=function(){n={}},r.errorHandler=null;var s=/\u2057/g,u=/\u2057(\d+)~/g;var c=/^(?:(-?[_A-Za-z\xA0-\xFF][-\w\xA0-\xFF]*)|\u2057(\d+)~):/,f={"(":/[()]/g,"[":/[[\]]/g,"{":/[{}]/g};function l(o,t,e){if(o=o.replace(/\s+/g," ").trim().replace(/\ ?([[\({},?\.:])\ ?/g,"$1")){for(var n,r=[],i=0;o&&(n=o.match(c))&&!n.index;){var a,s,u=/,|([[{(])|$/g;for(o=RegExp.rightContext,a=n[2]?e[n[2]].slice(1,-1).trim().replace(/\s+/g," "):n[1];s=(n=u.exec(o))[1];)l(s,u);s=o.slice(0,n.index),o=RegExp.rightContext,r[i++]=d(s,1,a)}o=i?1<i?"["+r.join(",")+'].join(" ").trim()':r[0]:d(o,t)}return o;function l(t,e){var n,r=1,i=f[t];for(i.lastIndex=e.lastIndex;n=i.exec(o);)if(n[0]===t)++r;else if(!--r)break;e.lastIndex=r?o.length:i.lastIndex}}var a='"in this?this:'+("object"!=typeof window?"global":"window")+").",i=/[,{][\$\w]+(?=:)|(^ *|[^$\w\.{])(?!(?:typeof|true|false|null|undefined|in|instanceof|is(?:Finite|NaN)|void|NaN|new|Date|RegExp|Math)(?![$\w]))([$_A-Za-z][$\w]*)/g,p=/^(?=(\.[$\w]+))\1(?:[^.[(]|$)/;function d(t,e,n){var o;return t=t.replace(i,function(t,e,n,r,i){return n&&(r=o?0:r+t.length,"this"!==n&&"global"!==n&&"window"!==n?(t=e+'("'+n+a+n,r&&(o="."===(i=i[r])||"("===i||"["===i)):r&&(o=!p.test(i.slice(r)))),t}),o&&(t="try{return "+t+"}catch(e){E(e,this)}"),n?t=(o?"function(){"+t+"}.call(this)":"("+t+")")+'?"'+n+'":""':e&&(t="function(v){"+(o?t.replace("return ","v="):"v=("+t+")")+';return v||v===0?v:""}.call(this)'),t}return r.version=H.version="v3.0.8",r}(),B=function(s){s=s||{};var u={},l=Array.prototype.slice;return Object.defineProperties(s,{on:{value:function(t,e){return"function"==typeof e&&(u[t]=u[t]||[]).push(e),s},enumerable:!1,writable:!1,configurable:!1},off:{value:function(t,e){if("*"!=t||e)if(e)for(var n,r=u[t],i=0;n=r&&r[i];++i)n==e&&r.splice(i--,1);else delete u[t];else u={};return s},enumerable:!1,writable:!1,configurable:!1},one:{value:function(e,n){return s.on(e,function t(){s.off(e,t),n.apply(s,arguments)})},enumerable:!1,writable:!1,configurable:!1},trigger:{value:function(t){var e,n,r,i=arguments,o=arguments.length-1,a=new Array(o);for(r=0;r<o;r++)a[r]=i[r+1];for(e=l.call(u[t]||[],0),r=0;n=e[r];++r)n.apply(s,a);return u["*"]&&"*"!=t&&s.trigger.apply(s,["*",t].concat(a)),s},enumerable:!1,writable:!1,configurable:!1}}),s};function z(t,e){return Object.getOwnPropertyDescriptor(t,e)}function D(t){return typeof t===l}function F(t,e){var n=z(t,e);return D(t[e])||n&&n.writable}function K(t){for(var e,n=1,r=arguments,i=r.length;n<i;n++)if(e=r[n])for(var o in e)F(t,o)&&(t[o]=e[o]);return t}function q(t){return Object.create(t)}var W=K(q(H.settings),{skipAnonymousTags:!0,autoUpdate:!0});function Z(t,e){return[].slice.call((e||document).querySelectorAll(t))}function G(){return document.createTextNode("")}function Q(t,e){t.style.display=e?"":"none",t.hidden=!e}function J(t,e){return t.getAttribute(e)}function X(t,e){t.removeAttribute(e)}function Y(t,e,n){if(n){var r=t.ownerDocument.importNode((new DOMParser).parseFromString('<svg xmlns="'+m+'">'+e+"</svg>","application/xml").documentElement,!0);t.appendChild(r)}else t.innerHTML=e}function tt(t,e){if(t)for(var n;n=O.exec(t);)e(n[1].toLowerCase(),n[2]||n[3]||n[4])}function et(){return document.createDocumentFragment()}function nt(t,e,n){t.insertBefore(e,n.parentNode&&n)}function rt(n){return Object.keys(n).reduce(function(t,e){return t+" "+e+": "+n[e]+";"},"")}function it(t,e,n){if(t){var r,i=e(t,n);if(!1===i)return;for(t=t.firstChild;t;)r=t.nextSibling,it(t,e,i),t=r}}var ot=Object.freeze({$$:Z,$:a,createDOMPlaceholder:G,mkEl:T,setAttr:j,toggleVisibility:Q,getAttr:J,remAttr:X,setInnerHTML:Y,walkAttrs:tt,createFrag:et,safeInsert:nt,styleObjectToString:rt,walkNodes:it});function at(t){return D(t)||null===t}function st(t){return at(t)||""===t}function ut(t){return typeof t===c}function lt(t){return t&&typeof t===$}function ct(t){var e=t.ownerSVGElement;return!!e||null===e}function ft(t){return Array.isArray(t)||t instanceof Array}function pt(t){return E.test(t)}function dt(t){return typeof t===o}var ht=Object.freeze({isBlank:st,isFunction:ut,isObject:lt,isSvg:ct,isWritable:F,isArray:ft,isBoolAttr:pt,isNil:at,isString:dt,isUndefined:D});function mt(t,e){return-1!==t.indexOf(e)}function gt(t,e){for(var n=t?t.length:0,r=0;r<n;r++)e(t[r],r);return t}function vt(t,e){return t.slice(0,e.length)===e}var yt,_t=(yt=-1,function(){return++yt});function xt(t,e,n,r){return Object.defineProperty(t,e,K({value:n,enumerable:!1,writable:!1,configurable:!0},r)),t}function bt(t){return t.replace(/-(\w)/g,function(t,e){return e.toUpperCase()})}function wt(t){console&&console.warn&&console.warn(t)}var Nt=Object.freeze({contains:mt,each:gt,getPropDescriptor:z,startsWith:vt,uid:_t,defineProperty:xt,objectCreate:q,extend:K,toCamel:bt,warn:wt});function At(t,e,n,r,i){var o=t[e],a=ft(o),s=!D(i);if(!o||o!==n)if(!o&&r)t[e]=[n];else if(o)if(a){var u=o.indexOf(n);if(u===i)return;-1!==u&&o.splice(u,1),s?o.splice(i,0,n):o.push(n)}else t[e]=[o,n];else t[e]=n}function Ct(t){return t.tagName&&w[J(t,f)||J(t,f)||t.tagName.toLowerCase()]}function Ot(t,e){var n=Ct(t),r=!e&&J(t,f);return r&&!U.hasExpr(r)?r:n?n.name:t.tagName.toLowerCase()}function kt(){return this.parent?K(q(this),this.parent):this}var Et=/<yield\b/i,Lt=/<yield\s*(?:\/>|>([\S\s]*?)<\/yield\s*>|>)/gi,Tt=/<yield\s+to=['"]([^'">]*)['"]\s*>([\S\s]*?)<\/yield\s*>/gi,jt=/<yield\s+from=['"]?([-\w]+)['"]?\s*(?:\/>|>([\S\s]*?)<\/yield\s*>)/gi,Mt={tr:"tbody",th:"tr",td:"tr",col:"colgroup"},St=L&&L<10?/^(?:t(?:body|head|foot|[rhd])|caption|col(?:group)?|opt(?:ion|group))$/:/^(?:t(?:body|head|foot|[rhd])|caption|col(?:group)?)$/,It="div",Rt="svg";function Pt(t,e,n){var r=t&&t.match(/^\s*<([-\w]+)/),i=r&&r[1].toLowerCase(),o=T(n?Rt:It);return t=function(t,n){if(!Et.test(t))return t;var r={};return n=n&&n.replace(Tt,function(t,e,n){return r[e]=r[e]||n,""}).trim(),t.replace(jt,function(t,e,n){return r[e]||n||""}).replace(Lt,function(t,e){return n||e||""})}(t,e),St.test(i)?o=function(t,e,n){var r="o"===n[0],i=r?"select>":"table>";if(t.innerHTML="<"+i+e.trim()+"</"+i,i=t.firstChild,r)i.selectedIndex=-1;else{var o=Mt[n];o&&1===i.childElementCount&&(i=a(o,i))}return i}(o,t,i):Y(o,t,n),o}var Vt=/^on/;function $t(t){for(var e=t;e.__.isAnonymous&&e.parent;)e=e.parent;return e}function Ht(t,e,n,r){var i,o=function(t,e,n){var r=this.__.parent,i=this.__.item;if(!i)for(;r&&!i;)i=r.__.item,r=r.__.parent;if(F(n,"currentTarget")&&(n.currentTarget=t),F(n,"target")&&(n.target=n.srcElement),F(n,"which")&&(n.which=n.charCode||n.keyCode),n.item=i,e.call(this,n),W.autoUpdate&&!n.preventUpdate){var o=$t(this);o.isMounted&&o.update()}}.bind(r,n,e);n[t]=null,i=t.replace(b,""),mt(r.__.listeners,n)||r.__.listeners.push(n),n[x]||(n[x]={}),n[x][t]&&n.removeEventListener(i,n[x][t]),n[x][t]=o,n.addEventListener(i,o,!1)}function Ut(t,e,n,r){var i=ye(t,e,n),o=e.tagName||Ot(e.root,!0),a=$t(r);return xt(i,"parent",a),i.__.parent=r,At(a.tags,o,i),a!==r&&At(r.tags,o,i),i}function Bt(t,e,n,r){if(ft(t[e])){var i=t[e].indexOf(n);-1!==i&&t[e].splice(i,1),t[e].length?1!==t[e].length||r||(t[e]=t[e][0]):delete t[e]}else t[e]===n&&delete t[e]}function zt(t,e){var n,r,i=G(),o=G(),a=et();for(this.root.insertBefore(i,this.root.firstChild),this.root.appendChild(o),this.__.head=r=i,this.__.tail=o;r;)n=r.nextSibling,a.appendChild(r),this.__.virts.push(r),r=n;e?t.insertBefore(a,e.__.head):t.appendChild(a)}function Dt(t,e){if(e.parentNode){var n=et();zt.call(t,n),e.parentNode.replaceChild(n,e)}}function Ft(t){if(!this.root||!J(this.root,"virtualized")){var e,n,r=t.dom,i=(e=t.attr)?(e=e.replace(N,""),k[e]&&(e=k[e]),e):null,o=mt([A,C],i),a=t.root&&"VIRTUAL"===t.root.tagName,s=this.__.isAnonymous,u=r&&(t.parent||r.parentNode),l="style"===i,c="class"===i;if(t._riot_id)t.__.wasCreated?t.update():(t.mount(),a&&Dt(t,t.root));else{if(t.update)return t.update();var f,p,d,h,m,g,v,y=o&&!s?kt.call(this):this,_=!st(n=U(t.expr,y)),x=lt(n);if(x&&(c?n=U(JSON.stringify(n),this):l&&(n=rt(n))),!t.attr||t.wasParsedOnce&&_&&!1!==n||X(r,J(r,t.attr)?t.attr:i),t.bool&&(n=!!n&&i),t.isRtag)return p=this,d=n,m=(f=t).tag||f.dom._tag,g=(m?m.__:{}).head,v="VIRTUAL"===f.dom.tagName,void(m&&f.tagName===d?m.update():(m&&(v&&(h=G(),g.parentNode.insertBefore(h,g)),m.unmount(!0)),dt(d)&&(f.impl=w[d],f.impl&&(f.tag=m=Ut(f.impl,{root:f.dom,parent:p,tagName:d},f.dom.innerHTML,p),gt(f.attrs,function(t){return j(m.root,t.name,t.value)}),f.tagName=d,m.mount(),v&&Dt(m,h||m.root),p.__.onUnmount=function(){var t=m.opts.dataIs;Bt(m.parent.tags,t,m),Bt(m.__.parent.tags,t,m),m.unmount()}))));if((!t.wasParsedOnce||t.value!==n)&&(t.value=n,t.wasParsedOnce=!0,!x||c||l||o)){if(_||(n=""),!i)return n+="",void(u&&("TEXTAREA"===(t.parent=u).tagName?(u.value=n,L||(r.nodeValue=n)):r.nodeValue=n));switch(!0){case ut(n):b=i,Vt.test(b)&&Ht(i,n,r,this);break;case o:Q(r,i===C?!n:n);break;default:t.bool&&(r[i]=n),"value"===i&&r.value!==n?r.value=n:_&&!1!==n&&j(r,i,n),l&&r.hidden&&Q(r,!1)}var b}}}}function Kt(t){gt(t,Ft.bind(this))}function qt(t,e,n,r,i){if(!t||!n){var o=t?kt.call(this):e||this;gt(i,function(t){t.expr&&Ft.call(o,t.expr),r[bt(t.name).replace(N,"")]=t.expr?t.expr.value:t.value})}}function Wt(t){if(!t){var e=Object.keys(w);return e+Wt(e)}return t.filter(function(t){return!/[^-\w]/.test(t)}).reduce(function(t,e){var n=e.trim().toLowerCase();return t+",["+f+'="'+n+'"]'},"")}function Zt(t,e){var n=this,r=n.name,i=n.tmpl,o=n.css,a=n.attrs,s=n.onCreate;return w[r]||(Gt(r,i,o,a,s),w[r].class=this.constructor),_e(t,r,e,this),o&&P.inject(),this}function Gt(t,e,n,r,i){return ut(r)&&(i=r,/^[\w-]+\s?=/.test(n)?(r=n,n=""):r=""),n&&(ut(n)?i=n:P.add(n,t)),t=t.toLowerCase(),w[t]={name:t,tmpl:e,attrs:r,fn:i},t}function Qt(t,e,n,r,i){return n&&P.add(n,t),w[t]={name:t,tmpl:e,attrs:r,fn:i},t}function Jt(t,i,o){var e,n,a=[];if(P.inject(),lt(i)&&(o=i,i=0),e=dt(t)?(t="*"===t?n=Wt():t+Wt(t.split(/, */)))?Z(t):[]:t,"*"===i){if(i=n||Wt(),e.tagName)e=Z(i,e);else{var r=[];gt(e,function(t){return r.push(Z(i,t))}),e=r}i=0}return function t(e){if(e.tagName){var n,r=J(e,f);i&&r!==i&&j(e,f,r=i),(n=_e(e,r||e.tagName.toLowerCase(),o))&&a.push(n)}else e.length&&gt(e,t)}(e),a}var Xt={},Yt=Xt[_]={},te=0;function ee(t,e,n){if(lt(t))ee("__"+te+++"__",t,!0);else{var r=n?Yt:Xt;if(!e){if(D(r[t]))throw new Error("Unregistered mixin: "+t);return r[t]}r[t]=ut(e)?K(e.prototype,r[t]||{})&&e:K(r[t]||{},e)}}function ne(){return gt(y,function(t){return t.update()})}function re(t){return P.remove(t),delete w[t]}var ie=Object.freeze({Tag:Zt,tag:Gt,tag2:Qt,mount:Jt,mixin:ee,update:ne,unregister:re,version:"v3.11.2"});function oe(t,e){var n,r=this.parent;r&&(ft(n=r.tags[t])?n.splice(e,0,n.splice(n.indexOf(this),1)[0]):At(r.tags,t,this))}function ae(t,e){for(var n,r=this.__.head,i=et();r;)if(n=r.nextSibling,i.appendChild(r),(r=n)===this.__.tail){i.appendChild(r),t.insertBefore(i,e.__.head);break}}function se(t,e,n){var r={};return r[t.key]=e,t.pos&&(r[t.pos]=n),r}function ue(t,e){t.splice(e,1),this.unmount(),Bt(this.parent,this,this.__.tagName,!0)}function le(N,A,C){var O=typeof J(N,r)!==o||X(N,r),k=J(N,i),E=!!k&&U.hasExpr(k),L=Ot(N),T=w[L],t=N.parentNode,e=G(),j=Ct(N),M=J(N,p),S=[],I=N.innerHTML,R=!w[L],P="VIRTUAL"===N.tagName,V=[];return X(N,d),X(N,i),(C=U.loopKeys(C)).isLoop=!0,M&&X(N,p),t.insertBefore(e,N),t.removeChild(N),C.update=function(){C.value=U(C.val,A);var g=C.value,v=et(),y=!ft(g)&&!dt(g),_=e.parentNode,x=[],b=y&&!!g;if(_){y&&(g=g?Object.keys(g).map(function(t){return se(C,g[t],t)}):[]);var w=0;gt(g,function(t,e){var n=e-w,r=!b&&C.key?se(C,t,e):t;if(!M||U(M,K(q(A),r))){var i,o,a,s,u=(o=t,a=r,s=E,(i=k)?s?U(i,a):o[i]:o),l=!y&&O&&typeof t===$||k,c=V.indexOf(u),f=-1===c,p=!f&&l?c:n,d=S[p],h=n>=V.length,m=l&&f||!l&&!d||!S[n];m?((d=ye(T,{parent:A,isLoop:!0,isAnonymous:R,tagName:L,root:N.cloneNode(R),item:r,index:n},I)).mount(),h?function(t,e){e?zt.call(this,t):t.appendChild(this.root)}.apply(d,[v||_,P]):function(t,e,n){n?zt.apply(this,[t,e]):nt(t,this.root,e.root)}.apply(d,[_,S[n],P]),h||V.splice(n,0,r),S.splice(n,0,d),j&&At(A.tags,L,d,!0)):p!==n&&l&&((k||mt(g,V[p]))&&(function(t,e,n){n?ae.apply(this,[t,e]):nt(t,this.root,e.root)}.apply(d,[_,S[n],P]),S.splice(n,0,S.splice(p,1)[0]),V.splice(n,0,V.splice(p,1)[0])),C.pos&&(d[C.pos]=n),!j&&d.tags&&function(e){var n=this;gt(Object.keys(this.tags),function(t){oe.apply(n.tags[t],[t,e])})}.call(d,n)),K(d.__,{item:r,index:n,parent:A}),x[n]=u,m||d.update(r)}else w++}),function(t,e,n){for(var r=e.length,i=t.length-n;i<r;)ue.apply(e[--r],[e,r])}(g,S,w),V=x.slice(),_.insertBefore(v,e)}},C.unmount=function(){gt(S,function(t){t.unmount()})},C}var ce={init:function(t,e,n,r){return this.dom=t,this.attr=n,this.rawValue=r,this.parent=e,this.hasExp=U.hasExpr(r),this},update:function(){var t=this.value,e=this.parent&&$t(this.parent),n=this.dom.__ref||this.tag||this.dom;this.value=this.hasExp?U(this.rawValue,this.parent):this.rawValue,!st(t)&&e&&Bt(e.refs,t,n),!st(this.value)&&dt(this.value)?(e&&At(e.refs,this.value,n,null,this.parent.__.index),this.value!==t&&j(this.dom,this.attr,this.value)):X(this.dom,this.attr),this.dom.__ref||(this.dom.__ref=n)},unmount:function(){var t=this.tag||this.dom,e=this.parent&&$t(this.parent);!st(this.value)&&e&&Bt(e.refs,this.value,t)}};function fe(t,e,n,r){return q(ce).init(t,e,n,r)}function pe(t){gt(t,function(t){t.unmount?t.unmount(!0):t.tagName?t.tag.unmount(!0):t.unmount&&t.unmount()})}var de={init:function(t,e,n){X(t,p),K(this,{tag:e,expr:n,stub:G(),pristine:t});var r=t.parentNode;return r.insertBefore(this.stub,t),r.removeChild(t),this},update:function(){this.value=U(this.expr,this.tag),this.stub.parentNode&&(this.value&&!this.current?(this.current=this.pristine.cloneNode(!0),this.stub.parentNode.insertBefore(this.current,this.stub),this.expressions=me.apply(this.tag,[this.current,!0])):!this.value&&this.current&&(this.unmount(),this.current=null,this.expressions=[]),this.value&&Kt.call(this.tag,this.expressions))},unmount:function(){this.current&&(this.current._tag?this.current._tag.unmount():this.current.parentNode&&this.current.parentNode.removeChild(this.current)),pe(this.expressions||[])}};function he(t,e,n){return q(de).init(t,e,n)}function me(s,u){var l=this,c=[];return it(s,function(t){var e,n,r=t.nodeType;if((u||t!==s)&&(3===r&&"STYLE"!==t.parentNode.tagName&&U.hasExpr(t.nodeValue)&&c.push({dom:t,expr:t.nodeValue}),1===r)){var i="VIRTUAL"===t.tagName;if(e=J(t,d))return i&&j(t,"loopVirtual",!0),c.push(le(t,l,e)),!1;if(e=J(t,p))return c.push(he(t,l,e)),!1;if((e=J(t,f))&&U.hasExpr(e))return c.push({isRtag:!0,expr:e,dom:t,attrs:[].slice.call(t.attributes)}),!1;if(n=Ct(t),i&&(J(t,"virtualized")&&t.parentElement.removeChild(t),n||J(t,"virtualized")||J(t,"loopVirtual")||(n={tmpl:t.outerHTML})),n&&(t!==s||u)){var o=J(t,f);if(!i||o)return o&&i&&wt("Virtual tags shouldn't be used together with the \""+f+'" attribute - https://github.com/riot/riot/issues/2511'),c.push(Ut(n,{root:t,parent:l},t.innerHTML,l)),!1;j(t,"virtualized",!0);var a=ye({tmpl:t.outerHTML},{root:t,parent:l},t.innerHTML);c.push(a)}ge.apply(l,[t,t.attributes,function(t,e){e&&c.push(e)}])}}),c}function ge(i,t,o){var a=this;gt(t,function(t){if(!t)return!1;var e,n=t.name,r=pt(n);mt(u,n)&&i.tagName.toLowerCase()!==s?e=fe(i,a,n,t.value):U.hasExpr(t.value)&&(e={dom:i,expr:t.value,attr:n,bool:r}),o(t,e)})}function ve(t){var e=this.__.isAnonymous;xt(this,"isMounted",t),e||(t?this.trigger("mount"):(this.trigger("unmount"),this.off("*"),this.__.wasCreated=!1))}function ye(t,e,n){void 0===t&&(t={}),void 0===e&&(e={});var r,s=e.context||{},i=e.opts||{},o=e.parent,a=e.isLoop,u=!!e.isAnonymous,l=W.skipAnonymousTags&&u,c=e.item,f=e.index,p=t.tmpl,d=[],h=e.root,m=e.tagName||Ot(h),g="virtual"===m,v=!g&&!p;return v||a&&u?r=h:(g||(h.innerHTML=""),r=Pt(p,n,ct(h))),l||B(s),t.name&&h._tag&&h._tag.unmount(!0),xt(s,"__",{impl:t,root:h,skipAnonymous:l,implAttrs:[],isAnonymous:u,instAttrs:[],innerHTML:n,tagName:m,index:f,isLoop:a,isInline:v,item:c,parent:o,listeners:[],virts:[],wasCreated:!1,tail:null,head:null}),[["isMounted",!1],["_riot_id",_t()],["root",h],["opts",i,{writable:!0,enumerable:!0}],["parent",o||null],["tags",{}],["refs",{}],["update",function(t){return n=t,r=d,i=(e=s).__,o={},a=e.isMounted&&!i.skipAnonymous,i.isAnonymous&&i.parent&&K(e,i.parent),K(e,n),qt.apply(e,[i.isLoop,i.parent,i.isAnonymous,o,i.instAttrs]),a&&e.isMounted&&ut(e.shouldUpdate)&&!e.shouldUpdate(n,o)||(K(e.opts,o),a&&e.trigger("update",n),Kt.call(e,r),a&&e.trigger("updated")),e;var e,n,r,i,o,a}],["mixin",function(){for(var t=[],e=arguments.length;e--;)t[e]=arguments[e];return function(a){for(var t=[],e=arguments.length-1;0<e--;)t[e]=arguments[e+1];return gt(t,function(t){var r,e,n=[],i=["init","__proto__"];t=dt(t)?ee(t):t,r=ut(t)?new t:t;for(var o=Object.getPrototypeOf(r);n=n.concat(Object.getOwnPropertyNames(e||r)),e=Object.getPrototypeOf(e||r););gt(n,function(t){if(!mt(i,t)){var e=z(r,t)||z(o,t),n=e&&(e.get||e.set);!a.hasOwnProperty(t)&&n?Object.defineProperty(a,t,e):a[t]=ut(r[t])?r[t].bind(a):r[t]}}),r.init&&r.init.bind(a)(a.opts)}),a}.apply(void 0,[s].concat(t))}],["mount",function(){return function(n,t,r,e){var i=n.__,o=i.root;o._tag=n,ge.apply(i.parent,[o,o.attributes,function(t,e){!i.isAnonymous&&ce.isPrototypeOf(e)&&(e.tag=n),t.expr=e,i.instAttrs.push(t)}]),tt(i.impl.attrs,function(t,e){i.implAttrs.push({name:t,value:e})}),ge.apply(n,[o,i.implAttrs,function(t,e){e?r.push(e):j(o,t.name,t.value)}]),qt.apply(n,[i.isLoop,i.parent,i.isAnonymous,e,i.instAttrs]);var a=ee(_);if(a&&!i.skipAnonymous)for(var s in a)a.hasOwnProperty(s)&&n.mixin(a[s]);if(i.impl.fn&&i.impl.fn.call(n,e),i.skipAnonymous||n.trigger("before-mount"),gt(me.apply(n,[t,i.isAnonymous]),function(t){return r.push(t)}),n.update(i.item),!i.isAnonymous&&!i.isInline)for(;t.firstChild;)o.appendChild(t.firstChild);if(xt(n,"root",o),!i.skipAnonymous&&n.parent){var u=$t(n.parent);u.one(u.isMounted?"updated":"mount",function(){ve.call(n,!0)})}else ve.call(n,!0);return n.__.wasCreated=!0,n}(s,r,d,i)}],["unmount",function(t){return function(e,t,n){var r=e.__,i=r.root,o=y.indexOf(e),a=i.parentNode;if(r.skipAnonymous||e.trigger("before-unmount"),tt(r.impl.attrs,function(t){vt(t,N)&&(t=t.slice(N.length)),X(i,t)}),e.__.listeners.forEach(function(e){Object.keys(e[x]).forEach(function(t){e.removeEventListener(t,e[x][t])})}),-1!==o&&y.splice(o,1),r.parent&&!r.isAnonymous){var s=$t(r.parent);r.isVirtual?Object.keys(e.tags).forEach(function(t){return Bt(s.tags,t,e.tags[t])}):Bt(s.tags,r.tagName,e)}return e.__.virts&&gt(e.__.virts,function(t){t.parentNode&&t.parentNode.removeChild(t)}),pe(n),gt(r.instAttrs,function(t){return t.expr&&t.expr.unmount&&t.expr.unmount()}),t?Y(i,""):a&&a.removeChild(i),r.onUnmount&&r.onUnmount(),e.isMounted||ve.call(e,!0),ve.call(e,!1),delete i._tag,e}(s,t,d)}]].reduce(function(t,e){var n=e[0],r=e[1],i=e[2];return xt(s,n,r,i),t},K(s,c))}function _e(t,e,n,r){var i,o=w[e],a=w[e].class,s=r||(a?q(a.prototype):{}),u=t._innerHTML=t._innerHTML||t.innerHTML,l=K({root:t,opts:n,context:s},{parent:n?n.parent:null});return o&&t&&(i=ye(o,l,u)),i&&i.mount&&(i.mount(!0),mt(y,i)||y.push(i)),i}var xe=Object.freeze({arrayishAdd:At,getTagName:Ot,inheritParentProps:kt,mountTo:_e,selectTags:Wt,arrayishRemove:Bt,getTag:Ct,initChildTag:Ut,moveChildTag:oe,makeReplaceVirtual:Dt,getImmediateCustomParentTag:$t,makeVirtual:zt,moveVirtual:ae,unmountAll:pe,createIfDirective:he,createRefDirective:fe}),be=W,we={tmpl:U,brackets:H,styleManager:P,vdom:y,styleNode:P.styleNode,dom:ot,check:ht,misc:Nt,tags:xe},Ne=Zt,Ae=Gt,Ce=Qt,Oe=Jt,ke=ee,Ee=ne,Le=re,Te=B,je=K({},ie,{observable:B,settings:be,util:we});t.settings=be,t.util=we,t.Tag=Ne,t.tag=Ae,t.tag2=Ce,t.mount=Oe,t.mixin=ke,t.update=Ee,t.unregister=Le,t.version="v3.11.2",t.observable=Te,t.default=je,Object.defineProperty(t,"__esModule",{value:!0})},"object"==typeof exports&&"undefined"!=typeof module?e(exports):"function"==typeof define&&define.amd?define(["exports"],e):e(t.riot={});
 
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global.animore = factory());
-}(this, (function () { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('riot')) :
+	typeof define === 'function' && define.amd ? define(['exports', 'riot'], factory) :
+	(factory((global.riotAnimore = {}),global.riot));
+}(this, (function (exports,riot) { 'use strict';
 
-  /**
-   * Converts any DOM node/s to a loopable array
-   * @param   { HTMLElement|NodeList } els - single html element or a node list
-   * @returns { Array } always a loopable object
-   */
-  function domToArray(els) {
-    // can this object be already looped?
-    if (!Array.isArray(els)) {
-      // is it a node list?
-      if (/^\[object (HTMLCollection|NodeList|Object)\]$/.test(Object.prototype.toString.call(els)) && typeof els.length === 'number') return Array.from(els);else
-        // if it's a single node
-        // it will be returned as "array" with one single entry
-        return [els];
+var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
+
+
+
+
+function createCommonjsModule(fn, module) {
+	return module = { exports: {} }, fn(module, module.exports), module.exports;
+}
+
+var anime_min = createCommonjsModule(function (module) {
+/*
+ 2017 Julian Garnier
+ Released under the MIT license
+*/
+var $jscomp$this=commonjsGlobal;
+(function(v,p){"function"===typeof undefined&&undefined.amd?undefined([],p):"object"==='object'&&module.exports?module.exports=p():v.anime=p();})(commonjsGlobal,function(){function v(a){if(!g.col(a)){ try{return document.querySelectorAll(a)}catch(b){} }}function p(a){return a.reduce(function(a,d){return a.concat(g.arr(d)?p(d):d)},[])}function w(a){if(g.arr(a)){ return a; }g.str(a)&&(a=v(a)||a);return a instanceof NodeList||a instanceof HTMLCollection?[].slice.call(a):[a]}function F(a,b){return a.some(function(a){return a===b})}
+function A(a){var b={},d;for(d in a){ b[d]=a[d]; }return b}function G(a,b){var d=A(a),c;for(c in a){ d[c]=b.hasOwnProperty(c)?b[c]:a[c]; }return d}function B(a,b){var d=A(a),c;for(c in b){ d[c]=g.und(a[c])?b[c]:a[c]; }return d}function S(a){a=a.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i,function(a,b,d,h){return b+b+d+d+h+h});var b=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(a);a=parseInt(b[1],16);var d=parseInt(b[2],16),b=parseInt(b[3],16);return"rgb("+a+","+d+","+b+")"}function T(a){function b(a,b,c){0>
+c&&(c+=1);1<c&&--c;return c<1/6?a+6*(b-a)*c:.5>c?b:c<2/3?a+(b-a)*(2/3-c)*6:a}var d=/hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)/g.exec(a);a=parseInt(d[1])/360;var c=parseInt(d[2])/100,d=parseInt(d[3])/100;if(0==c){ c=d=a=d; }else{var e=.5>d?d*(1+c):d+c-d*c,l=2*d-e,c=b(l,e,a+1/3),d=b(l,e,a);a=b(l,e,a-1/3);}return"rgb("+255*c+","+255*d+","+255*a+")"}function x(a){if(a=/([\+\-]?[0-9#\.]+)(%|px|pt|em|rem|in|cm|mm|ex|pc|vw|vh|deg|rad|turn)?/.exec(a)){ return a[2] }}function U(a){if(-1<a.indexOf("translate")){ return"px"; }
+if(-1<a.indexOf("rotate")||-1<a.indexOf("skew")){ return"deg" }}function H(a,b){return g.fnc(a)?a(b.target,b.id,b.total):a}function C(a,b){if(b in a.style){ return getComputedStyle(a).getPropertyValue(b.replace(/([a-z])([A-Z])/g,"$1-$2").toLowerCase())||"0" }}function I(a,b){if(g.dom(a)&&F(V,b)){ return"transform"; }if(g.dom(a)&&(a.getAttribute(b)||g.svg(a)&&a[b])){ return"attribute"; }if(g.dom(a)&&"transform"!==b&&C(a,b)){ return"css"; }if(null!=a[b]){ return"object" }}function W(a,b){var d=U(b),d=-1<b.indexOf("scale")?
+1:0+d;a=a.style.transform;if(!a){ return d; }for(var c=[],e=[],l=[],h=/(\w+)\((.+?)\)/g;c=h.exec(a);){ e.push(c[1]),l.push(c[2]); }a=l.filter(function(a,c){return e[c]===b});return a.length?a[0]:d}function J(a,b){switch(I(a,b)){case "transform":return W(a,b);case "css":return C(a,b);case "attribute":return a.getAttribute(b)}return a[b]||0}function K(a,b){var d=/^(\*=|\+=|-=)/.exec(a);if(!d){ return a; }b=parseFloat(b);a=parseFloat(a.replace(d[0],""));switch(d[0][0]){case "+":return b+a;case "-":return b-a;case "*":return b*
+a}}function D(a){return g.obj(a)&&a.hasOwnProperty("totalLength")}function X(a,b){function d(c){c=void 0===c?0:c;return a.el.getPointAtLength(1<=b+c?b+c:0)}var c=d(),e=d(-1),l=d(1);switch(a.property){case "x":return c.x;case "y":return c.y;case "angle":return 180*Math.atan2(l.y-e.y,l.x-e.x)/Math.PI}}function L(a,b){var d=/-?\d*\.?\d+/g;a=D(a)?a.totalLength:a;if(g.col(a)){ b=g.rgb(a)?a:g.hex(a)?S(a):g.hsl(a)?T(a):void 0; }else{var c=x(a);a=c?a.substr(0,a.length-c.length):a;b=b?a+b:a;}b+="";return{original:b,
+numbers:b.match(d)?b.match(d).map(Number):[0],strings:b.split(d)}}function Y(a,b){return b.reduce(function(b,c,e){return b+a[e-1]+c})}function M(a){return(a?p(g.arr(a)?a.map(w):w(a)):[]).filter(function(a,d,c){return c.indexOf(a)===d})}function Z(a){var b=M(a);return b.map(function(a,c){return{target:a,id:c,total:b.length}})}function aa(a,b){var d=A(b);if(g.arr(a)){var c=a.length;2!==c||g.obj(a[0])?g.fnc(b.duration)||(d.duration=b.duration/c):a={value:a};}return w(a).map(function(a,c){c=c?0:b.delay;
+a=g.obj(a)&&!D(a)?a:{value:a};g.und(a.delay)&&(a.delay=c);return a}).map(function(a){return B(a,d)})}function ba(a,b){var d={},c;for(c in a){var e=H(a[c],b);g.arr(e)&&(e=e.map(function(a){return H(a,b)}),1===e.length&&(e=e[0]));d[c]=e;}d.duration=parseFloat(d.duration);d.delay=parseFloat(d.delay);return d}function ca(a){return g.arr(a)?y.apply(this,a):N[a]}function da(a,b){var d;return a.tweens.map(function(c){c=ba(c,b);var e=c.value,l=J(b.target,a.name),h=d?d.to.original:l,h=g.arr(e)?e[0]:h,m=K(g.arr(e)?
+e[1]:e,h),l=x(m)||x(h)||x(l);c.isPath=D(e);c.from=L(h,l);c.to=L(m,l);c.start=d?d.end:a.offset;c.end=c.start+c.delay+c.duration;c.easing=ca(c.easing);c.elasticity=(1E3-Math.min(Math.max(c.elasticity,1),999))/1E3;g.col(c.from.original)&&(c.round=1);return d=c})}function ea(a,b){return p(a.map(function(a){return b.map(function(b){var c=I(a.target,b.name);if(c){var d=da(b,a);b={type:c,property:b.name,animatable:a,tweens:d,duration:d[d.length-1].end,delay:d[0].delay};}else { b=void 0; }return b})})).filter(function(a){return!g.und(a)})}
+function O(a,b,d){var c="delay"===a?Math.min:Math.max;return b.length?c.apply(Math,b.map(function(b){return b[a]})):d[a]}function fa(a){var b=G(ga,a),d=G(ha,a),c=Z(a.targets),e=[],g=B(b,d),h;for(h in a){ g.hasOwnProperty(h)||"targets"===h||e.push({name:h,offset:g.offset,tweens:aa(a[h],d)}); }a=ea(c,e);return B(b,{children:[],animatables:c,animations:a,duration:O("duration",a,d),delay:O("delay",a,d)})}function n(a){function b(){return window.Promise&&new Promise(function(a){return Q=a})}function d(a){return f.reversed?
+f.duration-a:a}function c(a){for(var b=0,c={},d=f.animations,e={};b<d.length;){var g=d[b],h=g.animatable,m=g.tweens;e.tween=m.filter(function(b){return a<b.end})[0]||m[m.length-1];e.isPath$1=e.tween.isPath;e.round=e.tween.round;e.eased=e.tween.easing(Math.min(Math.max(a-e.tween.start-e.tween.delay,0),e.tween.duration)/e.tween.duration,e.tween.elasticity);m=Y(e.tween.to.numbers.map(function(a){return function(b,c){c=a.isPath$1?0:a.tween.from.numbers[c];b=c+a.eased*(b-c);a.isPath$1&&(b=X(a.tween.value,
+b));a.round&&(b=Math.round(b*a.round)/a.round);return b}}(e)),e.tween.to.strings);ia[g.type](h.target,g.property,m,c,h.id);g.currentValue=m;b++;e={isPath$1:e.isPath$1,tween:e.tween,eased:e.eased,round:e.round};}if(c){ for(var k in c){ E||(E=C(document.body,"transform")?"transform":"-webkit-transform"),f.animatables[k].target.style[E]=c[k].join(" "); } }f.currentTime=a;f.progress=a/f.duration*100;}function e(a){if(f[a]){ f[a](f); }}function g(){f.remaining&&!0!==f.remaining&&f.remaining--;}function h(a){var h=f.duration,
+l=f.offset,n=f.delay,P=f.currentTime,q=f.reversed,r=d(a),r=Math.min(Math.max(r,0),h);if(f.children){var p=f.children;if(r>=f.currentTime){ for(var u=0;u<p.length;u++){ p[u].seek(r); } }else { for(u=p.length;u--;){ p[u].seek(r); } }}r>l&&r<h?(c(r),!f.began&&r>=n&&(f.began=!0,e("begin")),e("run")):(r<=l&&0!==P&&(c(0),q&&g()),r>=h&&P!==h&&(c(h),q||g()));a>=h&&(f.remaining?(t=m,"alternate"===f.direction&&(f.reversed=!f.reversed)):(f.pause(),"Promise"in window&&(Q(),R=b()),f.completed||(f.completed=!0,e("complete"))),
+k=0);e("update");}a=void 0===a?{}:a;var m,t,k=0,Q=null,R=b(),f=fa(a);f.reset=function(){var a=f.direction,b=f.loop;f.currentTime=0;f.progress=0;f.paused=!0;f.began=!1;f.completed=!1;f.reversed="reverse"===a;f.remaining="alternate"===a&&1===b?2:b;for(a=f.children.length;a--;){ b=f.children[a],b.seek(b.offset),b.reset(); }};f.tick=function(a){m=a;t||(t=m);h((k+m-t)*n.speed);};f.seek=function(a){h(d(a));};f.pause=function(){var a=q.indexOf(f);-1<a&&q.splice(a,1);f.paused=!0;};f.play=function(){f.paused&&(f.paused=
+!1,t=0,k=d(f.currentTime),q.push(f),z||ja());};f.reverse=function(){f.reversed=!f.reversed;t=0;k=d(f.currentTime);};f.restart=function(){f.pause();f.reset();f.play();};f.finished=R;f.reset();f.autoplay&&f.play();return f}var ga={update:void 0,begin:void 0,run:void 0,complete:void 0,loop:1,direction:"normal",autoplay:!0,offset:0},ha={duration:1E3,delay:0,easing:"easeOutElastic",elasticity:500,round:0},V="translateX translateY translateZ rotate rotateX rotateY rotateZ scale scaleX scaleY scaleZ skewX skewY".split(" "),
+E,g={arr:function(a){return Array.isArray(a)},obj:function(a){return-1<Object.prototype.toString.call(a).indexOf("Object")},svg:function(a){return a instanceof SVGElement},dom:function(a){return a.nodeType||g.svg(a)},str:function(a){return"string"===typeof a},fnc:function(a){return"function"===typeof a},und:function(a){return"undefined"===typeof a},hex:function(a){return/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(a)},rgb:function(a){return/^rgb/.test(a)},hsl:function(a){return/^hsl/.test(a)},col:function(a){return g.hex(a)||
+g.rgb(a)||g.hsl(a)}},y=function(){function a(a,d,c){return(((1-3*c+3*d)*a+(3*c-6*d))*a+3*d)*a}return function(b,d,c,e){if(0<=b&&1>=b&&0<=c&&1>=c){var g=new Float32Array(11);if(b!==d||c!==e){ for(var h=0;11>h;++h){ g[h]=a(.1*h,b,c); } }return function(h){if(b===d&&c===e){ return h; }if(0===h){ return 0; }if(1===h){ return 1; }for(var m=0,k=1;10!==k&&g[k]<=h;++k){ m+=.1; }--k;var k=m+(h-g[k])/(g[k+1]-g[k])*.1,l=3*(1-3*c+3*b)*k*k+2*(3*c-6*b)*k+3*b;if(.001<=l){for(m=0;4>m;++m){l=3*(1-3*c+3*b)*k*k+2*(3*c-6*b)*k+3*b;if(0===l){ break; }
+var n=a(k,b,c)-h,k=k-n/l;}h=k;}else if(0===l){ h=k; }else{var k=m,m=m+.1,f=0;do { n=k+(m-k)/2,l=a(n,b,c)-h,0<l?m=n:k=n; }while(1e-7<Math.abs(l)&&10>++f);h=n;}return a(h,d,e)}}}}(),N=function(){function a(a,b){return 0===a||1===a?a:-Math.pow(2,10*(a-1))*Math.sin(2*(a-1-b/(2*Math.PI)*Math.asin(1))*Math.PI/b)}var b="Quad Cubic Quart Quint Sine Expo Circ Back Elastic".split(" "),d={In:[[.55,.085,.68,.53],[.55,.055,.675,.19],[.895,.03,.685,.22],[.755,.05,.855,.06],[.47,0,.745,.715],[.95,.05,.795,.035],[.6,.04,.98,
+.335],[.6,-.28,.735,.045],a],Out:[[.25,.46,.45,.94],[.215,.61,.355,1],[.165,.84,.44,1],[.23,1,.32,1],[.39,.575,.565,1],[.19,1,.22,1],[.075,.82,.165,1],[.175,.885,.32,1.275],function(b,c){return 1-a(1-b,c)}],InOut:[[.455,.03,.515,.955],[.645,.045,.355,1],[.77,0,.175,1],[.86,0,.07,1],[.445,.05,.55,.95],[1,0,0,1],[.785,.135,.15,.86],[.68,-.55,.265,1.55],function(b,c){return.5>b?a(2*b,c)/2:1-a(-2*b+2,c)/2}]},c={linear:y(.25,.25,.75,.75)},e={},l;for(l in d){ e.type=l,d[e.type].forEach(function(a){return function(d,
+e){c["ease"+a.type+b[e]]=g.fnc(d)?d:y.apply($jscomp$this,d);}}(e)),e={type:e.type}; }return c}(),ia={css:function(a,b,d){return a.style[b]=d},attribute:function(a,b,d){return a.setAttribute(b,d)},object:function(a,b,d){return a[b]=d},transform:function(a,b,d,c,e){c[e]||(c[e]=[]);c[e].push(b+"("+d+")");}},q=[],z=0,ja=function(){function a(){z=requestAnimationFrame(b);}function b(b){var c=q.length;if(c){for(var d=0;d<c;){ q[d]&&q[d].tick(b),d++; }a();}else { cancelAnimationFrame(z),z=0; }}return a}();n.version="2.0.2";
+n.speed=1;n.running=q;n.remove=function(a){a=M(a);for(var b=q.length;b--;){ for(var d=q[b],c=d.animations,e=c.length;e--;){ F(a,c[e].animatable.target)&&(c.splice(e,1),c.length||d.pause()); } }};n.getValue=J;n.path=function(a,b){var d=g.str(a)?v(a)[0]:a,c=b||100;return function(a){return{el:d,property:a,totalLength:d.getTotalLength()*(c/100)}}};n.setDashoffset=function(a){var b=a.getTotalLength();a.setAttribute("stroke-dasharray",b);return b};n.bezier=y;n.easings=N;n.timeline=function(a){var b=n(a);b.pause();
+b.duration=0;b.add=function(a){b.children.forEach(function(a){a.began=!0;a.completed=!0;});w(a).forEach(function(a){var c=b.duration,d=a.offset;a.autoplay=!1;a.offset=g.und(d)?c:K(d,c);b.seek(a.offset);a=n(a);a.duration>c&&(b.duration=a.duration);a.began=!0;b.children.push(a);});b.reset();b.seek(0);b.autoplay&&b.restart();return b};return b};n.random=function(a,b){return Math.floor(Math.random()*(b-a+1))+a};return n});
+});
+
+var riotExtend$1 = riot.util.misc.extend;
+var slice = [].slice;
+
+var extend = riotExtend$1;
+
+/**
+ * Animation trigger when a tag gets mounted
+ * @param   { HTMLElement } root - animate tag root node
+ * @param   { Object } opts - animate tag options
+ */
+function onMount(root, opts) {
+  if (!opts.mount) { return }
+  anime_min(extend({}, opts.mount, {
+    targets: root,
+    begin: function begin() {
+      root.style.visibility = null;
+      if (opts.mount.begin) { (ref = opts.mount).begin.apply(ref, arguments);
+      var ref; }
     }
-    // this object could be looped out of the box
-    return els;
-  }
+  }));
+}
 
-  /**
-   * Split a string into several items separed by spaces
-   * @param   { String } l - events list
-   * @returns { Array } all the events detected
-   * @private
-   */
-  var split = function split(l) {
-    return l.split(/\s/);
+/**
+ * Converts a NodeList to array
+ * @param   { NodeList } nodes - dom nodes to arraify
+ * @returns { Array } an array
+ */
+function domToArray(nodes) {
+  return slice.call(nodes)
+}
+
+/**
+ * Get the position of a DOMNode according to its index into the parentNode children array
+ * @param   { HTMLElement } root - DOM node to lookup
+ * @returns { Number } node index position
+ */
+function getIndex(root) {
+  return domToArray(root.parentNode.children).indexOf(root)
+}
+
+/**
+ * Get the boundaries of a DOM node and its opacity
+ * @param   { HTMLElement } root - node we want to check
+ * @returns { Object } props
+ * @returns { Object } props.bounds - node boundaries
+ * @returns { Number } props.opacity - node opacity value
+ */
+function getProps(root) {
+  return {
+    bounds: root.getBoundingClientRect(),
+    opacity: +(root.style.opacity || 1)
+  }
+}
+
+/**
+ * Extend a tag inheriting properties and methods from the parent node
+ * @param   { riot.Tag } tag - riot tag instance
+ */
+function inheritFromParent(tag) {
+  // get the parent instance
+  var parent = tag.parent;
+
+  var loop = function ( prop ) {
+    var val = parent[prop];
+    if (prop === 'opts') { val = extend({}, val, tag.opts); }
+
+    tag[prop] =  typeof val === 'function' ? function(e) {
+      var args = [], len = arguments.length - 1;
+      while ( len-- > 0 ) args[ len ] = arguments[ len + 1 ];
+
+      e.preventUpdate = true;
+      val.apply(parent, [e ].concat( args));
+      parent.update();
+    } : val;
   };
 
+  for (var prop in parent) loop( prop );
+}
+
+var animore = riot.tag('animore', '<yield/>', function() {
+  var this$1 = this;
+
+  var prevProps, index;
+
   /**
-   * Set a listener for all the events received separated by spaces
-   * @param   { HTMLElement|NodeList|Array } els     - DOM node/s where the listeners will be bound
-   * @param   { String }                     evList  - list of events we want to bind or unbind space separated
-   * @param   { Function }                   cb      - listeners callback
-   * @param   { String }                     method  - either 'addEventListener' or 'removeEventListener'
-   * @param   { Object }                     options - event options (capture, once and passive)
-   * @private
+   * Internal helpers
    */
-  function manageEvents(els, evList, cb, method, options) {
-    els = domToArray(els);
 
-    split(evList).forEach(function (e) {
-      for (var _iterator = els, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
-        var _ref;
-
-        if (_isArray) {
-          if (_i >= _iterator.length) break;
-          _ref = _iterator[_i++];
-        } else {
-          _i = _iterator.next();
-          if (_i.done) break;
-          _ref = _i.value;
-        }
-
-        var el = _ref;
-        el[method](e, cb, options || false);
-      }
-    });
+  /**
+   * Get the root element index from the parent node
+   * @param { HTMLElement } root - tag root node
+   */
+  function updateIndex(root) {
+    index = getIndex(root);
   }
 
   /**
-   * Set a listener for all the events received separated by spaces
-   * @param   { HTMLElement|Array } els    - DOM node/s where the listeners will be bound
-   * @param   { String }            evList - list of events we want to bind space separated
-   * @param   { Function }          cb     - listeners callback
-   * @param   { Object }            options - event options (capture, once and passive)
-   * @returns { HTMLElement|NodeList|Array } DOM node/s and first argument of the function
+   * Apply a flip animation comparing the root previous position with the current one
+   * @param { HTMLElement } root - root tag
+   * @param { HTMLElement } flipOpts - flip animation options
    */
-  function add(els, evList, cb, options) {
-    manageEvents(els, evList, cb, 'addEventListener', options);
-    return els;
-  }
-
-  /**
-   * Remove all the listeners for the events received separated by spaces
-   * @param   { HTMLElement|Array } els     - DOM node/s where the events will be unbind
-   * @param   { String }            evList  - list of events we want unbind space separated
-   * @param   { Function }          cb      - listeners callback
-   * @param   { Object }             options - event options (capture, once and passive)
-   * @returns { HTMLElement|NodeList|Array }  DOM node/s and first argument of the function
-   */
-  function remove(els, evList, cb, options) {
-    manageEvents(els, evList, cb, 'removeEventListener', options);
-    return els;
-  }
-
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  /**
-   * Normalize the return values, in case of a single value we avoid to return an array
-   * @param   { Array } values - list of values we want to return
-   * @returns { Array|String|Boolean } either the whole list of values or the single one found
-   * @private
-   */
-  var normalize = function normalize(values) {
-    return values.length === 1 ? values[0] : values;
-  };
-
-  /**
-   * Parse all the nodes received to get/remove/check their attributes
-   * @param   { HTMLElement|NodeList|Array } els    - DOM node/s to parse
-   * @param   { String|Array }               name   - name or list of attributes
-   * @param   { String }                     method - method that will be used to parse the attributes
-   * @returns { Array|String } result of the parsing in a list or a single value
-   * @private
-   */
-  function parseNodes(els, name, method) {
-    var names = typeof name === 'string' ? [name] : name;
-    return normalize(domToArray(els).map(function (el) {
-      return normalize(names.map(function (n) {
-        return el[method](n);
-      }));
+  function doFlip(root, flipOpts) {
+    var newProps = getProps(root);
+    anime_min(extend(typeof flipOpts === 'object' ? flipOpts : {}, {
+      targets: root,
+      translateX: [prevProps.bounds.left - newProps.bounds.left, 0],
+      translateY: [prevProps.bounds.top - newProps.bounds.top, 0],
+      scaleX: [prevProps.bounds.width / newProps.bounds.width, 1],
+      scaleY: [prevProps.bounds.height / newProps.bounds.height, 1],
+      opacity: [prevProps.opacity, newProps.opacity]
     }));
   }
 
   /**
-   * Set any attribute on a single or a list of DOM nodes
-   * @param   { HTMLElement|NodeList|Array } els   - DOM node/s to parse
-   * @param   { String|Object }              name  - either the name of the attribute to set
-   *                                                 or a list of properties as object key - value
-   * @param   { String }                     value - the new value of the attribute (optional)
-   * @returns { HTMLElement|NodeList|Array } the original array of elements passed to this function
-   *
-   * @example
-   *
-   * import { set } from 'bianco.attr'
-   *
-   * const img = document.createElement('img')
-   *
-   * set(img, 'width', 100)
-   *
-   * // or also
-   * set(img, {
-   *   width: 300,
-   *   height: 300
-   * })
-   *
+   * Lifecycle events
    */
-  function set(els, name, value) {
-    var _ref;
-
-    var attrs = (typeof name === 'undefined' ? 'undefined' : _typeof(name)) === 'object' ? name : (_ref = {}, _ref[name] = value, _ref);
-    var props = Object.keys(attrs);
-
-    domToArray(els).forEach(function (el) {
-      props.forEach(function (prop) {
-        return el.setAttribute(prop, attrs[prop]);
-      });
-    });
-    return els;
-  }
-
-  /**
-   * Remove any attribute from a single or a list of DOM nodes
-   * @param   { HTMLElement|NodeList|Array } els   - DOM node/s to parse
-   * @param   { String|Array }               name  - name or list of attributes to remove
-   * @returns { HTMLElement|NodeList|Array } the original array of elements passed to this function
-   *
-   * @example
-   *
-   * import { remove } from 'bianco.attr'
-   *
-   * remove(img, 'width') // remove the width attribute
-   *
-   * // or also
-   * remove(img, ['width', 'height']) // remove the width and the height attribute
-   *
-   * // or also
-   * remove([img1, img2], ['width', 'height']) // remove the width and the height attribute from both images
-   */
-  function remove$1(els, name) {
-    return parseNodes(els, name, 'removeAttribute');
-  }
-
-  /**
-   * Set any attribute on a single or a list of DOM nodes
-   * @param   { HTMLElement|NodeList|Array } els   - DOM node/s to parse
-   * @param   { String|Array }               name  - name or list of attributes to detect
-   * @returns { Boolean|Array } true or false or an array of boolean values
-   * @example
-   *
-   * import { has } from 'bianco.attr'
-   *
-   * has(img, 'width') // false
-   *
-   * // or also
-   * has(img, ['width', 'height']) // => [false, false]
-   *
-   * // or also
-   * has([img1, img2], ['width', 'height']) // => [[false, false], [false, false]]
-   */
-  function has(els, name) {
-    return parseNodes(els, name, 'hasAttribute');
-  }
-
-  /**
-   * Simple helper to find DOM nodes returning them as array like loopable object
-   * @param   { String|DOMNodeList } selector - either the query or the DOM nodes to arraify
-   * @param   { HTMLElement }        ctx      - context defining where the query will search for the DOM nodes
-   * @returns { Array } DOM nodes found as array
-   */
-  function $(selector, ctx) {
-    return domToArray(typeof selector === 'string' ? (ctx || document).querySelectorAll(selector) : selector);
-  }
-
-  var DEFAULT_OPTIONS = {
-    duration: 300,
-    delay: 0,
-    easing: 'ease-in-out',
-    onEnd: noop,
-    onCancel: noop,
-    onStart: noop
-  };
-  var IS_ANIMATING_ATTR = 'is-animating';
-  var TIMER_OFFSET = 5; // ms
-  var ANIMORE_STRUCT = Object.seal({
-    // fallback timer
-    timer: null,
-    /**
-     * Cleanup function triggered when the animations will be complete
-     * @returns { ANIMORE_STRUCT } self
-     */
-    clear: function clear() {
-      removeEvents.call(this);
-      remove$1(this.el, IS_ANIMATING_ATTR);
-      style(this.el, {
-        opacity: null,
-        transition: null,
-        transform: null,
-        transformOrigin: null,
-        willChange: null
-      });
-
-      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      this.opts[args[0].type === 'transitioncancel' ? 'onCancel' : 'onEnd'](args);
-
-      return this;
+  var lifecycle = {
+    onCreate: function onCreate() {
+      // make sure to avoid flickerings
+      // in case of enter animations
+      inheritFromParent(this);
+      if (this.opts.mount) { this.root.style.visibility = 'hidden'; }
+    },
+    onMount: function onMount$1() {
+      updateIndex(this.root);
+      onMount(this.root, this.opts);
     },
 
-
-    /**
-     * Store the element initial properties
-     * @returns { ANIMORE_STRUCT } self
-     */
-    stash: function stash() {
-      this.props.old = inspect(this.el);
-      return this;
+    onUpdate: function onUpdate() {
+      if (this.opts.update) { prevProps = getProps(this.root); }
+      inheritFromParent(this);
     },
 
+    onUpdated: function onUpdated() {
+      if (this.opts.update) { doFlip(this.root, this.opts.update); }
+      updateIndex(this.root);
+    },
 
-    /**
-     * Apply a flip animation
-     * @returns { ANIMORE_STRUCT } self
-     */
-    apply: function apply() {
-      var _this = this;
+    onBeforeUnmount: function onBeforeUnmount() {
+      var arguments$1 = arguments;
+      var this$1 = this;
 
-      if (!this.props.old) throw new Error('Make sure to trigger animore.stash() before any animore.apply()');
-      this.props.new = inspect(this.el);
-      set(this.el, IS_ANIMATING_ATTR, IS_ANIMATING_ATTR);
-      addEvents.call(this);
-      flip(this.el, this.props, this.opts);
-      Object.assign(this.props.old, this.props.new);
+      if (!this.opts.unmount) { return }
 
-      // make sure the transition end will always be triggered
-      // this will enable the testing of this script also in a node environment
-      clearTimeout(this.timer);
-      this.timer = setTimeout(function () {
-        if (has(_this.el, IS_ANIMATING_ATTR)) {
-          dispatchEvent(_this.el, 'transitionend');
+      var clone = this.root.cloneNode(true),
+        parentNode = this.root.parentNode;
+
+      parentNode.insertBefore(clone, parentNode.children[index]);
+
+      anime_min(extend({}, this.opts.unmount, {
+        targets: clone,
+        complete: function () {
+          parentNode.removeChild(clone);
+          if (this$1.opts.unmount.complete) { (ref = this$1.opts.unmount).complete.apply(ref, arguments$1);
+          var ref; }
         }
-      }, this.opts.duration + TIMER_OFFSET);
-
-      return this;
+      }));
+    },
+    onUnmount: function onUnmount() {
+      if (this.parent) { this.parent.off('update', lifecycle.onUpdate); }
     }
-  });
+  };
 
-  // noop function
-  function noop() {}
+  // lock the lifecycle events context
+  Object.keys(lifecycle).forEach(function (event) { return lifecycle[event] = lifecycle[event].bind(this$1); });
 
-  /**
-   * Add all the event listeners to the animore.el
-   * @this animore
-   * @returns { undefined } void function :(
-   */
-  function addEvents() {
-    add(this.el, 'transitionstart', this.opts.onStart);
-    add(this.el, 'transitionend transitioncancel', this.clear);
+  // lifecycle listeners
+  this
+    .one('mount', lifecycle.onMount)
+    .on('updated', lifecycle.onUpdated)
+    .on('unmount', lifecycle.onUnmount)
+    .one('before-unmount', lifecycle.onBeforeUnmount);
+
+  // oncreate callback
+  lifecycle.onCreate();
+
+  if (this.opts.update) {
+    if (this.parent) { this.parent.on('update', lifecycle.onUpdate); }
+    else { this.on('update', lifecycle.onUpdate); }
   }
+});
 
-  /**
-   * Remove all the event listeners from the animore.el
-   * @this animore
-   * @returns { undefined } void function :(
-   */
-  function removeEvents() {
-    remove(this.el, 'transitionstart', this.opts.onStart);
-    remove(this.el, 'transitionend transitioncancel', this.clear);
-  }
+exports.animate = animore;
+exports.extend = extend;
+exports.onMount = onMount;
+exports.domToArray = domToArray;
+exports.getIndex = getIndex;
+exports.getProps = getProps;
+exports.inheritFromParent = inheritFromParent;
 
-  /**
-   * Inspect the transitionable properties of a DOM node
-   * @param   { HTMLElement } el - DOM node to inspect
-   * @returns { Object } transitionable properties like width, top...
-   */
-  function inspect(el) {
-    var _el$getBoundingClient = el.getBoundingClientRect(),
-        left = _el$getBoundingClient.left,
-        top = _el$getBoundingClient.top,
-        height = _el$getBoundingClient.height,
-        width = _el$getBoundingClient.width;
-
-    return {
-      left: left,
-      top: top,
-      height: height,
-      width: width,
-      opacity: +(el.style.opacity || 1)
-    };
-  }
-
-  /**
-   * Simple function to apply style properties to a DOM node via js objects
-   * @param   { HTMLElement } el - element that will be updated
-   * @param   { Object } props - new css rules to apply to the element
-   * @returns { undefined } void function :(
-   */
-  function style(el, props) {
-    Object.keys(props).forEach(function (key) {
-      el.style[key] = props[key];
-    });
-  }
-
-  /**
-   * Apply a flip transition diffing the previous properties against the new ones received
-   * @param   { HTMLElement } el - DOM element we want to animate
-   * @param   { Object } props - object containing the old and new properties to animate
-   * @param   { Object } opts - animation options
-   * @returns { undefined } void function :(
-   */
-  function flip(el, props, opts) {
-    style(el, {
-      opacity: props.old.opacity,
-      willChange: 'transform',
-      transformOrigin: '0 0',
-      transform: '\n    translateX(' + (props.old.left - props.new.left) + 'px)\n    translateY(' + (props.old.top - props.new.top) + 'px)\n    scaleX(' + props.old.width / props.new.width + ')\n    scaleY(' + props.old.height / props.new.height + ')\n'
-    });
-
-    // force the reflow
-    el.scrollTop;
-
-    style(el, {
-      opacity: props.new.opacity,
-      transition: 'transform ' + opts.duration + 'ms ' + opts.easing + ' ' + opts.delay + 'ms',
-      transform: '\n    translateX(0)\n    translateY(0)\n    scaleX(1)\n    scaleY(1)\n'
-    });
-  }
-
-  /**
-   * Return an object linked to the context prototype but with all the methods bound to it
-   * @param   { Object } src - object that will receive our bound methods
-   * @param   { Array } methods - array containing all the methods we want to bind
-   * @param   { * } context (optional) - context where we want to bind our methods
-   * @returns { Object } new object linked to the src prototype
-   */
-  function bind(src, methods, context) {
-    if (!context) context = src;
-    methods.forEach(function (method) {
-      return src[method] = src[method].bind(context);
-    });
-    return Object.create(src);
-  }
-
-  /**
-   * Create a crossbrowser event Object to dispatch on a DOM node
-   * @param   { string } eventName [description]
-   * @returns { Event } event object
-   */
-  function getEventObject(eventName) {
-    if (typeof Event === 'function') {
-      return new Event(eventName);
-    }
-
-    var event = document.createEvent('Event');
-    event.initEvent(eventName, true, true);
-
-    return event;
-  }
-
-  /**
-   * Helper function to dispatch a DOM event
-   * @param   { HTMLElement } el - target node
-   * @param   { string } eventName - event name
-   * @returns { undefined } this is a void function :(
-   */
-  function dispatchEvent(el, eventName) {
-    el.dispatchEvent(getEventObject(eventName));
-  }
-
-  /**
-   * Factory funciton to create a single animore object
-   * @param   { HTMLElement } el - DOM node we need to animate
-   * @param   { Object } opts - animations options
-   * @returns { Object } animore - animore object
-   */
-  function create(el) {
-    var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-    var animore = {};
-
-    return Object.seal(bind(Object.assign(animore, ANIMORE_STRUCT, {
-      el: el,
-      opts: bind(Object.assign({}, DEFAULT_OPTIONS, opts), ['onStart', 'onEnd', 'onCancel'], animore),
-      props: {
-        old: null,
-        new: null
-      }
-    }), ['clear', 'stash', 'apply']));
-  }
-
-  /**
-   * Returns always an array containing all the animore objects
-   * @param   { Array|string|HTMLElement } el - element/s we want to animate
-   * @param   { Object } opts - options object
-   * @param   { number } opts.duration - transition duration
-   * @param   { string } opts.easing - transition css easing function
-   * @param   { number } opts.delay - transition delay
-   * @param   { Function } opts.onEnd - on transition end callback
-   * @param   { Function } opts.onStart - on transition start callback
-   * @param   { Function } opts.onCancel - on transition cancel callback
-   * @returns { Array<animore> } animore objects
-   */
-  function animore(el, opts) {
-    return $(el).map(function (e) {
-      return create(e, opts);
-    });
-  }
-
-  return animore;
+Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
 
