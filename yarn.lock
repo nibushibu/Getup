@@ -4064,8 +4064,8 @@ p-try@^2.0.0:
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.0.0.tgz#85080bb87c64688fa47996fe8f7dfbe8211760b1"
 
 p5@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/p5/-/p5-0.7.1.tgz#8283e7e9eb928cdb957541d32be2b0ff7f2251e0"
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/p5/-/p5-0.7.2.tgz#16255ebf50632f25ffd27b41f4ef7c6c1ffdb94c"
 
 parse-filepath@^1.0.1:
   version "1.0.2"
@@ -5459,8 +5459,8 @@ riot-animore@^1.0.0:
     riot "^3.7.0"
 
 riot-cli@^4.0.2:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/riot-cli/-/riot-cli-4.1.0.tgz#500520af825772d5455028a4f2699d13ff326fa2"
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/riot-cli/-/riot-cli-4.1.1.tgz#d144cc8ab9513f45d4836eeab7d2a8420b466a21"
   dependencies:
     chalk "^2.3.2"
     chokidar "^2.0.3"
@@ -5488,8 +5488,8 @@ riot-tmpl@^3.0.8:
     eslint-config-riot "^1.0.0"
 
 riot@^3.11.2, riot@^3.7.0:
-  version "3.11.2"
-  resolved "https://registry.yarnpkg.com/riot/-/riot-3.11.2.tgz#1896e6d06a78b65476449e434fa3402f48102bd6"
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/riot/-/riot-3.12.0.tgz#92b1db2078b0d97ab4ba846b4cf194218a8e74b4"
   dependencies:
     riot-cli "^4.0.2"
     riot-compiler "^3.5.1"
