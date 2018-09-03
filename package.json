@@ -30,7 +30,6 @@
   },
   "dependencies": {
     "animejs": "^2.2.0",
-    "animore": "^2.0.3",
     "feature.js": "^1.0.0",
     "flexibility": "^2.0.1",
     "gulp-ejs": "^3.1.2",
@@ -42,6 +41,7 @@
     "popper.js": "^1.14.4",
     "promise-polyfill": "^8.0.0",
     "riot": "^3.11.2",
+    "riot-animore": "^1.0.0",
     "sanitize.css": "^7.0.1",
     "scrollmagic": "^2.0.5",
     "slick-carousel": "^1.7.1",
