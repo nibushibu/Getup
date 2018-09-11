@@ -1,17 +1,19 @@
+import riot from 'riot'
+
 riot.mount('*')
 
 ;
 (function ($) {
 
-  $(function () {
+  $(() => {
 
     if (!feature.touch) {
-      $('a[href^="#"], .js-anchor-scroll').on('click', function (e) {
+      $('a[href^="#"], .js-anchor-scroll').on('click', e => {
         e.preventDefault()
-        var headerHeight = 0
-        var $target = $(e.currentTarget.attributes.href.value)
+        let headerHeight = 0
+        let $target = $(e.currentTarget.attributes.href.value)
         console.log($target)
-        var targetOffset = $target.offset().top
+        let targetOffset = $target.offset().top
         $("html,body").animate({
           scrollTop: targetOffset - headerHeight - 10
         }, 300)
@@ -39,10 +41,10 @@ var s = function (sketch) {
 }
 var myp5 = new p5(s)
 
-console.log(("feature.touch = " + (feature.touch)))
+console.log(`feature.touch = ${feature.touch}`)
 
 // mo.js動作チェック
-var mojsAnime = new mojs.Html({
+const mojsAnime = new mojs.Html({
   el: '.js-anime',
   x: {
     0: 250
@@ -55,8 +57,7 @@ var mojsAnime = new mojs.Html({
   repeat: true,
   isYoyo: true,
   delay: 500,
-  onComplete: function onComplete() {
+  onComplete() {
     this.replay()
   }
 }).play()
-//# sourceMappingURL=main.js.map
