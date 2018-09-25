@@ -15,6 +15,5 @@ module.exports = {
     'node_modules/mo-js/build/mo.min.js',
     'node_modules/mojs-player/build/mojs-player.min.js',
     'node_modules/aos/dist/aos.js',
-    'node_modules/p5/lib/p5.min.js'
   ]
 };

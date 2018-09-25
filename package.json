@@ -41,7 +41,6 @@
     "jquery": "^3.2.1",
     "mo-js": "^0.288.2",
     "mobile-detect": "^1.4.3",
-    "p5": "^0.7.1",
     "promise-polyfill": "^8.0.0",
     "riot": "^3.11.2",
     "riot-animore": "^1.0.0",
