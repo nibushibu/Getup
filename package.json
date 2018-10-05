@@ -8,8 +8,8 @@
   },
   "scripts": {
     "css-sass": "node-sass --output ${npm_package_config_distDir}/css --output-style expanded --source-map true --source-map-contents true --include-path src/css --precision 6 'src/scss'",
-    "css-postcss": "postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css",
-    "css-postcss-guide": "postcss --config postcss.config.js -e guide --replace ${npm_package_config_distDir}/css/**/*.css",
+    "css-postcss": "postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose",
+    "css-postcss-guide": "postcss --config postcss.config.js -e guide --replace ${npm_package_config_distDir}/css/**/*.css --verbose",
     "css": "npm-run-all css-sass css-postcss",
     "docs-styleguide": "npm-run-all css-sass css-postcss-guide",
     "docs": "npm-run-all --parallel docs-*",
