@@ -32,7 +32,7 @@
   "dependencies": {
     "@glidejs/glide": "^3.2.3",
     "animejs": "^2.2.0",
-    "aos": "^2.3.3",
+    "aos": "^2.3.4",
     "axios": "^0.18.0",
     "delighters": "https://github.com/Q42/delighters",
     "feature.js": "^1.0.0",
@@ -46,7 +46,7 @@
     "promise-polyfill": "^8.0.0",
     "riot": "^3.11.2",
     "riot-animore": "^1.0.0",
-    "sanitize.css": "^7.0.1",
+    "sanitize.css": "^8.0.0",
     "slick-carousel": "^1.8.1"
   },
   "directories": {
@@ -66,7 +66,7 @@
     "babel-core": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015-riot": "^1.1.0",
-    "buble": "^0.19.3",
+    "buble": "^0.19.4",
     "concat": "^1.0.3",
     "cpx": "^1.5.0",
     "css-mqpacker": "^7.0.0",
