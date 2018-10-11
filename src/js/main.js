@@ -22,40 +22,15 @@ riot.mount('*')
 
 })(jQuery)
 
-var s = function (sketch) {
-
-  var x = 100
-  var y = 100
-
-  sketch.setup = function () {
-    sketch.createCanvas(200, 200);
-  }
-
-  sketch.draw = function () {
-    sketch.background(0)
-    sketch.fill(255)
-    sketch.rect(x, y, 50, 50)
-  }
-}
-var myp5 = new p5(s)
-
 console.log(`feature.touch = ${feature.touch}`)
 
 // mo.js動作チェック
-const mojsAnime = new mojs.Html({
-  el: '.js-anime',
-  x: {
-    0: 250
-  },
-  angleZ: {
-    0: 360
-  },
+const anime = anime({
+  targets: '.js-anime',
+  translateX: 250,
+  rotate: 360,
   duration: 800,
-  easing: 'expo.out',
-  repeat: true,
-  isYoyo: true,
-  delay: 500,
-  onComplete() {
-    this.replay()
-  }
-}).play()
+  direction: 'alternate',
+  easing: 'easeInOutExpo',
+  loop: true,
+})
