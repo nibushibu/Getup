@@ -25,21 +25,13 @@ riot.mount('*')
 console.log(("feature.touch = " + (feature.touch)))
 
 // mo.js動作チェック
-var mojsAnime = new mojs.Html({
-  el: '.js-anime',
-  x: {
-    0: 250
-  },
-  angleZ: {
-    0: 360
-  },
+var anime = anime({
+  targets: '.js-anime',
+  translateX: 250,
+  rotate: 360,
   duration: 800,
-  easing: 'expo.out',
-  repeat: true,
-  isYoyo: true,
-  delay: 500,
-  onComplete: function onComplete() {
-    this.replay()
-  }
-}).play()
+  direction: 'alternate',
+  easing: 'easeInOutExpo',
+  loop: true,
+})
 //# sourceMappingURL=main.js.map
