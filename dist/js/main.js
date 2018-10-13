@@ -15,7 +15,6 @@ riot.mount('*')
         $("html,body").animate({
           scrollTop: targetOffset - headerHeight - 10
         }, 300)
-        return false
       })
     }
   })
