@@ -13,8 +13,6 @@ module.exports = {
     'node_modules/promise-polyfill/dist/promise.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
     'node_modules/lodash/lodash.min.js',
-    'node_modules/mo-js/build/mo.min.js',
-    'node_modules/mojs-player/build/mojs-player.min.js',
     'node_modules/aos/dist/aos.js',
   ]
 };
