@@ -1,10 +1,6 @@
 riot.mount('*')
-
-;
-(function ($) {
-
+;(function($) {
   $(() => {
-
     if (!feature.touch) {
       $('a[href^="#"], .js-anchor-scroll').on('click', e => {
         e.preventDefault()
@@ -12,18 +8,20 @@ riot.mount('*')
         let $target = $(e.currentTarget.attributes.href.value)
         console.log($target)
         let targetOffset = $target.offset().top
-        $("html,body").animate({
-          scrollTop: targetOffset - headerHeight - 10
-        }, 300)
+        $('html,body').animate(
+          {
+            scrollTop: targetOffset - headerHeight - 10
+          },
+          300
+        )
       })
     }
   })
-
 })(jQuery)
 
 console.log(`feature.touch = ${feature.touch}`)
 
-// mo.js動作チェック
+// anime.js サンプル
 const anime = anime({
   targets: '.js-anime',
   translateX: 250,
@@ -31,5 +29,5 @@ const anime = anime({
   duration: 800,
   direction: 'alternate',
   easing: 'easeInOutExpo',
-  loop: true,
+  loop: true
 })
