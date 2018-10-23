@@ -17,7 +17,7 @@
     "watch-riot": "npm-run-all --parallel riot",
     "watch-js": "onchange src/js -- yarn run buble",
     "watch-scss": "onchange src/scss -- yarn run css",
-    "watch-html": "onchange src/ejs -- ejs-cli --base-dir src/ejs '*.ejs' --out ./dest",
+    "watch-html": "onchange src/ejs src/_ejs -- ejs-cli --base-dir src/ejs '**/*.ejs' --out ./dist",
     "watch": "npm-run-all --parallel watch-*",
     "riot": "riot -w --config riot.config",
     "min-css": "postcss ${npm_package_config_distDir}/css/main.css --env minify -o ${npm_package_config_distDir}/css/main.css",
