@@ -9,21 +9,19 @@
   "scripts": {
     "css-sass": "node-sass --output ${npm_package_config_distDir}/css --output-style expanded --source-map true --source-map-contents true --include-path src/css --precision 6 'src/scss'",
     "css-postcss": "postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose",
-    "css-postcss-guide": "postcss --config postcss.config.js -e guide --replace ${npm_package_config_distDir}/css/**/*.css --verbose",
     "css": "npm-run-all css-sass css-postcss",
-    "docs-styleguide": "npm-run-all css-sass css-postcss-guide",
+    "docs-styleguide": "postcss --config postcss.config.js --env guide --replace ${npm_package_config_distDir}/css/**/*.css --verbose",
     "docs": "npm-run-all --parallel docs-*",
     "buble": "buble -i src/js -m -o ${npm_package_config_distDir}/js",
-    "watch-riot": "npm-run-all --parallel riot",
+    "riot": "riot -w --config riot.config",
     "watch-js": "onchange src/js -- yarn run buble",
     "watch-scss": "onchange src/scss -- yarn run css",
     "watch-html": "onchange src/ejs src/_ejs -- ejs-cli --base-dir src/ejs '**/*.ejs' --out ./dist",
     "watch": "npm-run-all --parallel watch-*",
-    "riot": "riot -w --config riot.config",
     "min-css": "postcss ${npm_package_config_distDir}/css/main.css --env minify -o ${npm_package_config_distDir}/css/main.css",
-    "min-image": "imagemin ${npm_package_config_distDir}/img/*.{jpg,png} --out-dir=${npm_package_config_distDir}/img",
-    "min-js": "uglifyjs dist/js/main.js",
+    "min-js": "minify dist/js/**/*.js > dist/js",
     "min": "npm-run-all --parallel min-*",
+    "imagemin": "imagemin ${npm_package_config_distDir}/img/*.{jpg,png} --out-dir=${npm_package_config_distDir}/img",
     "copy": "node task/copy.js"
   },
   "dependencies": {
@@ -83,6 +81,7 @@
     "postcss-normalize-charset": "^4.0.0",
     "postcss-style-guide": "^0.14.0",
     "require-dir": "^1.1.0",
-    "run-sequence": "^2.1.0"
+    "run-sequence": "^2.1.0",
+    "uglify-js": "^3.4.9"
   }
 }
