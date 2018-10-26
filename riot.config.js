@@ -21,7 +21,9 @@ riot.parsers.css.myCssParser = function (tagName, css) {
   css = sass.renderSync(sassOptions).css
   css = postcss([
     postcssFocus,
-    autoprefixer({ grid: true }),
+    autoprefixer({
+      grid: true
+    }),
   ]).process(css).css
   return css
 }
@@ -29,7 +31,7 @@ riot.parsers.css.myCssParser = function (tagName, css) {
 /**
  * Riot用JSカスタムパーサー（Bubble）
  */
-riot.parsers.js.buble = function(js, options) {
+riot.parsers.js.buble = function (js, options) {
   js = buble.transform(js)
   return js
 }
@@ -37,6 +39,7 @@ riot.parsers.js.buble = function(js, options) {
 export default {
   from: 'src/riot',
   to: 'dist/js/tags.js',
+  ext: 'html',
   type: 'buble',
   style: 'myCssParser'
 }
