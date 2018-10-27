@@ -7,8 +7,8 @@
     "distDir": "dist"
   },
   "scripts": {
-    "css-sass": "node-sass --output ${npm_package_config_distDir}/css --output-style expanded --source-map true --source-map-contents true --include-path src/css --precision 6 'src/scss'",
-    "css-postcss": "postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose",
+    "css-sass": "node-sass --output ${npm_package_config_distDir}/css --output-style expanded --source-map true --include-path src/css --precision 6 'src/scss'",
+    "css-postcss": "postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose --map",
     "css": "npm-run-all css-sass css-postcss",
     "docs-styleguide": "postcss --config postcss.config.js --env guide --replace ${npm_package_config_distDir}/css/**/*.css --verbose",
     "docs": "npm-run-all --parallel docs-*",
@@ -19,7 +19,6 @@
     "watch-html": "onchange src/ejs src/_ejs -- ejs-cli --base-dir src/ejs '**/*.ejs' --out ./dist",
     "watch": "npm-run-all --parallel watch-*",
     "min-css": "postcss ${npm_package_config_distDir}/css/main.css --env minify -o ${npm_package_config_distDir}/css/main.css",
-    "min-js": "minify dist/js/**/*.js > dist/js",
     "min": "npm-run-all --parallel min-*",
     "imagemin": "imagemin ${npm_package_config_distDir}/img/*.{jpg,png} --out-dir=${npm_package_config_distDir}/img",
     "copy": "node task/copy.js"
@@ -81,7 +80,6 @@
     "postcss-normalize-charset": "^4.0.0",
     "postcss-style-guide": "^0.14.0",
     "require-dir": "^1.1.0",
-    "run-sequence": "^2.1.0",
-    "uglify-js": "^3.4.9"
+    "run-sequence": "^2.1.0"
   }
 }
