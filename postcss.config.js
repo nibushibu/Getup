@@ -14,21 +14,7 @@ module.exports = ctx => {
     }),
   ]
 
-  if (ctx.env === 'minify') {
-    return {
-      map: ctx.options.map,
-      plugins: [
-        require('cssnano')({
-          preset: ['default', {
-            MergeRules: false,
-            normalizeString: {
-              preferredQuote: 'single'
-            }
-          }]
-        })
-      ]
-    }
-  } else if (ctx.env === 'guide') {
+  if (ctx.env === 'guide') {
     return {
       map: ctx.options.map,
       plugins: [
@@ -43,6 +29,14 @@ module.exports = ctx => {
       map: ctx.options.map,
       plugins: [
         ...plugins,
+        require('cssnano')({
+          preset: ['default', {
+            MergeRules: false,
+            normalizeString: {
+              preferredQuote: 'single'
+            }
+          }]
+        })
       ]
     }
   }
