@@ -43,6 +43,14 @@
   @include getup-fit-all;
 }
 
+.o-fill {
+  display: flex;
+
+  &>*{
+    flex: 1 1 auto;
+  }
+}
+
 /**
  * for Media block
  */
