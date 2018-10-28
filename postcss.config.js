@@ -1,5 +1,4 @@
 module.exports = ctx => {
-
   var plugins = [
     // require('postcss-devtools'),
     require('postcss-import'),
@@ -12,7 +11,21 @@ module.exports = ctx => {
     require('postcss-flexbugs-fixes'),
     require('autoprefixer')({
       grid: true
-    }),
+    })
+  ]
+
+  var minify = [
+    require('cssnano')({
+      preset: [
+        'default',
+        {
+          MergeRules: false,
+          normalizeString: {
+            preferredQuote: 'single'
+          }
+        }
+      ]
+    })
   ]
 
   if (ctx.env === 'guide') {
@@ -23,22 +36,13 @@ module.exports = ctx => {
         require('postcss-style-guide')({
           dest: 'docs/styleguide/index.html'
         }),
+        ...minify
       ]
     }
   } else {
     return {
       map: ctx.options.map,
-      plugins: [
-        ...plugins,
-        require('cssnano')({
-          preset: ['default', {
-            MergeRules: false,
-            normalizeString: {
-              preferredQuote: 'single'
-            }
-          }]
-        })
-      ]
+      plugins: [...plugins, ...minify]
     }
   }
 }
