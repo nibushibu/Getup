@@ -7,8 +7,8 @@
     "distDir": "dist"
   },
   "scripts": {
-    "css-sass": "node-sass --output ${npm_package_config_distDir}/css --output-style expanded --source-map true --include-path src/css --precision 6 'src/scss'",
-    "css-postcss": "postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose --map",
+    "css-sass": "node-sass --output ${npm_package_config_distDir}/css --output-style expanded --include-path src/css --precision 6 'src/scss'",
+    "css-postcss": "postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose --no-map",
     "css": "npm-run-all css-sass css-postcss",
     "docs-styleguide": "postcss --config postcss.config.js --env guide --replace ${npm_package_config_distDir}/css/**/*.css --verbose",
     "docs": "npm-run-all --parallel docs-*",
