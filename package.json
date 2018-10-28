@@ -75,6 +75,7 @@
     "postcss-cssnext": "^3.0.2",
     "postcss-devtools": "^1.1.1",
     "postcss-easings": "^2.0.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-focus": "^4.0.0",
     "postcss-import": "^12.0.0",
     "postcss-normalize-charset": "^4.0.0",
