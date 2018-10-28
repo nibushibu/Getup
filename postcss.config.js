@@ -9,6 +9,7 @@ module.exports = ctx => {
     //   indentSize: 2,
     // }),
     require('postcss-normalize-charset'),
+    require('postcss-flexbugs-fixes'),
     require('autoprefixer')({
       grid: true
     }),
