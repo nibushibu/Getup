@@ -1686,10 +1686,6 @@ delegates@^1.0.0:
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
   integrity sha1-hMbhWbgZBP3KWaDvRM2HDTElD5o=
 
-"delighters@https://github.com/Q42/delighters":
-  version "0.0.0"
-  resolved "https://github.com/Q42/delighters#a99c72f1d950a2e9fa3597c7a268e59a5e1aaade"
-
 dependency-graph@^0.7.0:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/dependency-graph/-/dependency-graph-0.7.2.tgz#91db9de6eb72699209d88aea4c1fd5221cac1c49"
@@ -5526,6 +5522,11 @@ sax@^1.2.4, sax@~1.2.1, sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
+
+scroll-out@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/scroll-out/-/scroll-out-2.2.4.tgz#65d8c9269502092d234fc7eec07c6d3400c15958"
+  integrity sha512-GW5L/ti/TwECG+b62YtUASSGjGOBCwkkzTF7bjKsu8UkWO4edVZ4eO7Oy7Idxuk+pzVnmWzOy8Fcpx9OSnIa8A==
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"

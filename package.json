@@ -14,6 +14,7 @@
     "docs": "npm-run-all --parallel docs-*",
     "buble": "buble -i src/js -m -o ${npm_package_config_distDir}/js",
     "riot": "riot -w --config riot.config",
+    "watch-riot": "yarn run riot",
     "watch-js": "onchange src/js -- yarn run buble",
     "watch-scss": "onchange src/scss -- yarn run css",
     "watch-html": "onchange src/ejs src/_ejs -- ejs-cli --base-dir src/ejs '**/*.ejs' --out ./dist",
@@ -29,7 +30,6 @@
     "aos": "^2.3.4",
     "axios": "^0.18.0",
     "copy": "^0.3.2",
-    "delighters": "https://github.com/Q42/delighters",
     "feature.js": "^1.0.0",
     "flexibility": "^2.0.1",
     "html5-boilerplate": "^6.1.0",
@@ -40,6 +40,7 @@
     "riot": "^3.13.0",
     "riot-animore": "^1.0.0",
     "sanitize.css": "^8.0.0",
+    "scroll-out": "^2.2.4",
     "slick-carousel": "^1.8.1"
   },
   "directories": {

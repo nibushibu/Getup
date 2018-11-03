@@ -1,5 +1,5 @@
-riot.mount('*')
-;(function($) {
+riot.mount('*');
+(function ($) {
   $(function () {
     if (!feature.touch) {
       $('a[href^="#"], .js-anchor-scroll').on('click', function (e) {
@@ -8,8 +8,7 @@ riot.mount('*')
         var $target = $(e.currentTarget.attributes.href.value)
         console.log($target)
         var targetOffset = $target.offset().top
-        $('html,body').animate(
-          {
+        $('html,body').animate({
             scrollTop: targetOffset - headerHeight - 10
           },
           300
@@ -31,5 +30,4 @@ var anime = anime({
   easing: 'easeInOutExpo',
   loop: true
 })
-
 //# sourceMappingURL=main.js.map
