@@ -1,7 +1,7 @@
 <app-tag>
   <div>
     <h1>Thie is Riot test.</h1>
-    <p onclick={ foo }>test = { test }</p>
+    <button class="unmount-animation" onclick="{ animationUnmount }" ref="button">アンマウント！</button>
   </div>
 
   <style type="myCssParser">
@@ -11,16 +11,35 @@
         color: orange;
         display: flex;
       }
+
+      .unmount-animation {
+        opacity: 1;
+        transition: opacity 1s;
+
+        &.is-unmount {
+          opacity: 0;
+        }
+      }
+
     }
   </style>
 
-  <script type="buble">
+  <script>
     const tag = this
+    tag.finishAnimation = false
 
     tag.test = 'Hello Riot!'
 
-    tag.foo = e => {
-      alert('foo')
+    tag.animationUnmount = e => {
+      tag.refs.button.addEventListener('transitionend', e => {
+        console.log('きえた')
+        tag.unmount()
+      })
+      tag.refs.button.classList.add('is-unmount')
     }
+
+    tag.on('before-unmount', e => {
+      console.log(tag)
+    })
   </script>
 </app-tag>

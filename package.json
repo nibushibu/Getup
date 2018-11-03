@@ -14,6 +14,7 @@
     "docs": "npm-run-all --parallel docs-*",
     "buble": "buble -i src/js -m -o ${npm_package_config_distDir}/js",
     "riot": "riot -w --config riot.config",
+    "watch-riot": "yarn run riot",
     "watch-js": "onchange src/js -- yarn run buble",
     "watch-scss": "onchange src/scss -- yarn run css",
     "watch-html": "onchange src/ejs src/_ejs -- ejs-cli --base-dir src/ejs '**/*.ejs' --out ./dist",
