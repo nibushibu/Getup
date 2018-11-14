@@ -16,3 +16,7 @@
     margin-top: 0;
   }
 }
+
+@mixin getup-rem($px){
+  font-size: $px / 16 * 1rem;
+}
