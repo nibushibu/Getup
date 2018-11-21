@@ -18,5 +18,5 @@
 }
 
 @mixin getup-rem($px){
-  font-size: $px / 16 * 1rem;
+  font-size: $px / 16rem;
 }
