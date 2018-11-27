@@ -29,7 +29,6 @@
     "animejs": "^2.2.0",
     "aos": "^2.3.4",
     "axios": "^0.18.0",
-    "copy": "^0.3.2",
     "feature.js": "^1.0.0",
     "flexibility": "^2.0.1",
     "html5-boilerplate": "^6.1.0",
@@ -62,6 +61,7 @@
     "babel-preset-es2015-riot": "^1.1.0",
     "buble": "^0.19.4",
     "concat": "^1.0.3",
+    "copy": "^0.3.2",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.5",
     "ejs-cli": "^2.0.1",
@@ -78,8 +78,6 @@
     "postcss-focus": "^4.0.0",
     "postcss-import": "^12.0.0",
     "postcss-normalize-charset": "^4.0.0",
-    "postcss-style-guide": "^0.14.0",
-    "require-dir": "^1.1.0",
-    "run-sequence": "^2.1.0"
+    "postcss-style-guide": "^0.14.0"
   }
 }
