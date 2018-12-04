@@ -42,9 +42,9 @@ yarn copy
 
 タスク名 | 概要
 ---|---
-copy-gulp | JSライブラリを1ファイルにまとめるほか、必要な画像ファイルなどのコピー
+copy | JSライブラリを1ファイルにまとめるほか、必要な画像ファイルなどのコピー
 
-コピータスクの詳細はgulpfile.babel.js/tasks/copy.jsを参照）
+コピータスクの詳細は `tasks/copy.js` を参照）
 
 ### min タスク
 
@@ -69,24 +69,17 @@ min-image | dist/imgディレクトリ内の画像を圧縮。ファイルをそ
 ```
 **distDir** = SCSSのコンパイル後のCSSの出力先。
 
-## Gulp関係
 
-`gulpfile.babel.js/config.js`
+`task/copy.js`
 
 ```js
-module.exports = {
-  /* 特別な定義が不要なタスクの設定 */
-  appPath: 'dist/',
-
-  js: [
-    'node_modules/riot/riot.min.js',
-    ...
-  ]
-};
+// concat javascript plugins
+concat([
+  'node_modules/html5-boilerplate/dist/js/plugins.js',
+  // ...中略...
+], 'dist/js/vendors.js')
 ```
-
-**appPath** = JS、CSS、HTMLのトップディレクトリ
-**js（配列）** = vendors.jsにまとめるJSライブラリファイル一式
+**concat()** = 第一引数で配列として渡したパスを第二引数のパス（vendors.js）にまとめるコマンド。JSプラグインなどは`node_modules`からこのコマンドで1ファイルにまとめてコピーしています。
 
 ## Riot.js
 
