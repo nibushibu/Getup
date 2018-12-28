@@ -6,6 +6,14 @@ Webサイト制作のためのボイラープレート
 
 package.jsonに記載されているスクリプト
 
+### start タスク
+
+```bash
+yarn start
+```
+
+後述の`watch`タスクと`server`タスクを実行
+
 ### watch タスク
 
 ```bash
@@ -29,6 +37,10 @@ PostCSSの設定は`postcss.config.js`の内容を参考してください。
 #### Riot.jsタグについて
 
 設定は`riot.config.js`を参照。
+
+### server タスク
+
+`dist`ディレクトリを http://localhost:3000 に公開。
 
 ### copy タスク
 
