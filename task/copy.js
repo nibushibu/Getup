@@ -4,7 +4,7 @@ const copy = require('copy')
 // concat javascript plugins
 concat([
   'node_modules/html5-boilerplate/dist/js/plugins.js',
-  'node_modules/animejs/anime.min.js',
+  'node_modules/animejs/lib/anime.min.js',
   'node_modules/riot/riot.min.js',
   'node_modules/riot-animore/riot-animore.js',
   'node_modules/jquery/dist/jquery.min.js',
