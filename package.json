@@ -22,7 +22,8 @@
     "min-css": "postcss ${npm_package_config_distDir}/css/main.css --env minify -o ${npm_package_config_distDir}/css/main.css",
     "min": "npm-run-all --parallel min-*",
     "imagemin": "imagemin ${npm_package_config_distDir}/img/*.{jpg,png} --out-dir=${npm_package_config_distDir}/img",
-    "copy": "node task/copy.js",
+    "uglify-vender-js": "uglifyjs ${npm_package_config_distDir}/js/vendors.js -o ${npm_package_config_distDir}/js/vendors.js" ,
+    "copy": "node task/copy.js && yarn run uglify-vender-js",
     "server": "node task/server.js",
     "start": "npm-run-all --parallel watch server"
   },
@@ -81,6 +82,7 @@
     "postcss-focus": "^4.0.0",
     "postcss-import": "^12.0.0",
     "postcss-normalize-charset": "^4.0.0",
-    "postcss-style-guide": "^0.14.0"
+    "postcss-style-guide": "^0.14.0",
+    "uglify-js": "^3.4.9"
   }
 }
