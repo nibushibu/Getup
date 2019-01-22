@@ -1,3 +1,5 @@
+import
+
 riot.mount('*');
 (function ($) {
   $(() => {
