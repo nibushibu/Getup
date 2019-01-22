@@ -1,4 +1,12 @@
-import
+import riot from 'riot'
+import 'animejs'
+import 'riot-animore'
+import _ from 'lodash'
+import feature from 'feature.js'
+import Promise from 'promise-polyfill'
+import ScrollOut from "scroll-out";
+import './vendors.js'
+import './tags.js'
 
 riot.mount('*');
 (function ($) {
@@ -25,7 +33,7 @@ console.log(`feature.touch = ${feature.touch}`)
 // anime.js サンプル
 const anime = anime({
   targets: '.js-anime',
-  translateX: 250,
+  translateX: 240,
   rotate: 360,
   duration: 800,
   direction: 'alternate',

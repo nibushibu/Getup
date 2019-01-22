@@ -1,13 +1,23 @@
+import riot from 'riot'
+import 'animejs'
+import 'riot-animore'
+import _ from 'lodash'
+import feature from 'feature.js'
+import Promise from 'promise-polyfill'
+import ScrollOut from "scroll-out";
+import './vendors.js'
+import './tags.js'
+
 riot.mount('*');
 (function ($) {
-  $(function () {
+  $(() => {
     if (!feature.touch) {
-      $('a[href^="#"], .js-anchor-scroll').on('click', function (e) {
+      $('a[href^="#"], .js-anchor-scroll').on('click', e => {
         e.preventDefault()
-        var headerHeight = 0
-        var $target = $(e.currentTarget.attributes.href.value)
+        let headerHeight = 0
+        let $target = $(e.currentTarget.attributes.href.value)
         console.log($target)
-        var targetOffset = $target.offset().top
+        let targetOffset = $target.offset().top
         $('html,body').animate({
             scrollTop: targetOffset - headerHeight - 10
           },
@@ -18,16 +28,15 @@ riot.mount('*');
   })
 })(jQuery)
 
-console.log(("feature.touch = " + (feature.touch)))
+console.log(`feature.touch = ${feature.touch}`)
 
 // anime.js サンプル
-var anime = anime({
+const anime = anime({
   targets: '.js-anime',
-  translateX: 250,
+  translateX: 240,
   rotate: 360,
   duration: 800,
   direction: 'alternate',
   easing: 'easeInOutExpo',
   loop: true
 })
-//# sourceMappingURL=main.js.map
