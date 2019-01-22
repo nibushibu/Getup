@@ -1,7 +1,6 @@
 import riot from 'riot'
 import jQuery from 'jquery'
 import feature from 'feature.js'
-import mojs from 'mo-js'
 import './tags.js'
 
 riot.mount('*')
@@ -25,27 +24,17 @@ riot.mount('*')
       })
     }
   })
-
 })(jQuery)
 
-console.log(("feature.touch = " + (feature.touch)))
+console.log(`feature.touch = ${feature.touch}`)
 
-// mo.js動作チェック
-var mojsAnime = new mojs.Html({
-  el: '.js-anime',
-  x: {
-    0: 250
-  },
-  angleZ: {
-    0: 360
-  },
+// anime.js サンプル
+const anime = anime({
+  targets: '.js-anime',
+  translateX: 250,
+  rotate: 360,
   duration: 800,
-  easing: 'expo.out',
-  repeat: true,
-  isYoyo: true,
-  delay: 500,
-  onComplete: function onComplete() {
-    this.replay()
-  }
-}).play()
-//# sourceMappingURL=main.js.map
+  direction: 'alternate',
+  easing: 'easeInOutExpo',
+  loop: true
+})

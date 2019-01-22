@@ -1,5 +1,4 @@
 module.exports = ctx => {
-
   var plugins = [
     // require('postcss-devtools'),
     require('postcss-import'),
@@ -9,26 +8,27 @@ module.exports = ctx => {
     //   indentSize: 2,
     // }),
     require('postcss-normalize-charset'),
+    require('postcss-flexbugs-fixes'),
     require('autoprefixer')({
       grid: true
-    }),
+    })
   ]
 
-  if (ctx.env === 'minify') {
-    return {
-      map: ctx.options.map,
-      plugins: [
-        require('cssnano')({
-          preset: ['default', {
-            MergeRules: false,
-            normalizeString: {
-              preferredQuote: 'single'
-            }
-          }]
-        })
+  var minify = [
+    require('cssnano')({
+      preset: [
+        'default',
+        {
+          MergeRules: false,
+          normalizeString: {
+            preferredQuote: 'single'
+          }
+        }
       ]
-    }
-  } else if (ctx.env === 'guide') {
+    })
+  ]
+
+  if (ctx.env === 'guide') {
     return {
       map: ctx.options.map,
       plugins: [
@@ -36,14 +36,13 @@ module.exports = ctx => {
         require('postcss-style-guide')({
           dest: 'docs/styleguide/index.html'
         }),
+        ...minify
       ]
     }
   } else {
     return {
       map: ctx.options.map,
-      plugins: [
-        ...plugins,
-      ]
+      plugins: [...plugins, ...minify]
     }
   }
 }

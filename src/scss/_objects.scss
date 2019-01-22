@@ -43,17 +43,24 @@
   @include getup-fit-all;
 }
 
+.o-fill {
+  display: flex;
+
+  &>*{
+    flex: 1 1 auto;
+  }
+}
+
 /**
  * for Media block
  */
 
-.o-flex--nowrap {
+.o-flex--no-wrap {
   flex-wrap: nowrap;
 }
 
 .o-width-fixed {
   flex: 0 0 auto;
-  max-width: 50%;
   text-align: center;
 }
 
