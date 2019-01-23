@@ -15,7 +15,7 @@
     "buble": "buble -i src/js -m -o ${npm_package_config_distDir}/js",
     "riot": "riot -w --config riot.config",
     "parcel": "parcel watch src/js/main.js -d ${npm_package_config_distDir}/js",
-    "parcel-build": "parcel build watch src/js/main.js -d ${npm_package_config_distDir}/js ",
+    "parcel-build": "parcel watch src/js/main.js -d ${npm_package_config_distDir}/js ",
     "watch-js": "yarn run parcel",
     "watch-riot": "yarn run riot",
     "watch-scss": "onchange src/scss -- yarn run css",
@@ -61,6 +61,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
     "autoprefixer": "^9.4.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015-riot": "^1.1.0",
