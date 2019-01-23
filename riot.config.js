@@ -6,7 +6,6 @@ const sass = require('node-sass')
 const postcss = require('postcss')
 const postcssFocus = require('postcss-focus')
 const autoprefixer = require('autoprefixer')
-const buble = require('buble')
 
 /**
  * Riot用CSSカスタムパーサー（Sass + Autoprefixer）
@@ -28,18 +27,10 @@ riot.parsers.css.myCssParser = function (tagName, css) {
   return css
 }
 
-/**
- * Riot用JSカスタムパーサー（Bubble）
- */
-riot.parsers.js.buble = function (js, options) {
-  js = buble.transform(js)
-  return js
-}
-
 export default {
   from: 'src/riot',
-  to: 'dist/js/tags.js',
+  to: 'src/js/tags.js',
   ext: 'html',
-  type: 'buble',
+  type: 'es6',
   style: 'myCssParser'
 }
