@@ -15,7 +15,7 @@
     "buble": "buble -i src/js -m -o ${npm_package_config_distDir}/js",
     "riot": "riot -m -w --config riot.config",
     "parcel": "parcel watch src/js/main.js -d ${npm_package_config_distDir}/js",
-    "parcel-build": "parcel watch src/js/main.js -d ${npm_package_config_distDir}/js ",
+    "parcel-build": "parcel build src/js/main.js -d ${npm_package_config_distDir}/js ",
     "watch-riot": "yarn run riot",
     "watch-scss": "onchange src/scss -- yarn run css",
     "watch-html": "onchange src/ejs src/_ejs -- ejs-cli --base-dir src/ejs '**/*.ejs' --out ./dist",
