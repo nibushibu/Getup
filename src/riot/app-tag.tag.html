@@ -27,6 +27,22 @@
     const tag = this
     tag.finishAnimation = false
 
+    tag.on('mount', e => {
+      var tl = anime.timeline({
+        duration: 500
+      })
+      tl.add({
+        targets: tag.refs.button,
+        opacity: 0,
+        duration: 1
+      })
+      .add({
+        targets: tag.refs.button,
+        opacity: 1,
+        duration: 1000
+      })
+    })
+
     tag.test = 'Hello Riot!'
 
     tag.animationUnmount = e => {
