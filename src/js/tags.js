@@ -11,6 +11,20 @@
 riot.tag2('app-tag', '<div> <h1>Thie is Riot test.</h1> <button class="unmount-animation" onclick="{animationUnmount}" ref="button">アンマウント！</button> </div>', 'app-tag h1,[data-is="app-tag"] h1{ color: orange; display: flex; } app-tag .unmount-animation,[data-is="app-tag"] .unmount-animation{ opacity: 1; transition: opacity 1s; } app-tag .unmount-animation.is-unmount,[data-is="app-tag"] .unmount-animation.is-unmount{ opacity: 0; }', '', function(opts) {
 const tag = this;
 tag.finishAnimation = false;
+tag.on('mount', e => {
+  var tl = anime.timeline({
+    duration: 500
+  });
+  tl.add({
+    targets: tag.refs.button,
+    opacity: 0,
+    duration: 1
+  }).add({
+    targets: tag.refs.button,
+    opacity: 1,
+    duration: 1000
+  });
+});
 tag.test = 'Hello Riot!';
 
 tag.animationUnmount = e => {
