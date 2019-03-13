@@ -26,7 +26,7 @@ yarn watch
 watch-riot | Riot.jsのタグファイルをjsファイルに変換 | /src/riot/** | /dist/js/tags.js
 watch-js | BubleでJSファイルをトランスパイル | /src/js/** | /dist/js
 watch-scss | SASS（.scss）をCSSにコンパイルしPostCSSで変換 | /src/scss/** | /dist/css
-watch-html | EJS（.ejs）をhtmlにコンパイル。<br>ejsのコンパイルにはgulp-ejsを利用（gulpfile.babel.js/tasks/html.jsを参照） | /src/ejs/** | /dist
+watch-html | Nunjucks（.njk）をhtmlにコンパイル。<br>Nunjucksのコンパイルにはgulp利用（gulpfile.jsを参照） | /src/templates/** | /dist
 
 #### CSSについて
 
@@ -44,7 +44,7 @@ PostCSSの設定は`postcss.config.js`の内容を参考してください。
 
 ### copy タスク
 
-必要なJSライブラリのファイルなどをdistにコピー
+必要なJSライブラリのファイルなどをdistにコピー<br>**（任意で以下のCommandを実行する必要があります）**
 
 ```bash
 yarn copy
@@ -54,7 +54,7 @@ yarn copy
 
 タスク名 | 概要
 ---|---
-copy | JSライブラリを1ファイルにまとめるほか、必要な画像ファイルなどのコピー
+copy | `npm_modules`の中の予め設定したjsファイルを`/dist/js/vendors.js`にまとめたり、JSライブラリに付随する画像ファイルなどを`dist`ディレクトリにコピー。
 
 コピータスクの詳細は `tasks/copy.js` を参照）
 
@@ -98,8 +98,9 @@ concat([
 ```js
 export default {
   from: 'src/riot',
-  to: 'dist/js/tags.js',
-  type: 'buble',
+  to: 'src/js/tags.js',
+  ext: 'html',
+  type: 'es6',
   style: 'myCssParser'
 }
 ```
