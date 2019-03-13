@@ -70,9 +70,9 @@ min-image | dist/imgディレクトリ内の画像を圧縮。ファイルをそ
 ## 設定ファイルについて
 
 プロジェクトによっては、コンパイル後のCSSなどの出力先を変更することがあると思います。
-その際に
+その際には以下の設定を変更してください。
 
-## package.jsonの設定
+### package.jsonの設定
 
 ```js
   "config": {
@@ -81,6 +81,7 @@ min-image | dist/imgディレクトリ内の画像を圧縮。ファイルをそ
 ```
 **distDir** = SCSSのコンパイル後のCSSの出力先。
 
+### JSファイルなどを`npm_modules`から複製する時のコピー先の設定
 
 `task/copy.js`
 
@@ -91,11 +92,19 @@ concat([
   // ...中略...
 ], 'dist/js/vendors.js')
 ```
+
 **concat()** = 第一引数で配列として渡したパスを第二引数のパス（vendors.js）にまとめるコマンド。JSプラグインなどは`node_modules`からこのコマンドで1ファイルにまとめてコピーしています。
 
-## Riot.js
+最後の`'dist/js/vendors.js'`の部分を、任意のパスに変更してください。
+
+
+### Riot.jsの設定
+
+`riot.config.js`
 
 ```js
+/* 前半略 */
+/* ファイルの最後の部分 */
 export default {
   from: 'src/riot',
   to: 'src/js/tags.js',
