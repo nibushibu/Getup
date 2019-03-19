@@ -75,7 +75,6 @@
     "perfectionist": "^2.4.0",
     "postcss": "^7.0.8",
     "postcss-cli": "^6.1.1",
-    "postcss-cssnext": "^3.0.2",
     "postcss-devtools": "^1.1.1",
     "postcss-easings": "^2.0.0",
     "postcss-flexbugs-fixes": "^4.1.0",
