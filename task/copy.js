@@ -1,5 +1,5 @@
 const concat = require('concat')
-const copy = require('copy')
+const cpx = require('cpx')
 
 // concat javascript plugins
 concat([
@@ -8,21 +8,13 @@ concat([
 ], 'src/js/vendors.js')
 
 // copy fonts
-copy(
+cpx.copy(
   'node_modules/slick-carousel/slick/fonts/*',
-  'dist/css/fonts',
-  function (err, files) {
-    if (err) throw err
-  }
+  'dist/css/fonts'
 )
 
 // copy images
-copy.one(
+cpx.copy(
   'node_modules/slick-carousel/slick/ajax-loader.gif',
-  'dist/css/', {
-    flatten: true
-  },
-  function (err, files) {
-    if (err) throw err
-  }
+  'dist/css/'
 )
