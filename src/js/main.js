@@ -1,12 +1,3 @@
-import riot from 'riot'
-import anime from 'animejs'
-import 'riot-animore'
-import _ from 'lodash'
-import feature from 'feature.js'
-import Promise from 'promise-polyfill'
-import ScrollOut from "scroll-out";
-import './tags.js'
-
 riot.mount('*');
 (function ($) {
   $(() => {
