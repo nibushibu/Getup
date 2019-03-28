@@ -12,11 +12,11 @@
     "css": "npm-run-all css-sass css-postcss",
     "docs-styleguide": "postcss --config postcss.config.js --env guide --replace ${npm_package_config_distDir}/css/**/*.css --verbose",
     "docs": "npm-run-all --parallel docs-*",
-    "buble": "buble -i src/js -m -o ${npm_package_config_distDir}/js",
+    "move-js": "cpx src/js/**/ ${npm_package_config_distDir}/js",
     "riot": "riot -m -w --config riot.config",
     "watch-riot": "yarn run riot",
     "watch-scss": "onchange src/scss -- yarn run css",
-    "watch-js": "onchange src/js -- yarn run buble",
+    "watch-js": "onchange src/js -- yarn run move-js",
     "watch-html": "onchange src/templates src/_templates -- gulp nunjucks",
     "watch": "npm-run-all --parallel watch-*",
     "min-css": "postcss ${npm_package_config_distDir}/css/main.css --env minify -o ${npm_package_config_distDir}/css/main.css",
@@ -29,7 +29,6 @@
     "start": "npm-run-all --parallel watch server"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.2.3",
     "animejs": "^3.0.0",
     "aos": "^2.3.4",
     "axios": "^0.18.0",
@@ -60,6 +59,7 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^9.4.4",
+    "babel-core": "^6.26.3",
     "concat": "^1.0.3",
     "cpx": "^1.5.0",
     "css-mqpacker": "^7.0.0",
