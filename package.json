@@ -12,7 +12,7 @@
     "css": "npm-run-all css-sass css-postcss",
     "docs-styleguide": "postcss --config postcss.config.js --env guide --replace ${npm_package_config_distDir}/css/**/*.css --verbose",
     "docs": "npm-run-all --parallel docs-*",
-    "move-js": "cpx src/js/**/ ${npm_package_config_distDir}/js",
+    "move-js": "uglifyjs src/js/main.js ${npm_package_config_distDir}/js/main.js",
     "riot": "riot -m -w --config riot.config",
     "watch-riot": "yarn run riot",
     "watch-scss": "onchange src/scss -- yarn run css",
@@ -43,7 +43,8 @@
     "riot-animore": "^1.0.0",
     "sanitize.css": "^8.0.0",
     "scroll-out": "^2.2.4",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "directories": {
     "doc": "docs"
