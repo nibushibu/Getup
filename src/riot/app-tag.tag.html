@@ -24,10 +24,10 @@
   </style>
 
   <script>
-    const tag = this
+    var tag = this
     tag.finishAnimation = false
 
-    tag.on('mount', e => {
+    tag.on('mount', function(e) {
       var tl = anime.timeline({
         duration: 500
       })
@@ -45,15 +45,15 @@
 
     tag.test = 'Hello Riot!'
 
-    tag.animationUnmount = e => {
-      tag.refs.button.addEventListener('transitionend', e => {
+    tag.animationUnmount = function(e) {
+      tag.refs.button.addEventListener('transitionend', function(e) {
         console.log('きえた')
         tag.unmount()
       })
       tag.refs.button.classList.add('is-unmount')
     }
 
-    tag.on('before-unmount', e => {
+    tag.on('before-unmount', function(e) {
       console.log(tag)
     })
   </script>
