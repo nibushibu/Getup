@@ -29,7 +29,6 @@ riot.parsers.css.myCssParser = function (tagName, css) {
 
 export default {
   from: 'src/riot',
-  to: 'dist/js/tags.js',
-  ext: 'html',
+  type: 'es6',
   style: 'myCssParser'
 }
