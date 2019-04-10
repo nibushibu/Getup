@@ -25413,9 +25413,9 @@ var define;
 },{"riot":"../../node_modules/riot/riot.js"}],"main.js":[function(require,module,exports) {
 "use strict";
 
-var _riot = _interopRequireDefault(require("riot"));
+var riot = _interopRequireWildcard(require("riot"));
 
-var _animejs = _interopRequireDefault(require("animejs"));
+var anime = _interopRequireWildcard(require("../../node_modules/animejs/lib/anime.es.js"));
 
 require("riot-animore");
 
@@ -25431,28 +25431,12 @@ require("./tags.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_riot.default.mount('*');
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
-(function ($) {
-  $(function () {
-    if (!_feature.default.touch) {
-      $('a[href^="#"], .js-anchor-scroll').on('click', function (e) {
-        e.preventDefault();
-        var headerHeight = 0;
-        var $target = $(e.currentTarget.attributes.href.value);
-        console.log($target);
-        var targetOffset = $target.offset().top;
-        $('html,body').animate({
-          scrollTop: targetOffset - headerHeight - 10
-        }, 300);
-      });
-    }
-  });
-})(jQuery);
-
+riot.mount('*');
 console.log("feature.touch = ".concat(_feature.default.touch)); // anime.js サンプル
 
-var animeSample = (0, _animejs.default)({
+var animeSample = anime({
   targets: '.js-anime',
   translateX: 240,
   rotate: 360,
@@ -25461,7 +25445,7 @@ var animeSample = (0, _animejs.default)({
   easing: 'easeInOutExpo',
   loop: true
 });
-},{"riot":"../../node_modules/riot/riot.js","animejs":"../../node_modules/animejs/lib/anime.es.js","riot-animore":"../../node_modules/riot-animore/lib/index.js","lodash":"../../node_modules/lodash/lodash.js","feature.js":"../../node_modules/feature.js/feature.js","promise-polyfill":"../../node_modules/promise-polyfill/src/index.js","scroll-out":"../../node_modules/scroll-out/lib/index.js","./tags.js":"tags.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"riot":"../../node_modules/riot/riot.js","../../node_modules/animejs/lib/anime.es.js":"../../node_modules/animejs/lib/anime.es.js","riot-animore":"../../node_modules/riot-animore/lib/index.js","lodash":"../../node_modules/lodash/lodash.js","feature.js":"../../node_modules/feature.js/feature.js","promise-polyfill":"../../node_modules/promise-polyfill/src/index.js","scroll-out":"../../node_modules/scroll-out/lib/index.js","./tags.js":"tags.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -25489,7 +25473,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52577" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55218" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

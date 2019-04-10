@@ -1,31 +1,14 @@
-import riot from 'riot'
-import anime from 'animejs'
+import * as riot from 'riot'
+import * as anime from '../../node_modules/animejs/lib/anime.es.js'
 import 'riot-animore'
 import _ from 'lodash'
 import feature from 'feature.js'
 import Promise from 'promise-polyfill'
 import ScrollOut from "scroll-out";
-import './tags.js'
+import '../riot/app-tag.tag.html'
+import '../riot/raw-html.tag.html'
 
 riot.mount('*');
-(function ($) {
-  $(() => {
-    if (!feature.touch) {
-      $('a[href^="#"], .js-anchor-scroll').on('click', e => {
-        e.preventDefault()
-        let headerHeight = 0
-        let $target = $(e.currentTarget.attributes.href.value)
-        console.log($target)
-        let targetOffset = $target.offset().top
-        $('html,body').animate({
-            scrollTop: targetOffset - headerHeight - 10
-          },
-          300
-        )
-      })
-    }
-  })
-})(jQuery)
 
 console.log(`feature.touch = ${feature.touch}`)
 
