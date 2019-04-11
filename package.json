@@ -39,7 +39,7 @@
     "lodash": "^4.17.11",
     "mobile-detect": "^1.4.3",
     "promise-polyfill": "^8.0.0",
-    "riot": "^3.13.0",
+    "riot": "^4.0.0-rc.1",
     "riot-animore": "^1.0.0",
     "sanitize.css": "^8.0.0",
     "scroll-out": "^2.2.4",

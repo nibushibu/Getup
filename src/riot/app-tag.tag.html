@@ -24,37 +24,35 @@
   </style>
 
   <script>
-    var tag = this
-    tag.finishAnimation = false
-
-    tag.on('mount', function(e) {
-      var tl = anime.timeline({
-        duration: 500
-      })
-      tl.add({
-        targets: tag.refs.button,
-        opacity: 0,
-        duration: 1
-      })
-      .add({
-        targets: tag.refs.button,
-        opacity: 1,
-        duration: 1000
-      })
-    })
-
-    tag.test = 'Hello Riot!'
-
-    tag.animationUnmount = function(e) {
-      tag.refs.button.addEventListener('transitionend', function(e) {
-        console.log('きえた')
-        tag.unmount()
-      })
-      tag.refs.button.classList.add('is-unmount')
+    export default {
+      state: {
+        finishAnimation: false,
+        test: 'Hello Riot!'
+      },
+      onMounted() {
+        this.state.tl = anime.timeline({
+          duration: 500
+        })
+        this.state.tl.add({
+          targets: tag.refs.button,
+          opacity: 0,
+          duration: 1
+        })
+        .add({
+          targets: tag.refs.button,
+          opacity: 1,
+          duration: 1000
+        })
+      },
+      animationUnmount(){
+        this.$('button').addEventListener('transitionend', function(e) {
+          console.log('きえた')
+          // this.unmount()
+        })
+        tag.$('button').classList.add('is-unmount')
+      }
     }
 
-    tag.on('before-unmount', function(e) {
-      console.log(tag)
-    })
+
   </script>
 </app-tag>
