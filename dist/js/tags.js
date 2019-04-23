@@ -1,47 +1,91 @@
+var appTag_tag = {
+  'css': `app-tag :scope,[is="app-tag"] :scope{ app-tag h1,[is="app-tag"] h1{
+        color: orange;
+        display: flex;
+      } app-tag .unmount-animation,[is="app-tag"] .unmount-animation{ app-tag opacity: 1;
+        transition: opacity 1s;
 
-(function(tagger) {
-  if (typeof define === 'function' && define.amd) {
-    define(function(require, exports, module) { tagger(require('riot'), require, exports, module)})
-  } else if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    tagger(require('riot'), require, exports, module)
-  } else {
-    tagger(window.riot)
-  }
-})(function(riot, require, exports, module) {
-riot.tag2('app-tag', '<div> <h1>Thie is Riot test.</h1> <button class="unmount-animation" onclick="{animationUnmount}" ref="button">アンマウント！</button> </div>', 'app-tag h1,[data-is="app-tag"] h1{ color: orange; display: flex; } app-tag .unmount-animation,[data-is="app-tag"] .unmount-animation{ opacity: 1; transition: opacity 1s; } app-tag .unmount-animation.is-unmount,[data-is="app-tag"] .unmount-animation.is-unmount{ opacity: 0; }', '', function(opts) {
-    export default {
-      state: {
-        finishAnimation: false,
-        test: 'Hello Riot!'
-      },
-      this.onMounted = function() {
-        this.state.tl = anime.timeline({
-          duration: 500
-        })
-        this.state.tl.add({
-          targets: tag.refs.button,
-          opacity: 0,
-          duration: 1
-        })
-        .add({
-          targets: tag.refs.button,
-          opacity: 1,
-          duration: 1000
-        })
-      }.bind(this),
-      this.animationUnmount = function(){
-        this.$('button').addEventListener('transitionend', function(e) {
-          console.log('きえた')
+        &.is-unmount,[is="app-tag"] opacity: 1;
+        transition: opacity 1s;
 
-        })
-        tag.$('button').classList.add('is-unmount')
-      }.bind(this)
+        &.is-unmount{
+          opacity: 0;
+        }
+      }
+    }`,
+
+  'exports': {
+    state: {
+      finishAnimation: false,
+      test: 'Hello Riot!'
+    },
+
+    onMounted() {
+      this.state.tl = anime.timeline({
+        duration: 500
+      });
+      this.state.tl.add({
+        targets: tag.refs.button,
+        opacity: 0,
+        duration: 1
+      })
+      .add({
+        targets: tag.refs.button,
+        opacity: 1,
+        duration: 1000
+      });
+    },
+
+    animationUnmount(){
+      this.$('button').addEventListener('transitionend', function(e) {
+        console.log('きえた');
+        // this.unmount()
+      });
+      tag.$('button').classList.add('is-unmount');
     }
+  },
 
-});
-riot.tag2('raw-html', '<span></span>', '', '', function(opts) {
-    this.root.innerHTML = opts.content
-    this.on('update', function() {
-      this.root.innerHTML = opts.content
-    })
-});});
+  'template': function(template, expressionTypes, bindingTypes, getComponent) {
+    return template(
+      '<div><h1>Thie is Riot test.</h1><button expr2 class="unmount-animation" ref="button">アンマウント！</button><raw-html expr3 content></raw-html></div>',
+      [{
+        'redundantAttribute': 'expr2',
+        'selector': '[expr2]',
+
+        'expressions': [{
+          'type': expressionTypes.EVENT,
+          'name': 'onclick',
+
+          'evaluate': function(scope) {
+            return scope.animationUnmount;
+          }
+        }]
+      }, {
+        'type': bindingTypes.TAG,
+        'getComponent': getComponent,
+
+        'evaluate': function(scope) {
+          return 'raw-html';
+        },
+
+        'slots': [],
+
+        'attributes': [{
+          'type': expressionTypes.ATTRIBUTE,
+          'name': 'content',
+
+          'evaluate': function() {
+            return true;
+          }
+        }],
+
+        'redundantAttribute': 'expr3',
+        'selector': '[expr3]'
+      }]
+    );
+  },
+
+  'name': 'app-tag'
+};
+
+export default appTag_tag;

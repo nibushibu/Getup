@@ -8,8 +8,7 @@ const postcssFocus = require('postcss-focus')
 const autoprefixer = require('autoprefixer')
 
 export default {
-  from: 'src/riot',
-  to: 'dist/js/tags.js',
-  ext: 'html',
+  output: 'dist/js/tags.js',
+  extension: 'html',
   style: 'scss'
 }
