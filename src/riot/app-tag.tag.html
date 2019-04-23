@@ -2,7 +2,7 @@
   <div>
     <h1>Thie is Riot test.</h1>
     <button class="unmount-animation" onclick="{ animationUnmount }" ref="button">アンマウント！</button>
-    <raw-html content=""></raw-html>
+    <raw-html content="テスト"></raw-html>
   </div>
 
   <style>
@@ -48,7 +48,6 @@
       animationUnmount(){
         this.$('button').addEventListener('transitionend', function(e) {
           console.log('きえた')
-          // this.unmount()
         })
         tag.$('button').classList.add('is-unmount')
       }

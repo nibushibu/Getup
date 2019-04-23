@@ -12,7 +12,7 @@
     "css": "npm-run-all css-sass css-postcss",
     "docs-styleguide": "postcss --config postcss.config.js --env guide --replace ${npm_package_config_distDir}/css/**/*.css --verbose",
     "docs": "npm-run-all --parallel docs-*",
-    "move-js": "uglifyjs src/js/main.js ${npm_package_config_distDir}/js/main.js",
+    "move-js": "uglifyjs src/js/main.js -o ${npm_package_config_distDir}/js/main.js",
     "riot": "riot -w -c riot.config src/riot",
     "watch-riot": "yarn run riot",
     "watch-scss": "onchange src/scss -- yarn run css",

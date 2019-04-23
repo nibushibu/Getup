@@ -1,11 +1,4 @@
-riot.mount('*');
-(function ($) {
-  $(function () {
-    // docmentReady後の動作
-  })
-})(jQuery)
-
-console.log(`feature.touch = ${feature.touch}`)
+riot.mount('[data-riot]')
 
 // anime.js サンプル
 var animeSample = anime({
