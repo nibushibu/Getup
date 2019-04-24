@@ -40,7 +40,6 @@
     "mobile-detect": "^1.4.3",
     "promise-polyfill": "^8.0.0",
     "riot": "^4.0.0-rc.2",
-    "riot-animore": "^1.0.0",
     "sanitize.css": "^8.0.0",
     "scroll-out": "^2.2.4",
     "slick-carousel": "^1.8.1",
@@ -62,6 +61,7 @@
     "@riotjs/cli": "^4.0.0",
     "@riotjs/compiler": "^4.0.0",
     "autoprefixer": "^9.5.1",
+    "buble": "^0.19.7",
     "concat": "^1.0.3",
     "cpx": "^1.5.0",
     "css-mqpacker": "^7.0.0",
@@ -82,6 +82,6 @@
     "postcss-import": "^12.0.0",
     "postcss-normalize-charset": "^4.0.0",
     "postcss-style-guide": "^0.14.0",
-    "uglify-js": "^3.5.4"
+    "uglify-es": "^3.3.9"
   }
 }
