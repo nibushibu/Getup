@@ -1,4 +1,7 @@
-riot.mount('[data-riot]')
+import App from './tags.js'
+riot.register('app', App)
+
+riot.mount('app')
 
 // anime.js サンプル
 var animeSample = anime({
