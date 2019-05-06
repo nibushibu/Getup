@@ -7,7 +7,6 @@ riot.mount('app')
 var animeSample = anime({
   targets: '.js-anime',
   translateX: 240,
-  rotate: 360,
   duration: 800,
   direction: 'alternate',
   easing: 'easeInOutExpo',

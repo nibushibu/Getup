@@ -1,1 +1,1 @@
-import App from"./tags.js";riot.register("app",App);riot.mount("app");var animeSample=anime({targets:".js-anime",translateX:240,rotate:360,duration:800,direction:"alternate",easing:"easeInOutExpo",loop:true});
+import App from"./tags.js";riot.register("app",App);riot.mount("app");var animeSample=anime({targets:".js-anime",translateX:240,duration:800,direction:"alternate",easing:"easeInOutExpo",loop:true});
