@@ -1,7 +1,10 @@
-import App from './tags.js'
+import App from './app.riot.js'
 riot.register('app', App)
 
-riot.mount('app')
+import RawHtml from './raw-html.riot.js'
+riot.register('raw-html', RawHtml)
+
+riot.mount('[data-riot]')
 
 // anime.js サンプル
 var animeSample = anime({
