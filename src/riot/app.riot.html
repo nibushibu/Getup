@@ -41,6 +41,7 @@
       animationUnmount(e){
         this.$('[ref="button"]').addEventListener('transitionend', function(e) {
           console.log('消えました')
+          riot.unmount('app')
         })
         this.$('[ref="button"]').classList.add('is-unmount')
       }

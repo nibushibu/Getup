@@ -29,6 +29,7 @@ var app_riot = {
     animationUnmount(e){
       this.$('[ref="button"]').addEventListener('transitionend', function(e) {
         console.log('消えました');
+        riot.unmount('app');
       });
       this.$('[ref="button"]').classList.add('is-unmount');
     }
@@ -36,10 +37,10 @@ var app_riot = {
 
   'template': function(template, expressionTypes, bindingTypes, getComponent) {
     return template(
-      '<div><h1>Thie is Riot test.</h1><p expr4><!----></p><button expr5 class="unmount-animation" ref="button">アンマウント！</button><raw-html expr6 content="テスト"></raw-html></div>',
+      '<div><h1>Thie is Riot test.</h1><p expr13><!----></p><button expr14 class="unmount-animation" ref="button">アンマウント！</button><raw-html expr15 content="テスト"></raw-html></div>',
       [{
-        'redundantAttribute': 'expr4',
-        'selector': '[expr4]',
+        'redundantAttribute': 'expr13',
+        'selector': '[expr13]',
 
         'expressions': [{
           'type': expressionTypes.TEXT,
@@ -50,8 +51,8 @@ var app_riot = {
           }
         }]
       }, {
-        'redundantAttribute': 'expr5',
-        'selector': '[expr5]',
+        'redundantAttribute': 'expr14',
+        'selector': '[expr14]',
 
         'expressions': [{
           'type': expressionTypes.EVENT,
@@ -80,8 +81,8 @@ var app_riot = {
           }
         }],
 
-        'redundantAttribute': 'expr6',
-        'selector': '[expr6]'
+        'redundantAttribute': 'expr15',
+        'selector': '[expr15]'
       }]
     );
   },
