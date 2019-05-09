@@ -1,0 +1,52 @@
+<app>
+  <div>
+    <h1>Thie is Riot test.</h1>
+    <p>{ state.test }</p>
+    <button class="unmount-animation" onclick="{ animationUnmount }" ref="button">アンマウント！</button>
+    <raw-html content="テスト"></raw-html>
+  </div>
+
+  <style>h1 {
+      color: green;
+      display: flex;
+    }
+
+    .unmount-animation {
+      opacity: 1;
+      transition: opacity 1s;
+    }
+
+    .unmount-animation.is-unmount {
+      opacity: 0;
+    }</style>
+
+  <script>"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  state: {
+    finishAnimation: false,
+    test: 'Hello Riot!'
+  },
+  onMounted: function onMounted() {
+    anime({
+      targets: this.$('[ref="button"]'),
+      translateX: 20,
+      easing: 'easeInOutSine',
+      duration: 1000,
+      loop: true,
+      direction: 'alternate'
+    });
+  },
+  animationUnmount: function animationUnmount(e) {
+    this.$('[ref="button"]').addEventListener('transitionend', function (e) {
+      console.log('消えました');
+    });
+    this.$('[ref="button"]').classList.add('is-unmount');
+  }
+};
+exports.default = _default;</script>
+</app>

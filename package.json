@@ -13,7 +13,7 @@
     "docs-styleguide": "postcss --config postcss.config.js --env guide --replace ${npm_package_config_distDir}/css/**/*.css --verbose",
     "docs": "npm-run-all --parallel docs-*",
     "move-js": "uglifyjs src/js/main.js -o ${npm_package_config_distDir}/js/main.js",
-    "watch-bundle": "parcel watch src/js/main.js -o dist/js",
+    "watch-bundle": "parcel watch src/js/main.js -d dist/js",
     "watch-scss": "onchange src/scss -- yarn run css",
     "watch-js": "onchange src/js -- yarn run move-js",
     "watch-html": "onchange src/templates src/_templates -- gulp nunjucks",

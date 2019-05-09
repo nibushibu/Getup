@@ -1,10 +1,14 @@
-import App from '../riot/app.riot.html'
-import RawHtml from '../riot/raw-html.riot.html'
+import riot from '../../node_modules/riot/riot.esm.js'
+import App from '../riot/app.riot'
+import RawHtml from '../riot/raw-html.riot'
 
 console.log(App)
 console.log(RawHtml)
 
-export default MyComponent
+riot.register('app', App)
+riot.register('raw-html', RawHtml)
+
+riot.mount('[data-riot]')
 
 // anime.js サンプル
 var animeSample = anime({

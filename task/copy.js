@@ -5,7 +5,6 @@ const cpx = require('cpx')
 concat([
   'node_modules/html5-boilerplate/dist/js/plugins.js',
   'node_modules/animejs/lib/anime.min.js',
-  'node_modules/riot/riot.min.js',
   'node_modules/jquery/dist/jquery.min.js',
   'node_modules/axios/dist/axios.min.js',
   'node_modules/feature.js/feature.min.js',
