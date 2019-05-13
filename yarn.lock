@@ -762,10 +762,10 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
-"@riotjs/compiler@^4.0.2", "@riotjs/compiler@^4.0.4":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@riotjs/compiler/-/compiler-4.0.4.tgz#8689e3e282d2a34cfadc955311926e47be2006a9"
-  integrity sha512-bJLOSjkdExQ5NsWFHDM0/t9IyNpw54jbkxqxcSN4VZbaaOPOurkSss9LZEmH5e1MlVnvbu0dnmzWmbEcuJiEUw==
+"@riotjs/compiler@^4.0.2", "@riotjs/compiler@^4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@riotjs/compiler/-/compiler-4.1.1.tgz#a7b4ae091f9763c2fc3c65359784a28c3d5bba31"
+  integrity sha512-z45MQi77tIE8TpC0HFEvk9TW9WjtJw3yM5hJZ2Vu+9hZatw0lF5TSgPLZna9Xc81an81zSdmYSXHpcsDF3hkbg==
   dependencies:
     "@riotjs/dom-bindings" "^1.0.0"
     "@riotjs/parser" "^0.8.1"
@@ -780,6 +780,13 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@riotjs/dom-bindings/-/dom-bindings-1.0.0.tgz#52b144b307ded95cf84afe5483e5e223c3e5ad68"
   integrity sha512-oXwDuUSBwOvPUkXjZ8uwNwMTfLpC6uCDrzWCuZs34GfNxaVFsgoUz7xDCIIf4TEnwReivHvsUXA08eqtX8b+rg==
+  dependencies:
+    domdiff "^2.0.3"
+
+"@riotjs/dom-bindings@^4.0.0-rc.5":
+  version "4.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/@riotjs/dom-bindings/-/dom-bindings-4.0.0-rc.5.tgz#96a60c5fef64adbd5eed525e11d8107fd817dfa4"
+  integrity sha512-BdDZR8jWfisyXxOo4Hn/JvnMmL5+vP3s7DzhSaJnQ00McyxT+5ry3jAnnu30kSlWZWplkeJ7XI07rG4chFb0Ug==
   dependencies:
     domdiff "^2.0.3"
 
@@ -6937,12 +6944,12 @@ rimraf@2, rimraf@^2.6.1, rimraf@^2.6.2:
     glob "^7.1.3"
 
 riot@^4.0.0-rc.8:
-  version "4.0.0-rc.9"
-  resolved "https://registry.yarnpkg.com/riot/-/riot-4.0.0-rc.9.tgz#ca931ae4b8291d36036956d7098468c01c524c08"
-  integrity sha512-O07BTqsL00L6qdbTcO7JDpA7/Xi6vBDi/7MxAD+nGMPD3lX/syRXEK0I7Dqf9+En1bOGA+tZLIhz6Cxjmt42Eg==
+  version "4.0.0-rc.13"
+  resolved "https://registry.yarnpkg.com/riot/-/riot-4.0.0-rc.13.tgz#8fafc331b4b3752e34484fe8a0760a7ee53221c9"
+  integrity sha512-7Ik/s16RP/1wp/AbvNGetrzB6YlP64hB8eplZq0ddDo3H6t9Vzbyv+kT32IxrFz9mdnCsSSz5OJPSkAXLcfM/A==
   dependencies:
-    "@riotjs/compiler" "^4.0.4"
-    "@riotjs/dom-bindings" "^1.0.0"
+    "@riotjs/compiler" "^4.1.1"
+    "@riotjs/dom-bindings" "^4.0.0-rc.5"
     bianco.attr "^1.0.0"
     bianco.query "^1.0.0"
     cumpa "^1.0.1"
