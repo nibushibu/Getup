@@ -1,17 +1,5 @@
-import {registerPreprocessor} from '@riotjs/compiler'
-import sass from 'node-sass'
-
-registerPreprocessor('css', 'scss', function(code, { options }) {
-  const { file } = options
-
-  console.log('Compile the sass code in', file)
-
-  const css = sass.renderSync({
-    data: code
-  })
-
-  return {
-    code: css,
-    map: null
-  }
-})
+export default {
+  hot: false // set it to true if you are using hmr
+  // add here all the other @riotjs/compiler options riot.js.org/compiler
+  // template: 'pug' for example
+}
