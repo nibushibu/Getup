@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "parcel 'src/**/!(_)*.njk'",
-    "build": "parcel build"
+    "build": "parcel build 'src/**/!(_)*.njk'"
   },
   "dependencies": {
     "animejs": "^3.0.0",
