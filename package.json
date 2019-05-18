@@ -23,7 +23,7 @@
     "mobile-detect": "^1.4.3",
     "promise-polyfill": "^8.0.0",
     "riot": "^4.0.0-rc.8",
-    "sanitize.css": "^8.0.0",
+    "sanitize.css": "^9.0.0",
     "scroll-out": "^2.2.4",
     "slick-carousel": "^1.8.1",
     "smoothscroll-polyfill": "^0.4.4"
@@ -42,7 +42,7 @@
   "license": "MIT",
   "devDependencies": {
     "@riotjs/compiler": "^4.0.2",
-    "@riotjs/parcel-plugin-riot": "^4.0.0",
+    "@riotjs/parcel-plugin-riot": "^4.0.1",
     "autoprefixer": "^9.5.1",
     "concat": "^1.0.3",
     "cpx": "^1.5.0",
