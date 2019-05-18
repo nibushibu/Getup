@@ -790,6 +790,13 @@
   dependencies:
     domdiff "^2.0.3"
 
+"@riotjs/hot-reload@^4.0.0-rc.1":
+  version "4.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@riotjs/hot-reload/-/hot-reload-4.0.0-rc.1.tgz#4e5848e530d7db3140c99ee9b7c70fa8c890a905"
+  integrity sha512-vkmteUFmu8r8TKQLmjM4IO5Q2mqpSXvma0j8VsmaEvbRzsDkm0AOgPXJgW2gTbH5/+7tUW3QfCtAyPLDhFD52A==
+  dependencies:
+    bianco.query "^1.0.0"
+
 "@riotjs/parcel-plugin-riot@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@riotjs/parcel-plugin-riot/-/parcel-plugin-riot-4.0.1.tgz#d909a641b7f06b0da8a91535ad77ac5a657fcfdf"
