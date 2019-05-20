@@ -762,10 +762,10 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
-"@riotjs/compiler@^4.0.2", "@riotjs/compiler@^4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@riotjs/compiler/-/compiler-4.2.0.tgz#e19f144255eca52786899ddbef1ad4579c82acf5"
-  integrity sha512-S6YdWUK2cfAg+jjlDU47xsqK6SWyNp6mXsOI2UqG8WlqoRMdUfIxqkpzRFRJdB3Y2u4N1683C6irZXfToTS+0A==
+"@riotjs/compiler@^4.0.2", "@riotjs/compiler@^4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@riotjs/compiler/-/compiler-4.2.1.tgz#98c24691d89ca20ebceb83701f0c5c27b8fedc9d"
+  integrity sha512-JmVH02/BMvggNrY5cTzgNDSMCAeyWBuD8Pgz8f3N/Ym8JcCC8CsUHABVs0iWbWY0QodtUevlq8eI9ZNrm2dGsQ==
   dependencies:
     "@riotjs/dom-bindings" "^1.0.0"
     "@riotjs/parser" "^4.0.0"
@@ -4998,11 +4998,11 @@ rimraf@2, rimraf@^2.6.1, rimraf@^2.6.2:
     glob "^7.1.3"
 
 riot@^4.0.0-rc.14:
-  version "4.0.0-rc.14"
-  resolved "https://registry.yarnpkg.com/riot/-/riot-4.0.0-rc.14.tgz#7b7d27bd7442dee2beb9ca347a1ca12715ed21bd"
-  integrity sha512-sJyfjJh0xWwynW/1n3M5QyXSWg4I1VOgQZvKeSLZZ4io/AdXOTWTimGmxSGOFcGqwd1+yZUk0X/AtQDcDAtNvQ==
+  version "4.0.0-rc.16"
+  resolved "https://registry.yarnpkg.com/riot/-/riot-4.0.0-rc.16.tgz#f8dace97e4b79a451e35878f53b7bd4b8643cfef"
+  integrity sha512-DJBGa3WhvSeBapLhHtp3XbYM0VGS9dgBMLToVtrAPEzsG08F8l49tOGVZxvBY9UMfPfQjSgGH8mBzptUJs/Bcg==
   dependencies:
-    "@riotjs/compiler" "^4.2.0"
+    "@riotjs/compiler" "^4.2.1"
     "@riotjs/dom-bindings" "^4.0.0-rc.5"
     bianco.attr "^1.0.0"
     bianco.query "^1.0.0"
