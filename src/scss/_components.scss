@@ -3,4 +3,8 @@
   border: 1px solid $color-primary;
   color: $color-primary;
   padding: 0.5em;
+
+  :hover {
+    background-color: gray;
+  }
 }
