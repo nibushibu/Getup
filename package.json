@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "parcel 'src/**/!(_)*.njk'",
+    "prebuild": "rm -rf dist",
     "build": "parcel build 'src/**/!(_)*.njk'"
   },
   "dependencies": {
