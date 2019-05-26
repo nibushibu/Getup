@@ -4991,9 +4991,9 @@ rimraf@2, rimraf@^2.6.1, rimraf@^2.6.2:
     glob "^7.1.3"
 
 riot@^4.0.0-rc.17:
-  version "4.0.0-rc.17"
-  resolved "https://registry.yarnpkg.com/riot/-/riot-4.0.0-rc.17.tgz#92d5a444a267e82f7a97d041aca16bc8943b3b4c"
-  integrity sha512-qNTBYgIfZS+W/rdtyxlOTRZhKVo6Mwx0OqufXg6DgeHqc5RP+6vtWoGF6FM3CWZT0IkQMmBF2W1udPRzh+sJwg==
+  version "4.0.0-rc.18"
+  resolved "https://registry.yarnpkg.com/riot/-/riot-4.0.0-rc.18.tgz#b5853281c87a74f1c9fa476306648df6d020d48b"
+  integrity sha512-b4QFRiWRVdFkziIvubGK93zxd2cm/Y42g6mfJrzT5vlCshXBt0tZ+Wk9ZHhk6KXz4vjpiMHnYDHcYkOuXuebSA==
   dependencies:
     "@riotjs/compiler" "^4.2.2"
     "@riotjs/dom-bindings" "^4.0.0-rc.5"
