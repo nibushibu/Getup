@@ -1,6 +1,6 @@
 {
   "name": "getup",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "config": {
@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "parcel 'src/**/!(_)*.njk'",
+    "prebuild": "rm -rf dist",
     "build": "parcel build 'src/**/!(_)*.njk'"
   },
   "dependencies": {
@@ -22,7 +23,7 @@
     "lodash": "^4.17.11",
     "mobile-detect": "^1.4.3",
     "promise-polyfill": "^8.0.0",
-    "riot": "^4.0.0-rc.14",
+    "riot": "^4.0.0-rc.17",
     "sanitize.css": "^9.0.0",
     "scroll-out": "^2.2.4",
     "slick-carousel": "^1.8.1",
@@ -41,7 +42,7 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
-    "@riotjs/compiler": "^4.0.2",
+    "@riotjs/compiler": "^4.2.2",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "autoprefixer": "^9.5.1",
     "node-sass": "^4.9.2",
