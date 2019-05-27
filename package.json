@@ -7,7 +7,7 @@
     "distDir": "dist"
   },
   "scripts": {
-    "start": "parcel 'src/**/!(_)*.njk'",
+    "start": "parcel watch 'src/**/!(_)*.njk' & node serve.js",
     "prebuild": "rm -rf dist",
     "build": "parcel build 'src/**/!(_)*.njk'"
   },
@@ -15,6 +15,7 @@
     "animejs": "^3.0.0",
     "aos": "^2.3.4",
     "axios": "^0.18.0",
+    "express": "^4.17.1",
     "feature.js": "^1.0.0",
     "flexibility": "^2.0.1",
     "html5-boilerplate": "^7.0.1",
@@ -22,6 +23,7 @@
     "lib": "^4.0.2",
     "lodash": "^4.17.11",
     "mobile-detect": "^1.4.3",
+    "parcel-plugin-riot": "^2.1.0",
     "promise-polyfill": "^8.0.0",
     "riot": "^4.0.0-rc.17",
     "sanitize.css": "^9.0.0",
