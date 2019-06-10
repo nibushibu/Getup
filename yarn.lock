@@ -762,13 +762,14 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
-"@riotjs/compiler@^4.2.4":
-  version "4.2.4"
-  resolved "https://registry.yarnpkg.com/@riotjs/compiler/-/compiler-4.2.4.tgz#fae595ac797aa5f2f95c61f6d4b15320c90549f1"
-  integrity sha512-q6aoJNxN899tC4599DFD04OjyJJqxi7lBrIVIkPfFMf9EnB6OFtYHtkFL0PY/AT99N/EOtwvaT1pjfiU+CeZqA==
+"@riotjs/compiler@^4.2.4", "@riotjs/compiler@^4.2.6":
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/@riotjs/compiler/-/compiler-4.2.6.tgz#e57d20f7cccfa469e7999780ee9a8138a99767ae"
+  integrity sha512-OPmF0+sHwxxrGrtcZt4Ad2Q0FLDM14uSU3axIUpU5OFLuK+mFFCEy1I+10fiKA2ZMWAxnBm1g8z79LHPbUHLVQ==
   dependencies:
-    "@riotjs/dom-bindings" "^4.0.1"
-    "@riotjs/parser" "^4.0.0"
+    "@riotjs/dom-bindings" "^4.1.1"
+    "@riotjs/parser" "^4.0.1"
+    acorn "^6.1.1"
     cumpa "^1.0.1"
     curri "^1.0.1"
     dom-nodes "^1.0.0"
@@ -776,7 +777,7 @@
     recast "^0.18.1"
     source-map "^0.7.3"
 
-"@riotjs/dom-bindings@^4.0.1", "@riotjs/dom-bindings@^4.1.1":
+"@riotjs/dom-bindings@^4.1.1":
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/@riotjs/dom-bindings/-/dom-bindings-4.1.1.tgz#9f2cb801a445de8e9640e7938f07e5e094664b40"
   integrity sha512-56Xztew/RPznPldmn1LO8mKPU/TXfF4hlUpQE3tcIEvsPTLJytmuwGjHcEOubXbDJrKTVOLOPvsoPkyK4JCj9A==
@@ -788,10 +789,10 @@
   resolved "https://registry.yarnpkg.com/@riotjs/parcel-plugin-riot/-/parcel-plugin-riot-4.0.1.tgz#d909a641b7f06b0da8a91535ad77ac5a657fcfdf"
   integrity sha512-C66puJcdLCR7YDVp+0o4Kk0t9AmQEAUCKo0zZH7d3dv29G8VSbEwwqkKd47WHR7ZWYwnOo+L5l9af8lYXTGdmg==
 
-"@riotjs/parser@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@riotjs/parser/-/parser-4.0.0.tgz#00e54b2c2cb1ea2db5e82ef032651e345c57a012"
-  integrity sha512-aV4DBmF0X7g2yC7D2sMTL6hpHhmSseyaErvfDJBo414i3PaeTUbziEYoqROlUsbhZfpkt3p4J0IYu0svVVtujg==
+"@riotjs/parser@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@riotjs/parser/-/parser-4.0.1.tgz#d46313826522ba3cbafdb13f21caf925e0fc4c3b"
+  integrity sha512-0/gI8oeDkDF9+0YKRyd1mCrOuBJ+dgHyHovqka5zb2IH3j3p3EkGtYZHENRp9ZrEJMMxw9QN2boLsICT77Veyg==
   dependencies:
     curri "^1.0.1"
     dom-nodes "^1.0.0"
@@ -866,7 +867,7 @@ acorn@^5.0.0, acorn@^5.5.3:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
   integrity sha512-T/zvzYRfbVojPWahDsE5evJdHb3oJoQfFbsrKM7w5Zcs++Tr257tia3BmMP8XYVjp1S9RZXQMh7gao96BlqZOw==
 
-acorn@^6.0.1:
+acorn@^6.0.1, acorn@^6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
   integrity sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
@@ -2883,9 +2884,9 @@ html-tags@^1.0.0:
   integrity sha1-x43mW1Zjqll5id0rerSSANfk25g=
 
 html5-boilerplate@^7.0.1:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/html5-boilerplate/-/html5-boilerplate-7.1.0.tgz#1a7aa4c7fa1267cdceaf188519653ff8929b27bd"
-  integrity sha512-hY/elJRuGh5K8WKcibn/kXC1fxiTkcTQvOgaMmascosfVPVxZZyVZsAVlgvYC+ihIuuxHoMzwzfW+uBtRd435A==
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/html5-boilerplate/-/html5-boilerplate-7.2.0.tgz#83454a29a4a57b8577e24256230068f4bd084b9e"
+  integrity sha512-hakddjRFem1aPrJH3EzMK9xJEMeQWl/Mr6oXIElhtwwIa245fYXG7+od9BquvRjyFjAj3Pxafg3F1ItW8F9Y5Q==
 
 htmlnano@^0.2.2:
   version "0.2.3"
@@ -4786,10 +4787,19 @@ postcss@^6.0.1, postcss@^6.0.14:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.11, postcss@^7.0.16, postcss@^7.0.2, postcss@^7.0.5, postcss@^7.0.8:
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.11, postcss@^7.0.16, postcss@^7.0.2, postcss@^7.0.5:
   version "7.0.16"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.16.tgz#48f64f1b4b558cb8b52c88987724359acb010da2"
   integrity sha512-MOo8zNSlIqh22Uaa3drkdIAgUGEL+AD1ESiSdmElLUmE2uVDo1QloiT/IfW9qRw8Gw+Y/w69UVMGwbufMSftxA==
+  dependencies:
+    chalk "^2.4.2"
+    source-map "^0.6.1"
+    supports-color "^6.1.0"
+
+postcss@^7.0.8:
+  version "7.0.17"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.17.tgz#4da1bdff5322d4a0acaab4d87f3e782436bad31f"
+  integrity sha512-546ZowA+KZ3OasvQZHsbuEpysvwTZNGJv9EfyCQdsIDltPSWHAeTQ5fQy/Npi2ZDtLI3zs7Ps/p6wThErhm9fQ==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
@@ -5309,11 +5319,11 @@ riot@^3.13.2:
     simple-html-tokenizer "^0.5.7"
 
 riot@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/riot/-/riot-4.0.4.tgz#9b51e49fbe06d5537be016c3994bf601389df7f4"
-  integrity sha512-OURwBvJJo+LYL5Oor0HWwq76jJSTz9swhM3xn6fDnlp+yRnBWDz25JebVQunB5GA+uxU14xyNFeBa8c5oHYNDw==
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/riot/-/riot-4.1.0.tgz#f93f1b58f3043c813b10dd251ce6d29a01143c2e"
+  integrity sha512-rQnclyHi7vv/PWk9kC2K+RF4nFB/gimcoXdJ5HUKvu1/iKYgmZqB2cOZqCp622DqU7IfGXEiy5WdlYBJR06DWg==
   dependencies:
-    "@riotjs/compiler" "^4.2.4"
+    "@riotjs/compiler" "^4.2.6"
     "@riotjs/dom-bindings" "^4.1.1"
     bianco.attr "^1.0.0"
     bianco.query "^1.0.0"
