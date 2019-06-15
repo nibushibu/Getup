@@ -12,6 +12,7 @@
     "build": "parcel build 'src/**/!(_)*.njk'"
   },
   "dependencies": {
+    "@riotjs/observable": "^4.0.1",
     "animejs": "^3.0.0",
     "aos": "^2.3.4",
     "axios": "^0.19.0",
