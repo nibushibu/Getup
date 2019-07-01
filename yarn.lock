@@ -762,13 +762,13 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
-"@riotjs/compiler@^4.2.4", "@riotjs/compiler@^4.2.6":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@riotjs/compiler/-/compiler-4.3.0.tgz#43a34927c6bc3d53cdec13065a92830834dc8556"
-  integrity sha512-TZjKkWMGSpLStxsHsk59Ez78/7+wugH8LDZuD0fTL70eYY6u0Yqmvlf9X+dmoNxCbNuuSaaf53lVvoq4FcEYqg==
+"@riotjs/compiler@^4.2.4", "@riotjs/compiler@^4.3.2":
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/@riotjs/compiler/-/compiler-4.3.2.tgz#d130aaead217fa9ec15c3679384cc4be6f131858"
+  integrity sha512-2lZri/qpJLyGQOQGEcmw80Q96QF+y/npHVZlxj5qM9DchAwi67eZTPppab+bjTpkAQdn1jmB+8txwMclZh5p3w==
   dependencies:
     "@riotjs/dom-bindings" "^4.2.2"
-    "@riotjs/parser" "^4.0.1"
+    "@riotjs/parser" "^4.0.3"
     acorn "^6.1.1"
     acorn-dynamic-import "^4.0.0"
     cumpa "^1.0.1"
@@ -795,10 +795,10 @@
   resolved "https://registry.yarnpkg.com/@riotjs/parcel-plugin-riot/-/parcel-plugin-riot-4.0.1.tgz#d909a641b7f06b0da8a91535ad77ac5a657fcfdf"
   integrity sha512-C66puJcdLCR7YDVp+0o4Kk0t9AmQEAUCKo0zZH7d3dv29G8VSbEwwqkKd47WHR7ZWYwnOo+L5l9af8lYXTGdmg==
 
-"@riotjs/parser@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@riotjs/parser/-/parser-4.0.1.tgz#d46313826522ba3cbafdb13f21caf925e0fc4c3b"
-  integrity sha512-0/gI8oeDkDF9+0YKRyd1mCrOuBJ+dgHyHovqka5zb2IH3j3p3EkGtYZHENRp9ZrEJMMxw9QN2boLsICT77Veyg==
+"@riotjs/parser@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@riotjs/parser/-/parser-4.0.3.tgz#0d8bbd3067cfc3d3984c8921d9e4a257b977ac9e"
+  integrity sha512-mP10ljXVJ2T0uD6FD9ZKRs1TZZiL6LcXRQJYUCbQ2tNePaKDfcsteuL3O+rk77zNwSgYfEPMSwk9gkcqCy7L7w==
   dependencies:
     curri "^1.0.1"
     dom-nodes "^1.0.0"
@@ -5326,11 +5326,11 @@ riot@^3.13.2:
     simple-html-tokenizer "^0.5.7"
 
 riot@^4.0.4:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/riot/-/riot-4.2.0.tgz#626ecbfcf8e4b6677b5caa6b3bc0cb971bfa7b1e"
-  integrity sha512-jQl3bcbE8vqjKD83v+mV7a2LHA22WJ6G7daxwY9KrUteicO4i0Z/1rsBQeu65eBUBbfbzkn4RDrbhSohj0aupg==
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/riot/-/riot-4.3.1.tgz#a4d43147966faea55cf3cda46d617f12efe8242c"
+  integrity sha512-NmrWAXBkkWP3DXDw/TWYcOOyxPUXTp4lMVRfPWAXUYEf1fn51CkmCBWfyvpG7d2mNA/UOXs3YWWfmJlPnhODhg==
   dependencies:
-    "@riotjs/compiler" "^4.2.6"
+    "@riotjs/compiler" "^4.3.2"
     "@riotjs/dom-bindings" "^4.2.2"
     bianco.attr "^1.0.0"
     bianco.query "^1.0.0"
