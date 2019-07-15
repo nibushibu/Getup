@@ -22,7 +22,6 @@
     "html5-boilerplate": "^7.0.1",
     "jquery": "^3.4.1",
     "lib": "^4.0.2",
-    "lodash": "^4.17.11",
     "mobile-detect": "^1.4.3",
     "parcel-plugin-riot": "^2.1.0",
     "promise-polyfill": "^8.0.0",
