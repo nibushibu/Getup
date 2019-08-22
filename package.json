@@ -1,13 +1,13 @@
 {
   "name": "getup",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "config": {
     "distDir": "dist"
   },
   "scripts": {
-    "start": "parcel watch 'src/**/!(_)*.njk' & node serve.js",
+    "start": "parcel watch 'src/**/!(_)*.njk' & node node_script/serve.js",
     "prebuild": "rm -rf dist",
     "build": "parcel build 'src/**/!(_)*.njk'"
   },
@@ -30,9 +30,6 @@
     "scroll-out": "^2.2.4",
     "slick-carousel": "^1.8.1",
     "smoothscroll-polyfill": "^0.4.4"
-  },
-  "directories": {
-    "doc": "docs"
   },
   "repository": {
     "type": "git",
