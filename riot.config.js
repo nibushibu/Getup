@@ -11,7 +11,7 @@ registerPreprocessor('css', 'scss', function(code, { options }) {
   })
 
   return {
-    code: css.css.toString(),
+    code: css.toString(),
     map: null
   }
 })
