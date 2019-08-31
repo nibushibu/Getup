@@ -1,22 +1,22 @@
 @mixin getup-flex-gap($gap-x: $getup-flex-gap-size, $gap-y: $gap-x) {
   margin: (-$gap-y) 0 0 (-$gap-x);
-  >* {
+  > * {
     padding: $gap-y 0 0 $gap-x;
   }
 }
 
 @mixin getup-fit {
-  &>*:first-child {
+  & > *:first-child {
     margin-top: 0;
   }
 }
 
 @mixin getup-fit-all {
-  &>*:first-child {
+  & > *:first-child {
     margin-top: 0;
   }
 }
 
-@mixin getup-rem($px){
+@mixin getup-rem($px) {
   font-size: $px / 16 * 1rem;
 }
