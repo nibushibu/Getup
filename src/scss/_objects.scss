@@ -5,7 +5,7 @@
 .o-flex {
   display: flex;
   flex-wrap: wrap;
-  >* {
+  > * {
     flex: 0 1 auto;
   }
   @include getup-flex-gap;
@@ -13,14 +13,14 @@
 
 .o-flex--fill {
   flex-wrap: nowrap;
-  >* {
+  > * {
     flex: 1 1 auto;
   }
 }
 
 .o-flex--fill-equal {
   flex-wrap: nowrap;
-  >* {
+  > * {
     flex: 1 1 0;
   }
 }
@@ -46,7 +46,7 @@
 .o-fill {
   display: flex;
 
-  &>*{
+  & > * {
     flex: 1 1 auto;
   }
 }
