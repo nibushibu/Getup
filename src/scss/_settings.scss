@@ -2,25 +2,14 @@
  * Basa Font Family
  */
 
-@font-face {
-  font-family: 'MyYuGothicM';
-  font-weight: normal;
-  src: local('YuGothic-Medium'), /* Postscript name */ local('Yu Gothic Medium'),
-    /* for Chrome */ local('YuGothic-Regular'); /* Mediumがない場合 */
-}
-
-@font-face {
-  font-family: 'MyYuGothicM';
-  font-weight: bold;
-  src: local('YuGothic-Bold'), /* Postscript name */ local('Yu Gothic'); /* for Chrome */
-}
-
-$base-font-family: 'Noto Sans JP', 'Noto Sans CJK JP', 'Noto Sans CJK Japanese',
-  MyYuGothicM, /* Windows 游ゴシック */ YuGothic,
-  /* OS X 游ゴシック */ -apple-system,
-  /* OS X, iOS San Francisco */ BlinkMacSystemFont,
-  /* OS X, iOS Chrome San Francisco */ 'Hiragino Kaku Gothic ProN',
-  /* OS X, iOS ヒラギノ */ Meiryo, /* Windows メイリオ */ sans-serif !default;
+ $base-font-family:
+  'Noto Sans JP', 'Noto Sans CJK JP', 'Noto Sans CJK Japanese',
+  '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック', 'Yu Gothic'
+  'Hiragino Kaku Gothic ProN',
+  -apple-system,
+  BlinkMacSystemFont,
+  Meiryo,
+  sans-serif !default;
 
 $getup-flex-gap-size: 20px;
 
