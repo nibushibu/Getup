@@ -7,7 +7,7 @@
     "distDir": "dist"
   },
   "scripts": {
-    "start": "parcel watch 'src/**/!(_)*.njk' & node node_script/serve.js",
+    "start": "parcel watch 'src/**/!(_)*.njk' & node node_scripts/serve.js",
     "prebuild": "rm -rf dist",
     "build": "parcel build 'src/**/!(_)*.njk'"
   },
@@ -44,6 +44,7 @@
     "@riotjs/compiler": "^4.3.5",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "autoprefixer": "^9.6.0",
+    "mdcss": "^1.5.2",
     "node-sass": "^4.9.2",
     "nunjucks": "^3.2.0",
     "parcel-bundler": "^1.12.3",
