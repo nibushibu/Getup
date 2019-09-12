@@ -43,12 +43,9 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
-    "@riotjs/cli": "^4.0.2",
     "@riotjs/compiler": "^4.3.5",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "autoprefixer": "^9.6.0",
-    "concat": "^1.0.3",
-    "cpx": "^1.5.0",
     "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
     "mdcss": "^1.5.2",
