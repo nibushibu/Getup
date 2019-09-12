@@ -1,10 +1,21 @@
+/*---
+title: c-sample-button
+---
+
+サンプルボタンです。
+
+```example:html
+<button class="c-sample-button">サンプル</button>
+```
+*/
+
 .c-sample-button {
   background-color: #fff;
   border: 1px solid $color-primary;
   color: $color-primary;
   padding: 0.5em;
 
-  :hover {
+  &:hover {
     background-color: gray;
   }
 }
