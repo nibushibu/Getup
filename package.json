@@ -7,9 +7,11 @@
     "distDir": "dist"
   },
   "scripts": {
-    "start": "parcel watch 'src/**/!(_)*.njk' & node node_scripts/serve.js",
-    "prebuild": "rm -rf dist",
-    "build": "parcel build 'src/**/!(_)*.njk'"
+    "start": "parcel watch src/js/*.js --out-dir ${npm_package_config_distDir}/js & yarn run watch & node node_scripts/serve.js",
+    "css": "node-sass --output ${npm_package_config_distDir}/css --output-style expanded --include-path src/css --precision 6 'src/scss' & postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose --no-map",
+    "watch": "onchange src/nunjucks -- yarn run nunjucks & onchange src/scss -- yarn run css",
+    "nunjucks": "gulp nunjucks",
+    "build": "parcel build src/js/*.js --out-dir ${npm_package_config_distDir}/js && yarn run css && yarn run nunjucks"
   },
   "dependencies": {
     "@riotjs/observable": "^4.0.1",
@@ -41,15 +43,21 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
+    "@riotjs/cli": "^4.0.2",
     "@riotjs/compiler": "^4.3.5",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "autoprefixer": "^9.6.0",
+    "concat": "^1.0.3",
+    "cpx": "^1.5.0",
+    "gulp": "^4.0.2",
+    "gulp-nunjucks-render": "^2.2.3",
     "mdcss": "^1.5.2",
     "node-sass": "^4.9.2",
     "nunjucks": "^3.2.0",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-nunjucks": "^2.0.0",
     "postcss": "^7.0.8",
+    "postcss-cli": "^6.1.3",
     "postcss-easings": "^2.0.0",
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-focus": "^4.0.0",

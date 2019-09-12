@@ -4,7 +4,11 @@ module.exports = {
     require('postcss-focus'),
     require('postcss-normalize-charset'),
     require('postcss-flexbugs-fixes'),
-    require('mdcss'),
+    require('mdcss')({
+      examples: {
+        css: ['../dist/css/main.css']
+      }
+    }),
     require('autoprefixer')({
       grid: true
     })
