@@ -2,11 +2,11 @@
   <div>
     <h1>Thie is Riot test.</h1>
     <p>{ state.test }</p>
-    <button class="unmount-animation" onclick={ animationUnmount } ref="button">アンマウント！</button>
+    <button class="unmount-animation" onclick="{ animationUnmount }" ref="button">アンマウント！</button>
     <raw-html content="テスト"></raw-html>
   </div>
 
-  <style>
+  <style type="scss">
     h1 {
       color: green;
       display: flex;
@@ -15,12 +15,13 @@
     .unmount-animation {
       opacity: 1;
       transition: opacity 1s;
-    }
 
-    .unmount-animation.is-unmount {
-      opacity: 0;
+      &.is-unmount {
+        opacity: 0;
+      }
     }
   </style>
+
   <script>
     import anime from 'animejs'
 
@@ -40,8 +41,9 @@
         })
       },
       animationUnmount(e){
-        this.$('[ref="button"]').addEventListener('transitionend', function(e) {
+        this.$('[ref="button"]').addEventListener('transitionend', e => {
           console.log('消えたよ')
+          this.unmount()
         })
         this.$('[ref="button"]').classList.add('is-unmount')
       }

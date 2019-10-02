@@ -1,21 +1,17 @@
-var registerPreprocessor = require('@riotjs/compiler').registerPreprocessor
-var sass = require('node-sass')
+const { registerPreprocessor } = require('@riotjs/compiler')
+const sass = require('node-sass')
 
 registerPreprocessor('css', 'scss', function(code, { options }) {
   const { file } = options
 
-  // console.log('Compile the sass code in', file)
-
-  const css = sass.renderSync({
+  const {css} = sass.renderSync({
     data: code
   })
+
+  // console.log(css.toString())
 
   return {
     code: css.toString(),
     map: null
   }
 })
-
-module.exports = {
-  css: 'scss'
-}
