@@ -36,9 +36,12 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "@riotjs/compiler": "^4.3.12",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "autoprefixer": "^9.6.0",
+    "babel-preset-env": "^1.7.0",
     "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
     "mdcss": "^1.5.2",
@@ -53,9 +56,5 @@
     "postcss-focus": "^4.0.0",
     "postcss-import": "^12.0.0",
     "postcss-normalize-charset": "^4.0.0"
-  },
-  "browserslist": [
-    "> 5% in JP",
-    "IE 11"
-  ]
+  }
 }
