@@ -28,8 +28,6 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
     "@riotjs/compiler": "^4.3.12",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "autoprefixer": "^9.6.0",
