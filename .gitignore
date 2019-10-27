@@ -1,7 +1,10 @@
 node_modules
 bower_components
-dist
 .sass-cache
 .DS_Store
 *.log
 .cache
+dist/css/**/*.css
+dist/js
+dist/**/*.html
+styleguide

@@ -2,9 +2,9 @@ const gulp = require('gulp')
 const nunjucksRender = require('gulp-nunjucks-render')
 
 gulp.task('nunjucks', function () {
-  return gulp.src('src/templates/**/[^_]*.njk')
+  return gulp.src('src/nunjucks/**/[^_]*.njk')
     .pipe(nunjucksRender({
-      path: ['src/templates/'] // String or Array
+      path: ['src/nunjucks/'] // String or Array
     }))
     .pipe(gulp.dest('dist'))
 })

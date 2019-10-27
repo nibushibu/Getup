@@ -1,36 +1,44 @@
 {
   "name": "getup",
-  "version": "0.5.0",
+  "version": "0.7.0",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "config": {
     "distDir": "dist"
   },
   "scripts": {
-    "start": "parcel 'src/**/!(_)*.njk'",
-    "prebuild": "rm -rf dist",
-    "build": "parcel build 'src/**/!(_)*.njk'"
+    "start": "parcel watch src/js/*.js --out-dir ${npm_package_config_distDir}/js & yarn run css & yarn run nunjucks & yarn run watch & yarn run server",
+    "css": "node-sass --output ${npm_package_config_distDir}/css --output-style expanded --include-path src/css --precision 6 'src/scss' && postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose --no-map",
+    "watch": "onchange src/nunjucks -- yarn run nunjucks & onchange src/scss -- yarn run css",
+    "nunjucks": "gulp nunjucks",
+    "build": "parcel build src/js/main.js --out-dir ${npm_package_config_distDir}/js && yarn run css && yarn run nunjucks",
+    "server": "browser-sync start --server 'dist' --files 'dist/**'"
   },
   "dependencies": {
     "animejs": "^3.0.0",
-    "aos": "^2.3.4",
-    "axios": "^0.18.0",
-    "feature.js": "^1.0.0",
     "flexibility": "^2.0.1",
-    "html5-boilerplate": "^7.0.1",
-    "jquery": "^3.4.1",
-    "lib": "^4.0.2",
-    "lodash": "^4.17.11",
-    "mobile-detect": "^1.4.3",
-    "promise-polyfill": "^8.0.0",
-    "riot": "^3.13.2",
-    "sanitize.css": "^9.0.0",
-    "scroll-out": "^2.2.4",
-    "slick-carousel": "^1.8.1",
-    "smoothscroll-polyfill": "^0.4.4"
+    "riot": "^3.0.0",
+    "sanitize.css": "^11.0.0"
   },
-  "directories": {
-    "doc": "docs"
+  "devDependencies": {
+    "autoprefixer": "^9.6.0",
+    "browser-sync": "^2.26.7",
+    "flexibility": "^2.0.1",
+    "gulp": "^4.0.2",
+    "gulp-nunjucks-render": "^2.2.3",
+    "mdcss": "^1.5.2",
+    "node-sass": "^4.9.2",
+    "onchange": "^6.1.0",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-nunjucks": "^2.1.1",
+    "parcel-plugin-riot": "2.1.0",
+    "postcss": "^7.0.8",
+    "postcss-cli": "^6.1.3",
+    "postcss-easings": "^2.0.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-focus": "^4.0.0",
+    "postcss-import": "^12.0.0",
+    "postcss-normalize-charset": "^4.0.0"
   },
   "repository": {
     "type": "git",
@@ -39,20 +47,5 @@
   "bugs": {
     "url": "https://github.com/nibushibu/Getup/issues"
   },
-  "homepage": "https://github.com/nibushibu/Getup",
-  "license": "MIT",
-  "devDependencies": {
-    "autoprefixer": "^9.5.1",
-    "node-sass": "^4.9.2",
-    "nunjucks": "^3.2.0",
-    "parcel-bundler": "^1.12.3",
-    "parcel-plugin-nunjucks": "^1.1.0",
-    "parcel-plugin-riot": "^2.1.0",
-    "postcss": "^7.0.8",
-    "postcss-easings": "^2.0.0",
-    "postcss-flexbugs-fixes": "^4.1.0",
-    "postcss-focus": "^4.0.0",
-    "postcss-import": "^12.0.0",
-    "postcss-normalize-charset": "^4.0.0"
-  }
+  "homepage": "https://github.com/nibushibu/Getup"
 }
