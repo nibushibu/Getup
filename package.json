@@ -7,11 +7,12 @@
     "distDir": "dist"
   },
   "scripts": {
-    "start": "parcel watch src/js/*.js --out-dir ${npm_package_config_distDir}/js & yarn run css & yarn run nunjucks & yarn run watch & node node_scripts/serve.js",
+    "start": "parcel watch src/js/*.js --out-dir ${npm_package_config_distDir}/js & yarn run css & yarn run nunjucks & yarn run watch & yarn run server",
     "css": "node-sass --output ${npm_package_config_distDir}/css --output-style expanded --include-path src/css --precision 6 'src/scss' && postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose --no-map",
     "watch": "onchange src/nunjucks -- yarn run nunjucks & onchange src/scss -- yarn run css",
     "nunjucks": "gulp nunjucks",
-    "build": "parcel build src/js/main.js --out-dir ${npm_package_config_distDir}/js && yarn run css && yarn run nunjucks"
+    "build": "parcel build src/js/main.js --out-dir ${npm_package_config_distDir}/js && yarn run css && yarn run nunjucks",
+    "server": "browser-sync start --server 'dist' --files 'dist/**'"
   },
   "dependencies": {
     "animejs": "^3.0.0",
@@ -31,7 +32,7 @@
     "@riotjs/compiler": "^4.3.12",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "autoprefixer": "^9.6.0",
-    "express": "^4.17.1",
+    "browser-sync": "^2.26.7",
     "flexibility": "^2.0.1",
     "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
