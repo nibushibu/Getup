@@ -747,10 +747,10 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
-"@riotjs/compiler@^4.3.12", "@riotjs/compiler@^4.5.1":
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/@riotjs/compiler/-/compiler-4.5.1.tgz#13e6c8c9fa79a576b6fa5ac1d7c6793c94b434fc"
-  integrity sha512-sXQmRvQ0DQKcaGjuLCLyXLIqeXf6ZIzYP0hAT42nvE7N2q4o0WzZ2nm2XgfGrfLjsfjIpmtpF34ZQCI0Fm+kzg==
+"@riotjs/compiler@^4.3.12", "@riotjs/compiler@^4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@riotjs/compiler/-/compiler-4.5.2.tgz#877d46b86b31170bc77eb44353feb3b610edc916"
+  integrity sha512-8b+/fr895EsIMeenQy+lWrD4MwyhC0yp8x+hgw512WUPi9MDeBsUlDdh/LZ+MDfNz1dGMp4zTVO3vQiH7rA4EQ==
   dependencies:
     "@riotjs/parser" "^4.1.0"
     "@riotjs/util" "1.1.0"
@@ -759,14 +759,14 @@
     cumpa "^1.0.1"
     curri "^1.0.1"
     dom-nodes "^1.1.3"
-    globals "^12.1.0"
-    recast "^0.18.2"
+    globals "^12.1.1"
+    recast "^0.18.5"
     source-map "^0.7.3"
 
-"@riotjs/dom-bindings@^4.4.6":
-  version "4.4.6"
-  resolved "https://registry.yarnpkg.com/@riotjs/dom-bindings/-/dom-bindings-4.4.6.tgz#c589268eb52ffafa0c0893dd64c079bd917dbe24"
-  integrity sha512-KAG3isy55vvHPNrDCSZV+YFkQi2anL4Zx0DNfbTqST/HKeoBqab+yxbggjSUM8jRAKgnuC3DTanXm0QvFtcKUg==
+"@riotjs/dom-bindings@^4.4.7":
+  version "4.4.7"
+  resolved "https://registry.yarnpkg.com/@riotjs/dom-bindings/-/dom-bindings-4.4.7.tgz#ef9650db2fb0b0c96ee0bf7efab19fcd4be693c4"
+  integrity sha512-axn+1XmZS3LfvHA9vhP7vFab1uMIkCWv5dA1/OGWAoBZ/FKcTs3BxQiVgPLvf48xU3OovpHdH9PTekWCnxvZ7Q==
   dependencies:
     "@riotjs/util" "^1.1.0"
     domdiff "^2.1.0"
@@ -1712,9 +1712,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001004:
-  version "1.0.30001004"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001004.tgz#d879b73981b255488316da946c39327d8c00a586"
-  integrity sha512-3nfOR4O8Wa2RWoYfJkMtwRVOsK96TQ+eq57wd0iKaEWl8dwG4hKZ/g0MVBfCvysFvMLi9fQGR/DvozMdkEPl3g==
+  version "1.0.30001005"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001005.tgz#823054210be638c725521edcb869435dae46728d"
+  integrity sha512-g78miZm1Z5njjYR216a5812oPiLgV1ssndgGxITHWUopmjUrCswMisA0a2kSB7a0vZRox6JOKhM51+efmYN8Mg==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -3432,7 +3432,7 @@ globals@^11.1.0:
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
   integrity sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==
 
-globals@^12.1.0:
+globals@^12.1.1:
   version "12.1.1"
   resolved "https://registry.yarnpkg.com/globals/-/globals-12.1.1.tgz#143936147735ab224e5317482fac9669371363a9"
   integrity sha512-i4wvLF+QFfPq/gNA1S8dL4Z2f2Cb62ZvxDhj38fZIProAfyUidDmUQILIg1jc5iwqJr4PVJSUB5usYvFxSzg+A==
@@ -6391,7 +6391,7 @@ readdirp@~3.2.0:
   dependencies:
     picomatch "^2.0.4"
 
-recast@^0.18.2:
+recast@^0.18.5:
   version "0.18.5"
   resolved "https://registry.yarnpkg.com/recast/-/recast-0.18.5.tgz#9d5adbc07983a3c8145f3034812374a493e0fe4d"
   integrity sha512-sD1WJrpLQAkXGyQZyGzTM75WJvyAd98II5CHdK3IYbt/cZlU0UzCRVU11nUFNXX9fBVEt4E9ajkMjBlUlG+Oog==
@@ -6729,12 +6729,12 @@ riot@^3.13.2:
     simple-html-tokenizer "^0.5.7"
 
 riot@^4.5.1:
-  version "4.6.5"
-  resolved "https://registry.yarnpkg.com/riot/-/riot-4.6.5.tgz#067854146c50d48b10e8d1e8eeebb5724cf923bc"
-  integrity sha512-pq0LgbTpvyE0CyZAVjWvxoiDWTc4aIlNiUGzFISCbUYYf4tU8jHLWTo8bdG453k1cpxQYEHIZXcSaGbZzoxHVQ==
+  version "4.6.6"
+  resolved "https://registry.yarnpkg.com/riot/-/riot-4.6.6.tgz#e3f1d969f85da7644051f095dc7102ab6c9567d7"
+  integrity sha512-kgXv0yv4EIREpM8NBhtiVOSjbU+vRrV8gYB8ykpJJc9l0bvDARWWteDnwvplhRGEvE1X9465EGuZ7vVNKGNx9w==
   dependencies:
-    "@riotjs/compiler" "^4.5.1"
-    "@riotjs/dom-bindings" "^4.4.6"
+    "@riotjs/compiler" "^4.5.2"
+    "@riotjs/dom-bindings" "^4.4.7"
     "@riotjs/util" "^1.1.0"
     bianco.attr "^1.0.0"
     bianco.query "^1.0.0"
