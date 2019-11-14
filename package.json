@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "animejs": "^3.0.0",
-    "flexibility": "^2.0.1",
     "riot": "^3.0.0",
     "sanitize.css": "^11.0.0"
   },
