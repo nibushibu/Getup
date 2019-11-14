@@ -2,7 +2,7 @@
  * Flexbox - General Layout Module
  */
 
-.o-flex {
+.o-flow-layout {
   display: flex;
   flex-wrap: wrap;
   > * {
@@ -11,22 +11,30 @@
   @include getup-flex-gap;
 }
 
-.o-flex--fill {
+.o-flow-layout--fill {
   flex-wrap: nowrap;
   > * {
     flex: 1 1 auto;
   }
 }
 
-.o-flex--fill-equal {
+.o-flow-layout--fill-equal {
   flex-wrap: nowrap;
   > * {
     flex: 1 1 0;
   }
 }
 
-.o-flex--no-gap {
+.o-flow-layout--no-gap {
   @include getup-flex-gap(0);
+}
+
+.o-flow-layout--no-wrap {
+  flex-wrap: nowrap;
+}
+
+.o-flow-layout--custom {
+  @include getup-flex-gap(2em, 1em);
 }
 
 /**
@@ -55,10 +63,6 @@
  * for Media block
  */
 
-.o-flex--no-wrap {
-  flex-wrap: nowrap;
-}
-
 .o-width-fixed {
   flex: 0 0 auto;
   text-align: center;
@@ -74,10 +78,6 @@
   width: auto;
   line-height: inherit;
   vertical-align: middle;
-}
-
-.o-flex--custom {
-  @include getup-flex-gap(2em, 1em);
 }
 
 .o-width-1 {
