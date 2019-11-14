@@ -33,8 +33,31 @@
   flex-wrap: nowrap;
 }
 
+.o-flow-layout--middle {
+  align-items: center;
+
+  >* {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .o-flow-layout--custom {
   @include getup-flex-gap(2em, 1em);
+}
+
+.o-flow-layout--tight {
+  @include getup-flex-gap(.25em);
+}
+
+.o-stack-layout {
+  display: flex;
+  flex-direction: column;
+  @include getup-flex-gap();
+}
+
+.o-stack-layout--center {
+  align-items: center;
 }
 
 /**
