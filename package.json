@@ -22,7 +22,6 @@
   "devDependencies": {
     "autoprefixer": "^9.6.0",
     "browser-sync": "^2.26.7",
-    "flexibility": "^2.0.1",
     "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
     "mdcss": "^1.5.2",
