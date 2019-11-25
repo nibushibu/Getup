@@ -5,6 +5,7 @@
 .o-flow-layout {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   > * {
     flex: 0 1 auto;
   }
