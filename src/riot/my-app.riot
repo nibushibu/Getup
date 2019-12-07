@@ -6,6 +6,22 @@
     <raw-html content="テスト"></raw-html>
   </div>
 
+  <h2>ルーターテスト</h2>
+  <app-router>
+    <!-- this link will trigger a riot router event -->
+    <ui>
+      <li>
+        <a href="/">Top</a>
+      </li>
+      <li>
+        <a href="/test">Test</a>
+      </li>
+    </ui>
+  </app-router>
+  <app-route path="/test">
+    <p>テスト</p>
+  </app-route>
+
   <style type="scss">
     h1 {
       color: green;
