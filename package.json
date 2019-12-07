@@ -15,7 +15,6 @@
     "server": "browser-sync start --proxy 'localhost:8104' --files 'dist/**'"
   },
   "dependencies": {
-    "@riotjs/route": "^4.1.0",
     "animejs": "^3.0.0",
     "riot": "^4.5.1",
     "sanitize.css": "^11.0.0"
