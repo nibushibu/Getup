@@ -12,7 +12,7 @@
     "watch": "onchange src/nunjucks -- yarn run nunjucks & onchange src/scss -- yarn run css",
     "nunjucks": "gulp nunjucks",
     "build": "parcel build src/js/main.js --out-dir ${npm_package_config_distDir}/js && yarn run css && yarn run nunjucks",
-    "server": "browser-sync start --server 'dist' --files 'dist/**'"
+    "server": "browser-sync start --proxy 'localhost:8104' --files 'dist/**'"
   },
   "dependencies": {
     "animejs": "^3.0.0",
