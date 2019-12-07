@@ -760,7 +760,7 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
-"@riotjs/compiler@^4.3.12", "@riotjs/compiler@^4.5.2":
+"@riotjs/compiler@^4.1.1", "@riotjs/compiler@^4.5.2":
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/@riotjs/compiler/-/compiler-4.5.2.tgz#877d46b86b31170bc77eb44353feb3b610edc916"
   integrity sha512-8b+/fr895EsIMeenQy+lWrD4MwyhC0yp8x+hgw512WUPi9MDeBsUlDdh/LZ+MDfNz1dGMp4zTVO3vQiH7rA4EQ==
@@ -796,17 +796,6 @@
   dependencies:
     curri "^1.0.1"
     dom-nodes "^1.1.3"
-
-"@riotjs/route@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@riotjs/route/-/route-4.1.0.tgz#abb03d5bba9e27dfbc8070984cefaf1f6a38b76f"
-  integrity sha512-anz7MtVIX+IMeK6zz+r5fx+7nPkGyRop6D1bSSEt/yBDJtiW83j+MHBsS1n/yg1+7V4ODf/M8ejlBUxSQdE9gQ==
-  dependencies:
-    "@riotjs/util" "^1.1.0"
-    bianco.attr "^1.0.0"
-    bianco.events "^1.0.0"
-    cumpa "^1.0.1"
-    rawth "^1.0.0"
 
 "@riotjs/util@1.1.0", "@riotjs/util@^1.1.0":
   version "1.1.0"
@@ -858,6 +847,11 @@
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
+
+"@webcomponents/template@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@webcomponents/template/-/template-1.4.1.tgz#0ac6fa2053701e067829bf20c8304888472c7382"
+  integrity sha512-v7vwYZPKsAxczkWIjCOfCki9SpRdUcDjMZyweTGj3EPvVi+awQVHFPZ6X3jDW5nLSOs6Ls3h/AX8x8T+df2X0Q==
 
 a-sync-waterfall@^1.0.0:
   version "1.0.1"
@@ -1506,13 +1500,6 @@ bianco.dom-to-array@^0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/bianco.dom-to-array/-/bianco.dom-to-array-0.0.10.tgz#376e1a37c4ca5119b3b6de9fd2d5c994cf0152a3"
   integrity sha512-EFYkcEGPmIqatvh+6I2eF6/X4mDtEyGoBucqmudJ5qABbFOw3RPIWB913aLD1FTaux8pZtYzD/yvcwGJKSNgXg==
-
-bianco.events@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/bianco.events/-/bianco.events-1.0.0.tgz#86f9be637ba4925854d417c9f31c5441bf7ab040"
-  integrity sha512-dLdO4hwXw8gZ2pNCe275ki3K9G0+VI1MVeY58woxhlKna/4UoQDb3bVjmnmqpRvLw2oADCjobJOxWkhUZrPnDQ==
-  dependencies:
-    bianco.dom-to-array "^0.0.10"
 
 bianco.query@^1.0.0:
   version "1.0.0"
@@ -2932,13 +2919,6 @@ envinfo@^7.3.1:
   version "7.5.0"
   resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-7.5.0.tgz#91410bb6db262fb4f1409bd506e9ff57e91023f4"
   integrity sha512-jDgnJaF/Btomk+m3PZDTTCb5XIIIX3zYItnCRfF73zVgvinLoRomuhi75Y4su0PtQxWz4v66XnLLckyvyJTOIQ==
-
-erre@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/erre/-/erre-2.2.0.tgz#eb2fe100dc9f937f7bc5ed8b0df550058abe2973"
-  integrity sha512-rM+EfZdJCC17CSBGyULHRHfHiUpElGLfAv0g2Eu+xQZOMPAaCZon0odOXKa3EsrCeO4VFKMpXNAGziUzIY0PEA==
-  dependencies:
-    ruit "^1.0.4"
 
 error-ex@^1.2.0, error-ex@^1.3.1:
   version "1.3.2"
@@ -5820,11 +5800,6 @@ path-root@^0.1.1:
   dependencies:
     path-root-regex "^0.1.0"
 
-path-to-regexp@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-6.1.0.tgz#0b18f88b7a0ce0bfae6a25990c909ab86f512427"
-  integrity sha512-h9DqehX3zZZDCEm+xbfU0ZmwCGFCAAraPJWMXJ4+v32NjZJilVg3k1TcKsRgIb8IQ/izZSaydDc1OhJCZvs2Dw==
-
 path-type@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-1.1.0.tgz#59c44f7ee491da704da415da5a4070ba4f8fe441"
@@ -6539,14 +6514,6 @@ raw-body@^2.3.2:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-rawth@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/rawth/-/rawth-1.0.0.tgz#51d4321294a68b1f862fc9f40620975f3cea784c"
-  integrity sha512-xahIGgKGf9ZcJD2M88ebj+Flff8X5hhbpZutp5lDzgeiT8umPTW6F9olx8FZeohWah6prYotrJcNQOI4/2tIrA==
-  dependencies:
-    erre "^2.2.0"
-    path-to-regexp "^6.1.0"
-
 rc@^1.2.7:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"
@@ -7005,11 +6972,6 @@ rollup@^0.57.1:
     rollup-pluginutils "^2.0.1"
     signal-exit "^3.0.2"
     sourcemap-codec "^1.4.1"
-
-ruit@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/ruit/-/ruit-1.0.4.tgz#4cb4bae698e611003fa7726a6ab098f19964cf97"
-  integrity sha512-eiHVb18DQ24Of/fdJmZCysw6X21IIyed5c87eAW95KQY5TvTfh6SR9pCkAowciyvhW1Bhm3RXuRX6eILKl+49w==
 
 rx@4.1.0:
   version "4.1.0"

@@ -1,3 +1,5 @@
+import 'core-js'
+import '@webcomponents/template'
 import { register, mount, install } from 'riot'
 import App from '../riot/my-app.riot'
 
