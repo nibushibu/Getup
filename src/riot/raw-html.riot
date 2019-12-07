@@ -1,3 +1,17 @@
 <raw-html>
-  <span>{ props.content }</span>
+  <span data-ref="content"></span>
+
+  <script>
+    export default {
+      setContent() {
+        this.$('[data-ref="content"]').innerHTML = String(this.props.content)
+      },
+      onMounted() {
+        setContent()
+      },
+      onUpdated() {
+        setContent()
+      },
+    }
+  </script>
 </raw-html>
