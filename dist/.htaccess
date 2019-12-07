@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+
+# 転送ルール：アクセス先がファイルではない場合
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# 転送ルール：アクセス先がディレクトリではない場合
+# 必要に応じてコメントアウトを解除してください。
+# RewriteCond %{REQUEST_FILENAME} !-d
+
+# 転送ルール：任意のURLを転送から除外
+# RewriteCond %{REQUEST_URI} !(^/cockpit/)
+
+# ルートディレクトリ（dist）のindex.htmlにリダイレクト
+RewriteRule . /index.html [L]
+</IfModule>

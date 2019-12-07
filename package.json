@@ -12,9 +12,10 @@
     "watch": "onchange src/nunjucks -- yarn run nunjucks & onchange src/scss -- yarn run css",
     "nunjucks": "gulp nunjucks",
     "build": "parcel build src/js/main.js --out-dir ${npm_package_config_distDir}/js && yarn run css && yarn run nunjucks",
-    "server": "browser-sync start --server 'dist' --files 'dist/**'"
+    "server": "browser-sync start --proxy 'localhost:8104' --files 'dist/**'"
   },
   "dependencies": {
+    "@riotjs/route": "^4.1.0",
     "animejs": "^3.0.0",
     "riot": "^4.5.1",
     "sanitize.css": "^11.0.0"
@@ -32,6 +33,8 @@
     "@riotjs/compiler": "^4.3.12",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "autoprefixer": "^9.6.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
