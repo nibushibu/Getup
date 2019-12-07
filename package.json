@@ -15,6 +15,7 @@
     "server": "browser-sync start --proxy 'localhost:8104' --files 'dist/**'"
   },
   "dependencies": {
+    "@webcomponents/template": "^1.4.1",
     "animejs": "^3.0.0",
     "riot": "^4.5.1",
     "sanitize.css": "^11.0.0"
@@ -29,7 +30,7 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
-    "@riotjs/compiler": "^4.3.12",
+    "@riotjs/compiler": "^4.1.1",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "autoprefixer": "^9.6.0",
     "babel-core": "^6.26.3",
