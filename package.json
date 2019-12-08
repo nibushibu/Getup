@@ -17,7 +17,6 @@
   "dependencies": {
     "@webcomponents/template": "^1.4.1",
     "animejs": "^3.0.0",
-    "core-js": "^3.4.7",
     "riot": "^4.5.1",
     "sanitize.css": "^11.0.0"
   },

@@ -7,10 +7,10 @@
         this.$('[data-ref="content"]').innerHTML = String(this.props.content)
       },
       onMounted() {
-        setContent()
+        this.setContent()
       },
       onUpdated() {
-        setContent()
+        this.setContent()
       },
     }
   </script>
