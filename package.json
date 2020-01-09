@@ -41,7 +41,7 @@
     "mdcss": "^1.5.2",
     "node-sass": "^4.9.2",
     "onchange": "^6.1.0",
-    "parcel-bundler": "^1.12.3",
+    "parcel": "^2.0.0-alpha.3.2",
     "parcel-plugin-riot": "^2.1.0",
     "postcss": "^7.0.8",
     "postcss-cli": "^6.1.3",
