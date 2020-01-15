@@ -1,9 +1,10 @@
 <my-app>
+  <smile-face></smile-face>
+  <raw-html content="<i>テストですよ</i>" data-ref="raw"></raw-html>
   <div>
     <h1>Thie is Riot test.</h1>
     <p>{ state.test }</p>
     <button class="unmount-animation" onclick="{ animationUnmount }" ref="button">アンマウント！</button>
-    <raw-html content="テスト"></raw-html>
   </div>
 
   <style type="scss">
@@ -39,6 +40,8 @@
           loop: true,
           direction: 'alternate'
         })
+
+        this.$('[data-ref="raw"]').innerHTML = 'スマイル！<smile-face></smile-face>'
       },
       animationUnmount(e){
         this.$('[ref="button"]').addEventListener('transitionend', e => {

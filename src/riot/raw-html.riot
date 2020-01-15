@@ -1,10 +1,14 @@
 <raw-html>
   <span data-ref="content"></span>
+  <slot />
 
   <script>
     export default {
       setContent() {
+        const docFra = document.createDocumentFragment()
+        docFra.innerHTML = String(this.props.content)
         this.$('[data-ref="content"]').innerHTML = String(this.props.content)
+        console.log(docFra)
       },
       onMounted() {
         this.setContent()
