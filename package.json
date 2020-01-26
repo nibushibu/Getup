@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "@webcomponents/template": "^1.4.1",
-    "animejs": "^3.0.0",
-    "riot": "^4.5.1",
+    "animejs": "^3.1.0",
+    "riot": "^4.8.7",
     "sanitize.css": "^11.0.0"
   },
   "repository": {
@@ -30,25 +30,25 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
-    "@riotjs/compiler": "^4.1.1",
+    "@riotjs/compiler": "^4.5.5",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
-    "autoprefixer": "^9.6.0",
+    "autoprefixer": "^9.7.4",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-runtime": "^6.23.0",
     "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
     "mdcss": "^1.5.2",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.13.1",
     "onchange": "^6.1.0",
-    "parcel-bundler": "^1.12.3",
+    "parcel-bundler": "^1.12.4",
     "parcel-plugin-riot": "^2.1.0",
-    "postcss": "^7.0.8",
+    "postcss": "^7.0.26",
     "postcss-cli": "^7.1.0",
     "postcss-easings": "^2.0.0",
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-focus": "^4.0.0",
-    "postcss-import": "^12.0.0",
-    "postcss-normalize-charset": "^4.0.0"
+    "postcss-import": "^12.0.1",
+    "postcss-normalize-charset": "^4.0.1"
   }
 }
