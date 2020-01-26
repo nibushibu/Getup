@@ -4,6 +4,7 @@ bower_components
 .DS_Store
 *.log
 .cache
+.yarn
 dist/css/**/*.css
 dist/js
 dist/**/*.html
