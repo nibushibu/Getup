@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "parcel watch src/js/*.js --out-dir ${npm_package_config_distDir}/js --public-url ./ & npm run css & npm run nunjucks & npm run watch & npm run server",
-    "css": "node-sass --output ${npm_package_config_distDir}/css --output-style expanded --include-path src/css --precision 6 'src/scss' && postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose --no-map",
+    "css": "node-sass --output ${npm_package_config_distDir}/css --output-style expanded --include-path src/css --precision 6 'src/scss' --source-map true && postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose --no-map",
     "watch": "onchange src/nunjucks -- npm run nunjucks & onchange src/scss -- npm run css",
     "nunjucks": "gulp nunjucks",
     "build": "parcel build src/js/main.js --out-dir ${npm_package_config_distDir}/js --no-source-maps && npm run css && npm run nunjucks",
