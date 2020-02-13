@@ -1,5 +1,5 @@
 const { registerPreprocessor } = require('@riotjs/compiler')
-const sass = require('node-sass')
+const sass = require('sass')
 
 registerPreprocessor('css', 'scss', function(code, { options }) {
   const { file } = options
