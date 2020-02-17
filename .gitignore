@@ -5,6 +5,7 @@ bower_components
 *.log
 .cache
 dist/css/**/*.css
+dist/css/**/*.css.map
 dist/js
 dist/**/*.html
 styleguide

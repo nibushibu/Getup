@@ -8,16 +8,16 @@
   },
   "scripts": {
     "start": "parcel watch src/js/*.js --out-dir ${npm_package_config_distDir}/js --public-url ./ & npm run css & npm run nunjucks & npm run watch & npm run server",
-    "css": "node-sass --output ${npm_package_config_distDir}/css --output-style expanded --include-path src/css --precision 6 'src/scss' --source-map true && postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose --no-map",
+    "css": "sass --style=expanded src/scss/main.scss ${npm_package_config_distDir}/css/main.css && postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose --no-map",
     "watch": "onchange src/nunjucks -- npm run nunjucks & onchange src/scss -- npm run css",
     "nunjucks": "gulp nunjucks",
     "build": "parcel build src/js/main.js --out-dir ${npm_package_config_distDir}/js --no-source-maps && npm run css && npm run nunjucks",
     "server": "node node_scripts/serve.js"
   },
-  "dependencies":{
+  "dependencies": {
     "@webcomponents/template": "^1.4.1",
     "animejs": "^3.1.0",
-    "riot": "^4.8.9",
+    "riot": "^4.9.0",
     "sanitize.css": "^11.0.0"
   },
   "repository": {
@@ -30,7 +30,7 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
-    "@riotjs/compiler": "^4.5.5",
+    "@riotjs/compiler": "^4.6.0",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "autoprefixer": "^9.7.4",
     "babel-core": "^6.26.3",
@@ -39,7 +39,6 @@
     "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
     "mdcss": "^1.5.2",
-    "node-sass": "^4.13.1",
     "onchange": "^6.1.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-riot": "^2.1.0",
@@ -49,6 +48,7 @@
     "postcss-flexbugs-fixes": "^4.2.0",
     "postcss-focus": "^4.0.0",
     "postcss-import": "^12.0.1",
-    "postcss-normalize-charset": "^4.0.1"
+    "postcss-normalize-charset": "^4.0.1",
+    "sass": "^1.25.0"
   }
 }
