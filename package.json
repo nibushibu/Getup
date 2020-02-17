@@ -17,7 +17,7 @@
   "dependencies": {
     "@webcomponents/template": "^1.4.1",
     "animejs": "^3.1.0",
-    "riot": "^4.8.9",
+    "riot": "^4.9.0",
     "sanitize.css": "^11.0.0"
   },
   "repository": {
@@ -30,7 +30,7 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
-    "@riotjs/compiler": "^4.5.5",
+    "@riotjs/compiler": "^4.6.0",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "autoprefixer": "^9.7.4",
     "babel-core": "^6.26.3",
