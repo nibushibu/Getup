@@ -7,11 +7,11 @@
     "distDir": "dist"
   },
   "scripts": {
-    "start": "parcel watch src/js/*.js --out-dir ${npm_package_config_distDir}/js --public-url ./ & npm run css & npm run nunjucks & npm run watch & npm run server",
+    "start": "parcel watch src/js/*.js --out-dir ${npm_package_config_distDir}/js --public-url ./ & yarn run css & yarn run nunjucks & yarn run watch & yarn run server",
     "css": "sass --style=expanded src/scss/main.scss ${npm_package_config_distDir}/css/main.css && postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose --no-map",
-    "watch": "onchange src/nunjucks -- npm run nunjucks & onchange src/scss -- npm run css",
+    "watch": "onchange src/nunjucks -- yarn run nunjucks & onchange src/scss -- yarn run css",
     "nunjucks": "gulp nunjucks",
-    "build": "parcel build src/js/main.js --out-dir ${npm_package_config_distDir}/js --no-source-maps && npm run css && npm run nunjucks",
+    "build": "parcel build src/js/main.js --out-dir ${npm_package_config_distDir}/js --no-source-maps && yarn run css && yarn run nunjucks",
     "server": "node node_scripts/serve.js"
   },
   "dependencies": {
