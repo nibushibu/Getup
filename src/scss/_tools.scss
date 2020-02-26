@@ -1,6 +1,7 @@
 @mixin getup-flex-gap($gap-x: $getup-flex-gap-size, $gap-y: $gap-x) {
   margin: (-$gap-y) 0 0 (-$gap-x);
   > * {
+    max-width: 100%;
     padding: $gap-y 0 0 $gap-x;
   }
 }
