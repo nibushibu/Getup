@@ -33,8 +33,6 @@
     "@riotjs/compiler": "^4.6.0",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "autoprefixer": "^9.7.4",
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-runtime": "^6.23.0",
     "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
