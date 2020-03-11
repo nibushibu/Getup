@@ -60,6 +60,21 @@
   align-items: center;
 }
 
+.o-flow-to-stack {
+  @media (max-width: $breakpoint-1) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.o-flow-to-stack-reverse {
+  @media (max-width: $breakpoint-1) {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+}
+
+
 /**
  * BOX: Container box
  *
