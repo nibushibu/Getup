@@ -107,7 +107,10 @@
 
 .o-width-fill {
   flex: 1 1 auto;
-  width: 100%;
+
+  >* {
+    width: 100%;
+  }
 }
 
 .o-icon {
