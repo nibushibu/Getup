@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "@webcomponents/template": "^1.4.1",
-    "animejs": "^3.1.0",
-    "riot": "^4.9.0",
+    "animejs": "^3.2.0",
+    "riot": "^4.12.1",
     "sanitize.css": "^11.0.0"
   },
   "repository": {
@@ -30,14 +30,14 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
-    "@riotjs/compiler": "^4.6.0",
+    "@riotjs/compiler": "^4.8.3",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "autoprefixer": "^9.7.4",
     "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
     "mdcss": "^1.5.2",
-    "onchange": "^6.1.0",
+    "onchange": "^7.0.0",
     "parcel-bundler": "^1.12.4",
     "postcss": "^7.0.26",
     "postcss-cli": "^7.1.0",
@@ -46,6 +46,6 @@
     "postcss-focus": "^4.0.0",
     "postcss-import": "^12.0.1",
     "postcss-normalize-charset": "^4.0.1",
-    "sass": "^1.25.0"
+    "sass": "^1.26.5"
   }
 }
