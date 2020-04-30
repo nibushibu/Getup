@@ -1,6 +1,6 @@
 {
   "name": "getup",
-  "version": "0.7.0",
+  "version": "1.0.0",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "config": {
@@ -47,5 +47,9 @@
     "postcss-import": "^12.0.1",
     "postcss-normalize-charset": "^4.0.1",
     "sass": "^1.26.5"
-  }
+  },
+  "browserslist": [
+    "last 2 version",
+    "IE 11"
+  ]
 }
