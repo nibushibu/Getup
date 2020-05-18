@@ -94,6 +94,14 @@
   @include getup-flex-gap(1em);
 }
 
+.o-stack-layout--right {
+  align-items: flex-end;
+}
+
+.o-stack-layout--left {
+  align-items: flex-start;
+}
+
 /**
  * BOX: Container box
  *
