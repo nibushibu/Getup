@@ -42,12 +42,38 @@
   align-items: center;
 }
 
+.o-layout-flow--stretch {
+  align-items: stretch;
+
+  &>* {
+    display: flex;
+  }
+}
+
 .o-layout-flow--custom {
   @include getup-flex-gap(2em, 1em);
 }
 
 .o-layout-flow--tight {
   @include getup-flex-gap(.25em);
+}
+
+.o-layout-flow--loose {
+  @include getup-flex-gap(1em);
+}
+
+.o-layout-flow--to-stack {
+  @media (max-width: $breakpoint-1) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.o-layout-flow--to-stack-reverse {
+  @media (max-width: $breakpoint-1) {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
 }
 
 .o-layout-stack {
@@ -60,20 +86,13 @@
   align-items: center;
 }
 
-.o-layout-flow-to-stack {
-  @media (max-width: $breakpoint-1) {
-    flex-direction: column;
-    align-items: stretch;
-  }
+.o-layout-stack--tight {
+  @include getup-flex-gap(.25em);
 }
 
-.o-layout-flow-to-stack-reverse {
-  @media (max-width: $breakpoint-1) {
-    flex-direction: column-reverse;
-    align-items: stretch;
-  }
+.o-layout-stack--loose {
+  @include getup-flex-gap(1em);
 }
-
 
 /**
  * BOX: Container box
