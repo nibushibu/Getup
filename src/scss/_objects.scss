@@ -2,7 +2,7 @@
  * Flexbox - General Layout Module
  */
 
-.o-layout-flow {
+.o-flow-layout {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -12,37 +12,37 @@
   @include getup-flex-gap;
 }
 
-.o-layout-flow--fill {
+.o-flow-layout--fill {
   flex-wrap: nowrap;
   > * {
     flex: 1 1 auto;
   }
 }
 
-.o-layout-flow--fill-equal {
+.o-flow-layout--fill-equal {
   flex-wrap: nowrap;
   > * {
     flex: 1 1 0%;
   }
 }
 
-.o-layout-flow--no-gap {
+.o-flow-layout--no-gap {
   @include getup-flex-gap(0);
 }
 
-.o-layout-flow--no-wrap {
+.o-flow-layout--no-wrap {
   flex-wrap: nowrap;
 }
 
-.o-layout-flow--center {
+.o-flow-layout--center {
   justify-content: center;
 }
 
-.o-layout-flow--middle {
+.o-flow-layout--middle {
   align-items: center;
 }
 
-.o-layout-flow--stretch {
+.o-flow-layout--stretch {
   align-items: stretch;
 
   &>* {
@@ -50,47 +50,47 @@
   }
 }
 
-.o-layout-flow--custom {
+.o-flow-layout--custom {
   @include getup-flex-gap(2em, 1em);
 }
 
-.o-layout-flow--tight {
+.o-flow-layout--tight {
   @include getup-flex-gap(.25em);
 }
 
-.o-layout-flow--loose {
+.o-flow-layout--loose {
   @include getup-flex-gap(1em);
 }
 
-.o-layout-flow--to-stack {
+.o-flow-layout--to-stack {
   @media (max-width: $breakpoint-1) {
     flex-direction: column;
     align-items: stretch;
   }
 }
 
-.o-layout-flow--to-stack-reverse {
+.o-flow-layout--to-stack-reverse {
   @media (max-width: $breakpoint-1) {
     flex-direction: column-reverse;
     align-items: stretch;
   }
 }
 
-.o-layout-stack {
+.o-stack-layout {
   display: flex;
   flex-direction: column;
   @include getup-flex-gap();
 }
 
-.o-layout-stack--center {
+.o-stack-layout--center {
   align-items: center;
 }
 
-.o-layout-stack--tight {
+.o-stack-layout--tight {
   @include getup-flex-gap(.25em);
 }
 
-.o-layout-stack--loose {
+.o-stack-layout--loose {
   @include getup-flex-gap(1em);
 }
 
