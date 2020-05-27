@@ -8,8 +8,8 @@
   },
   "scripts": {
     "start": "parcel watch src/js/*.js --out-dir ${npm_package_config_distDir}/js --public-url ./ & npm run css & npm run nunjucks & npm run watch & npm run server",
-    "css": "sass --style=expanded src/scss/main.scss ${npm_package_config_distDir}/css/main.css && postcss --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose --no-map",
-    "watch": "onchange src/nunjucks -- npm run nunjucks & onchange src/scss -- npm run css",
+    "css": "postcss src/css/main.css --config postcss.config.js --replace ${npm_package_config_distDir}/css/**/*.css --verbose --no-map",
+    "watch": "onchange src/nunjucks -- npm run nunjucks & onchange src/css -- npm run css",
     "nunjucks": "gulp nunjucks",
     "build": "parcel build src/js/main.js --out-dir ${npm_package_config_distDir}/js --no-source-maps && npm run css && npm run nunjucks",
     "server": "node node_scripts/serve.js"
@@ -32,7 +32,6 @@
   "devDependencies": {
     "@riotjs/compiler": "^4.8.4",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
-    "autoprefixer": "^9.7.6",
     "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
@@ -46,7 +45,7 @@
     "postcss-focus": "^4.0.0",
     "postcss-import": "^12.0.1",
     "postcss-normalize-charset": "^4.0.1",
-    "sass": "^1.26.5"
+    "postcss-preset-env": "^6.7.0"
   },
   "browserslist": [
     "last 2 version",
