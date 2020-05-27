@@ -2,6 +2,7 @@ module.exports = (ctx) => ({
   map: ctx.options.map,
   plugins: [
     require('postcss-import'),
+    require('tailwindcss'),
     require('postcss-preset-env')({
       stage: 0,
       autoprefixer: { grid: true }
@@ -15,8 +16,8 @@ module.exports = (ctx) => ({
         css: ['../dist/css/main.css']
       }
     }),
-    require('cssnano')({
-      preset: 'default',
-    }),
+    // require('cssnano')({
+    //   preset: 'default',
+    // }),
   ]
 })

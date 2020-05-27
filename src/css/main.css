@@ -2,6 +2,7 @@
 @import 'settings.css';
 
 /* Generic */
+@import "tailwindcss/base";
 @import '../../node_modules/sanitize.css/sanitize.css';
 @import '../../node_modules/sanitize.css/typography.css';
 @import '../../node_modules/sanitize.css/forms.css';
@@ -13,7 +14,9 @@
 @import 'objects.css';
 
 /* Components */
+@import "tailwindcss/components";
 @import 'components.css';
 
 /* Utilities */
+@import "tailwindcss/utilities";
 @import 'utilities.css';
