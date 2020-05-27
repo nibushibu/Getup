@@ -11,11 +11,11 @@ title: c-sample-button
 
 .c-sample-button {
   background-color: #fff;
-  border: 1px solid $color-primary;
-  color: $color-primary;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
   padding: 0.5em;
+}
 
-  &:hover {
-    background-color: gray;
-  }
+.c-sample-button:hover {
+  background-color: gray;
 }

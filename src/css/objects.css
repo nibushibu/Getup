@@ -1,0 +1,154 @@
+/**
+ * Flexbox - General Layout Module
+ */
+
+.o-flow-layout,
+.o-stack-layout {
+  display: flex;
+  margin: calc(var(--getup-flex-gap-size) * -1) 0 0
+    calc(var(--getup-flex-gap-size) * -1);
+}
+
+.o-flow-layout {
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.o-stack-layout {
+  flex-direction: column;
+}
+
+.o-flow-layout > *,
+.o-stack-layout > * {
+  max-width: 100%;
+  padding: var(--getup-flex-gap-size) 0 0 var(--getup-flex-gap-size);
+  flex: 0 1 auto;
+}
+
+.o-flow-layout--fill > * {
+  flex: 1 1 auto;
+}
+
+.o-flow-layout--fill-equal > * {
+  flex: 1 1 0%;
+}
+
+.o-flow-layout--no-gap,
+.o-stack-layout--no-gap {
+  margin: 0;
+}
+
+.o-flow-layout--no-gap > *,
+.o-stack-layout--no-gap > * {
+  padding: 0;
+}
+
+.o-flow-layout--loose,
+.o-stack-layout--loose {
+  margin: -2em 0 0 -2em;
+}
+
+.o-flow-layout--loose > *,
+.o-stack-layout--loose > * {
+  padding: 2em 0 0 2em;
+}
+
+.o-flow-layout--tight,
+.o-stack-layout--tight {
+  margin: -0.25em 0 0 -0.25em;
+}
+
+.o-flow-layout--tight > *,
+.o-stack-layout--tight > * {
+  padding: 0.25em 0 0 0.25em;
+}
+
+.o-flow-layout--no-wrap {
+  flex-wrap: nowrap;
+}
+
+.o-flow-layout--center {
+  justify-content: center;
+}
+
+.o-flow-layout--middle {
+  align-items: center;
+}
+
+.o-flow-layout--stretch {
+  align-items: stretch;
+}
+
+.o-flow-layout--stretch > * {
+  display: flex;
+}
+
+.o-stack-layout--center {
+  align-items: center;
+}
+
+.o-stack-layout--right {
+  align-items: flex-end;
+}
+
+.o-stack-layout--left {
+  align-items: flex-start;
+}
+
+@media (max-width: var(--breakpoint-1)) {
+  .o-flow-layout--to-stack {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .o-flow-layout--to-stack-reverse {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+}
+
+/**
+ * BOX: Container box
+ *
+ * Cancel top margin of first child
+ */
+
+.o-fit > *:first-child {
+  margin-top: 0;
+}
+
+.o-fit-all *:first-child {
+  margin-top: 0;
+}
+
+.o-fill {
+  display: flex;
+}
+
+.o-fill > * {
+  flex: 1 1 auto;
+}
+
+/**
+ * for Media block
+ */
+
+.o-width-fixed {
+  flex: 0 0 auto;
+}
+
+.o-width-fill {
+  flex: 1 1 auto;
+}
+
+.o-width-fill * {
+  width: 100%;
+}
+
+.o-icon {
+  display: inline-block;
+  height: 1em;
+  width: auto;
+  line-height: inherit;
+  vertical-align: middle;
+}

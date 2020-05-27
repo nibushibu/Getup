@@ -1,5 +1,5 @@
 html {
-  font-family: $base-font-family;
+  font-family: var(--base-font-family);
   line-height: 1.5;
   scroll-behavior: smooth;
   font-feature-settings: 'palt' 1;
@@ -21,7 +21,7 @@ dl {
 }
 
 a {
-  color: $link-color;
+  color: var(--link-color);
 }
 
 img {
