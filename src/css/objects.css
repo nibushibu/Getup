@@ -99,18 +99,6 @@
   align-items: flex-start;
 }
 
-@media (max-width: var(--breakpoint-1)) {
-  .o-flow-layout--to-stack {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .o-flow-layout--to-stack-reverse {
-    flex-direction: column-reverse;
-    align-items: stretch;
-  }
-}
-
 /**
  * BOX: Container box
  *
@@ -155,4 +143,16 @@
   width: auto;
   line-height: inherit;
   vertical-align: middle;
+}
+
+@media (max-width: var(--breakpoint-1)) {
+  .o-flow-layout--to-stack {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .o-flow-layout--to-stack-reverse {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
 }
