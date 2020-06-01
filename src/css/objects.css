@@ -11,7 +11,7 @@
 
 .o-flow-layout {
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .o-stack-layout {
@@ -71,8 +71,12 @@
   justify-content: center;
 }
 
-.o-flow-layout--middle {
-  align-items: center;
+.o-flow-layout--top {
+  align-items: flex-start;
+}
+
+.o-flow-layout--bottom {
+  align-items: flex-end;
 }
 
 .o-flow-layout--stretch {
