@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "animejs": "^3.2.0",
-    "riot": "^4.12.4",
+    "riot": "^4.13.2",
     "sanitize.css": "^11.0.1"
   },
   "repository": {
@@ -29,7 +29,7 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
-    "@riotjs/compiler": "^4.8.5",
+    "@riotjs/compiler": "^4.9.2",
     "@riotjs/parcel-plugin-riot": "^4.0.1",
     "@webcomponents/template": "^1.4.2",
     "cssnano": "^4.1.10",
@@ -39,7 +39,7 @@
     "mdcss": "^1.5.2",
     "onchange": "^7.0.2",
     "parcel-bundler": "^1.12.4",
-    "postcss": "^7.0.31",
+    "postcss": "^7.0.32",
     "postcss-cli": "^7.1.1",
     "postcss-custom-properties": "^9.1.1",
     "postcss-easings": "^2.0.0",

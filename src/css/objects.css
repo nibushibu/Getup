@@ -121,6 +121,10 @@
   flex: 1 1 auto;
 }
 
+.o-clip {
+  overflow: hidden;
+}
+
 /**
  * for Media block
  */
