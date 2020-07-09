@@ -3,15 +3,16 @@
   "version": "1.4.1",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
-  "config": {
-    "distDir": "dist"
-  },
   "scripts": {
-    "start": "parcel watch src/js/*.js --out-dir ${npm_package_config_distDir}/js --public-url ./ & npm run css & npm run nunjucks & npm run watch & npm run server",
-    "css": "postcss src/css/main.css --config postcss.config.js --output ${npm_package_config_distDir}/css/main.css --map",
-    "watch": "onchange src/nunjucks -- npm run nunjucks & onchange src/css -- npm run css",
+    "start": "run-p parcel-watch css nunjucks watch:* server",
+    "parcel-watch": "parcel watch src/js/*.js --out-dir dist/js --public-url ./",
+    "css": "postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --map",
+    "css-build": "postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --no-map",
+    "watch:nunjucks": "onchange src/nunjucks -- npm run nunjucks",
+    "watch:css": "onchange src/css -- npm run css",
     "nunjucks": "gulp nunjucks",
-    "build": "parcel build src/js/main.js --out-dir ${npm_package_config_distDir}/js --no-source-maps && npm run css && npm run nunjucks",
+    "parcel-build": "parcel build src/js/main.js --out-dir dist/js --no-source-maps",
+    "build": "run-p parcel-build css-build nunjucks",
     "server": "node node_scripts/serve.js"
   },
   "dependencies": {
@@ -37,6 +38,7 @@
     "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
     "mdcss": "^1.5.2",
+    "npm-run-all": "^4.1.5",
     "onchange": "^7.0.2",
     "parcel-bundler": "^1.12.4",
     "postcss": "^7.0.32",
