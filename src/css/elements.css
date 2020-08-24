@@ -1,6 +1,5 @@
 html {
   font-family: var(--base-font-family);
-  line-height: 1.5;
   scroll-behavior: smooth;
   font-feature-settings: 'palt' 1;
   letter-spacing: 0.025em;
@@ -22,11 +21,6 @@ dl {
 
 a {
   color: var(--link-color);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 svg {
