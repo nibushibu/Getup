@@ -2,9 +2,10 @@
 @import 'settings.css';
 
 /* Generic */
-@import '../../node_modules/sanitize.css/sanitize.css';
+@import '../../node_modules/sanitize.css/evergreen.css';
+@import '../../node_modules/sanitize.css/forms.evergreen.css';
+@import '../../node_modules/sanitize.css/assets.css';
 @import '../../node_modules/sanitize.css/typography.css';
-@import '../../node_modules/sanitize.css/forms.css';
 
 /* Elements */
 @import 'elements.css';
