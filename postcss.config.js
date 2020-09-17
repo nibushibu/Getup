@@ -6,7 +6,6 @@ module.exports = (ctx) => ({
       stage: 0,
       autoprefixer: { grid: true }
     }),
-    require('postcss-focus'),
     require('postcss-normalize-charset'),
     require('postcss-flexbugs-fixes'),
     require('postcss-custom-properties'),
