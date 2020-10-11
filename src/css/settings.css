@@ -16,7 +16,8 @@
   --getup-flex-gap-size: 1em;
 
   --color-primary: #228b22;
-  --link-color: var(--color-primary);
+  --color-link: var(--color-primary);
+  --color-white: #fff;
 
   --breakpoint-1: 560px;
 }

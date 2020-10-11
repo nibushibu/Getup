@@ -17,5 +17,6 @@ title: c-sample-button
 }
 
 .c-sample-button:hover {
-  background-color: gray;
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
