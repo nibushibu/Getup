@@ -7,6 +7,8 @@
   display: flex;
   margin: calc(var(--getup-flex-gap-size) * -1) 0 0
     calc(var(--getup-flex-gap-size) * -1);
+  list-style: none;
+  padding-left: 0;
 }
 
 .o-flow-layout {
