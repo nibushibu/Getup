@@ -139,10 +139,6 @@
   flex: 1 1 auto;
 }
 
-.o-width-fill > * {
-  width: 100%;
-}
-
 .o-icon {
   display: inline-block;
   height: 1em;
