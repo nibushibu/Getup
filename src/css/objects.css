@@ -93,6 +93,10 @@
   justify-content: flex-end;
 }
 
+.o-flow-layout--reverse {
+  flex-direction: row-reverse;
+}
+
 .o-stack-layout--center {
   align-items: center;
 }
