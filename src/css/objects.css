@@ -139,7 +139,7 @@
   flex: 1 1 auto;
 }
 
-.o-width-fill * {
+.o-width-fill > * {
   width: 100%;
 }
 
