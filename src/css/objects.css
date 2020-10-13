@@ -89,6 +89,10 @@
   display: flex;
 }
 
+.o-flow-layout--right {
+  justify-content: flex-end;
+}
+
 .o-stack-layout--center {
   align-items: center;
 }
