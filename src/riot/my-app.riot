@@ -25,8 +25,12 @@
 
   <script>
     import anime from 'animejs'
+    import RawHtml from './raw-html.riot'
 
     export default {
+      components: {
+        'raw-html': RawHtml,
+      },
       state: {
         finishAnimation: false,
         test: 'Hello Riot!'
