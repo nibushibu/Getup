@@ -6,7 +6,7 @@
   "scripts": {
     "start": "run-s riot start-watch",
     "start-watch": "run-p parcel-watch css nunjucks watch:* server",
-    "parcel-watch": "parcel watch src/js/main.js --out-dir dist/js --public-url ./",
+    "parcel-watch": "parcel watch src/js/main.js --out-dir dist/js --public-url ./ --no-hmr",
     "css": "postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --map",
     "css-build": "postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --no-map",
     "riot": "riot src/riot --config riot.config.js",
