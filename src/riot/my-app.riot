@@ -2,8 +2,12 @@
   <div>
     <h1>Thie is Riot test.</h1>
     <p>{ state.test }</p>
-    <button class="unmount-animation" onclick="{ animationUnmount }" ref="button">アンマウント！</button>
-    <raw-html content="テスト"></raw-html>
+    <p>
+      <button class="unmount-animation" onclick="{ animationUnmount }" data-ref="button">my-appをアンマウント</button>
+    </p>
+    <p>
+      <raw-html content="raw-htmlコンポーネントのテスト"></raw-html>
+    </p>
   </div>
 
   <style>
@@ -25,15 +29,19 @@
 
   <script>
     import anime from 'animejs'
+    import RawHtml from './raw-html.riot'
 
     export default {
+      components: {
+        'raw-html': RawHtml,
+      },
       state: {
         finishAnimation: false,
         test: 'Hello Riot!'
       },
       onMounted() {
         anime({
-          targets: this.$('[ref="button"]'),
+          targets: this.$('[data-ref="button"]'),
           translateX: 20,
           easing: 'easeInOutSine',
           duration: 1000,
@@ -42,11 +50,11 @@
         })
       },
       animationUnmount(e) {
-        this.$('[ref="button"]').addEventListener('transitionend', e => {
-          console.log('消えたよ')
+        this.$('[data-ref="button"]').addEventListener('transitionend', e => {
+          console.log('button transitionend')
           this.unmount()
         })
-        this.$('[ref="button"]').classList.add('is-unmount')
+        this.$('[data-ref="button"]').classList.add('is-unmount')
       }
     }
   </script>

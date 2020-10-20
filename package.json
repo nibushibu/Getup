@@ -1,23 +1,26 @@
 {
   "name": "getup",
-  "version": "1.4.1",
+  "version": "1.5.1",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "scripts": {
-    "start": "run-p parcel-watch css nunjucks watch:* server",
-    "parcel-watch": "parcel watch src/js/*.js --out-dir dist/js --public-url ./",
+    "start": "run-s riot start-watch",
+    "start-watch": "run-p parcel-watch css nunjucks watch:* server",
+    "parcel-watch": "parcel watch src/js/main.js --out-dir dist/js --public-url ./ --no-hmr",
     "css": "postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --map",
     "css-build": "postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --no-map",
+    "riot": "riot src/riot --config riot.config.js",
     "watch:nunjucks": "onchange src/nunjucks -- npm run nunjucks",
     "watch:css": "onchange src/css -- npm run css",
+    "watch:riot": "riot src/riot --config riot.config.js --watch",
     "nunjucks": "gulp nunjucks",
     "parcel-build": "parcel build src/js/main.js --out-dir dist/js --no-source-maps",
     "build": "run-p parcel-build css-build nunjucks",
     "server": "node node_scripts/serve.js"
   },
   "dependencies": {
-    "animejs": "^3.2.0",
-    "riot": "^4.14.0",
+    "animejs": "^3.2.1",
+    "riot": "^5.0.0",
     "sanitize.css": "^12.0.1"
   },
   "repository": {
@@ -30,8 +33,8 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
-    "@riotjs/compiler": "^4.11.0",
-    "@riotjs/parcel-plugin-riot": "^4.0.1",
+    "@riotjs/cli": "^4.0.3",
+    "@riotjs/compiler": "^5.0.0",
     "@webcomponents/template": "^1.4.3",
     "cssnano": "^4.1.10",
     "express": "^4.17.1",
@@ -41,8 +44,8 @@
     "npm-run-all": "^4.1.5",
     "onchange": "^7.0.2",
     "parcel-bundler": "^1.12.4",
-    "postcss": "^8.1.1",
-    "postcss-cli": "^8.0.0",
+    "postcss": "^8.1.2",
+    "postcss-cli": "^8.1.0",
     "postcss-custom-properties": "^10.0.0",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-focus": "^5.0.1",
