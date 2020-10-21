@@ -49,7 +49,7 @@
     "postcss-custom-properties": "^10.0.0",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-focus": "^5.0.1",
-    "postcss-import": "^12.0.1",
+    "postcss-import": "^13.0.0",
     "postcss-normalize-charset": "^4.0.1",
     "postcss-preset-env": "^6.7.0"
   },
