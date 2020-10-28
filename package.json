@@ -35,6 +35,7 @@
   "devDependencies": {
     "@riotjs/cli": "^4.0.3",
     "@riotjs/compiler": "^5.0.0",
+    "@riotjs/ssr": "^5.0.0",
     "@webcomponents/template": "^1.4.4",
     "cssnano": "^4.1.10",
     "express": "^4.17.1",
