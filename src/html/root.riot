@@ -3,6 +3,9 @@
 <head>
   <title>{ state.title }</title>
   <meta each={ meta in state.meta } {...meta} />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/main.js" defer></script>
 </head>
 
 <body>
@@ -11,7 +14,7 @@
 </body>
 
 <script>
-  import StaticComponent from './static-component.riot'
+  import StaticComponent from './inc/static-component.riot'
 
   export default {
     components: {

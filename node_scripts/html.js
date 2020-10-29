@@ -1,9 +1,13 @@
 const fs = require('fs')
+const path = require('path')
 const { render } = require('@riotjs/ssr')
 const register = require('@riotjs/ssr/register')
 const srcDirFromRoot = './src/html'
 const srcDirFromFile = '../src/html'
 const outpurtDir = 'dist'
+
+console.log(__dirname)
+console.log(path.basename(__dirname))
 
 register()
 
