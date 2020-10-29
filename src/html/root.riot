@@ -7,10 +7,16 @@
 
 <body>
   <h1>{ state.title }</h1>
+  <static-component></static-component>
 </body>
 
 <script>
+  import StaticComponent from './static-component.riot'
+
   export default {
+    components: {
+      StaticComponent
+    },
     state: {
       title: 'Static!',
       meta: [{
