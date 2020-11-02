@@ -1,31 +1,28 @@
 const fs = require('fs')
 const path = require('path')
+const mkdirp = require('mkdirp')
 const { render } = require('@riotjs/ssr')
 const register = require('@riotjs/ssr/register')
 const srcDirFromRoot = './src/html'
 const srcDirFromFile = '../src/html'
-const outpurtDir = 'dist'
-
+const outputDir = 'dist'
+const file = path.join(srcDirFromFile, 'html.riot')
 const pages = JSON.parse(fs.readFileSync(path.join(srcDirFromRoot, 'pages.json')))
+const getDirName = require('path').dirname
 
+
+// Riot コンポーネントを require できるように
 register()
 
-const generateHtml = (dir, file) => {
-  const Root = require(`${dir}/${file}`).default
+const generateHtml = (outputPath) => {
+  const Root = require(file).default
   const html = render('html', Root)
-  const outputFile = file.replace(/riot$/, 'html')
-  fs.writeFile(`${outpurtDir}/${outputFile}`, html, (err) => {
-    if (err) console.log(err)
+  mkdirp.sync(path.join(outputDir, outputPath))
+  fs.writeFile(path.join(outputDir, outputPath, 'index.html'), html, err => {
+    if (err) throw err
   })
 }
 
-/**
- * ディレクトリ内の自動的に読み込んで出力
- */
-const dirEntry = fs.readdirSync(srcDirFromRoot, { withFileTypes: true })
-const fileArray = dirEntry
-  .filter((dirent) => dirent.isFile())
-  .map(({ name }) => name)
-fileArray.forEach((file) => {
-  if (file.match(/\.riot$/)) generateHtml(srcDirFromFile, file)
+pages.forEach(page => {
+  generateHtml(page.path)
 })
