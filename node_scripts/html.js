@@ -17,8 +17,9 @@ register()
 const generateHtml = (outputPath) => {
   const Root = require(file).default
   const html = render('html', Root)
-  mkdirp.sync(path.join(outputDir, outputPath))
-  fs.writeFile(path.join(outputDir, outputPath, 'index.html'), html, err => {
+  const fileName = outputPath.match(/\.html?$/) ? '' : 'index.html'
+  mkdirp.sync(path.parse(path.join(outputDir, outputPath)).dir)
+  fs.writeFile(path.join(outputDir, outputPath, fileName), html, err => {
     if (err) throw err
   })
 }
