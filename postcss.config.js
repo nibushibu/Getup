@@ -9,11 +9,6 @@ module.exports = (ctx) => ({
     require('postcss-normalize-charset'),
     require('postcss-flexbugs-fixes'),
     require('postcss-custom-properties'),
-    require('mdcss')({
-      examples: {
-        css: ['../dist/css/main.css']
-      }
-    }),
     require('cssnano')({
       preset: 'default',
     }),
