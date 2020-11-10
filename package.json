@@ -50,6 +50,9 @@
     "postcss-normalize-charset": "^4.0.1",
     "postcss-preset-env": "^6.7.0"
   },
+  "engines": {
+    "node": "^15.1.0"
+  },
   "browserslist": [
     "last 2 version",
     "IE 11"
