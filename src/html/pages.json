@@ -1,15 +1,28 @@
 [
   {
     "path": "/",
-    "meta": [{
-      "name": "description",
-      "content": "this is home"
-    }]
+    "meta": [
+      {
+        "name": "description",
+        "content": "this is home"
+      }
+    ]
   },
   {
-    "path": "/test"
+    "path": "/test",
+    "title": ["テスト"],
+    "meta": [
+      {
+        "property": "og:title",
+        "content": "ogp test title"
+      }
+    ]
   },
   {
-    "path": "test/test.html"
+    "path": "test/test.html",
+    "title": [
+      "テストページ",
+      "テスト"
+    ]
   }
 ]

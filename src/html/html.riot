@@ -16,28 +16,53 @@
 <script>
   import StaticComponent from './components/static-component.riot'
 
-  export default {
-    components: {
-      StaticComponent
-    },
-    state: {
-      title: 'Static!',
-      metaDefault: [{
-        name: 'description',
-        content: 'a description'
-      }],
-      meta: [],
-    },
-    onBeforeMount() {
-      this.state.meta = JSON.parse(JSON.stringify(this.state.metaDefault))
-      if (!this.props.meta) return false
-      this.props.meta.forEach(propsMeta => {
-        this.state.meta.forEach(stateMeta => {
-          if (propsMeta.name == stateMeta.name) stateMeta.content = propsMeta.content
-        })
-      })
+  export default function Html(){
+    return {
+      components: {
+        StaticComponent
+      },
+      state: {
+        default: {
+          title: 'Static',
+          meta: [
+            {
+              name: 'description',
+              content: 'a description',
+            },
+            {
+              property: 'og:title',
+              content: 'ogp title',
+            },
+          ],
+        },
+        title: '',
+        meta: [],
+      },
+      onBeforeMount() {
+        this.setTitle()
+        this.setMeta()
+
+      },
+      setTitle() {
+        this.state.title = this.state.default.title
+        if (this.props.title) {
+          this.state.title = [...this.props.title, this.state.title].join(' | ')
+        }
+      },
+      setMeta() {
+        this.state.meta = JSON.parse(JSON.stringify(this.state.default.meta))
+        if (this.props.meta) {
+          this.props.meta.forEach(propsMeta => {
+            this.state.meta.forEach(stateMeta => {
+              if (propsMeta.name == stateMeta.name || propsMeta.property == stateMeta.property) {
+                stateMeta.content = propsMeta.content
+              }
+            })
+          })
+        }
+      }
     }
-  }
+    }
 </script>
 
 </html>

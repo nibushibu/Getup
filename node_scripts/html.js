@@ -14,9 +14,9 @@ const pages = JSON.parse(
 // Riot コンポーネントを require できるように
 register()
 
-const generateHtml = (outputPath, meta) => {
+const generateHtml = (outputPath, title, meta) => {
   const Root = require(file).default
-  const html = render('html', Root, { meta: meta })
+  const html = render('html', Root, { title: title, meta: meta })
   const fileName = outputPath.match(/\.html?$/) ? '' : 'index.html'
   mkdirp(path.parse(path.join(outputDir, outputPath)).dir).then(() => {
     fs.writeFile(path.join(outputDir, outputPath, fileName), html, (err) => {
@@ -26,5 +26,5 @@ const generateHtml = (outputPath, meta) => {
 }
 
 pages.forEach((page) => {
-  generateHtml(page.path, page.meta)
+  generateHtml(page.path, page.title, page.meta, )
 })
