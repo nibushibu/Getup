@@ -1,6 +1,6 @@
 {
   "name": "getup",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "scripts": {
@@ -15,7 +15,7 @@
     "watch:js": "parcel watch 'src/js/main.js' --dist-dir 'dist/js' --public-url './' --no-hmr",
     "watch:riot": "riot src/riot --config riot.config.js --watch",
     "parcel-build": "parcel build 'src/js/main.js' --dist-dir 'dist/js' --no-source-maps",
-    "build": "run-p html parcel-build css-build",
+    "build": "run-s riot html parcel-build css-build",
     "server": "node node_scripts/serve.js"
   },
   "dependencies": {
