@@ -3,7 +3,7 @@ bower_components
 .sass-cache
 .DS_Store
 *.log
-.cache
+.parcel-cache
 dist/css/**/*.css
 dist/css/**/*.css.map
 dist/js
