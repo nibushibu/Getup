@@ -1,6 +1,10 @@
 [
   {
-    "path": "/"
+    "path": "/",
+    "meta": [{
+      "name": "description",
+      "content": "this is home"
+    }]
   },
   {
     "path": "/test"

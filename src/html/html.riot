@@ -2,7 +2,7 @@
 
 <head>
   <title>{ state.title }</title>
-  <meta each={ meta in state.meta } {...meta} />
+  <meta each="{ meta in state.meta }" {...meta} />
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="./css/main.css">
   <script src="./js/main.js" defer></script>
@@ -22,10 +22,20 @@
     },
     state: {
       title: 'Static!',
-      meta: [{
+      metaDefault: [{
         name: 'description',
         content: 'a description'
-      }]
+      }],
+      meta: [],
+    },
+    onBeforeMount() {
+      this.state.meta = JSON.parse(JSON.stringify(this.state.metaDefault))
+      if (!this.props.meta) return false
+      this.props.meta.forEach(propsMeta => {
+        this.state.meta.forEach(stateMeta => {
+          if (propsMeta.name == stateMeta.name) stateMeta.content = propsMeta.content
+        })
+      })
     }
   }
 </script>
