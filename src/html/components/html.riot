@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <title>{ props.title ? props.title : state.title }</title>
+  <meta if="{ props.meta }" each="{ meta in props.meta }" {...meta} />
+  <meta if="{ !props.meta }" each="{ meta in state.meta }" {...meta} />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/main.js" defer></script>
+</head>
+
+<body>
+  <h1>{ props.title ? props.title : state.title }</h1>
+  <static-component></static-component>
+  <slot name="default"></template>
+</body>
+
+<script>
+  import StaticComponent from './static-component.riot'
+
+  export default {
+    components: {
+      StaticComponent
+    },
+    state: {
+      title: 'Static',
+      meta: [
+        {
+          name: 'description',
+          content: 'a description',
+        },
+        {
+          property: 'og:title',
+          content: 'ogp title',
+        },
+      ],
+    },
+  }
+</script>
+
+</html>

@@ -1,0 +1,21 @@
+<html>
+<template is="html" title="{ state.title }" meta="{ state.meta }"></template>
+<script>
+  import Html from '../components/html.riot'
+  export default {
+    components: {
+      Html
+    },
+    state: {
+      title: 'title from props',
+      meta: [
+        {
+          name: 'description',
+          content: 'description from props',
+        },
+      ],
+    },
+  }
+</script>
+
+</html>
