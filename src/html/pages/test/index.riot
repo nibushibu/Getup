@@ -1,0 +1,26 @@
+<html>
+<template is="html" title="{ state.title }" meta="{ state.meta }">
+  <static-header></static-header>
+  <p>page content</p>
+</template>
+<script>
+  import Html from '../../components/html.riot'
+  import StaticHeader from '../../components/static-header.riot'
+  export default {
+    components: {
+      Html,
+      StaticHeader
+    },
+    state: {
+      title: 'title from props',
+      meta: [
+        {
+          name: 'description',
+          content: 'description from props',
+        },
+      ],
+    },
+  }
+</script>
+
+</html>
