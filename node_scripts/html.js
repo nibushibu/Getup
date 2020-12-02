@@ -18,12 +18,18 @@ glob(`${srcDirFromRoot}/**/*.riot`, (err, files) => {
 })
 
 const generateHtml = (files) => {
-  files.forEach(file => {
+  files.forEach((file) => {
     const Root = require(`.${file}`).default
     const html = render('html', Root)
-    const dir = path.join(outputDir, file.replace(srcDirFromRoot, '').replace(/riot$/, 'html') )
-    fs.writeFile(dir, html, (err) => {
-      if (err) throw err
+    const dir = path.join(
+      outputDir,
+      file.replace(srcDirFromRoot, '').replace(/riot$/, 'html')
+    )
+
+    mkdirp(path.parse(dir).dir).then(() => {
+      fs.writeFile(dir, html, (err) => {
+        if (err) throw err
+      })
     })
   })
 }
