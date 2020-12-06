@@ -1,30 +1,35 @@
 const fs = require('fs')
 const path = require('path')
+const glob = require('glob')
 const mkdirp = require('mkdirp')
 const { render } = require('@riotjs/ssr')
 const register = require('@riotjs/ssr/register')
-const srcDirFromRoot = './src/html'
-const srcDirFromFile = '../src/html'
+const srcDirFromRoot = './src/html/pages'
+const srcDirFromFile = '../src/html/pages'
 const outputDir = 'dist'
-const file = path.join(srcDirFromFile, 'html.riot')
-const pages = JSON.parse(
-  fs.readFileSync(path.join(srcDirFromRoot, 'pages.json'))
-)
+const file = path.join(srcDirFromFile, 'index.riot')
 
 // Riot コンポーネントを require できるように
 register()
 
-const generateHtml = (outputPath, title, meta) => {
-  const Root = require(file).default
-  const html = render('html', Root, { title: title, meta: meta })
-  const fileName = outputPath.match(/\.html?$/) ? '' : 'index.html'
-  mkdirp(path.parse(path.join(outputDir, outputPath)).dir).then(() => {
-    fs.writeFile(path.join(outputDir, outputPath, fileName), html, (err) => {
-      if (err) throw err
+glob(`${srcDirFromRoot}/**/*.riot`, (err, files) => {
+  if (err) return err
+  generateHtml(files)
+})
+
+const generateHtml = (files) => {
+  files.forEach((file) => {
+    const Root = require(`.${file}`).default
+    const html = render('html', Root)
+    const dir = path.join(
+      outputDir,
+      file.replace(srcDirFromRoot, '').replace(/riot$/, 'html')
+    )
+
+    mkdirp(path.parse(dir).dir).then(() => {
+      fs.writeFile(dir, html, (err) => {
+        if (err) throw err
+      })
     })
   })
 }
-
-pages.forEach((page) => {
-  generateHtml(page.path, page.title, page.meta, )
-})
