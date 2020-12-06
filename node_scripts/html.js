@@ -5,9 +5,7 @@ const mkdirp = require('mkdirp')
 const { render } = require('@riotjs/ssr')
 const register = require('@riotjs/ssr/register')
 const srcDirFromRoot = './src/html/pages'
-const srcDirFromFile = '../src/html/pages'
 const outputDir = 'dist'
-const file = path.join(srcDirFromFile, 'index.riot')
 
 // Riot コンポーネントを require できるように
 register()
