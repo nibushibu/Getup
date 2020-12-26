@@ -1,4 +1,4 @@
-import 'core-js'
+import '../../node_modules/core-js/index'
 import '@webcomponents/template'
 import { register, mount, install } from 'riot'
 
