@@ -17,7 +17,8 @@
     "watch:js": "onchange 'src/js/**/*' -- npm run js",
     "watch:riot": "onchange 'src/riot/**/*' -- npm run riot",
     "watch:babel": "onchange '.temp/**/*' -- npm run babel",
-    "build": "run-s riot html js css-build",
+    "uglifyjs": "npx uglifyjs dist/js/main.js -o dist/js/main.js",
+    "build": "run-s riot html js css-build uglifyjs",
     "server": "node node_scripts/serve.js"
   },
   "dependencies": {
@@ -56,7 +57,8 @@
     "postcss-focus": "^5.0.1",
     "postcss-import": "^14.0.0",
     "postcss-normalize-charset": "^4.0.1",
-    "postcss-preset-env": "^6.7.0"
+    "postcss-preset-env": "^6.7.0",
+    "uglify-js": "^3.12.3"
   },
   "engines": {
     "node": "^14.15.1"
