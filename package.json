@@ -18,7 +18,7 @@
     "watch:riot": "onchange 'src/riot/**/*' -- npm run riot",
     "watch:babel": "onchange '.temp/**/*' -- npm run babel",
     "uglifyjs": "npx uglifyjs dist/js/main.js -o dist/js/main.js",
-    "build": "run-s riot html js css-build",
+    "build": "run-s riot html js css-build uglifyjs",
     "server": "node node_scripts/serve.js"
   },
   "dependencies": {
