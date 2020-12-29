@@ -30,4 +30,5 @@ const generateHtml = (files) => {
       })
     })
   })
+  console.log()
 }
