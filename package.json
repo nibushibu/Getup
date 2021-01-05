@@ -1,13 +1,12 @@
 {
   "name": "getup",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "scripts": {
     "start": "run-s riot html js watch",
     "watch": "run-p css watch:* server",
     "css": "postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --map",
-    "css-build": "postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --no-map",
     "html": "node node_scripts/html.js",
     "riot": "riot src/riot --config riot.config.js",
     "riot-js": "run-s riot js",
@@ -18,7 +17,9 @@
     "watch:js": "onchange 'src/js/*.js' -- npm run js",
     "watch:riot": "onchange 'src/riot/**/*' -- npm run riot-js",
     "watch:babel": "onchange '.temp/**/*.js' -- npm run babel",
-    "build": "run-s riot html js css-build",
+    "build:js": "run-s riot js babel",
+    "build:css": "postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --no-map",
+    "build": "run-p build:js build:css html",
     "server": "node node_scripts/serve.js"
   },
   "dependencies": {
