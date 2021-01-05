@@ -19,7 +19,7 @@
     "watch:babel": "onchange '.temp/**/*.js' -- npm run babel",
     "build:js": "run-s riot js babel",
     "build:css": "postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --no-map",
-    "build": "run-p build:js build:css",
+    "build": "run-p build:js build:css html",
     "server": "node node_scripts/serve.js"
   },
   "dependencies": {
