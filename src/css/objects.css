@@ -86,6 +86,10 @@
   align-items: flex-end;
 }
 
+.o-flow-layout--baseline {
+  align-items: baseline;
+}
+
 .o-flow-layout--stretch {
   align-items: stretch;
 }
