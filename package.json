@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "animejs": "^3.2.1",
-    "riot": "^5.3.0",
+    "riot": "^5.3.1",
     "sanitize.css": "^12.0.1"
   },
   "repository": {
@@ -47,20 +47,20 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.13.0",
-    "@babel/core": "^7.13.1",
-    "@babel/preset-env": "^7.13.5",
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
     "@riotjs/cli": "^5.1.4",
-    "@riotjs/compiler": "^5.2.1",
+    "@riotjs/compiler": "^5.3.1",
     "@riotjs/ssr": "^6.0.0",
     "@webcomponents/template": "^1.4.4",
-    "core-js": "^3.9.0",
-    "esbuild": "^0.8.52",
+    "core-js": "^3.9.1",
+    "esbuild": "^0.8.56",
     "express": "^4.17.1",
     "glob": "^7.1.6",
     "mkdirp": "^1.0.4",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "postcss": "^8.2.6",
+    "postcss": "^8.2.7",
     "postcss-cli": "^8.3.1",
     "postcss-csso": "^5.0.0",
     "postcss-custom-properties": "^11.0.0",
@@ -69,6 +69,6 @@
     "postcss-import": "^14.0.0",
     "postcss-normalize-charset": "^4.0.1",
     "postcss-preset-env": "^6.7.0",
-    "uglify-js": "^3.12.8"
+    "uglify-js": "^3.13.0"
   }
 }
