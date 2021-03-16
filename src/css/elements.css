@@ -2,6 +2,7 @@ html {
   font-family: var(--base-font-family);
   scroll-behavior: smooth;
   font-feature-settings: 'palt' 1;
+  font-display: swap;
 }
 
 h1,
