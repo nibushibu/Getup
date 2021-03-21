@@ -148,11 +148,11 @@
  * for Media block
  */
 
-.o-width-fixed {
+.o-size-hug {
   flex: 0 0 auto;
 }
 
-.o-width-fill {
+.o-size-fill {
   flex: 1 1 auto;
 }
 
