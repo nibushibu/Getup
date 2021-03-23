@@ -118,12 +118,6 @@
   align-items: flex-start;
 }
 
-/**
- * BOX: Container box
- *
- * Cancel top margin of first child
- */
-
 .o-fit > *:first-child {
   margin-top: 0;
 }
@@ -144,16 +138,43 @@
   overflow: hidden;
 }
 
-/**
- * for Media block
- */
-
 .o-size-hug {
   flex: 0 0 auto;
 }
 
 .o-size-fill {
   flex: 1 1 auto;
+}
+
+.o-align-fill {
+  align-self: stretch;
+}
+
+.o-align-center {
+  align-self: center;
+}
+
+.o-item-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.o-spacer {
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.o-spacer--small {
+  display: inline-block;
+  width: 0.25em;
+  height: 0.25em;
+}
+
+.o-spacer--large {
+  width: 1em;
+  height: 1em;
 }
 
 .o-icon {
