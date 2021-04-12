@@ -9,5 +9,8 @@ module.exports = (ctx) => ({
     require('postcss-normalize-charset'),
     require('postcss-flexbugs-fixes'),
     require('postcss-custom-properties'),
+    require('postcss-csso')({
+      restructure: false,
+    }),
   ],
 })
