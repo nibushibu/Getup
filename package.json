@@ -9,7 +9,7 @@
     "watch": "run-p watch:* server",
     "watch--babel": "run-p watch:html watch:css watch-riot-babel watch-js--babel server",
     "css": "npx postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --map",
-    "css-build": "npx postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --no-map",
+    "css-build": "npx postcss src/css/main.css --env production --config postcss.config.js --output dist/css/main.css --no-map",
     "html": "node node_scripts/html.js",
     "riot": "npx riot src/riot --output src/js/components --sourcemap inline",
     "riot-js": "run-s riot js",
