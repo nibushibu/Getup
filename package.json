@@ -14,12 +14,12 @@
     "riot": "npx riot src/riot --output src/js/components --sourcemap inline",
     "riot-js": "run-s riot js",
     "riot-js--babel": "run-s riot js--babel babel",
-    "js": "npx esbuild src/js/main.js --bundle --sourcemap --outfile=dist/js/main.js",
-    "js-build": "npx esbuild src/js/main.js --bundle --minify --outfile=dist/js/main.js",
-    "js--babel": "npx esbuild src/js/main.js --bundle --sourcemap --outfile=.temp/main.bundled.js",
+    "js": "npx esbuild src/js/main.ts --bundle --sourcemap --outfile=dist/js/main.js",
+    "js-build": "npx esbuild src/js/main.ts --bundle --minify --outfile=dist/js/main.js",
+    "js--babel": "npx esbuild src/js/main.ts --bundle --sourcemap --outfile=.temp/main.bundled.js",
     "babel": "npx babel .temp/main.bundled.js --out-file dist/js/main.js --source-maps",
     "babel-build": "npx babel .temp/main.bundled.js --out-file dist/js/main.js",
-    "ts-check": "tsc src/js/main.ts --target 'es2015' --moduleResolution 'node'",
+    "ts-check": "npx tsc src/js/main.ts --target 'es2020' --moduleResolution 'node' --noEmit",
     "watch:html": "onchange src/html -- npm run html",
     "watch:css": "onchange src/css -- npm run css",
     "watch:riot": "onchange 'src/riot/**/*' -- npm run riot-js",
@@ -35,8 +35,7 @@
   "dependencies": {
     "animejs": "^3.2.1",
     "riot": "^5.4.1",
-    "sanitize.css": "^12.0.1",
-    "typescript": "^4.2.4"
+    "sanitize.css": "^12.0.1"
   },
   "repository": {
     "type": "git",
@@ -71,6 +70,7 @@
     "postcss-import": "^14.0.1",
     "postcss-normalize-charset": "^5.0.0",
     "postcss-preset-env": "^6.7.0",
+    "typescript": "^4.2.4",
     "uglify-js": "^3.13.5"
   }
 }

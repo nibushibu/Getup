@@ -27,35 +27,36 @@
   </style>
 
 
-  <script>
+  <script lang="ts">
     import anime from '../../node_modules/animejs/lib/anime.es.js'
     import RawHtml from './raw-html.riot'
 
-    export default {
-      components: {
-        'raw-html': RawHtml,
-      },
-      state: {
-        finishAnimation: false,
-        test: 'Hello Riot!'
-      },
-      onMounted() {
-        console.log
-        anime({
-          targets: this.$('[data-ref="button"]'),
-          translateX: 20,
-          easing: 'easeInOutSine',
-          duration: 1000,
-          loop: true,
-          direction: 'alternate'
-        })
-      },
-      animationUnmount(e) {
-        this.$('[data-ref="button"]').addEventListener('transitionend', e => {
-          console.log('button transitionend')
-          this.unmount()
-        })
-        this.$('[data-ref="button"]').classList.add('is-unmount')
+    export default function myApp() {
+      return {
+        components: {
+          'raw-html': RawHtml,
+        },
+        state: {
+          finishAnimation: false,
+          test: 'Hello Riot!'
+        },
+        onMounted() {
+          anime({
+            targets: this.$('[data-ref="button"]'),
+            translateX: 20,
+            easing: 'easeInOutSine',
+            duration: 1000,
+            loop: true,
+            direction: 'alternate'
+          })
+        },
+        animationUnmount(e): void {
+          this.$('[data-ref="button"]').addEventListener('transitionend', e => {
+            console.log('button transitionend')
+            this.unmount()
+          })
+          this.$('[data-ref="button"]').classList.add('is-unmount')
+        }
       }
     }
   </script>
