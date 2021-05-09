@@ -41,6 +41,7 @@
           test: 'Hello Riot!'
         },
         onMounted() {
+          let test: string = 'test'
           anime({
             targets: this.$('[data-ref="button"]'),
             translateX: 20,
@@ -50,7 +51,7 @@
             direction: 'alternate'
           })
         },
-        animationUnmount(e): void {
+        animationUnmount(e){
           this.$('[data-ref="button"]').addEventListener('transitionend', e => {
             console.log('button transitionend')
             this.unmount()

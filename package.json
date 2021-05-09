@@ -50,7 +50,7 @@
     "@babel/cli": "^7.13.16",
     "@babel/core": "^7.14.0",
     "@babel/preset-env": "^7.14.1",
-    "@riotjs/cli": "^5.1.4",
+    "@riotjs/cli": "^5.2.0",
     "@riotjs/compiler": "^5.4.1",
     "@riotjs/ssr": "^6.0.0",
     "@webcomponents/template": "^1.4.4",
