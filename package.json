@@ -11,7 +11,7 @@
     "css": "npx postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --map",
     "css-build": "npx postcss src/css/main.css --env production --config postcss.config.js --output dist/css/main.css --no-map",
     "html": "node node_scripts/html.js",
-    "riot": "npx riot src/riot --output src/js/components --sourcemap inline",
+    "riot": "npx riot src/riot --output src/js/components/src/riot --sourcemap inline",
     "riot-single": "npx riot --output src/js/components --sourcemap inline",
     "riot-js": "run-s riot js",
     "riot-js--babel": "run-s riot js--babel babel",
@@ -25,12 +25,11 @@
     "watch:riot": "npx onchange 'src/riot/**/*' -- npm run riot-single -- {{file}}",
     "watch:js": "npx onchange 'src/js/**/*.js' -- npm run js",
     "watch-js--babel": "npx onchange 'src/js/*.js' -- npm run js--babel",
-    "watch-babel": "npxonchange '.temp/**/*.js' -- npm run babel",
+    "watch-babel": "npx onchange '.temp/**/*.js' -- npm run babel",
     "build": "run-s html css-build riot -- src/riot js-build",
     "build-babel": "run-s html css-build riot -- src/riot js--babel babel-build uglifyjs",
     "uglifyjs": "npx uglifyjs dist/js/main.js --output dist/js/main.js",
-    "server": "node node_scripts/serve.js",
-    "onchange": "npx onchange src/riot -- npx riot {{file}} --output src/js/components --sourcemap inline"
+    "server": "node node_scripts/serve.js"
   },
   "dependencies": {
     "animejs": "^3.2.1",
