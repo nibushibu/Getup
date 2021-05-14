@@ -19,6 +19,10 @@ dl {
   margin-top: 0.5em;
 }
 
+ul {
+  padding-left: 1em;
+}
+
 a {
   color: var(--color-link);
 }
