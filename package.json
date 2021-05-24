@@ -26,8 +26,8 @@
     "watch:js": "npx onchange 'src/js/**/*.js' -- npm run js",
     "watch-js--babel": "npx onchange 'src/js/*.js' -- npm run js--babel",
     "watch-babel": "npx onchange '.temp/**/*.js' -- npm run babel",
-    "build": "run-s html css-build riot -- src/riot js-build",
-    "build-babel": "run-s html css-build riot -- src/riot js--babel babel-build uglifyjs",
+    "build": "run-s html css-build riot js-build",
+    "build-babel": "run-s html css-build riot js--babel babel-build uglifyjs",
     "uglifyjs": "npx uglifyjs dist/js/main.js --output dist/js/main.js",
     "server": "node node_scripts/serve.js"
   },
