@@ -12,7 +12,7 @@
     "css-build": "npx postcss src/css/main.css --env production --config postcss.config.js --output dist/css/main.css --no-map",
     "html": "node node_scripts/html.js",
     "riot": "npx riot src/riot --output src/js/components/src/riot --sourcemap inline",
-    "riot-single": "npx riot --output src/js/components/src/riot --sourcemap inline",
+    "riot-single": "npx riot --output src/js/components --sourcemap inline",
     "riot-js": "run-s riot js",
     "riot-js--babel": "run-s riot js--babel babel",
     "js": "npx esbuild src/js/main.js --bundle --sourcemap --outfile=dist/js/main.js",
