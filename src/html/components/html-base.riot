@@ -20,26 +20,23 @@
   <script>
     import StaticComponent from './static-component.riot'
 
-    export default function HtmlBase() {
-      return {
-
-        components: {
-          StaticComponent
-        },
-        state: {
-          title: 'Static',
-          meta: [
-            {
-              name: 'description',
-              content: 'a description',
-            },
-            {
-              property: 'og:title',
-              content: 'ogp title',
-            },
-          ],
-        },
-      }
+    export default {
+      components: {
+        StaticComponent
+      },
+      state: {
+        title: 'Static',
+        meta: [
+          {
+            name: 'description',
+            content: 'a description',
+          },
+          {
+            property: 'og:title',
+            content: 'ogp title',
+          },
+        ],
+      },
     }
   </script>
 

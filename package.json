@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "animejs": "^3.2.1",
-    "riot": "5.4.2",
+    "riot": "5.4.3",
     "sanitize.css": "^12.0.1"
   },
   "repository": {
@@ -54,7 +54,7 @@
     "@riotjs/ssr": "^6.0.0",
     "@webcomponents/template": "^1.4.4",
     "core-js": "^3.13.1",
-    "esbuild": "^0.12.5",
+    "esbuild": "^0.12.6",
     "express": "^4.17.1",
     "glob": "^7.1.7",
     "mkdirp": "^1.0.4",
