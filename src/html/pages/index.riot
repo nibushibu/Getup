@@ -1,15 +1,18 @@
 <html>
 <template is="html-base" title="{ state.title }" meta="{ state.meta }">
+  <static-component></static-component>
   <static-header></static-header>
   <p>page content</p>
 </template>
 <script>
   import HtmlBase from '../components/html-base.riot'
   import StaticHeader from '../components/static-header.riot'
+  import StaticComponent from '../components/static-component.riot'
   export default {
     components: {
       HtmlBase,
-      StaticHeader
+      StaticHeader,
+      StaticComponent,
     },
     state: {
       title: 'title from props',
