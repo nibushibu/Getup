@@ -184,6 +184,11 @@
   vertical-align: middle;
 }
 
+.o-inherit {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 @media (max-width: 560px) {
   .o-flow-layout--to-stack {
     flex-direction: column;
