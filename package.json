@@ -48,13 +48,13 @@
   "devDependencies": {
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
-    "@babel/preset-env": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
     "@riotjs/cli": "^6.0.5",
     "@riotjs/compiler": "^6.0.3",
     "@riotjs/ssr": "^7.1.1",
     "@webcomponents/template": "^1.5.0",
     "core-js": "^2.6.12",
-    "esbuild": "^0.12.25",
+    "esbuild": "^0.12.27",
     "express": "^4.17.1",
     "glob": "^7.1.7",
     "mkdirp": "^1.0.4",
@@ -68,6 +68,6 @@
     "postcss-import": "^14.0.2",
     "postcss-normalize-charset": "^5.0.1",
     "postcss-preset-env": "^6.7.0",
-    "uglify-js": "^3.14.1"
+    "uglify-js": "^3.14.2"
   }
 }
