@@ -1,6 +1,6 @@
 # Getup ✊
 
-Webサイト制作のための個人的ボイラープレート
+Riot.js を使って静的な HTML や SPA を制作するためのテンプレート。
 
 ## コマンド一覧
 
@@ -9,7 +9,8 @@ Webサイト制作のための個人的ボイラープレート
 npm run start
 ```
 
-### 開発用タスク（IE11 向けに Babel によるトランスパイル工程を追加する場合）
+#### IE11 向けに Babel によるトランスパイル工程を追加する場合
+
 ```bash
 npm run start-babel
 ```
@@ -20,7 +21,7 @@ npm run start-babel
 npm run build
 ```
 
-### プロダクションファイルのビルド（IE11 向けに Babel によるトランスパイル工程を追加する場合）
+#### IE11 向けに Babel によるトランスパイル工程を追加する場合
 
 ```bash
 npm run build-babel
