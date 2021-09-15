@@ -1,5 +1,11 @@
 {
   "editor.formatOnSave": true,
   "prettier.semi": false,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "emmet.includeLanguages": {
+    "riot": "html"
+  },
+  "files.associations": {
+    "*.riot": "html"
+  }
 }
