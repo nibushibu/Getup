@@ -8,8 +8,6 @@ import RawHtml from './components/src/riot/raw-html.js'
 register('my-app', App)
 register('raw-html', RawHtml)
 
-mount('[data-riot]')
-
 install((component) => {
   /**
    * GETパラメーターをObjectとして返す関数
@@ -29,3 +27,5 @@ install((component) => {
 
   return component
 })
+
+mount('[data-riot]')
