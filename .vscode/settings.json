@@ -7,5 +7,9 @@
   },
   "files.associations": {
     "*.riot": "html"
+  },
+  "standard.validate": ["javascript", "html"],
+  "standard.options": {
+    "plugins": ["html"]
   }
 }
