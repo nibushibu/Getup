@@ -1,14 +1,14 @@
 <html>
-<template is="html" title="{ state.title }" meta="{ state.meta }" to-root="../">
+<template is="html-base" title="{ state.title }" meta="{ state.meta }" to-root="../">
   <static-header></static-header>
   <p>page content</p>
 </template>
 <script>
-  import Html from '../../components/html.riot'
+  import HtmlBase from '../../components/html-base.riot'
   import StaticHeader from '../../components/static-header.riot'
   export default {
     components: {
-      Html,
+      HtmlBase,
       StaticHeader
     },
     state: {

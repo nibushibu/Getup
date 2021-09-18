@@ -4,14 +4,15 @@
   <script>
     export default {
       setContent() {
-        this.$('[data-ref="content"]').innerHTML = String(this.props.content)
+        this.$('[data-ref="content"]').innerHTML = String(this.props.dataHtml)
       },
       onMounted() {
         this.setContent()
+        let test = 0
       },
       onUpdated() {
         this.setContent()
-      },
+      }
     }
   </script>
 </raw-html>
