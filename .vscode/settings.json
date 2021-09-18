@@ -1,15 +1,23 @@
 {
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
   "editor.formatOnSave": true,
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
   "emmet.includeLanguages": {
     "riot": "html"
   },
   "files.associations": {
     "*.riot": "html"
   },
-  "standard.validate": ["javascript", "html"],
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
   "standard.options": {
-    "plugins": ["html"]
-  }
+    "plugins": [
+      "html"
+    ]
+  },
+  "standard.validate": [
+    "javascript",
+    "html"
+  ]
 }
