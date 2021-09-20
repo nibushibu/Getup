@@ -28,7 +28,7 @@ npm run build-babel
 ```
 
 
-## コーディングスタイルガイドライン
+## コーディングスタイルガイドライン（🚧 整備中 🚧）
 
 ### HTML/CSS 
 
@@ -53,3 +53,16 @@ ITCSS と BEM に基づいて命名します。
 [JavaScript Standard Style](https://standardjs.com/readme-ja.html) に準拠して考えます。
 
 - [JavaScript Standard Style（日本語）](https://standardjs.com/readme-ja.html)
+
+
+### デフォルトでマージンを持つ要素
+
+- `h1`
+- `h2`
+- `h3`
+- `h4`
+- `h5`
+- `h6`
+- `ul`
+- `ol`
+- `p`
