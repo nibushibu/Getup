@@ -13,13 +13,19 @@
 
   <body>
     <h1>{ props.title ? props.title : state.title }</h1>
+    <static-component></static-component>
     <slot name="default"></slot>
   </body>
 
   <script>
+    import StaticComponent from '../components/static-component.riot'
 
     export default function HtmlBase() {
       return {
+        components: {
+          HtmlBase,
+          StaticComponent,
+        },
         state: {
           title: 'Static',
           meta: [
