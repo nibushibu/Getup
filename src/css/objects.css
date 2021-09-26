@@ -96,11 +96,11 @@
   flex-direction: row-reverse;
 }
 
-.o-cancel-first-child-gap > *:first-child {
+.o-fit > *:first-child {
   margin-top: 0;
 }
 
-.o-cancel-first-child-gap-all *:first-child {
+.o-fit-all *:first-child {
   margin-top: 0;
 }
 
