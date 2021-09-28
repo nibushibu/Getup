@@ -1,22 +1,12 @@
-/**
- * Basa Font Family
- */
-
 :root {
-
-  --base-font-family:
-    'Noto Sans JP', 'Noto Sans CJK JP', 'Noto Sans CJK Japanese',
-    '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック', 'Yu Gothic',
-    'Hiragino Kaku Gothic ProN',
-    -apple-system,
-    BlinkMacSystemFont,
-    Meiryo,
-    sans-serif;
+  --base-font-family: 'Noto Sans JP', 'Noto Sans CJK JP',
+    'Noto Sans CJK Japanese', '游ゴシック体', YuGothic, '游ゴシック Medium',
+    'Yu Gothic Medium', '游ゴシック', 'Yu Gothic', 'Hiragino Kaku Gothic ProN',
+    -apple-system, BlinkMacSystemFont, Meiryo, sans-serif;
 
   --getup-flex-gap-size: 1em;
 
   --color-primary: #228b22;
   --color-link: var(--color-primary);
   --color-white: #fff;
-
 }

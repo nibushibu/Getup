@@ -1,13 +1,5 @@
-/*
-@styleguide
-
-@title Utility Style
-最終調整として利用するユーティリティクラス
-*/
-
 /**
- * 非表示テキスト
- * WordPressに合わせたクラス名
+ * 非表示テキスト（WordPressに合わせたクラス名を合わせて定義）
  */
 
 .u-screen-reader-text,
@@ -22,7 +14,7 @@
 }
 
 /**
- * 親要素継承クラス
+ * 親要素のフォントを継承
  */
 
 .u-inherit {
@@ -31,7 +23,7 @@
 }
 
 /**
- * マージン上書きクラス
+ * マージン上書き
  */
 
 .u-reset-margin {
@@ -42,40 +34,11 @@
  * テキストスタイル上書き
  */
 
-/*
-@styleguide
-🎨強制的にBoldに
-<p class="u-text-bolder">テキスト</p>
-
-    <p class="u-text-bolder">テキスト</p>
-*/
-
 .u-text-bolder {
   font-weight: bolder;
 }
 
-/*
-@styleguide
-🎨フォントスタイルを戻す
-<p class="u-reset-text">テキスト</p>
-
-    <p class="u-reset-test">テキスト</p>
-*/
-
 .u-reset-text {
   font-weight: normal;
   text-align: left;
-}
-
-.u-sample-row {
-  background-color: #cbc9dd;
-}
-
-.u-sample-col {
-  background-color: #b8dbfc;
-  min-height: 100px;
-}
-
-.u-sample-col--type-2 {
-  min-height: 200px;
 }
