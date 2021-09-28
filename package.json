@@ -1,6 +1,6 @@
 {
   "name": "getup",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "scripts": {
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "animejs": "^3.2.1",
-    "riot": "^6.0.3",
+    "riot": "^6.0.4",
     "sanitize.css": "^13.0.0"
   },
   "repository": {
@@ -50,19 +50,19 @@
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
     "@riotjs/cli": "^6.0.5",
-    "@riotjs/compiler": "^6.0.3",
+    "@riotjs/compiler": "^6.0.4",
     "@riotjs/ssr": "^7.1.1",
     "@webcomponents/template": "^1.5.0",
     "core-js": "^2.6.12",
-    "esbuild": "^0.12.28",
+    "esbuild": "^0.13.2",
     "eslint": "^7.32.0",
     "express": "^4.17.1",
-    "glob": "^7.1.7",
+    "glob": "^7.2.0",
     "mkdirp": "^1.0.4",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "postcss": "^8.3.6",
-    "postcss-cli": "^8.3.1",
+    "postcss": "^8.3.8",
+    "postcss-cli": "^9.0.0",
     "postcss-csso": "^5.0.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-focus": "^5.0.1",
