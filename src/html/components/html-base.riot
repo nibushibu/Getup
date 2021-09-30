@@ -20,11 +20,12 @@
   <script>
     import StaticComponent from '../components/static-component.riot'
 
-    export default function HtmlBase() {
+    HtmlBase.components = {
+      StaticComponent,
+    }
+
+    function HtmlBase() {
       return {
-        components: {
-          StaticComponent,
-        },
         state: {
           title: 'Static',
           meta: [
@@ -40,6 +41,8 @@
         },
       }
     }
+
+    export default HtmlBase
   </script>
 
 </html-base>
