@@ -4,6 +4,9 @@
     calc(var(--getup-flex-gap-size) * -1);
   list-style: none;
   padding-left: 0;
+
+  /* 要素が空の場合の隣接要素への影響を相殺 */
+  min-height: var(--getup-flex-gap-size);
 }
 
 .o-layout--row {
