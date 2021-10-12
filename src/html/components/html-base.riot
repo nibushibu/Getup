@@ -17,8 +17,13 @@
   </body>
 
   <script>
+    import StaticComponent from '../components/static-component.riot'
 
-    export default function HtmlBase() {
+    HtmlBase.components = {
+      StaticComponent,
+    }
+
+    function HtmlBase() {
       return {
         state: {
           title: 'Static',
@@ -35,6 +40,8 @@
         },
       }
     }
+
+    export default HtmlBase
   </script>
 
 </html-base>
