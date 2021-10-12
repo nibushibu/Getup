@@ -1,12 +1,16 @@
+.o-layout > * > * {
+  pointer-events: auto;
+}
+
 .o-layout {
   display: flex;
   margin: calc(var(--getup-flex-gap-size) * -1) 0 0
     calc(var(--getup-flex-gap-size) * -1);
   list-style: none;
   padding-left: 0;
-
   /* 要素が空の場合の隣接要素への影響を相殺 */
   min-height: var(--getup-flex-gap-size);
+  pointer-events: none;
 }
 
 .o-layout--row {
@@ -25,6 +29,11 @@
 
 .o-layout--fill > * {
   flex: 1 1 auto;
+}
+
+.o-layout--fill,
+.o-layout--fill-equal {
+  align-items: stretch;
 }
 
 .o-layout--fill-equal > * {
