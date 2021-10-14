@@ -29,7 +29,7 @@
 
 .o-layout--fill,
 .o-layout--fill-equal {
-  align-items: stretch;
+  align-items: stretch;je
 }
 
 .o-layout--fill > * {
@@ -76,6 +76,10 @@
   justify-content: center;
 }
 
+.o-layout--main-axis-end {
+  justify-content: flex-end;
+}
+
 .o-layout--cross-axis-start {
   align-items: flex-start;
 }
@@ -98,10 +102,6 @@
 
 .o-layout--cross-axis-stretch > * {
   display: flex;
-}
-
-.o-layout--main-axis-end {
-  justify-content: flex-end;
 }
 
 .o-layout--row-reverse {
