@@ -24,7 +24,7 @@
 .o-layout > * {
   max-width: 100%;
   padding: var(--getup-flex-gap-size) 0 0 var(--getup-flex-gap-size);
-  flex: 0 1 auto;
+  flex: 0 0 auto;
 }
 
 .o-layout--fill,
