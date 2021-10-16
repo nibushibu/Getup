@@ -42,3 +42,15 @@
   font-weight: normal;
   text-align: left;
 }
+
+.o-text-center {
+  text-align: center;
+}
+
+.o-text-left {
+  text-align: left;
+}
+
+.o-text-right {
+  text-align: right;
+}
