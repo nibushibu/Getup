@@ -134,6 +134,18 @@
   align-items: center;
 }
 
+.o-text-center {
+  text-align: center;
+}
+
+.o-text-left {
+  text-align: left;
+}
+
+.o-text-right {
+  text-align: right;
+}
+
 .o-spacer {
   display: block;
   width: 0.5em;
