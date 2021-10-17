@@ -24,8 +24,40 @@ function getObjectFromLocationSearch() {
   return resultObject
 }
 
+/**
+ * Convert object class constructs into strings
+ * @param   {Object} classes - class list as object
+ * @returns {string} return only the classes having a truthy value
+ */
+function classNames(classes) {
+  return Object.entries(classes)
+    .reduce((acc, item) => {
+      const [key, value] = item
+      if (value) return [...acc, key]
+      return acc
+    }, [])
+    .join(' ')
+}
+
+/**
+ * Convert object attributes constructs into strings
+ * @param   {Object} attributes - style attributes as object
+ * @returns {string} a string with all the attributes and their values
+ */
+function styleAttribute(attributes) {
+  return Object.entries(attributes)
+    .reduce((acc, item) => {
+      const [key, value] = item
+
+      return [...acc, `${key}: ${value}`]
+    }, [])
+    .join(';')
+}
+
 install((component) => {
   component.getObjectFromLocationSearch = getObjectFromLocationSearch
+  component.classNames = classNames
+  component.styleAttribute = styleAttribute
   return component
 })
 
