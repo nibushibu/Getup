@@ -146,6 +146,18 @@
   text-align: right;
 }
 
+.o-space {
+  margin-top: 0.5em;
+}
+
+.o-space-small {
+  margin-top: 0.25em;
+}
+
+.o-space-large {
+  margin-top: 1em;
+}
+
 .o-spacer {
   display: block;
   width: 0.5em;
