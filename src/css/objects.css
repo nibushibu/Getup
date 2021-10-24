@@ -48,19 +48,19 @@
   padding: 0;
 }
 
-.o-layout--gap-loose {
+.o-layout--gap-large {
   margin: -2em 0 0 -2em;
 }
 
-.o-layout--gap-loose > * {
+.o-layout--gap-large > * {
   padding: 2em 0 0 2em;
 }
 
-.o-layout--gap-tight {
+.o-layout--gap-small {
   margin: -0.25em 0 0 -0.25em;
 }
 
-.o-layout--gap-tight > * {
+.o-layout--gap-small > * {
   padding: 0.25em 0 0 0.25em;
 }
 
