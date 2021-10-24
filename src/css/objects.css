@@ -29,7 +29,7 @@
 
 .o-layout--fill,
 .o-layout--fill-equal {
-  align-items: stretch;je
+  align-items: stretch;
 }
 
 .o-layout--fill > * {
