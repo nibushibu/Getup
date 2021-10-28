@@ -32,7 +32,7 @@ npm run build-babel
 
 ### HTML/CSS 
 
-HTML と CSS は [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#Protocol) に準拠し手考えます。
+HTML と CSS は原則 [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#Protocol) に準拠したコードを書きましょう。
 
 - [Google HTML/CSS Style Guide（英語）](https://google.github.io/styleguide/htmlcssguide.html#Protocol)
 
@@ -42,11 +42,40 @@ HTML と CSS は [Google HTML/CSS Style Guide](https://google.github.io/stylegui
 - 半角スペース2つでのインデント
 - CSSのクラス名は半角英数字小文字のケバブケース（ハイフン区切り）
 
+
+
 #### CSS 命名規則
 
 ITCSS と BEM に基づいて命名します。
 
-- IDセレクター、要素セレクターは基本使わず、スタイルの詳細度は原則 001 を保つ。
+#### IDセレクター、要素セレクターは基本使わず、スタイルの詳細度は原則 010 を保つ。
+
+CSS ファイルに記述するスタイルは、極力 010 （クラス1つ分）の詳細度を保ちましょう
+
+##### 詳細度が 010 になる記述例
+
+```css
+.c-class-name { }
+.c-class-name > * { }
+.c-class-name > * + * { }
+```
+
+#### ステート（状態変化）によるスタイルの変化は属性値を使う
+
+```css
+.c-button { }
+
+/* data 属性値 */
+.c-button[data-active] { }
+
+/* WAI-ARIA 属性値 */
+.c-button[aria-selected="true"] { }
+```
+
+##### 理由
+
+
+
 
 ### JavaScript
 
