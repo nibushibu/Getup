@@ -27,7 +27,6 @@ npm run build
 npm run build-babel
 ```
 
-
 ## コーディングスタイルガイドライン（🚧 整備中 🚧）
 
 ### HTML/CSS 
@@ -41,8 +40,6 @@ HTML と CSS は原則 [Google HTML/CSS Style Guide](https://google.github.io/st
 - すべて小文字
 - 半角スペース2つでのインデント
 - CSSのクラス名は半角英数字小文字のケバブケース（ハイフン区切り）
-
-
 
 #### CSS 命名規則
 
@@ -74,15 +71,11 @@ CSS ファイルに記述するスタイルは、極力 010 （クラス1つ分�
 
 ##### 理由
 
-
-
-
 ### JavaScript
 
 [JavaScript Standard Style](https://standardjs.com/readme-ja.html) に準拠して考えます。
 
 - [JavaScript Standard Style（日本語）](https://standardjs.com/readme-ja.html)
-
 
 ### デフォルトでマージンを持つ要素
 
