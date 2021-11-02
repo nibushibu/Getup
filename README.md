@@ -31,7 +31,7 @@ npm run build-babel
 
 ### HTML/CSS 
 
-HTML と CSS は原則 [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#Protocol) に準拠したコードを書きましょう。
+HTML と CSS は原則 [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#Protocol) に準拠します。
 
 - [Google HTML/CSS Style Guide（英語）](https://google.github.io/styleguide/htmlcssguide.html#Protocol)
 
