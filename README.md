@@ -83,6 +83,10 @@ CSS ファイルに記述するスタイルは、極力 010 （クラス1つ分�
 
 ##### 理由
 
+- BEM の Modifier で表現するよりも、ステートが明示的になる。
+- ステートによる変化はほとんどの場合、ステートではない Modifire クラスのスタイルよりも優先されるべきであることが多い。
+- Getup で利用している Riot.js では、class 属性値の中に設定する文字列を変化させるよりも、任意の属性値をつけるほうが幾分シンプルに書けるため
+
 ### JavaScript
 
 [JavaScript Standard Style](https://standardjs.com/readme-ja.html) に準拠して考えます。
