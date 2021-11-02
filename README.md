@@ -38,7 +38,7 @@ HTML と CSS は原則 [Google HTML/CSS Style Guide](https://google.github.io/st
 主に意識する点は以下の通りです。
 
 - すべて小文字
-- 半角スペース2つでのインデント
+- インデントは半角スペース2つ
 - CSSのクラス名は半角英数字小文字のケバブケース（ハイフン区切り）
 
 #### CSS 命名規則
