@@ -1,6 +1,6 @@
 {
   "name": "getup",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "scripts": {
@@ -8,7 +8,9 @@
     "start-babel": "run-s html css riot-js--babel watch--babel",
     "watch": "run-p watch:* server",
     "watch--babel": "run-p watch:html watch:css watch:riot watch-js--babel watch-babel server",
-    "css": "npx postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --map",
+    "stylelint-fix": "npx stylelint 'src/css/**/*.css' --fix",
+    "css": "run-s stylelint-fix css-develop",
+    "css-develop": "npx postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --map",
     "css-build": "npx postcss src/css/main.css --env production --config postcss.config.js --output dist/css/main.css --no-map",
     "html": "node node_scripts/html.js",
     "riot": "npx riot src/riot --output src/js/components/src/riot --sourcemap inline",
@@ -46,15 +48,15 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.15.7",
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
     "@riotjs/cli": "^6.0.5",
     "@riotjs/compiler": "^6.0.4",
     "@riotjs/ssr": "^7.1.1",
     "@webcomponents/template": "^1.5.0",
     "core-js": "^2.6.12",
-    "esbuild": "^0.13.10",
+    "esbuild": "^0.13.12",
     "eslint": "^8.1.0",
     "express": "^4.17.1",
     "glob": "^7.2.0",
@@ -69,8 +71,13 @@
     "postcss-import": "^14.0.2",
     "postcss-normalize-charset": "^5.0.1",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.4.1",
     "standard": "^16.0.4",
-    "uglify-js": "^3.14.2"
+    "stylelint": "^14.0.1",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^1.2.0",
+    "uglify-js": "^3.14.3"
   },
   "engines": {
     "node": "^17.0.1"
