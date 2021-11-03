@@ -12,12 +12,7 @@
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "standard.options": {
-    "plugins": [
-      "html"
-    ]
+    "plugins": ["html"]
   },
-  "standard.validate": [
-    "javascript",
-    "html"
-  ]
+  "standard.validate": ["javascript", "html"]
 }

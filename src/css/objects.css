@@ -4,12 +4,12 @@
 
 .o-layout {
   display: flex;
+  list-style: none;
   margin: calc(var(--getup-flex-gap-size) * -1) 0 0
     calc(var(--getup-flex-gap-size) * -1);
-  list-style: none;
-  padding-left: 0;
   /* 要素が空の場合の隣接要素への影響を相殺 */
   min-height: var(--getup-flex-gap-size);
+  padding-left: 0;
   pointer-events: none;
 }
 
@@ -22,9 +22,9 @@
 }
 
 .o-layout > * {
+  flex: 0 1 auto;
   max-width: 100%;
   padding: var(--getup-flex-gap-size) 0 0 var(--getup-flex-gap-size);
-  flex: 0 1 auto;
 }
 
 .o-layout--fill,
@@ -133,9 +133,9 @@
 }
 
 .o-items-center {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .o-text-center {
@@ -164,26 +164,26 @@
 
 .o-spacer {
   display: block;
-  width: 0.5em;
   height: 0.5em;
+  width: 0.5em;
 }
 
 .o-spacer--small {
-  width: 0.25em;
   height: 0.25em;
+  width: 0.25em;
 }
 
 .o-spacer--large {
-  width: 1em;
   height: 1em;
+  width: 1em;
 }
 
 .o-icon {
   display: inline-block;
   height: 1em;
-  width: auto;
   line-height: inherit;
   vertical-align: middle;
+  width: auto;
 }
 
 .o-font-inherit {
@@ -194,12 +194,12 @@
 
 @media (max-width: 560px) {
   .o-layout--column-in-mobile {
-    flex-direction: column;
     align-items: stretch;
+    flex-direction: column;
   }
 
   .o-layout--column-reverse-in-mobile {
-    flex-direction: column-reverse;
     align-items: stretch;
+    flex-direction: column-reverse;
   }
 }
