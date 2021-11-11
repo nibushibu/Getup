@@ -8,9 +8,9 @@ const srcDirFromRoot = './src/html/pages'
 const outputDir = 'dist'
 
 // Riot コンポーネントを require できるように
-register()
+register({ exts: ['.html'] })
 
-glob(`${srcDirFromRoot}/**/*.riot`, (err, files) => {
+glob(`${srcDirFromRoot}/**/*.riot.html`, (err, files) => {
   if (err) return err
   generateHtml(files)
 })
@@ -21,7 +21,7 @@ const generateHtml = (files) => {
     const html = render('html', Root)
     const dir = path.join(
       outputDir,
-      file.replace(srcDirFromRoot, '').replace(/riot$/, 'html')
+      file.replace(srcDirFromRoot, '').replace(/riot\.html$/, 'html')
     )
 
     mkdirp(path.parse(dir).dir).then(() => {

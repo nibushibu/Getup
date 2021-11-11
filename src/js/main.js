@@ -2,8 +2,8 @@ import 'core-js'
 import '@webcomponents/template'
 import { register, mount, install } from 'riot'
 
-import App from './components/src/riot/my-app.js'
-import RawHtml from './components/src/riot/raw-html.js'
+import App from './components/src/riot/my-app.riot.js'
+import RawHtml from './components/src/riot/raw-html.riot.js'
 
 register('my-app', App)
 register('raw-html', RawHtml)
