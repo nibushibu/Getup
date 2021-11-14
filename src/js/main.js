@@ -1,3 +1,4 @@
+// @ts-check
 import 'core-js'
 import '@webcomponents/template'
 import { register, mount, install } from 'riot'
@@ -5,7 +6,9 @@ import { register, mount, install } from 'riot'
 import App from './components/src/riot/my-app.riot.js'
 import RawHtml from './components/src/riot/raw-html.riot.js'
 
+// @ts-ignore
 register('my-app', App)
+// @ts-ignore
 register('raw-html', RawHtml)
 
 /**
@@ -48,16 +51,26 @@ function styleAttribute(attributes) {
   return Object.entries(attributes)
     .reduce((acc, item) => {
       const [key, value] = item
-
       return [...acc, `${key}: ${value}`]
     }, [])
     .join(';')
 }
 
+/**
+ * @type {number} インスタンスのID
+ */
+let instanceId = 0
+
 install((component) => {
+  // @ts-ignore
   component.getObjectFromLocationSearch = getObjectFromLocationSearch
+  // @ts-ignore
   component.classNames = classNames
+  // @ts-ignore
   component.styleAttribute = styleAttribute
+  // @ts-ignore
+  component.id = instanceId++
+
   return component
 })
 
