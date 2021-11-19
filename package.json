@@ -26,12 +26,15 @@
     "uglifyjs": "uglifyjs dist/js/main.js --output dist/js/main.js",
     "watch-babel": "onchange '.temp/**/*.js' -- npm run babel",
     "watch-js-with-babel": "onchange 'src/js/**/*.js' -- npm run js-babel",
-    "watch-with-babel": "run-p watch:html watch:css watch:riot watch-js-with-babel watch-babel server",
+    "watch-with-babel": "run-p watch:html watch:css watch:riot watch:img watch-js-with-babel watch-babel server",
     "watch:css": "onchange src/css -- npm run css",
+    "watch:img": "onchange dist/img/**/*.png -- npm run webp-single -- -i {{file}}",
     "watch:html": "onchange src/html -- npm run html",
     "watch:js": "onchange 'src/js/**/*.js' -- npm run js",
     "watch:riot": "onchange 'src/riot/**/*' -- npm run riot-single -- {{file}}",
-    "watch": "run-p watch:* server"
+    "watch": "run-p watch:* server",
+    "webp": "sharp -i 'dist/img/**.png' -f webp -o {dir}",
+    "webp-single": "sharp -f webp -o {dir}"
   },
   "dependencies": {
     "animejs": "^3.2.1",
@@ -73,6 +76,7 @@
     "postcss-normalize-charset": "^5.0.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.4.1",
+    "sharp-cli": "^1.15.0",
     "stylelint": "^14.0.1",
     "stylelint-order": "^5.0.0",
     "stylelint-prettier": "^2.0.0",
