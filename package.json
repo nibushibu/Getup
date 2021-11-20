@@ -1,6 +1,6 @@
 {
   "name": "getup",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "scripts": {
@@ -33,7 +33,7 @@
     "watch:js": "onchange 'src/js/**/*.js' -- npm run js",
     "watch:riot": "onchange 'src/riot/**/*' -- npm run riot-single -- {{file}}",
     "watch": "run-p watch:* server",
-    "webp": "sharp -i 'dist/img/**.png' -f webp -o {dir}",
+    "webp": "sharp -i 'dist/img/**/*.png' -f webp -o {dir}",
     "webp-single": "sharp -f webp -o {dir}"
   },
   "dependencies": {
