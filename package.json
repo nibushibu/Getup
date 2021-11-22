@@ -1,6 +1,6 @@
 {
   "name": "getup",
-  "version": "6.1.1",
+  "version": "6.1.2",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "scripts": {
@@ -28,8 +28,8 @@
     "watch-js-with-babel": "onchange 'src/js/**/*.js' -- npm run js-babel",
     "watch-with-babel": "run-p watch:html watch:css watch:riot watch:img watch-js-with-babel watch-babel server",
     "watch:css": "onchange src/css -- npm run css",
-    "watch:img": "onchange dist/img/**/*.png -- npm run webp-single -- -i {{file}}",
-    "watch:html": "onchange src/html -- npm run html",
+    "watch:img": "onchange 'dist/img/**/*.png' -- npm run webp-single -- -i {{file}}",
+    "watch:html": "onchange 'src/html' -- npm run html",
     "watch:js": "onchange 'src/js/**/*.js' -- npm run js",
     "watch:riot": "onchange 'src/riot/**/*' -- npm run riot-single -- {{file}}",
     "watch": "run-p watch:* server",
