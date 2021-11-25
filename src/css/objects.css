@@ -192,6 +192,16 @@
   line-height: inherit;
 }
 
+.o-text-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0 -0.4em;
+}
+
+.o-text-wrapper > * {
+  padding: 0 0 0 0.4em;
+}
+
 @media (max-width: 560px) {
   .o-layout--column-in-mobile {
     align-items: stretch;
