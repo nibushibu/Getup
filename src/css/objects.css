@@ -108,6 +108,15 @@
   flex-direction: row-reverse;
 }
 
+.o-layout--text {
+  flex-wrap: wrap;
+  margin: 0 0 0 -0.4em;
+}
+
+.o-layout--text > * {
+  padding: 0 0 0 0.4em;
+}
+
 .o-fit > *:first-child {
   margin-top: 0;
 }
@@ -190,16 +199,6 @@
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
-}
-
-.o-text-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 0 0 -0.4em;
-}
-
-.o-text-wrapper > * {
-  padding: 0 0 0 0.4em;
 }
 
 @media (max-width: 560px) {
