@@ -108,6 +108,15 @@
   flex-direction: row-reverse;
 }
 
+.o-layout--text {
+  flex-wrap: wrap;
+  margin: 0 0 0 -0.4em;
+}
+
+.o-layout--text > * {
+  padding: 0 0 0 0.4em;
+}
+
 .o-fit > *:first-child {
   margin-top: 0;
 }
@@ -151,15 +160,15 @@
 }
 
 .o-space {
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 .o-space-small {
-  margin-top: 0.25em;
+  margin-top: 0.5em;
 }
 
 .o-space-large {
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 .o-spacer {
