@@ -201,6 +201,10 @@
   line-height: inherit;
 }
 
+.o-nowrap {
+  white-space: nowrap;
+}
+
 @media (max-width: 560px) {
   .o-layout--column-in-mobile {
     align-items: stretch;
