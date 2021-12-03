@@ -80,6 +80,18 @@
   justify-content: flex-end;
 }
 
+.o-layout--main-axis-space-between {
+  justify-content: space-between;
+}
+
+.o-layout--main-axis-space-around {
+  justify-content: space-around;
+}
+
+.o-layout--main-axis-space-evenly {
+  justify-content: space-evenly;
+}
+
 .o-layout--cross-axis-start {
   align-items: flex-start;
 }
