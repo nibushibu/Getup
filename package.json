@@ -1,6 +1,6 @@
 {
   "name": "getup",
-  "version": "6.2.1",
+  "version": "6.2.2",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "scripts": {
@@ -28,16 +28,18 @@
     "watch-js-with-babel": "onchange 'src/js/**/*.js' -- npm run js-babel",
     "watch-with-babel": "run-p watch:html watch:css watch:riot watch:img watch-js-with-babel watch-babel server",
     "watch:css": "onchange src/css -- npm run css",
-    "watch:img": "onchange 'dist/img/**/*.png' -- npm run webp-single -- -i {{file}}",
+    "watch:img": "onchange 'dist/img/**/*.png' -- npm run webp-single -- {{file}}",
     "watch:html": "onchange 'src/html' -- npm run html",
     "watch:js": "onchange 'src/js/**/*.js' -- npm run js",
     "watch:riot": "onchange 'src/riot/**/*' -- npm run riot-single -- {{file}}",
     "watch": "run-p watch:* server",
-    "webp": "sharp -i 'dist/img/**/*.png' -f webp -o {dir}",
-    "webp-single": "sharp -f webp -o {dir}"
+    "webp": "imagemin 'dist/img/*.(png|jpg|jpeg)' --plugin.webp.quality=95 --out-dir=dist/img",
+    "webp-single": "imagemin --plugin.webp.quality=95 --out-dir=dist/img"
   },
   "dependencies": {
     "animejs": "^3.2.1",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-webp": "^6.0.0",
     "riot": "^6.0.4",
     "sanitize.css": "^12.0.1"
   },
@@ -76,13 +78,9 @@
     "postcss-normalize-charset": "^5.0.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.5.0",
-    "sharp-cli": "^1.15.0",
     "stylelint": "^14.1.0",
     "stylelint-order": "^5.0.0",
     "stylelint-prettier": "^2.0.0",
     "uglify-js": "^3.14.4"
-  },
-  "engines": {
-    "node": "^17.0.1"
   }
 }
