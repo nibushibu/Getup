@@ -1,3 +1,11 @@
+.o-fit > *:first-child {
+  margin-top: 0;
+}
+
+.o-fit-all *:first-child {
+  margin-top: 0;
+}
+
 .o-layout > * > * {
   pointer-events: auto;
 }
@@ -127,14 +135,6 @@
 
 .o-layout--text > * {
   padding: 0 0 0 0.4em;
-}
-
-.o-fit > *:first-child {
-  margin-top: 0;
-}
-
-.o-fit-all *:first-child {
-  margin-top: 0;
 }
 
 .o-items-clip {
