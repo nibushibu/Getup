@@ -159,6 +159,15 @@
   justify-content: center;
 }
 
+.o-items-fill-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.o-items-fill-vertical > * {
+  flex: 1;
+}
+
 .o-text-center {
   text-align: center;
 }
