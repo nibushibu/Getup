@@ -12,13 +12,13 @@
 
 .o-layout {
   display: flex;
-  list-style: none;
   margin: calc(var(--getup-flex-gap-size) * -1) 0 0
     calc(var(--getup-flex-gap-size) * -1);
+  padding-left: 0;
   /* 要素が空の場合の隣接要素への影響を相殺 */
   min-height: var(--getup-flex-gap-size);
-  padding-left: 0;
   pointer-events: none;
+  list-style: none;
 }
 
 .o-layout--row {
@@ -31,8 +31,8 @@
 
 .o-layout > * {
   flex: 0 1 auto;
-  max-width: 100%;
   padding: var(--getup-flex-gap-size) 0 0 var(--getup-flex-gap-size);
+  max-width: 100%;
 }
 
 .o-layout--fill,
@@ -154,9 +154,9 @@
 }
 
 .o-items-center {
-  align-items: center;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .o-items-fill-vertical {
@@ -194,31 +194,36 @@
 
 .o-spacer {
   display: block;
-  height: 0.5em;
-  width: 0.5em;
+  width: 1em;
+  height: 1em;
 }
 
 .o-spacer--small {
-  height: 0.25em;
-  width: 0.25em;
+  width: 0.5em;
+  height: 0.5em;
 }
 
 .o-spacer--large {
-  height: 1em;
-  width: 1em;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.o-spacer--large-2 {
+  width: 2em;
+  height: 2em;
 }
 
 .o-icon {
   display: inline-block;
-  height: 1em;
-  line-height: inherit;
   vertical-align: middle;
   width: auto;
+  height: 1em;
+  line-height: inherit;
 }
 
 .o-font-inherit {
-  font-size: inherit;
   font-weight: inherit;
+  font-size: inherit;
   line-height: inherit;
 }
 
@@ -228,12 +233,12 @@
 
 @media (max-width: 560px) {
   .o-layout--column-in-mobile {
-    align-items: stretch;
     flex-direction: column;
+    align-items: stretch;
   }
 
   .o-layout--column-reverse-in-mobile {
-    align-items: stretch;
     flex-direction: column-reverse;
+    align-items: stretch;
   }
 }
