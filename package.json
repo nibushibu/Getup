@@ -10,7 +10,7 @@
     "build": "run-s html css-build riot js-build",
     "css-build": "postcss src/css/main.css --env production --config postcss.config.js --output dist/css/main.css --no-map",
     "css-develop": "postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --map",
-    "css": "run-s stylelint-fix css-develop",
+    "css": "npm run css-develop",
     "html": "node node_scripts/html.js",
     "js-babel": "esbuild src/js/main.js --bundle --sourcemap --outfile=.temp/main.bundled.js",
     "js-build": "esbuild src/js/main.js --bundle --minify --outfile=dist/js/main.js",
@@ -22,7 +22,6 @@
     "server": "node node_scripts/serve.js",
     "start-babel": "run-s html css riot-js-with-babel watch-with-babel",
     "start": "run-s html css riot-js watch",
-    "stylelint-fix": "stylelint 'src/css/**/*.css' --fix",
     "uglifyjs": "uglifyjs dist/js/main.js --output dist/js/main.js",
     "watch-babel": "onchange '.temp/**/*.js' -- npm run babel",
     "watch-js-with-babel": "onchange 'src/js/**/*.js' -- npm run js-babel",
@@ -78,9 +77,7 @@
     "postcss-normalize-charset": "^5.0.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.5.0",
-    "stylelint": "^14.1.0",
-    "stylelint-order": "^5.0.0",
-    "stylelint-prettier": "^2.0.0",
+    "prettier-plugin-css-order": "^1.0.0",
     "uglify-js": "^3.14.4"
   }
 }
