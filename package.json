@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "animejs": "^3.2.1",
-    "riot": "^6.0.4",
+    "riot": "^6.1.0",
     "sanitize.css": "^12.0.1"
   },
   "repository": {
@@ -54,12 +54,12 @@
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "@riotjs/cli": "^6.0.5",
-    "@riotjs/compiler": "^6.0.4",
+    "@riotjs/compiler": "^6.1.2",
     "@riotjs/ssr": "^7.1.1",
     "@webcomponents/template": "^1.5.0",
     "core-js": "^2.6.12",
-    "esbuild": "^0.14.1",
-    "eslint": "^8.4.0",
+    "esbuild": "^0.14.2",
+    "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
     "express": "^4.17.1",
     "glob": "^7.2.0",
@@ -69,14 +69,14 @@
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "postcss": "^8.4.4",
-    "postcss-cli": "^9.0.2",
+    "postcss-cli": "^9.1.0",
     "postcss-csso": "^5.0.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-focus": "^5.0.1",
     "postcss-import": "^14.0.2",
     "postcss-normalize-charset": "^5.0.1",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.5.0",
+    "prettier": "^2.5.1",
     "prettier-plugin-css-order": "^1.0.0",
     "uglify-js": "^3.14.4"
   }
