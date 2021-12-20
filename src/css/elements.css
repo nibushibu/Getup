@@ -1,8 +1,8 @@
 html {
-  font-display: swap;
-  font-family: var(--base-font-family);
   font-feature-settings: 'palt' 1;
   scroll-behavior: smooth;
+  font-family: var(--base-font-family);
+  font-display: swap;
 }
 
 h1,
@@ -15,8 +15,8 @@ p,
 ul,
 ol,
 dl {
-  margin-bottom: 0;
   margin-top: 1em;
+  margin-bottom: 0;
 }
 
 ul {
