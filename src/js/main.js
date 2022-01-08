@@ -2,7 +2,6 @@
 import 'core-js'
 import '@webcomponents/template'
 import { register, mount, install } from 'riot'
-
 import App from './components/src/riot/my-app.riot.js'
 import RawHtml from './components/src/riot/raw-html.riot.js'
 
