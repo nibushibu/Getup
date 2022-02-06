@@ -36,6 +36,7 @@
     "webp-single": "imagemin --plugin.webp.quality=95 --out-dir=dist/img"
   },
   "dependencies": {
+    "@fontsource/noto-sans-jp": "^4.5.3",
     "animejs": "^3.2.1",
     "riot": "^6.1.1",
     "sanitize.css": "^12.0.1"

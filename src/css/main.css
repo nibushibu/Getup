@@ -2,6 +2,10 @@
 @import 'settings.css';
 
 /* Generic */
+@import '../../node_modules/@fontsource/noto-sans-jp/latin-400.css';
+@import '../../node_modules/@fontsource/noto-sans-jp/latin-700.css';
+@import '../../node_modules/@fontsource/noto-sans-jp/japanese-400.css';
+@import '../../node_modules/@fontsource/noto-sans-jp/japanese-700.css';
 @import '../../node_modules/sanitize.css/sanitize.css';
 @import '../../node_modules/sanitize.css/forms.css';
 @import '../../node_modules/sanitize.css/assets.css';
