@@ -233,6 +233,11 @@
   white-space: nowrap;
 }
 
+.o-word-wrap-control {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 @media (max-width: 560px) {
   .o-layout--column-in-mobile {
     flex-direction: column;
