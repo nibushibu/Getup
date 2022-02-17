@@ -5,11 +5,11 @@
 .u-screen-reader-text,
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
+  word-wrap: normal !important;
   position: absolute !important;
   width: 1px;
-  word-wrap: normal !important;
+  height: 1px;
+  overflow: hidden;
   /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
@@ -18,8 +18,8 @@
  */
 
 .u-inherit {
-  font-size: inherit;
   font-weight: inherit;
+  font-size: inherit;
 }
 
 /**
@@ -43,14 +43,14 @@
   text-align: left;
 }
 
-.o-text-center {
+.u-text-center {
   text-align: center;
 }
 
-.o-text-left {
+.u-text-left {
   text-align: left;
 }
 
-.o-text-right {
+.u-text-right {
   text-align: right;
 }

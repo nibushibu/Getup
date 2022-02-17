@@ -223,6 +223,7 @@
 }
 
 .o-font-inherit {
+  font-style: inherit;
   font-weight: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -230,6 +231,11 @@
 
 .o-nowrap {
   white-space: nowrap;
+}
+
+.o-word-wrap-control {
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 560px) {
