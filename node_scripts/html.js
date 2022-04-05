@@ -3,7 +3,7 @@ const path = require('path')
 const glob = require('glob')
 const mkdirp = require('mkdirp')
 const { render } = require('@riotjs/ssr')
-const register = require('@riotjs/ssr/register')
+const register = require('@riotjs/register')
 const srcDirFromRoot = './src/html/pages'
 const outputDir = 'dist'
 
