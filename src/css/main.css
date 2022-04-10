@@ -7,10 +7,10 @@
 @import '../../node_modules/sanitize.css/assets.css';
 @import '../../node_modules/sanitize.css/typography.css';
 @import '../../node_modules/sanitize.css/reduce-motion.css';
-
-/* Elements */
 @import '../../node_modules/@fontsource/noto-sans-jp/400.css';
 @import '../../node_modules/@fontsource/noto-sans-jp/700.css';
+
+/* Elements */
 @import 'elements.css';
 
 /* Objects */
