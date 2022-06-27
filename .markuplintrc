@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "no-use-event-handler-attr": false,
+    "invalid-attr": {
+      "option": {
+        "ignoreAttrNamePrefix": [
+          "each",
+          "if",
+          "is"
+        ]
+      }
+    }
+  }
+}
