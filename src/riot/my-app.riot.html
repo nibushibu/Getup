@@ -29,15 +29,13 @@
   </style>
 
   <script>
-    import anime from '../../node_modules/animejs/lib/anime.es.js'
-
     export default {
       state: {
         finishAnimation: false,
         test: 'Hello Riot!'
       },
       onMounted() {
-        anime({
+        this.anime({
           targets: this.$('[data-ref="button"]'),
           translateX: 20,
           easing: 'easeInOutSine',

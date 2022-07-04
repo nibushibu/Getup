@@ -1,9 +1,7 @@
-// @ts-check
-import 'core-js'
-import '@webcomponents/template'
 import { register, mount, install } from 'riot'
 import App from './components/src/riot/my-app.riot.js'
 import RawHtml from './components/src/riot/raw-html.riot.js'
+import anime from '../../node_modules/animejs/lib/anime.es.js'
 
 // @ts-ignore
 register('my-app', App)
@@ -69,6 +67,8 @@ install((component) => {
   component.styleAttribute = styleAttribute
   // @ts-ignore
   component.id = instanceId++
+  // @ts-ignore
+  component.anime = anime
 
   return component
 })
