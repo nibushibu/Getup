@@ -31,7 +31,7 @@
     "animejs": "^3.2.1",
     "postcss-media-minmax": "^5.0.0",
     "riot": "^6.1.2",
-    "sanitize.css": "^12.0.1"
+    "sanitize.css": "^13.0.0"
   },
   "repository": {
     "type": "git",
@@ -44,17 +44,17 @@
   "license": "MIT",
   "devDependencies": {
     "@riotjs/cli": "^6.1.0",
-    "@riotjs/compiler": "^6.2.0",
+    "@riotjs/compiler": "^6.3.0",
     "@riotjs/register": "^6.0.1",
     "@riotjs/ssr": "^8.1.1",
     "esbuild": "^0.14.48",
-    "eslint": "^8.18.0",
+    "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
     "express": "^4.18.1",
     "glob": "^8.0.3",
     "imagemin-cli": "^7.0.0",
     "imagemin-webp": "^7.0.0",
-    "markuplint": "^2.8.0",
+    "markuplint": "^2.9.0",
     "mkdirp": "^1.0.4",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
@@ -68,6 +68,6 @@
     "postcss-preset-env": "^7.7.2",
     "prettier": "^2.7.1",
     "prettier-plugin-css-order": "^1.2.0",
-    "uglify-js": "^3.16.1"
+    "uglify-js": "^3.16.2"
   }
 }
