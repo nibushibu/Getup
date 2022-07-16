@@ -182,11 +182,11 @@
   margin-top: 1em;
 }
 
-.o-space-small {
+.o-space--small {
   margin-top: 0.5em;
 }
 
-.o-space-large {
+.o-space--large {
   margin-top: 2em;
 }
 
