@@ -12,17 +12,11 @@
 
 .o-layout {
   display: flex;
-  margin: calc(var(--getup-flex-gap-size) * -1) 0 0
-    calc(var(--getup-flex-gap-size) * -1);
+  row-gap: var(--getup-flex-gap-size);
+  margin-left: calc(var(--getup-flex-gap-size) * -1);
   padding-left: 0;
-  /* 要素が空の場合の隣接要素への影響を相殺 */
-  min-height: var(--getup-flex-gap-size);
   pointer-events: none;
   list-style: none;
-}
-
-.o-layout--row {
-  align-items: center;
 }
 
 .o-layout--column {
@@ -31,7 +25,7 @@
 
 .o-layout > * {
   flex: 0 1 auto;
-  padding: var(--getup-flex-gap-size) 0 0 var(--getup-flex-gap-size);
+  padding-left: var(--getup-flex-gap-size);
   max-width: 100%;
 }
 
@@ -49,27 +43,30 @@
 }
 
 .o-layout--gap-none {
-  margin: 0;
+  row-gap: 0;
+  margin-left: 0;
 }
 
 .o-layout--gap-none > * {
-  padding: 0;
+  padding-left: 0;
 }
 
 .o-layout--gap-large {
-  margin: -2em 0 0 -2em;
+  row-gap: 2em;
+  margin-left: -2em;
 }
 
 .o-layout--gap-large > * {
-  padding: 2em 0 0 2em;
+  padding-left: 2em;
 }
 
 .o-layout--gap-small {
-  margin: -0.25em 0 0 -0.25em;
+  row-gap: 0.25em;
+  margin-left: -0.25em;
 }
 
 .o-layout--gap-small > * {
-  padding: 0.25em 0 0 0.25em;
+  padding-left: 0.25em;
 }
 
 .o-layout--inline {
