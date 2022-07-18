@@ -1,6 +1,6 @@
 {
   "name": "getup",
-  "version": "7.2.0",
+  "version": "8.0.0",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "scripts": {
@@ -47,7 +47,7 @@
     "@riotjs/compiler": "^6.3.0",
     "@riotjs/register": "^6.0.1",
     "@riotjs/ssr": "^8.1.1",
-    "esbuild": "^0.14.48",
+    "esbuild": "^0.14.49",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
     "express": "^4.18.1",
