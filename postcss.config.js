@@ -8,6 +8,7 @@ module.exports = (ctx) => ({
     }),
     require('postcss-normalize-charset'),
     require('postcss-flexbugs-fixes'),
+    require('postcss-custom-media'),
     require('postcss-media-minmax'),
     ctx.env === 'production'
       ? require('postcss-csso')({ restructure: false })

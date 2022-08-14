@@ -9,3 +9,5 @@
   --color-link: var(--color-primary);
   --color-white: #fff;
 }
+
+@custom-media --mobile (max-width: 480px);
