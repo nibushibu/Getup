@@ -1,6 +1,6 @@
 {
   "name": "getup",
-  "version": "8.0.3",
+  "version": "8.1.0",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "scripts": {
@@ -29,7 +29,6 @@
   "dependencies": {
     "@fontsource/noto-sans-jp": "^4.5.11",
     "animejs": "^3.2.1",
-    "postcss-media-minmax": "^5.0.0",
     "riot": "^7.0.2",
     "sanitize.css": "^13.0.0"
   },
@@ -48,7 +47,7 @@
     "@riotjs/register": "^6.0.1",
     "@riotjs/ssr": "^8.1.1",
     "esbuild": "^0.15.2",
-    "eslint": "^8.21.0",
+    "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "express": "^4.18.1",
     "glob": "^8.0.3",
@@ -64,6 +63,7 @@
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-focus": "^5.0.1",
     "postcss-import": "^14.1.0",
+    "postcss-media-minmax": "^5.0.0",
     "postcss-normalize-charset": "^5.1.0",
     "postcss-preset-env": "^7.7.2",
     "prettier": "^2.7.1",
