@@ -1,11 +1,14 @@
 /* Settings */
-@import 'open-props/open-props.min.css';
-@import '../../node_modules/@fontsource/noto-sans-jp/400.css';
-@import '../../node_modules/@fontsource/noto-sans-jp/700.css';
+@import '@fontsource/noto-sans-jp/400.css';
+@import '@fontsource/noto-sans-jp/700.css';
 @import 'settings.css';
 
 /* Generic */
-@import 'open-props/normalize.min.css';
+@import 'sanitize.css/sanitize.css';
+@import 'sanitize.css/forms.css';
+@import 'sanitize.css/assets.css';
+@import 'sanitize.css/typography.css';
+@import 'sanitize.css/reduce-motion.css';
 
 /* Elements */
 @import 'elements.css';
