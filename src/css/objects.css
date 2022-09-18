@@ -7,8 +7,9 @@
 }
 
 .o-layout {
+  --gap: var(--getup-flex-gap-size);
   display: flex;
-  gap: var(--getup-flex-gap-size);
+  gap: var(--gap);
   padding-left: 0;
   list-style: none;
 }
@@ -36,15 +37,15 @@
 }
 
 .o-layout--gap-none {
-  gap: 0;
+  --gap: 0;
 }
 
 .o-layout--gap-large {
-  gap: 2em;
+  --gap: 2em;
 }
 
 .o-layout--gap-small {
-  gap: 0.25em;
+  --gap: 0.25em;
 }
 
 .o-layout--inline {
