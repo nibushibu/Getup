@@ -5,5 +5,5 @@ app.use(express.static('dist'))
 
 const port = 3000
 app.listen(port, () => {
-  console.log(`ローカルサーバー起動 → http://localhost:${port}/`)
+  console.log(`local server was launched. -> http://localhost:${port}/`)
 })
