@@ -1,0 +1,23 @@
+<parent-tag>
+  <div each="{ item in state.myData }">
+    <child-tag>
+      { item.text }
+    </child-tag>
+  </div>
+  <script>
+    export default function ParentTag() {
+      return {
+        state: {
+          myData: [
+            {
+              text: 'Hello'
+            },
+            {
+              text: 'Riot!'
+            },
+          ]
+        },
+      }
+    }
+  </script>
+</parent-tag>

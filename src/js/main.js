@@ -1,12 +1,21 @@
 import { register, mount, install } from 'riot'
 import App from './components/src/riot/my-app.riot.js'
 import RawHtml from './components/src/riot/raw-html.riot.js'
+import ParentTag from './components/src/riot/parent-tag.riot.js'
+import ChildTag from './components/src/riot/child-tag.riot.js'
+import ChildTag2 from './components/src/riot/child-tag-2.riot.js'
 import anime from '../../node_modules/animejs/lib/anime.es.js'
 
 // @ts-ignore
 register('my-app', App)
 // @ts-ignore
 register('raw-html', RawHtml)
+// @ts-ignore
+register('parent-tag', ParentTag)
+// @ts-ignore
+register('child-tag', ChildTag)
+// @ts-ignore
+register('child-tag-2', ChildTag2)
 
 /**
  * GETパラメーターをObjectとして返す関数

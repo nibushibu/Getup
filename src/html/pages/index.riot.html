@@ -1,8 +1,5 @@
 <html lang="ja">
 <template is="html-base" title="{ state.title }" meta="{ state.meta }">
-  <static-component></static-component>
-  <static-header></static-header>
-  <p>page content</p>
   <my-app data-riot></my-app>
 </template>
 <script>
@@ -16,7 +13,7 @@
       StaticComponent,
     },
     state: {
-      title: 'title from props',
+      title: 'Riot v7 slot issue',
       meta: [
         {
           name: 'description',
