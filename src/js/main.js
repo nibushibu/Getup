@@ -2,6 +2,7 @@ import { register, mount, install } from 'riot'
 import App from './components/src/riot/my-app.riot.js'
 import RawHtml from './components/src/riot/raw-html.riot.js'
 import anime from '../../node_modules/animejs/lib/anime.es.js'
+import 'container-query-polyfill'
 
 // @ts-ignore
 register('my-app', App)
