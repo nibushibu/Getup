@@ -1,6 +1,6 @@
 {
   "name": "getup",
-  "version": "8.2.0",
+  "version": "8.3.0",
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "scripts": {
@@ -8,11 +8,9 @@
     "css-build": "postcss src/css/main.css --env production --config postcss.config.js --output dist/css/main.css --no-map",
     "css-develop": "postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --map",
     "css": "npm run css-develop",
-    "format-html": "prettier 'dist/**/*.html' --write",
-    "html": "run-s riot-html format-html",
     "js-build": "esbuild src/js/main.js --bundle --minify --outfile=dist/js/main.js",
     "js": "esbuild src/js/main.js --bundle --sourcemap --outfile=dist/js/main.js",
-    "riot-html": "node node_scripts/html.js",
+    "html": "node node_scripts/html.js",
     "riot-js": "run-s riot js",
     "riot-single": "riot --output src/js/components --sourcemap file --extension html",
     "riot": "riot src/riot --output src/js/components/src/riot --sourcemap file --extension html",
@@ -46,21 +44,21 @@
   "license": "MIT",
   "devDependencies": {
     "@riotjs/cli": "^6.1.0",
-    "@riotjs/compiler": "^6.3.2",
+    "@riotjs/compiler": "^6.4.0",
     "@riotjs/register": "^6.0.1",
     "@riotjs/ssr": "^8.1.2",
-    "esbuild": "^0.15.10",
-    "eslint": "^8.25.0",
+    "esbuild": "^0.15.12",
+    "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "express": "^4.18.2",
     "glob": "^8.0.3",
     "imagemin-cli": "^7.0.0",
     "imagemin-webp": "^7.0.0",
-    "markuplint": "^2.10.1",
+    "markuplint": "^2.10.2",
     "mkdirp": "^1.0.4",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "postcss": "^8.4.17",
+    "postcss": "^8.4.18",
     "postcss-cli": "^10.0.0",
     "postcss-csso": "^6.0.1",
     "postcss-custom-media": "^8.0.2",
@@ -72,6 +70,6 @@
     "postcss-preset-env": "^7.8.2",
     "prettier": "^2.7.1",
     "prettier-plugin-css-order": "^1.3.0",
-    "uglify-js": "^3.17.3"
+    "uglify-js": "^3.17.4"
   }
 }
