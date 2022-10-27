@@ -11,7 +11,7 @@ module.exports = (ctx) => ({
     require('postcss-custom-media'),
     require('postcss-media-minmax'),
     ctx.env === 'production'
-      ? require('postcss-csson')({ restructure: false })
+      ? require('postcss-csso')({ restructure: false })
       : false
   ]
 })
