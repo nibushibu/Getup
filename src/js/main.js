@@ -1,10 +1,10 @@
 import { register, mount, install } from 'riot'
-import App from './components/src/riot/my-app.riot.js'
-import RawHtml from './components/src/riot/raw-html.riot.js'
-import ParentTag from './components/src/riot/parent-tag.riot.js'
-import ChildTag from './components/src/riot/child-tag.riot.js'
-import ChildTag2 from './components/src/riot/child-tag-2.riot.js'
-import anime from '../../node_modules/animejs/lib/anime.es.js'
+import App from './my-app.riot.js'
+import RawHtml from './raw-html.riot.js'
+import ParentTag from './parent-tag.riot.js'
+import ChildTag from './child-tag.riot.js'
+import ChildTag2 from './child-tag-2.riot.js'
+import anime from './anime.es.js'
 
 // @ts-ignore
 register('my-app', App)
