@@ -47,6 +47,7 @@
     "@riotjs/compiler": "^6.4.1",
     "@riotjs/register": "^6.0.1",
     "@riotjs/ssr": "^8.1.2",
+    "@riotjs/util": "^2.2.0",
     "esbuild": "^0.15.12",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
