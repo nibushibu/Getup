@@ -4,6 +4,7 @@ const glob = require('glob')
 const mkdirp = require('mkdirp')
 const { render } = require('@riotjs/ssr')
 const register = require('@riotjs/register')
+const prettier = require('prettier')
 const srcDirFromRoot = './src/html/pages'
 const outputDir = 'dist'
 
@@ -18,7 +19,7 @@ glob(`${srcDirFromRoot}/**/*.riot.html`, (err, files) => {
 const generateHtml = (files) => {
   files.forEach((file) => {
     const Root = require(`.${file}`).default
-    const html = render('html', Root)
+    const html = prettier.format(render('html', Root), { parser: 'html' })
     const dir = path.join(
       outputDir,
       file.replace(srcDirFromRoot, '').replace(/riot\.html$/, 'html')

@@ -1,0 +1,11 @@
+{
+  "invalid-attr": {
+    "option": {
+      "attrs": {
+        "x-attr": {
+          "enum": ["riot"]
+        }
+      }
+    }
+  }
+}
