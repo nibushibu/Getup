@@ -30,8 +30,7 @@
     "@fontsource/noto-sans-jp": "^4.5.12",
     "animejs": "^3.2.1",
     "open-props": "^1.4.21",
-    "riot": "^7.0.7",
-    "sanitize.css": "^13.0.0"
+    "riot": "^7.0.7"
   },
   "repository": {
     "type": "git",
