@@ -35,14 +35,14 @@
         test: 'Hello Riot!'
       },
       onMounted() {
-        this.anime({
-          targets: this.$('[data-ref="button"]'),
-          translateX: 20,
-          easing: 'easeInOutSine',
+        const buttonAnimation = new this.mojs.Html({
+          el: this.$('[data-ref="button"]'),
+          x: { 0: "20px" },
+          easing: 'sin.inout',
           duration: 1000,
-          loop: true,
-          direction: 'alternate'
-        })
+          repeat: 999,
+          isYoyo: true,
+        }).play()
       },
       animationUnmount(e) {
         this.$('[data-ref="button"]').addEventListener('transitionend', (e) => {

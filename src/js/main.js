@@ -1,8 +1,7 @@
 import { register, mount, install } from 'riot'
 import App from './components/src/riot/my-app.riot.js'
 import RawHtml from './components/src/riot/raw-html.riot.js'
-import anime from '../../node_modules/animejs/lib/anime.es.js'
-
+import mojs from '@mojs/core'
 // @ts-ignore
 register('my-app', App)
 // @ts-ignore
@@ -68,7 +67,7 @@ install((component) => {
   // @ts-ignore
   component.id = instanceId++
   // @ts-ignore
-  component.anime = anime
+  component.mojs = mojs
 
   return component
 })
