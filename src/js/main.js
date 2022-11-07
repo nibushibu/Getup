@@ -2,6 +2,7 @@ import { register, mount, install } from 'riot'
 import App from './components/src/riot/my-app.riot.js'
 import RawHtml from './components/src/riot/raw-html.riot.js'
 import mojs from '@mojs/core'
+import MojsPlayer from '@mojs/player'
 // @ts-ignore
 register('my-app', App)
 // @ts-ignore
@@ -66,8 +67,8 @@ install((component) => {
   component.styleAttribute = styleAttribute
   // @ts-ignore
   component.id = instanceId++
-  // @ts-ignore
   component.mojs = mojs
+  component.MojsPlayer = MojsPlayer
 
   return component
 })

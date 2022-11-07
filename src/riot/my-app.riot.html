@@ -35,6 +35,19 @@
         test: 'Hello Riot!'
       },
       onMounted() {
+        const burst = new this.mojs.Burst({
+          parent: this.$('[data-ref="button"]'),
+          radius: { 0: 100 },
+          count: 5,
+          children: {
+            shape: 'polygon',
+            fill: { 'cyan': 'yellow' },
+            radius: 20,
+            rotate: { 360: 0 },
+            duration: 1000
+          }
+        })
+
         const buttonAnimation = new this.mojs.Html({
           el: this.$('[data-ref="button"]'),
           x: { 0: "20px" },
@@ -42,7 +55,13 @@
           duration: 1000,
           repeat: 999,
           isYoyo: true,
-        }).play()
+          onRepeatComplete() {
+            burst.replay()
+          }
+        })
+          .play()
+        // new this.MojsPlayer({ add: buttonAnimation });
+
       },
       animationUnmount(e) {
         this.$('[data-ref="button"]').addEventListener('transitionend', (e) => {
