@@ -6,7 +6,7 @@
   "scripts": {
     "build": "run-s html css-build riot js-build",
     "css-build": "postcss src/css/main.css --env production --config postcss.config.js --output dist/css/main.css --no-map",
-    "css-develop": "postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --map&&say 'css is compiled'",
+    "css-develop": "postcss src/css/main.css --config postcss.config.js --output dist/css/main.css --map",
     "css": "npm run css-develop",
     "js-build": "esbuild src/js/main.js --bundle --minify --outfile=dist/js/main.js",
     "js": "esbuild src/js/main.js --bundle --sourcemap --outfile=dist/js/main.js",

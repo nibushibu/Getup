@@ -37,13 +37,13 @@
       onMounted() {
         const burst = new this.mojs.Burst({
           parent: this.$('[data-ref="button"]'),
-          radius: { 0: 100 },
-          count: 5,
+          radius: { 0: 60 },
+          count: 6,
           children: {
             shape: 'polygon',
             fill: { 'cyan': 'yellow' },
-            radius: 20,
-            rotate: { 360: 0 },
+            radius: { 0: 200 },
+            rotate: 0,
             duration: 1000
           }
         })
@@ -53,14 +53,14 @@
           x: { 0: "20px" },
           easing: 'sin.inout',
           duration: 1000,
-          repeat: 999,
-          isYoyo: true,
+          // repeat: 999,
+          // isYoyo: true,
           onRepeatComplete() {
-            burst.replay()
+            // burst.replay()
           }
         })
           .play()
-        // new this.MojsPlayer({ add: buttonAnimation });
+        new this.MojsPlayer({ add: burst });
 
       },
       animationUnmount(e) {
