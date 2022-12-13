@@ -1,4 +1,4 @@
-:root {
+:where(html) {
   --base-font-family: 'Noto Sans JP', 'Noto Sans CJK JP',
     'Noto Sans CJK Japanese', -apple-system, BlinkMacSystemFont, Meiryo,
     sans-serif;

@@ -7,9 +7,9 @@
 }
 
 .o-layout {
-  --gap: var(--getup-flex-gap-size);
+  --_gap: var(--getup-flex-gap-size);
   display: flex;
-  gap: var(--gap);
+  gap: var(--_gap);
   padding-left: 0;
   list-style: none;
 }
