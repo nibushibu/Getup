@@ -2,7 +2,7 @@
   "rules": {
     "no-use-event-handler-attr": false,
     "invalid-attr": {
-      "option": {
+      "options": {
         "ignoreAttrNamePrefix": [
           "each",
           "if",
@@ -10,5 +10,13 @@
         ]
       }
     }
-  }
+  },
+  "nodeRules": [
+    {
+      "selector": "template",
+      "rules": {
+        "invaliqd-attr": false
+      }
+    }
+  ]
 }
