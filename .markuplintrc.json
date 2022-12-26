@@ -1,0 +1,7 @@
+{
+  "invalid-attr": {
+    "options": {
+      "ignoreAttrNamePrefix": ["meta"]
+    }
+  }
+}
