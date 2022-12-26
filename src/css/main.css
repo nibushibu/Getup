@@ -1,14 +1,12 @@
 /* Settings */
 @import '@fontsource/noto-sans-jp/400.css';
 @import '@fontsource/noto-sans-jp/700.css';
+@import 'open-props/src/index';
 @import 'settings.css';
 
 /* Generic */
-@import 'sanitize.css/sanitize.css';
-@import 'sanitize.css/forms.css';
-@import 'sanitize.css/assets.css';
-@import 'sanitize.css/typography.css';
-@import 'sanitize.css/reduce-motion.css';
+@import 'open-props/src/extra/normalize';
+@import 'open-props/src/extra/buttons';
 
 /* Elements */
 @import 'elements.css';
