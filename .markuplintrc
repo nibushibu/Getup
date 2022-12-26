@@ -15,7 +15,7 @@
     {
       "selector": "template",
       "rules": {
-        "invaliqd-attr": false
+        "invalid-attr": false
       }
     }
   ]
