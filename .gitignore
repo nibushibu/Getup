@@ -5,9 +5,6 @@ bower_components
 .DS_Store
 *.log
 .parcel-cache
-dist/css/**/*.css
-dist/css/**/*.css.map
 dist/**/*.html
 !dist/js/*.html
 styleguide
-src/js/components
