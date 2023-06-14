@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const { Glob } = require('glob')
-const mkdirp = require('mkdirp')
+const { mkdirp } = require('mkdirp')
 const { render } = require('@riotjs/ssr')
 const register = require('@riotjs/register')
 const srcDirFromRoot = 'src/html/pages'
