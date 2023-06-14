@@ -1,12 +1,4 @@
-import { register, mount, install } from 'riot'
-import App from './components/src/riot/my-app.riot.js'
-import RawHtml from './components/src/riot/raw-html.riot.js'
 import anime from '../../node_modules/animejs/lib/anime.es.js'
-
-// @ts-ignore
-register('my-app', App)
-// @ts-ignore
-register('raw-html', RawHtml)
 
 /**
  * GETパラメーターをObjectとして返す関数
@@ -58,7 +50,7 @@ function styleAttribute(attributes) {
  */
 let instanceId = 0
 
-install((component) => {
+riot.install((component) => {
   // @ts-ignore
   component.getObjectFromLocationSearch = getObjectFromLocationSearch
   // @ts-ignore
@@ -73,4 +65,6 @@ install((component) => {
   return component
 })
 
-mount('[data-riot]')
+riot.compile().then(() => {
+  riot.mount('[data-riot]')
+})
