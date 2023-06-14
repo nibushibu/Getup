@@ -7,7 +7,7 @@ bower_components
 .parcel-cache
 dist/css/**/*.css
 dist/css/**/*.css.map
-dist/js
 dist/**/*.html
+!dist/js/*.html
 styleguide
 src/js/components

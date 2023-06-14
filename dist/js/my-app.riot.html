@@ -1,0 +1,56 @@
+<my-app>
+  <h1>Thie is Riot test.</h1>
+  <p>{ state.test }</p>
+  <p>
+    <button class="unmount-animation" onclick="{ animationUnmount }" data-ref="button">
+      my-appをアンマウント
+    </button>
+  </p>
+  <p>
+    <raw-html data-html="コンポーネントのテスト"></raw-html>
+  </p>
+  <h2>スロット</h2>
+  <slot></slot>
+
+  <style>
+    h1 {
+      color: green;
+      display: flex;
+    }
+
+    .unmount-animation {
+      opacity: 1;
+      transition: opacity 1s;
+    }
+
+    .unmount-animation.is-unmount {
+      opacity: 0;
+    }
+  </style>
+
+  <script>
+    export default {
+      state: {
+        finishAnimation: false,
+        test: 'Hello Riot!'
+      },
+      onMounted() {
+        this.anime({
+          targets: this.$('[data-ref="button"]'),
+          translateX: 20,
+          easing: 'easeInOutSine',
+          duration: 1000,
+          loop: true,
+          direction: 'alternate'
+        })
+      },
+      animationUnmount(e) {
+        this.$('[data-ref="button"]').addEventListener('transitionend', (e) => {
+          console.log('button transitionend')
+          this.unmount()
+        })
+        this.$('[data-ref="button"]').classList.add('is-unmount')
+      }
+    }
+  </script>
+</my-app>
