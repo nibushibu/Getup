@@ -1,4 +1,14 @@
+// @ts-check
 import anime from './anime.es.js'
+import MyApp from './my-app.riot.js'
+import RawHtml from './raw-html.riot.js'
+
+// @ts-ignore
+// eslint-disable-next-line no-undef
+riot.register('my-app', MyApp)
+// @ts-ignore
+// eslint-disable-next-line no-undef
+riot.register('raw-html', RawHtml)
 
 /**
  * GETパラメーターをObjectとして返す関数
@@ -22,13 +32,16 @@ function getObjectFromLocationSearch() {
  * @returns {string} return only the classes having a truthy value
  */
 function classNames(classes) {
-  return Object.entries(classes)
-    .reduce((acc, item) => {
-      const [key, value] = item
-      if (value) return [...acc, key]
-      return acc
-    }, [])
-    .join(' ')
+  return (
+    Object.entries(classes)
+      // @ts-ignore
+      .reduce((acc, item) => {
+        const [key, value] = item
+        if (value) return [...acc, key]
+        return acc
+      }, [])
+      .join(' ')
+  )
 }
 
 /**
@@ -37,12 +50,15 @@ function classNames(classes) {
  * @returns {string} a string with all the attributes and their values
  */
 function styleAttribute(attributes) {
-  return Object.entries(attributes)
-    .reduce((acc, item) => {
-      const [key, value] = item
-      return [...acc, `${key}: ${value}`]
-    }, [])
-    .join(';')
+  return (
+    Object.entries(attributes)
+      // @ts-ignore
+      .reduce((acc, item) => {
+        const [key, value] = item
+        return [...acc, `${key}: ${value}`]
+      }, [])
+      .join(';')
+  )
 }
 
 /**
@@ -50,21 +66,18 @@ function styleAttribute(attributes) {
  */
 let instanceId = 0
 
+// @ts-ignore
+// eslint-disable-next-line no-undef
 riot.install((component) => {
-  // @ts-ignore
   component.getObjectFromLocationSearch = getObjectFromLocationSearch
-  // @ts-ignore
   component.classNames = classNames
-  // @ts-ignore
   component.styleAttribute = styleAttribute
-  // @ts-ignore
   component.id = instanceId++
-  // @ts-ignore
   component.anime = anime
 
   return component
 })
 
-riot.compile().then(() => {
-  riot.mount('[data-riot]')
-})
+// @ts-ignore
+// eslint-disable-next-line no-undef
+riot.mount('[data-riot]')
