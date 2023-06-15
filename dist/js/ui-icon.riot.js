@@ -72,4 +72,3 @@ var uiIcon_riot = {
 };
 
 export { uiIcon_riot as default };
-//# sourceMappingURL=ui-icon.riot.js.map

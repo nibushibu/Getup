@@ -67,4 +67,3 @@ var myApp_riot = {
 };
 
 export { myApp_riot as default };
-//# sourceMappingURL=my-app.riot.js.map

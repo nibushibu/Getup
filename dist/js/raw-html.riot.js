@@ -18,4 +18,3 @@ var rawHtml_riot = {
 };
 
 export { rawHtml_riot as default };
-//# sourceMappingURL=raw-html.riot.js.map

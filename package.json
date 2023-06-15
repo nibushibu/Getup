@@ -9,7 +9,7 @@
     "start": "run-s html watch",
     "build": "run-s html riot-build",
     "riot": "riot src/riot --output dist/js --sourcemap file --extension html",
-    "riot-build": "riot src/riot --output dist/js file --extension html",
+    "riot-build": "riot src/riot --output dist/js --extension html",
     "watch:html": "onchange 'src/html' -- npm run html",
     "watch:riot": "onchange 'src/riot/**/*' -- npm run riot",
     "watch": "run-p watch:* server"
