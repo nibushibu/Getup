@@ -7,4 +7,5 @@ bower_components
 .parcel-cache
 dist/**/*.html
 dist/js/**/*.map
+dist/js/**/*.riot.js
 styleguide
