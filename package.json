@@ -7,8 +7,9 @@
     "html": "node node_scripts/html.js",
     "server": "node node_scripts/serve.js",
     "start": "run-s html watch",
-    "riot-single": "riot --output dist/js --sourcemap file --extension html",
+    "build": "run-s html riot-build",
     "riot": "riot src/riot --output dist/js --sourcemap file --extension html",
+    "riot-build": "riot src/riot --output dist/js file --extension html",
     "watch:html": "onchange 'src/html' -- npm run html",
     "watch:riot": "onchange 'src/riot/**/*' -- npm run riot",
     "watch": "run-p watch:* server"

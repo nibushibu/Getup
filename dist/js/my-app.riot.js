@@ -14,7 +14,6 @@ var myApp_riot = {
         loop: true,
         direction: 'alternate'
       });
-      console.log('てすと');
     },
     animationUnmount: function animationUnmount(e) {
       var _this = this;

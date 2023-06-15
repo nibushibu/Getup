@@ -6,5 +6,5 @@ bower_components
 *.log
 .parcel-cache
 dist/**/*.html
-!dist/js/*.html
+dist/js/**/*.map
 styleguide
