@@ -4,12 +4,14 @@
   "description": "Frontend boilerplate",
   "author": "Genki Katsutani",
   "scripts": {
-    "html": "node node_scripts/html.js",
+    "build": "run-s html riot-build",
+    "html": "run-s html-from-riot html-format",
+    "html-format": "prettier --write 'dist/**/*.html'",
+    "html-from-riot": "node node_scripts/html.js",
+    "riot-build": "riot src/riot --output dist/js --extension html",
+    "riot": "riot src/riot --output dist/js --sourcemap file --extension html",
     "server": "node node_scripts/serve.js",
     "start": "run-s html watch",
-    "build": "run-s html riot-build",
-    "riot": "riot src/riot --output dist/js --sourcemap file --extension html",
-    "riot-build": "riot src/riot --output dist/js --extension html",
     "watch:html": "onchange 'src/html' -- npm run html",
     "watch:riot": "riot src/riot --output dist/js --sourcemap file --extension html --watch",
     "watch": "run-p watch:* server"
