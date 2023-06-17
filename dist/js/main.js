@@ -2,6 +2,7 @@
 import anime from './anime.es.js'
 import MyApp from './my-app.riot.js'
 import RawHtml from './raw-html.riot.js'
+import UiIcon from './ui-icon.riot.js'
 
 // @ts-ignore
 // eslint-disable-next-line no-undef
@@ -9,6 +10,9 @@ riot.register('my-app', MyApp)
 // @ts-ignore
 // eslint-disable-next-line no-undef
 riot.register('raw-html', RawHtml)
+// @ts-ignore
+// eslint-disable-next-line no-undef
+riot.register('ui-icon', UiIcon)
 
 /**
  * GETパラメーターをObjectとして返す関数
