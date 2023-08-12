@@ -8,7 +8,6 @@ import register from '@riotjs/register'
 const srcDirFromRoot = 'src/html/pages'
 const outputDir = 'dist'
 
-//
 register({ exts: ['.html'] })
 
 const files = new Glob(`${srcDirFromRoot}/**/*.riot.html`, {
