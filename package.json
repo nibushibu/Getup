@@ -18,10 +18,10 @@
     "watch": "run-p watch:* server"
   },
   "dependencies": {
-    "@fontsource/noto-sans-jp": "^5.0.7",
+    "@fontsource/noto-sans-jp": "^5.0.10",
     "animejs": "^3.2.1",
-    "open-props": "^1.5.11",
-    "riot": "^9.0.3"
+    "open-props": "^1.5.15",
+    "riot": "^9.0.4"
   },
   "repository": {
     "type": "git",
@@ -37,15 +37,15 @@
     "@riotjs/register": "^9.0.0",
     "@riotjs/ssr": "^9.0.0",
     "dotenv": "^16.3.1",
-    "eslint": "^8.47.0",
+    "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "express": "^4.18.2",
-    "glob": "^10.3.3",
+    "glob": "^10.3.4",
     "markuplint": "^3.12.0",
     "mkdirp": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "prettier": "^3.0.1",
+    "prettier": "^3.0.3",
     "prettier-plugin-css-order": "^2.0.0"
   }
 }
