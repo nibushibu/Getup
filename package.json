@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "run-s html riot-build",
-    "html-format": "prettier --write 'dist/**/*.html'",
+    "prettier-ver": "prettier -h",
+    "html-format": "prettier 'dist/**/*.html' --write --ignore-gitignore",
     "html-from-riot": "node --trace-warnings --loader @riotjs/register node_scripts/html.js",
     "html": "run-s html-from-riot html-format",
     "preview": "npx http-server dist -o / -c-1",
