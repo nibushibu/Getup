@@ -9,7 +9,7 @@
     "html-format": "prettier --write 'dist/**/*.html'",
     "html-from-riot": "node --trace-warnings --loader @riotjs/register node_scripts/html.js",
     "html": "run-s html-from-riot html-format",
-    "preview": "npx http-server dist -c-1",
+    "preview": "npx http-server dist -o / -c-1",
     "riot-build": "riot src/riot --output dist/js --extension html",
     "riot": "riot src/riot --output dist/js --sourcemap file --extension html",
     "start": "run-s html watch",
