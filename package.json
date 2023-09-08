@@ -6,16 +6,16 @@
   "type": "module",
   "scripts": {
     "build": "run-s html riot-build",
-    "html": "run-s html-from-riot html-format",
     "html-format": "prettier --write 'dist/**/*.html'",
     "html-from-riot": "node --trace-warnings --loader @riotjs/register node_scripts/html.js",
+    "html": "run-s html-from-riot html-format",
+    "preview": "npx http-server dist -c-1",
     "riot-build": "riot src/riot --output dist/js --extension html",
     "riot": "riot src/riot --output dist/js --sourcemap file --extension html",
-    "server": "node node_scripts/serve.js",
     "start": "run-s html watch",
     "watch:html": "onchange 'src/html' -- npm run html",
     "watch:riot": "riot src/riot --output dist/js --sourcemap file --extension html --watch",
-    "watch": "run-p watch:* server"
+    "watch": "run-p watch:* preview"
   },
   "dependencies": {
     "@fontsource/noto-sans-jp": "^5.0.10",
@@ -39,7 +39,6 @@
     "dotenv": "^16.3.1",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
-    "express": "^4.18.2",
     "glob": "^10.3.4",
     "markuplint": "^3.12.0",
     "mkdirp": "^3.0.1",

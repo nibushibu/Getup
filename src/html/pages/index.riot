@@ -1,23 +1,28 @@
 <html>
-
-<head>
-  <title>{ state.message }</title>
-  <meta each={ meta in state.meta } {...meta} />
-</head>
-
-<body>
-  <p>{ state.message }</p>
-</body>
-
+<template is="html-base" title="{ state.title }" meta="{ state.meta }">
+  <static-component></static-component>
+  <static-header></static-header>
+  <p>page content</p>
+</template>
 <script>
+  import HtmlBase from '../components/html-base.riot'
+  import StaticHeader from '../components/static-header.riot'
+  import StaticComponent from '../components/static-component.riot'
   export default {
+    components: {
+      HtmlBase,
+      StaticHeader,
+      StaticComponent,
+    },
     state: {
-      message: 'hello',
-      meta: [{
-        name: 'description',
-        content: 'a description'
-      }]
-    }
+      title: 'title from props',
+      meta: [
+        {
+          name: 'description',
+          content: 'description from props',
+        },
+      ],
+    },
   }
 </script>
 
