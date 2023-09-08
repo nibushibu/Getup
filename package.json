@@ -7,7 +7,7 @@
   "scripts": {
     "build": "run-s html riot-build",
     "html-format": "prettier --write 'dist/**/*.html'",
-    "html-from-riot": "node --trace-warnings --loader @riotjs/register node_scripts/html.js",
+    "html-from-riot": "node --loader @riotjs/register node_scripts/html.js",
     "html": "run-s html-from-riot html-format",
     "preview": "npx http-server dist -o / -c-1",
     "riot-build": "riot src/riot --output dist/js --extension html",
@@ -36,7 +36,6 @@
     "@riotjs/cli": "^9.0.5",
     "@riotjs/register": "^9.0.0",
     "@riotjs/ssr": "^9.0.0",
-    "dotenv": "^16.3.1",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "glob": "^10.3.4",
