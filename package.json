@@ -14,7 +14,7 @@
     "riot": "riot src/riot --output dist/js --sourcemap file --extension html",
     "start": "run-s html watch",
     "watch:html": "onchange 'src/html' -- npm run html",
-    "watch:riot": "riot src/riot --output dist/js --sourcemap file --extension html --watch",
+    "watch:riot": "riot src/riot --output dist/js --sourcemap file --watch --extension html",
     "watch": "run-p watch:* preview"
   },
   "dependencies": {
