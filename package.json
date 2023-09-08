@@ -2,7 +2,7 @@
   "name": "getup",
   "version": "8.5.4",
   "description": "Frontend boilerplate",
-  "author": "Genki Katsutani",
+  "author": "nibushibu",
   "type": "module",
   "scripts": {
     "build": "run-s html riot-build",
