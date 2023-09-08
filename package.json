@@ -8,7 +8,7 @@
     "build": "run-s html riot-build",
     "html": "run-s html-from-riot html-format",
     "html-format": "prettier --write 'dist/**/*.html'",
-    "html-from-riot": "node node_scripts/html.js",
+    "html-from-riot": "node --trace-warnings --loader @riotjs/register node_scripts/html.js",
     "riot-build": "riot src/riot --output dist/js --extension html",
     "riot": "riot src/riot --output dist/js --sourcemap file --extension html",
     "server": "node node_scripts/serve.js",
