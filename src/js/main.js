@@ -1,5 +1,5 @@
 // @ts-check
-import anime from './anime.es.js'
+import anime from '../../dist/js/anime.es.js'
 import MyApp from './my-app.riot.js'
 import RawHtml from './raw-html.riot.js'
 import UiIcon from './ui-icon.riot.js'
