@@ -1,16 +1,17 @@
 // @ts-check
-import anime from '../../dist/js/anime.es.js'
-import MyApp from './my-app.riot.js'
-import RawHtml from './raw-html.riot.js'
-import UiIcon from './ui-icon.riot.js'
+import { register, mount, install } from 'riot'
+import MyApp from './components/my-app.js'
+import RawHtml from './components/raw-html.js'
+import UiIcon from './components/ui-icon.js'
+import anime from 'animejs'
 
 /* eslint-disable no-undef */
 // @ts-ignore
-riot.register('my-app', MyApp)
+register('my-app', MyApp)
 // @ts-ignore
-riot.register('raw-html', RawHtml)
+register('raw-html', RawHtml)
 // @ts-ignore
-riot.register('ui-icon', UiIcon)
+register('ui-icon', UiIcon)
 /* eslint-enable no-undef */
 
 /**
@@ -71,11 +72,16 @@ let instanceId = 0
 
 // @ts-ignore
 // eslint-disable-next-line no-undef
-riot.install((component) => {
+install((component) => {
+  // @ts-ignore
   component.getObjectFromLocationSearch = getObjectFromLocationSearch
+  // @ts-ignore
   component.classNames = classNames
+  // @ts-ignore
   component.styleAttribute = styleAttribute
+  // @ts-ignore
   component.id = instanceId++
+  // @ts-ignore
   component.anime = anime
 
   return component
@@ -83,4 +89,4 @@ riot.install((component) => {
 
 // @ts-ignore
 // eslint-disable-next-line no-undef
-riot.mount('[data-riot]')
+mount('[data-riot]')

@@ -9,3 +9,4 @@ dist/**/*.html
 dist/js
 dist/css
 styleguide
+src/js/components

@@ -1,12 +1,12 @@
 /* Settings */
-@import 'noto-sans-jp/400.css';
-@import 'noto-sans-jp/700.css';
-@import 'open-props/open-props.min.css';
+@import '@fontsource/noto-sans-jp/400.css';
+@import '@fontsource/noto-sans-jp/700.css';
+@import 'open-props/src/index';
 @import 'settings.css';
 
 /* Generic */
-@import 'open-props/normalize.min.css';
-@import 'open-props/buttons.min.css';
+@import 'open-props/src/extra/normalize';
+@import 'open-props/src/extra/buttons';
 
 /* Elements */
 @import 'elements.css';
