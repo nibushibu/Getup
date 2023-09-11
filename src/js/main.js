@@ -1,12 +1,18 @@
+// @ts-check
 import { register, mount, install } from 'riot'
-import App from './components/src/riot/my-app.riot.js'
-import RawHtml from './components/src/riot/raw-html.riot.js'
-import anime from '../../node_modules/animejs/lib/anime.es.js'
+import MyApp from './components/my-app.js'
+import RawHtml from './components/raw-html.js'
+import UiIcon from './components/ui-icon.js'
+import anime from 'animejs'
 
+/* eslint-disable no-undef */
 // @ts-ignore
-register('my-app', App)
+register('my-app', MyApp)
 // @ts-ignore
 register('raw-html', RawHtml)
+// @ts-ignore
+register('ui-icon', UiIcon)
+/* eslint-enable no-undef */
 
 /**
  * GETパラメーターをObjectとして返す関数
@@ -30,13 +36,16 @@ function getObjectFromLocationSearch() {
  * @returns {string} return only the classes having a truthy value
  */
 function classNames(classes) {
-  return Object.entries(classes)
-    .reduce((acc, item) => {
-      const [key, value] = item
-      if (value) return [...acc, key]
-      return acc
-    }, [])
-    .join(' ')
+  return (
+    Object.entries(classes)
+      // @ts-ignore
+      .reduce((acc, item) => {
+        const [key, value] = item
+        if (value) return [...acc, key]
+        return acc
+      }, [])
+      .join(' ')
+  )
 }
 
 /**
@@ -45,12 +54,15 @@ function classNames(classes) {
  * @returns {string} a string with all the attributes and their values
  */
 function styleAttribute(attributes) {
-  return Object.entries(attributes)
-    .reduce((acc, item) => {
-      const [key, value] = item
-      return [...acc, `${key}: ${value}`]
-    }, [])
-    .join(';')
+  return (
+    Object.entries(attributes)
+      // @ts-ignore
+      .reduce((acc, item) => {
+        const [key, value] = item
+        return [...acc, `${key}: ${value}`]
+      }, [])
+      .join(';')
+  )
 }
 
 /**
@@ -58,6 +70,8 @@ function styleAttribute(attributes) {
  */
 let instanceId = 0
 
+// @ts-ignore
+// eslint-disable-next-line no-undef
 install((component) => {
   // @ts-ignore
   component.getObjectFromLocationSearch = getObjectFromLocationSearch
@@ -73,4 +87,6 @@ install((component) => {
   return component
 })
 
+// @ts-ignore
+// eslint-disable-next-line no-undef
 mount('[data-riot]')
