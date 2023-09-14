@@ -14,14 +14,14 @@
     "js-build": "esbuild src/js/main.js --bundle --minify --outfile=dist/js/main.js",
     "js": "esbuild src/js/main.js --bundle --sourcemap --outfile=dist/js/main.js",
     "preview": "npx http-server dist -o / -c-1",
-    "riot-single": "riot --output src/js/components --sourcemap file --extension html",
+    "riot-single": "riot --output src/js/components --sourcemap file",
     "riot": "riot src/riot --output src/js/components --sourcemap file",
-    "ready": "run-p html js css",
+    "ready": "run-s html riot js css",
     "start": "run-s ready watch",
     "watch:css": "onchange src/css -- npm run css",
     "watch:html": "onchange 'src/html' -- npm run html",
     "watch:js": "onchange 'src/js/**/*.js' -- npm run js",
-    "watch:riot": "riot src/riot --output dist/js --sourcemap file --extension html --watch",
+    "watch:riot": "riot src/riot --output src/js/components --sourcemap file --watch",
     "watch": "run-p watch:* preview"
   },
   "dependencies": {
