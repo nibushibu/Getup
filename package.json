@@ -13,7 +13,7 @@
     "html": "run-s html-from-riot html-format",
     "js-build": "esbuild src/js/main.js --bundle --minify --outfile=dist/js/main.js",
     "js": "esbuild src/js/main.js --bundle --sourcemap --outfile=dist/js/main.js",
-    "preview": "npx http-server dist -o / -c-1",
+    "preview": "npx http-server dist -o / -c-1 -d false",
     "riot-single": "riot --output src/js/components --sourcemap file",
     "riot": "riot src/riot --output src/js/components --sourcemap file",
     "ready": "run-s html riot js css",
@@ -25,9 +25,9 @@
     "watch": "run-p watch:* preview"
   },
   "dependencies": {
-    "@fontsource/noto-sans-jp": "^5.0.10",
+    "@fontsource/noto-sans-jp": "^5.0.13",
     "animejs": "^3.2.1",
-    "open-props": "^1.5.15",
+    "open-props": "^1.6.4",
     "riot": "^9.0.4"
   },
   "repository": {
@@ -44,24 +44,24 @@
     "@riotjs/register": "^9.0.0",
     "@riotjs/ssr": "^9.0.0",
     "cross-env": "^7.0.3",
-    "esbuild": "^0.19.2",
-    "eslint": "^8.48.0",
+    "esbuild": "^0.19.4",
+    "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
-    "glob": "^10.3.4",
-    "markuplint": "^3.12.0",
+    "glob": "^10.3.10",
+    "markuplint": "^3.13.0",
     "mkdirp": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "postcss": "^8.4.29",
+    "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "postcss-csso": "^6.0.1",
-    "postcss-custom-media": "^10.0.0",
+    "postcss-custom-media": "^10.0.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^15.1.0",
     "postcss-media-minmax": "^5.0.0",
     "postcss-normalize-charset": "^6.0.0",
-    "postcss-preset-env": "^9.1.3",
+    "postcss-preset-env": "^9.1.4",
     "prettier": "^3.0.3",
-    "prettier-plugin-css-order": "^2.0.0"
+    "prettier-plugin-css-order": "^2.0.1"
   }
 }
