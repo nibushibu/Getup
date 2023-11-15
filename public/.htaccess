@@ -13,6 +13,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 # 転送ルール：任意のURLを転送から除外
 # RewriteCond %{REQUEST_URI} !(^/cockpit/)
 
-# ルートディレクトリ（dist）のindex.htmlにリダイレクト
+# index.htmlにリダイレクト
 RewriteRule . /index.html [L]
 </IfModule>
