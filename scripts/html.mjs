@@ -5,7 +5,7 @@ import { mkdirp } from 'mkdirp'
 import render from '@riotjs/ssr'
 
 const srcDirPathFromProjectRoot = 'src/html/pages'
-const outputDir = 'dist'
+const outputDir = 'public'
 
 const files = await glob(`${srcDirPathFromProjectRoot}/**/*.riot`)
 

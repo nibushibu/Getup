@@ -1,8 +1,8 @@
-.o-fit > *:first-child {
+.o-trim > *:first-child {
   margin-top: 0;
 }
 
-.o-fit-all *:first-child {
+.o-trim-all *:first-child {
   margin-top: 0;
 }
 
