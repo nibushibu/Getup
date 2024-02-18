@@ -37,15 +37,15 @@
 }
 
 .o-layout--gap-none {
-  --gap: 0;
+  --_gap: 0;
 }
 
 .o-layout--gap-large {
-  --gap: 2em;
+  --_gap: 2em;
 }
 
 .o-layout--gap-small {
-  --gap: 0.25em;
+  --_gap: 0.25em;
 }
 
 .o-layout--inline {
@@ -209,9 +209,9 @@
   white-space: nowrap;
 }
 
-.o-word-wrap-control {
+.o-word-break-control {
   word-break: keep-all;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 @media (--mobile) {
