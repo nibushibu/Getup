@@ -7,9 +7,16 @@ import render from '@riotjs/ssr'
 const srcDirPathFromProjectRoot = 'src/html/pages'
 const outputDir = 'public'
 
-const files = await glob(`${srcDirPathFromProjectRoot}/**/*.riot`)
+const srcFiles = await glob(`${srcDirPathFromProjectRoot}/**/*.riot`)
+const oldFiles = await glob(`${outputDir}/**/*.html`)
 
-for await (const file of files) {
+for await (const file of oldFiles) {
+  fs.unlink(file, (err) => {
+    if (err) throw err
+  })
+}
+
+for await (const file of srcFiles) {
   fs.readFile(file, 'utf-8', (err, data) => {
     if (err) throw err
 
