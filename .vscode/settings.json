@@ -1,7 +1,4 @@
 {
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
   "editor.formatOnSave": true,
   "emmet.includeLanguages": {
     "riot": "html"
@@ -11,11 +8,6 @@
   },
   "prettier.semi": false,
   "prettier.singleQuote": true,
-  "standard.options": {
-    "plugins": ["html"]
-  },
-  "standard.validate": ["javascript", "html"],
-  // .vscode/settings.json file
   "cssvar.files": [
     "./node_modules/open-props/open-props.min.css",
     // if you have an alternative path to where your styles are located
