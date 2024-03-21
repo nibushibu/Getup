@@ -9,5 +9,7 @@
         "parser": "html"
       }
     }
-  ]
+  ],
+  "plugins": ["prettier-plugin-css-order"],
+  "cssDeclarationSorterOrder": "alphabetical"
 }
