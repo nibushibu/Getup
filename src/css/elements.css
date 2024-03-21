@@ -1,8 +1,8 @@
 :where(html) {
+  font-display: swap;
+  font-family: var(--base-font-family);
   font-feature-settings: 'palt' 1;
   scroll-behavior: smooth;
-  font-family: var(--base-font-family);
-  font-display: swap;
 }
 
 :where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl) {

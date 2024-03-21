@@ -1,8 +1,8 @@
 .sample-button {
-  border: 1px solid var(--color-primary);
   background-color: #fff;
-  padding: 0.5em;
+  border: 1px solid var(--color-primary);
   color: var(--color-primary);
+  padding: 0.5em;
 }
 
 .sample-button:hover {
