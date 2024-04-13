@@ -1,6 +1,6 @@
 {
   "name": "getup",
-  "version": "10.0.2",
+  "version": "10.0.3",
   "description": "Frontend boilerplate",
   "author": "nibushibu",
   "scripts": {
@@ -8,9 +8,11 @@
     "css-build": "postcss src/css/main.css --env production --config postcss.config.js --output public/css/main.css --no-map",
     "css-develop": "postcss src/css/main.css --config postcss.config.js --output public/css/main.css --map",
     "css": "npm run css-develop",
+    "dev": "npm run start",
     "html-format": "prettier 'public/**/*.html' --ignore-path --write",
     "html-from-riot": "node --loader @riotjs/register scripts/html.mjs",
-    "html": "run-s html-from-riot html-format",
+    "html": "run-s html-from-riot html-format html-lint",
+    "html-lint": "markuplint \"public/**/*.html\"",
     "js-build": "esbuild src/js/main.js --bundle --minify --outfile=public/js/main.js",
     "js": "esbuild src/js/main.js --bundle --sourcemap --outfile=public/js/main.js",
     "preview": "npx http-server public -o / -c-1 -d false --silent",
@@ -27,8 +29,8 @@
   "dependencies": {
     "@fontsource/noto-sans-jp": "^5.0.18",
     "animejs": "^3.2.2",
-    "open-props": "^1.6.21",
-    "riot": "^9.1.4"
+    "open-props": "^1.7.2",
+    "riot": "^9.1.5"
   },
   "repository": {
     "type": "git",
@@ -44,24 +46,24 @@
     "@riotjs/register": "^9.0.0",
     "@riotjs/ssr": "^9.0.0",
     "cross-env": "^7.0.3",
-    "esbuild": "^0.20.1",
-    "eslint": "^8.57.0",
+    "esbuild": "^0.20.2",
+    "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.1.0",
-    "glob": "^10.3.10",
-    "markuplint": "^4.3.0",
+    "glob": "^10.3.12",
+    "markuplint": "^4.5.0",
     "mkdirp": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "postcss": "^8.4.35",
+    "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
     "postcss-csso": "^6.0.1",
-    "postcss-custom-media": "^10.0.3",
+    "postcss-custom-media": "^10.0.4",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-import": "^16.0.1",
+    "postcss-import": "^16.1.0",
     "postcss-media-minmax": "^5.0.0",
     "postcss-normalize-charset": "^6.0.2",
-    "postcss-preset-env": "^9.5.0",
+    "postcss-preset-env": "^9.5.4",
     "prettier": "^3.2.5",
-    "prettier-plugin-css-order": "^2.0.1"
+    "prettier-plugin-css-order": "^2.1.2"
   }
 }
