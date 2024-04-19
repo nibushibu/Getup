@@ -23,13 +23,13 @@
     "watch:css": "onchange src/css -- npm run css",
     "watch:html": "onchange 'src/html' -- npm run html",
     "watch:js": "onchange 'src/js/**/*.js' -- npm run js",
-    "watch:riot": "riot src/riot --output src/js/components --sourcemap file --watch",
+    "watch:riot": "riot src/riot --output src/js/components --sourcemap file --watch --extension html",
     "watch": "run-p watch:* preview"
   },
   "dependencies": {
     "@fontsource/noto-sans-jp": "^5.0.18",
     "animejs": "^3.2.2",
-    "open-props": "^1.7.2",
+    "open-props": "^1.7.3",
     "riot": "^9.1.5"
   },
   "repository": {
@@ -46,23 +46,24 @@
     "@riotjs/register": "^9.0.0",
     "@riotjs/ssr": "^9.0.0",
     "cross-env": "^7.0.3",
+    "cssnano": "^6.1.2",
+    "cssnano-preset-lite": "^3.1.0",
     "esbuild": "^0.20.2",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.1.0",
     "glob": "^10.3.12",
-    "markuplint": "^4.5.0",
+    "markuplint": "^4.6.0",
     "mkdirp": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
-    "postcss-csso": "^6.0.1",
     "postcss-custom-media": "^10.0.4",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^16.1.0",
     "postcss-media-minmax": "^5.0.0",
     "postcss-normalize-charset": "^6.0.2",
-    "postcss-preset-env": "^9.5.4",
+    "postcss-preset-env": "^9.5.6",
     "prettier": "^3.2.5",
     "prettier-plugin-css-order": "^2.1.2"
   }
