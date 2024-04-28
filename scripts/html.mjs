@@ -7,7 +7,7 @@ import render from '@riotjs/ssr'
 const srcDirPathFromProjectRoot = 'src/html/pages'
 const outputDir = 'public'
 
-const srcFiles = await glob(`${srcDirPathFromProjectRoot}/**/*.riot`)
+const srcFiles = await glob(`${srcDirPathFromProjectRoot}/**/*.html`)
 const oldFiles = await glob(`${outputDir}/**/*.html`)
 
 for await (const file of oldFiles) {
@@ -24,9 +24,7 @@ for await (const file of srcFiles) {
       const renderedHtml = render('html', riotHtml.default)
       const dir = path.join(
         outputDir,
-        file
-          .replace(new RegExp(`${srcDirPathFromProjectRoot}/`), '')
-          .replace(/riot$/, 'html')
+        file.replace(new RegExp(`${srcDirPathFromProjectRoot}/`), '')
       )
       mkdirp(path.parse(dir).dir).then(() => {
         fs.writeFile(dir, renderedHtml, (err) => {
