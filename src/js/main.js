@@ -3,7 +3,6 @@ import { register, mount, install } from 'riot'
 import MyApp from './components/my-app.js'
 import RawHtml from './components/raw-html.js'
 import UiIcon from './components/ui-icon.js'
-import anime from 'animejs'
 
 /* eslint-disable no-undef */
 // @ts-ignore
@@ -81,8 +80,6 @@ install((component) => {
   component.styleAttribute = styleAttribute
   // @ts-ignore
   component.id = instanceId++
-  // @ts-ignore
-  component.anime = anime
 
   return component
 })
