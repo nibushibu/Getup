@@ -31,7 +31,7 @@
   "dependencies": {
     "@fontsource/noto-sans-jp": "^5.0.20",
     "open-props": "^1.7.5",
-    "riot": "^9.2.2"
+    "riot": "^9.3.0"
   },
   "repository": {
     "type": "git",
@@ -50,7 +50,7 @@
     "cssnano": "^7.0.5",
     "cssnano-preset-lite": "^4.0.2",
     "esbuild": "^0.23.1",
-    "eslint": "^9.9.0",
+    "eslint": "^9.9.1",
     "eslint-config-prettier": "^9.1.0",
     "glob": "^11.0.0",
     "markuplint": "^4.9.2",
