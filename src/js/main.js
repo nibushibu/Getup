@@ -4,14 +4,12 @@ import MyApp from './components/my-app.js'
 import RawHtml from './components/raw-html.js'
 import UiIcon from './components/ui-icon.js'
 
-/* eslint-disable no-undef */
 // @ts-ignore
 register('my-app', MyApp)
 // @ts-ignore
 register('raw-html', RawHtml)
 // @ts-ignore
 register('ui-icon', UiIcon)
-/* eslint-enable no-undef */
 
 /**
  * GETパラメーターをObjectとして返す関数
@@ -70,7 +68,6 @@ function styleAttribute(attributes) {
 let instanceId = 0
 
 // @ts-ignore
-// eslint-disable-next-line no-undef
 install((component) => {
   // @ts-ignore
   component.getObjectFromLocationSearch = getObjectFromLocationSearch
@@ -85,5 +82,4 @@ install((component) => {
 })
 
 // @ts-ignore
-// eslint-disable-next-line no-undef
 mount('[data-riot]')

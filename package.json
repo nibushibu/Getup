@@ -3,6 +3,7 @@
   "version": "10.0.3",
   "description": "Frontend boilerplate",
   "author": "nibushibu",
+  "type": "module",
   "scripts": {
     "build": "cross-env NODE_ENV=production run-s html css-build js-build",
     "css-build": "postcss src/css/main.css --env production --config postcss.config.js --output public/css/main.css --no-map",
@@ -26,12 +27,14 @@
     "watch:js": "onchange 'src/js/**/*.js' -- npm run js",
     "watch:riot": "riot src/riot --output src/js/components --sourcemap file --watch --extension html",
     "watch:riot-lint": "onchange 'src/riot' -- npm run riot-lint",
-    "watch": "run-p watch:* preview"
+    "watch": "run-p watch:* preview",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "dependencies": {
     "@fontsource/noto-sans-jp": "^5.1.0",
-    "open-props": "^1.7.6",
-    "riot": "^9.4.0"
+    "open-props": "^1.7.7",
+    "riot": "^9.4.1"
   },
   "repository": {
     "type": "git",
@@ -50,7 +53,7 @@
     "cssnano": "^7.0.6",
     "cssnano-preset-lite": "^4.0.3",
     "esbuild": "^0.24.0",
-    "eslint": "^9.11.1",
+    "eslint": "^9.12.0",
     "eslint-config-prettier": "^9.1.0",
     "glob": "^11.0.0",
     "markuplint": "^4.9.4",
@@ -59,10 +62,10 @@
     "onchange": "^7.1.0",
     "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0",
-    "postcss-custom-media": "^11.0.1",
+    "postcss-custom-media": "^11.0.3",
     "postcss-import": "^16.1.0",
     "postcss-normalize-charset": "^7.0.0",
-    "postcss-preset-env": "^10.0.5",
+    "postcss-preset-env": "^10.0.7",
     "prettier": "^3.3.3",
     "prettier-plugin-css-order": "^2.1.2"
   }
