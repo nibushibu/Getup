@@ -15,6 +15,12 @@
         "invalid-attr": false,
         "deprecated-element": true
       }
+    },
+    {
+      "selector": "path",
+      "rules": {
+        "invalid-attr": false
+      }
     }
   ]
 }

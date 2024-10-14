@@ -1,13 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html-base>
-
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>{ props.title ? props.title : state.title }</title>
-    <meta if="{ props.meta }" each="{ meta in props.meta }" {...meta}>
-    <meta if="{ !props.meta }" each="{ meta in state.meta }" {...meta}>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="{ this.props.toRoot }css/main.css">
+    <meta if="{ props.meta }" each="{ meta in props.meta }" {...meta} />
+    <meta if="{ !props.meta }" each="{ meta in state.meta }" {...meta} />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="{ this.props.toRoot }css/main.css" />
     <script src="{ this.props.toRoot }js/main.js" defer></script>
   </head>
 
@@ -17,10 +16,10 @@
   </body>
 
   <script>
-    import StaticComponent from '../components/static-component.riot'
+    import StaticComponent from '../components/static-component.html'
 
     HtmlBase.components = {
-      StaticComponent,
+      StaticComponent
     }
 
     function HtmlBase() {
@@ -30,18 +29,17 @@
           meta: [
             {
               name: 'description',
-              content: 'a description',
+              content: 'a description'
             },
             {
               property: 'og:title',
-              content: 'ogp title',
-            },
-          ],
-        },
+              content: 'ogp title'
+            }
+          ]
+        }
       }
     }
 
     export default HtmlBase
   </script>
-
 </html-base>
