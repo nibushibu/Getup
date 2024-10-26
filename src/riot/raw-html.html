@@ -3,6 +3,7 @@
 
   <script>
     export default {
+      observedAttributes: ['data-html'],
       setContent() {
         this.$('[data-ref="content"]').innerHTML = String(this.props.dataHtml)
       },

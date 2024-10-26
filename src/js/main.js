@@ -1,15 +1,16 @@
 // @ts-check
-import { register, mount, install } from 'riot'
+import { mount, install } from 'riot'
 import MyApp from './components/my-app.js'
 import RawHtml from './components/raw-html.js'
 import UiIcon from './components/ui-icon.js'
+import define from '@riotjs/custom-elements'
 
 // @ts-ignore
-register('my-app', MyApp)
+define('my-app', MyApp)
 // @ts-ignore
-register('raw-html', RawHtml)
+define('raw-html', RawHtml)
 // @ts-ignore
-register('ui-icon', UiIcon)
+define('ui-icon', UiIcon)
 
 /**
  * GETパラメーターをObjectとして返す関数
@@ -80,6 +81,3 @@ install((component) => {
 
   return component
 })
-
-// @ts-ignore
-mount('[data-riot]')
