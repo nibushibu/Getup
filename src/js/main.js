@@ -68,16 +68,4 @@ function styleAttribute(attributes) {
  */
 let instanceId = 0
 
-// @ts-ignore
-install((component) => {
-  // @ts-ignore
-  component.getObjectFromLocationSearch = getObjectFromLocationSearch
-  // @ts-ignore
-  component.classNames = classNames
-  // @ts-ignore
-  component.styleAttribute = styleAttribute
-  // @ts-ignore
-  component.id = instanceId++
-
-  return component
-})
+const rootPath = '/'

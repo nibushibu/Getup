@@ -100,10 +100,14 @@
       width: 1em;
     }
   </style>
+  <link rel="stylesheet" href="{ window.rootPath }css/main.css" />
 
   <script>
     export default function UiIcon() {
       return {
+        onBeforeMount() {
+          this.id = window.instanceId++
+        },
         getFill() {
           return this.props.dataFillGradient
             ? `url(#gradient-${this.id})`
