@@ -16,7 +16,7 @@
     "html-lint": "markuplint \"public/**/*.html\"",
     "js-build": "esbuild src/js/main.js --bundle --minify --outfile=public/js/main.js",
     "js": "esbuild src/js/main.js --bundle --sourcemap --outfile=public/js/main.js",
-    "preview": "npx http-server public -o / -c-1 -d false --silent",
+    "preview": "npx http-server public -o / -d false --silent",
     "riot-single": "riot --output src/js/components --sourcemap file -e html",
     "riot": "riot src/riot --output src/js/components --sourcemap file -e html",
     "riot-lint": "markuplint \"src/riot/**/*.html\"",
