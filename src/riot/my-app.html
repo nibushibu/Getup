@@ -1,4 +1,6 @@
 <my-app>
+  <link rel="stylesheet" href="{ window.rootPath }css/main.css" />
+  <link rel="stylesheet" href="{ window.rootPath }css/my-app.css" />
   <h1>Thie is Riot test.</h1>
   <ui-icon
     data-icon="globe"
@@ -15,55 +17,33 @@
       my-appをアンマウント
     </button>
   </p>
+  <ul>
+    <li each="{item in state.list}">{item}</li>
+  </ul>
   <p>
     <raw-html data-html="<b>コンポーネントのテスト</b>"></raw-html>
   </p>
   <h2>スロットの内容</h2>
   <slot></slot>
 
-  <style>
-    h1 {
-      color: green;
-      display: flex;
-    }
-
-    @keyframes animation-button {
-      0% {
-        transform: translateX(0);
-      }
-
-      50% {
-        transform: translateX(20px);
-      }
-
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-    .unmount-animation {
-      animation: animation-button 1s infinite;
-      opacity: 1;
-      transition: opacity 1s;
-    }
-
-    .unmount-animation.is-unmount {
-      opacity: 0;
-    }
-  </style>
-
   <script>
     export default {
       state: {
         finishAnimation: false,
-        test: 'Hello Riot!'
+        test: 'Hello Riot!',
+        list: ['riot', 'vue', 'react']
       },
-      animationUnmount(e) {
-        this.$('[data-ref="button"]').addEventListener('transitionend', (e) => {
-          console.log('button transitionend')
-          this.unmount()
-        })
-        this.$('[data-ref="button"]').classList.add('is-unmount')
+      animationUnmount(clickEvent) {
+        console.log(this.root.shadow.querySelector('button'))
+        this.root.shadow
+          .querySelector('[data-ref="button"]')
+          .addEventListener('transitionend', (event) => {
+            console.log('button transitionend')
+            this.unmount()
+          })
+        this.root.shadow
+          .querySelector('[data-ref="button"]')
+          .classList.add('is-unmount')
       }
     }
   </script>
