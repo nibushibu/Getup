@@ -1,5 +1,4 @@
 // @ts-check
-import { mount, install } from 'riot'
 import MyApp from './components/my-app.js'
 import RawHtml from './components/raw-html.js'
 import UiIcon from './components/ui-icon.js'

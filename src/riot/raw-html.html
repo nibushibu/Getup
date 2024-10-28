@@ -1,18 +1,28 @@
 <raw-html>
-  <span data-ref="content"></span>
+  <span data-ref="content" onclick="{change}">text</span>
 
   <script>
-    export default {
-      observedAttributes: ['data-html'],
-      setContent() {
-        this.$('[data-ref="content"]').innerHTML = String(this.props.dataHtml)
-      },
-      onMounted() {
-        this.setContent()
-        let test = 0
-      },
-      onUpdated() {
-        this.setContent()
+    export default function RawHtml() {
+      return {
+        observedAttributes: ['data-html'],
+        state: {
+          message: ''
+        },
+        setContent() {
+          this.root.shadow.querySelector('[data-ref="content"]').innerHTML =
+            String(this.props.dataHtml) + this.state.message
+        },
+        onMounted() {
+          requestAnimationFrame(() => {
+            this.setContent()
+          })
+        },
+        onUpdated() {
+          this.setContent()
+        },
+        change() {
+          this.update({ message: ' clicked' })
+        }
       }
     }
   </script>
