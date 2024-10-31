@@ -2,6 +2,7 @@
   <ul if="{state.list.length > 0}">
     <li each="{item in state.list}">{item}</li>
   </ul>
+  <button onclick="{click}">do something from parent</button>
   <script>
     export default {
       observedAttributes: ['data-list'],
@@ -11,6 +12,11 @@
       },
       onUpdated() {
         console.log('onUpdate')
+      },
+      click() {
+        if (this.doSomethingfromParent) {
+          this.doSomethingfromParent()
+        }
       }
     }
   </script>

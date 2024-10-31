@@ -53,6 +53,9 @@
           const myList = this.root.shadow.querySelector('my-list')
           // myList.component.update({ list: ['☺️', '😊', '😎'] })
           myList.component.state.list = ['☺️', '😊', '😎']
+          myList.component.doSomethingfromParent = () => {
+            console.log('doSomethingfromParent')
+          }
           myList.component.update()
         })
       },
