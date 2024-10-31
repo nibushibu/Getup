@@ -1,10 +1,10 @@
 <my-app>
   <link rel="stylesheet" href="{ window.rootPath }css/main.css" />
   <link rel="stylesheet" href="{ window.rootPath }css/my-app.css" />
-  <h1>Thie is Riot test.</h1>
+  <h1>This is Riot.</h1>
   <ui-icon
     data-icon="globe"
-    data-fill-gradient="{true}"
+    data-fill-gradient="{false}"
     class="c-test-icon"
   ></ui-icon>
   <p>{ state.test }</p>
@@ -23,18 +23,21 @@
   <p>
     <raw-html data-html="<b>コンポーネントのテスト</b>"></raw-html>
   </p>
+  <p></p>
   <h2>スロットの内容</h2>
   <slot></slot>
+  <button data-ref="change-button" onclick="{change}">Change</button>
+  <my-list data-number=""></my-list>
 
   <script>
     export default {
       state: {
         finishAnimation: false,
         test: 'Hello Riot!',
-        list: ['riot', 'vue', 'react']
+        list: ['riot', 'vue', 'react'],
+        obj: { org: 'riotjs', repo: 'riot' }
       },
       animationUnmount(clickEvent) {
-        console.log(this.root.shadow.querySelector('button'))
         this.root.shadow
           .querySelector('[data-ref="button"]')
           .addEventListener('transitionend', (event) => {
@@ -44,6 +47,21 @@
         this.root.shadow
           .querySelector('[data-ref="button"]')
           .classList.add('is-unmount')
+      },
+      onMounted() {
+        requestAnimationFrame(() => {
+          const myList = this.root.shadow.querySelector('my-list')
+          // myList.component.update({ list: ['☺️', '😊', '😎'] })
+          myList.component.state.list = ['☺️', '😊', '😎']
+          myList.component.update()
+        })
+      },
+      change() {
+        const targetElement = this.root.shadow.querySelector('raw-html')
+        targetElement.dataset.html = '<b>変更された</b>'
+      },
+      eventCastTest() {
+        console.log('eventCastTest')
       }
     }
   </script>

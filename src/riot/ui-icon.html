@@ -90,16 +90,14 @@
   <link rel="stylesheet" href="{ window.rootPath }css/ui-icon.css" />
 
   <script>
-    export default function UiIcon() {
-      return {
-        onBeforeMount() {
-          this.id = window.instanceId++
-        },
-        getFill() {
-          return this.props.dataFillGradient
-            ? `url(#gradient-${this.id})`
-            : 'currentColor'
-        }
+    export default {
+      onBeforeMount() {
+        this.id = window.instanceId++
+      },
+      getFill() {
+        return this.props.dataFillGradient
+          ? `url(#gradient-${this.id})`
+          : 'currentColor'
       }
     }
   </script>

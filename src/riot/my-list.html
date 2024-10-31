@@ -1,0 +1,17 @@
+<my-list>
+  <ul if="{state.list.length > 0}">
+    <li each="{item in state.list}">{item}</li>
+  </ul>
+  <script>
+    export default {
+      observedAttributes: ['data-list'],
+      state: { list: ['👍', '👎', '👌'] },
+      onMounted() {
+        console.log(this.props)
+      },
+      onUpdated() {
+        console.log('onUpdate')
+      }
+    }
+  </script>
+</my-list>

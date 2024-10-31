@@ -1,15 +1,14 @@
 // @ts-check
 import MyApp from './components/my-app.js'
+import MyList from './components/my-list.js'
 import RawHtml from './components/raw-html.js'
 import UiIcon from './components/ui-icon.js'
 import define from '@riotjs/custom-elements'
 
-// @ts-ignore
-define('my-app', MyApp)
-// @ts-ignore
-define('raw-html', RawHtml)
-// @ts-ignore
-define('ui-icon', UiIcon)
+define('my-app', MyApp, {})
+define('my-list', MyList, {})
+define('raw-html', RawHtml, {})
+define('ui-icon', UiIcon, {})
 
 /**
  * GETパラメーターをObjectとして返す関数
