@@ -87,7 +87,19 @@
     </svg>
   </template>
   <link rel="stylesheet" href="{ window.rootPath }css/main.css" />
-  <link rel="stylesheet" href="{ window.rootPath }css/ui-icon.css" />
+  <style>
+    :host {
+      align-items: center;
+      display: inline-flex;
+      justify-content: flex-start;
+      vertical-align: baseline;
+    }
+
+    svg {
+      height: 1em;
+      width: 1em;
+    }
+  </style>
 
   <script>
     export default {

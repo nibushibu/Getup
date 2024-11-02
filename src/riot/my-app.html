@@ -1,6 +1,5 @@
 <my-app>
   <link rel="stylesheet" href="{ window.rootPath }css/main.css" />
-  <link rel="stylesheet" href="{ window.rootPath }css/my-app.css" />
   <h1>This is Riot.</h1>
   <ui-icon
     data-icon="globe"
@@ -28,6 +27,37 @@
   <slot></slot>
   <button data-ref="change-button" onclick="{change}">Change</button>
   <my-list data-number=""></my-list>
+
+  <style>
+    h1 {
+      color: green;
+      display: flex;
+    }
+
+    @keyframes animation-button {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(20px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .unmount-animation {
+      animation: animation-button 1s infinite;
+      opacity: 1;
+      transition: opacity 1s;
+    }
+
+    .unmount-animation.is-unmount {
+      opacity: 0;
+    }
+  </style>
 
   <script>
     export default {
