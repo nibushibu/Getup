@@ -7,7 +7,10 @@ import { compile } from '@riotjs/compiler'
 const srcDir = 'src/riot'
 const outputDir = 'src/js/components'
 
-const srcFiles = await glob(`${srcDir}/**/*.html`)
+const args = process.argv.slice(2)
+console.log(args)
+
+const srcFiles = args[0] ? [args[0]] : await glob(`${srcDir}/**/*.html`)
 const oldFiles = await glob(`${outputDir}/**/*.html`)
 
 for await (const file of oldFiles) {
