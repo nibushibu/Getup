@@ -79,15 +79,12 @@
           .classList.add('is-unmount')
       },
       onMounted() {
-        requestAnimationFrame(() => {
-          const myList = this.root.shadow.querySelector('my-list')
-          // myList.component.update({ list: ['☺️', '😊', '😎'] })
-          myList.component.state.list = ['☺️', '😊', '😎']
-          myList.component.doSomethingfromParent = () => {
-            console.log('doSomethingfromParent')
-          }
-          myList.component.update()
-        })
+        const myList = this.root.shadow.querySelector('my-list')
+        myList.component.state.list = ['☺️', '😊', '😎']
+        myList.component.doSomethingfromParent = () => {
+          console.log('doSomethingfromParent')
+        }
+        myList.component.update()
       },
       change() {
         const targetElement = this.root.shadow.querySelector('raw-html')

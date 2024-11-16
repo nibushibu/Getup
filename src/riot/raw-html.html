@@ -12,9 +12,7 @@
           String(this.props.dataHtml) + this.state.message
       },
       onMounted() {
-        requestAnimationFrame(() => {
-          this.setContent()
-        })
+        this.setContent()
       },
       onUpdated() {
         this.setContent()
