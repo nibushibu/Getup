@@ -80,11 +80,11 @@
       },
       onMounted() {
         const myList = this.root.shadow.querySelector('my-list')
-        requestAnimationFrame(() => {
+        myList.addEventListener('childToParent', (event) => {
+          console.log(event.detail.message)
+        })
+        myList.addEventListener('setState', (event) => {
           myList.component.state.list = ['☺️', '😊', '😎']
-          myList.component.doSomethingfromParent = () => {
-            console.log('doSomethingfromParent')
-          }
           myList.component.update()
         })
       },

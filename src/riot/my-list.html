@@ -8,7 +8,12 @@
       observedAttributes: ['data-list'],
       state: { list: ['👍', '👎', '👌'] },
       onMounted() {
-        console.log(this.props)
+        const childToParent = new CustomEvent('childToParent', {
+          detail: { message: 'Hello from child' }
+        })
+        this.root.dispatchEvent(childToParent)
+        const setState = new CustomEvent('setState')
+        this.root.dispatchEvent(setState)
       },
       onUpdated() {
         console.log('onUpdate')
