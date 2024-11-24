@@ -1,3 +1,7 @@
+body:has(:not(:defined)) {
+  opacity: 0;
+}
+
 :where(html) {
   font-display: swap;
   font-family: var(--base-font-family);
