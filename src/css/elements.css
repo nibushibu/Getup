@@ -1,5 +1,5 @@
-body:has(:not(:defined)) {
-  opacity: 0;
+:not(:defined) {
+  visibility: hidden;
 }
 
 :where(html) {
