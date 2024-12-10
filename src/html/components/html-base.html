@@ -5,7 +5,10 @@
     <title>{ props.title ? props.title : state.title }</title>
     <meta if="{ props.meta }" each="{ meta in props.meta }" {...meta} />
     <meta if="{ !props.meta }" each="{ meta in state.meta }" {...meta} />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,interactive-widget=resizes-content"
+    />
     <link rel="stylesheet" href="{ this.props.toRoot }css/main.css" />
     <script src="{ this.props.toRoot }js/main.js" defer></script>
   </head>
