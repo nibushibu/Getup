@@ -52,7 +52,7 @@
     "cssnano": "^7.0.6",
     "cssnano-preset-lite": "^4.0.3",
     "esbuild": "^0.24.0",
-    "eslint": "^9.16.0",
+    "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "glob": "^11.0.0",
     "markuplint": "^4.11.4",
@@ -64,7 +64,7 @@
     "postcss-custom-media": "^11.0.5",
     "postcss-import": "^16.1.0",
     "postcss-normalize-charset": "^7.0.0",
-    "postcss-preset-env": "^10.1.1",
+    "postcss-preset-env": "^10.1.2",
     "prettier": "^3.4.2",
     "prettier-plugin-css-order": "^2.1.2"
   }
