@@ -1,0 +1,28 @@
+<my-list>
+  <ul if="{state.list.length > 0}">
+    <li each="{item in state.list}">{item}</li>
+  </ul>
+  <button onclick="{click}">do something from parent</button>
+  <script>
+    export default {
+      observedAttributes: ['data-list'],
+      state: { list: ['👍', '👎', '👌'] },
+      onMounted() {
+        const childToParent = new CustomEvent('childToParent', {
+          detail: { message: 'Hello from child' }
+        })
+        this.root.dispatchEvent(childToParent)
+        const setState = new CustomEvent('setState')
+        this.root.dispatchEvent(setState)
+      },
+      onUpdated() {
+        console.log('onUpdate')
+      },
+      click() {
+        if (this.doSomethingfromParent) {
+          this.doSomethingfromParent()
+        }
+      }
+    }
+  </script>
+</my-list>

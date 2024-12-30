@@ -1,12 +1,14 @@
-import { register, mount, install } from 'riot'
-import App from './components/src/riot/my-app.riot.js'
-import RawHtml from './components/src/riot/raw-html.riot.js'
-import anime from '../../node_modules/animejs/lib/anime.es.js'
+// @ts-check
+import MyApp from './components/my-app.js'
+import MyList from './components/my-list.js'
+import RawHtml from './components/raw-html.js'
+import UiIcon from './components/ui-icon.js'
+import define from '@riotjs/custom-elements'
 
-// @ts-ignore
-register('my-app', App)
-// @ts-ignore
-register('raw-html', RawHtml)
+define('my-app', MyApp, {})
+define('my-list', MyList, {})
+define('raw-html', RawHtml, {})
+define('ui-icon', UiIcon, {})
 
 /**
  * GETパラメーターをObjectとして返す関数
@@ -30,13 +32,16 @@ function getObjectFromLocationSearch() {
  * @returns {string} return only the classes having a truthy value
  */
 function classNames(classes) {
-  return Object.entries(classes)
-    .reduce((acc, item) => {
-      const [key, value] = item
-      if (value) return [...acc, key]
-      return acc
-    }, [])
-    .join(' ')
+  return (
+    Object.entries(classes)
+      // @ts-ignore
+      .reduce((acc, item) => {
+        const [key, value] = item
+        if (value) return [...acc, key]
+        return acc
+      }, [])
+      .join(' ')
+  )
 }
 
 /**
@@ -45,12 +50,15 @@ function classNames(classes) {
  * @returns {string} a string with all the attributes and their values
  */
 function styleAttribute(attributes) {
-  return Object.entries(attributes)
-    .reduce((acc, item) => {
-      const [key, value] = item
-      return [...acc, `${key}: ${value}`]
-    }, [])
-    .join(';')
+  return (
+    Object.entries(attributes)
+      // @ts-ignore
+      .reduce((acc, item) => {
+        const [key, value] = item
+        return [...acc, `${key}: ${value}`]
+      }, [])
+      .join(';')
+  )
 }
 
 /**
@@ -58,19 +66,4 @@ function styleAttribute(attributes) {
  */
 let instanceId = 0
 
-install((component) => {
-  // @ts-ignore
-  component.getObjectFromLocationSearch = getObjectFromLocationSearch
-  // @ts-ignore
-  component.classNames = classNames
-  // @ts-ignore
-  component.styleAttribute = styleAttribute
-  // @ts-ignore
-  component.id = instanceId++
-  // @ts-ignore
-  component.anime = anime
-
-  return component
-})
-
-mount('[data-riot]')
+const rootPath = '/'

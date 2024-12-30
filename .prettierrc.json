@@ -1,5 +1,15 @@
 {
   "semi": false,
   "singleQuote": true,
-  "trailingComma": "none"
+  "trailingComma": "none",
+  "overrides": [
+    {
+      "files": "*.riot",
+      "options": {
+        "parser": "html"
+      }
+    }
+  ],
+  "plugins": ["prettier-plugin-css-order"],
+  "cssDeclarationSorterOrder": "alphabetical"
 }

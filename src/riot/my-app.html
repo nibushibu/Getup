@@ -1,0 +1,100 @@
+<my-app>
+  <link rel="stylesheet" href="{ window.rootPath }css/main.css" />
+  <h1>This is Riot.</h1>
+  <ui-icon
+    data-icon="globe"
+    data-fill-gradient="{false}"
+    class="c-test-icon"
+  ></ui-icon>
+  <p>{ state.test }</p>
+  <p>
+    <button
+      class="unmount-animation"
+      onclick="{ animationUnmount }"
+      data-ref="button"
+    >
+      my-appをアンマウント
+    </button>
+  </p>
+  <ul>
+    <li each="{item in state.list}">{item}</li>
+  </ul>
+  <p>
+    <raw-html data-html="<b>コンポーネントのテスト</b>"></raw-html>
+  </p>
+  <p></p>
+  <h2>スロットの内容</h2>
+  <slot></slot>
+  <button data-ref="change-button" onclick="{change}">Change</button>
+  <my-list data-number=""></my-list>
+
+  <style>
+    h1 {
+      color: green;
+      display: flex;
+    }
+
+    @keyframes animation-button {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(20px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .unmount-animation {
+      animation: animation-button 1s infinite;
+      opacity: 1;
+      transition: opacity 1s;
+    }
+
+    .unmount-animation.is-unmount {
+      opacity: 0;
+    }
+  </style>
+
+  <script>
+    export default {
+      state: {
+        finishAnimation: false,
+        test: 'Hello Riot!',
+        list: ['riot', 'vue', 'react'],
+        obj: { org: 'riotjs', repo: 'riot' }
+      },
+      animationUnmount(clickEvent) {
+        this.root.shadow
+          .querySelector('[data-ref="button"]')
+          .addEventListener('transitionend', (event) => {
+            console.log('button transitionend')
+            this.unmount()
+          })
+        this.root.shadow
+          .querySelector('[data-ref="button"]')
+          .classList.add('is-unmount')
+      },
+      onMounted() {
+        const myList = this.root.shadow.querySelector('my-list')
+        myList.addEventListener('childToParent', (event) => {
+          console.log(event.detail.message)
+        })
+        myList.addEventListener('setState', (event) => {
+          myList.component.state.list = ['☺️', '😊', '😎']
+          myList.component.update()
+        })
+      },
+      change() {
+        const targetElement = this.root.shadow.querySelector('raw-html')
+        targetElement.dataset.html = '<b>変更された</b>'
+      },
+      eventCastTest() {
+        console.log('eventCastTest')
+      }
+    }
+  </script>
+</my-app>

@@ -1,0 +1,26 @@
+{
+  "extends": ["markuplint:recommended"],
+  "rules": {
+    "no-use-event-handler-attr": false,
+    "invalid-attr": {
+      "options": {
+        "ignoreAttrNamePrefix": ["each", "if", "is"]
+      }
+    }
+  },
+  "nodeRules": [
+    {
+      "selector": "template",
+      "rules": {
+        "invalid-attr": false,
+        "deprecated-element": true
+      }
+    },
+    {
+      "selector": "path",
+      "rules": {
+        "invalid-attr": false
+      }
+    }
+  ]
+}

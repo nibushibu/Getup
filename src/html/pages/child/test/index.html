@@ -1,0 +1,30 @@
+<html lang="ja">
+  <template
+    is="html-base"
+    title="{ state.title }"
+    meta="{ state.meta }"
+    to-root="../../"
+  >
+    <template is="static-header"></template>
+    <p>page content</p>
+  </template>
+  <script>
+    import HtmlBase from '../../../components/html-base.html'
+    import StaticHeader from '../../../components/static-header.html'
+    export default {
+      components: {
+        HtmlBase,
+        StaticHeader
+      },
+      state: {
+        title: 'Test: title from props',
+        meta: [
+          {
+            name: 'description',
+            content: 'test: description from props'
+          }
+        ]
+      }
+    }
+  </script>
+</html>

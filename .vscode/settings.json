@@ -1,18 +1,17 @@
 {
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
   "editor.formatOnSave": true,
   "emmet.includeLanguages": {
     "riot": "html"
   },
-  "files.associations": {
-    "*.riot": "html"
-  },
   "prettier.semi": false,
   "prettier.singleQuote": true,
-  "standard.options": {
-    "plugins": ["html"]
-  },
-  "standard.validate": ["javascript", "html"]
+  "cssvar.files": [
+    "./node_modules/open-props/open-props.min.css",
+    "assets/styles/variables.css"
+  ],
+  "cssvar.ignore": [],
+  "cssvar.extensions": ["css", "postcss", "html"],
+  "file_types": {
+    "HTML": ["riot"]
+  }
 }
