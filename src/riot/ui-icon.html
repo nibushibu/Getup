@@ -86,7 +86,7 @@
       </defs>
     </svg>
   </template>
-
+  <link rel="stylesheet" href="{ window.rootPath }css/main.css" />
   <style>
     :host {
       align-items: center;
@@ -102,13 +102,14 @@
   </style>
 
   <script>
-    export default function UiIcon() {
-      return {
-        getFill() {
-          return this.props.dataFillGradient
-            ? `url(#gradient-${this.id})`
-            : 'currentColor'
-        }
+    export default {
+      onBeforeMount() {
+        this.id = window.instanceId++
+      },
+      getFill() {
+        return this.props.dataFillGradient
+          ? `url(#gradient-${this.id})`
+          : 'currentColor'
       }
     }
   </script>

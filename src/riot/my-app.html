@@ -1,8 +1,9 @@
 <my-app>
-  <h1>Thie is Riot test.</h1>
+  <link rel="stylesheet" href="{ window.rootPath }css/main.css" />
+  <h1>This is Riot.</h1>
   <ui-icon
     data-icon="globe"
-    data-fill-gradient="{true}"
+    data-fill-gradient="{false}"
     class="c-test-icon"
   ></ui-icon>
   <p>{ state.test }</p>
@@ -15,11 +16,17 @@
       my-appをアンマウント
     </button>
   </p>
+  <ul>
+    <li each="{item in state.list}">{item}</li>
+  </ul>
   <p>
-    <raw-html data-html="コンポーネントのテスト"></raw-html>
+    <raw-html data-html="<b>コンポーネントのテスト</b>"></raw-html>
   </p>
+  <p></p>
   <h2>スロットの内容</h2>
   <slot></slot>
+  <button data-ref="change-button" onclick="{change}">Change</button>
+  <my-list data-number=""></my-list>
 
   <style>
     h1 {
@@ -56,14 +63,37 @@
     export default {
       state: {
         finishAnimation: false,
-        test: 'Hello Riot!'
+        test: 'Hello Riot!',
+        list: ['riot', 'vue', 'react'],
+        obj: { org: 'riotjs', repo: 'riot' }
       },
-      animationUnmount(e) {
-        this.$('[data-ref="button"]').addEventListener('transitionend', (e) => {
-          console.log('button transitionend')
-          this.unmount()
+      animationUnmount(clickEvent) {
+        this.root.shadow
+          .querySelector('[data-ref="button"]')
+          .addEventListener('transitionend', (event) => {
+            console.log('button transitionend')
+            this.unmount()
+          })
+        this.root.shadow
+          .querySelector('[data-ref="button"]')
+          .classList.add('is-unmount')
+      },
+      onMounted() {
+        const myList = this.root.shadow.querySelector('my-list')
+        myList.addEventListener('childToParent', (event) => {
+          console.log(event.detail.message)
         })
-        this.$('[data-ref="button"]').classList.add('is-unmount')
+        myList.addEventListener('setState', (event) => {
+          myList.component.state.list = ['☺️', '😊', '😎']
+          myList.component.update()
+        })
+      },
+      change() {
+        const targetElement = this.root.shadow.querySelector('raw-html')
+        targetElement.dataset.html = '<b>変更された</b>'
+      },
+      eventCastTest() {
+        console.log('eventCastTest')
       }
     }
   </script>
