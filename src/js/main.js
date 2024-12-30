@@ -1,15 +1,14 @@
 // @ts-check
-import { register, mount, install } from 'riot'
 import MyApp from './components/my-app.js'
+import MyList from './components/my-list.js'
 import RawHtml from './components/raw-html.js'
 import UiIcon from './components/ui-icon.js'
+import define from '@riotjs/custom-elements'
 
-// @ts-ignore
-register('my-app', MyApp)
-// @ts-ignore
-register('raw-html', RawHtml)
-// @ts-ignore
-register('ui-icon', UiIcon)
+define('my-app', MyApp, {})
+define('my-list', MyList, {})
+define('raw-html', RawHtml, {})
+define('ui-icon', UiIcon, {})
 
 /**
  * GETパラメーターをObjectとして返す関数
@@ -67,19 +66,4 @@ function styleAttribute(attributes) {
  */
 let instanceId = 0
 
-// @ts-ignore
-install((component) => {
-  // @ts-ignore
-  component.getObjectFromLocationSearch = getObjectFromLocationSearch
-  // @ts-ignore
-  component.classNames = classNames
-  // @ts-ignore
-  component.styleAttribute = styleAttribute
-  // @ts-ignore
-  component.id = instanceId++
-
-  return component
-})
-
-// @ts-ignore
-mount('[data-riot]')
+const rootPath = '/'

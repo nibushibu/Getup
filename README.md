@@ -1,28 +1,26 @@
 # Getup ✊
 
-Riot.js を使って静的な HTML や SPA を制作するためのテンプレートです。
+Riot.js を使って静的な HTML や SPA、WebComponents などを制作するためのテンプレートです。
 
 ## 開発用コマンド一覧
 
 ### 開発用タスク
 
-```bash
+```zsh
 npm run start
 ```
 
 ### プロダクションファイルのビルド
 
-```bash
+```zsh
 npm run build
 ```
 
-## コーディングスタイルガイドライン（🚧 整備中 🚧）
+## コーディングスタイルガイドライン
 
 ### HTML/CSS
 
-HTML と CSS は原則 [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#Protocol) に準拠することを目指します。
-
-- [Google HTML/CSS Style Guide（英語）](https://google.github.io/styleguide/htmlcssguide.html#Protocol)
+HTML と CSS は原則 [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) を踏襲しています。
 
 主に意識する点は以下の通りです。
 
@@ -34,7 +32,7 @@ HTML と CSS は原則 [Google HTML/CSS Style Guide](https://google.github.io/st
 
 ITCSS と BEM に基づいて命名します。
 
-ITCSS のレイヤー名は意味性をよりわかりやすく以下のようにアレンジしています。
+ITCSS のレイヤーの考え方に基づいて、
 
 | レイヤー名 | 役割                                                          |
 | ---------- | ------------------------------------------------------------- |
@@ -55,10 +53,24 @@ CSS ファイルに記述するスタイルは、極力 010 （クラス1つ分�
 
 ```css
 .class-name {
+  /* ... */
 }
+
 .class-name > * {
+  /* ... */
 }
+
 .class-name > * + * {
+  /* ... */
+}
+
+.class-name {
+  :where(.child-class) {
+    /* ... */
+  }
+  :where(element-name) {
+    /* ... */
+  }
 }
 ```
 
@@ -104,11 +116,3 @@ CSS ファイルに記述するスタイルは、極力 010 （クラス1つ分�
 たとえば、見出しは通常、本文よりも大きい余白を持ちますが、それは前の要素から新しい章に入った事を示すためです。（見出しは本文よりも前の要素に対する距離・関連度が大きい）
 
 余白が前の要素に対する距離・関連度を表すのであれば、コンテキストの方向と逆（上）に余白を持つほうが自然です。
-
-逆に、`p` タグでの余白を下に持つとどうなるかも考えてみます。
-
-`p` タグの後に、また `p` タグが続く場合と、新たに `h2` などの見出しタグが続く場合を比較すると、通常であれば後者のほうが `p` タグの後の余白は大きくなる事が期待されます。
-
-しかし、`p` 自身は自分のあとにどのような要素が入るかを知ることはできないため、余白を下（コンテキストの進む方向）に取ってしまうと、`p` → `p` よりも `p` → `h2` の間のほうが余白が大きくなる、という期待される表示を実現する事ができません。
-
-以上のことから、余白は原則、コンテキストの方向と逆（つまり上や左）にとることが自然であると考えます。

@@ -1,3 +1,7 @@
+:not(:defined) {
+  visibility: hidden;
+}
+
 :where(html) {
   font-display: swap;
   font-family: var(--base-font-family);
