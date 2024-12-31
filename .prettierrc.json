@@ -8,6 +8,12 @@
       "options": {
         "parser": "html"
       }
+    },
+    {
+      "files": "*.svg",
+      "options": {
+        "parser": "html"
+      }
     }
   ],
   "plugins": ["prettier-plugin-css-order"],
