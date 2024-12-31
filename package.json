@@ -33,7 +33,7 @@
   "dependencies": {
     "@fontsource/noto-sans-jp": "^5.1.1",
     "@riotjs/custom-elements": "^9.0.1",
-    "open-props": "^1.7.9",
+    "open-props": "^1.7.10",
     "riot": "^9.4.4"
   },
   "repository": {
