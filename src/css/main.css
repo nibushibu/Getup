@@ -1,21 +1,23 @@
-/* Settings */
-@import '@fontsource/noto-sans-jp/400.css';
-@import '@fontsource/noto-sans-jp/700.css';
-@import 'open-props/src/index';
-@import 'settings.css';
+@layer settings, generics, elements, objects, components, utilities;
 
-/* Generic */
-@import 'open-props/src/extra/normalize';
-@import 'open-props/src/extra/buttons';
+/* Settings */
+@import '@fontsource/noto-sans-jp/400.css' layer(settings);
+@import '@fontsource/noto-sans-jp/700.css' layer(settings);
+@import 'open-props/src/index' layer(settings);
+@import 'settings.css' layer(settings);
+
+/* Generics */
+@import 'open-props/src/extra/normalize' layer(generics);
+@import 'open-props/src/extra/buttons' layer(generics);
 
 /* Elements */
-@import 'elements.css';
+@import 'elements.css' layer(elements);
 
 /* Objects */
-@import 'objects.css';
+@import 'objects.css' layer(objects);
 
 /* Components */
-@import 'components.css';
+@import 'components.css' layer(components);
 
 /* Utilities */
-@import 'utilities.css';
+@import 'utilities.css' layer(utilities);
