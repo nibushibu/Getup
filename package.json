@@ -33,7 +33,7 @@
   "dependencies": {
     "@fontsource/noto-sans-jp": "^5.2.5",
     "@riotjs/custom-elements": "^9.0.1",
-    "open-props": "^1.7.13",
+    "open-props": "^1.7.14",
     "riot": "^9.4.6"
   },
   "repository": {
@@ -52,7 +52,7 @@
     "cssnano": "^7.0.6",
     "cssnano-preset-lite": "^4.0.3",
     "esbuild": "^0.25.1",
-    "eslint": "^9.22.0",
+    "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
     "glob": "^11.0.1",
     "markuplint": "^4.11.8",
