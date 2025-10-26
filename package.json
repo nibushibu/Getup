@@ -31,10 +31,10 @@
     "lint:fix": "eslint --fix"
   },
   "dependencies": {
-    "@fontsource/noto-sans-jp": "^5.2.6",
-    "@riotjs/custom-elements": "^9.0.1",
+    "@fontsource/noto-sans-jp": "^5.2.8",
+    "@riotjs/custom-elements": "^10.0.0",
     "open-props": "^1.7.16",
-    "riot": "^9.4.10"
+    "riot": "^10.1.0"
   },
   "repository": {
     "type": "git",
@@ -46,16 +46,16 @@
   "homepage": "https://github.com/nibushibu/Getup",
   "license": "MIT",
   "devDependencies": {
-    "@riotjs/register": "^9.1.0",
-    "@riotjs/ssr": "^9.0.0",
-    "cross-env": "^10.0.0",
-    "cssnano": "^7.1.0",
+    "@riotjs/register": "^10.0.0",
+    "@riotjs/ssr": "^10.0.0",
+    "cross-env": "^10.1.0",
+    "cssnano": "^7.1.1",
     "cssnano-preset-lite": "^4.0.4",
-    "esbuild": "^0.25.8",
-    "eslint": "^9.32.0",
+    "esbuild": "^0.25.11",
+    "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
     "glob": "^11.0.3",
-    "markuplint": "^4.12.0",
+    "markuplint": "^4.13.1",
     "mkdirp": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
@@ -64,7 +64,7 @@
     "postcss-custom-media": "^11.0.6",
     "postcss-import": "^16.1.1",
     "postcss-normalize-charset": "^7.0.1",
-    "postcss-preset-env": "^10.2.4",
+    "postcss-preset-env": "^10.4.0",
     "prettier": "^3.6.2",
     "prettier-plugin-css-order": "^2.1.2"
   }
